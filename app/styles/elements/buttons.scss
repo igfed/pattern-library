@@ -1,0 +1,38 @@
+// Button
+//
+// Generates a button
+//
+// Markup:
+//  <button class="button {$modifiers}">Click me</button>
+//
+// .secondary - A blue button.
+// :hover   - Highlights the button on hover.
+//
+// Styleguide 1.2
+
+.button {
+	padding: 12px 1.25em;
+	background-color: $primary-color;
+	color: $brand-color;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 1em;
+	border: 2px solid $primary-color;
+
+	&:hover, &:focus {
+		background-color: transparent;
+		color: $brand-color;
+	}
+}
+
+.button.secondary {
+	background-color: transparent;
+	color: $brand-color;
+	border: 2px solid $brand-color;
+
+	&:hover, &:focus {
+		background-color: $brand-color;
+		color: $white-color;
+	}
+}

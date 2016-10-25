@@ -1,0 +1,48 @@
+// Typography
+//
+// This document captures a baseline of fonts colors and sizes being used on
+// Investorsgroup.com. A baseline unify all digital properties of Investors Group
+// giving one voice. Any additions to the font list will need to be approved by the
+// Digital Marketing Team.
+//
+// Markup:
+//  <p class="{$modifiers}">Hello I am sample content.</p>
+//
+// .callout-body-copy - large version of body copy
+// .hero-title, .callout-title - hero or call out title
+// .content-title - content title
+// .section-title - section title
+// .sub-title - sub title
+// .legal - Legal copy
+//
+// Styleguide 1.1
+body, p, .body-copy {
+	font-family: $font-stack;
+	font-size: 16px;
+	font-size: 1rem;
+	color: $brand-color;
+}
+.callout-body-copy {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+h1, .hero-title, .callout-title {
+	font-size: 28px;
+	font-size: 1.75rem;
+}
+h2, .content-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+h3, .section-title {
+	font-size: 14px;
+	font-size: 0.875rem;
+}
+h4, .sub-title {
+	font-size: 18px;
+	font-size: 1.1125rem;
+}
+small, .legal {
+	font-size: 12px;
+	font-size: 0.75rem;
+}
