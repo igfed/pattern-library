@@ -1,0 +1,20 @@
+// Callout
+//
+// A callout is just an element with a .callout class applied. You can put any kind of content inside.
+//
+// Markup:
+//  <div class="callout {$modifiers}">
+//   <h5>This is a callout.</h5>
+//   <p>It has an easy to override visual style, and is appropriately subdued.</p>
+//   <a href="#">It's dangerous to go alone, take this.</a>
+// </div>
+//
+// .primary - Appliess a nice background.
+//
+// Styleguide 2.2
+
+.callout {
+	&.primary {
+		background: $primary-color;
+	}
+}

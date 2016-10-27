@@ -16,6 +16,9 @@
 // .legal - Legal copy
 //
 // Styleguide 1.1
+
+@include font-render("Whitney", "../fonts/whitney-book-webfont", null, null, ttf);
+
 body, p, .body-copy {
 	font-family: $font-stack;
 	font-size: 16px;
@@ -29,18 +32,22 @@ body, p, .body-copy {
 h1, .hero-title, .callout-title {
 	font-size: 28px;
 	font-size: 1.75rem;
+	font-family: $font-stack;
 }
 h2, .content-title {
 	font-size: 24px;
 	font-size: 1.5rem;
+	font-family: $font-stack;
 }
 h3, .section-title {
 	font-size: 14px;
 	font-size: 0.875rem;
+	font-family: $font-stack;
 }
 h4, .sub-title {
 	font-size: 18px;
 	font-size: 1.1125rem;
+	font-family: $font-stack;
 }
 small, .legal {
 	font-size: 12px;

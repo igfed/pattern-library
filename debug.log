@@ -6,3 +6,14 @@
 [1021/114846:ERROR:file_io.cc(30)] read: expected 4, observed 0
 [1021/160555:ERROR:file_io.cc(30)] read: expected 4, observed 0
 [1025/154551:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/160938:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/164443:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/165048:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/170832:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/171813:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/172231:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/172802:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/173410:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/174123:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/174837:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1027/175519:ERROR:file_io.cc(30)] read: expected 4, observed 0

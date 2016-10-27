@@ -1,8 +1,8 @@
 // Settings - used with preprocessors and contain font, colors definitions, etc.
-@import "settings";
+@import "settings/settings";
 
 // Tools - globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
-@import "mixins";
+@import "tools/mixins";
 
 // Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
 // bower:scss
@@ -11,21 +11,24 @@
 
 // Elements
 // 
-// Reusable elements that can be used across the site.
-// So far this just includes buttons. 
+// styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
 // 
 // Styleguide 1.
 @import "elements/typography";
 @import "elements/buttons";
 
-// Objects
+// Components
 //
-// Covers styles used for forms, such as the `<input>` and `<select>`
-// elements.
+// class-based selectors which define undecorated design patterns
 //
 // Styleguide 2.
-@import "objects/topBar";
-@import "objects/callout";
+@import "components/topBar";
+@import "components/callout";
 
-// Components - specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
-// @import "components/404";
+
+// Modules
+//
+// specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+//
+// Styleguide 3.
+@import "modules/accordion";

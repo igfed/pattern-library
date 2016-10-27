@@ -25,31 +25,16 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('styleguide:generate', function () {
+gulp.task('styleguide', () => {
     return gulp.src(['app/styles/**/*.scss'])
+    .pipe($.plumber())
     .pipe(kss({
       overview: 'app/styles/styleguide.md',
       templateDirectory: 'app/styles/'
     }))
-    .pipe(gulp.dest('styleguide/'));
-});
-
-gulp.task('styleguide:applystyles', function () {
-  return gulp.src('app/styles/main.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
-    .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('styleguide/'))
+    .pipe(gulp.dest('app/'))
     .pipe(reload({stream: true}));
 });
-
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
@@ -85,7 +70,7 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec/**/*.js'));
 });
 
-gulp.task('html', ['styles', 'scripts'], () => {
+gulp.task('html', ['styleguide', 'styles', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
@@ -192,7 +177,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'styleguide'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
