@@ -29,7 +29,7 @@ gulp.task('styleguide', () => {
     return gulp.src(['app/styles/**/*.scss'])
     .pipe($.plumber())
     .pipe(kss({
-      overview: 'app/styles/styleguide.md',
+      // overview: 'app/styles/homepage.md',
       templateDirectory: 'app/styles/'
     }))
     .pipe(gulp.dest('app/'))
@@ -127,7 +127,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styles', 'styleguide']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

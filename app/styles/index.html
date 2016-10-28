@@ -31,45 +31,61 @@
             <li class="topbar-title"><img src="/images/logo.svg" alt="" style="width: 220px;" /></li>
           </ul>
           <ul class="menu top-bar-right">
-            <li><a href="./index.html">Overview</a></li>
+            <li><a href="./index.html">Getting Started</a></li>
             {{#eachRoot}}
-                <li><a href="section-{{reference}}.html">{{header}}</a></li>
+              <li><a href="section-{{reference}}.html">{{header}}</a></li>
             {{/eachRoot}}
           </ul>
         </nav>
       </div>
     </div>
-    <div class="callout large primary">
-      <div class="row column text-center">
-        <h1>IG Pattern Library</h1>
+
+    {{#if homepage}}
+      {{{homepage}}}
+    {{else}}
+      <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>IG Pattern library</h1>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        {{#if homepage}}
-            {{{homepage}}}
-        {{else}}
-            {{#eachSection rootNumber}}
-                <h2>{{header}}</h2>
-                <p>{{html description}}</p>
+      <div class="row">
+        <div class="medium-8 columns">
+          {{#eachSection rootNumber}}
+            <div class="" id="section-{{reference}}">
+              <h2>{{header}}</h2>
+              <p>{{html description}}</p>
+              <div class="sample">
                 {{html markup}}
+              </div>
+              {{#eachModifier}}
+                <div class="modifier">
+                    <h3>{{name}}</h3>
+                    <p>{{html description}}</p>
 
-                {{#eachModifier}}
-                    <div class="modifier">
-                        <h3>{{name}}</h3>
-                        <p>{{html description}}</p>
-
-                        <div class="example">
-                            {{modifierMarkup}}
-                        </div>
+                    <div class="example">
+                        {{modifierMarkup}}
                     </div>
-                {{/eachModifier}}
-                {{markup}}
+                </div>
+              {{/eachModifier}}
+              <pre><code class="lang-html">{{markup}}</code></pre>
+            </div>
+          {{/eachSection}}
+        </div>
+        <div class="medium-4 columns">
+          <ul class="vertical menu">
+            {{#eachSection rootNumber}}
+            {{#if @first}}{{else}}
+                <li><a href="#section-{{reference}}">{{header}}</a></li>
+                {{/if}}
             {{/eachSection}}
-        {{/if}}
-      </div>     
-    </div>
+          </ul>
+        </div>
+      </div>
+    {{/if}}
+
+    <footer class="kss-footer">
+      <p><small>Footer Content</small></p>
+    </footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
