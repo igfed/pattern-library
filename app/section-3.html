@@ -17,7 +17,13 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+    <style type="text/css">
+      .pattern-content {
+        padding: 30px 0;
+        margin: 30px 0;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -47,22 +53,21 @@
       </div>
       <div class="row">
         <div class="medium-8 columns">
-            <div class="" id="section-3">
+            <section class="pattern-content" id="section-3">
               <h2>Modules</h2>
               <p><p>specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components</p>
-</p>
+</p>            
               <div class="sample">
                 
               </div>
-              <pre><code class="lang-html">false</code></pre>
-            </div>
-            <div class="" id="section-3.1">
+            </section>
+            <section class="pattern-content" id="section-3.1">
               <h2>Accordions</h2>
               <p><p>This document captures a baseline of fonts colors and sizes being used on
 Investorsgroup.com. A baseline unify all digital properties of Investors Group
 giving one voice. Any additions to the font list will need to be approved by the
 Digital Marketing Team.</p>
-</p>
+</p>            
               <div class="sample">
                  <ul id="sample" class="accordion" data-accordion role="tablist">
   <li class="accordion-item is-active" data-accordion-item>
@@ -88,7 +93,7 @@ Digital Marketing Team.</p>
   </li>
 </ul>
               </div>
-              <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
+                <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
   &lt;li class=&quot;accordion-item is-active&quot; data-accordion-item&gt;
     &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 1&lt;/a&gt;
     &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
@@ -111,20 +116,24 @@ Digital Marketing Team.</p>
     &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-            </div>
+            </section>
         </div>
         <div class="medium-4 columns">
           <ul class="vertical menu">
-            
+              
                 <li><a href="#section-3">Modules</a></li>
-            
+              
                 <li><a href="#section-3.1">Accordions</a></li>
           </ul>
         </div>
       </div>
 
-    <footer class="kss-footer">
-      <p><small>Footer Content</small></p>
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
+        </div>
+      </div>
     </footer>
 
     <!-- build:js scripts/vendor.js -->

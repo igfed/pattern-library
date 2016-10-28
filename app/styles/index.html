@@ -17,7 +17,13 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+    <style type="text/css">
+      .pattern-content {
+        padding: 30px 0;
+        margin: 30px 0;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -51,9 +57,9 @@
       <div class="row">
         <div class="medium-8 columns">
           {{#eachSection rootNumber}}
-            <div class="" id="section-{{reference}}">
+            <section class="pattern-content" id="section-{{reference}}">
               <h2>{{header}}</h2>
-              <p>{{html description}}</p>
+              <p>{{html description}}</p>            
               <div class="sample">
                 {{html markup}}
               </div>
@@ -67,24 +73,30 @@
                     </div>
                 </div>
               {{/eachModifier}}
-              <pre><code class="lang-html">{{markup}}</code></pre>
-            </div>
+              {{#if markup}}
+                <pre><code class="lang-html">{{markup}}</code></pre>
+              {{/if}}
+            </section>
           {{/eachSection}}
         </div>
         <div class="medium-4 columns">
           <ul class="vertical menu">
             {{#eachSection rootNumber}}
-            {{#if @first}}{{else}}
+              {{#if @first}}{{else}}
                 <li><a href="#section-{{reference}}">{{header}}</a></li>
-                {{/if}}
+              {{/if}}
             {{/eachSection}}
           </ul>
         </div>
       </div>
     {{/if}}
 
-    <footer class="kss-footer">
-      <p><small>Footer Content</small></p>
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
+        </div>
+      </div>
     </footer>
 
     <!-- build:js scripts/vendor.js -->

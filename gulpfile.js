@@ -29,8 +29,7 @@ gulp.task('styleguide', () => {
     return gulp.src(['app/styles/**/*.scss'])
     .pipe($.plumber())
     .pipe(kss({
-      // overview: 'app/styles/homepage.md',
-      templateDirectory: 'app/styles/'
+      templateDirectory: 'app/styles/',
     }))
     .pipe(gulp.dest('app/'))
     .pipe(reload({stream: true}));
