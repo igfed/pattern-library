@@ -2,4 +2,26 @@
 //
 // Color
 //
+// Markup:
+// 	<div class="{$modifiers}">
+//		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+//	</div>
+// 	<p  class="{$modifiers}-text">Sample text based overide</p>
+//
+// .primary - Primary Colour.
+// .secondary - Secondary Colour.
+//
 // Styleguide 1.3
+.primary {
+	background: $primary-color;
+}
+.primary-text {
+	color: $primary-color;
+}
+
+.secondary {
+	background: $secondary-color;
+}
+.secondary-text {
+	color: $secondary-color;
+}

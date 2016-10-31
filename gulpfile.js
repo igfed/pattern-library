@@ -29,10 +29,12 @@ gulp.task('styleguide', () => {
     return gulp.src(['app/styles/**/*.scss'])
     .pipe($.plumber())
     .pipe(kss({
-      templateDirectory: 'app/styles/',
+      templateDirectory: 'app/templates/',
+      overview: 'app/templates/content/homepage.md'
     }))
     .pipe(gulp.dest('app/'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({stream: true}))
+    .emit('end');
 });
 
 gulp.task('scripts', () => {
@@ -108,7 +110,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,

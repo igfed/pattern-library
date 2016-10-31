@@ -3,9 +3,25 @@ $brand-font: 'Whitney';
 $font-stack: $brand-font, sans-serif;
 
 // Colors
-$brand-color: #0D263C;
-$primary-color: #7EC4B9;
-$secondary-color: #F1F7F7;
-$grey-color: #DBDFE2;
-$white-color: #FFF;
-$beige-color: #FbF7EB;
+$brand-color: #0D263C; // Brand Navy Blue
+$primary-color: #7EC4B9; // Green
+$secondary-color: #F1F7F7; // Light Blue
+$highlight-color: #FbF7EB; // Beige
+$alert-color: #d42f1a; //Red
+
+// Neutrals
+$lightest-color: #FFF; // White
+$lighter-grey: #f1f7f7;
+$light-grey: #f3f4f5;
+$grey: #DBDFE2; // 
+$dark-grey: #c1cbd0;
+$darkest-color: #282828; // Charcoal near Black
+
+// Breakpoints
+$breakpoints: (
+  small: 0px,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);

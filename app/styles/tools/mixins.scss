@@ -42,3 +42,50 @@
 		src: $src;
 	}
 }
+
+// =============================================================================
+// Aspect Ratio
+// =============================================================================
+
+@mixin aspect-ratio($width, $height, $contentSelector) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > #{unquote($contentSelector)} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// =============================================================================
+// Scale height to the width
+// =============================================================================
+
+@mixin scale($origWidth, $origHeight, $finalWidth) {
+    width: $finalWidth;
+    height: #{($origHeight / $origWidth) * $finalWidth};
+}
+
+// =============================================================================
+// Make breakpoints
+// =============================================================================
+
+@mixin respond-to($breakpoint) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

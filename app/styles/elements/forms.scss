@@ -2,4 +2,102 @@
 //
 // Forms
 //
+// Markup:
+// 	<form>
+//   <div class="row">
+//     <div class="medium-6 columns">
+//       <label>Input Label
+//         <input type="text" placeholder=".medium-6.columns">
+//       </label>
+//     </div>
+//     <div class="medium-6 columns">
+//       <label>Input Label
+//         <input type="text" placeholder=".medium-6.columns">
+//       </label>
+//     </div>
+//   </div>
+// </form>
+//
 // Styleguide 1.6
+
+input[type=text], input[type=password] {
+	background-color: transparent;
+	border-color: $brand-color;
+	border-width: 0 0 2px;
+	border-style: solid;
+	box-shadow: none;
+	height: 4rem;
+	line-height: 4rem;
+	padding: 0 1.5rem;
+	margin-top: .8rem 0 .7rem;
+	color: $brand-color;
+
+	&::-webkit-input-placeholder {
+		color: #666666;
+	}
+
+	&:-ms-input-placeholder {
+		color: #666666;
+	}
+
+	&::-moz-placeholder {
+		color: #666666;
+		opacity: 1;
+	}
+}
+
+label {
+	margin-bottom: .7rem;
+	background-color: transparent;
+	border-color: $brand-color;
+	border-width: 0 0 2px;
+	border-style: solid;
+	position: relative;
+
+	input[type=text], input[type=password] {
+		margin-bottom: 0;
+	    border: 1px solid transparent;
+		border-radius: 6px 6px 3px 3px;
+
+		&:focus {
+		    border-color: $brand-color;
+		}
+
+		&.error {
+			+ .fa {
+				display: block;
+			}
+		}
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+    	padding-bottom: 0.8rem;
+    	transition: top 0.1s ease-in-out;
+		top: 0;
+	}
+
+	&:not(.is-editing) {
+		span {
+			top: 4.2rem;
+			color: #666666;
+		}
+	}
+
+	&.error {
+		padding: .1rem .2rem;
+		margin: 0;
+		color: $alert-color;
+		border: none;
+	}
+}
+
+select {
+	margin: 0;
+	height: auto;
+    border-color: $brand-color;
+    border-style: none none solid;
+    border-width: medium medium 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
+}

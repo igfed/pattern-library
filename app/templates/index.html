@@ -29,8 +29,13 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div class="title-bar" data-responsive-toggle="Main-nav" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
     
-    <div class="top-bar">
+    <div class="top-bar" id="Main-nav">
       <div class="row">
         <nav class="large-12 columns">
           <ul class="menu top-bar-left">
@@ -46,8 +51,17 @@
       </div>
     </div>
 
-    {{#if homepage}}
-      {{{homepage}}}
+    {{#if overview}}
+      <div class="callout large primary">
+        <div class="row column text-center">
+            <h1>IG Pattern library</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-8 columns">
+          {{{overview}}}
+        </div>
+      </div>
     {{else}}
       <div class="callout large primary">
         <div class="row column text-center">
@@ -60,7 +74,7 @@
             <section class="pattern-content" id="section-{{reference}}">
               <h2>{{header}}</h2>
               <p>{{html description}}</p>            
-              <div class="sample">
+              <div class="sample panel">
                 {{html markup}}
               </div>
               {{#eachModifier}}
@@ -91,7 +105,7 @@
       </div>
     {{/if}}
 
-    <footer>
+    <footer class="secondary">
       <div class="row">
         <div class="large-12 columns">
           <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
