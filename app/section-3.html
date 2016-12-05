@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -29,11 +29,6 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="title-bar" data-responsive-toggle="Main-nav" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
     
     <div class="top-bar" id="Main-nav">
       <div class="row">
@@ -42,39 +37,186 @@
             <li class="topbar-title"><img src="/images/logo.svg" alt="" style="width: 220px;" /></li>
           </ul>
           <ul class="menu top-bar-right">
-            <li><a href="./index.html">Getting Started</a></li>
-              <li><a href="section-1.html">Elements</a></li>
-              <li><a href="section-2.html">Components</a></li>
-              <li><a href="section-3.html">Modules</a></li>
+            <li><a href="./index.html">Logout</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
-      <div class="callout large primary">
-        <div class="row column text-center">
-            <h1>IG Pattern library</h1>
+    <div class="row">
+      <div class="medium-3 columns">
+          <ul class="vertical menu">
+            <li><a href="./index.html">Getting Started</a></li>
+              <li>
+                <a href="section-1.html">Elements</a>
+                <ul class="vertical menu">
+                    <li><a href="#1">Elements</a></li>
+                    <li><a href="#1.1">Grid &amp; Layout</a></li>
+                    <li><a href="#1.2">Typography</a></li>
+                    <li><a href="#1.3">Color</a></li>
+                    <li><a href="#1.4">Icons and Imagery</a></li>
+                    <li><a href="#1.5">Buttons and Links</a></li>
+                    <li><a href="#1.6">Form Inputs</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="section-2.html">Components</a>
+                <ul class="vertical menu">
+                    <li><a href="#2">Components</a></li>
+                    <li><a href="#2.1">Tabs</a></li>
+                    <li><a href="#2.2">Modals</a></li>
+                    <li><a href="#2.3">Progress Bar</a></li>
+                    <li><a href="#2.4">Pagination</a></li>
+                    <li><a href="#2.5">Reveal</a></li>
+                    <li><a href="#2.6">Slider</a></li>
+                    <li><a href="#2.7">Tables</a></li>
+                    <li><a href="#2.8">Data Lists</a></li>
+                    <li><a href="#2.9">Sub Navigation</a></li>
+                    <li><a href="#2.10">Callout</a></li>
+                    <li><a href="#2.11">Alert</a></li>
+                    <li><a href="#2.12">Top Bar</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="section-3.html">Modules</a>
+                <ul class="vertical menu">
+                    <li><a href="#3">Modules</a></li>
+                    <li><a href="#3.1">Header</a></li>
+                    <li><a href="#3.2">Footer</a></li>
+                    <li><a href="#3.3">Hero</a></li>
+                    <li><a href="#3.4">Accordions</a></li>
+                </ul>
+              </li>
+          </ul>
         </div>
-      </div>
-      <div class="row">
-        <div class="medium-8 columns">
-            <section class="pattern-content" id="section-3">
-              <h2>Modules</h2>
-              <p><p>specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components</p>
+
+        <main role="main" id="content">
+          <div class="medium-9 columns">
+                <section class="pattern-content" id="section-3">
+                  <h2>Modules</h2>
+                  <p><p>specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components</p>
 </p>            
-              <div class="sample panel">
-                
-              </div>
-            </section>
-            <section class="pattern-content" id="section-3.1">
-              <h2>Accordions</h2>
-              <p><p>This document captures a baseline of fonts colors and sizes being used on
+                  <div class="sample panel">
+                    
+                  </div>
+              </section>
+                <section class="pattern-content" id="section-3.1">
+                  <h2>Header</h2>
+                  <p><p>This is the site wide navigation.</p>
+</p>            
+                  <div class="sample panel">
+                     <header role="banner">
+	<a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
+	<div class="top-bar">
+		<div class="top-bar-title">
+			<strong>Investors Group</strong>
+			<span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="medium">
+				<button class="menu-icon dark" type="button" data-toggle></button>
+			</span>
+		</div>
+		<div id="main-navigation" class="top-bar-right">
+			<nav role="navigation">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li><a href="#">Services</a>
+						<ul class="menu vertical">
+							<li><a href="/en/opportunities/investment">Investments</a></li>
+							<li><a href="/en/opportunities/retirement">Retirement</a></li>
+							<li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+							<li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+							<li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+							<li><a href="/en/opportunities/insurance">Insurance</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Advice & stories</a></li>
+					<li><a href="#">Find an Advisor</a></li>
+				</ul>
+			</nav>
+			<div class="top-bar aux-nav">
+				<nav class="top-bar-right" role="navigation">
+					<ul class="dropdown menu" data-dropdown-menu>
+						<li><a href="#">Login</a>
+							<ul class="menu vertical">
+								<li><a href="/en/opportunities/investment">Client Login</a></li>
+								<li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Client Support</a></li>
+						<li><a href="#">Francais</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+	</div>
+</header>
+                  </div>
+                    <ul class="accordion" data-accordion role="tablist">
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Code</a>
+                       <div class="accordion-content" data-tab-content>
+                          <pre><code class="lang-html"> &lt;header role=&quot;banner&quot;&gt;
+	&lt;a id=&quot;skip-navigation&quot; class=&quot;show-on-focus&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;
+	&lt;div class=&quot;top-bar&quot;&gt;
+		&lt;div class=&quot;top-bar-title&quot;&gt;
+			&lt;strong&gt;Investors Group&lt;/strong&gt;
+			&lt;span class=&quot;float-right&quot; data-responsive-toggle=&quot;main-navigation&quot; data-hide-for=&quot;medium&quot;&gt;
+				&lt;button class=&quot;menu-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;div id=&quot;main-navigation&quot; class=&quot;top-bar-right&quot;&gt;
+			&lt;nav role=&quot;navigation&quot;&gt;
+				&lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;
+						&lt;ul class=&quot;menu vertical&quot;&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Investments&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Retirement&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/mortgage&quot;&gt;Mortgages&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/estate-planning&quot;&gt;Estate Planning&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/tax-planning&quot;&gt;Tax Planning&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href=&quot;/en/opportunities/insurance&quot;&gt;Insurance&lt;/a&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Advice &amp; stories&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Find an Advisor&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+			&lt;div class=&quot;top-bar aux-nav&quot;&gt;
+				&lt;nav class=&quot;top-bar-right&quot; role=&quot;navigation&quot;&gt;
+					&lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;
+							&lt;ul class=&quot;menu vertical&quot;&gt;
+								&lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Client Login&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Solutions Banking &amp;trade;&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Client Support&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Francais&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/nav&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		
+	&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+                       </div>
+                     </li>
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Documentation</a>
+                       <div class="accordion-content" data-tab-content>
+
+                       </div>
+                     </li>
+                  </ul>
+              </section>
+                <section class="pattern-content" id="section-3.2">
+                  <h2>Footer</h2>
+                  <p><p>This document captures a baseline of fonts colors and sizes being used on
 Investorsgroup.com. A baseline unify all digital properties of Investors Group
 giving one voice. Any additions to the font list will need to be approved by the
 Digital Marketing Team.</p>
 </p>            
-              <div class="sample panel">
-                 <ul id="sample" class="accordion" data-accordion role="tablist">
+                  <div class="sample panel">
+                     <ul id="sample" class="accordion" data-accordion role="tablist">
   <li class="accordion-item is-active" data-accordion-item>
     <a href="#" class="accordion-title" >Accordion 1</a>
     <div class="accordion-content" data-tab-content>
@@ -97,8 +239,12 @@ Digital Marketing Team.</p>
     </div>
   </li>
 </ul>
-              </div>
-                <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
+                  </div>
+                    <ul class="accordion" data-accordion role="tablist">
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Code</a>
+                       <div class="accordion-content" data-tab-content>
+                          <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
   &lt;li class=&quot;accordion-item is-active&quot; data-accordion-item&gt;
     &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 1&lt;/a&gt;
     &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
@@ -121,19 +267,118 @@ Digital Marketing Team.</p>
     &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-            </section>
-        </div>
-        <div class="medium-4 columns">
-          <ul class="vertical menu">
-              
-                <li><a href="#section-3">Modules</a></li>
-              
-                <li><a href="#section-3.1">Accordions</a></li>
-          </ul>
-        </div>
-      </div>
+                       </div>
+                     </li>
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Documentation</a>
+                       <div class="accordion-content" data-tab-content>
 
-    <footer class="secondary">
+                       </div>
+                     </li>
+                  </ul>
+              </section>
+                <section class="pattern-content" id="section-3.3">
+                  <h2>Hero</h2>
+                  <p><p>Hero module holds big headlines</p>
+</p>            
+                  <div class="sample panel">
+                     <div class="hero">
+		<h1>Life is rich and varied. Your financial plan should be, too</h1>
+		<p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+	</div>
+                  </div>
+                    <ul class="accordion" data-accordion role="tablist">
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Code</a>
+                       <div class="accordion-content" data-tab-content>
+                          <pre><code class="lang-html"> &lt;div class=&quot;hero&quot;&gt;
+		&lt;h1&gt;Life is rich and varied. Your financial plan should be, too&lt;/h1&gt;
+		&lt;p&gt;We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.&lt;/p&gt;
+	&lt;/div&gt;</code></pre>
+                       </div>
+                     </li>
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Documentation</a>
+                       <div class="accordion-content" data-tab-content>
+
+                       </div>
+                     </li>
+                  </ul>
+              </section>
+                <section class="pattern-content" id="section-3.4">
+                  <h2>Accordions</h2>
+                  <p><p>This document captures a baseline of fonts colors and sizes being used on
+Investorsgroup.com. A baseline unify all digital properties of Investors Group
+giving one voice. Any additions to the font list will need to be approved by the
+Digital Marketing Team.</p>
+</p>            
+                  <div class="sample panel">
+                     <ul id="sample" class="accordion" data-accordion role="tablist">
+  <li class="accordion-item is-active" data-accordion-item>
+    <a href="#" class="accordion-title" >Accordion 1</a>
+    <div class="accordion-content" data-tab-content>
+      <p>Panel 1. Lorem ipsum dolor</p>
+      <a href="#">Nowhere to Go</a>
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title" >Accordion 2</a>
+    <div class="accordion-content" data-tab-content>
+      <textarea></textarea>
+      <button class="button">I do nothing!</button>
+    </div>
+  </li>
+  <li class="accordion-item is-active" data-accordion-item>
+    <a href="#" class="accordion-title" >Accordion 3</a>
+    <div class="accordion-content" data-tab-content>
+      Pick a date!
+      <input type="date">
+    </div>
+  </li>
+</ul>
+                  </div>
+                    <ul class="accordion" data-accordion role="tablist">
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Code</a>
+                       <div class="accordion-content" data-tab-content>
+                          <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
+  &lt;li class=&quot;accordion-item is-active&quot; data-accordion-item&gt;
+    &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 1&lt;/a&gt;
+    &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
+      &lt;p&gt;Panel 1. Lorem ipsum dolor&lt;/p&gt;
+      &lt;a href=&quot;#&quot;&gt;Nowhere to Go&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;accordion-item&quot; data-accordion-item&gt;
+    &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 2&lt;/a&gt;
+    &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
+      &lt;textarea&gt;&lt;/textarea&gt;
+      &lt;button class=&quot;button&quot;&gt;I do nothing!&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;accordion-item is-active&quot; data-accordion-item&gt;
+    &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 3&lt;/a&gt;
+    &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
+      Pick a date!
+      &lt;input type=&quot;date&quot;&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                       </div>
+                     </li>
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Documentation</a>
+                       <div class="accordion-content" data-tab-content>
+
+                       </div>
+                     </li>
+                  </ul>
+              </section>
+        </div>
+      </main>
+    </div>
+
+    <footer class="secondary" role="contentinfo">
       <div class="row">
         <div class="large-12 columns">
           <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
