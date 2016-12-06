@@ -5,59 +5,80 @@ This is the site wide navigation.
 
 Markup:
  <header role="banner" class="site-header">
-	<a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
-	<div class="top-bar main-nav">
-		<div class="top-bar-title">
-			<img src="/images/logo.svg" alt="" style="width: 220px;">
-			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
-				<button class="menu-icon dark" type="button" data-toggle></button>
-			</span>
-			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
-				<button class="search-icon dark" type="button" data-toggle></button>
-			</span>
-		</div>
-		<div id="main-navigation" class="top-bar-right">
-			<nav role="navigation">
-				<ul class="dropdown menu vertical medium-horizontal " data-dropdown-menu>
-					<li><a href="#">Services</a>
-						<ul class="menu vertical">
-							<li><a href="/en/opportunities/investment">Investments</a></li>
-							<li><a href="/en/opportunities/retirement">Retirement</a></li>
-							<li><a href="/en/opportunities/mortgage">Mortgages</a></li>
-							<li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
-							<li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
-							<li><a href="/en/opportunities/insurance">Insurance</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Advice & stories</a></li>
-					<li><a href="#">Find an Advisor</a></li>
-				</ul>
-			</nav>
-			<div class="top-bar aux-nav">
-				<nav class="top-bar-right" role="navigation">
-					<ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
-						<li><a href="#">Login</a>
-							<ul class="menu vertical">
-								<li><a href="/en/opportunities/investment">Client Login</a></li>
-								<li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Client Support</a></li>
-						<li><a href="#">Francais</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
+  <a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
+  <div class="top-bar main-nav">
+    <div class="top-bar-title">
+      <div class="row">
+        <div class="columns">
+          <img src="/images/logo.svg" alt="" class="image-logo">
+          <span data-responsive-toggle="main-navigation" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="main-navigation" class="top-bar-right">
+      <div class="row">
+        <div class="columns">
+          <nav role="navigation">
+            <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+              <li><a href="#">Services</a>
+                <ul class="menu vertical">
+                  <li><a href="/en/opportunities/investment">Investments</a></li>
+                  <li><a href="/en/opportunities/retirement">Retirement</a></li>
+                  <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+                  <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+                  <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+                  <li><a href="/en/opportunities/insurance">Insurance</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Advice & stories</a></li>
+              <li><a href="#">Find an Advisor</a></li>
+            </ul>
+          </nav>
+          <div class="top-bar aux-nav">
+            <nav class="top-bar-right" role="navigation">
+              <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+                <li><a href="#">Login</a>
+                  <ul class="menu vertical">
+                    <li><a href="/en/opportunities/investment">Client Login</a></li>
+                    <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Client Support</a></li>
+                <li><a href="#">Francais</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 Styleguide 3.1
 */
 
+.site-header {
+	border-bottom: 1px solid $grey;
+	.top-bar-title {
+		width: 100%;
+	}
+}
 
+#skip-navigation {
+	top: 1em;
+	left: 1em;
+}
+.aux-nav {
+	padding: 0.25rem 0;
+}
 @include respond-to(medium) {
 	.site-header {
 		padding-top: 54px;
+		.top-bar-title {
+			width: auto;
+		}
 	}
 	.aux-nav {
 		position: absolute;

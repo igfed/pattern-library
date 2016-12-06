@@ -1,11 +1,23 @@
-// Hero
-//
-// Hero module holds big headlines
-//
-// Markup:
-//  <div class="hero">
-//		<h1>Life is rich and varied. Your financial plan should be, too</h1>
-//		<p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
-//	</div>
-//
-// Styleguide 3.3
+/*
+Hero
+
+Hero module holds big headlines
+
+Markup:
+ <div class="hero">
+  <div class="row">
+    <div class="columns">
+      <h1>Life is rich and varied. Your financial plan should be, too.</h1>
+      <p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+      <button>let's get started</button>
+    </div>
+  </div>
+</div>
+
+Styleguide 3.3
+*/
+
+.hero {
+	background: $primary-color url(../images/tiled-weathered-pattern.jpg) repeat-x;
+	padding: 10vh 0;
+}

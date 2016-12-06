@@ -31,8 +31,12 @@
 
 .top-bar {
 	background: transparent;
+	padding: 1rem;
 
 	ul {
 		background: transparent;
+	}
+	a {
+		color: $darkest-color;
 	}
 }

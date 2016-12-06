@@ -78,6 +78,7 @@
                     <li><a href="section-2.10.html">Callout</a></li>
                     <li><a href="section-2.11.html">Alert</a></li>
                     <li><a href="section-2.12.html">Top Bar</a></li>
+                    <li><a href="section-2.13.html">Drop down menu</a></li>
                 </ul>
               </li>
               <li>
@@ -109,50 +110,55 @@
 </p>            
                   <div class="sample panel">
                      <header role="banner" class="site-header">
-	<a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
-	<div class="top-bar main-nav">
-		<div class="top-bar-title">
-			<img src="/images/logo.svg" alt="" style="width: 220px;">
-			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
-				<button class="menu-icon dark" type="button" data-toggle></button>
-			</span>
-			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
-				<button class="search-icon dark" type="button" data-toggle></button>
-			</span>
-		</div>
-		<div id="main-navigation" class="top-bar-right">
-			<nav role="navigation">
-				<ul class="dropdown menu vertical medium-horizontal " data-dropdown-menu>
-					<li><a href="#">Services</a>
-						<ul class="menu vertical">
-							<li><a href="/en/opportunities/investment">Investments</a></li>
-							<li><a href="/en/opportunities/retirement">Retirement</a></li>
-							<li><a href="/en/opportunities/mortgage">Mortgages</a></li>
-							<li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
-							<li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
-							<li><a href="/en/opportunities/insurance">Insurance</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Advice & stories</a></li>
-					<li><a href="#">Find an Advisor</a></li>
-				</ul>
-			</nav>
-			<div class="top-bar aux-nav">
-				<nav class="top-bar-right" role="navigation">
-					<ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
-						<li><a href="#">Login</a>
-							<ul class="menu vertical">
-								<li><a href="/en/opportunities/investment">Client Login</a></li>
-								<li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Client Support</a></li>
-						<li><a href="#">Francais</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
+  <a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
+  <div class="top-bar main-nav">
+    <div class="top-bar-title">
+      <div class="row">
+        <div class="columns">
+          <img src="/images/logo.svg" alt="" class="image-logo">
+          <span data-responsive-toggle="main-navigation" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="main-navigation" class="top-bar-right">
+      <div class="row">
+        <div class="columns">
+          <nav role="navigation">
+            <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+              <li><a href="#">Services</a>
+                <ul class="menu vertical">
+                  <li><a href="/en/opportunities/investment">Investments</a></li>
+                  <li><a href="/en/opportunities/retirement">Retirement</a></li>
+                  <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+                  <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+                  <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+                  <li><a href="/en/opportunities/insurance">Insurance</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Advice & stories</a></li>
+              <li><a href="#">Find an Advisor</a></li>
+            </ul>
+          </nav>
+          <div class="top-bar aux-nav">
+            <nav class="top-bar-right" role="navigation">
+              <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+                <li><a href="#">Login</a>
+                  <ul class="menu vertical">
+                    <li><a href="/en/opportunities/investment">Client Login</a></li>
+                    <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Client Support</a></li>
+                <li><a href="#">Francais</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
                   </div>
                     <ul class="accordion" data-accordion role="tablist">
@@ -160,50 +166,55 @@
                        <a href="#" class="accordion-title" >Code</a>
                        <div class="accordion-content" data-tab-content>
                           <pre><code class="lang-html"> &lt;header role=&quot;banner&quot; class=&quot;site-header&quot;&gt;
-	&lt;a id=&quot;skip-navigation&quot; class=&quot;show-on-focus&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;
-	&lt;div class=&quot;top-bar main-nav&quot;&gt;
-		&lt;div class=&quot;top-bar-title&quot;&gt;
-			&lt;img src=&quot;/images/logo.svg&quot; alt=&quot;&quot; style=&quot;width: 220px;&quot;&gt;
-			&lt;span data-responsive-toggle=&quot;main-navigation&quot; data-hide-for=&quot;medium&quot;&gt;
-				&lt;button class=&quot;menu-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
-			&lt;/span&gt;
-			&lt;span data-responsive-toggle=&quot;main-navigation&quot; data-hide-for=&quot;medium&quot;&gt;
-				&lt;button class=&quot;search-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
-			&lt;/span&gt;
-		&lt;/div&gt;
-		&lt;div id=&quot;main-navigation&quot; class=&quot;top-bar-right&quot;&gt;
-			&lt;nav role=&quot;navigation&quot;&gt;
-				&lt;ul class=&quot;dropdown menu vertical medium-horizontal &quot; data-dropdown-menu&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;
-						&lt;ul class=&quot;menu vertical&quot;&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Investments&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Retirement&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/mortgage&quot;&gt;Mortgages&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/estate-planning&quot;&gt;Estate Planning&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/tax-planning&quot;&gt;Tax Planning&lt;/a&gt;&lt;/li&gt;
-							&lt;li&gt;&lt;a href=&quot;/en/opportunities/insurance&quot;&gt;Insurance&lt;/a&gt;&lt;/li&gt;
-						&lt;/ul&gt;
-					&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Advice &amp; stories&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Find an Advisor&lt;/a&gt;&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/nav&gt;
-			&lt;div class=&quot;top-bar aux-nav&quot;&gt;
-				&lt;nav class=&quot;top-bar-right&quot; role=&quot;navigation&quot;&gt;
-					&lt;ul class=&quot;dropdown menu vertical medium-horizontal&quot; data-dropdown-menu&gt;
-						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;
-							&lt;ul class=&quot;menu vertical&quot;&gt;
-								&lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Client Login&lt;/a&gt;&lt;/li&gt;
-								&lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Solutions Banking &amp;trade;&lt;/a&gt;&lt;/li&gt;
-							&lt;/ul&gt;
-						&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Client Support&lt;/a&gt;&lt;/li&gt;
-						&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Francais&lt;/a&gt;&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/nav&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
+  &lt;a id=&quot;skip-navigation&quot; class=&quot;show-on-focus&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;
+  &lt;div class=&quot;top-bar main-nav&quot;&gt;
+    &lt;div class=&quot;top-bar-title&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;columns&quot;&gt;
+          &lt;img src=&quot;/images/logo.svg&quot; alt=&quot;&quot; class=&quot;image-logo&quot;&gt;
+          &lt;span data-responsive-toggle=&quot;main-navigation&quot; data-hide-for=&quot;medium&quot;&gt;
+            &lt;button class=&quot;menu-icon dark&quot; type=&quot;button&quot; data-toggle&gt;&lt;/button&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;main-navigation&quot; class=&quot;top-bar-right&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;columns&quot;&gt;
+          &lt;nav role=&quot;navigation&quot;&gt;
+            &lt;ul class=&quot;menu vertical medium-horizontal&quot; data-responsive-menu=&quot;accordion medium-dropdown&quot;&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Services&lt;/a&gt;
+                &lt;ul class=&quot;menu vertical&quot;&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Investments&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Retirement&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/mortgage&quot;&gt;Mortgages&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/estate-planning&quot;&gt;Estate Planning&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/tax-planning&quot;&gt;Tax Planning&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;/en/opportunities/insurance&quot;&gt;Insurance&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Advice &amp; stories&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Find an Advisor&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+          &lt;div class=&quot;top-bar aux-nav&quot;&gt;
+            &lt;nav class=&quot;top-bar-right&quot; role=&quot;navigation&quot;&gt;
+              &lt;ul class=&quot;menu vertical medium-horizontal&quot; data-responsive-menu=&quot;accordion medium-dropdown&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;
+                  &lt;ul class=&quot;menu vertical&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;/en/opportunities/investment&quot;&gt;Client Login&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;/en/opportunities/retirement&quot;&gt;Solutions Banking &amp;trade;&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Client Support&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Francais&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/header&gt;</code></pre>
                        </div>
                      </li>
@@ -220,13 +231,135 @@
                   <p><p>The footer of the site</p>
 </p>            
                   <div class="sample panel">
-                     <div></div>
+                     <footer class="site-footer" role="contentinfo">
+  <div class="row">
+    <div class="columns">
+      <a class="float-right" href="#">Back to top</a>
+    </div>
+  </div> 
+  <hr />
+  <div class="row">
+    <div class="medium-4 columns">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-vertical">
+        <li>
+          <a href="#">Company</a>
+          <ul class="menu vertical">
+            <li><a href="#">Who we are</a></li>
+            <li><a href="#">Media room</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="medium-4 columns">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-vertical">
+        <li>
+          <a href="#">Financial advice</a>
+          <ul class="menu vertical">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">How Can We Help</a></li>
+            <li><a href="#">Value Of The Plan</a></li>
+            <li><a href="#">More - Advice & Stories</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="medium-4 columns">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-unbind">
+        <li>
+          <a href="#">Resources</a>
+          <ul class="menu vertical">
+            <li><a href="#">Client Account Access</a></li>
+            <li><a href="#">Solutions Banking Access</a></li>
+            <li><a href="#">Mutual Funds</a></li>
+            <li><a href="#">Mortgage Rates</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-3 columns"></div>
+    <div class="small-3 columns"></div>
+    <div class="small-3 columns"></div>
+    <div class="small-3 columns"></div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <p>© 2016 Investors Group Inc. All rights Reserved</p>
+    </div>
+    <div class="small 12 columns">
+    </div>
+  </div>  
+</footer>
                   </div>
                     <ul class="accordion" data-accordion role="tablist">
                      <li class="accordion-item" data-accordion-item>
                        <a href="#" class="accordion-title" >Code</a>
                        <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;div&gt;&lt;/div&gt;</code></pre>
+                          <pre><code class="lang-html"> &lt;footer class=&quot;site-footer&quot; role=&quot;contentinfo&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;columns&quot;&gt;
+      &lt;a class=&quot;float-right&quot; href=&quot;#&quot;&gt;Back to top&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+  &lt;hr /&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;medium-4 columns&quot;&gt;
+      &lt;ul class=&quot;menu vertical&quot; data-responsive-menu=&quot;accordion medium-vertical&quot;&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;Company&lt;/a&gt;
+          &lt;ul class=&quot;menu vertical&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Who we are&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Media room&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Careers&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;medium-4 columns&quot;&gt;
+      &lt;ul class=&quot;menu vertical&quot; data-responsive-menu=&quot;accordion medium-vertical&quot;&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;Financial advice&lt;/a&gt;
+          &lt;ul class=&quot;menu vertical&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;How Can We Help&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Value Of The Plan&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;More - Advice &amp; Stories&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;medium-4 columns&quot;&gt;
+      &lt;ul class=&quot;menu vertical&quot; data-responsive-menu=&quot;accordion medium-unbind&quot;&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;Resources&lt;/a&gt;
+          &lt;ul class=&quot;menu vertical&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Client Account Access&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Solutions Banking Access&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mutual Funds&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mortgage Rates&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;small-3 columns&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;small-3 columns&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;small-3 columns&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;small-3 columns&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;small-12 columns&quot;&gt;
+      &lt;p&gt;© 2016 Investors Group Inc. All rights Reserved&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;small 12 columns&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;  
+&lt;/footer&gt;</code></pre>
                        </div>
                      </li>
                      <li class="accordion-item" data-accordion-item>
@@ -243,18 +376,28 @@
 </p>            
                   <div class="sample panel">
                      <div class="hero">
-		<h1>Life is rich and varied. Your financial plan should be, too</h1>
-		<p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
-	</div>
+  <div class="row">
+    <div class="columns">
+      <h1>Life is rich and varied. Your financial plan should be, too.</h1>
+      <p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+      <button>let's get started</button>
+    </div>
+  </div>
+</div>
                   </div>
                     <ul class="accordion" data-accordion role="tablist">
                      <li class="accordion-item" data-accordion-item>
                        <a href="#" class="accordion-title" >Code</a>
                        <div class="accordion-content" data-tab-content>
                           <pre><code class="lang-html"> &lt;div class=&quot;hero&quot;&gt;
-		&lt;h1&gt;Life is rich and varied. Your financial plan should be, too&lt;/h1&gt;
-		&lt;p&gt;We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.&lt;/p&gt;
-	&lt;/div&gt;</code></pre>
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;columns&quot;&gt;
+      &lt;h1&gt;Life is rich and varied. Your financial plan should be, too.&lt;/h1&gt;
+      &lt;p&gt;We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.&lt;/p&gt;
+      &lt;button&gt;let&#x27;s get started&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                        </div>
                      </li>
                      <li class="accordion-item" data-accordion-item>
