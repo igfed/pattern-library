@@ -4,18 +4,21 @@ Header
 This is the site wide navigation.
 
 Markup:
- <header role="banner">
+ <header role="banner" class="site-header">
 	<a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
-	<div class="top-bar">
+	<div class="top-bar main-nav">
 		<div class="top-bar-title">
-			<strong>Investors Group</strong>
-			<span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="medium">
+			<img src="/images/logo.svg" alt="" style="width: 220px;">
+			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
 				<button class="menu-icon dark" type="button" data-toggle></button>
+			</span>
+			<span data-responsive-toggle="main-navigation" data-hide-for="medium">
+				<button class="search-icon dark" type="button" data-toggle></button>
 			</span>
 		</div>
 		<div id="main-navigation" class="top-bar-right">
 			<nav role="navigation">
-				<ul class="dropdown menu" data-dropdown-menu>
+				<ul class="dropdown menu vertical medium-horizontal " data-dropdown-menu>
 					<li><a href="#">Services</a>
 						<ul class="menu vertical">
 							<li><a href="/en/opportunities/investment">Investments</a></li>
@@ -32,7 +35,7 @@ Markup:
 			</nav>
 			<div class="top-bar aux-nav">
 				<nav class="top-bar-right" role="navigation">
-					<ul class="dropdown menu" data-dropdown-menu>
+					<ul class="dropdown menu vertical medium-horizontal" data-dropdown-menu>
 						<li><a href="#">Login</a>
 							<ul class="menu vertical">
 								<li><a href="/en/opportunities/investment">Client Login</a></li>
@@ -45,16 +48,22 @@ Markup:
 				</nav>
 			</div>
 		</div>
-		
 	</div>
 </header>
 
 Styleguide 3.1
 */
 
-.aux-nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	righht: 0;
+
+@include respond-to(medium) {
+	.site-header {
+		padding-top: 54px;
+	}
+	.aux-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: $light-grey;
+	}
 }
