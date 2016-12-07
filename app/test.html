@@ -24,7 +24,7 @@
     <![endif]-->
     
     <header role="banner" class="site-header">
-  <a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
+  <a id="skip-navigation" class="show-on-focus button secondary" href="#content">Skip Navigation</a>
   <div class="top-bar main-nav">
     <div class="top-bar-title">
       <div class="row">
@@ -33,10 +33,13 @@
           <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="medium">
             <button class="menu-icon dark" type="button" data-toggle></button>
           </span>
+          <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
         </div>
       </div>
     </div>
-    <div id="main-navigation" class="top-bar-right">
+    <div id="main-navigation" class="top-bar-right main-navigation">
       <div class="row">
         <div class="columns">
           <nav role="navigation">
@@ -52,7 +55,7 @@
                 </ul>
               </li>
               <li><a href="#">Advice & stories</a></li>
-              <li><a href="#">Find an Advisor</a></li>
+              <li><a href="#" class="site-header-cta">Find an Advisor</a></li>
             </ul>
           </nav>
           <div class="top-bar aux-nav">
@@ -77,10 +80,13 @@
 
 <div class="hero">
   <div class="row">
-    <div class="columns">
+    <div class="hero-copy small-10 medium-6 large-7 columns">
       <h1>Life is rich and varied. Your financial plan should be, too.</h1>
-      <p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
-      <button>let's get started</button>
+      <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+      <!-- <button>let's get started</button> -->
+    </div>
+    <div class="hero-image">
+      <img alt="Man with many hats" src="images/hatStacks.png" />
     </div>
   </div>
 </div>
@@ -102,7 +108,7 @@
   <hr />
   <div class="row">
     <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-vertical">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-">
         <li>
           <a href="#">Company</a>
           <ul class="menu vertical">
@@ -115,7 +121,7 @@
       </ul>
     </div>
     <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-vertical">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-">
         <li>
           <a href="#">Financial advice</a>
           <ul class="menu vertical">
@@ -128,7 +134,7 @@
       </ul>
     </div>
     <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-unbind">
+      <ul class="menu vertical" data-responsive-menu="accordion medium-">
         <li>
           <a href="#">Resources</a>
           <ul class="menu vertical">
@@ -160,10 +166,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="medium-3 columns">
       <p>© 2016 Investors Group Inc. All rights Reserved</p>
     </div>
-    <div class="small 12 columns">
+    <div class="medium-9 columns">
+      <ul class="menu horizontal">
+        <li><a href="/en/legal">Legal</a></li>
+        <li><a href="/en/legal/use">Terms Of Use</a></li>
+        <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
+        <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
+        <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
+      </ul>
     </div>
   </div>  
 </footer>

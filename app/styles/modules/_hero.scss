@@ -20,4 +20,22 @@ Styleguide 3.3
 .hero {
 	background: $primary-color url(../images/tiled-weathered-pattern.jpg) repeat-x;
 	padding: 10vh 0;
+	position: relative;
+	overflow: hidden;
+	height: 80vh
+}
+.hero-copy {
+	z-index: 50;
+}
+.hero-image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	img {
+		z-index: -1;
+	}
+}
+
+.hero-secondary {
+	
 }
