@@ -16,12 +16,13 @@ Markup:
 	<li><a href="#">Francais</a></li>
 </ul>
 
-Styleguide 2.13
+Styleguide 2.4
 */
 
 .dropdown {
 
 	.menu {
+		z-index: 500;
 		background-color: $lightest-color;
 		color: $darkest-color;
 		border: 1px solid #c9cbcb;

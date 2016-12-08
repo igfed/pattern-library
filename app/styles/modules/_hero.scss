@@ -18,24 +18,71 @@ Styleguide 3.3
 */
 
 .hero {
-	background: $primary-color url(../images/tiled-weathered-pattern.jpg) repeat-x;
-	padding: 10vh 0;
+	background-color: $primary-color;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	padding: 10vh 10vw;
 	position: relative;
 	overflow: hidden;
-	height: 80vh
-}
-.hero-copy {
-	z-index: 50;
-}
-.hero-image {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	img {
-		z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+	&.patterned {
+		background-image: url(../images/tiled-weathered-pattern.jpg);
+	}
+	&.super-hero {
+		justify-content: flex-start;
+		padding-left: 10px;
+		padding-right: 10px;
+		@include respond-to(medium) {
+			padding: 10vh 10vw;
+		}
 	}
 }
 
-.hero-secondary {
+.hero-copy {
+	text-align: center;
+	z-index: 100;
 	
+	h1, p{
+		widows: 2;// Just in case its supported
+	}
+}
+.super-hero .hero-copy {
+	text-align: left;
+	max-width: 70vw;
+	@include respond-to(medium) {
+		max-width: 50vw;
+	}
+}
+
+.hero-image {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	max-width: 100%;
+}
+.super-hero .hero-image {
+	right: 0;
+	left: auto;
+	max-width: 30vw;
+	@include respond-to(medium) {
+		max-width: 50vw;
+	}
+}
+
+.hero-cta {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+
+	text-shadow: 1px 1px rgba(255,255,255,0.5);
+	color: $brand-color;
 }
