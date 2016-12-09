@@ -31,7 +31,7 @@
             <div class="top-bar-title">
               <div class="row">
                 <div class="columns">
-                  <img src="/images/logo.svg" alt="" class="image-logo">
+                  <img src="/images/logo-en-color.svg" alt="" class="image-logo">
                   <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
                     <button class="menu-icon dark" type="button" data-toggle></button>
                   </span>
@@ -44,8 +44,10 @@
                   <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
                     <li>
                       <form id="site-search" class="site-search" action="/en/search">
-                        <input class="icon-search-nav search-input" type="search" name="q">
-                        <span class="search-clsBtn"></span>
+                        <label for="site-search-q">Search
+                          <input type="search" id="site-search-q" name="q">
+                        </label>
+                        <input type="submit" class="button">
                       </form>
                     </li>
                     <li><a href="#">Services</a>
@@ -63,18 +65,22 @@
                   </ul>
                 </nav>
                 <div class="top-bar aux-nav">
-                  <nav class="top-bar-right" role="navigation">
-                    <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
-                      <li><a href="#">Login</a>
-                        <ul class="menu vertical">
-                          <li><a href="/en/opportunities/investment">Client Login</a></li>
-                          <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                  <div class="row">
+                    <div class="columns">
+                      <nav class="top-bar-right" role="navigation">
+                        <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
+                          <li><a href="#">Login</a>
+                            <ul class="menu vertical">
+                              <li><a href="/en/opportunities/investment">Client Login</a></li>
+                              <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#">Client Support</a></li>
+                          <li><a href="#">Francais</a></li>
                         </ul>
-                      </li>
-                      <li><a href="#">Client Support</a></li>
-                      <li><a href="#">Francais</a></li>
-                    </ul>
-                  </nav>
+                      </nav>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

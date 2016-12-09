@@ -5,50 +5,64 @@ This is the site wide navigation.
 
 Markup:
  <header role="banner" class="site-header">
-  <a id="skip-navigation" class="show-on-focus" href="#content">Skip Navigation</a>
-  <div class="top-bar main-nav">
-    <div class="top-bar-title">
-      <div class="row">
-        <div class="columns">
-          <img src="/images/logo.svg" alt="" class="image-logo">
-          <span data-responsive-toggle="main-navigation" data-hide-for="medium">
-            <button class="menu-icon dark" type="button" data-toggle></button>
-          </span>
+  <a id="skip-navigation" class="show-on-focus button secondary" href="#content">Skip Navigation</a>
+  <div class="row">
+    <div class="columns">
+      <div class="top-bar main-nav">
+        <div class="top-bar-title">
+          <div class="row">
+            <div class="columns">
+              <img src="/images/logo-en-color.svg" alt="" class="image-logo">
+              <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
+                <button class="menu-icon dark" type="button" data-toggle></button>
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div id="main-navigation" class="top-bar-right">
-      <div class="row">
-        <div class="columns">
-          <nav role="navigation">
-            <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
-              <li><a href="#">Services</a>
-                <ul class="menu vertical">
-                  <li><a href="/en/opportunities/investment">Investments</a></li>
-                  <li><a href="/en/opportunities/retirement">Retirement</a></li>
-                  <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
-                  <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
-                  <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
-                  <li><a href="/en/opportunities/insurance">Insurance</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Advice & stories</a></li>
-              <li><a href="#">Find an Advisor</a></li>
-            </ul>
-          </nav>
-          <div class="top-bar aux-nav">
-            <nav class="top-bar-right" role="navigation">
-              <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
-                <li><a href="#">Login</a>
+        <div id="main-navigation" class="top-bar-right main-navigation">
+          <div class="">
+            <nav role="navigation">
+              <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
+                <li>
+                  <form id="site-search" class="site-search" action="/en/search">
+                    <label for="site-search-q">Search
+                      <input type="search" id="site-search-q" name="q">
+                    </label>
+                    <input type="submit" class="button">
+                  </form>
+                </li>
+                <li><a href="#">Services</a>
                   <ul class="menu vertical">
-                    <li><a href="/en/opportunities/investment">Client Login</a></li>
-                    <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                    <li><a href="/en/opportunities/investment">Investments</a></li>
+                    <li><a href="/en/opportunities/retirement">Retirement</a></li>
+                    <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+                    <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+                    <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+                    <li><a href="/en/opportunities/insurance">Insurance</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Client Support</a></li>
-                <li><a href="#">Francais</a></li>
+                <li><a href="#">Advice & stories</a></li>
+                <li><a href="#" class="site-header-cta">Find an Advisor</a></li>
               </ul>
             </nav>
+            <div class="top-bar aux-nav">
+              <div class="row">
+                <div class="columns">
+                  <nav class="top-bar-right" role="navigation">
+                    <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
+                      <li><a href="#">Login</a>
+                        <ul class="menu vertical">
+                          <li><a href="/en/opportunities/investment">Client Login</a></li>
+                          <li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Client Support</a></li>
+                      <li><a href="#">Francais</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -87,8 +101,9 @@ Styleguide 3.1
   transition: 500ms transform ease-out, 300ms opacity ease-out;
 
   @include respond-to(large) {
-    position: relative;
-    top: 0;
+    position: static;
+    transform:none;
+    opacity: 1;
   }
 }
 body.site-header-is-active {
@@ -114,7 +129,6 @@ body.site-header-is-active {
 		top: 0;
     left: 0;
     right: 0;
-    width: 100%;
 		background: $light-grey;
     // font-size: 0.85rem;
 	}
