@@ -25,8 +25,8 @@ Styleguide 2.4
 		z-index: 500;
 		background-color: $lightest-color;
 		color: $darkest-color;
-		border: 1px solid #c9cbcb;
 		box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
+		border-radius: $border-radius;
 
 		a {
 			&:hover, &:focus {

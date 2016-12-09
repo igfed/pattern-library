@@ -31,12 +31,22 @@
 
 .top-bar {
 	background: transparent;
-	padding: 1rem 0;
 
 	ul {
 		background: transparent;
 	}
 	a {
 		color: $darkest-color;
+	}
+
+	@include respond-to(medium) {
+		.top-bar-left, .top-bar-right {
+			width: 100%;
+		}
+	}
+	@include respond-to(large) {
+		.top-bar-left, .top-bar-right {
+			width: auto;
+		}
 	}
 }

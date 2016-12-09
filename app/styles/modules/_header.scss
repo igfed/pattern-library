@@ -72,10 +72,37 @@ Styleguide 3.1
   position: fixed !important;
   z-index: 1000;
 }
+.main-navigation {
+  position: fixed;
+  top: 52px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $lightest-color;
+
+  transform: translate3d(0,-100%,0);
+  transform-origin: top right;
+  opacity: 0;
+  transition: 500ms transform ease-out, 300ms opacity ease-out;
+
+  @include respond-to(large) {
+    position: relative;
+    top: 0;
+  }
+}
+body.site-header-is-active {
+  overflow: hidden;
+  .main-navigation {
+    transform: translate3d(0,0%,0);
+    opacity: 1;
+  }
+  @include respond-to(large) {} 
+}
 .aux-nav {
 	padding: 0.25rem 0;
 }
-@include respond-to(medium) {
+@include respond-to(large) {
 	.site-header {
 		padding-top: 54px;
 		.top-bar-title {
@@ -85,19 +112,21 @@ Styleguide 3.1
 	.aux-nav {
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 		background: $light-grey;
+    // font-size: 0.85rem;
 	}
   .site-header-cta {
-    padding: 12px 1.25em;
+    padding: 6px 1.25em;
     background-color: transparent;
     color: $brand-color;
     text-align: center;
-    border-radius: 5px;
+    border-radius: $border-radius;
     font-size: 16px;
     line-height: 1em;
-    border: 2px solid $brand-color;
+    border: 1px solid $grey;
 
     &:hover, &:focus {
       background-color: $brand-color;
