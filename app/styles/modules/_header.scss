@@ -72,12 +72,19 @@ Markup:
 
 Styleguide 3.1
 */
-
 .site-header {
 	border-bottom: 1px solid $grey;
-	.top-bar-title {
-		width: 100%;
-	}
+	
+  .top-bar-title {
+    width: 100%;
+  }
+
+  @include respond-to(large) {
+    padding-top: 46px;
+    .top-bar-title {
+      width: auto;
+    }
+  }
 }
 
 #skip-navigation {
@@ -88,63 +95,166 @@ Styleguide 3.1
 }
 .main-navigation {
   position: fixed;
-  top: 52px;
+  top: 46px;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   background: $lightest-color;
 
-  transform: translate3d(0,-100%,0);
+  transform: translate3d(0,0,0);
   transform-origin: top right;
-  opacity: 0;
+  opacity: 1;
   transition: 500ms transform ease-out, 300ms opacity ease-out;
 
+  .menu.vertical {
+    > li {
+      > a {
+        text-transform: uppercase;
+        border-bottom: 1px solid $grey;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+        position: relative;
+        &:hover, &:focus {
+          background: $light-grey;
+
+          &:before {                  
+            content: '';
+            position: absolute;
+            border-left: 2px solid $brand-color;
+            height: 18px;
+            top: 1.3rem;
+            left: 7px;
+          }
+        }
+        &.site-header-cta {
+          @include respond-to(large) {
+            padding: 6px 1.25em;
+            background-color: transparent;
+            color: $brand-color;
+            text-align: center;
+            border-radius: $border-radius;
+            font-size: 16px;
+            line-height: 1em;
+            border: 1px solid $grey;
+
+            &:hover, &:focus {
+              background-color: $brand-color;
+              color: $lightest-color;
+              &:before {                  
+                display: none;
+              }
+            }
+          }
+        }
+
+        @include respond-to(large) {
+          padding: 0.7rem 1rem;
+          border-bottom: none;
+
+          &:hover, &:focus {
+            background: transparent;
+
+            &:before {                  
+              border-bottom: 2px solid #0D263C;
+              height: 0;
+              top: auto;
+              left: 1rem;
+              bottom: -0.6rem;
+              right: 1rem;
+            }
+          }
+        }
+      }
+      &[aria-expanded=true], &.is-active {
+        background: $light-grey;
+      }
+      &.language-toggle {
+        text-align: center;
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Keeping in place for future animated header nav
   @include respond-to(large) {
     position: static;
     transform:none;
     opacity: 1;
   }
 }
-body.site-header-is-active {
-  overflow: hidden;
-  .main-navigation {
-    transform: translate3d(0,0%,0);
-    opacity: 1;
+
+.main-navigation-wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  @include respond-to(large) {
+    height: auto;
+    overflow-x: visible;
   }
-  @include respond-to(large) {} 
 }
+
 .aux-nav {
 	padding: 0.25rem 0;
+  @include respond-to(large) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: $light-grey;
+  }
+
+  .menu {
+    > li {
+      > a {
+        @include respond-to(large) {
+          text-transform: none;
+          &:hover, &:focus {
+
+            &:before {                  
+              bottom: -0.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-@include respond-to(large) {
-	.site-header {
-		padding-top: 54px;
-		.top-bar-title {
-			width: auto;
-		}
-	}
-	.aux-nav {
-		position: absolute;
-		top: 0;
+
+.site-search {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+
+  .input-group-label {
+    img {
+      min-width: 14px;
+      @include respond-to(large) {
+        min-width: 20px;
+      }
+    }
+  }
+  input {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  @include respond-to(large) {
+    position: absolute;
+    top: 46px;
     left: 0;
     right: 0;
-		background: $light-grey;
-    // font-size: 0.85rem;
-	}
-  .site-header-cta {
-    padding: 6px 1.25em;
-    background-color: transparent;
-    color: $brand-color;
-    text-align: center;
-    border-radius: $border-radius;
-    font-size: 16px;
-    line-height: 1em;
-    border: 1px solid $grey;
+    background: $lightest-color;
+    z-index: 500;
+    transform: scaleX(0);
+  }
+}
 
-    &:hover, &:focus {
-      background-color: $brand-color;
-      color: $lightest-color;
-    }
+// States of the component
+.site-header-is-active {
+  overflow: hidden;
+  @include respond-to(large) {
+    overflow: visible;
   }
 }

@@ -20,28 +20,27 @@
 //
 // Styleguide 1.6
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=search] {
 	background-color: transparent;
 	border-color: $brand-color;
 	border-width: 0 0 2px;
 	border-style: solid;
 	box-shadow: none;
-	height: 4rem;
-	line-height: 4rem;
-	padding: 0 1.5rem;
+	line-height: 1rem;
+	padding: 12px 1.25em;
 	margin-top: .8rem 0 .7rem;
 	color: $brand-color;
 
 	&::-webkit-input-placeholder {
-		color: #666666;
+		color: $grey;
 	}
 
 	&:-ms-input-placeholder {
-		color: #666666;
+		color: $grey;
 	}
 
 	&::-moz-placeholder {
-		color: #666666;
+		color: $grey;
 		opacity: 1;
 	}
 }
@@ -54,10 +53,10 @@ label {
 	border-style: solid;
 	position: relative;
 
-	input[type=text], input[type=password] {
+	input[type=text], input[type=password], input[type=search] {
 		margin-bottom: 0;
 	    border: 1px solid transparent;
-		border-radius: 6px 6px 3px 3px;
+		border-radius: $border-radius;
 
 		&:focus {
 		    border-color: $brand-color;
@@ -70,26 +69,8 @@ label {
 		}
 	}
 
-	span {
-		position: relative;
-		display: inline-block;
-    	padding-bottom: 0.8rem;
-    	transition: top 0.1s ease-in-out;
-		top: 0;
-	}
-
-	&:not(.is-editing) {
-		span {
-			top: 4.2rem;
-			color: #666666;
-		}
-	}
-
 	&.error {
-		padding: .1rem .2rem;
-		margin: 0;
 		color: $alert-color;
-		border: none;
 	}
 }
 
@@ -100,4 +81,10 @@ select {
     border-style: none none solid;
     border-width: medium medium 2px;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
+}
+
+.input-group-label {
+	background: transparent;
+	border-color: transparent transparent $brand-color;
+	border-width: 2px;
 }

@@ -35,3 +35,41 @@ Styleguide 2.4
 		}
 	}
 }
+
+// Arrow styles
+
+.dropdown.menu > li.is-dropdown-submenu-parent {
+    > a::after {
+        width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-top: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform-origin: center middle;
+	    transform: rotate(135deg);
+    }
+    &.opens-left > a::after {
+    	width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-top: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform: rotate(-135deg);
+    }
+    &.opens-right > a::after {
+    }
+}
+.dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent,
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent {
+	> a::after {
+		width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-bottom: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform-origin: center middle;
+	    transform: rotate(45deg);
+	    top: 45%;
+	    margin-top: -$arrow-size/2;
+	}
+}

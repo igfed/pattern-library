@@ -39,15 +39,21 @@
               </div>
             </div>
             <div id="main-navigation" class="top-bar-right main-navigation">
-              <div class="">
+              <div class="main-navigation-wrapper">
                 <nav role="navigation">
                   <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
                     <li>
                       <form id="site-search" class="site-search" action="/en/search">
-                        <label for="site-search-q">Search
-                          <input type="search" id="site-search-q" name="q">
-                        </label>
-                        <input type="submit" class="button">
+                        <div class="input-group">
+                          <span class="input-group-label"><img src="images/search-icon.png" alt="Search icon"/></span>
+                          <label for="site-search-q" class="input-group-field">
+                            <span class="show-for-sr">Search investors group</span>
+                            <input type="search" id="site-search-q" name="q" placeholder="Search investors group">
+                          </label>
+                          <div class="input-group-button">
+                            <input type="submit" class="button" value="Search" />
+                          </div>
+                        </div>
                       </form>
                     </li>
                     <li><a href="#">Services</a>
@@ -76,7 +82,7 @@
                             </ul>
                           </li>
                           <li><a href="#">Client Support</a></li>
-                          <li><a href="#">Francais</a></li>
+                          <li class="language-toggle"><a href="#">Francais</a></li>
                         </ul>
                       </nav>
                     </div>
@@ -89,126 +95,125 @@
       </div>
     </header>
 
-<div class="hero">
-    <div class="hero-copy">
-      <h1>Client Support</h1>
-      <p class="callout-body-copy">Do you have questions? give us a call.</p>
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>Client Support</h1>
+        <p class="callout-body-copy">Do you have questions? give us a call.</p>
+      </div>
     </div>
-</div>
-<p>Base Hero</p>
-<div class="hero patterned">
-  <div class="hero-copy">
-    <h1>Mortgages</h1>
-    <p class="callout-body-copy">Buying a home? We can help.</p>
-  </div>
-  <div class="hero-image">
-    <img alt="Man with many hats" src="images/mortgage-scene.jpg" />
-  </div>
-  <a href="#content" class="hero-cta">Learn more</a>
-</div>
-<p>Patterned Hero w/ image</p>
-<div class="hero patterned super-hero">
-  <div class="hero-copy">
-    <h1>Life is rich and varied. Your financial plan should be, too.</h1>
-    <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
-  </div>
-  <div class="hero-image">
-    <img alt="Man with many hats" src="images/hat-stacks.png" />
-  </div>
-  <a href="#content" class="hero-cta">let's get started</a>
-</div>
-<p>Patterned Super Hero w/ image</p>
+    <p>Base Hero</p>
+    <div class="hero patterned">
+      <div class="hero-copy">
+        <h1>Mortgages</h1>
+        <p class="callout-body-copy">Buying a home? We can help.</p>
+      </div>
+      <div class="hero-image">
+        <img alt="Man with many hats" src="images/mortgage-scene.jpg" />
+      </div>
+      <a href="#content" class="hero-cta">Learn more</a>
+    </div>
+    <p>Patterned Hero w/ image</p>
+    <div class="hero patterned super-hero">
+      <div class="hero-copy">
+        <h1>Life is rich and varied. Your financial plan should be, too.</h1>
+        <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+      </div>
+      <div class="hero-image">
+        <img alt="Man with many hats" src="images/hat-stacks.png" />
+      </div>
+      <a href="#content" class="hero-cta">let's get started</a>
+    </div>
+    <p>Patterned Super Hero w/ image</p>
 
-<main role="main" id="content">
-  <div class="row">
-    <div class="columns">
-      <h2>Getting Started</h2>
-      <p>Lorem ipsum dolor sit amet, consect</p>
-    </div>
-  </div>
-</main>
+    <main role="main" id="content">
+      <div class="row">
+        <div class="medium-4 columns">
+          <h2>Getting Started</h2>
+          <p>Lorem ipsum dolor sit amet, consect</p>
+        </div>
+      </div>
+    </main>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="row">
-    <div class="columns">
-      <a class="float-right" href="#">Back to top</a>
-    </div>
-  </div> 
-  <hr />
-  <div class="row">
-    <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
-        <li>
-          <a href="#">Company</a>
-          <ul class="menu vertical">
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">Media room</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact us</a></li>
+    <footer class="site-footer" role="contentinfo">
+      <div class="row">
+        <div class="columns">
+          <a class="float-right" href="#">Back to top</a>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="medium-4 columns">
+          <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
+            <li>
+              <a href="#">Company</a>
+              <ul class="menu vertical">
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">Media room</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
-        <li>
-          <a href="#">Financial advice</a>
-          <ul class="menu vertical">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">How Can We Help</a></li>
-            <li><a href="#">Value Of The Plan</a></li>
-            <li><a href="#">More - Advice & Stories</a></li>
+        </div>
+        <div class="medium-4 columns">
+          <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
+            <li>
+              <a href="#">Financial advice</a>
+              <ul class="menu vertical">
+                <li><a href="#">Products</a></li>
+                <li><a href="#">How Can We Help</a></li>
+                <li><a href="#">Value Of The Plan</a></li>
+                <li><a href="#">More - Advice & Stories</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="medium-4 columns">
-      <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
-        <li>
-          <a href="#">Resources</a>
-          <ul class="menu vertical">
-            <li><a href="#">Client Account Access</a></li>
-            <li><a href="#">Solutions Banking Access</a></li>
-            <li><a href="#">Mutual Funds</a></li>
-            <li><a href="#">Mortgage Rates</a></li>
+        </div>
+        <div class="medium-4 columns">
+          <ul class="menu vertical" data-responsive-menu="accordion medium-dropdown">
+            <li>
+              <a href="#">Resources</a>
+              <ul class="menu vertical">
+                <li><a href="#">Client Account Access</a></li>
+                <li><a href="#">Solutions Banking Access</a></li>
+                <li><a href="#">Mutual Funds</a></li>
+                <li><a href="#">Mortgage Rates</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-6 medium-4 columns small-centered">
-      <ul class="row menu horizontal">
-        <li>
-          <a href="https://www.facebook.com/InvestorsGroup"><img src="images/fb-icon.png"></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/investors-group"><img src="images/li-icon.png"></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/Investors_Group" ><img src="images/tw-icon.png"></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/user/InvestorsGroupCanada"><img src="images/yt-icon.png"></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-3 columns">
-      <p>© 2016 Investors Group Inc. All rights Reserved</p>
-    </div>
-    <div class="medium-9 columns">
-      <ul class="menu vertical medium-horizontal">
-        <li><a href="/en/legal">Legal</a></li>
-        <li><a href="/en/legal/use">Terms Of Use</a></li>
-        <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
-        <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
-        <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
-      </ul>
-    </div>
-  </div>  
-</footer>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-6 medium-4 columns small-centered">
+          <ul class="row menu horizontal">
+            <li>
+              <a href="https://www.facebook.com/InvestorsGroup"><img src="images/fb-icon.png"></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/investors-group"><img src="images/li-icon.png"></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Investors_Group" ><img src="images/tw-icon.png"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/InvestorsGroupCanada"><img src="images/yt-icon.png"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-3 columns">
+          <p>© 2016 Investors Group Inc. All rights Reserved</p>
+        </div>
+        <div class="medium-9 columns">
+          <ul class="menu vertical medium-horizontal">
+            <li><a href="/en/legal">Legal</a></li>
+            <li><a href="/en/legal/use">Terms Of Use</a></li>
+            <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
+            <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
+            <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
+          </ul>
+        </div>
+      </div>  
+    </footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
