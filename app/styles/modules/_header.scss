@@ -107,7 +107,7 @@ Styleguide 3.1
   opacity: 1;
   transition: 500ms transform ease-out, 300ms opacity ease-out;
 
-  .menu.vertical {
+  .menu {
     > li {
       > a {
         text-transform: uppercase;
@@ -125,6 +125,24 @@ Styleguide 3.1
             height: 18px;
             top: 1.3rem;
             left: 7px;
+          }
+        }
+
+        @include respond-to(large) {
+          padding: 0.7rem 1rem;
+          border-bottom: none;
+
+          &:hover, &:focus {
+            background: transparent;
+
+            &:before {                  
+              border-bottom: 2px solid #0D263C;
+              height: 0;
+              top: auto;
+              left: 1rem;
+              bottom: -0.65rem;
+              right: 1rem;
+            }
           }
         }
         &.site-header-cta {
@@ -147,24 +165,6 @@ Styleguide 3.1
             }
           }
         }
-
-        @include respond-to(large) {
-          padding: 0.7rem 1rem;
-          border-bottom: none;
-
-          &:hover, &:focus {
-            background: transparent;
-
-            &:before {                  
-              border-bottom: 2px solid #0D263C;
-              height: 0;
-              top: auto;
-              left: 1rem;
-              bottom: -0.6rem;
-              right: 1rem;
-            }
-          }
-        }
       }
       &[aria-expanded=true], &.is-active {
         background: $light-grey;
@@ -173,6 +173,26 @@ Styleguide 3.1
         text-align: center;
         a {
           border-bottom: none;
+        }
+      }
+    }
+  }
+  .menu.submenu {
+    > li {
+      a {
+        @include respond-to(large) {
+          text-transform: none;
+          &:hover, &:focus {
+            background-color: $light-grey;
+            &:before {                  
+              content: '';
+              border-left: 2px solid $brand-color;
+              height: 16px;
+              top: 0.7rem;
+              left: 7px;
+              border-bottom: none;
+            }
+          }
         }
       }
     }
@@ -247,7 +267,13 @@ Styleguide 3.1
     right: 0;
     background: $lightest-color;
     z-index: 500;
-    transform: scaleX(0);
+    transform: scale(0) translate3d(100%,0,0) skew(-90deg);
+
+    transition: transform 0.3s ease-out;
+
+    &.site-search-is-active {
+      transform: scale(1) translate3d(0%,0,0) skew(0deg);
+    }
   }
 }
 

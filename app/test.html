@@ -43,9 +43,9 @@
                 <nav role="navigation">
                   <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
                     <li>
-                      <form id="site-search" class="site-search" action="/en/search">
+                      <form id="site-search" class="site-search" action="/en/search" data-toggler=".site-search-is-active">
                         <div class="input-group">
-                          <span class="input-group-label"><img src="images/search-icon.png" alt="Search icon"/></span>
+                          <span data-toggle="site-search" class="input-group-label"><img src="images/search-icon.png" alt="Search icon"/></span>
                           <label for="site-search-q" class="input-group-field">
                             <span class="show-for-sr">Search investors group</span>
                             <input type="search" id="site-search-q" name="q" placeholder="Search investors group">
@@ -68,6 +68,7 @@
                     </li>
                     <li><a href="#">Advice & stories</a></li>
                     <li><a href="#" class="site-header-cta">Find an Advisor</a></li>
+                    <li class="show-for-large"><a data-toggle="site-search"><img src="images/search-icon.png" alt="Search icon"/></a></li>
                   </ul>
                 </nav>
                 <div class="top-bar aux-nav">
