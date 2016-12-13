@@ -1,3 +1,12 @@
+// Breakpoints
+$breakpoints: (
+  small: 0px,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
 // Typography
 $brand-font: 'Whitney';
 $font-stack: $brand-font, sans-serif;
@@ -17,11 +26,8 @@ $grey: #DBDFE2; //
 $dark-grey: #c1cbd0;
 $darkest-color: #282828; // Charcoal near Black
 
-// Breakpoints
-$breakpoints: (
-  small: 0px,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1200px,
-  xxlarge: 1440px,
-);
+// Border Radius
+$border-radius: 5px;
+
+// Arrows
+$arrow-size: 10px;

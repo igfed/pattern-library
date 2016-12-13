@@ -27,12 +27,26 @@
 //   </div>
 // </div>
 //
-// Styleguide 2.12
+// Styleguide 2.3
 
 .top-bar {
-	background: $lightest-color;
+	background: transparent;
 
 	ul {
-		background: $lightest-color;
+		background: transparent;
+	}
+	a {
+		color: $darkest-color;
+	}
+
+	@include respond-to(medium) {
+		.top-bar-left, .top-bar-right {
+			width: 100%;
+		}
+	}
+	@include respond-to(large) {
+		.top-bar-left, .top-bar-right {
+			width: auto;
+		}
 	}
 }

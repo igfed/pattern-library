@@ -20,24 +20,17 @@
 @import "elements/images";
 @import "elements/buttons";
 @import "elements/forms";
+@import "elements/tables";
 
 // Components
 //
 // class-based selectors which define undecorated design patterns
 //
 // Styleguide 2.
-@import "components/alert";
 @import "components/callout";
-@import "components/data-list";
-@import "components/modal";
-@import "components/pagination";
-@import "components/progress-bar";
-@import "components/reveal";
-@import "components/slider";
-@import "components/subnav";
-@import "components/tables";
-@import "components/tabs";
 @import "components/topBar";
+@import "components/dropdown";
+@import "components/modal";
 
 
 // Modules
@@ -45,4 +38,7 @@
 // specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
 //
 // Styleguide 3.
+@import "modules/header";
+@import "modules/footer";
+@import "modules/hero";
 @import "modules/accordion";

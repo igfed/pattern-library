@@ -1,0 +1,75 @@
+/*
+Drop down menu
+
+Drop down menu
+
+Markup:
+ <ul class="dropdown menu horizontal" data-dropdown-menu>
+	<li>
+		<a href="#">Login</a>
+		<ul class="menu vertical">
+			<li><a href="/en/opportunities/investment">Client Login</a></li>
+			<li><a href="/en/opportunities/retirement">Solutions Banking &trade;</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Client Support</a></li>
+	<li><a href="#">Francais</a></li>
+</ul>
+
+Styleguide 2.4
+*/
+
+.dropdown {
+
+	.menu {
+		z-index: 500;
+		background-color: $lightest-color;
+		color: $darkest-color;
+		box-shadow: 0px 5px 8px rgba(0,0,0,0.3);
+		border-radius: $border-radius;
+
+		a {
+			&:hover, &:focus {
+				background: $grey;
+			}
+		}
+	}
+}
+
+// Arrow styles
+
+.dropdown.menu > li.is-dropdown-submenu-parent {
+    > a::after {
+        width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-top: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform-origin: center middle;
+	    transform: rotate(135deg);
+    }
+    &.opens-left > a::after {
+    	width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-top: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform: rotate(-135deg);
+    }
+    &.opens-right > a::after {
+    }
+}
+.dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent,
+.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent {
+	> a::after {
+		width: $arrow-size;
+	    height: $arrow-size;
+	    border: none;
+	    border-bottom: solid 1px $darkest-color;
+	    border-right: solid 1px $darkest-color;
+	    transform-origin: center middle;
+	    transform: rotate(45deg);
+	    top: 45%;
+	    margin-top: -$arrow-size/2;
+	}
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -23,89 +23,92 @@
         margin: 30px 0;
         border-bottom: 1px solid #eee;
       }
+      .sample {
+        position: relative;
+      }
     </style>
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div class="title-bar" data-responsive-toggle="Main-nav" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
     
     <div class="top-bar" id="Main-nav">
       <div class="row">
         <nav class="large-12 columns">
           <ul class="menu top-bar-left">
-            <li class="topbar-title"><img src="/images/logo.svg" alt="" style="width: 220px;" /></li>
+            <li class="topbar-title"><img src="/images/logo-en-bw.svg" alt="" class="image-logo" /></li>
           </ul>
           <ul class="menu top-bar-right">
-            <li><a href="./index.html">Getting Started</a></li>
-            {{#eachRoot}}
-              <li><a href="section-{{reference}}.html">{{header}}</a></li>
-            {{/eachRoot}}
+            <li><a href="./index.html">Logout</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
-    {{#if overview}}
-      <div class="callout large primary">
-        <div class="row column text-center">
-            <h1>IG Pattern library</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-8 columns">
-          {{{overview}}}
-        </div>
-      </div>
-    {{else}}
-      <div class="callout large primary">
-        <div class="row column text-center">
-            <h1>IG Pattern library</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-8 columns">
-          {{#eachSection rootNumber}}
-            <section class="pattern-content" id="section-{{reference}}">
-              <h2>{{header}}</h2>
-              <p>{{html description}}</p>            
-              <div class="sample panel">
-                {{html markup}}
-              </div>
-              {{#eachModifier}}
-                <div class="modifier">
-                    <h3>{{name}}</h3>
-                    <p>{{html description}}</p>
-
-                    <div class="example">
-                        {{modifierMarkup}}
-                    </div>
-                </div>
-              {{/eachModifier}}
-              {{#if markup}}
-                <pre><code class="lang-html">{{markup}}</code></pre>
-              {{/if}}
-            </section>
-          {{/eachSection}}
-        </div>
-        <div class="medium-4 columns">
-          <ul class="vertical menu">
-            {{#eachSection rootNumber}}
-              {{#if @first}}{{else}}
-                <li><a href="#section-{{reference}}">{{header}}</a></li>
-              {{/if}}
-            {{/eachSection}}
+    <div class="row">
+      <div class="medium-3 columns">
+          <ul class="vertical menu" data-accordion-menu>
+            <li><a href="./index.html">Getting Started</a></li>
+            {{#eachRoot}}
+              <li>
+                <a href="section-{{reference}}.html">{{header}}</a>
+                <ul class="menu vertical nested">
+                  {{#eachSection reference}}
+                    <li><a href="section-{{reference}}.html">{{header}}</a></li>
+                  {{/eachSection}}
+                </ul>
+              </li>
+            {{/eachRoot}}
           </ul>
         </div>
-      </div>
-    {{/if}}
 
-    <footer class="secondary">
+        <main role="main" id="content">
+          <div class="medium-9 columns">
+            {{#if overview}}
+              {{{overview}}}
+            {{else}}
+              {{#eachSection rootNumber}}
+                <section class="pattern-content" id="section-{{reference}}">
+                  <h2>{{header}}</h2>
+                  <p>{{html description}}</p>            
+                  <div class="sample panel">
+                    {{html markup}}
+                  </div>
+                  {{#eachModifier}}
+                    <div class="modifier">
+                        <h3>{{name}}</h3>
+                        <p>{{html description}}</p>
+
+                        <div class="example">
+                            {{modifierMarkup}}
+                        </div>
+                    </div>
+                  {{/eachModifier}}
+                  {{#if markup}}
+                    <ul class="accordion" data-accordion role="tablist">
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Code</a>
+                       <div class="accordion-content" data-tab-content>
+                          <pre><code class="lang-html">{{markup}}</code></pre>
+                       </div>
+                     </li>
+                     <li class="accordion-item" data-accordion-item>
+                       <a href="#" class="accordion-title" >Documentation</a>
+                       <div class="accordion-content" data-tab-content>
+
+                       </div>
+                     </li>
+                  </ul>
+                {{/if}}
+              </section>
+            {{/eachSection}}
+          {{/if}}
+        </div>
+      </main>
+    </div>
+
+    <footer class="secondary" role="contentinfo">
       <div class="row">
         <div class="large-12 columns">
           <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>

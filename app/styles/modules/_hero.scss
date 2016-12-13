@@ -1,0 +1,111 @@
+/*
+Hero
+
+Hero module holds big headlines
+
+Markup:
+ <div class="hero">
+  <div class="row">
+    <div class="columns">
+      <h1>Life is rich and varied. Your financial plan should be, too.</h1>
+      <p>We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+      <button>let's get started</button>
+    </div>
+  </div>
+</div>
+
+Styleguide 3.3
+*/
+
+.hero {
+	background-color: $primary-color;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	padding: 10vh 10vw;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+
+	&.patterned {
+		background-image: url(../images/tiled-weathered-pattern.jpg);
+	}
+	&.super-hero {
+		justify-content: flex-start;
+		padding-left: 20px;
+		padding-right: 20px;
+		@include respond-to(medium) {
+			padding: 10vh 10vw;
+		}
+	}
+}
+
+.hero-copy {
+	text-align: center;
+	z-index: 100;
+	
+	h1, p{
+		widows: 2;// Just in case its supported
+	}
+}
+.super-hero .hero-copy {
+	text-align: left;
+	max-width: 70vw;
+	@include respond-to(medium) {
+		max-width: 50vw;
+	}
+}
+
+.hero-image {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	max-width: 100%;
+}
+.super-hero .hero-image {
+	right: 0;
+	left: auto;
+	max-width: 30vw;
+	@include respond-to(medium) {
+		max-width: 50vw;
+	}
+}
+
+.hero-cta {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+
+	text-shadow: 1px 1px rgba(255,255,255,0.5);
+	color: $brand-color;
+
+	&::after{
+		content: '';
+		display: block;
+		margin: 0 auto;
+		width: $arrow-size*1.5;
+	    height: $arrow-size*1.5;
+	    border: none;
+	    border-bottom: solid 1px;
+	    border-right: solid 1px;
+	    transform-origin: center middle;
+	    transform: rotate(45deg) translate3d(0,0,0);
+
+	    transition: transform 0.3s ease-out;
+	}
+
+	&:hover, &:focus {
+		color: $brand-color;
+		text-decoration: underline;
+		&::after{
+			transform: rotate(45deg) translate3d(3px,3px,0);
+		}
+	}
+}
