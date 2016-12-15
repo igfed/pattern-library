@@ -24,14 +24,16 @@
     <![endif]-->
     
     <header role="banner" class="site-header">
-      <a id="skip-navigation" class="show-on-focus button secondary" href="#content">Skip Navigation</a>
+      <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
       <div class="row">
         <div class="columns">
-          <div class="top-bar main-nav">
+          <div class="top-bar">
             <div class="top-bar-title">
               <div class="row">
                 <div class="columns">
-                  <img src="/images/logo-en-color.svg" alt="" class="image-logo">
+                  <a href="/">
+                    <img src="/images/logo-en-color.svg" alt="" class="image-logo">
+                  </a>
                   <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
                     <button class="menu-icon dark" type="button" data-toggle></button>
                   </span>
@@ -40,19 +42,20 @@
             </div>
             <div id="main-navigation" class="top-bar-right main-navigation">
               <div class="main-navigation-wrapper">
-                <nav role="navigation">
+                <nav role="navigation" class="primary-nav">
                   <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
                     <li>
                       <form id="site-search" class="site-search" action="/en/search" data-toggler=".site-search-is-active">
                         <div class="input-group">
-                          <span data-toggle="site-search" class="input-group-label"><img src="images/search-icon.png" alt="Search icon"/></span>
+                          <span class="input-group-label"><img src="images/search-icon.svg" alt="Search icon"/></span>
                           <label for="site-search-q" class="input-group-field">
                             <span class="show-for-sr">Search investors group</span>
                             <input type="search" id="site-search-q" name="q" placeholder="Search investors group">
                           </label>
-                          <div class="input-group-button">
+                          <span data-toggle="site-search" class="input-group-label show-for-large"><img src="images/close-button-icon.png" alt="Search icon"/></span>
+                          <!-- <div class="input-group-button">
                             <input type="submit" class="button" value="Search" />
-                          </div>
+                          </div> -->
                         </div>
                       </form>
                     </li>
@@ -68,12 +71,11 @@
                     </li>
                     <li><a href="#">Advice & stories</a></li>
                     <li><a href="#" class="site-header-cta">Find an Advisor</a></li>
-                    <li class="show-for-large"><a data-toggle="site-search"><img src="images/search-icon.png" alt="Search icon"/></a></li>
+                    <li class="show-for-large"><a data-toggle="site-search"><img src="images/search-icon.svg" alt="Search"/></a></li>
                   </ul>
                 </nav>
                 <div class="top-bar aux-nav">
                   <div class="row">
-                    <div class="columns">
                       <nav class="top-bar-right" role="navigation">
                         <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown">
                           <li><a href="#">Login</a>
@@ -87,7 +89,6 @@
                         </ul>
                       </nav>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -95,14 +96,15 @@
         </div>
       </div>
     </header>
-
     <div class="hero">
       <div class="hero-copy">
         <h1>Client Support</h1>
         <p class="callout-body-copy">Do you have questions? give us a call.</p>
       </div>
     </div>
-    <p>Base Hero</p>
+
+    <p class="row">Base Hero</p>
+
     <div class="hero patterned">
       <div class="hero-copy">
         <h1>Mortgages</h1>
@@ -111,9 +113,11 @@
       <div class="hero-image">
         <img alt="Man with many hats" src="images/mortgage-scene.jpg" />
       </div>
-      <a href="#content" class="hero-cta">Learn more</a>
+      <a href="#main-content" class="hero-cta">Learn more</a>
     </div>
-    <p>Patterned Hero w/ image</p>
+
+    <p class="row">Patterned Hero w/ image</p> 
+
     <div class="hero patterned super-hero">
       <div class="hero-copy">
         <h1>Life is rich and varied. Your financial plan should be, too.</h1>
@@ -122,15 +126,65 @@
       <div class="hero-image">
         <img alt="Man with many hats" src="images/hat-stacks.png" />
       </div>
-      <a href="#content" class="hero-cta">let's get started</a>
+      <a href="#main-content" class="hero-cta">let's get started</a>
     </div>
-    <p>Patterned Super Hero w/ image</p>
 
-    <main role="main" id="content">
+    <p class="row">Patterned Super Hero w/ image</p>
+
+    <main role="main" id="main-content">
       <div class="row">
-        <div class="medium-4 columns">
-          <h2>Getting Started</h2>
-          <p>Lorem ipsum dolor sit amet, consect</p>
+        <div class="medium-8 columns">
+          <h2>Typography</h2>
+          <p>This document captures a baseline of fonts colors and sizes being used on Investorsgroup.com. A baseline unify all digital properties of Investors Group giving one voice. Any additions to the font list will need to be approved by the Digital Marketing Team.</p>
+          <div class="modifier">
+              <h3>.callout-body-copy</h3>
+              <p>large version of body copy</p>
+              <div class="example">
+                   <p class="callout-body-copy">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.hero-title, .callout-title</h3>
+              <p>hero or call out title</p>
+              <div class="example">
+                   <p class="hero-title,">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.content-title</h3>
+              <p>content title</p>
+              <div class="example">
+                   <p class="content-title">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.section-title</h3>
+              <p>section title</p>
+              <div class="example">
+                   <p class="section-title">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.sub-title</h3>
+              <p>sub title</p>
+              <div class="example">
+                   <p class="sub-title">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.legal</h3>
+              <p>Legal copy</p>
+              <div class="example">
+                   <p class="legal">The quick brown fox jumps over the lazy dog.</p>
+              </div>
+          </div>
+          <div class="modifier">
+              <h3>.punched-out</h3>
+              <p>Usually a number callout</p>
+              <div class="example">
+                   <p class="punched-out">5</p>
+              </div>
+          </div>
         </div>
       </div>
     </main>

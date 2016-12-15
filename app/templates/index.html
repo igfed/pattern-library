@@ -48,14 +48,14 @@
 
     <div class="row">
       <div class="medium-3 columns">
-          <ul class="vertical menu" data-accordion-menu>
+          <ul class="vertical menu">
             <li><a href="./index.html">Getting Started</a></li>
             {{#eachRoot}}
               <li>
                 <a href="section-{{reference}}.html">{{header}}</a>
                 <ul class="menu vertical nested">
                   {{#eachSection reference}}
-                    <li><a href="section-{{reference}}.html">{{header}}</a></li>
+                    <li><a href="#section-{{reference}}">{{header}}</a></li>
                   {{/eachSection}}
                 </ul>
               </li>
@@ -71,7 +71,7 @@
               {{#eachSection rootNumber}}
                 <section class="pattern-content" id="section-{{reference}}">
                   <h2>{{header}}</h2>
-                  <p>{{html description}}</p>            
+                  <p>{{html description}}</p>
                   <div class="sample panel">
                     {{html markup}}
                   </div>
@@ -108,13 +108,22 @@
       </main>
     </div>
 
-    <footer class="secondary" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
       <div class="row">
-        <div class="large-12 columns">
-          <p><small>© Copyright 2016 Investors Group, All Rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
-          <p>If you have a term you would like defined for the glossary please add it in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScr6Ts51wsAj9u8Tq92s-uGvkCPjNqA7ZFyT8gyDOwHVeWJ9Q/viewform">Glossary Terms Form</a></p>
+        <div class="columns">
+          <a class="float-right" href="#">Back to top</a>
         </div>
-      </div>
+      </div> 
+      <div class="row">
+        <div class="large-3 columns">
+          <ul class="menu horizontal">
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScr6Ts51wsAj9u8Tq92s-uGvkCPjNqA7ZFyT8gyDOwHVeWJ9Q/viewform">Glossary Terms Form</a></li>
+          </ul>
+        </div>
+        <div class="large-9 columns">
+          <p><small>© 2016 Investors Group Inc. All rights Reserved | CONFIDENTIAL - Must not be duplicated, shared or printed without approval.</small></p>
+        </div>
+      </div>  
     </footer>
 
     <!-- build:js scripts/vendor.js -->

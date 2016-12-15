@@ -37,6 +37,8 @@
 	}
 	a {
 		color: $darkest-color;
+		margin-left: 0.875rem;
+		margin-right: 0.875rem;
 	}
 
 	@include respond-to(medium) {
