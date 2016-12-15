@@ -94,13 +94,13 @@ Styleguide 3.1
   z-index: 1000;
 }
 .main-navigation {
-  // position: fixed;
-  // top: 46px;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 1000;
-  // background: $lightest-color;
+  position: fixed;
+  top: 46px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $lightest-color;
 
   // transform: translate3d(0,0,0);
   // transform-origin: top right;
@@ -188,6 +188,7 @@ Styleguide 3.1
       @include respond-to(large) {
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
+        background: $lightest-color;
       }
     > li {
       padding: 0 0.875rem;
