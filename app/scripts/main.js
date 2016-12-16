@@ -5,7 +5,14 @@ $(function(){
 	});
 });
 
-$("a[href='#top']").click(function() {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-  return false;
-});
+$('a[href^="#"]').bind('click.smoothscroll',function (e) {
+    e.preventDefault();
+    var target = this.hash,
+        $target = $(target);
+
+    $('html, body').stop().animate( {
+      'scrollTop': $target.offset().top-40
+    }, 900, 'swing', function () {
+      window.location.hash = target;
+    } );
+} );
