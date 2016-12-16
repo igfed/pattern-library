@@ -106,3 +106,6 @@ small, .legal {
 		font-size: 0.875rem;
 	}
 }
+
+@include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, ttf);
+

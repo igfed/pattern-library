@@ -7,3 +7,64 @@
 .image-logo {
 	height: 35px;
 }
+
+.social-media{
+	ul{
+      display: table;
+      margin: 0;
+      width: 100%;
+
+      li{
+        .social-media-icon{
+          width: 48px;
+          height: 48px;
+          border: 2px solid #0d263c;
+          border-radius: 50%;
+          padding: 0;
+          position: relative;
+          margin: 0 auto;
+
+	      &:hover{
+	        border-color: #fff;
+	      }
+
+          img{
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 24px;
+          }
+
+          &.facebook-icon{
+			img{
+				width: 14px;
+				top: 13%;
+				left: 34%;
+			}
+		  }
+
+		  &.linkedin-icon{
+			img{
+				top: 20%;
+    			left: 24%;
+			}
+		  }
+
+		  &.twitter-icon{
+			img{
+				width: 21px;
+				left: 28%;
+    			top: 29%;
+			}
+		  }
+
+		  &.youtube-icon{
+			img{
+				top: 29%;
+    			left: 22%;
+			}
+		  }
+        }
+      }
+    }
+}
