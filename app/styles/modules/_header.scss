@@ -78,6 +78,7 @@ Styleguide 3.1
   .top-bar-title {
     width: 100%;
   }
+  .home-link { margin: 0; }
 
   @include respond-to(large) {
     padding-top: 36px;
@@ -93,9 +94,10 @@ Styleguide 3.1
   position: fixed !important;
   z-index: 1000;
 }
+
 .main-navigation {
   position: fixed;
-  top: 46px;
+  top: 51px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -117,6 +119,10 @@ Styleguide 3.1
         position: relative;
         font-size: 14px;
         font-size: 0.875rem;
+        margin: 0;
+        @include respond-to(large) {
+          margin: 0 0.875rem;
+        }
         &:hover, &:focus {
           background: $light-grey;
 
@@ -124,7 +130,7 @@ Styleguide 3.1
             content: '';
             position: absolute;
             border-left: 2px solid $brand-color;
-            height: 18px;
+            height: 14px;
             top: 1.3rem;
             left: 7px;
           }
@@ -166,6 +172,19 @@ Styleguide 3.1
                 display: none;
               }
             }
+
+            &.alternate-cta {
+              background-color: $darkest-color;
+              color: $lightest-color;
+              border-color: $darkest-color;
+
+              &:hover, &:focus {
+                background-color: $lightest-color;
+                color: $darkest-color;
+                border-color: $grey;
+
+              }
+            }
           }
         }
       }
@@ -184,25 +203,26 @@ Styleguide 3.1
     }
   }
   .menu.submenu {
-    background: $light-grey;
       @include respond-to(large) {
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
         background: $lightest-color;
       }
     > li {
-      padding: 0 0.875rem;
       a {
+        padding-left: 2rem;
+        padding-right: 2rem;
         @include respond-to(large) {
           text-transform: none;
+          margin: 0;
           &:hover, &:focus {
             background-color: $light-grey;
             &:before {                  
               content: '';
               border-left: 2px solid $brand-color;
-              height: 16px;
+              height: 14px;
               top: 0.7rem;
-              left: 7px;
+              left: 10px;
               border-bottom: none;
             }
           }
@@ -226,6 +246,13 @@ Styleguide 3.1
     height: auto;
     overflow-x: visible;
   }
+}
+
+.main-navigation-close-toggle {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  float: right;
 }
 
 .aux-nav {
