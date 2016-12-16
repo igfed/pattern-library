@@ -61,12 +61,6 @@ label {
 		&:focus {
 		    border-color: $brand-color;
 		}
-
-		&.error {
-			+ .fa {
-				display: block;
-			}
-		}
 	}
 
 	&.error {
