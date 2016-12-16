@@ -80,7 +80,7 @@ Styleguide 3.1
   }
 
   @include respond-to(large) {
-    padding-top: 46px;
+    padding-top: 36px;
     .top-bar-title {
       width: auto;
     }
@@ -111,10 +111,12 @@ Styleguide 3.1
     > li {
       > a {
         text-transform: uppercase;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid $light-grey;
         padding-top: 1.3rem;
         padding-bottom: 1.3rem;
         position: relative;
+        font-size: 14px;
+        font-size: 0.875rem;
         &:hover, &:focus {
           background: $light-grey;
 
@@ -136,11 +138,11 @@ Styleguide 3.1
             background: transparent;
 
             &:before {                  
-              border-bottom: 2px solid #0D263C;
+              border-bottom: 3px solid #0D263C;
               height: 0;
               top: auto;
               left: 1rem;
-              bottom: -0.65rem;
+              bottom: -9px;
               right: 1rem;
             }
           }
@@ -149,7 +151,7 @@ Styleguide 3.1
           @include respond-to(large) {
             padding: 6px 1.25em;
             background-color: transparent;
-            color: $brand-color;
+            color: $darkest-color;
             text-align: center;
             border-radius: $border-radius;
             font-size: 16px;
@@ -157,8 +159,9 @@ Styleguide 3.1
             border: 1px solid $grey;
 
             &:hover, &:focus {
-              background-color: $brand-color;
+              background-color: $darkest-color;
               color: $lightest-color;
+              border-color: $darkest-color;
               &:before {                  
                 display: none;
               }
@@ -166,19 +169,29 @@ Styleguide 3.1
           }
         }
       }
-      &[aria-expanded=true], &.is-active {
-        background: $light-grey;
-      }
       &.language-toggle {
         text-align: center;
         a {
           border-bottom: none;
         }
       }
+      [data-toggle=site-search] {
+        padding: 0;
+        height: 20px;
+        width: 23px;
+        cursor: pointer;
+      }
     }
   }
   .menu.submenu {
+    background: $light-grey;
+      @include respond-to(large) {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        background: $lightest-color;
+      }
     > li {
+      padding: 0 0.875rem;
       a {
         @include respond-to(large) {
           text-transform: none;
@@ -216,24 +229,35 @@ Styleguide 3.1
 }
 
 .aux-nav {
-	padding: 0.25rem 0;
+	padding: 0;
   @include respond-to(large) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: $light-grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $light-grey;
+    min-height: 36px;
+    > .row {
+      max-width: 75rem !important; // Special case of nested rows in order to get the lock up just right
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .menu {
     > li {
+        &:last-child {
+          a:after{
+            display: none;
+          }
+        }
       > a {
         @include respond-to(large) {
           text-transform: none;
           &:hover, &:focus {
 
             &:before {                  
-              bottom: -0.2rem;
+              bottom: -1px;
             }
           }
         }
@@ -241,12 +265,23 @@ Styleguide 3.1
     }
   }
 }
+.primary-nav {
+  @include respond-to(large) {
+    position: relative;
 
+    .submenu, .submenu li {
+      background: $lightest-color;
+    }
+  }
+}
 .site-search {
   display: block;
   padding: 0.7rem 1rem;
   line-height: 1;
 
+  .input-group {
+    margin-bottom: 0;
+  }
   .input-group-label {
     img {
       min-width: 14px;
@@ -262,17 +297,30 @@ Styleguide 3.1
 
   @include respond-to(large) {
     position: absolute;
-    top: 46px;
+    top: 0;
     left: 0;
     right: 0;
     background: $lightest-color;
-    z-index: 500;
-    transform: scale(0) translate3d(100%,0,0) skew(-90deg);
+    padding: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center right;
 
     transition: transform 0.3s ease-out;
 
+    [data-toggle=site-search] img {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      transition-delay: 0.33s;
+    }
+
     &.site-search-is-active {
-      transform: scale(1) translate3d(0%,0,0) skew(0deg);
+      transform: scaleX(1);
+      z-index: 500;
+
+      [data-toggle=site-search] img {
+        opacity: 1;
+      }
     }
   }
 }
