@@ -31,6 +31,7 @@
 @import "components/topBar";
 @import "components/dropdown";
 @import "components/modal";
+@import "components/figure";
 
 
 // Modules
@@ -40,5 +41,5 @@
 // Styleguide 3.
 @import "modules/header";
 @import "modules/footer";
-@import "modules/hero";
+@import "modules/hero/hero";
 @import "modules/accordion";

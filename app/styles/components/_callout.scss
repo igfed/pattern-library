@@ -12,7 +12,7 @@
 // Styleguide 2.2
 
 .callout {
-	&.primary {
-		background: $primary-color;
-	}
+	padding: 10vh 0;
+  margin: 0;
+  border: none;
 }

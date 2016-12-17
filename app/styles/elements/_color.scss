@@ -1,27 +1,24 @@
-// Color
-//
-// These are the core color palettes used across all Investors Group digital experiences. Primary, secondary and tertiary color systems are dedicated to specific user states, interactions, icons and tools.
-//
-// Markup:
-// 	<div class="{$modifiers}">
-//		<p>It has an easy to override visual style, and is appropriately subdued.</p>
-//	</div>
-// 	<p  class="{$modifiers}-text">Sample text based overide</p>
-//
-// .primary - Primary Colour.
-// .secondary - Secondary Colour.
-//
-// Styleguide 1.3
-.primary {
-	background: $primary-color;
-}
-.primary-text {
-	color: $primary-color;
-}
+/*
+Color
 
-.secondary {
-	background: $secondary-color;
-}
-.secondary-text {
-	color: $secondary-color;
-}
+These are the core color palettes used across all Investors Group digital experiences. Primary, secondary and tertiary color systems are dedicated to specific user states, interactions, icons and tools.
+
+Markup:
+	<div class="bg-{$modifiers}">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-{$modifiers}">Sample text based overide</p>
+
+.brand - Brand Colour.
+.primary - Primary Colour.
+.secondary - Secondary Colour.
+.highlight - Highlight Colour.
+.alert - Alert Colour.
+
+Styleguide 1.3
+*/
+@include make-color(brand, $brand-color);
+@include make-color(primary, $primary-color);
+@include make-color(secondary, $secondary-color);
+@include make-color(highlight, $highlight-color);
+@include make-color(alert, $alert-color);

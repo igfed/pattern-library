@@ -89,3 +89,12 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+// =============================================================================
+// Render Color based backgrounds and text
+// =============================================================================
+
+@mixin make-color($name, $color) { 
+  .bg-#{unquote($name)} { background: $color; }
+  .text-#{unquote($name)} {color: $color; }
+}
