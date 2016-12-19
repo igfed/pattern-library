@@ -94,6 +94,10 @@ Styleguide 3.1
   position: fixed !important;
   z-index: 1000;
 }
+[data-responsive-toggle="main-navigation"] {
+  position: relative;
+  top: 4px;
+}
 
 .main-navigation {
   position: fixed;
@@ -111,6 +115,24 @@ Styleguide 3.1
 
   .menu {
     > li {
+      @include respond-to(large) {
+        // Divider between services | Advice and Client support | <lang toggle>
+        &:nth-child(3) {
+          > a {
+            position: relative;
+            &:after {
+              content: '';
+              display: block;
+              width: 1px;
+              height: 30px;
+              background: $grey;
+              position: absolute;
+              top: 7px;
+              left: -3px;
+            }
+          }
+        }
+      }
       > a {
         text-transform: uppercase;
         border-bottom: 1px solid $light-grey;
@@ -137,7 +159,7 @@ Styleguide 3.1
         }
 
         @include respond-to(large) {
-          padding: 0.7rem 1rem;
+          padding: 0.5rem 1rem;
           border-bottom: none;
 
           &:hover, &:focus {
@@ -148,14 +170,14 @@ Styleguide 3.1
               height: 0;
               top: auto;
               left: 1rem;
-              bottom: -9px;
+              bottom: -10px;
               right: 1rem;
             }
           }
         }
         &.site-header-cta {
           @include respond-to(large) {
-            padding: 6px 1.25em;
+            padding: 7px 1.25em 10px;
             background-color: transparent;
             color: $darkest-color;
             text-align: center;
@@ -168,7 +190,7 @@ Styleguide 3.1
               background-color: $darkest-color;
               color: $lightest-color;
               border-color: $darkest-color;
-              &:before {                  
+              &:before {
                 display: none;
               }
             }
@@ -199,22 +221,36 @@ Styleguide 3.1
         height: 20px;
         width: 23px;
         cursor: pointer;
+        &:hover {
+          &::before {
+            left: 0;
+            right: -5px;
+            bottom: -17px;
+          }
+        }
       }
     }
   }
   .menu.submenu {
+    background: $light-grey;
       @include respond-to(large) {
+        border: none;
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
         background: $lightest-color;
+        border-radius: 0 0 $border-radius $border-radius;
       }
     > li {
       a {
+        margin-left: 2rem;
+        margin-right: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
+        border-bottom: 1px solid $grey;
         @include respond-to(large) {
           text-transform: none;
           margin: 0;
+          border-color: $light-grey;
           &:hover, &:focus {
             background-color: $light-grey;
             &:before {                  
@@ -222,7 +258,7 @@ Styleguide 3.1
               border-left: 2px solid $brand-color;
               height: 14px;
               top: 0.7rem;
-              left: 10px;
+              left: 1rem;
               border-bottom: none;
             }
           }
@@ -273,16 +309,29 @@ Styleguide 3.1
 
   .menu {
     > li {
-        &:last-child {
-          a:after{
-            display: none;
+      @include respond-to(large) {
+        // Divider between services | Advice and Client support | <lang toggle>
+        &:nth-child(3), &:nth-child(2) {
+          > a {
+            position: relative;
+            &:after {
+              content: '' !important;
+              display: block;
+              width: 1px;
+              height: 20px;
+              background: $grey;
+              position: absolute;
+              top: 10px;
+              left: -12px;
+            }
           }
         }
+      }
       > a {
         @include respond-to(large) {
           text-transform: none;
+              padding: 0.7rem 1rem;
           &:hover, &:focus {
-
             &:before {                  
               bottom: -1px;
             }
@@ -291,10 +340,26 @@ Styleguide 3.1
       }
     }
   }
+  .menu.submenu {
+    @include respond-to(large) {
+      background: $light-grey;
+      li > a {
+        &:hover, &:focus {
+          background: $lightest-color;
+        }
+      }
+    }
+  }
 }
 .primary-nav {
   @include respond-to(large) {
     position: relative;
+    > .menu > li > a {
+        font-family: $font-stack-sc;
+        text-transform: lowercase;
+        font-size: 18px;
+        font-size: 1.125rem;
+      }
 
     .submenu, .submenu li {
       background: $lightest-color;
@@ -311,10 +376,8 @@ Styleguide 3.1
   }
   .input-group-label {
     img {
-      min-width: 14px;
-      @include respond-to(large) {
-        min-width: 20px;
-      }
+      min-width: 20px;
+      width: 20px;
     }
   }
   input {
@@ -352,10 +415,41 @@ Styleguide 3.1
   }
 }
 
+// Dropdown adjustments for header
+.dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
+  left: 50%;
+  right: auto;
+  transform: translate3d(-50%,0,0);
+  top: 44px;
+}
+.aux-nav .dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
+  top: 36px;
+}
+
 // States of the component
 .site-header-is-active {
   overflow: hidden;
   @include respond-to(large) {
     overflow: visible;
+  }
+  .menu-icon.dark {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: #000;
+      box-shadow: none;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 }

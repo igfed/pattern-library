@@ -77,3 +77,5 @@
 [1216/160841:ERROR:file_io.cc(30)] read: expected 4, observed 0
 [1216/162008:ERROR:file_io.cc(30)] read: expected 4, observed 0
 [1216/175551:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1219/110033:ERROR:file_io.cc(30)] read: expected 4, observed 0
+[1219/173730:ERROR:file_io.cc(30)] read: expected 4, observed 0

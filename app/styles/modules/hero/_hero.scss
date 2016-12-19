@@ -77,7 +77,8 @@ Styleguide 3.3
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 100;
-	text-transform: uppercase;
+	text-transform: lowercase;
+	font-family: $font-stack-sc;
 
 	text-shadow: 1px 1px rgba(255,255,255,0.5);
 	color: $brand-color;
