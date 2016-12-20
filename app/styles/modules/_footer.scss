@@ -225,6 +225,10 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
               transform: rotate(225deg) translate3d(0,0,0);
             }
           }
+
+          .accordion-content{
+            border-bottom: 1px solid $footer-darkblue-line;
+          }
         }
 
         .accordion-content{
