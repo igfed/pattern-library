@@ -89,6 +89,15 @@ Markup:
 Styleguide 3.2
 */
 
+/*.hide-for-small is supposed to be a class in foundation css,
+it doesnt work for me maybe we need to update to the latest version of foundation*/
+.hide-for-small{
+  @media screen and (max-width: 1024px){
+    display: none!important;
+  }
+}
+
+
 .site-footer {
 	background: $brand-color;
 	color: $lightest-color;
@@ -114,7 +123,7 @@ Styleguide 3.2
     margin-bottom: 40px;
 
     .columns{
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid $lightest-color;
       padding-bottom: 8px;
 
       a{
@@ -143,7 +152,7 @@ Styleguide 3.2
         }
       }
       hr{
-        border-color: #ffffff;
+        border-color: $lightest-color;
         padding-bottom: 8px;
       }
     }
@@ -162,14 +171,7 @@ Styleguide 3.2
       background: none;
       border: none;
       margin: 0;
-      
-      @include respond-to(large){
-        width: auto;
-        display: inline-block;
-        float: none;
-        text-align: left;
 
-      }
       .accordion-item{
 
         .accordion-title{
@@ -178,12 +180,18 @@ Styleguide 3.2
           border-bottom: 1px solid #314659;
           text-transform: uppercase;
           font-size: 14px;
-          font-weight: 900;
+          font-family: $font-semibold;
+          color: $lightest-color;
+
+          &:before{
+            top: 40%;
+          }
 
           @include respond-to(large){
             pointer-events: none;
             border: none;
             font-size: 16px;
+            padding-bottom: 35px;
           }
 
           &:hover, &:focus{
@@ -225,9 +233,13 @@ Styleguide 3.2
           padding-left: 0;
           padding-right: 0;
 
+          width: auto;
+          float: none;
+          text-align: left;
+
 
            @include respond-to(large){
-            display: block!important;
+            display: inline-block!important;
            }
 
            li{
@@ -250,7 +262,7 @@ Styleguide 3.2
                   background: #314659;
 
                   &:before{
-                    border-left: 2px solid #fff;
+                    border-left: 2px solid $lightest-color;
                   }
                 }
 
@@ -264,7 +276,7 @@ Styleguide 3.2
                   &:hover{
                     background: none;
                     text-decoration: underline;
-                    color: #fff;
+                    color: $lightest-color;
 
                     &:before{
                       border: none;
@@ -279,76 +291,79 @@ Styleguide 3.2
   }
 
   .footer-social-media{
-    padding-top: 36px;
-    padding-bottom: 14px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     max-width: 300px;
-
-    @include respond-to(large){
-      padding-bottom: 36px;
-    }
   }
 
   .footer-copyright{
-
-    margin-left: 22px;
-    margin-right: 22px;
-
+      
     @include respond-to(large){
-       border-top: 1px solid #262c50;
-       text-align: center;
-       margin: 0 auto;
+      padding-right: 0;
+      padding-left: 0;
     }
 
-    .columns{
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-top: 1px solid #263c50;
-      line-height: normal;
-      text-align: center;
+    .footer-copyright-border-top{
+      .row{
+        
+        margin: 0 auto;
 
-      @include respond-to(large){
-        width: auto;
-        border-top: 0;
-        padding-left:0;
-        padding-right:0;
-        vertical-align: top;
-        display: inline-block;
-        float: none;
-      }
+        @include respond-to(large){
+          border-top: 1px solid $footer-darkblue-line;
+          text-align: center;
+        }
+        .columns{
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 1px solid $footer-darkblue-line;
+          line-height: normal;
+          text-align: center;
 
-        ul{
-          display: inline-block;
-          
-          li{
+          @include respond-to(large){
+            width: auto;
+            border-top: 0;
+            padding-left:0;
+            padding-right:0;
+            vertical-align: top;
+            display: inline-block;
+            float: none;
+          }
 
-            color: #acb7c0;
-            line-height: 1.6;
-            padding: 3px 18px;
-            font-size: 12px;
+            ul{
+              display: inline-block;
+              
+              li{
 
-            &:not(:last-child){
-              border-right: 1px solid #262c50;
+                color: #acb7c0;
+                line-height: 1.6;
+                padding: 3px 18px;
+                font-size: 12px;
 
-            }
+                &:not(:last-child){
+                  border-right: 1px solid $footer-darkblue-line;
 
-            @include respond-to(large){
-              padding-top:0;
-              padding-bottom:0;
+                }
 
-              border-right: 1px solid #262c50;
-            }
+                @include respond-to(large){
+                  padding-top:0;
+                  padding-bottom:0;
 
-            a{
-              padding:0;
-              color: #acb7c0;
+                  border-right: 1px solid $footer-darkblue-line;
+                }
 
-              &:hover{
-                text-decoration: underline;
+                a{
+                  padding:0;
+                  color: #acb7c0;
+
+                  &:hover{
+                    text-decoration: underline;
+                  }
+                }
               }
             }
-          }
         }
-    }
+      }
+    } 
   }
 }
 
@@ -368,46 +383,16 @@ Styleguide 3.2
           position: relative;
           margin: 0 auto;
 
-        &:hover{
-          border-color: #fff;
-        }
+          &:hover{
+            border-color: $lightest-color;
+          }
 
           img{
             position: absolute;
-            top: 25%;
-            left: 25%;
+            top: 23%;
+            left: 24%;
             width: 24px;
           }
-
-          &.facebook-icon{
-      img{
-        width: 14px;
-        top: 13%;
-        left: 34%;
-      }
-      }
-
-      &.linkedin-icon{
-      img{
-        top: 20%;
-          left: 24%;
-      }
-      }
-
-      &.twitter-icon{
-      img{
-        width: 21px;
-        left: 28%;
-          top: 29%;
-      }
-      }
-
-      &.youtube-icon{
-      img{
-        top: 29%;
-          left: 22%;
-      }
-      }
         }
       }
     }

@@ -11,9 +11,11 @@ $breakpoints: (
 $brand-font: 'Whitney';
 $font-whitney-sc: 'WhitneySC';
 $font-whitney-light: 'WhitneyLight';
+$font-semibold: 'WhitneySemibold';
 $font-stack: $brand-font, sans-serif;
 $font-stack-sc: $font-whitney-sc, $font-stack;
 $font-stack-light: $font-whitney-light, $font-stack;
+$font-stack-semibold: $font-semibold, $font-stack;
 
 // Colors
 $brand-color: #0D263C; // Brand Navy Blue
@@ -29,6 +31,7 @@ $light-grey: #f3f4f5;
 $grey: #DBDFE2; // 
 $dark-grey: #c1cbd0;
 $darkest-color: #282828; // Charcoal near Black
+$footer-darkblue-line: #263c50;
 
 // Border Radius
 $border-radius: 5px;

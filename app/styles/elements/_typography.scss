@@ -22,6 +22,8 @@
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneySC", "../fonts/whitney-mediumsc-webfont", null, null, woff2 woff ttf);
 @include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, ttf);
+@include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
+
 
 body, p, .body-copy {
 	font-family: $font-stack;
