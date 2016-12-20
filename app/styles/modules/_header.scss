@@ -166,7 +166,7 @@ Styleguide 3.1
             background: transparent;
 
             &:before {                  
-              border-bottom: 3px solid #0D263C;
+              border-bottom: 3px solid $brand-color;
               height: 0;
               top: auto;
               left: 1rem;
@@ -183,7 +183,7 @@ Styleguide 3.1
             text-align: center;
             border-radius: $border-radius;
             line-height: 1em;
-            border: 1px solid $grey;
+            border: 1px solid $dark-grey;
 
             &:hover, &:focus {
               background-color: $darkest-color;
@@ -202,7 +202,7 @@ Styleguide 3.1
               &:hover, &:focus {
                 background-color: $lightest-color;
                 color: $darkest-color;
-                border-color: $grey;
+                border-color: $dark-grey;
 
               }
             }
@@ -222,9 +222,10 @@ Styleguide 3.1
         cursor: pointer;
         &:hover {
           &::before {
-            left: 0;
-            right: -5px;
-            bottom: -17px;
+            // left: 0;
+            // right: -5px;
+            // bottom: -17px;
+            display: none;
           }
         }
       }
@@ -255,7 +256,8 @@ Styleguide 3.1
         border-bottom: 1px solid $grey;
         @include respond-to(large) {
           text-transform: none;
-          margin: 0 1rem;
+          // margin: 0 1rem;
+          margin: 0;
           padding-left: 1rem;
           padding-right: 1rem;
           border-color: $light-grey;
