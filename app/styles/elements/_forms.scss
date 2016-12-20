@@ -60,6 +60,8 @@ label {
 
 		&:focus {
 		    border-color: $brand-color;
+		    border-color: transparent;
+		    box-shadow: none;
 		}
 	}
 

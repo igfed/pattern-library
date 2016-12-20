@@ -22,3 +22,5 @@ Styleguide 1.3
 @include make-color(secondary, $secondary-color);
 @include make-color(highlight, $highlight-color);
 @include make-color(alert, $alert-color);
+
+@include make-color(muted, $light-grey);

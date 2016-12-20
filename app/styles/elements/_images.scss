@@ -10,9 +10,9 @@
 	height: auto;
 	display: block;
 }
-.img-rounded { border-radius: $border-radius; }
-.img-circle { border-radius: 50%; }
-.img-thumbnail {
+.image-rounded { border-radius: $border-radius; }
+.image-circle { border-radius: 50%; }
+.image-thumbnail {
 	display: inline-block;
     max-width: 100%;
     height: auto;
