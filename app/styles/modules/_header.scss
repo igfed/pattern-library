@@ -182,7 +182,6 @@ Styleguide 3.1
             color: $darkest-color;
             text-align: center;
             border-radius: $border-radius;
-            font-size: 16px;
             line-height: 1em;
             border: 1px solid $grey;
 
@@ -241,6 +240,13 @@ Styleguide 3.1
         border-radius: 0 0 $border-radius $border-radius;
       }
     > li {
+      &:nth-child(2) a::after,
+      &:nth-child(3) a::after {
+        display: none;
+      }
+      &:last-child a {
+        border-bottom: none;
+      }
       a {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -249,7 +255,9 @@ Styleguide 3.1
         border-bottom: 1px solid $grey;
         @include respond-to(large) {
           text-transform: none;
-          margin: 0;
+          margin: 0 1rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
           border-color: $light-grey;
           &:hover, &:focus {
             background-color: $light-grey;
@@ -257,8 +265,8 @@ Styleguide 3.1
               content: '';
               border-left: 2px solid $brand-color;
               height: 14px;
-              top: 0.7rem;
-              left: 1rem;
+              top: 0.5rem;
+              left: 0.5rem;
               border-bottom: none;
             }
           }
@@ -330,7 +338,7 @@ Styleguide 3.1
       > a {
         @include respond-to(large) {
           text-transform: none;
-              padding: 0.7rem 1rem;
+          padding: 0.7rem 1rem;
           &:hover, &:focus {
             &:before {                  
               bottom: -1px;
@@ -344,6 +352,9 @@ Styleguide 3.1
     @include respond-to(large) {
       background: $light-grey;
       li > a {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-color: $grey;
         &:hover, &:focus {
           background: $lightest-color;
         }
