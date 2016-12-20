@@ -21,7 +21,7 @@
 @include font-render("Whitney", "../fonts/whitney-book-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneySC", "../fonts/whitney-mediumsc-webfont", null, null, woff2 woff ttf);
-@include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, ttf);
+@include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
 
 
@@ -55,7 +55,8 @@ h3, .section-title {
 h4, .sub-title {
 	font-size: 18px;
 	font-size: 1.1125rem;
-	font-family: $font-stack;
+	font-family: $font-stack-sc;
+	text-transform: lowercase;
 }
 small, .legal {
 	font-size: 12px;
