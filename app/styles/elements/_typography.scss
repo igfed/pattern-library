@@ -24,41 +24,64 @@
 @include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
 
-
-body, p, .body-copy {
-	font-family: $font-stack;
-	font-size: 16px;
-	font-size: 1rem;
-	color: $brand-color;
-	line-height: 1.5em;
-}
-.callout-body-copy {
-	font-size: 16px;
-	font-size: 1rem;
-}
+/*01c*/
 h1, .hero-title, .callout-title {
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-family: $font-stack-light;
 	line-height: 1.1em;
 }
+/*02c*/
 h2, .content-title {
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: $font-stack;
+	text-transform: capitalize;
 }
+/*03c*/
+.accordion-menu-section-title{
+	font-size: 18px;
+	font-family: $font-stack-sc;
+	text-transform: lowercase;
+}
+/*04c*/
 h3, .section-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: $font-stack;
+	font-family: $font-stack-sc;
+	text-transform: lowercase;
 }
+/*05c*/
 h4, .sub-title {
 	font-size: 18px;
 	font-size: 1.1125rem;
 	font-family: $font-stack-sc;
 	text-transform: lowercase;
 }
-small, .legal {
+/*06c*/
+.callout-body-copy {
+	font-size: 16px;
+	font-size: 1rem;
+}
+/*07c*/
+body, p, .large-body-copy .body-copy {
+	font-family: $font-stack;
+	font-size: 16px;
+	color: $brand-color;
+	line-height: 1.5em;
+}
+/*08c*/
+.body-copy-bold{
+	font-family: $font-stack-semibold;
+	font-size: 16px;
+}
+/*09c*/
+.number-callout{
+	font-family: $font-stack;
+	font-size: 90px;
+}
+/*10c*/
+small, .legal-copy {
 	font-size: 12px;
 	font-size: 0.75rem;
 }
@@ -68,52 +91,226 @@ small, .legal {
 	font-family: $font-stack;
 	text-shadow: 2px 2px 2px #818C91;
 }
+/*20c*/
+.primary-button{
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $lightest-color;
+		&:hover{
+			color: $brand-color;
+		}
+}
+/*21c*/
+.primary-button-alternative{
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $brand-color;
+}
+/*22c*/
+.secondary-button{
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $brand-color;
+		&:hover{
+				color: $lightest-color;
+			}
+}
+/*23c*/
+.tertiary-cta{
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $brand-color;
+
+	cursor: pointer;
+    display: inline-block;
+    line-height: 1.3;
+    position: relative;
+    letter-spacing: 1px;
+	text-transform: lowercase;
+
+    &:before{
+		display: block;
+	    position: absolute;
+	    content: ' ';
+	    left: 0;
+	    right: calc(100% - 20px);
+	    height: 3px;
+	    top: calc(100% - .1rem);
+	    background-color: #0ed59a;
+	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	    transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	}
+}
+
+.tertiary-cta:hover:before {
+    left: calc(100% - 20px);
+    right: 0;
+    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*24c*/
+.hyperlink{
+	font-size: 16px;
+	font-family: $font-stack-semibold;
+	color: $brand-color;
+	text-decoration: underline;
+}
+/*25c*/
+.label{
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $label-grey;
+	 &:hover{
+	 	color:$brand-color;
+	 }
+}
+/*26c*/
+.input{
+	font-size: 16px;
+	font-family: $font-stack;
+	color: $brand-color;
+}
+/*27c*/
+.steps{
+	font-size: 18px;
+	font-family: $font-stack;
+	color: $steps-grey;
+		&:focus, &:active{
+			color: $brand-color;
+		}
+}
+/*28c*/
+.errors{
+	font-size: 14px;
+	font-family: $font-stack-light;
+	color: $alert-color;
+}
+/*29c*/
+.search{
+	font-size: 14px;
+	font-family: $font-stack;
+	color: $search-grey;
+		&:focus, &:active{
+			font-family: $font-stack-semibold;
+			color: $darkest-color;
+		}
+}
 
 @include respond-to(medium) {
+	/*01b*/
 	h1, .hero-title, .callout-title {
 		font-size: 40px;
 		font-size: 2.5rem;
 	}
+	/*03b*/
+	.accordion-menu-section-title{
+		font-size: 20px;
+	}
+	/*04b*/
 	h3, .section-title {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
+	/*05b*/
 	h4, .sub-title {
 		font-size: 16px;
 		font-size: 1rem;
 	}
+	/*06a*/
+	.callout-body-copy{
+		font-size: 22px;
+	}
 }
 
 @include respond-to(large) {
-	p, .body-copy {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-	.callout-body-copy {
-		font-size: 28px;
-		font-size: 1.75rem;
-		font-family: $font-stack-light;
-	}
-	h1, .hero-title, .callout-title {
+
+	/*01a*/
+	h1, .hero-title {
 		font-size: 72px;
 		font-size: 4.5rem;
 	}
-	h2, .content-title {
+	/*02a*/
+	.callout-title{
 		font-size: 52px;
-		font-size: 3.25rem;
-		font-family: $font-stack-light;
 	}
+	/*03a*/
+	h2, .content-title {
+		font-size: 36px;
+	}
+	/*04a*/
+	.accordion-menu-section-title{
+		font-size: 24px;
+	}
+	/*05a*/
 	h3, .section-title {
 		font-size: 18px;
-		font-size: 1.125rem;
 	}
+	/*06a*/
 	h4, .sub-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	small, .legal {
+	/*07a*/
+	.callout-body-copy{
+		font-size: 28px;
+	}
+	/*08a*/
+	.large-body-copy{
+		font-size: 22px;
+	}
+	/*09a*/
+	p, .body-copy {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+	/*10a*/
+	.body-copy-bold{
+		font-size: 18px;
+	}
+	/*11a*/
+	.number-callout{
+		font-size: 145px;
+	}
+	/*12a*/
+	small, .legal-copy {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
+	/*20a 21a 22a*/
+	.primary-button, .primary-button-alternative, .secondary-button{
+		font-size: 16px;
+	}
+	/*23a*/
+	.tertiary-cta{
+		font-size: 18px;
+	}
+	/*24a*/
+	.hyperlink{
+		font-size: 18px;
+	}
+	/*25a*/
+	.label{
+		font-size: 16px;
+	}
+	/*26a*/
+	.input{
+		font-size: 16px;
+	}
+	/*27a*/
+	.steps{
+		font-size: 36px;
+	}
+	/*28a*/
+	.errors{
+		font-size: 14px;
+	}
+	/*29a*/
+	.search{
+		font-size: 16px;
+	}
+
 }
 

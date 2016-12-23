@@ -12,6 +12,8 @@ $brand-font: 'Whitney';
 $font-whitney-sc: 'WhitneySC';
 $font-whitney-light: 'WhitneyLight';
 $font-semibold: 'WhitneySemibold';
+
+// Font Stacks
 $font-stack: $brand-font, sans-serif;
 $font-stack-sc: $font-whitney-sc, $font-stack;
 $font-stack-light: $font-whitney-light, $font-stack;
@@ -32,6 +34,9 @@ $grey: #DBDFE2; //
 $dark-grey: #c1cbd0;
 $darkest-color: #282828; // Charcoal near Black
 $footer-darkblue-line: #263c50;
+$label-grey: #666666;
+$steps-grey: #a6a6a6;
+$search-grey: #767676;
 
 // Border Radius
 $border-radius: 5px;

@@ -21,3 +21,73 @@ figure {
 figcaption {
     margin: 1rem 0; 
 }
+
+.six-pillars{
+
+	figure{
+		cursor: pointer;
+		
+		img{
+			margin-top: 70px;
+	    	margin-bottom: 25px;
+	    	width: 90px;
+    		height: 90px;
+		}
+	}
+}
+
+.four-pillars{
+
+	margin-top: 50px;
+
+	.columns{
+		text-align: center;
+
+		figure{
+
+			// display: inline-block;
+			margin-bottom: 50px;
+
+			@include respond-to(medium){
+				width: auto;
+				display: inline-block;
+			}
+
+			img{
+				
+				@include respond-to(medium){
+					width: 160px;
+				}
+
+				@include respond-to(large){
+					width: 200px;
+				}
+
+			}
+
+			figcaption{
+				text-align: left;
+			}
+		}
+
+		@include respond-to(medium){
+			display: inline-block;
+			float: none;
+			vertical-align: top;
+
+			&:last-child:not(:first-child){
+				float: none;
+			}
+		}
+
+		@include respond-to(large){
+			display: block;
+			float: left;
+			vertical-align: top;
+
+			&:last-child:not(:first-child){
+				float: left;
+			}
+		}
+	}
+}
