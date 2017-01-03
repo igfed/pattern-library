@@ -22,6 +22,7 @@
     <!-- build:css styles/overrides.css -->
     <link rel="stylesheet" href="styles/overrides.css">
     <!-- endbuild -->
+
   </head>
   <body id="top">
     <!--[if lt IE 10]>
@@ -201,12 +202,12 @@
       </div>
 
       <!--Featured Topics component-->
-      <div class="callout featured-topics">
+      <div class="callout">
         <div class="row text-center">
           <h3>Featured Topics</h3>
           <p class="large-body-copy">Get a better understanding of the markets, your client statement or other topics you care about.</p>
         </div>
-        <div class="row">
+        <div class="row slider featured-topics">
           <div class="large-4 columns">
             <figure>
               <img src="images/more-investments-fez.jpg" alt=""></img>
@@ -237,6 +238,16 @@
               </figcaption>
             </figure>
           </div>
+          <div class="large-4 columns">
+            <figure>
+              <img src="images/more-investments-fez.jpg" alt=""></img>
+              <figcaption>
+                <p class="large-body-copy">Win a trip to Brazil</p>
+                <p>Introduce a friend, collegue or a family member to an Investors Group Consultant to win a trip for two.</p>
+                <p><a href="more/en/" class="tertiary-cta">Learn More</a></p>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </div>
 
@@ -251,6 +262,29 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+
+    <!-- slick:js -->
+    <script type="text/javascript" src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+
+      <script type="text/javascript">
+    $(document).ready(function(){
+      $('.featured-topics').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings:{
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
     <!-- endbuild -->
   </body>
 </html>
