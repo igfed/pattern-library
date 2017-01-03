@@ -3,13 +3,15 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "foundation-sites": "^6.2.4"
+    "foundation-sites": "^6.2.4",
+    "slick-carousel": "slick.js#^1.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.0"
   },
   "resolutions": {
-    "jquery": "~2.2.0"
+    "jquery": "~2.2.0",
+    "what-input": "~4.0.3"
   }
 }
