@@ -72,25 +72,21 @@ body, p, .large-body-copy .body-copy {
 	margin-bottom: 2px;
 }
 /*08c*/
-.body-copy-bold{
+strong, .body-copy-bold{
 	font-family: $font-stack-semibold;
 	font-size: 16px;
 }
 /*09c*/
-.number-callout{
-	font-family: $font-stack;
-	font-size: 90px;
-}
-/*10c*/
-small, .legal-copy {
-	font-size: 12px;
-	font-size: 0.75rem;
-}
 .punched-out {
 	font-size: 90px;
 	font-size: 5.625rem;
 	font-family: $font-stack;
 	text-shadow: 2px 2px 2px #818C91;
+}
+/*10c*/
+small, .legal-copy {
+	font-size: 12px;
+	font-size: 0.75rem;
 }
 /*20c*/
 .primary-button{
