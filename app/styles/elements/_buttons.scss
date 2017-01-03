@@ -57,6 +57,8 @@ a{
     position: relative;
     letter-spacing: 1px;
 	text-transform: lowercase;
+	margin-bottom: 25px;
+	margin-top: 25px;
 
 	@include respond-to(large) {
 		font-size: 18px;
