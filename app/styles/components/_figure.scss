@@ -36,7 +36,7 @@ figcaption {
 	}
 }
 
-.four-pillars{
+.four-pillars, .three-pillars{
 
 	margin-top: 50px;
 
@@ -45,7 +45,6 @@ figcaption {
 
 		figure{
 
-			// display: inline-block;
 			margin-bottom: 50px;
 
 			@include respond-to(medium){
@@ -66,7 +65,24 @@ figcaption {
 			}
 
 			figcaption{
-				text-align: left;
+
+				text-align: center;
+				margin-left: 0.5rem;
+				margin-right: 0.5rem;
+
+				@include respond-to(medium){
+					text-align: left;
+				}
+
+				.tertiary-cta{
+					margin-bottom: 25px;
+					margin-top: 25px;
+				}
+
+				.body-copy-bold:nth-child(2){
+						padding-top: 20px;
+				}
+
 			}
 		}
 
