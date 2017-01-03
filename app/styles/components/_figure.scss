@@ -3,7 +3,7 @@
 Figure represents self-contained content, frequently with a caption, and is typically referenced as a single unit. While it is related to the main flow, its position is independent of the main flow. Usually this is an image, an illustration, a diagram, a code snippet, or a schema that is referenced in the main text, but that can be moved to another page or to an appendix without affecting the main flow.
 
 Markup:
- <figure>
+ <figure class="{$modifiers}">
  	<img class="image-round" src="images/more-investments-fez.jpg" alt="An awesome picture">	
 	<figcaption>
 		<h2>Global markets rise again</h2>
@@ -16,7 +16,11 @@ Styleguide 2.5
 */
 
 figure {
-    margin: 0; 
+    margin: 0;
+    img {
+    	display: block;
+    	margin: auto;
+    }
 }
 figcaption {
     margin: 1rem 0; 
