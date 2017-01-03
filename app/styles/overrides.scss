@@ -1,24 +1,24 @@
 // Any styles that are not related to a pattern can be placed in here.
-.contact-us{
-	@include respond-to(small){
-  		padding-top: 0;
-	}
+// .contact-us{
+// 	@include respond-to(small){
+//   		padding-top: 0;
+// 	}
 
-	.contact-us-title{
+// 	.contact-us-title{
 
-		h1{
-			padding-bottom: 20px;
-		}
+// 		h1{
+// 			padding-bottom: 20px;
+// 		}
 
-		@include respond-to(small){
-			padding-top: 0;
-			padding-top: 60px;
-			padding-bottom: 60px;
-			background-color: white;
-		}
+// 		@include respond-to(small){
+// 			padding-top: 0;
+// 			padding-top: 60px;
+// 			padding-bottom: 60px;
+// 			background-color: white;
+// 		}
 
-		@include respond-to(medium){
-			background-color: inherit;
-		}
-	}
-}
+// 		@include respond-to(medium){
+// 			background-color: inherit;
+// 		}
+// 	}
+// }
