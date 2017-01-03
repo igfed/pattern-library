@@ -47,6 +47,20 @@ a{
 }
 
 .tertiary-cta {
+	font-size: 14px;
+	font-family: $font-stack-sc;
+	color: $brand-color;
+
+	cursor: pointer;
+    display: inline-block;
+    line-height: 1.3;
+    position: relative;
+    letter-spacing: 1px;
+	text-transform: lowercase;
+
+	@include respond-to(large) {
+		font-size: 18px;
+	}
 
     &:before{
 		display: block;
@@ -60,22 +74,14 @@ a{
 	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
 	    transition: right .15s ease-out .15s, left .15s ease-out 0s;
 	}
-}
-
-.tertiary-cta:hover:before {
-    left: calc(100% - 20px);
-    right: 0;
-    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.u.tertiary-cta:hover:before, .six-pillars figure:hover .tertiary-cta:before  {
-    left: calc(100% - 20px);
-    right: 0;
-    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    text-decoration: none;
-    cursor: pointer;
+	&:hover, &:focus {
+		&:before {
+			left: calc(100% - 20px);
+			right: 0;
+			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
 }

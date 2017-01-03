@@ -30,7 +30,6 @@ figcaption {
 
 
 .small-figure{
-	cursor: pointer;
 	
 	img{
 		margin-top: 70px;
@@ -40,7 +39,7 @@ figcaption {
 	}
 }
 
-.medium-figure, .large-figure{
+.medium-figure {
 
 	margin-bottom: 50px;
 
@@ -71,13 +70,13 @@ figcaption {
 			text-align: left;
 		}
 
-		.tertiary-cta{
+		.tertiary-cta, .button {
 			margin-bottom: 25px;
 			margin-top: 25px;
 		}
 
 		.body-copy-bold:nth-child(2){
-				padding-top: 20px;
+			padding-top: 20px;
 		}
 
 	}
