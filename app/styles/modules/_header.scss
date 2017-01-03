@@ -85,6 +85,7 @@ Styleguide 3.1
 	
   .top-bar-title {
     width: 100%;
+    padding: 0.5rem 0;
   }
   .home-link { margin: 0; }
 
@@ -92,6 +93,7 @@ Styleguide 3.1
     padding-top: 36px;
     .top-bar-title {
       width: auto;
+      padding: 0;
     }
   }
 }
