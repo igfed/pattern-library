@@ -36,8 +36,6 @@ figcaption {
 	}
 
 	img{
-		margin-top: 70px;
-    	margin-bottom: 25px;
     	width: 90px;
 		height: 90px;
 	}
@@ -71,9 +69,15 @@ figcaption {
 		text-align: center;
 		margin-left: 0.5rem;
 		margin-right: 0.5rem;
+		margin-top: 45px;
+
 
 		@include respond-to(medium){
 			text-align: left;
+		}
+
+		.content-title{
+			margin-bottom: 25px;
 		}
 
 	}

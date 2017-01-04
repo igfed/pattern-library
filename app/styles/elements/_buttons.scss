@@ -18,16 +18,28 @@ a{
 	}
 }
 
-.button {
+.button, .primary{
 	padding: 12px 1.25em;
-	background-color: $primary-color;
+	background-color: $button-primary-color;
 	color: $brand-color;
 	text-align: center;
 	border-radius: 5px;
 	font-size: 16px;
 	line-height: 1em;
-	border: 2px solid $primary-color;
+	border: 2px solid $button-primary-color;
 	margin: 1rem;
+	font-family: $font-stack-sc;
+	text-transform: lowercase;
+
+	&:hover, &:focus {
+		background-color: transparent;
+		color: $brand-color;
+	}
+}
+
+.button.primary-alternative{
+	background-color: $brand-color;
+	border: 2px solid $brand-color;
 
 	&:hover, &:focus {
 		background-color: transparent;

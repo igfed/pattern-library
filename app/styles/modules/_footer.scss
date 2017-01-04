@@ -231,6 +231,10 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
           .accordion-content{
             border-bottom: 1px solid $footer-darkblue-line;
+
+            @include respond-to(large){
+              border-bottom: none;
+            }
           }
         }
 
