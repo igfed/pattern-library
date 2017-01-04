@@ -1,5 +1,5 @@
-@import "settings/settings";
-@import "tools/mixins";
+// @import "settings/settings";
+// @import "tools/mixins";
 // Any styles that are not related to a pattern can be placed in here.
 
 .padding-top{
@@ -33,25 +33,22 @@
 }
 
 .contact-us{
-	@include respond-to(small){
-  		padding-top: 0;
+
+	@include respond-to(medium){
+		.medium-columns{
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+
+			&:last-child:last-child{
+				float: none;
+			}
+		}
 	}
 
-	.contact-us-title{
-
-		h1{
-			padding-bottom: 20px;
-		}
-
-		@include respond-to(small){
-			padding-top: 0;
-			padding-top: 60px;
-			padding-bottom: 60px;
-			background-color: white;
-		}
-
-		@include respond-to(medium){
-			background-color: inherit;
+	@include respond-to(large){
+		.medium-columns{
+			float: left;
 		}
 	}
 }
