@@ -1,19 +1,27 @@
 .slider{
 	height: auto;
     background-color: transparent;
-}
+    margin-top: 60px;
 
-.slick-prev{
-	left: -60px;
-}
+    .slick-prev{
+		left: -60px;
+	}
 
-.slick-prev:before{
-    content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg);
-}
+	.slick-prev:before{
+	    content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg);
+	}
 
-.slick-next{
-	right: -60px;
-}
-.slick-next:before{
-	content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg);
+	.slick-next{
+		right: -60px;
+	}
+	.slick-next:before{
+		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg);
+	}
+
+    .slick-slider{
+		&:focus{
+			color: transparent;
+			border: none;
+		}
+	}
 }

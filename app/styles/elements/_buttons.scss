@@ -87,3 +87,12 @@ a{
 		}
 	}
 }
+
+a:hover .tertiary-cta:before  {
+    left: calc(100% - 20px);
+    right: 0;
+    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    text-decoration: none;
+    cursor: pointer;
+ }

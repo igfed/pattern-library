@@ -30,7 +30,11 @@ figcaption {
 
 
 .small-figure{
-	
+
+	&:hover{
+		cursor: pointer;
+	}
+
 	img{
 		margin-top: 70px;
     	margin-bottom: 25px;
@@ -68,10 +72,6 @@ figcaption {
 
 		@include respond-to(medium){
 			text-align: left;
-		}
-
-		.body-copy-bold:nth-child(2){
-			padding-top: 20px;
 		}
 
 	}
