@@ -33,7 +33,13 @@ Markup:
 
 Styleguide 3.4
 */
-$accordion-item-background-hover: $brand-color;
+
+/*03c*/
+.accordion-menu-section-title{
+  font-size: 18px;
+  font-family: $font-stack-sc;
+  text-transform: lowercase;
+}
 
 // Arrows
 .is-accordion-submenu-parent {

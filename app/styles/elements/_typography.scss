@@ -38,12 +38,7 @@ h2, .content-title {
 	font-family: $font-stack;
 	text-transform: capitalize;
 }
-/*03c*/
-.accordion-menu-section-title{
-	font-size: 18px;
-	font-family: $font-stack-sc;
-	text-transform: lowercase;
-}
+
 /*04c*/
 h3, .section-title {
 	font-size: 14px;
@@ -67,7 +62,7 @@ h4, .sub-title {
 body, p, .large-body-copy .body-copy {
 	font-family: $font-stack;
 	font-size: 16px;
-	color: $brand-color;
+	color: $darkest-color;
 	line-height: 1.5em;
 	margin-bottom: 2px;
 }
@@ -88,53 +83,7 @@ small, .legal-copy {
 	font-size: 12px;
 	font-size: 0.75rem;
 }
-/*20c*/
-.primary-button{
-	font-size: 14px;
-	font-family: $font-stack-sc;
-	color: $lightest-color;
-		&:hover{
-			color: $brand-color;
-		}
-}
-/*21c*/
-.primary-button-alternative{
-	font-size: 14px;
-	font-family: $font-stack-sc;
-	color: $brand-color;
-}
-/*22c*/
-.secondary-button{
-	font-size: 14px;
-	font-family: $font-stack-sc;
-	color: $brand-color;
-		&:hover{
-				color: $lightest-color;
-			}
-}
 
-/*24c*/
-.hyperlink{
-	font-size: 16px;
-	font-family: $font-stack-semibold;
-	color: $brand-color;
-	text-decoration: underline;
-}
-/*25c*/
-.label{
-	font-size: 14px;
-	font-family: $font-stack-sc;
-	color: $label-grey;
-	 &:hover{
-	 	color:$brand-color;
-	 }
-}
-/*26c*/
-.input{
-	font-size: 16px;
-	font-family: $font-stack;
-	color: $brand-color;
-}
 /*27c*/
 .steps{
 	font-size: 18px;
@@ -142,22 +91,6 @@ small, .legal-copy {
 	color: $steps-grey;
 		&:focus, &:active{
 			color: $brand-color;
-		}
-}
-/*28c*/
-.errors{
-	font-size: 14px;
-	font-family: $font-stack-light;
-	color: $alert-color;
-}
-/*29c*/
-.search{
-	font-size: 14px;
-	font-family: $font-stack;
-	color: $search-grey;
-		&:focus, &:active{
-			font-family: $font-stack-semibold;
-			color: $darkest-color;
 		}
 }
 
@@ -241,34 +174,5 @@ small, .legal-copy {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
-	/*20a 21a 22a*/
-	.primary-button, .primary-button-alternative, .secondary-button{
-		font-size: 16px;
-	}
-	/*24a*/
-	.hyperlink{
-		font-size: 18px;
-	}
-	/*25a*/
-	.label{
-		font-size: 16px;
-	}
-	/*26a*/
-	.input{
-		font-size: 16px;
-	}
-	/*27a*/
-	.steps{
-		font-size: 36px;
-	}
-	/*28a*/
-	.errors{
-		font-size: 14px;
-	}
-	/*29a*/
-	.search{
-		font-size: 16px;
-	}
 
 }
-
