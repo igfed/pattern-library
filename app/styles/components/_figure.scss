@@ -46,6 +46,8 @@ figcaption {
 	margin-bottom: 50px;
 
 	img{
+
+		width: 120px;
 		
 		@include respond-to(medium){
 			width: 160px;
