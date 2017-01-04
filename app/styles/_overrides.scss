@@ -28,3 +28,26 @@
 		}
 	}
 }
+
+.contact-us{
+
+	@include respond-to(medium){
+		.medium-columns{
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+
+			&:last-child:last-child{
+				float: none;
+			}
+		}
+	}
+
+	@include respond-to(large){
+		.medium-columns{
+			float: left;
+		}
+	}
+}
+
+
