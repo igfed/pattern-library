@@ -6,6 +6,12 @@
 	padding-top: 20px;
 }
 
+.six-pillars{
+	.six-pillars-title{
+		margin-bottom: 40px;
+	}
+}
+
 .featured-topics{
 
 	h3{
@@ -24,15 +30,13 @@
 			margin-bottom: 30px;
 		}
 	}
-
-
 }
 
 .contact-us{
 	@include respond-to(small){
   		padding-top: 0;
 	}
-	
+
 	.contact-us-title{
 
 		h1{
