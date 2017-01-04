@@ -53,6 +53,8 @@ figcaption {
 	}
 
 	img{
+
+		width: 120px;
 		
 		@include respond-to(medium){
 			width: 160px;
