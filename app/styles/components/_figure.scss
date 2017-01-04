@@ -45,11 +45,6 @@ figcaption {
 
 	margin-bottom: 50px;
 
-	@include respond-to(medium){
-		width: auto;
-		display: inline-block;
-	}
-
 	img{
 
 		width: 120px;
@@ -82,23 +77,5 @@ figcaption {
 
 	}
 
-	@include respond-to(medium){
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-
-		&:last-child:not(:first-child){
-			float: none;
-		}
-	}
-
-	@include respond-to(large){
-		display: block;
-		float: left;
-		vertical-align: top;
-
-		&:last-child:not(:first-child){
-			float: left;
-		}
-	}
+	
 }
