@@ -1,7 +1,8 @@
 // Any styles that are not related to a pattern can be placed in here.
-.padding-top{
-	padding-top: 20px;
-}
+.padding-top { padding-top: 20px; }
+.padding-bottom { padding-bottom: 20px; }
+.margin-top { margin-top: 20px; }
+.margin-bottom { margin-bottom: 20px; }
 
 .six-pillars{
 	.six-pillars-title{
@@ -28,26 +29,3 @@
 		}
 	}
 }
-
-.contact-us{
-
-	@include respond-to(medium){
-		.medium-columns{
-			display: inline-block;
-			vertical-align: top;
-			float: none;
-
-			&:last-child:last-child{
-				float: none;
-			}
-		}
-	}
-
-	@include respond-to(large){
-		.medium-columns{
-			float: left;
-		}
-	}
-}
-
-
