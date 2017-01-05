@@ -18,10 +18,10 @@
 //
 // Styleguide 1.2
 
-@include font-render("Whitney", "../fonts/whitney-book-webfont", null, null, woff2 woff ttf);
+@include font-render("WhitneyBook", "../fonts/whitney-book-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);
-@include font-render("WhitneySC", "../fonts/whitney-mediumsc-webfont", null, null, woff2 woff ttf);
-@include font-render("Whitney SC", "../fonts/whitney-booksc-webfont", null, null, woff2 woff ttf);
+@include font-render("WhitneySCMedium", "../fonts/whitney-mediumsc-webfont", null, null, woff2 woff ttf);
+@include font-render("WhitneySC", "../fonts/whitney-booksc-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
 
 /*01c*/
@@ -43,18 +43,19 @@ h2, .content-title {
 h3, .section-title {
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: $font-stack-sc;
+	font-family: $font-stack-sc-medium;
 	text-transform: lowercase;
 }
 /*05c*/
 h4, .sub-title {
 	font-size: 18px;
 	font-size: 1.1125rem;
-	font-family: $font-stack-sc;
+	font-family: $font-stack-sc-medium;
 	text-transform: lowercase;
 }
 /*06c*/
 .callout-body-copy {
+	font-family: $font-stack-light;
 	font-size: 16px;
 	font-size: 1rem;
 }
@@ -67,6 +68,7 @@ body, p, .large-body-copy .body-copy {
 	line-height: 1.5em;
 	margin-bottom: 2px;
 }
+
 /*08c*/
 strong, .body-copy-bold{
 	font-family: $font-stack-semibold;

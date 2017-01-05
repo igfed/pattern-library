@@ -28,7 +28,7 @@ a{
 	line-height: 1em;
 	border: 2px solid $button-primary-color;
 	margin: 1rem;
-	font-family: $font-stack-sc;
+	font-family: $font-stack-sc-medium;
 	text-transform: lowercase;
 
 	&:hover, &:focus {
@@ -60,7 +60,7 @@ a{
 
 .tertiary-cta {
 	font-size: 14px;
-	font-family: $font-stack-sc;
+	font-family: $font-stack-sc-medium;
 	color: $brand-color;
 
 	cursor: pointer;

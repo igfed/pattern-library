@@ -13,8 +13,13 @@
 
 .callout {
 	// padding: 10vh 0;
-	padding: 70px 10px;
+	padding: 20px 10px;
 	margin: 0;
 	border: none;
+
+	@include respond-to(medium){
+		padding: 70px 20px;
+	}
+
 }
 
