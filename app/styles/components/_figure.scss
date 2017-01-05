@@ -75,21 +75,4 @@ figcaption {
 			text-align: left;
 		}
 	}
-
-	@include respond-to(medium){
-		
-		text-align: center;
-
-		&:last-child:not(:first-child){
-			float: none;
-		}
-	}
-
-	@include respond-to(large){
-		display: block;
-
-		&:last-child:not(:first-child){
-			float: left;
-		}
-	}
 }
