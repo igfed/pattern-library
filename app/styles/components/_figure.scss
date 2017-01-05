@@ -68,8 +68,6 @@ figcaption {
 
 
 		@include respond-to(medium){
-
-			width: 250px;
 			display: inline-block;
 			text-align: left;
 		}
