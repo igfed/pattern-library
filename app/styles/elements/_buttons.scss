@@ -27,7 +27,6 @@ a{
 	font-size: 16px;
 	line-height: 1em;
 	border: 2px solid $button-primary-color;
-	margin: 1rem;
 	font-family: $font-stack-sc-medium;
 	text-transform: lowercase;
 
@@ -39,7 +38,8 @@ a{
 
 .button.primary-alternative{
 	background-color: $brand-color;
-	border: 2px solid $brand-color;
+	border-color: $brand-color;
+	color: $lightest-color;
 
 	&:hover, &:focus {
 		background-color: transparent;
