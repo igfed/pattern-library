@@ -66,7 +66,6 @@ figcaption {
 		margin-right: 0.5rem;
 		margin-top: 45px;
 
-
 		@include respond-to(medium){
 			display: inline-block;
 			text-align: left;
@@ -75,6 +74,5 @@ figcaption {
 		.content-title{
 			margin-bottom: 25px;
 		}
-
 	}
 }
