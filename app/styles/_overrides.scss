@@ -43,14 +43,32 @@
 			&:last-child:last-child{
 				float: none;
 			}
+
+			.medium-figure{
+
+				figcaption{
+					
+					width: 250px;
+					display: inline-block;
+				}
+			}
 		}
 	}
 
 	@include respond-to(large){
 		.medium-columns{
 			float: left;
+
+			.medium-figure{
+
+				figcaption{
+					
+					width: auto;
+				}
+			}
 		}
 	}
+
 }
 
 
