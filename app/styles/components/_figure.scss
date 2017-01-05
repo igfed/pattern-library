@@ -66,13 +66,13 @@ figcaption {
 		margin-right: 0.5rem;
 		margin-top: 45px;
 
-		.content-title{
-			margin-bottom: 25px;
+		@include respond-to(medium){
+			display: inline-block;
+			text-align: left;
 		}
 
-		@include respond-to(medium){
-			
-			text-align: left;
+		.content-title{
+			margin-bottom: 25px;
 		}
 	}
 }
