@@ -21,7 +21,7 @@
       .pattern-content {
         padding: 30px 0;
         margin: 30px 0;
-        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
       }
       .sample {
         position: relative;
@@ -95,12 +95,13 @@
             {{else}}
               <div class="medium-9 columns">
               {{#eachSection rootNumber}}
-                <section class="pattern-content" id="section-{{reference}}">
                 {{#whenDepth 1}}
+                <section id="section-{{reference}}">
                   <h1>{{header}}</h1>
                   <p class="callout-body-copy">{{html description}}</p>
                 {{/whenDepth}}
                 {{#whenDepth 2}}
+                <section class="pattern-content" id="section-{{reference}}">
                   <h2>{{header}}</h2>
                   <p>{{html description}}</p>
                 {{/whenDepth}}
