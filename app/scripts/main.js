@@ -3,6 +3,7 @@ $(function(){
 	$('[data-responsive-toggle] button').on('click', function(){
 		$('body').toggleClass('site-header-is-active');
 	});
+	$('.your-class').slick({});
 });
 
 // $('a[href^="#"]').bind('click.smoothscroll',function (e) {

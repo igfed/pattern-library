@@ -6,10 +6,8 @@
 
 // Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
 // bower:scss
-@import "../../bower_components/foundation-sites/dist/css/foundation.css";
 // endbower
-
-//slick.scss
+@import "../../bower_components/foundation-sites/dist/css/foundation.css";
 @import "../../bower_components/slick-carousel/slick/slick.css";
 @import "../../bower_components/slick-carousel/slick/slick-theme.css";
 // Elements
