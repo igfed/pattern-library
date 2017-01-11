@@ -45,17 +45,44 @@ Styleguide 3.5
 	top: 50%;
 	transform: translate3d(0,-50%,0);
 	color: transparent;
+	opacity: .6;
+	transition: opacity 0.3s ease-out;
+	&:hover, &:focus {
+		opacity: 1;
+	}
 }
 .slick-prev{
 	left: 0;
 	&:before{
-		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg);
+		content: '';
+		display: block;
+		width: $arrow-size*2.5;
+		height: $arrow-size*2.5;
+		border: none;
+		border-top: solid 3px $button-primary-color;
+		border-right: solid 3px $button-primary-color;
+		transform-origin: center;
+		transform: rotate(225deg);
 	}
 }
 .slick-next{
 	right: 0;
 	&:after{
-		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg);
+		content: '';
+		display: block;
+		width: $arrow-size*2.5;
+		height: $arrow-size*2.5;
+		border: none;
+		border-top: solid 3px $button-primary-color;
+		border-right: solid 3px $button-primary-color;
+		transform-origin: center;
+		transform: rotate(45deg);
+	}
+}
+.slick-disabled {
+	opacity: .1;
+	&:hover, &:focus {
+		opacity: .1;
 	}
 }
 
@@ -65,20 +92,21 @@ Styleguide 3.5
 	text-align: center;
 	li {
 		display: inline-block;
-		margin: 0 10px;
+		margin: 0 5px;
 
 		button {
 			color: transparent;
 			background: $dark-grey;
 			border-radius: 50%;
-			height: 16px;
-			width: 16px;
+			height: 10px;
+			width: 10px;
+			border: 6px solid transparent;
 			opacity: .6;
 
 			transition: opacity 0.3s ease-out;
 			&:hover, &:focus {
 				opacity: 1;
-				cursor: pointer;
+				// cursor: pointer;
 			}
 		}
 		&.slick-active button {
