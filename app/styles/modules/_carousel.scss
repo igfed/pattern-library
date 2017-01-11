@@ -4,13 +4,33 @@ Carousels
 An image and content carousel with animation support and many customizable options.
 
 Markup:
+<div class="row carousel">
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image"></img>
+  </div>
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-investments-fez.jpg" alt=""></img>
+  </div>
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-client-statement.jpg" alt=""></img>
+  </div>
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image"></img>
+  </div>
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-investments-fez.jpg" alt=""></img>
+  </div>
+  <div class="medium-4 columns">
+	<img src="images/featured-topics-client-statement.jpg" alt=""></img>
+  </div>
+</div>
 
 Styleguide 3.5
 */
 .slick-slider{
-    padding: 20px 40px;
-    @include respond-to(medium) {
-    	padding: 20px 60px;
+    padding: 20px 10vw;
+    @include respond-to(large) {
+    	padding: 20px 12vw;
     }
 
     &:focus{
@@ -21,11 +41,10 @@ Styleguide 3.5
 
 // Arrows
 .slick-prev, .slick-next {
-	overflow: hidden;
-	// clip: rect(0, 0, 0, 0);
 	position: absolute;
 	top: 50%;
 	transform: translate3d(0,-50%,0);
+	color: transparent;
 }
 .slick-prev{
 	left: 0;
@@ -35,7 +54,7 @@ Styleguide 3.5
 }
 .slick-next{
 	right: 0;
-	&:before{
+	&:after{
 		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg);
 	}
 }
@@ -45,19 +64,28 @@ Styleguide 3.5
 	margin: 0 auto;
 	text-align: center;
 	li {
-		height: 16px;
-		width: 16px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-
 		display: inline-block;
 		margin: 0 10px;
 
-		background: $grey;
-		border-radius: 50%;
+		button {
+			color: transparent;
+			background: $dark-grey;
+			border-radius: 50%;
+			height: 16px;
+			width: 16px;
+			opacity: .6;
 
-		&.slick-active {
-			background: $button-primary-color;
+			transition: opacity 0.3s ease-out;
+			&:hover, &:focus {
+				opacity: 1;
+				cursor: pointer;
+			}
 		}
+		&.slick-active button {
+			background: $button-primary-color;
+			opacity: 1;
+		}
+
+
 	}
 }

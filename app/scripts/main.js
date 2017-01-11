@@ -7,23 +7,19 @@ $(function(){
 		dots: true,
   		infinite: false,
   		speed: 300,
-  		slidesToShow: 2,
-  		slidesToScroll: 2,
+  		mobileFirst: true,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+  		prevArrow: '<button type="button" class="slick-prev"><span class="show-for-sr">Previous</span></button>',
+  		nextArrow: '<button type="button" class="slick-next"><span class="show-for-sr">Next</span></button>',
   		responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 2
-	      }
-	    },
-	    {
-	      breakpoint: 640,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1
-	      }
-	    }
+		    {
+		      breakpoint: 640,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    }
 	    ]
 	});
 });
