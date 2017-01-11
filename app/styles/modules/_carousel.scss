@@ -1,27 +1,63 @@
-.carousel{
-	height: auto;
-    background-color: transparent;
-    margin-top: 60px;
+/*
+Carousels
 
-    .slick-prev{
-		left: -60px;
-	}
+An image and content carousel with animation support and many customizable options.
 
-	.slick-prev:before{
-	    content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg);
-	}
+Markup:
 
-	.slick-next{
-		right: -60px;
+Styleguide 3.5
+*/
+.slick-slider{
+    padding: 20px 40px;
+    @include respond-to(medium) {
+    	padding: 20px 60px;
+    }
+
+    &:focus{
+		color: transparent;
+		border: none;
 	}
-	.slick-next:before{
+}
+
+// Arrows
+.slick-prev, .slick-next {
+	overflow: hidden;
+	// clip: rect(0, 0, 0, 0);
+	position: absolute;
+	top: 50%;
+	transform: translate3d(0,-50%,0);
+}
+.slick-prev{
+	left: 0;
+	&:before{
+		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-L.svg);
+	}
+}
+.slick-next{
+	right: 0;
+	&:before{
 		content: url(https://www.investorsgroup.com/external/app/tribal/images/Arrow-MainArticle-Carousel-Green-R.svg);
 	}
+}
 
-    .slick-slider{
-		&:focus{
-			color: transparent;
-			border: none;
+// Pagination
+.slick-dots {
+	margin: 0 auto;
+	text-align: center;
+	li {
+		height: 16px;
+		width: 16px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+
+		display: inline-block;
+		margin: 0 10px;
+
+		background: $grey;
+		border-radius: 50%;
+
+		&.slick-active {
+			background: $button-primary-color;
 		}
 	}
 }
