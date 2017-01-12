@@ -10,7 +10,7 @@ This is our official framework for experiences, interactions and code libraries.
       <figcaption>
         <h2 class="content-title">Digital Marketing</h2>
         <p>Covers all unauthenticated digital marketing initiatives</p>
-        <p><a href="section-1.html" class="button">Getting Started</a></p>
+        <p><a href="section-1.html" class="button secondary">Getting Started</a></p>
         <p><small>Version 0.2</small></p>
       </figcaption>
     </figure>
@@ -21,7 +21,7 @@ This is our official framework for experiences, interactions and code libraries.
       <figcaption>
         <h2 class="content-title">Internal (One Intranet)</h2>
         <p>Encompasses all internal corporate digital experiences</p>
-        <p><a href="section-1.html" class="button">Getting Started</a></p>
+        <p><a href="section-1.html" class="button secondary">Getting Started</a></p>
         <p><small>Version 0</small></p>
       </figcaption>
     </figure>
@@ -32,7 +32,7 @@ This is our official framework for experiences, interactions and code libraries.
       <figcaption>
         <h2 class="content-title">Client Side</h2>
         <p>Includes Client Portal authenticated experiences and related products</p>
-        <p><a href="section-1.html" class="button">Getting Started</a></p>
+        <p><a href="section-1.html" class="button secondary">Getting Started</a></p>
         <p><small>Version 0</small></p>
       </figcaption>
     </figure>
