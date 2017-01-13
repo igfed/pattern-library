@@ -3,6 +3,14 @@ $(function(){
 	$('[data-responsive-toggle] button').on('click', function(){
 		$('body').toggleClass('site-header-is-active');
 	});
+	$('.text-carousel').slick({
+		dots: true,
+  		speed: 300,
+  		infinite: false,
+  		mobileFirst: true,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+	});
 	$('.carousel').slick({
 		dots: true,
   		infinite: false,

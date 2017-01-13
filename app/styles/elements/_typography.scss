@@ -36,6 +36,7 @@ h2, .content-title {
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: $font-stack;
+	line-height: 1.4em;
 	text-transform: capitalize;
 }
 
@@ -44,6 +45,7 @@ h3, .section-title {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: $font-stack-sc-medium;
+	line-height: 1.42em;
 	text-transform: lowercase;
 }
 /*05c*/
@@ -51,6 +53,7 @@ h4, .sub-title {
 	font-size: 18px;
 	font-size: 1.1125rem;
 	font-family: $font-stack-sc-medium;
+	line-height: 1.42em;
 	text-transform: lowercase;
 }
 /*06c*/
@@ -153,6 +156,7 @@ small, .legal-copy {
 	h3, .section-title {
 		font-size: 18px;
 		font-size: 1.125rem;
+		margin-bottom: 0.1rem;
 	}
 	/*06a*/
 	h4, .sub-title {
@@ -162,6 +166,7 @@ small, .legal-copy {
 	/*07a*/
 	.callout-body-copy{
 		font-size: 28px;
+		line-height: 1.35em;
 		font-size: 1.75rem;
 	}
 	/*08a*/

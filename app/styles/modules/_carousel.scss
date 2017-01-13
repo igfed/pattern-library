@@ -27,6 +27,10 @@ Markup:
 
 Styleguide 3.5
 */
+.text-carousel {
+	max-width: 60rem;
+	text-align: center;
+}
 .slick-slider{
     padding: 20px 10vw;
     @include respond-to(large) {

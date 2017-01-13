@@ -18,8 +18,9 @@ a{
 	}
 }
 
-.button, .primary{
-	padding: 12px 1.25em;
+.button, .button.primary{
+	padding: 5px 1.25em 7px;
+	min-width: 200px;
 	background-color: $button-primary-color;
 	color: $brand-color;
 	text-align: center;
