@@ -98,22 +98,25 @@
         </nav>
       </div>
 
-        <main role="main" id="content">
-              <div class="medium-9 columns">
+      <main role="main" id="content">
+          <div class="medium-9 columns">
                 <section id="section-3">
                   <h1>Modules</h1>
                   <p class="callout-body-copy"><p>specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components</p>
 </p>
-                  <div class="sample panel">
-                    
-                  </div>
-              </section>
-                <section class="pattern-content" id="section-3.1">
-                  <h2>Header</h2>
-                  <p><p>This is the site wide navigation.</p>
+                </section>
+
+
+
+                <article class="pattern-content" id="section-3.1">
+                  <header>
+                    <h2>Header</h2>
+                    <p><p>This module is used to let a user navigate to the main sections of a site. It consists of top main and footer navigation.</p>
 </p>
-                  <div class="sample panel">
-                     <header role="banner" class="site-header">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <header role="banner" class="site-header">
       <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
       <div class="row">
         <div class="columns">
@@ -186,12 +189,14 @@
         </div>
       </div>
     </header>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;header role=&quot;banner&quot; class=&quot;site-header&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;header role=&quot;banner&quot; class=&quot;site-header&quot;&gt;
       &lt;a id=&quot;skip-navigation&quot; class=&quot;show-on-focus button secondary&quot; href=&quot;#main-content&quot;&gt;Skip Navigation&lt;/a&gt;
       &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;columns&quot;&gt;
@@ -264,22 +269,28 @@
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/header&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-3.2">
-                  <h2>Footer</h2>
-                  <p><p>The footer of the site</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-3.2">
+                  <header>
+                    <h2>Footer</h2>
+                    <p><p>This module is a functional space that sits at the bottom of all pages which groups complementary sections of a site.</p>
 </p>
-                  <div class="sample panel">
-                    <footer class="site-footer" role="contentinfo">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      <footer class="site-footer" role="contentinfo">
   <div class="row footer-back-to-top-button">
     <div class="columns">
       <a class="float-right" href="#top">top</a>
@@ -363,12 +374,14 @@
     </div>
   </div>  
 </footer>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html">&lt;footer class=&quot;site-footer&quot; role=&quot;contentinfo&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">&lt;footer class=&quot;site-footer&quot; role=&quot;contentinfo&quot;&gt;
   &lt;div class=&quot;row footer-back-to-top-button&quot;&gt;
     &lt;div class=&quot;columns&quot;&gt;
       &lt;a class=&quot;float-right&quot; href=&quot;#top&quot;&gt;top&lt;/a&gt;
@@ -452,22 +465,28 @@
     &lt;/div&gt;
   &lt;/div&gt;  
 &lt;/footer&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-3.3">
-                  <h2>Hero</h2>
-                  <p><p>Hero module holds big headlines</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-3.3">
+                  <header>
+                    <h2>Hero</h2>
+                    <p><p>Use this module at the top of your page as a starting point for communicating the key message for the content below.</p>
 </p>
-                  <div class="sample panel">
-                    <div class="hero {$modifiers}">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      <div class="hero {$modifiers} bg-primary">
   <div class="hero-copy">
     <h1>Life is rich and varied. Your financial plan should be, too.</h1>
     <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
@@ -477,14 +496,15 @@
   </div>
   <a href="#content" class="hero-cta">let's get started</a>
 </div>
-                  </div>
+                    </div>
+
                     <div class="modifier">
                         <h3>.patterned</h3>
-                        <p><p>Adds the patterning in the background. suitable for L2&apos;s</p>
+                        <p><p>This variant is used for service landing pages, also referred to as L2 pages. They consist of a  H1 title, a tagline and a background image.</p>
 </p>
 
                         <div class="example">
-                            <div class="hero patterned">
+                            <div class="hero patterned bg-primary">
   <div class="hero-copy">
     <h1>Life is rich and varied. Your financial plan should be, too.</h1>
     <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
@@ -498,11 +518,11 @@
                     </div>
                     <div class="modifier">
                         <h3>.super-hero</h3>
-                        <p><p>Homepage version of the hero.</p>
+                        <p><p>This variant is larger than other hero modules living on the homepage, usually containing more content than other variants.</p>
 </p>
 
                         <div class="example">
-                            <div class="hero super-hero">
+                            <div class="hero super-hero bg-primary">
   <div class="hero-copy">
     <h1>Life is rich and varied. Your financial plan should be, too.</h1>
     <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
@@ -514,11 +534,12 @@
 </div>
                         </div>
                     </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html">&lt;div class=&quot;hero {$modifiers}&quot;&gt;
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">&lt;div class=&quot;hero {$modifiers} bg-primary&quot;&gt;
   &lt;div class=&quot;hero-copy&quot;&gt;
     &lt;h1&gt;Life is rich and varied. Your financial plan should be, too.&lt;/h1&gt;
     &lt;p class=&quot;callout-body-copy&quot;&gt;We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.&lt;/p&gt;
@@ -528,25 +549,31 @@
   &lt;/div&gt;
   &lt;a href=&quot;#content&quot; class=&quot;hero-cta&quot;&gt;let&#x27;s get started&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-3.4">
-                  <h2>Accordions</h2>
-                  <p><p>This document captures a baseline of fonts colors and sizes being used on
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-3.4">
+                  <header>
+                    <h2>Accordions</h2>
+                    <p><p>This document captures a baseline of fonts colors and sizes being used on
 Investorsgroup.com. A baseline unify all digital properties of Investors Group
 giving one voice. Any additions to the font list will need to be approved by the
 Digital Marketing Team.</p>
 </p>
-                  <div class="sample panel">
-                     <ul id="sample" class="accordion" data-accordion role="tablist">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <ul id="sample" class="accordion" data-accordion role="tablist">
   <li class="accordion-item is-active" data-accordion-item>
     <a href="#" class="accordion-title" >Accordion 1</a>
     <div class="accordion-content" data-tab-content>
@@ -569,12 +596,14 @@ Digital Marketing Team.</p>
     </div>
   </li>
 </ul>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;ul id=&quot;sample&quot; class=&quot;accordion&quot; data-accordion role=&quot;tablist&quot;&gt;
   &lt;li class=&quot;accordion-item is-active&quot; data-accordion-item&gt;
     &lt;a href=&quot;#&quot; class=&quot;accordion-title&quot; &gt;Accordion 1&lt;/a&gt;
     &lt;div class=&quot;accordion-content&quot; data-tab-content&gt;
@@ -597,22 +626,28 @@ Digital Marketing Team.</p>
     &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-3.5">
-                  <h2>Carousels</h2>
-                  <p><p>An image and content carousel with animation support and many customizable options.</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-3.5">
+                  <header>
+                    <h2>Carousels</h2>
+                    <p><p>An image and content carousel with animation support and many customizable options.</p>
 </p>
-                  <div class="sample panel">
-                    <div class="row carousel">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      <div class="row carousel">
   <div class="medium-4 columns">
 	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image"></img>
   </div>
@@ -632,12 +667,14 @@ Digital Marketing Team.</p>
 	<img src="images/featured-topics-client-statement.jpg" alt=""></img>
   </div>
 </div>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html">&lt;div class=&quot;row carousel&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">&lt;div class=&quot;row carousel&quot;&gt;
   &lt;div class=&quot;medium-4 columns&quot;&gt;
 	&lt;img src=&quot;images/featured-topics-brazil.jpg&quot; alt=&quot;Win a Trip to Brazil image&quot;&gt;&lt;/img&gt;
   &lt;/div&gt;
@@ -657,17 +694,19 @@ Digital Marketing Team.</p>
 	&lt;img src=&quot;images/featured-topics-client-statement.jpg&quot; alt=&quot;&quot;&gt;&lt;/img&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-            </div>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+          </div>
       </main>
     </div>
 
