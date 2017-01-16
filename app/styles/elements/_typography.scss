@@ -91,6 +91,12 @@ small, .legal-copy {
 	font-size: 0.75rem;
 }
 
+.legal-copy-bold{
+	font-family: $font-stack-semibold;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
 /*27c*/
 .steps{
 	font-size: 18px;
@@ -191,6 +197,12 @@ small, .legal-copy {
 	}
 	/*12a*/
 	small, .legal-copy {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+
+	.legal-copy-bold{
+		font-family: $font-stack-semibold;
 		font-size: 14px;
 		font-size: 0.875rem;
 	}

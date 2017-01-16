@@ -40,3 +40,66 @@
 		}
 	}
 }
+
+.legal{
+
+	.legal-title{
+
+		margin-bottom: 20px;
+
+		@include respond-to(medium){
+			margin-bottom: 70px;
+		}
+	}
+
+	ul{
+		list-style: none;
+		margin-left:0;
+	}
+
+	span{
+
+		font-size: 8px;
+		vertical-align: top;
+
+		@include respond-to(large){
+			font-size: 12px;
+		}
+	}
+
+	p{
+		margin-bottom: 20px;
+	}
+
+	.legal-list{
+
+		li{
+			display: inline-block;
+		}
+
+		span{
+			font-size: 9px;
+
+			@include respond-to(large){
+				font-size: 12px;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.text-carousel{
+
+
+	.slick-dots{
+		margin-top: 20px;
+	}
+
+	.slick-prev{
+		left: 5px;
+	}
+
+	.slick-next{
+		top: 45%;
+	}
+}

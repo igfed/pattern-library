@@ -41,3 +41,22 @@
 // </div>
 //
 // Styleguide 1.1
+
+
+.small-text-center{
+	@include respond-to(small) {
+		text-align: center;
+	}
+}
+
+.medium-text-center{
+	@include respond-to(medium) {
+		text-align: center;
+	}
+}
+
+.large-text-center{
+	@include respond-to(large) {
+		text-align: center;
+	}
+}

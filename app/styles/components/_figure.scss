@@ -77,5 +77,51 @@ figcaption {
 	}
 }
 .wide-figure {
-	
+
+	text-align: center;
+
+	@include respond-to(medium){
+		text-align: left;
+	}
+
+	.wide-figure-title{
+
+		margin-top: 2rem;
+
+		@include respond-to(medium){
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	.wide-figure-title.callout-title{
+		@include respond-to(medium){
+			line-height: 60px;
+		}
+	}
+
+	.wide-figure-copy{
+		text-align: left;
+		margin-top: 30px;
+
+		@include respond-to(medium){
+			margin-top: 0;
+		}
+	}
+
+	.wide-figure-tertiary-cta{
+		text-align: left;
+	}
+
+	.tertiary-cta{
+		margin-bottom: 0;
+	}
+
+	img{
+		width: 140px;
+
+		@include respond-to(medium){
+			float: right;
+		}
+	}
 }
