@@ -1,22 +1,22 @@
-// Typography
-//
-// This document captures a baseline of fonts colors and sizes being used on
-// Investorsgroup.com. A baseline unify all digital properties of Investors Group
-// giving one voice. Any additions to the font list will need to be approved by the
-// Digital Marketing Team.
-//
-// Markup:
-//  <p class="{$modifiers}">The quick brown fox jumps over the lazy dog.</p>
-//
-// .callout-body-copy - large version of body copy
-// .hero-title - hero or call out title
-// .content-title - content title
-// .section-title - section title
-// .sub-title - sub title
-// .legal - Legal copy
-// .punched-out - Usually a number callout
-//
-// Styleguide 1.2
+/*
+Typography
+
+This guideline shows how to use our typographic styles for digital marketing initiatives. It provides recommendations for typefaces, weight, size, line-height and kerning.
+
+Markup:
+ <p class="{$modifiers}">The quick brown fox jumps over the lazy dog.</p>
+
+.callout-body-copy - large version of body copy
+.hero-title - hero or call out title
+.content-title - content title
+.section-title - section title
+.sub-title - sub title
+.legal - Legal copy
+.punched-out - Usually a number callout
+
+Styleguide 1.2
+
+*/
 
 @include font-render("WhitneyBook", "../fonts/whitney-book-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);

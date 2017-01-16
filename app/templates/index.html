@@ -87,28 +87,33 @@
       </div>
       {{/if}}
 
-        <main role="main" id="content">
-            {{#if overview}}
-              <div class="medium-12 medium-centered columns">
-                {{{overview}}}
-              </div>
-            {{else}}
-              <div class="medium-9 columns">
-              {{#eachSection rootNumber}}
-                {{#whenDepth 1}}
+      <main role="main" id="content">
+        {{#if overview}}
+          <div class="medium-12 medium-centered columns">
+            {{{overview}}}
+          </div>
+        {{else}}
+          <div class="medium-9 columns">
+            {{#eachSection rootNumber}}
+              {{#whenDepth 1}}
                 <section id="section-{{reference}}">
                   <h1>{{header}}</h1>
                   <p class="callout-body-copy">{{html description}}</p>
+                </section>
                 {{/whenDepth}}
+
                 {{#whenDepth 2}}
-                <section class="pattern-content" id="section-{{reference}}">
-                  <h2>{{header}}</h2>
-                  <p>{{html description}}</p>
-                {{/whenDepth}}
-                  <div class="sample panel">
-                    {{html markup}}
-                  </div>
-                  {{#eachModifier}}
+                <article class="pattern-content" id="section-{{reference}}">
+                  <header>
+                    <h2>{{header}}</h2>
+                    <p>{{html description}}</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      {{html markup}}
+                    </div>
+
+                    {{#eachModifier}}
                     <div class="modifier">
                         <h3>{{name}}</h3>
                         <p>{{html description}}</p>
@@ -117,27 +122,31 @@
                             {{modifierMarkup}}
                         </div>
                     </div>
-                  {{/eachModifier}}
-                  {{#if markup}}
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html">{{markup}}</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                    {{/eachModifier}}
 
-                       </div>
-                     </li>
-                  </ul>
-                {{/if}}
-              </section>
+                    {{#if markup}}
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">{{markup}}</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                    {{/if}}
+                  </section>
+                </article>
+                {{/whenDepth}}
+
             {{/eachSection}}
-            </div>
-          {{/if}}
+          </div>
+        {{/if}}
       </main>
     </div>
 

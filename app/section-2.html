@@ -98,22 +98,25 @@
         </nav>
       </div>
 
-        <main role="main" id="content">
-              <div class="medium-9 columns">
+      <main role="main" id="content">
+          <div class="medium-9 columns">
                 <section id="section-2">
                   <h1>Components</h1>
                   <p class="callout-body-copy"><p>class-based selectors which define undecorated design patterns</p>
 </p>
-                  <div class="sample panel">
-                    
-                  </div>
-              </section>
-                <section class="pattern-content" id="section-2.1">
-                  <h2>Modals</h2>
-                  <p><p>A modal is just an empty container, so you can put any kind of content inside it, from text to forms to video to an entire grid.</p>
+                </section>
+
+
+
+                <article class="pattern-content" id="section-2.1">
+                  <header>
+                    <h2>Modals</h2>
+                    <p><p>A modal is just an empty container, so you can put any kind of content inside it, from text to forms to video to an entire grid.</p>
 </p>
-                  <div class="sample panel">
-                    
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      
 	<div class="reveal" id="exampleModal1" data-reveal>
   <h1>Awesome. I Have It.</h1>
   <p class="lead">Your couch. It is mine.</p>
@@ -123,12 +126,14 @@
   </button>
 	</div>
 	<p><a data-open="exampleModal1">Click me for a modal</a></p>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html">
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">
 	&lt;div class=&quot;reveal&quot; id=&quot;exampleModal1&quot; data-reveal&gt;
   &lt;h1&gt;Awesome. I Have It.&lt;/h1&gt;
   &lt;p class=&quot;lead&quot;&gt;Your couch. It is mine.&lt;/p&gt;
@@ -138,52 +143,66 @@
   &lt;/button&gt;
 	&lt;/div&gt;
 	&lt;p&gt;&lt;a data-open=&quot;exampleModal1&quot;&gt;Click me for a modal&lt;/a&gt;&lt;/p&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-2.2">
-                  <h2>Callout</h2>
-                  <p><p>A callout is just an element with a .callout class applied. You can put any kind of content inside.</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-2.2">
+                  <header>
+                    <h2>Callout</h2>
+                    <p><p>A callout is just an element with a .callout class applied. You can put any kind of content inside.</p>
 </p>
-                  <div class="sample panel">
-                     <div class="callout {$modifiers}">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <div class="callout {$modifiers}">
   <h5>This is a callout.</h5>
   <p>It has an easy to override visual style, and is appropriately subdued.</p>
   <a href="#">It's dangerous to go alone, take this.</a>
 </div>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;div class=&quot;callout {$modifiers}&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;div class=&quot;callout {$modifiers}&quot;&gt;
   &lt;h5&gt;This is a callout.&lt;/h5&gt;
   &lt;p&gt;It has an easy to override visual style, and is appropriately subdued.&lt;/p&gt;
   &lt;a href=&quot;#&quot;&gt;It&#x27;s dangerous to go alone, take this.&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-2.3">
-                  <h2>Top Bar</h2>
-                  <p><p>The new top bar is a simpler wrapper around our flexible menu components.</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-2.3">
+                  <header>
+                    <h2>Top Bar</h2>
+                    <p><p>The new top bar is a simpler wrapper around our flexible menu components.</p>
 </p>
-                  <div class="sample panel">
-                     <div class="top-bar">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <div class="top-bar">
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Site Title</li>
@@ -206,12 +225,14 @@
     </ul>
   </div>
 </div>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;div class=&quot;top-bar&quot;&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;div class=&quot;top-bar&quot;&gt;
   &lt;div class=&quot;top-bar-left&quot;&gt;
     &lt;ul class=&quot;dropdown menu&quot; data-dropdown-menu&gt;
       &lt;li class=&quot;menu-text&quot;&gt;Site Title&lt;/li&gt;
@@ -234,22 +255,28 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-2.4">
-                  <h2>Drop down menu</h2>
-                  <p><p>Drop down menu</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-2.4">
+                  <header>
+                    <h2>Drop down menu</h2>
+                    <p><p>Drop down menu</p>
 </p>
-                  <div class="sample panel">
-                     <ul class="dropdown menu horizontal" data-dropdown-menu>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <ul class="dropdown menu horizontal" data-dropdown-menu>
 	<li>
 		<a href="#">Login</a>
 		<ul class="menu vertical">
@@ -260,12 +287,14 @@
 	<li><a href="#">Client Support</a></li>
 	<li><a href="#">Francais</a></li>
 </ul>
-                  </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;ul class=&quot;dropdown menu horizontal&quot; data-dropdown-menu&gt;
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;ul class=&quot;dropdown menu horizontal&quot; data-dropdown-menu&gt;
 	&lt;li&gt;
 		&lt;a href=&quot;#&quot;&gt;Login&lt;/a&gt;
 		&lt;ul class=&quot;menu vertical&quot;&gt;
@@ -276,22 +305,28 @@
 	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Client Support&lt;/a&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Francais&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-                <section class="pattern-content" id="section-2.5">
-                  <h2>Figure</h2>
-                  <p><p>Figure represents self-contained content, frequently with a caption, and is typically referenced as a single unit. While it is related to the main flow, its position is independent of the main flow. Usually this is an image, an illustration, a diagram, a code snippet, or a schema that is referenced in the main text, but that can be moved to another page or to an appendix without affecting the main flow.</p>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-2.5">
+                  <header>
+                    <h2>Figure</h2>
+                    <p><p>Figure represents self-contained content, frequently with a caption, and is typically referenced as a single unit. While it is related to the main flow, its position is independent of the main flow. Usually this is an image, an illustration, a diagram, a code snippet, or a schema that is referenced in the main text, but that can be moved to another page or to an appendix without affecting the main flow.</p>
 </p>
-                  <div class="sample panel">
-                     <figure class="{$modifiers}">
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <figure class="{$modifiers}">
  	<img class="image-round" src="images/more-investments-fez.jpg" alt="An awesome picture">	
 	<figcaption>
 		<h2>Global markets rise again</h2>
@@ -299,7 +334,8 @@
     <button class="button secondary">See more</button>
 	</figcaption>
  </figure>
-                  </div>
+                    </div>
+
                     <div class="modifier">
                         <h3>.small-figure</h3>
                         <p><p>Tiny images little copy ex. six pillars</p>
@@ -316,11 +352,12 @@
  </figure>
                         </div>
                     </div>
-                    <ul class="accordion" data-accordion role="tablist">
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Code</a>
-                       <div class="accordion-content" data-tab-content>
-                          <pre><code class="lang-html"> &lt;figure class=&quot;{$modifiers}&quot;&gt;
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;figure class=&quot;{$modifiers}&quot;&gt;
  	&lt;img class=&quot;image-round&quot; src=&quot;images/more-investments-fez.jpg&quot; alt=&quot;An awesome picture&quot;&gt;	
 	&lt;figcaption&gt;
 		&lt;h2&gt;Global markets rise again&lt;/h2&gt;
@@ -328,17 +365,19 @@
     &lt;button class=&quot;button secondary&quot;&gt;See more&lt;/button&gt;
 	&lt;/figcaption&gt;
  &lt;/figure&gt;</code></pre>
-                       </div>
-                     </li>
-                     <li class="accordion-item" data-accordion-item>
-                       <a href="#" class="accordion-title" >Documentation</a>
-                       <div class="accordion-content" data-tab-content>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
 
-                       </div>
-                     </li>
-                  </ul>
-              </section>
-            </div>
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+          </div>
       </main>
     </div>
 

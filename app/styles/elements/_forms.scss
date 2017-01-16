@@ -1,24 +1,26 @@
-// Form Inputs
-//
-// Forms
-//
-// Markup:
-// 	<form>
-//   <div class="row">
-//     <div class="medium-6 columns">
-//       <label>Input Label
-//         <input type="text" placeholder=".medium-6.columns">
-//       </label>
-//     </div>
-//     <div class="medium-6 columns">
-//       <label>Input Label
-//         <input type="text" placeholder=".medium-6.columns">
-//       </label>
-//     </div>
-//   </div>
-// </form>
-//
-// Styleguide 1.6
+/*
+Form Inputs
+
+Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
+
+Markup:
+	<form>
+  <div class="row">
+    <div class="medium-6 columns">
+      <label>Input Label
+        <input type="text" placeholder=".medium-6.columns">
+      </label>
+    </div>
+    <div class="medium-6 columns">
+      <label>Input Label
+        <input type="text" placeholder=".medium-6.columns">
+      </label>
+    </div>
+  </div>
+</form>
+
+Styleguide 1.6
+*/
 
 input[type=text], input[type=password], input[type=search] {
 	background-color: transparent;

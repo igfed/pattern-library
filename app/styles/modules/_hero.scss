@@ -1,10 +1,10 @@
 /*
 Hero
 
-Hero module holds big headlines
+Use this module at the top of your page as a starting point for communicating the key message for the content below.
 
 Markup:
-<div class="hero {$modifiers}">
+<div class="hero {$modifiers} bg-primary">
   <div class="hero-copy">
     <h1>Life is rich and varied. Your financial plan should be, too.</h1>
     <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
@@ -15,8 +15,8 @@ Markup:
   <a href="#content" class="hero-cta">let's get started</a>
 </div>
 
-.patterned - Adds the patterning in the background. suitable for L2's
-.super-hero  - Homepage version of the hero.
+.patterned - This variant is used for service landing pages, also referred to as L2 pages. They consist of a  H1 title, a tagline and a background image.
+.super-hero  - This variant is larger than other hero modules living on the homepage, usually containing more content than other variants.
 
 Styleguide 3.3
 */

@@ -1,14 +1,15 @@
-// Buttons and Links
-//
-// Generates a button
-//
-// Markup:
-//	<button class="button {$modifiers}">Click me</button>
-// 
-// .secondary - A blue button.
-// :hover   - Highlights the button on hover.
-//
-// Styleguide 1.5
+/*
+Buttons and Links
+
+Buttons are used to allow a user to initiate a desired action. It is an element that is integral in communicating the primary objective of a screen space.
+
+Markup:
+	<button class="button {$modifiers}">Click me</button>
+
+.secondary - A blue button.
+
+Styleguide 1.5
+*/
 
 a{
 	color: $brand-color;
