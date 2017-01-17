@@ -63,7 +63,7 @@ h4, .sub-title {
 	font-size: 1rem;
 }
 /*07c*/
-body, p, .large-body-copy .body-copy {
+body, p, .large-body-copy .body-copy, li {
 	font-family: $font-stack;
 	font-size: 16px;
 	font-size: 1rem;
@@ -89,6 +89,7 @@ strong, .body-copy-bold{
 small, .legal-copy {
 	font-size: 12px;
 	font-size: 0.75rem;
+	line-height: 1.06rem;
 }
 
 small strong, .legal-copy-bold {
@@ -179,7 +180,7 @@ small strong, .legal-copy-bold {
 		font-size: 1.375rem;
 	}
 	/*09a*/
-	p, .body-copy {
+	p, .body-copy, li {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
@@ -203,39 +204,35 @@ small strong, .legal-copy-bold {
 // Legal
 .legal{
 
-	ul{
-		list-style: none;
-		margin-left:0;
-	}
-
-	span {
-		font-size: 8px;
-		vertical-align: top;
-		@include respond-to(large){
-			font-size: 12px;
-		}
-	}
-
 	p {
-		margin-bottom: 20px;
+		margin: 12px 0;
 	}
 }
-.legal-title{
-	margin-bottom: 20px;
+.legal-list , ol.legal-list {
+	margin: 0;
+	padding: 0;
+	list-style: lower-roman;
+	li {
+		display: inline;
+		margin-right: 10px;
+		position: relative;
+		counter-increment: custom;
 
-	@include respond-to(medium){
-		margin-bottom: 70px;
-	}
-}
-.legal-list{
-		li{
-			display: inline-block;
-		}
-		span{
-			font-size: 9px;
+		&:before {
+			content: counter(custom) " ";
+			display: block;
+			line-height: 1;
+			position: absolute;
+			top: 0;
+    		left: 0;
+    		font-size: 9px;
 			@include respond-to(large){
 				font-size: 12px;
 				vertical-align: top;
 			}
 		}
 	}
+}
+legal-footnote-list {
+
+}
