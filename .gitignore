@@ -7,3 +7,4 @@ styleguide
 debug.log
 .DS_Store
 gh-pages
+.idea
