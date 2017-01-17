@@ -91,10 +91,8 @@ small, .legal-copy {
 	font-size: 0.75rem;
 }
 
-.legal-copy-bold{
+small strong, .legal-copy-bold {
 	font-family: $font-stack-semibold;
-	font-size: 12px;
-	font-size: 0.75rem;
 }
 
 /*27c*/
@@ -200,11 +198,44 @@ small, .legal-copy {
 		font-size: 14px;
 		font-size: 0.875rem;
 	}
+}
 
-	.legal-copy-bold{
-		font-family: $font-stack-semibold;
-		font-size: 14px;
-		font-size: 0.875rem;
+// Legal
+.legal{
+
+	ul{
+		list-style: none;
+		margin-left:0;
 	}
 
+	span {
+		font-size: 8px;
+		vertical-align: top;
+		@include respond-to(large){
+			font-size: 12px;
+		}
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
 }
+.legal-title{
+	margin-bottom: 20px;
+
+	@include respond-to(medium){
+		margin-bottom: 70px;
+	}
+}
+.legal-list{
+		li{
+			display: inline-block;
+		}
+		span{
+			font-size: 9px;
+			@include respond-to(large){
+				font-size: 12px;
+				vertical-align: top;
+			}
+		}
+	}

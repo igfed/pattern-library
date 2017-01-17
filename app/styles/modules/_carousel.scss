@@ -27,10 +27,6 @@ Markup:
 
 Styleguide 3.5
 */
-.text-carousel {
-	max-width: 60rem;
-	text-align: center;
-}
 .slick-slider{
     padding: 20px 10vw;
     @include respond-to(large) {
@@ -56,7 +52,10 @@ Styleguide 3.5
 	}
 }
 .slick-prev{
-	left: 0;
+	left: 10px;
+	@include respond-to(large) {
+    	left: 15px;
+    }
 	&:before{
 		content: '';
 		display: block;
@@ -70,7 +69,10 @@ Styleguide 3.5
 	}
 }
 .slick-next{
-	right: 0;
+	right: 10px;
+	@include respond-to(large) {
+    	right: 15px;
+    }
 	&:after{
 		content: '';
 		display: block;
@@ -120,5 +122,14 @@ Styleguide 3.5
 		}
 
 
+	}
+}
+
+// Text version
+.text-carousel {
+	max-width: 60rem;
+	text-align: center;
+	.slick-dots{
+		margin-top: 20px;
 	}
 }

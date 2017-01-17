@@ -6,7 +6,7 @@ $(function(){
 	$('.text-carousel').slick({
 		dots: true,
   		speed: 300,
-  		infinite: false,
+  		infinite: true,
   		mobileFirst: true,
   		slidesToShow: 1,
   		slidesToScroll: 1,
@@ -15,7 +15,7 @@ $(function(){
 	});
 	$('.carousel').slick({
 		dots: true,
-  		infinite: false,
+  		infinite: true,
   		speed: 300,
   		mobileFirst: true,
   		slidesToShow: 1,
