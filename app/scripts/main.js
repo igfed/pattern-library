@@ -33,3 +33,25 @@ $(function(){
 	    ]
 	});
 });
+
+// *****************************************************
+// Some Boilerplate Patterns
+// *****************************************************
+
+// Revealing module pattern
+// Perhaps a namespace like 'ig' could act as our 'global' container where shared functionality lives?
+const ig = (function () {
+  function _privateMethod() {
+    console.log('init');
+  }
+
+  function init() {
+    _privateMethod();
+  }
+
+  return {
+    init // Can use shorthand notation. (init: init) not required. ES6 for the win!
+  };
+}());
+
+ig.init();
