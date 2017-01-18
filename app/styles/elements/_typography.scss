@@ -209,24 +209,29 @@ small strong, .legal-copy-bold {
 	}
 }
 .legal-list , ol.legal-list {
-	margin: 0;
-	padding: 0;
-	list-style: lower-roman;
+	margin: 0 0 1rem;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    overflow: hidden;
 	li {
-		display: inline;
-		margin-right: 10px;
-		padding-left: 10px;
+		float: left;
+		margin: 0 5px 3px 5px;
+    	padding: 3px 5px 3px 10px;
 		position: relative;
-		list-style-type: lower-alpha;
 		counter-increment: legal;
+
+		&:first-child {
+			counter-reset: legal;
+		}
 
 		&:before {
 			content: counter(legal, lower-roman) " ";
 			display: block;
 			line-height: 1;
 			position: absolute;
-			top: 0;
-    		left: 0;
+			top: 8px;
+			left: 0px;
     		font-size: 9px;
 			@include respond-to(large){
 				font-size: 12px;
@@ -243,8 +248,9 @@ small strong, .legal-copy-bold {
 }
 .legal-footnote-list {
 	list-style: none;
+	clear: both;
 	li {
-		margin-right: 10px;
+		margin: 5px 10px 10px 0;
 		position: relative;
 		counter-increment: footnote;
 
