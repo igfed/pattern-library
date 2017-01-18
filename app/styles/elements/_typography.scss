@@ -90,6 +90,7 @@ small, .legal-copy {
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1.06rem;
+	display: inline-block;
 }
 
 small strong, .legal-copy-bold {
@@ -259,7 +260,7 @@ small strong, .legal-copy-bold {
 			display: block;
 			line-height: 1em;
 			position: absolute;
-			top: 8px;
+			top: 4px;
 			left: -15px;
 			font-size: 9px;
 			font-size: 0.6rem;

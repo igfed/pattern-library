@@ -28,7 +28,7 @@ Markup:
 Styleguide 3.5
 */
 .slick-slider{
-    padding: 20px 10vw;
+    padding: 0 10vw;
     @include respond-to(large) {
     	padding: 20px 12vw;
     }
