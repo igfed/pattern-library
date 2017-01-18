@@ -215,11 +215,13 @@ small strong, .legal-copy-bold {
 	li {
 		display: inline;
 		margin-right: 10px;
+		padding-left: 10px;
 		position: relative;
-		counter-increment: custom;
+		list-style-type: lower-alpha;
+		counter-increment: legal;
 
 		&:before {
-			content: counter(custom) " ";
+			content: counter(legal, lower-roman) " ";
 			display: block;
 			line-height: 1;
 			position: absolute;
@@ -231,8 +233,34 @@ small strong, .legal-copy-bold {
 				vertical-align: top;
 			}
 		}
+		&:after {
+			content: ","
+		}
+		&:last-child:after {
+			display: none;
+		}
 	}
 }
-legal-footnote-list {
+.legal-footnote-list {
+	list-style: none;
+	li {
+		margin-right: 10px;
+		position: relative;
+		counter-increment: footnote;
 
+		&:before {
+			content: counter(footnote) " ";
+			display: block;
+			line-height: 1em;
+			position: absolute;
+			top: 8px;
+			left: -15px;
+			font-size: 9px;
+			font-size: 0.6rem;
+			@include respond-to(large){
+				font-size: 12px;
+				vertical-align: top;
+			}
+		}
+	}
 }
