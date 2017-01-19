@@ -40,3 +40,74 @@
 		}
 	}
 }
+
+.help-topics-accordion{
+
+	.accordion{
+		background-color: transparent;
+
+		p,ul{
+			margin-bottom: 2rem;
+		}
+
+		ul{
+			list-style: none;
+			margin-left: 0;
+		}
+	}
+
+	.accordion-title{
+		background-color: transparent;
+	    border: none;
+	    color: $brand-color;
+	    font-size: 18px;
+		font-size: 1.1125rem;
+		padding: 0.5rem 1rem;
+		border-bottom: 1px solid $grey;
+	}
+
+
+	.accordion-item.is-active .accordion-title{
+		border:none;
+	}
+
+	.accordion-title::before{
+		content: url('http://investorsgroup.com/en/images/corp/svg/expandGreenArrow.png');
+		-webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+
+	.accordion-item.is-active .accordion-title::before{
+		-webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(180deg) translate3d(0, 0, 0);
+	    transform: rotate(180deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+
+	.accordion-image{
+		margin-right: 1rem;
+	}
+
+	.accordion-content{
+		background: transparent;
+		border: none;
+
+		&:last-child{
+			border:none;
+		}
+
+		a{
+			border-bottom: 1px solid $brand-color;
+		}
+	}
+}
