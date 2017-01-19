@@ -42,11 +42,50 @@
 
 .rate {
 
-  .rate-grid {
+  .rate-grid, .rate-grid-10 {
     margin: 0 auto;
     text-align: center;
   }
 
+  // Following are some special rules for blocks of 10
+  .rate-grid-10 {
+    @include respond-to(large) {
+      .large-2 {
+        width: 20%;
+      }
+
+      .rate-block {
+        margin-bottom: 40px;
+      }
+    }
+
+    // Need a 'custom' media query here otherwise CSS will be much more complex
+    @media only screen and (max-width: 1023px) {
+      .row + .row {
+        border-top: 2px solid #ccc;
+      }
+
+      .rate-block {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding: 0;
+
+        .rate-value, .rate-bullet {
+          border-bottom: none;
+        }
+
+        .rate-value {
+          padding: 10px 0 0 0;
+        }
+
+        .rate-bullet {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+
+  // Universal rate-block styles (the styles that are present in all variations of rate-grids)
   .rate-block {
     border-right: none;
     border-bottom: 2px solid #ccc;
@@ -55,7 +94,6 @@
     @include respond-to(medium) {
       border-right: 2px solid #ccc;
       border-bottom: none;
-      padding: 10px 0 20px 0;
     }
 
     &:last-child {
@@ -63,13 +101,23 @@
       border-bottom: none;
     }
 
-    .rate-value, .rate-description, .rate-bullet {
+    .rate-description, .rate-bullet {
       padding: 5px 0;
       margin: 0 30px;
 
       @include respond-to(medium) {
         padding: 20px 0;
       }
+    }
+
+    .rate-value {
+      padding: 10px 0 0 0;
+      margin: 0 30px;
+
+      @include respond-to(medium) {
+        padding: 10px 0;
+      }
+
     }
 
     .rate-value {
@@ -98,5 +146,6 @@
         border-bottom: 1px solid #ccc;
       }
     }
+
   }
 }

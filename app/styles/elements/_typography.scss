@@ -26,216 +26,232 @@ Styleguide 1.2
 
 /*01c*/
 h1, .hero-title, .callout-title {
-	font-size: 28px;
-	font-size: 1.75rem;
-	font-family: $font-stack-light;
-	line-height: 1.1em;
+  font-size: 28px;
+  font-size: 1.75rem;
+  font-family: $font-stack-light;
+  line-height: 1.1em;
 }
+
 /*02c*/
 h2, .content-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-family: $font-stack;
-	line-height: 1.4em;
-	text-transform: capitalize;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: $font-stack;
+  line-height: 1.4em;
+  text-transform: capitalize;
 }
 
 /*04c*/
 h3, .section-title {
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-family: $font-stack-sc-medium;
-	line-height: 1.42em;
-	text-transform: lowercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: $font-stack-sc-medium;
+  line-height: 1.42em;
+  text-transform: lowercase;
 }
+
 /*05c*/
 h4, .sub-title {
-	font-size: 18px;
-	font-size: 1.1125rem;
-	font-family: $font-stack-sc-medium;
-	line-height: 1.42em;
-	text-transform: lowercase;
+  font-size: 18px;
+  font-size: 1.1125rem;
+  font-family: $font-stack-sc-medium;
+  line-height: 1.42em;
+  text-transform: lowercase;
 }
+
 /*06c*/
 .callout-body-copy {
-	font-family: $font-stack-light;
-	font-size: 16px;
-	font-size: 1rem;
+  font-family: $font-stack-light;
+  font-size: 16px;
+  font-size: 1rem;
 }
+
 /*07c*/
 body, p, .large-body-copy .body-copy {
-	font-family: $font-stack;
-	font-size: 16px;
-	font-size: 1rem;
-	color: $darkest-color;
-	line-height: 1.5em;
-	margin-bottom: 2px;
+  font-family: $font-stack;
+  font-size: 16px;
+  font-size: 1rem;
+  color: $darkest-color;
+  line-height: 1.5em;
+  margin-bottom: 2px;
 }
 
 /*08c*/
-strong, .body-copy-bold{
-	font-family: $font-stack-semibold;
-	font-size: 16px;
-	font-size: 1rem;
+strong, .body-copy-bold {
+  font-family: $font-stack-semibold;
+  font-size: 16px;
+  font-size: 1rem;
 }
+
 /*09c*/
 .punched-out {
-	font-size: 90px;
-	font-size: 5.625rem;
-	font-family: $font-stack;
-	text-shadow: 2px 2px 2px #818C91;
+  font-size: 90px;
+  font-size: 5.625rem;
+  font-family: $font-stack;
+  text-shadow: 2px 2px 2px #818C91;
 }
+
 /*10c*/
 small, .legal-copy {
-	font-size: 12px;
-	font-size: 0.75rem;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 small strong, .legal-copy-bold {
-	font-family: $font-stack-semibold;
+  font-family: $font-stack-semibold;
 }
 
 /*27c*/
-.steps{
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: $font-stack;
-	color: $steps-grey;
-		&:focus, &:active{
-			color: $brand-color;
-		}
+.steps {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: $font-stack;
+  color: $steps-grey;
+  &:focus, &:active {
+    color: $brand-color;
+  }
 }
 
 @include respond-to(medium) {
-	/*01b*/
-	h1, .hero-title, .callout-title {
-		font-size: 40px;
-		font-size: 2.5rem;
-	}
-	/*03b*/
-	.accordion-menu-section-title{
-		font-size: 20px;
-		font-size: 1.25rem;
-	}
-	/*04b*/
-	h3, .section-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-	/*05b*/
-	h4, .sub-title {
-		font-size: 16px;
-		font-size: 1rem;
-	}
-	/*06a*/
-	.callout-body-copy{
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
+  /*01b*/
+  h1, .hero-title, .callout-title {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+  /*03b*/
+  .accordion-menu-section-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  /*04b*/
+  h3, .section-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  /*05b*/
+  h4, .sub-title {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  /*06a*/
+  .callout-body-copy {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
 }
 
 @include respond-to(large) {
 
-	/*01a*/
-	h1, .hero-title {
-		font-size: 72px;
-		font-size: 4.5rem;
-	}
-	/*02a*/
-	.callout-title{
-		font-size: 52px;
-		font-size:  3.25rem;
-	}
-	/*03a*/
-	h2, .content-title {
-		font-size: 36px;
-		font-size: 2.25rem;
-	}
-	/*04a*/
-	.accordion-menu-section-title{
-		font-size: 24px;
-		font-size: 1.5rem;
-	}
-	/*05a*/
-	h3, .section-title {
-		font-size: 18px;
-		font-size: 1.125rem;
-		margin-bottom: 0.1rem;
-	}
-	/*06a*/
-	h4, .sub-title {
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-	/*07a*/
-	.callout-body-copy{
-		font-size: 28px;
-		line-height: 1.35em;
-		font-size: 1.75rem;
-	}
-	/*08a*/
-	.large-body-copy{
-		font-size: 22px;
-		font-size: 1.375rem;
-	}
-	/*09a*/
-	p, .body-copy {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-	/*10a*/
-	.body-copy-bold{
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-	/*11a*/
-	.number-callout{
-		font-size: 145px;
-		font-size: 9.0625rem;
-	}
-	/*12a*/
-	small, .legal-copy {
-		font-size: 14px;
-		font-size: 0.875rem;
-	}
+  /*01a*/
+  h1, .hero-title {
+    font-size: 72px;
+    font-size: 4.5rem;
+  }
+  /*02a*/
+  .callout-title {
+    font-size: 52px;
+    font-size: 3.25rem;
+  }
+  /*03a*/
+  h2, .content-title {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+  /*04a*/
+  .accordion-menu-section-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  /*05a*/
+  h3, .section-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 0.1rem;
+  }
+  /*06a*/
+  h4, .sub-title {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  /*07a*/
+  .callout-body-copy {
+    font-size: 28px;
+    line-height: 1.35em;
+    font-size: 1.75rem;
+  }
+  /*08a*/
+  .large-body-copy {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  /*09a*/
+  p, .body-copy {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  /*10a*/
+  .body-copy-bold {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  /*11a*/
+  .number-callout {
+    font-size: 145px;
+    font-size: 9.0625rem;
+  }
+  /*12a*/
+  small, .legal-copy {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
 
 // Legal
-.legal{
+.legal {
 
-	ul{
-		list-style: none;
-		margin-left:0;
-	}
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
 
-	span {
-		font-size: 8px;
-		vertical-align: top;
-		@include respond-to(large){
-			font-size: 12px;
-		}
-	}
+  span {
+    font-size: 8px;
+    vertical-align: top;
+    @include respond-to(large) {
+      font-size: 12px;
+    }
+  }
 
-	p {
-		margin-bottom: 20px;
-	}
+  p {
+    margin-bottom: 20px;
+  }
 }
-.legal-title{
-	margin-bottom: 20px;
 
-	@include respond-to(medium){
-		margin-bottom: 70px;
-	}
+.legal-title {
+  margin-bottom: 20px;
+
+  @include respond-to(medium) {
+    margin-bottom: 70px;
+  }
 }
-.legal-list{
-		li{
-			display: inline-block;
-		}
-		span{
-			font-size: 9px;
-			@include respond-to(large){
-				font-size: 12px;
-				vertical-align: top;
-			}
-		}
-	}
+
+.legal-list {
+  li {
+    display: inline-block;
+  }
+  span {
+    font-size: 9px;
+    @include respond-to(large) {
+      font-size: 12px;
+      vertical-align: top;
+    }
+  }
+}
+
+// Superscript
+
+sup {
+  padding-left: 2px;
+  font-size: 65%;
+  top: -0.6em;
+}
