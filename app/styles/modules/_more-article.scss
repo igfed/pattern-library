@@ -1,3 +1,7 @@
+// used elsewhere in the project
+// switch to using $primary-color?
+$highlight-green: #0ed59a;
+
 .title-section {
   position: relative;
   margin-top: 40px;
@@ -11,9 +15,9 @@
     display: block;
 
     a {
-      // create variable for this color
-      color: #0ed59a;
+      color: $highlight-green;
       text-transform: uppercase;
+      font-size: 0.9em;
     }
   }
 
@@ -67,10 +71,10 @@
     margin: 18px auto;
     &:first-child {
       &:first-letter {
-        color: #0ed49a;
+        color: $highlight-green;
         display: block;
         float: left;
-        font-size: 60px;
+        font-size: 3.3em;
         line-height: 35px;
         margin-right: 10px;
         margin-top: 8px;
@@ -79,12 +83,12 @@
   }
 
   blockquote {
-    border-top: 3px solid #0ed59a;
+    border-top: 3px solid $highlight-green;
     margin: 45px;
     font-size: 1.2em;
     border-left: none;
     padding: 12px 0 0 0;
-    
+
     @include respond-to(medium) {
       float: left;
       margin: 9px 45px 9px 0;
