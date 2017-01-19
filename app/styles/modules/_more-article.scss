@@ -4,13 +4,14 @@
 
   @include respond-to(medium) {
     margin-top: 50px;
-  };
+  }
 
   .article-category {
     margin-bottom: 15px;
     display: block;
 
     a {
+      // create variable for this color
       color: #0ed59a;
       text-transform: uppercase;
     }
@@ -28,6 +29,7 @@
     @include respond-to(medium) {
       text-align: right;
       position: absolute;
+      margin: 0;
       top: 0;
       right: 0;
     }
@@ -45,17 +47,18 @@
 
   .article-subtitle {
     margin: 18px auto;
+
+    @include respond-to(medium) {
+      margin: 35px auto;
+    }
   }
 }
 
-.image-with-caption {
-  .image-caption {
-    color: #a4a39c;
-  }
+.image-caption {
+  color: #a4a39c;
 }
 
 .article-body {
-  // margin: 18px auto;
   @include respond-to(medium) {
     margin: 35px auto;
   }
@@ -81,5 +84,12 @@
     font-size: 1.2em;
     border-left: none;
     padding: 12px 0 0 0;
+    
+    @include respond-to(medium) {
+      float: left;
+      margin: 9px 45px 9px 0;
+      font-size: 1.4em;
+      width: 30%;
+    }
   }
 }
