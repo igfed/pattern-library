@@ -1,9 +1,9 @@
 .title-section {
   position: relative;
-  margin: 40px 0 30px 0;
+  margin-top: 40px;
 
   @include respond-to(medium) {
-    margin: 50px 0 20px 0;
+    margin-top: 50px;
   };
 
   .article-category {
@@ -18,13 +18,12 @@
 
   h1 {
     padding-bottom: 8px;
-    margin: 0 0 8px;
     border-bottom: 1px solid #e0d9d1;
   }
 
   .share-icons {
-    margin-top: 22px;
-    margin-bottom: 5px;
+    margin-top: 18px;
+    margin-bottom: 8px;
 
     @include respond-to(medium) {
       text-align: right;
@@ -45,7 +44,7 @@
   }
 
   .article-subtitle {
-    margin: 18px 0 18px 0;
+    margin: 18px auto;
   }
 }
 
@@ -56,8 +55,31 @@
 }
 
 .article-body {
-  margin: 18px auto;
+  // margin: 18px auto;
   @include respond-to(medium) {
     margin: 35px auto;
+  }
+
+  p {
+    margin: 18px auto;
+    &:first-child {
+      &:first-letter {
+        color: #0ed49a;
+        display: block;
+        float: left;
+        font-size: 60px;
+        line-height: 35px;
+        margin-right: 10px;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  blockquote {
+    border-top: 3px solid #0ed59a;
+    margin: 45px;
+    font-size: 1.2em;
+    border-left: none;
+    padding: 12px 0 0 0;
   }
 }
