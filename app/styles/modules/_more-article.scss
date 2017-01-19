@@ -1,5 +1,5 @@
 // used elsewhere in the project
-// switch to using $primary-color?
+// switch to using $primary-color - or add to colors file?
 $highlight-green: #0ed59a;
 
 .title-section {
@@ -14,16 +14,19 @@ $highlight-green: #0ed59a;
     margin-bottom: 15px;
     display: block;
 
-    a {
+    p {
       color: $highlight-green;
       text-transform: uppercase;
-      font-size: 0.9em;
     }
   }
 
   h1 {
     padding-bottom: 8px;
     border-bottom: 1px solid #e0d9d1;
+  }
+
+  .byline {
+    text-transform: uppercase;
   }
 
   .share-icons {
@@ -85,14 +88,12 @@ $highlight-green: #0ed59a;
   blockquote {
     border-top: 3px solid $highlight-green;
     margin: 45px;
-    font-size: 1.2em;
     border-left: none;
     padding: 12px 0 0 0;
 
     @include respond-to(medium) {
       float: left;
       margin: 9px 45px 9px 0;
-      font-size: 1.4em;
       width: 30%;
     }
   }
