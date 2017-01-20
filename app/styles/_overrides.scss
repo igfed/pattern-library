@@ -14,6 +14,8 @@
 	}
 }
 
+// Featured Topics
+
 .featured-topics{
 
 	h3{
@@ -41,13 +43,15 @@
 	}
 }
 
+// More Topics - Accordion
+
 .help-topics-accordion{
 
 	.accordion{
 		background-color: transparent;
 
 		p,ul{
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 		}
 
 		ul{
@@ -63,12 +67,11 @@
 	    font-size: 18px;
 		font-size: 1.1125rem;
 		padding: 0.5rem 1rem;
-		border-bottom: 1px solid $grey;
 	}
 
 
-	.accordion-item.is-active .accordion-title{
-		border:none;
+	.accordion-item{
+		border-bottom: 1px solid $accordion-lightgrey-line;
 	}
 
 	.accordion-title::before{
@@ -108,6 +111,34 @@
 
 		a{
 			border-bottom: 1px solid $brand-color;
+		}
+	}
+}
+
+// More
+
+.more-section{
+
+	.more-section-menu{
+		background: url(http://investorsgroup.com/more/wp-content/themes/ig_magazine/img/header-rp.png);
+
+		ul{
+			list-style: none;
+
+			li{
+				display: inline-block;
+			}
+		}
+	}
+
+	.more-section-menu-dropdown-story{
+		display: inline-block;
+		height: 148px;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+
+		img{
+			width: 130px;
 		}
 	}
 }
