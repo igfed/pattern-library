@@ -4,19 +4,19 @@ $highlight-green: #0ed59a;
 
 .title-section {
   position: relative;
-  margin-top: 40px;
+  margin-top: 45px;
 
   @include respond-to(medium) {
     margin-top: 50px;
   }
 
   .article-category {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: block;
 
     p {
       color: $highlight-green;
-      text-transform: uppercase;
+      margin: 0;
     }
   }
 
@@ -30,8 +30,7 @@ $highlight-green: #0ed59a;
   }
 
   .share-icons {
-    margin-top: 18px;
-    margin-bottom: 8px;
+    margin: 18px auto;
 
     @include respond-to(medium) {
       text-align: right;
@@ -63,15 +62,26 @@ $highlight-green: #0ed59a;
 
 .image-caption {
   color: #a4a39c;
+  float: left;
+
+  @include respond-to(medium) {
+    float: none;
+    text-align: center;
+  }
 }
 
 .article-body {
+
   @include respond-to(medium) {
     margin: 35px auto;
   }
 
   p {
-    margin: 18px auto;
+    margin: 45px auto;
+    @include respond-to(medium) {
+      margin: 18px auto;
+    }
+    // span with .hero-title class instead
     &:first-child {
       &:first-letter {
         color: $highlight-green;
@@ -87,7 +97,8 @@ $highlight-green: #0ed59a;
 
   blockquote {
     border-top: 3px solid $highlight-green;
-    margin: 45px;
+    color: inherit;
+    margin: 45px 45px 35px 45px;
     border-left: none;
     padding: 12px 0 0 0;
 
