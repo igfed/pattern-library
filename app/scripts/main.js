@@ -33,3 +33,21 @@ $(function(){
 	    ]
 	});
 });
+
+//More Header
+
+$(function(){
+	$('.more-section-menu li').on('click',function(){
+		var className = $(this).attr('class').split("")[1];
+				alert(className);
+		$('.more-section-menu-dropdown').show().filter(':not(.'+className+')').hide();
+	})
+});
+
+//Accordion
+
+$(".help-topics-accordion").on("up.zf.accordion", function(event) {
+    setTimeout(function(){
+        $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
+    }, 10); //Adjust to match slideSpeed
+}); 
