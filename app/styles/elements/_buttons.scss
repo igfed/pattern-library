@@ -111,22 +111,27 @@ a:hover .tertiary-cta:before  {
     cursor: pointer;
  }
 
- .tertiary-cta-more:after{
- 	display: block;
-    content: ' ';
-    height: 3px;
-    left: 0px;
-    right: 64%;
-    background-color: white;
-    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
- }
 
- .tertiary-cta-more:after{
- 	left: 64%;
-    right: 0;
-    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+ @include respond-to(medium){
+
+ 	 .tertiary-cta-more:after{
+	 	display: block;
+	 	position: absolute;
+	    content: ' ';
+	    height: 3px;
+	    left: 0px;
+	    right: 50%;
+	    background-color: white;
+	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+	 }
+
+	 .more-section-menuitem:focus + .tertiary-cta-more::after {
+	 	left: 64%;
+	    right: 0;
+	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+	 }
  }

@@ -37,10 +37,18 @@ $(function(){
 //More Header
 
 $(function(){
-	$('.more-section-menu li').on('click',function(){
-		var className = $(this).attr('class').split("")[1];
-		// $('.more-section-menu-dropdown').show().filter(':not(.'+className+')').hide();
-		$('.more-section-menu-dropdown').show();
+	$('.more-section-menuitem').on('click',function(e){
+		 e.preventDefault();
+		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
+		$('.more-section-menu-dropdown-category').show().filter(':not(.'+className+')').hide();
+		var title = $(this).text();
+		$('p.more-section-tagline-tag').hide();
+		$('h1.more-section-tagline-tag').addClass('active').text(title);
+	})
+
+	$('.more-section-menu-mobile-title').on('click', function(e){
+		 e.preventDefault();
+		$('.more-section-menu-mobile').toggle();
 	})
 });
 
