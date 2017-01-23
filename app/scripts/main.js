@@ -32,4 +32,24 @@ $(function(){
 		    }
 	    ]
 	});
+	$('.homepage-carousel').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		mobileFirst: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		prevArrow: '<button type="button" class="slick-prev"><span class="show-for-sr">Previous</span></button>',
+		nextArrow: '<button type="button" class="slick-next"><span class="show-for-sr">Next</span></button>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					arrows: true,
+				}
+			}
+		]
+	});
 });
