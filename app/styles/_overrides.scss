@@ -146,15 +146,39 @@
 		}
 	}
 
+	.more-section-tagline{
+		display: inline-block;
+
+		.more-section-tagline-tag{
+			display: inline-block;
+			vertical-align: bottom;
+		}
+
+		.more-section-category{
+			display: none;
+		}
+	}
+
+	.more-section-menu-dropdown-arrow-up{
+		position: absolute;
+	  	width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-bottom: 50px solid white;
+		top: -1rem;
+	}
+
 	.more-section-menu-dropdown{
 		display: none;
+		position:relative;
 	}
 
 	.more-section-menu-dropdown-story{
 		display: inline-block;
-		width: 18%;
-		margin-left: 0.5rem;
-		margin-right: 0.5rem;
+		width: 13%;
+		margin-left: 0.8rem;
+		margin-right: 0.8rem;
 		text-align: left;
 	}
 }

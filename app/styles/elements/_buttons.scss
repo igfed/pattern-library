@@ -110,3 +110,23 @@ a:hover .tertiary-cta:before  {
     text-decoration: none;
     cursor: pointer;
  }
+
+ .tertiary-cta-more:after{
+ 	display: block;
+    content: ' ';
+    height: 3px;
+    left: 0px;
+    right: 64%;
+    background-color: white;
+    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+ }
+
+ .tertiary-cta-more:after{
+ 	left: 64%;
+    right: 0;
+    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
+ }

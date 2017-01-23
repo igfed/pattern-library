@@ -39,8 +39,8 @@ $(function(){
 $(function(){
 	$('.more-section-menu li').on('click',function(){
 		var className = $(this).attr('class').split("")[1];
-				alert(className);
-		$('.more-section-menu-dropdown').show().filter(':not(.'+className+')').hide();
+		// $('.more-section-menu-dropdown').show().filter(':not(.'+className+')').hide();
+		$('.more-section-menu-dropdown').show();
 	})
 });
 
