@@ -39,17 +39,29 @@ $(function(){
 $(function(){
 	$('.more-section-menuitem').on('click',function(e){
 		 e.preventDefault();
+
+		 // Filter the catrgory on click
 		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
 		$('.more-section-menu-dropdown-category').show().filter(':not(.'+className+')').hide();
 		var title = $(this).text();
 		$('p.more-section-tagline-tag').hide();
 		$('h1.more-section-tagline-tag').addClass('active').text(title);
+
+
+		//Arrow position
+		var $this = $(this);
+		var offset = $this.offset();
+		var width = $this.width();
+		var centerX = offset.left + width / 2 - 50;
+		$('.more-section-menu-dropdown-arrow-up').css({left: centerX});
 	})
 
+	//Toggle the Open/Close button
 	$('.more-section-menu-mobile-title').on('click', function(e){
 		 e.preventDefault();
 		$('.more-section-menu-mobile').toggle();
 	})
+
 });
 
 //Accordion

@@ -129,6 +129,10 @@
 
 	width: 100%;
 
+	.patterned-more{
+		padding-bottom: 0;
+	}
+
 	.more-section-menu-wrapper{
 		width: 100%;
 	}
@@ -219,6 +223,9 @@
 				border-right: 50px solid transparent;
 				border-bottom: 50px solid white;
 				top: -1rem;
+				-webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
 			}
 
 			.more-section-menu-dropdown-category{
