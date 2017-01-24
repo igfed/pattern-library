@@ -111,27 +111,77 @@ a:hover .tertiary-cta:before  {
     cursor: pointer;
  }
 
+ .tertiary-cta-more {
+	cursor: pointer;
+    display: inline-block;
+    line-height: 1.3;
+    position: relative;
+	margin-bottom: 25px;
+	margin-top: 25px;
 
- @include respond-to(medium){
 
- 	 .tertiary-cta-more:after{
-	 	display: block;
-	 	position: absolute;
+    &:before{
+		display: block;
+	    position: absolute;
 	    content: ' ';
-	    height: 3px;
-	    left: 0px;
-	    right: 50%;
+	    left: 15px;
+	    width: 20%;
+	    // left:0;
+	    // right:0;
+	    // right: calc(100% - 20px);
+	    height: 5px;
+	    top: calc(100% - .05rem);
 	    background-color: white;
-	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	 }
+	    // -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	    // transition: right .15s ease-out .15s, left .15s ease-out 0s;
 
-	 .more-section-menuitem:focus + .tertiary-cta-more::after {
-	 	left: 64%;
-	    right: 0;
-	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	 }
- }
+	}
+
+	&.active{
+
+		&:before{
+		animation: underlineBounce 1s;
+		}
+	}
+
+}
+
+@-webkit-keyframes underlineBounce {
+    from   {left:0; right:0;}
+    to {left: calc(100% - 160px); right: 0;}
+}
+
+@keyframes underlineBounce {
+    from   {left:0; right:0;}
+    to {left: calc(100% - 160px); right: 0;}
+}
+
+
+
+// Close Button
+
+.close-button {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+
+  &:before, &.after{
+  	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 33px;
+	width: 2px;
+	background-color: #333;
+  }
+
+  &:before{
+  	transform: rotate(45deg);
+  }
+
+  &:after{
+  	transform: rotate(-45deg);
+  }
+}
