@@ -3,7 +3,7 @@
 
   .columns, .column {
     padding: 0;
-    
+
     @include respond-to(large) {
       padding: 0 20px;
     }
@@ -14,17 +14,49 @@
     @include respond-to(medium) {
       padding: 20px 0 0 20px;
 
-      .title-excerpt {
-        display: none;
-      }
     }
 
     @include respond-to(large) {
-      padding: 20px 0 0 20px;
+      padding: 20px 20px 0 20px;
+    }
+  }
 
-      .title-excerpt {
-        display: inline;
+  .title-excerpt {
+    margin-bottom: 10px;
+    display: block;
+
+    p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    @include respond-to(medium) {
+      display: none;
+    }
+
+    @include respond-to(large) {
+      display: block;
+      margin-bottom: 15px;
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0;
       }
+    }
+  }
+
+  .slick-prev {
+    &:before {
+      border-top: solid 4px $button-primary-color;
+  		border-right: solid 4px $button-primary-color;
+    }
+  }
+
+  .slick-next {
+    &:after {
+      border-top: solid 4px $button-primary-color;
+  		border-right: solid 4px $button-primary-color;
     }
   }
 
@@ -33,6 +65,8 @@
 
     @include respond-to(large) {
       margin: 0 25px;
+      max-height: 325px;
+      overflow-y: hidden;
     }
   }
 
@@ -48,19 +82,26 @@
   }
 
   .author {
-    font-size: 14px;
-  	font-size: 1rem;
+    font-size: 13px;
+  	font-weight: 600;
   	font-family: $font-stack;
   	line-height: 1.4em;
   	text-transform: uppercase;
-  }
-
-  p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    @include respond-to(large) {
+      margin-bottom: 15px;
+    }
   }
 
   .content-title {
-    margin: 10px 0 15px 0;
+    margin: 0;
+    @include respond-to(medium) {
+      margin-bottom: 15px;
+    }
+
+    @include respond-to(large) {
+      margin-bottom: 0;
+    }
   }
 
   .read-more-box {
@@ -68,40 +109,46 @@
 
     .tertiary-cta {
       margin: 0;
+      padding-bottom: 3px;
+    }
+  }
+
+  .slick-dots {
+    @include respond-to(medium) {
+      position: absolute;
+      bottom: 5px;
+      left: 51.6%;
+      margin-bottom: 0;
+    }
+
+    @include respond-to(large) {
+      left: 51.3%;
+    }
+
+    @include respond-to(xlarge) {
+      left: 51.25%;
     }
   }
 }
 
-// .homepage-carousel .slick-slider {
-//   padding: 0;
-//   background-color: blue;
-// }
-
-// @media only screen and (min-width: 1024px) {
-//   .homepage-carousel .slick-slider {
-//     padding: 0;
-//     background: blue;
+// @media only screen and (min-width: 40.0625em) {
+//   .homepage-carousel .slick-dots {
+//     position: absolute;
+//     bottom: 10px;
+//     left: 53.4%;
+//     margin-bottom: 0;
 //   }
 // }
-
-@media only screen and (min-width: 40.0625em) {
-  .homepage-carousel .slick-dots {
-    position: absolute;
-    bottom: 10px;
-    left: 53.4%;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 64.0625em) {
-  .homepage-carousel .slick-dots {
-    left: 52.5%;
-  }
-}
-
-@media (min-width: 1360px) {
-  .homepage-carousel .slick-dots {
-    bottom: 30px;
-    left: 52%;
-  }
-}
+//
+// @media only screen and (min-width: 64.0625em) {
+//   .homepage-carousel .slick-dots {
+//     left: 52.5%;
+//   }
+// }
+//
+// @media (min-width: 1360px) {
+//   .homepage-carousel .slick-dots {
+//     bottom: 30px;
+//     left: 52%;
+//   }
+// }
