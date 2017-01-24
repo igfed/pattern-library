@@ -141,4 +141,36 @@
       left: 51.25%;
     }
   }
+
+  .share-box {
+    position: relative;
+    text-align: right;
+    float: right;
+    bottom: 70px;
+    right: 10px;
+
+    // .js-socialdrawer-open {
+    //   display: none;
+    // }
+
+    .js-socialdrawer {
+      // transition: opacity 250ms;
+    }
+
+    .share {
+      position: relative;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
 }
