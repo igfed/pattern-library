@@ -129,6 +129,10 @@
 
 	width: 100%;
 
+	.patterned-more{
+		padding-bottom: 0;
+	}
+
 	.more-section-menu-wrapper{
 		width: 100%;
 	}
@@ -147,10 +151,12 @@
 			border-bottom: 1px solid white;
 		    text-align: center;
 		    padding: 8px 0;
+		    // width: 100px;
 
 			@include respond-to(medium){
 				border-bottom: none;
 				display: table-cell;
+				// display: inline-block;
 			}
 		}
 
