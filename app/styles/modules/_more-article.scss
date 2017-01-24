@@ -1,6 +1,15 @@
-// used elsewhere in the project
-// switch to using $primary-color - or add to colors file?
-$highlight-green: #0ed59a;
+$more-background-yellow: #FAF7E6;
+
+// siloed changes I made as per UX review - to be discussed
+.bg-more-section {
+  background-color: $more-background-yellow;
+
+  .callout-body-copy {
+    @include respond-to(small) {
+      font-size: 22px;
+    }
+  }
+}
 
 .title-section {
   position: relative;
@@ -15,7 +24,8 @@ $highlight-green: #0ed59a;
     display: block;
 
     p {
-      color: $highlight-green;
+      // put this in global colors?
+      color: $button-primary-color;
       margin: 0;
     }
   }
@@ -81,10 +91,21 @@ $highlight-green: #0ed59a;
     @include respond-to(medium) {
       margin: 18px auto;
     }
+
+    // h1 {
+    //   .hero-title {
+    //     color; $button-primary-color;
+    //     float: left;
+    //     // display: block;
+    //     margin-right: 10px;
+    //     margin-top: 8px;
+    //   }
+    // }
+
     // span with .hero-title class instead
     &:first-child {
       &:first-letter {
-        color: $highlight-green;
+        color: $button-primary-color;
         display: block;
         float: left;
         font-size: 3.3em;
@@ -96,9 +117,9 @@ $highlight-green: #0ed59a;
   }
 
   blockquote {
-    border-top: 3px solid $highlight-green;
+    border-top: 3px solid $button-primary-color;
     color: inherit;
-    margin: 45px 45px 35px 45px;
+    margin: 78px 45px 66px 45px;
     border-left: none;
     padding: 12px 0 0 0;
 
