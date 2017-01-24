@@ -151,12 +151,10 @@
 			border-bottom: 1px solid white;
 		    text-align: center;
 		    padding: 8px 0;
-		    // width: 100px;
 
 			@include respond-to(medium){
 				border-bottom: none;
 				display: table-cell;
-				// display: inline-block;
 			}
 		}
 
@@ -225,6 +223,9 @@
 				border-right: 50px solid transparent;
 				border-bottom: 50px solid white;
 				top: -1rem;
+				-webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
 			}
 
 			.more-section-menu-dropdown-category{
