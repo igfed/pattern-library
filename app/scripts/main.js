@@ -54,7 +54,7 @@ $(function(){
 
 //Accordion
 
-$(".help-topics-accordion").on("up.zf.accordion", function(event) {
+$('.help-topics-accordion').on('up.zf.accordion', function(event) {
     setTimeout(function(){
         $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
     }, 10); //Adjust to match slideSpeed
