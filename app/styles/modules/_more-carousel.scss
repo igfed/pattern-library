@@ -114,6 +114,18 @@
   }
 
   .slick-dots {
+    .slick-active > button {
+      opacity: 1;
+    }
+    li > button {
+      background-color: $button-primary-color;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
     @include respond-to(medium) {
       position: absolute;
       bottom: 5px;
