@@ -101,16 +101,20 @@ figcaption {
 	}
 
 	.wide-figure-copy{
-		text-align: left;
+		text-align: center;
 		margin-top: 30px;
 
 		@include respond-to(medium){
 			margin-top: 0;
+			text-align: left;
 		}
 	}
 
 	.wide-figure-tertiary-cta{
-		text-align: left;
+		text-align: center;
+		@include respond-to(medium){
+			text-align: left;
+		}
 	}
 
 	.tertiary-cta{

@@ -67,7 +67,7 @@ h4, .sub-title {
 }
 
 /*07c*/
-body, p, .large-body-copy .body-copy {
+body, p, .large-body-copy .body-copy, li {
   font-family: $font-stack;
   font-size: 16px;
   font-size: 1rem;
@@ -95,6 +95,8 @@ strong, .body-copy-bold {
 small, .legal-copy {
   font-size: 12px;
   font-size: 0.75rem;
+  line-height: 1.06rem;
+  display: inline-block;
 }
 
 small strong, .legal-copy-bold {
@@ -110,6 +112,14 @@ small strong, .legal-copy-bold {
   &:focus, &:active {
     color: $brand-color;
   }
+}
+
+// Superscript
+
+sup {
+  padding-left: 2px;
+  font-size: 65%;
+  top: -0.6em;
 }
 
 @include respond-to(medium) {
@@ -185,7 +195,7 @@ small strong, .legal-copy-bold {
     font-size: 1.375rem;
   }
   /*09a*/
-  p, .body-copy {
+  p, .body-copy, li {
     font-size: 18px;
     font-size: 1.125rem;
   }
@@ -209,49 +219,71 @@ small strong, .legal-copy-bold {
 // Legal
 .legal {
 
-  ul {
-    list-style: none;
-    margin-left: 0;
-  }
-
-  span {
-    font-size: 8px;
-    vertical-align: top;
-    @include respond-to(large) {
-      font-size: 12px;
-    }
-  }
-
   p {
-    margin-bottom: 20px;
+    margin: 12px 0;
   }
 }
 
-.legal-title {
-  margin-bottom: 20px;
-
-  @include respond-to(medium) {
-    margin-bottom: 70px;
-  }
-}
-
-.legal-list {
+.legal-list, ol.legal-list {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  overflow: hidden;
   li {
-    display: inline-block;
-  }
-  span {
-    font-size: 9px;
-    @include respond-to(large) {
-      font-size: 12px;
-      vertical-align: top;
+    float: left;
+    margin: 0 5px 3px 5px;
+    padding: 3px 5px 3px 10px;
+    position: relative;
+    counter-increment: legal;
+
+    &:first-child {
+      counter-reset: legal;
+    }
+
+    &:before {
+      content: counter(legal, lower-roman) " ";
+      display: block;
+      line-height: 1;
+      position: absolute;
+      top: 8px;
+      left: 0px;
+      font-size: 9px;
+      @include respond-to(large) {
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+    &:after {
+      content: ","
+    }
+    &:last-child:after {
+      display: none;
     }
   }
 }
 
-// Superscript
+.legal-footnote-list {
+  list-style: none;
+  clear: both;
+  li {
+    margin: 5px 10px 10px 0;
+    position: relative;
+    counter-increment: footnote;
 
-sup {
-  padding-left: 2px;
-  font-size: 65%;
-  top: -0.6em;
+    &:before {
+      content: counter(footnote) " ";
+      display: block;
+      line-height: 1em;
+      position: absolute;
+      top: 4px;
+      left: -15px;
+      font-size: 9px;
+      font-size: 0.6rem;
+      @include respond-to(large) {
+        font-size: 12px;
+        vertical-align: top;
+      }
+    }
+  }
 }

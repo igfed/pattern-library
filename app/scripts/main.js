@@ -55,3 +55,58 @@ const ig = (function () {
 }());
 
 ig.init();
+
+//More Header
+
+$(function(){
+
+	$('.more-section-menuitem').on('click',function(e){
+		 e.preventDefault();
+
+		 // Filter the catrgory dropdown on click
+		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
+		$('.more-section-menu-dropdown-category').show().filter(':not(.'+className+')').hide();
+
+		// Filter the category title on click
+		var title = $(this).text();
+		$('p.more-section-tagline-tag').hide();
+		$('h1.more-section-tagline-tag').addClass('active').text(title);
+			// $('.tertiary-cta-more').addClass('active');
+
+		//Arrow position move on click
+		var $this = $(this);
+		var offset = $this.offset();
+		var width = $this.width();
+		var centerX = offset.left + width / 2 - 50;
+		$('.more-section-menu-dropdown-arrow-up').show();
+		$('.more-section-menu-dropdown-arrow-up').css({left: centerX});
+
+		//Underline
+		 $('.tertiary-cta-more').addClass('active');
+
+	});
+
+
+	// $('.more-section-menuitem').mouseup(function(){
+	// 	$('.tertiary-cta-more').addClass('active');
+	// }).mousedown(function(){
+	// 	$('.tertiary-cta-more').removeClass('active');
+	// });
+
+
+		
+	//Toggle the Open/Close mobile categories menu
+	$('.more-section-menu-mobile-title').on('click', function(e){
+		 e.preventDefault();
+		$('.more-section-menu-mobile').toggle();
+	})
+
+});
+
+//Accordion
+
+$('.help-topics-accordion').on('up.zf.accordion', function(event) {
+    setTimeout(function(){
+        $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
+    }, 10); //Adjust to match slideSpeed
+});

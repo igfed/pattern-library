@@ -3,6 +3,7 @@
 .padding-bottom { padding-bottom: 20px; }
 .padding-bottom-lg { padding-bottom: 40px; }
 .padding-bottom-xl { padding-bottom: 60px; }
+.padding-none { padding: 0; }
 .margin-top { margin-top: 20px; }
 .margin-top-lg {margin-top: 40px; }
 .margin-top-xl {margin-top: 60px;}
@@ -14,11 +15,15 @@
 .margin-top-small { margin-top: 10px; }
 .margin-bottom-small { margin-bottom: 10px; }
 
+.active{ display:block; }
+
 .six-pillars{
 	.six-pillars-title{
 		margin-bottom: 40px;
 	}
 }
+
+// Featured Topics
 
 .featured-topics{
 
@@ -44,5 +49,203 @@
 			margin-top: 30px;
 			margin-bottom: 10px;
 		}
+	}
+}
+
+// More Topics - Accordion
+
+.help-topics-accordion{
+
+	.accordion{
+		background-color: transparent;
+
+		p,ul{
+			margin-bottom: 1rem;
+		}
+
+		ul{
+			list-style: none;
+			margin-left: 0;
+		}
+	}
+
+	.accordion-title{
+		background-color: transparent;
+	    border: none;
+	    color: $brand-color;
+	    font-size: 18px;
+		font-size: 1.1125rem;
+		padding: 0.5rem 1rem;
+	}
+
+
+	.accordion-item{
+		border-bottom: 1px solid $accordion-lightgrey-line;
+	}
+
+	.accordion-title::before{
+		content: url('http://investorsgroup.com/en/images/corp/svg/expandGreenArrow.png');
+		-webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(0deg) translate3d(0, 0, 0);
+	    transform: rotate(0deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+
+	.accordion-item.is-active .accordion-title::before{
+		-webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(180deg) translate3d(0, 0, 0);
+	    transform: rotate(180deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+
+	.accordion-image{
+		margin-right: 1rem;
+		width: 40px;
+
+		@include respond-to(medium){
+			width: 50px;
+		}
+	}
+
+	.accordion-content{
+		background: transparent;
+		border: none;
+
+		&:last-child{
+			border:none;
+		}
+
+		a{
+			border-bottom: 1px solid $brand-color;
+		}
+	}
+}
+
+// More
+
+.more-section{
+
+	width: 100%;
+
+	.patterned-more{
+		padding-bottom: 0;
+	}
+
+	.more-section-menu-wrapper{
+		width: 100%;
+	}
+
+	.more-section-menu{
+		list-style: none;
+		margin-left: 0;
+		display: none;
+
+		@include respond-to(medium){
+			width: 100%;
+			display: table;
+		}
+
+		.more-section-menuitem{
+			border-bottom: 1px solid white;
+		    text-align: center;
+		    padding: 8px 0;
+
+			@include respond-to(medium){
+				border-bottom: none;
+				display: table-cell;
+			}
+		}
+
+		a:hover, a:active, a:focus{
+			color: $lightest-color;
+		}
+	}
+
+	.more-section-menu-mobile-title{
+		text-align: right;
+		cursor: pointer;
+	}
+
+	.more-section-tagline{
+
+		position: relative;
+
+		img{
+			width: 30%;
+
+			@include respond-to(medium){
+				width: auto;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		@include respond-to(medium){
+			display: inline-block;
+		}
+
+		.more-section-tagline-tag{
+			display: none;
+			vertical-align: bottom;
+
+			@include respond-to(medium){
+				display: inline-block; 
+			}
+		}
+
+		.more-section-category{
+			display: none;
+
+			@include respond-to(medium){
+
+				&.active{
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.more-section-menu-dropdown{
+
+		display: none;
+
+		@include respond-to(medium){
+
+			display: block;
+			position:relative;
+
+			.more-section-menu-dropdown-arrow-up{
+				display: none;
+				position: absolute;
+			  	width: 0;
+				height: 0;
+				border-left: 50px solid transparent;
+				border-right: 50px solid transparent;
+				border-bottom: 50px solid white;
+				top: -1rem;
+				-webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
+			}
+
+			.more-section-menu-dropdown-category{
+				display: none;
+			}
+		}
+	}
+
+	.more-section-menu-dropdown-story{
+		display: inline-block;
+		width: 13%;
+		margin-left: 0.8rem;
+		margin-right: 0.8rem;
+		text-align: left;
 	}
 }
