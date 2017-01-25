@@ -32,4 +32,53 @@ $(function(){
 		    }
 	    ]
 	});
+	$('.homepage-carousel').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		mobileFirst: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		prevArrow: '<button type="button" class="slick-prev"><span class="show-for-sr">Previous</span></button>',
+		nextArrow: '<button type="button" class="slick-next"><span class="show-for-sr">Next</span></button>',
+		responsive: [
+			{
+				breakpoint: 640,
+				settings: {
+					fade: true,
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					arrows: true,
+					fade: true,
+				}
+			}
+		]
+	});
+	$('.js-open-socialdrawer').click(function() {
+		// this.next() selects next sibling element
+		// any suggestions on a better way to do this?
+		var jsSocialDrawer = $(this).next();
+
+		if (jsSocialDrawer.hasClass('js-socialdrawer-opened')) {
+			jsSocialDrawer.removeClass('js-socialdrawer-opened');
+		} else {
+			jsSocialDrawer.addClass('js-socialdrawer-opened');
+		}
+	});
+
+	$('.homepage-carousel-slide').hover(
+	  function() {
+	    if ($(window).width() > 1024) {
+	      $('.js-socialdrawer > ul').addClass('show-list-on-hover');
+	    }
+	  }, function() {
+	    if ($(window).width() > 1024) {
+	      $('.js-socialdrawer > ul').removeClass('show-list-on-hover');
+	    }
+	  }
+	);
 });
