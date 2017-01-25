@@ -11,9 +11,9 @@
 
   .large-card-content {
     padding: 40px 25px;
+
     @include respond-to(medium) {
       padding: 20px 0 0 20px;
-
     }
 
     @include respond-to(large) {
@@ -21,42 +21,18 @@
     }
   }
 
-  .title-excerpt {
-    margin-bottom: 10px;
-    display: block;
-
-    p {
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-
-    @include respond-to(medium) {
-      display: none;
-    }
-
-    @include respond-to(large) {
-      display: block;
-      margin-bottom: 15px;
-      p {
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 0;
-      }
-    }
-  }
-
   .slick-prev {
+    z-index: 1;
     &:before {
       border-top: solid 4px $button-primary-color;
-  		border-right: solid 4px $button-primary-color;
+      border-right: solid 4px $button-primary-color;
     }
   }
 
   .slick-next {
     &:after {
       border-top: solid 4px $button-primary-color;
-  		border-right: solid 4px $button-primary-color;
+      border-right: solid 4px $button-primary-color;
     }
   }
 
@@ -66,8 +42,6 @@
 
     @include respond-to(large) {
       margin: 0 25px;
-      // max-height: 325px;
-      // overflow-y: hidden;
     }
   }
 
@@ -82,26 +56,55 @@
     }
   }
 
-  .author {
-    font-size: 13px;
-  	font-weight: 600;
-  	font-family: $font-stack;
-  	line-height: 1.4em;
-  	text-transform: uppercase;
-    margin-bottom: 20px;
-    @include respond-to(large) {
-      margin-bottom: 15px;
-    }
-  }
-
   .content-title {
     margin: 0;
+    line-height: 40px;
+
     @include respond-to(medium) {
       margin-bottom: 15px;
     }
 
     @include respond-to(large) {
       margin-bottom: 0;
+    }
+  }
+
+  .title-excerpt {
+    margin: 10px 0;
+    display: block;
+
+    p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    @include respond-to(medium) {
+      display: none;
+    }
+
+    @include respond-to(large) {
+      display: block;
+      margin-bottom: 15px;
+
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .author {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: $font-stack;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include respond-to(large) {
+      margin-bottom: 15px;
     }
   }
 
@@ -153,8 +156,10 @@
     @include respond-to(medium) {
       bottom: 0;
       position: static;
+    }
 
-      .js-open-socialdrawer {
+    .js-open-socialdrawer {
+      @include respond-to(medium) {
         display: none;
       }
     }
@@ -190,6 +195,14 @@
         ul {
           opacity: 0;
           transition: opacity 250ms;
+          li {
+            opacity: 1;
+            transition: opacity 250ms;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
         }
 
         .show-list-on-hover {
@@ -207,15 +220,5 @@
         margin-bottom: 0;
       }
     }
-
-    // .js-socialdrawer-closed {
-    //   max-height: 0;
-    //   margin-bottom: 50px;
-    //
-    //   @include respond-to(medium) {
-    //     max-height: 0;
-    //     margin-bottom: 0;
-    //   }
-    // }
   }
 }
