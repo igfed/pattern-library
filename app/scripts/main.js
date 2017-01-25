@@ -149,6 +149,16 @@ $(function(){
 		$('.tertiary-cta-more').removeClass('active');
 		 $('.tertiary-cta-more').addClass('active');
 
+
+		 //Restart underline animation
+
+		 // var el     = $('.tertiary-cta-more'),  
+		 //     newone = el.clone(true);
+		           
+		 // el.before(newone);
+		        
+		 // $("." + el.attr(".tertiary-cta-more") + ":last").remove();
+
 	});
 
 
@@ -163,11 +173,12 @@ $(function(){
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
 		 
-		 $('html, body').animate({
-	        scrollTop: $("#more-mobile-menu").offset().top
-	    }, 2000);
+		 // $('html, body').animate({
+	  //       scrollTop: $("#more-mobile-menu").offset().top
+	  //   }, 2000);
 
-		 $('.more-section-menu-mobile-title').toggleClass('active');
+		$('.more-navigation .patterned-more').toggleClass('active');
+		$('.more-section-menu-mobile-title').toggleClass('active');
 		$('.more-section-menu-mobile').toggle();
 	})
 
@@ -192,5 +203,3 @@ $('.help-topics-accordion').on('up.zf.accordion', function(event) {
 	// 	// $(".more-section-menu-dropdown-story").hide();
 	// 	$(".more-section-menu-dropdown-story('Content')").slice(0,5).show();
 	// }
-
-
