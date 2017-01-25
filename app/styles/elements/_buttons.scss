@@ -130,7 +130,7 @@ a:hover .tertiary-cta:before  {
 	    // right:0;
 	    // right: calc(100% - 20px);
 	    height: 3px;
-	    top: calc(100% - .05rem);
+	    top: calc(100% - -0.5rem);
 	    background-color: white;
 	    // -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
 	    // transition: right .15s ease-out .15s, left .15s ease-out 0s;
@@ -169,11 +169,17 @@ a:hover .tertiary-cta:before  {
   border: 2px solid black;
   border-radius: 50%;
 
-  // &:hover {
-  //   &::before, &::after {
-  //     background: $blue;
-  //   }
-  // }
+  &:hover {
+  	  -webkit-transition: background-color 250ms;
+	  -moz-transition: background-color 250ms;
+	  transition: background-color 250ms;
+    &::before, &::after {
+      -webkit-transition: background-color 250ms;
+	  -moz-transition: background-color 250ms;
+	  transition: background-color 250ms;
+
+    }
+  }
 
   &::before, &::after {
     content: '';
@@ -185,7 +191,7 @@ a:hover .tertiary-cta:before  {
     background: black;
     height: 1.3px;
     margin-top: -2px;
-    margin-left: 4px;
+    margin-left: 3px;
   }
   &::before {
     -ms-transform: rotate(45deg); /* IE 9 */

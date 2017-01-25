@@ -75,8 +75,12 @@ $(function(){
 
 		
 	//Toggle the Open/Close mobile categories menu
-	$('.more-section-menu-mobile-title').on('click', function(e){
-		 e.preventDefault();
+	$('.more-section-menu-mobile-title').on('click', function(){
+		 
+		 $('html, body').animate({
+	        scrollTop: $("#more-mobile-menu").offset().top
+	    }, 2000);
+
 		 $('.more-section-menu-mobile-title').toggleClass('active');
 		$('.more-section-menu-mobile').toggle();
 	})
@@ -86,7 +90,6 @@ $(function(){
 		$('.more-section-menu-dropdown-category').hide();
 		$('.more-section-menu-dropdown-arrow-up').hide();
 	});
-
 
 });
 

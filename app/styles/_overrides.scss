@@ -157,6 +157,10 @@
 		    text-align: center;
 		    padding: 8px 0;
 
+		    &:last-child{
+		    	border: none;
+		    }
+
 			@include respond-to(medium){
 				border-bottom: none;
 				display: table-cell;
@@ -169,13 +173,18 @@
 	}
 
 	.more-section-menu-mobile-title{
-		// text-align: right;
 		cursor: pointer;
 		float: right;
 		margin-top: 1rem;
+		padding-right: 1rem;
 
 		p{
 			display: inline-block;
+		}
+
+		.line-divider{
+			padding-right: 4px;
+			padding-left: 4px;
 		}
 	}
 
@@ -239,6 +248,13 @@
 				 &::before, &::after{
 				 	 background: $button-primary-color;
 				 }
+
+				 &:hover {
+				  	background: $button-primary-color;
+				    &::before, &::after {
+				      background: $lightest-color;
+				    }
+				  }
 			}
 
 			.more-section-menu-dropdown-arrow-up{
