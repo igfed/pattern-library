@@ -62,11 +62,12 @@
 
   .homepage-carousel-slide {
     margin: 0;
+    position: relative;
 
     @include respond-to(large) {
       margin: 0 25px;
-      max-height: 325px;
-      overflow-y: hidden;
+      // max-height: 325px;
+      // overflow-y: hidden;
     }
   }
 
@@ -149,28 +150,72 @@
     bottom: 70px;
     right: 10px;
 
-    // .js-socialdrawer-open {
-    //   display: none;
-    // }
+    @include respond-to(medium) {
+      bottom: 0;
+      position: static;
 
-    .js-socialdrawer {
-      // transition: opacity 250ms;
+      .js-open-socialdrawer {
+        display: none;
+      }
     }
 
     .share {
-      position: relative;
+      // position: relative;
       margin-top: 10px;
+      margin-bottom: 50px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.5s;
+      transition: all 0.5s;
 
       ul {
         list-style-type: none;
+        padding: 0;
+        opacity: 1;
 
         li {
           display: inline-block;
         }
       }
+
+      @include respond-to(medium) {
+        position: absolute;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 66px;
+        right: 25px;
+        overflow: visible;
+      }
+
+      @include respond-to(large) {
+        ul {
+          opacity: 0;
+          transition: opacity 250ms;
+        }
+
+        .show-list-on-hover {
+          opacity: 1;
+        }
+      }
     }
+
+    .js-socialdrawer-opened {
+      max-height: 50px;
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        max-height: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    // .js-socialdrawer-closed {
+    //   max-height: 0;
+    //   margin-bottom: 50px;
+    //
+    //   @include respond-to(medium) {
+    //     max-height: 0;
+    //     margin-bottom: 0;
+    //   }
+    // }
   }
 }

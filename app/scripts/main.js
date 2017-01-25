@@ -58,14 +58,27 @@ $(function(){
 			}
 		]
 	});
-	$('.js-socialdrawer-open').click(function() {
+	$('.js-open-socialdrawer').click(function() {
 		// this.next() selects next sibling element
-		var maxHeightStatus = $(this).next().css('max-height');
+		// any suggestions on a better way to do this?
+		var jsSocialDrawer = $(this).next();
 
-		if (maxHeightStatus == '0px') {
-			$(this).next().css({ maxHeight: '50px' });
+		if (jsSocialDrawer.hasClass('js-socialdrawer-opened')) {
+			jsSocialDrawer.removeClass('js-socialdrawer-opened');
 		} else {
-			$(this).next().css({ maxHeight: '0px' });
+			jsSocialDrawer.addClass('js-socialdrawer-opened');
 		}
 	});
+
+	$('.homepage-carousel-slide').hover(
+	  function() {
+	    if ($(window).width() > 1024) {
+	      $('.js-socialdrawer > ul').addClass('show-list-on-hover');
+	    }
+	  }, function() {
+	    if ($(window).width() > 1024) {
+	      $('.js-socialdrawer > ul').removeClass('show-list-on-hover');
+	    }
+	  }
+	);
 });
