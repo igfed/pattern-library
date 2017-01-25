@@ -60,6 +60,7 @@ $(function(){
 		$('.more-section-menu-dropdown-arrow-up').css({left: centerX});
 
 		//Underline
+		$('.tertiary-cta-more').removeClass('active');
 		 $('.tertiary-cta-more').addClass('active');
 
 	});
@@ -76,8 +77,16 @@ $(function(){
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(e){
 		 e.preventDefault();
+		 $('.more-section-menu-mobile-title').toggleClass('active');
 		$('.more-section-menu-mobile').toggle();
 	})
+
+	// Close button
+	$('.close-button').on('click', function(){
+		$('.more-section-menu-dropdown-category').hide();
+		$('.more-section-menu-dropdown-arrow-up').hide();
+	});
+
 
 });
 
