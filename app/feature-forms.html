@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feature - Rates</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+<body id="top">
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Variation One -->
+<main role="main" id="content">
+    <div class="forms rates">
+    <div class="medium-12 columns">
+        <form data-abide novalidate>
+            <div data-abide-error class="alert callout" style="display: none;">
+                <p><i class="fi-alert"></i> There are some errors in your form.</p>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <label>Number Required
+                        <input type="text" placeholder="1234" aria-describedby="exampleHelpText" required
+                               pattern="number">
+                        <span class="form-error">
+          Yo, you had better fill this out, it's required.
+        </span>
+                    </label>
+                    <p class="help-text" id="exampleHelpText">Here's how you use this input field!</p>
+                </div>
+                <div class="small-12 columns">
+                    <label>Nothing Required!
+                        <input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex"
+                               data-abide-ignore>
+                    </label>
+                    <p class="help-text" id="exampleHelpTex">This input is ignored by Abide using
+                        `data-abide-ignore`</p>
+                </div>
+                <div class="small-12 columns">
+                    <label>Password Required
+                        <input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText"
+                               required>
+                        <span class="form-error">
+          I'm required!
+        </span>
+                    </label>
+                    <p class="help-text" id="exampleHelpText">Enter a password please.</p>
+                </div>
+                <div class="small-12 columns">
+                    <label>Re-enter Password
+                        <input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required
+                               pattern="alpha_numeric" data-equalto="password">
+                        <span class="form-error">
+          Hey, passwords are supposed to match!
+        </span>
+                    </label>
+                    <p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"`
+                        attribute, causing it to match the password field above.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a
+                        valid URL.
+                        <input type="text" placeholder="http://foundation.zurb.com" pattern="url">
+                    </label>
+                </div>
+                <div class="medium-6 columns">
+                    <label>European Cars, Choose One, it can't be the blank option.
+                        <select id="select" required>
+                            <option value=""></option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <fieldset class="large-6 columns">
+                    <legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>
+                    <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+                    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>
+                    <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+                </fieldset>
+                <fieldset class="large-6 columns">
+                    <legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
+                    <input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
+                    <input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label
+                        for="pocketsBlue">Blue</label>
+                    <input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>
+                </fieldset>
+                <fieldset class="large-6 columns">
+                    <legend>Check these out</legend>
+                    <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                    <input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
+                    <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+                </fieldset>
+            </div>
+            <div class="row">
+                <fieldset class="large-6 columns">
+                    <button class="button" type="submit" value="Submit">Submit</button>
+                </fieldset>
+                <fieldset class="large-6 columns">
+                    <button class="button" type="reset" value="Reset">Reset</button>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+    </div>
+</main>
+
+<!-- Base Rates -->
+<div class="callout bg-secondary text-center">
+    <div class="row rates">
+        <div class="medium-centered medium-10 small-12 columns">
+            <h3 class="content-title margin-bottom-lg">Base Rates</h3>
+        </div>
+
+        <div class="rate-grid small-10 medium-12 large-8 small-offset-1 large-offset-2 small-centered columns">
+            <div class="row" data-equalizer data-equalize-on="medium">
+                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+                    <p class="rate-value">2.60%</p>
+                    <p class="rate-bullet">(Prime - 0.25%)</p>
+                    <p class="rate-bullet">5 year Closed<sup>2</sup><br/>Variable rate</p>
+                </div>
+
+                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+                    <p class="rate-value">2.60%</p>
+                    <p class="rate-bullet">5 year Closed<br/>Fixed rate</p>
+                </div>
+
+                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+                    <p class="rate-value">2.60%</p>
+                    <p class="rate-bullet">(Prime - 0.25%)</p>
+                    <p class="rate-bullet">5 year Closed<sup>3</sup><br/>Adjusted rate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main role="main" id="main-content">
+    <div class="row">
+        <div class="medium-8 columns">
+
+
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="row footer-back-to-top-button">
+        <div class="columns">
+            <a class="float-right" href="#top">top</a>
+        </div>
+    </div>
+
+    <div class="row footer-navigation">
+
+        <ul class="menu vertical accordion" data-responsive-menu="accordion medium" data-accordion=""
+            data-allow-all-closed="true">
+            <li class="large-4 columns accordion-item" data-accordion-item="">
+                <a class="accordion-title hide-for-large" href="#">Company</a>
+                <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                    <li class="accordion-title hide-for-small">Company</li>
+                    <li><a class="submenu-link" href="/en/who-we-are">Who We Are</a></li>
+                    <li><a class="submenu-link" href="/en/media-room">Media Room</a></li>
+                    <li><a class="submenu-link" href="/en/careers">Careers</a></li>
+                    <li><a class="submenu-link" href="/en/contact-us">Contact Us</a></li>
+                </ul>
+            </li>
+            <li class="large-4 columns accordion-item" data-accordion-item="">
+                <a class="accordion-title hide-for-large" href="#">Financial advice</a>
+                <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                    <li class="accordion-title hide-for-small">Financial advice</li>
+                    <li><a class="submenu-link" href="/en/products">Products</a></li>
+                    <li><a class="submenu-link" href="/en/how-can-we-help">How Can We Help</a></li>
+                    <li><a class="submenu-link" href="/en/value-of-the-plan">Value Of The Plan</a></li>
+                    <li><a class="submenu-link" href="/more/">More - Advice & Stories</a></li>
+                </ul>
+            </li>
+            <li class="large-4 columns accordion-item" data-accordion-item="">
+                <a class="accordion-title hide-for-large" href="#">Resources</a>
+                <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                    <li class="accordion-title hide-for-small">Resources</li>
+                    <li><a class="submenu-link" href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do"
+                           target="_blank">Client Account Access</a></li>
+                    <li><a class="submenu-link" href="https://bvi.bnc.ca/index/investorsgroup/indexen.html"
+                           target="_blank">Solutions Banking Access</a></li>
+                    <li><a class="submenu-link" href="/en/products/invest/mutual-funds">Mutual Funds</a></li>
+                    <li><a class="submenu-link" href="/en/client-resources/prices-and-rates/mortgage-rates">Mortgage
+                        Rates</a></li>
+                    <li><a class="submenu-link" href="#" target="_blank">View My Funds</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="row footer-social-media social-media">
+        <div class="small-12">
+            <ul class="row menu horizontal">
+                <li>
+                    <a class="social-media-icon facebook-icon" href="https://www.facebook.com/InvestorsGroup"><img
+                            src="images/socialfacebook.svg"></a>
+                </li>
+                <li>
+                    <a class="social-media-icon linkedin-icon"
+                       href="https://www.linkedin.com/company/investors-group"><img src="images/sociallinkedin.svg"></a>
+                </li>
+                <li>
+                    <a class="social-media-icon twitter-icon" href="https://twitter.com/Investors_Group"><img
+                            src="images/socialtwitter.svg"></a>
+                </li>
+                <li>
+                    <a class="social-media-icon youtube-icon"
+                       href="https://www.youtube.com/user/InvestorsGroupCanada"><img src="images/socialyoutube.svg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row footer-copyright">
+        <div class="columns footer-copyright-border-top">
+            <div class="row">
+                <div class="small-12 medium-12 large-3 columns">
+                    <ul class="menu">
+                        <li>© 2016 Investors Group Inc. All rights Reserved</li>
+                    </ul>
+                </div>
+                <div class="small-12 medium-12 large-9 columns">
+                    <ul class="menu horizontal">
+                        <li><a href="/en/legal">Legal</a></li>
+                        <li><a href="/en/legal/use">Terms Of Use</a></li>
+                        <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="small-12 columns">
+                    <ul class="menu">
+                        <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
+                        <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+<script src="/bower_components/slick-carousel/slick/slick.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
