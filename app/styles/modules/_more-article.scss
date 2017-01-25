@@ -1,14 +1,7 @@
 $more-background-yellow: #FAF7E6;
 
-// siloed changes I made as per UX review - to be discussed
 .bg-more-section {
   background-color: $more-background-yellow;
-
-  .callout-body-copy {
-    @include respond-to(small) {
-      font-size: 22px;
-    }
-  }
 }
 
 .title-section {
@@ -24,7 +17,6 @@ $more-background-yellow: #FAF7E6;
     display: block;
 
     p {
-      // put this in global colors?
       color: $button-primary-color;
       margin: 0;
     }
@@ -92,26 +84,19 @@ $more-background-yellow: #FAF7E6;
       margin: 18px auto;
     }
 
-    // h1 {
-    //   .hero-title {
-    //     color; $button-primary-color;
-    //     float: left;
-    //     // display: block;
-    //     margin-right: 10px;
-    //     margin-top: 8px;
-    //   }
-    // }
-
-    // span with .hero-title class instead
     &:first-child {
       &:first-letter {
         color: $button-primary-color;
         display: block;
         float: left;
-        font-size: 3.3em;
-        line-height: 35px;
+        font-size: 72px;
+        line-height: 0.5em;
         margin-right: 10px;
-        margin-top: 8px;
+
+        @include respond-to(large) {
+          line-height: 0.9em;
+          margin-right: 12px;
+        }
       }
     }
   }
