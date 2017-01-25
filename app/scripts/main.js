@@ -43,7 +43,7 @@ $(function(){
 
 		 // Filter the catrgory dropdown on click
 		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
-		$('.more-section-menu-dropdown-category').show().filter(':not(.'+className+')').hide();
+		$('.more-section-menu-dropdown-category-wrapper').show().filter(':not(.'+className+')').hide();
 
 		// Filter the category title on click
 		var title = $(this).text();
@@ -87,7 +87,7 @@ $(function(){
 
 	// Close button
 	$('.close-button').on('click', function(){
-		$('.more-section-menu-dropdown-category').hide();
+		$('.more-section-menu-dropdown-category-wrapper').hide();
 		$('.more-section-menu-dropdown-arrow-up').hide();
 	});
 
@@ -100,3 +100,10 @@ $('.help-topics-accordion').on('up.zf.accordion', function(event) {
         $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
     }, 10); //Adjust to match slideSpeed
 }); 
+
+
+	// if($(window).width() < 1024){
+	// 	// $(".more-section-menu-dropdown-story").hide();
+	// 	$(".more-section-menu-dropdown-story('Content')").slice(0,5).show();
+	// }
+
