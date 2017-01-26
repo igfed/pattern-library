@@ -334,9 +334,27 @@ select {
     margin-bottom: 35px;
   }
 
+  .form-section {
+    border-bottom: 1px solid $grey;
+    margin: 55px 0 82px 0;
+
+    h4 {
+      margin-top: 55px;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      font-family: "Whitney A", "Whitney B";
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      color: #777;
+    }
+  }
+
   legend {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 28px;
   }
 
   input[type=checkbox] ~ label, input[type=radio] ~ label {
