@@ -135,7 +135,6 @@ $(function(){
 		var title = $(this).text();
 		$('p.more-section-tagline-tag').hide();
 		$('h1.more-section-tagline-tag').addClass('active').text(title);
-			// $('.tertiary-cta-more').addClass('active');
 
 		//Arrow position move on click
 		var $this = $(this);
@@ -146,29 +145,12 @@ $(function(){
 		$('.more-section-menu-dropdown-arrow-up').css({left: centerX});
 
 		//Underline
-		$('.tertiary-cta-more').removeClass('active');
-		 $('.tertiary-cta-more').addClass('active');
+		$('.tertiary-cta-more').removeClass('animate');
 
-
-		 //Restart underline animation
-
-		 // var el     = $('.tertiary-cta-more'),  
-		 //     newone = el.clone(true);
-		           
-		 // el.before(newone);
-		        
-		 // $("." + el.attr(".tertiary-cta-more") + ":last").remove();
-
+		setTimeout(function() {
+        jQuery('.tertiary-cta-more').addClass('animate')
+   		 }, 350);
 	});
-
-
-	// $('.more-section-menuitem').mouseup(function(){
-	// 	$('.tertiary-cta-more').addClass('active');
-	// }).mousedown(function(){
-	// 	$('.tertiary-cta-more').removeClass('active');
-	// });
-
-
 		
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
@@ -177,7 +159,6 @@ $(function(){
 	  //       scrollTop: $("#more-mobile-menu").offset().top
 	  //   }, 2000);
 
-		$('.more-navigation .patterned-more').toggleClass('active');
 		$('.more-section-menu-mobile-title').toggleClass('active');
 		$('.more-section-menu-mobile').toggle();
 	})
@@ -189,6 +170,24 @@ $(function(){
 	});
 
 });
+
+
+// function more_add(title) {
+//     if (site_vars.language == 'en') {
+//         title = '<b> ' + title + '</b>';
+//     } else {
+//         title = '<b> sur ' + title + '</b>';
+//     }
+
+//     jQuery('#header .subtitle').fadeOut(250);
+//     jQuery('#header .more_text').html('').removeClass('active').parent().parent().removeClass('animate');
+
+//     // Timeout to be able to animate little line back and forth
+//     setTimeout(function() {
+//         jQuery('#header .more_text').html(title).addClass('active').parent().parent().addClass('animate')
+//     }, 350);
+// }
+
 
 //Accordion
 
