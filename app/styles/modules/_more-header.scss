@@ -92,7 +92,7 @@
 			width: 35%;
 
 			@include respond-to(medium){
-				width: 40%;
+				width: 200px;
 				margin-bottom: 0.5rem;
 				margin-right: 1rem;
 			}
