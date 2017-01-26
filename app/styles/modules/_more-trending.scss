@@ -1,0 +1,81 @@
+.trending-main {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-color: $highlight-color;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .trending-title {
+    margin-left: 25px;
+
+    @include respond-to(medium) {
+      margin: 15px 25px;
+    }
+  }
+
+  .tile {
+    position: relative;
+    padding: 25px;
+    border-top: solid 5px $highlight-color;
+    transition: background-color 0.2s, border-top-color 0.5s;
+
+    &:hover {
+      background-color: #fff;
+      border-top-color: $button-primary-color;
+    }
+
+    @include respond-to(medium) {
+      height: 555px;
+    }
+  }
+
+  .section-title {
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+    a {
+      color: $button-primary-color;
+    };
+  }
+
+  .callout-body-copy {
+    text-transform: none;
+
+    @include respond-to(large) {
+      line-height: 1.1em;
+    }
+  }
+
+  .title-excerpt {
+    margin: 10px 0;
+    display: block;
+
+    p {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    // @include respond-to(large) {
+    //   line-height:
+    // }
+  }
+
+  .author {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: $font-stack;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @include respond-to(large) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .read-more-box {
+    position: absolute;
+    bottom: 0;
+    // left: 25px;
+  }
+}
