@@ -93,11 +93,12 @@ select {
 
 
 
-// Updated form styles for contact form (and other forms in the future)
+// Updated form styles specifically for 'form-groups' (ie., a label and an input)
 // Shouldn't interfere with Search
+
 .form-group {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   & label {
     color: #999;
@@ -115,7 +116,7 @@ select {
     border-width: 0;
   }
 
-  input[type=email], input[type=text], input[type=password] {
+  input[type=email], input[type=text], input[type=password], input[type=tel], input[type=number] {
     background-color: transparent;
     border-color: $brand-color;
     border-width: 0 0 2px;
@@ -123,7 +124,7 @@ select {
     box-shadow: none;
     line-height: 1rem;
     padding: 12px 1.25em;
-    margin: 0.8rem 0 0.7rem;
+    margin: 20px 0 0;
     color: $brand-color;
 
     &::-webkit-input-placeholder {
@@ -141,7 +142,7 @@ select {
   }
 
   /* active state */
-  input[type=email]:focus, input[type=text]:focus, input[type=password]:focus {
+  input[type=email]:focus, input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=number]:focus {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-color: $brand-color;
@@ -153,5 +154,44 @@ select {
   }
 }
 
+input[type=checkbox] ~ label, input[type=radio] ~ label {
+  border-width: 0;
+}
 
+form {
+  // Use fieldsets to introduce a (bottom) horizontal line
+  fieldset {
+    border-bottom: 1px solid $grey;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
 
+  button.button {
+    width: 96%;
+    margin: 10px 2%;
+    text-align: center;
+  }
+
+  button.button + button.button {
+    margin-top: 0;
+  }
+
+  @include respond-to(medium) {
+    button.button {
+      max-width: 200px;
+      margin: 10px 20px 10px 0;
+    }
+
+    button.button + button.button {
+      margin-top: 10px;
+    }
+
+    // Single buttons can be 'centered'
+    button.button.centered {
+      margin: 10px auto;
+      text-align: center;
+      width: 200px;
+      display: block;
+    }
+  }
+}

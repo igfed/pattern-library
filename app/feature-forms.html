@@ -28,114 +28,187 @@
 
 <!-- Variation One -->
 <main role="main" id="content">
-    <div class="row forms">
+    <div class="row">
         <div class="medium-12 columns">
-            <!--<form data-abide novalidate>-->
-            <!--<div data-abide-error class="alert callout" style="display: none;">-->
-            <!--<p><i class="fi-alert"></i> There are some errors in your form.</p>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-            <!--<div class="small-12 columns">-->
-            <!--<label>Number Required-->
-            <!--<input type="text" placeholder="1234" aria-describedby="exampleHelpText" required-->
-            <!--pattern="number">-->
-            <!--<span class="form-error">-->
-            <!--Yo, you had better fill this out, it's required.-->
-            <!--</span>-->
-            <!--</label>-->
-            <!--<p class="help-text" id="exampleHelpText">Here's how you use this input field!</p>-->
-            <!--</div>-->
-            <!--<div class="small-12 columns">-->
-            <!--<label>Nothing Required!-->
-            <!--<input type="text" placeholder="Use me, or don't" aria-describedby="exampleHelpTex"-->
-            <!--data-abide-ignore>-->
-            <!--</label>-->
-            <!--<p class="help-text" id="exampleHelpTex">This input is ignored by Abide using-->
-            <!--`data-abide-ignore`</p>-->
-            <!--</div>-->
-            <!--<div class="small-12 columns">-->
-            <!--<label>Password Required-->
-            <!--<input type="password" id="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText"-->
-            <!--required>-->
-            <!--<span class="form-error">-->
-            <!--I'm required!-->
-            <!--</span>-->
-            <!--</label>-->
-            <!--<p class="help-text" id="exampleHelpText">Enter a password please.</p>-->
-            <!--</div>-->
-            <!--<div class="small-12 columns">-->
-            <!--<label>Re-enter Password-->
-            <!--<input type="password" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required-->
-            <!--pattern="alpha_numeric" data-equalto="password">-->
-            <!--<span class="form-error">-->
-            <!--Hey, passwords are supposed to match!-->
-            <!--</span>-->
-            <!--</label>-->
-            <!--<p class="help-text" id="exampleHelpText2">This field is using the `data-equalto="password"`-->
-            <!--attribute, causing it to match the password field above.</p>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-            <!--<div class="medium-6 columns">-->
-            <!--<label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a-->
-            <!--valid URL.-->
-            <!--<input type="text" placeholder="http://foundation.zurb.com" pattern="url">-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--<div class="medium-6 columns">-->
-            <!--<label>European Cars, Choose One, it can't be the blank option.-->
-            <!--<select id="select" required>-->
-            <!--<option value=""></option>-->
-            <!--<option value="volvo">Volvo</option>-->
-            <!--<option value="saab">Saab</option>-->
-            <!--<option value="mercedes">Mercedes</option>-->
-            <!--<option value="audi">Audi</option>-->
-            <!--</select>-->
-            <!--</label>-->
-            <!--</div>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-            <!--<fieldset class="large-6 columns">-->
-            <!--<legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>-->
-            <!--<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>-->
-            <!--<input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label for="pokemonBlue">Blue</label>-->
-            <!--<input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>-->
-            <!--</fieldset>-->
-            <!--<fieldset class="large-6 columns">-->
-            <!--<legend>Choose Your Favorite - not required, you can leave this one blank.</legend>-->
-            <!--<input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>-->
-            <!--<input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label-->
-            <!--for="pocketsBlue">Blue</label>-->
-            <!--<input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label for="pocketsYellow">Yellow</label>-->
-            <!--</fieldset>-->
-            <!--<fieldset class="large-6 columns">-->
-            <!--<legend>Check these out</legend>-->
-            <!--<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>-->
-            <!--<input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>-->
-            <!--<input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>-->
-            <!--</fieldset>-->
-            <!--</div>-->
-            <!--<div class="row">-->
-            <!--<fieldset class="large-6 columns">-->
-            <!--<button class="button" type="submit" value="Submit">Submit</button>-->
-            <!--</fieldset>-->
-            <!--<fieldset class="large-6 columns">-->
-            <!--<button class="button" type="reset" value="Reset">Reset</button>-->
-            <!--</fieldset>-->
-            <!--</div>-->
-            <!--</form>-->
 
-            <form action="" method="post">
-                <div class="form-group">
-                    <input type="text" required>
-                    <label>Username</label>
+            <div class="call-request-form">
+                <div class="screen">
+                    <div class="throbber"></div>
                 </div>
-                <div class="form-group">
-                    <input type="password" required>
-                    <label>Password</label>
+
+                <form id="callForm" name="callForm" method="get" action="" novalidate="novalidate">
+                    <fieldset>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <legend>Request a call</legend>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 medium-10 columns end">
+                                <p>If you would like to speak with an Investors Group Advisor about your retirement,
+                                    please
+                                    complete the fields below, and click “Send Request”.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="row server-error" id="server-error">
+                        <div class="small-12 columns">
+                            <p class="error">There was an error with your request; please review your information and
+                                try
+                                again.</p>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <div class="row">
+                            <div class="small-12 medium-6 columns">
+                                <div class="form-group">
+                                    <input type="text" id="firstname" name="firstname" minlength="2" required="required"
+                                           aria-required="true">
+                                    <label for="firstname">First Name</label>
+                                </div>
+                            </div>
+                            <div class="small-12 medium-6 columns">
+                                <div class="form-group">
+                                    <input type="text" id="lastname" name="lastname" minlength="2" required="required"
+                                           aria-required="true">
+                                    <label for="lastname">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-12 medium-4 columns">
+                                <div class="form-group">
+                                    <input type="text" id="phone" name="phone" minlength="2" required="required"
+                                           aria-required="true">
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                            </div>
+
+                            <div class="small-12 medium-2 columns">
+                                <div class="form-group">
+                                    <input type="number" id="extension" name="extension" required="required">
+                                    <label for="extension">Ext. (optional)</label>
+                                </div>
+                            </div>
+
+                            <div class="small-12 medium-6 columns">
+                                <div class="form-group">
+                                    <input id="email" name="email" type="email" required="required"
+                                           aria-required="true">
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="small-12 medium-6 columns end">
+                                <div class="form-group">
+                                    <input id="postal_code" name="postal_code" type="text" required="required"
+                                           aria-required="true">
+                                    <label for="postal_code">Postal Code</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <h4>Topics to Discuss</h4>
+
+                                <div class="row">
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic1" name="Retirement">
+                                        <label for="topic1">Retirement</label>
+                                    </div>
+
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic2" name="Investment">
+                                        <label for="topic2">Investment</label>
+                                    </div>
+
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic3" name="Mortgage">
+                                        <label for="topic3">Mortgages</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic4" name="Estate Planning">
+                                        <label for="topic4">Estate Planning</label>
+                                    </div>
+
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic5" name="Tax Planning">
+                                        <label for="topic5">Tax Planning</label>
+                                    </div>
+
+                                    <div class="small-12 medium-4 columns">
+                                        <input type="checkbox" id="topic6" name="Insurance">
+                                        <label for="topic6">Insurance</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="row">
+                            <div class="small-12 medium-4 columns">
+                                <p>I am currently a client of Investors Group</p>
+                            </div>
+                            <div class="small-6 medium-4 large-3 columns">
+                                <input type="radio" name="current_client" value="yes" id="currentClientYes"
+                                       required="required"><label for="currentClientYes">Yes</label>
+                            </div>
+                            <div class="small-6 medium-4 large-3 columns end">
+                                <input type="radio" name="current_client" value="no" id="currentClientNo"><label
+                                    for="currentClientNo">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <input type="checkbox" name="opt_in" id="optIn">
+                            <label for="opt_in">By providing my telephone number and/or email address, I CONSENT to
+                                Investors Group using this information to contact me for marketing purposes.</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <button type="submit" class="button">Submit</button>
+                            <button class="button secondary">Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="success-message">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <div class="check"></div>
+                            <span>Success!</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <p>Your request for a call to discuss your RRSP has been received. An Investors Group
+                                Consultant
+                                will be in touch soon.</p></div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="small-10 small-push-1 medium-4 medium-push-4 columns">
+                            <a href="" class="outline-btn">Return to Retirement Page</a>
+                        </div>
+                    </div>
                 </div>
-                <button id="buttonlogintoregister" type="submit">Login</button>
-            </form>
+            </div>
 
         </div>
     </div>
