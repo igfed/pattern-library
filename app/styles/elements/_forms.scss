@@ -22,156 +22,134 @@ Markup:
 Styleguide 1.6
 */
 
-input[type=text], input[type=password], input[type=search] {
-	background-color: transparent;
-	border-color: $brand-color;
-	border-width: 0 0 2px;
-	border-style: solid;
-	box-shadow: none;
-	line-height: 1rem;
-	padding: 12px 1.25em;
-	margin: 0.8rem 0 0.7rem;
-	color: $brand-color;
 
-	&::-webkit-input-placeholder {
-		color: $grey;
-	}
+input[type=search] {
+  background-color: transparent;
+  border-color: $brand-color;
+  border-width: 0 0 2px;
+  border-style: solid;
+  box-shadow: none;
+  line-height: 1rem;
+  padding: 12px 1.25em;
+  margin: .8rem 0 .7rem; // This was margin-top but I think it should be just 'margin' as there were 3 attributes
+  color: $brand-color;
 
-	&:-ms-input-placeholder {
-		color: $grey;
-	}
+  &::-webkit-input-placeholder {
+    color: $grey;
+  }
 
-	&::-moz-placeholder {
-		color: $grey;
-		opacity: 1;
-	}
+  &:-ms-input-placeholder {
+    color: $grey;
+  }
+
+  &::-moz-placeholder {
+    color: $grey;
+    opacity: 1;
+  }
 }
 
 label {
-	margin-bottom: .7rem;
-	background-color: transparent;
-	border-color: $brand-color;
-	border-width: 0 0 2px;
-	border-style: solid;
-	position: relative;
+  margin-bottom: .7rem;
+  background-color: transparent;
+  border-color: $brand-color;
+  border-width: 0 0 2px;
+  border-style: solid;
+  position: relative;
 
-	input[type=text], input[type=password], input[type=search] {
-		margin-bottom: 0;
-	    border: 1px solid transparent;
-		border-radius: $border-radius;
+  input[type=text], input[type=password], input[type=search] {
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
 
-		&:focus {
-		    border-color: $brand-color;
-		    border-color: transparent;
-		    box-shadow: none;
-		}
-	}
+    &:focus {
+      border-color: $brand-color;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
 
-	&.error {
-		color: $alert-color;
-	}
+  &.error {
+    color: $alert-color;
+  }
 }
 
 select {
-	margin: 0;
-	height: auto;
-    border-color: $brand-color;
-    border-style: none none solid;
-    border-width: medium medium 2px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
+  margin: 0;
+  height: auto;
+  border-color: $brand-color;
+  border-style: none none solid;
+  border-width: medium medium 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
 }
 
 .input-group-label {
-	background: transparent;
-	border-color: transparent transparent $brand-color;
-	border-width: 2px;
+  background: transparent;
+  border-color: transparent transparent $brand-color;
+  border-width: 2px;
 }
 
 
 
 
-.group 			  {
-  position:relative;
+// Updated form styles for contact form (and other forms in the future)
+// Shouldn't interfere with Search
+.form-group {
+  position: relative;
   margin-bottom: 35px;
-  margin-left: 40px;
-}
 
-.inputMaterial 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
-}
+  & label {
+    color: #999;
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-width: 0;
+  }
 
-.inputMaterial:focus 		{ outline:none;}
+  input[type=email], input[type=text], input[type=password] {
+    background-color: transparent;
+    border-color: $brand-color;
+    border-width: 0 0 2px;
+    border-style: solid;
+    box-shadow: none;
+    line-height: 1rem;
+    padding: 12px 1.25em;
+    margin: 0.8rem 0 0.7rem;
+    color: $brand-color;
 
-/* LABEL ======================================= */
+    &::-webkit-input-placeholder {
+      color: $grey;
+    }
 
-label 				 {
-  color:#999;
-  font-size:14px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-}
+    &:-ms-input-placeholder {
+      color: $grey;
+    }
 
-/* active state */
-.inputMaterial:focus ~ label, .inputMaterial:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color: #009688;
-}
+    &::-moz-placeholder {
+      color: $grey;
+      opacity: 1;
+    }
+  }
 
-/* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:315px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px;
-  width:0;
-  bottom:1px;
-  position:absolute;
-  background: #009688;
-  transition:0.2s ease all;
-  -moz-transition:0.2s ease all;
-  -webkit-transition:0.2s ease all;
-}
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%;
-}
+  /* active state */
+  input[type=email]:focus, input[type=text]:focus, input[type=password]:focus {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-color: $brand-color;
+    border-width: 1px 1px 2px;
+  }
 
-/* active state */
-.inputMaterial:focus ~ .bar:before, .inputMaterial:focus ~ .bar:after {
-  width:50%;
+  input:focus ~ label, input:valid ~ label {
+    top: -20px;
+  }
 }
 
 
-/* active state */
-.inputMaterial:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
 
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
