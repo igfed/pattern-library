@@ -24,7 +24,6 @@ Markup:
 Styleguide 1.6
 */
 
-
 input[type=search] {
   background-color: transparent;
   border-color: $brand-color;
@@ -58,7 +57,7 @@ label {
   border-style: solid;
   position: relative;
 
-  input[type=text], input[type=password], input[type=search] {
+  input[type=search] {
     margin-bottom: 0;
     border: 1px solid transparent;
     border-radius: $border-radius;
@@ -76,7 +75,6 @@ label {
 }
 
 select {
-  margin: 0;
   height: auto;
   border-color: $brand-color;
   border-style: none none solid;
@@ -90,81 +88,213 @@ select {
   border-width: 2px;
 }
 
+// Updated form styles that fall under .ig-form
+// Shouldn't interfere with Search styles above
 
+.ig-form {
 
+  /* Inputs and Selects */
 
-// Updated form styles specifically for 'form-groups' (ie., a label and an input)
-// Shouldn't interfere with Search
+  .form-group-input, .form-group-select {
+    position: relative;
+    margin-bottom: 50px;
 
-.form-group {
-  position: relative;
-  margin-bottom: 25px;
-
-  & label {
-    color: #999;
-    font-size: 13px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: 10px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-width: 0;
-  }
-
-  input[type=email], input[type=text], input[type=password], input[type=tel], input[type=number] {
-    background-color: transparent;
-    border-color: $brand-color;
-    border-width: 0 0 2px;
-    border-style: solid;
-    box-shadow: none;
-    line-height: 1rem;
-    padding: 12px 1.25em;
-    margin: 20px 0 0;
-    color: $brand-color;
-
-    &::-webkit-input-placeholder {
-      color: $grey;
+    & label {
+      color: #999;
+      font-size: 13px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-width: 0;
     }
 
-    &:-ms-input-placeholder {
-      color: $grey;
+    input {
+      background-color: transparent;
+      border-color: $brand-color;
+      border-width: 0 0 2px;
+      border-style: solid;
+      box-shadow: none;
+      line-height: 1rem;
+      padding: 12px 1.25em;
+      color: $brand-color;
+
+      &::-webkit-input-placeholder {
+        color: $grey;
+      }
+
+      &:-ms-input-placeholder {
+        color: $grey;
+      }
+
+      &::-moz-placeholder {
+        color: $grey;
+        opacity: 1;
+      }
     }
 
-    &::-moz-placeholder {
-      color: $grey;
-      opacity: 1;
+    /* active state */
+    input:focus {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-color: $brand-color;
+      border-width: 1px 1px 2px;
+    }
+
+    input:focus ~ label,
+    input:valid ~ label,
+    select:focus ~ label,
+    select:valid ~ label,
+    input.is-invalid-input ~ label {
+      top: -20px;
+    }
+
+    /* errors */
+    .form-error {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-left: 5px;
+      margin-top: -13px;
+    }
+
+    input.is-invalid-input {
+      border-bottom-color: #cc4b37;
+      background-color: #f9ecea;
     }
   }
 
-  /* active state */
-  input[type=email]:focus, input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=number]:focus {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-color: $brand-color;
-    border-width: 1px 1px 2px;
+  .form-group-select {
+    select {
+      margin-top: 2px;
+    }
   }
 
-  input:focus ~ label, input:valid ~ label {
-    top: -20px;
-  }
-}
+  /* Checkboxes and Radio's */
 
-input[type=checkbox] ~ label, input[type=radio] ~ label {
-  border-width: 0;
-}
-
-form {
-  // Use fieldsets to introduce a (bottom) horizontal line
-  fieldset {
-    border-bottom: 1px solid $grey;
-    padding-bottom: 15px;
+  .form-group-checkbox, .form-group-radio {
+    margin-top: 20px;
     margin-bottom: 20px;
+    position: relative;
+    padding-left: 10px
   }
+
+  .form-group-checkbox input[type="checkbox"], .form-group-checkbox input[type="radio"], .form-group-radio input[type="checkbox"], .form-group-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1
+  }
+
+  .form-group-checkbox label, .form-group-radio label {
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: #424242
+  }
+
+  .form-group-checkbox label::after, .form-group-radio label::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: 0;
+    margin-left: -18px;
+    background-color: white;
+    border: 2px solid #424242;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    background-clip: padding-box;
+    cursor: pointer
+  }
+
+  .form-group-checkbox label::before, .form-group-radio label::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 10px;
+    top: 0;
+    left: 6px;
+    margin-left: -18px;
+    border: 3px solid #000;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    z-index: 1
+  }
+
+  .form-group-checkbox label:active::before, .form-group-radio label:active::before {
+    opacity: 0.3;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label, .form-group-checkbox input[type="radio"]:checked + label, .form-group-radio input[type="checkbox"]:checked + label, .form-group-radio input[type="radio"]:checked + label {
+    color: #000;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label::after, .form-group-checkbox input[type="radio"]:checked + label::after, .form-group-radio input[type="checkbox"]:checked + label::after, .form-group-radio input[type="radio"]:checked + label::after {
+    border: 2px solid #000;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label::before, .form-group-checkbox input[type="radio"]:checked + label::before, .form-group-radio input[type="checkbox"]:checked + label::before, .form-group-radio input[type="radio"]:checked + label::before {
+    opacity: 1;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label, .form-group-checkbox input[type="radio"]:disabled + label, .form-group-radio input[type="checkbox"]:disabled + label, .form-group-radio input[type="radio"]:disabled + label {
+    color: #787878;
+    cursor: default;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label::after, .form-group-checkbox input[type="radio"]:disabled + label::after, .form-group-radio input[type="checkbox"]:disabled + label::after, .form-group-radio input[type="radio"]:disabled + label::after {
+    border: 3px solid #787878;
+    background-color: #ffffff;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label::before, .form-group-checkbox input[type="radio"]:disabled + label::before, .form-group-radio input[type="checkbox"]:disabled + label::before, .form-group-radio input[type="radio"]:disabled + label::before {
+    display: none;
+  }
+
+  .form-group-radio label::after {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+  }
+
+  .form-group-radio label::before {
+    width: 10px;
+    height: 10px;
+    border: none;
+    top: 6px;
+    left: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #000000;
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* Form Buttons */
 
   button.button {
     width: 96%;
@@ -193,5 +323,27 @@ form {
       width: 200px;
       display: block;
     }
+  }
+
+  /* Miscellaneous */
+
+  // Use fieldsets to introduce a (bottom) horizontal line
+  fieldset {
+    border-bottom: 1px solid $grey;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+
+  legend {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  input[type=checkbox] ~ label, input[type=radio] ~ label {
+    border-width: 0;
+  }
+
+  .alert.callout {
+    padding: 20px;
   }
 }
