@@ -10,29 +10,29 @@
 
     @include respond-to(medium) {
       margin: 15px 25px;
+
+      h4 {
+        font-size: 22px;
+      }
     }
   }
 
   .tile {
     position: relative;
     padding: 25px;
-    // margin: 0 25px;
+    margin: 0 25px;
     border-top: solid 5px $highlight-color;
     transition: background-color 0.2s, border-top-color 0.5s;
     border-bottom: 1px solid #E0E2E2;
 
     &:last-child {
       border-bottom: none;
+      float: left;
     }
-
-    &:hover {
-      background-color: #fff;
-      border-top-color: $button-primary-color;
-    }
-
 
     @include respond-to(medium) {
-      height: 555px;
+      height: 665px;
+      margin: 0;
 
       &:nth-of-type(1) {
         border-right: 1px solid #E0E2E2;
@@ -55,6 +55,13 @@
     }
 
     @include respond-to(large) {
+      height: 555px;
+
+      &:hover {
+        background-color: #fff;
+        border-top-color: $button-primary-color;
+      }
+
       &:nth-of-type(1) {
         border-right: 1px solid #E0E2E2;
         border-bottom: 1px solid #E0E2E2;
@@ -89,6 +96,7 @@
 
   .callout-body-copy {
     text-transform: none;
+    font-size: 1.5em;
 
     @include respond-to(large) {
       line-height: 1.1em;
@@ -123,8 +131,106 @@
   }
 
   .read-more-box {
-    position: absolute;
-    bottom: 0;
-    // left: 25px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    display: inline-block;
+    float: left;
+
+    .tertiary-cta {
+      margin: 0;
+    }
+
+    @include respond-to(medium) {
+      position: absolute;
+      margin: 0;
+      bottom: 25px;
+    }
+  }
+
+  .share-box {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    margin-top: 25px;
+    float: right;
+    background-color: lavender;
+
+    @include respond-to(medium) {
+      position: absolute;
+      bottom: 50px;
+      right: 25px;
+      margin-top: 0;
+    }
+
+    .js-open-socialdrawer {
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+
+    .share {
+      position: relative;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        opacity: 1;
+
+        li {
+          display: inline-block;
+        }
+
+      }
+
+      @include respond-to(medium) {
+        // position: static;
+        margin-top: 0;
+        margin-bottom: 0;
+        // width: 150px;
+        // right: 25px;
+        // bottom: 25px;
+        overflow: visible;
+
+        ul {
+          margin: 0;
+        }
+
+        img {
+          height: 26px;
+          max-width: 26px;
+        }
+      }
+
+      @include respond-to(large) {
+        ul {
+          opacity: 0;
+          transition: opacity 250ms;
+          li {
+            opacity: 1;
+            transition: opacity 250ms;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .show-list-on-hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .js-socialdrawer-opened {
+      max-height: 50px;
+
+      @include respond-to(medium) {
+        max-height: 0;
+      }
+    }
   }
 }
