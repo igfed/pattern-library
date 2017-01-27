@@ -4,8 +4,11 @@
 // Tools - globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
 @import "tools/mixins";
 
-// Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. This is our vendor.css file
-
+// Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+// bower:scss
+// endbower
+@import "../../bower_components/foundation-sites/dist/css/foundation.css";
+@import "../../bower_components/slick-carousel/slick/slick.css";
 /*
 Elements
 
@@ -41,11 +44,9 @@ Styleguide 1.
 @import "modules/header";
 @import "modules/footer";
 @import "modules/hero";
+@import "modules/more-hero";
 @import "modules/accordion";
 @import "modules/carousel";
-@import "modules/more-header";
-@import "modules/more-article";
-@import "modules/more-carousel";
-@import "modules/more-trending";
+
 
 @import "overrides";

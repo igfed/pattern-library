@@ -59,6 +59,7 @@ $(function(){
 			}
 		]
 	});
+
 	$('.js-open-socialdrawer').click(function() {
 		// this.next() selects next sibling element
 		// any suggestions on a better way to do this?
@@ -72,15 +73,11 @@ $(function(){
 	});
 
 	$('.homepage-carousel-slide').hover(
-	  function() {
-	    if ($(window).width() > 1024) {
-	      $('.js-socialdrawer > ul').addClass('show-list-on-hover');
-	    }
-	  }, function() {
-	    if ($(window).width() > 1024) {
-	      $('.js-socialdrawer > ul').removeClass('show-list-on-hover');
-	    }
-	  }
+		showSocialListOnHover, hideSocialListOnHover
+	);
+
+	$('.tile').hover(
+		showSocialListOnHover, hideSocialListOnHover
 	);
 });
 
@@ -120,7 +117,7 @@ $(function(){
 		
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
-		 
+
 		 // $('html, body').animate({
 	  //       scrollTop: $("#more-mobile-menu").offset().top
 	  //   }, 2000);
@@ -148,7 +145,7 @@ $(window).resize(function() {
 
     if (width < 640) {
     	$('.tertiary-cta-more').removeClass('animate');
-    	
+
     	if($('.more-section-menu').css('display') === 'flex'){
     		$('.more-section-menu').css('display','block');
     	}
@@ -158,7 +155,7 @@ $(window).resize(function() {
     	if($('.more-section-menu').css('display') === 'block'){
     		$('.more-section-menu').css('display','flex');
     	}
-    	
+
     }
 });
 
@@ -168,6 +165,21 @@ $('.help-topics-accordion').on('up.zf.accordion', function(event) {
     setTimeout(function(){
         $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
     }, 10); //Adjust to match slideSpeed
-}); 
+});
 
+// helper functions
+const showSocialListOnHover = function() {
+	if ($(window).width() > 1024) {
+		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
 
+		jsSocialDrawerList.addClass('show-list-on-hover');
+	}
+}
+
+const hideSocialListOnHover = function() {
+	if ($(window).width() > 1024) {
+		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
+
+		jsSocialDrawerList.removeClass('show-list-on-hover');
+	}
+}
