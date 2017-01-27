@@ -1,7 +1,7 @@
+// specific colors for More section
 $more-background-yellow: #FAF7E6;
 $more-article-gray: #e0d9d1;
 
-// more section has own bg color
 .bg-more-section {
   background-color: $more-background-yellow;
 }
@@ -118,7 +118,7 @@ $more-article-gray: #e0d9d1;
         margin-right: 10px;
 
         @include respond-to(large) {
-          line-height: 0.9em;
+          line-height: 0.6em;
           margin-right: 12px;
         }
       }
