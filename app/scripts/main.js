@@ -80,17 +80,27 @@ const form = (function () {
   }
 
   function process(event) {
-    var formData;
+    var formDataRaw,
+      formDataParsed;
     event.preventDefault();
     if ($form.valid()) {
       $form.removeClass('server-error');
       $formWrapper.addClass('submitting');
-      formData = $form.serializeArray();
+      formDataRaw = $form.serializeArray();
 
-      submit(formData);
+      // If we need to modify the data, use parse
+      formDataParsed = parse(formDataRaw);
+      submit(formDataParsed);
     }
-
+    console.log(formDataParsed);
     return false;
+  }
+
+  function parse(data) {
+    // Execute any custom logic here
+
+
+    return data
   }
 
   function submit(data) {
@@ -113,6 +123,7 @@ const form = (function () {
     init, // Can use shorthand notation. (init: init) not required. ES6 for the win!
     validation,
     process,
+    parse,
     submit
   };
 }());
