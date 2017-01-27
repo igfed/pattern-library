@@ -141,7 +141,6 @@ $more-article-gray: #e0d9d1;
 }
 
 // more-article-tags
-// could be its own .scss file
 
 .article-tags-section {
   margin: 55px auto;
@@ -162,20 +161,23 @@ $more-article-gray: #e0d9d1;
     }
   }
 
-  // either make a color variable for this or put it in the colors section
-  .tags {
-    border-top: 1px solid $more-article-gray;
-    padding-top: 20px;
+  .container {
+    padding-left: 0;
 
-    a {
-      &:hover {
-        color: $button-primary-color;
-        transition: color 0.25s;
-      }
+    .tags {
+      border-top: 1px solid $more-article-gray;
+      padding-top: 20px;
 
-      &:active {
-        color: $button-primary-color;
-        transition: color 0.25s;
+      a {
+        &:hover {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
+
+        &:active {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
       }
     }
   }
@@ -190,7 +192,7 @@ $more-article-gray: #e0d9d1;
   }
 }
 
-// more-related-posts section-title
+// more-related-posts
 
 .more-related-posts {
   margin: 40px auto;
@@ -211,20 +213,19 @@ $more-article-gray: #e0d9d1;
     }
   }
 
+  .container {
+    @include respond-to(large) {
+      position: relative;
+    }
+  }
+
   .related {
     border-top: 1px solid $more-article-gray;
     padding: 20px 1em 0 1em;
 
     @include respond-to(large) {
       padding: 20px 0 0 0;
-      position: relative;
     }
-
-    // .column {
-    //   &:not(:last-of-type) {
-    //     padding-right: 0;
-    //   }
-    // }
 
     .column-block {
       margin-bottom: 0;
@@ -284,7 +285,6 @@ $more-article-gray: #e0d9d1;
         padding-top: 15px;
         position: relative;
 
-        // active class styles?
         &:hover {
           color: $button-primary-color;
           transition: color 0.25s;
