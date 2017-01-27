@@ -170,12 +170,12 @@ $more-article-gray: #e0d9d1;
     a {
       &:hover {
         color: $button-primary-color;
-        transition: color 0.5s;
+        transition: color 0.25s;
       }
 
       &:active {
         color: $button-primary-color;
-        transition: color 0.5s;
+        transition: color 0.25s;
       }
     }
   }
@@ -215,7 +215,7 @@ $more-article-gray: #e0d9d1;
     border-top: 1px solid $more-article-gray;
     padding: 20px 1em 0 1em;
 
-    @include respond-to(medium) {
+    @include respond-to(large) {
       padding: 20px 0 0 0;
       position: relative;
     }
@@ -235,7 +235,7 @@ $more-article-gray: #e0d9d1;
       padding-bottom: 20px;
       height: 100%;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         position: static;
       }
 
@@ -287,12 +287,12 @@ $more-article-gray: #e0d9d1;
         // active class styles?
         &:hover {
           color: $button-primary-color;
-          transition: color 0.5s;
+          transition: color 0.25s;
         }
 
         &:active {
           color: $button-primary-color;
-          transition: color 0.5s;
+          transition: color 0.25s;
         }
       }
 
