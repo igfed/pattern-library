@@ -31,19 +31,20 @@
     <div class="row">
         <div class="medium-12 columns">
 
-            <div class="call-request-form">
+            <!-- Forms must be wrapped with the ig-form class in order to function properly -->
+            <div class="ig-form">
                 <div class="screen">
                     <div class="throbber"></div>
                 </div>
 
-                <form id="myFormID" class="ig-form" name="myFormName" method="get" action=""
-                      novalidate="novalidate">
+                <!-- The form name is what submission/validation will key on -->
+                <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success="" data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
 
                     <div class="alert callout" style="display: none;">
                         <p><i class="fi-alert"></i> There are some errors in your form.</p>
                     </div>
 
-                    <!-- Not sure on styles for Legends - but we should use them -->
+                    <!-- Not sure on styles for Legends - but we should use a main legend instead of an h# -->
                     <div class="row">
                         <div class="small-12 columns">
                             <legend>Request a call</legend>
@@ -80,7 +81,6 @@
                             <div class="form-group-input">
                                 <input type="text" id="phone" name="phone" minlength="2" required="required" aria-required="true">
                                 <label for="phone">Phone Number</label>
-                                <span class="form-error">I'm required!</span>
                             </div>
                         </div>
 
@@ -119,7 +119,6 @@
                                     <option value="audi">Audi</option>
                                 </select>
                                 <label for="sample_select">Sample Select Box</label>
-                                <span class="form-error">I'm required!</span>
                             </div>
                         </div>
                     </div>
@@ -207,7 +206,7 @@
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="form-group-checkbox">
-                                <input type="checkbox" name="opt_in" id="optIn" required="required">
+                                <input id="optIn" name="opt_in" type="checkbox" required="required" aria-required="true">
                                 <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
                                     to Investors Group using this information to contact me for marketing purposes.</label>
                             </div>
@@ -219,12 +218,12 @@
                     <div class="row">
                         <div class="small-12 columns">
                             <button type="submit" class="button">Submit</button>
-                            <button class="button secondary">Cancel</button>
+                            <button class="cancel button secondary">Cancel</button>
                         </div>
                     </div>
                 </form>
 
-                <div class="success-message" style="display:none">
+                <div class="success-message">
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="check"></div>

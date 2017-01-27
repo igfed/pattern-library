@@ -2,20 +2,28 @@
 // Some Boilerplate Patterns
 // *****************************************************
 
-// Revealing module pattern
-// Perhaps a namespace like 'iglib' could act as our 'global' container where shared functionality lives?
-const iglib = (function () {
-  function _privateMethod() {
-    console.log('init');
-  }
+// ******************************************************
+// Forms
+// ******************************************************
+
+const form = (function () {
+  var endpointURL,
+    successURL,
+    cancelURL,
+    $form,
+    $formWrapper;
 
   function init() {
-    _privateMethod();
+    if ($('.ig-form').length) {
+      $formWrapper = $('.ig-form');
+      $form = $formWrapper.find('form');
+      endpointURL = $formWrapper.find('form').data('endpoint');
+      cancelURL = $formWrapper.find('form').data('cancel');
+      validation();
+    }
   }
 
-  function setValidation(formName) {
-    var form = $(formName);
-
+  function validation() {
     $.validator.setDefaults({
       debug: true,
       success: 'valid'
@@ -26,15 +34,15 @@ const iglib = (function () {
         postal.match(/[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/);
     }, 'Please specify a valid postal code.');
 
-    form.validate({
+    $form.validate({
       errorPlacement: function (label, element) {
-        if (element.attr('name') === 'current_client') {
-          label.insertBefore(element);
-        } else if (element.attr('name') === 'opt_in') {
-          label.insertAfter('#optIn + span');
-        } else {
-          label.insertAfter(element); // standard behaviour
-        }
+        // if (element.attr('name') === 'current_client') {
+        //   label.insertBefore(element);
+        // } else if (element.attr('name') === 'opt_in') {
+        //   label.insertAfter('#optIn + span');
+        // } else {
+        //   label.insertAfter(element); // standard behaviour
+        // }
       },
       rules: {
         phone: {
@@ -62,25 +70,61 @@ const iglib = (function () {
         }
       }
     });
-    form.on('submit', handleSubmit);
-    form.find('.outline-btn.secondary').on('click', function () {
-      form.submit();
+    $form.find('button[type=submit]').on('click', function () {
+      $form.submit();
     });
+    $form.find('button.cancel').on('click', function () {
+      window.location.replace(cancelURL);
+    });
+
+  }
+
+  function process(event) {
+    var formData;
+    event.preventDefault();
+    if ($form.valid()) {
+      $form.removeClass('server-error');
+      $formWrapper.addClass('submitting');
+      formData = $form.serializeArray();
+
+      submit(formData);
+    }
+
+    return false;
+  }
+
+  function submit(data) {
+    $.ajax({
+      method: 'POST',
+      url: endpointURL,
+      data: data
+    }).success(function (msg) {
+      showSuccessModal();
+      $formWrapper.removeClass('submitting');
+    })
+      .error(function (msg) {
+        $form.addClass('server-error');
+        $formWrapper.removeClass('submitting');
+        ScrollMan.to($('#server-error'));
+      });
   }
 
   return {
     init, // Can use shorthand notation. (init: init) not required. ES6 for the win!
-    setValidation
+    validation,
+    process,
+    submit
   };
 }());
 
-iglib.init();
+form.init();
+
 
 // Carousel
 
-$(function(){
+$(function () {
   $(document).foundation();
-  $('[data-responsive-toggle] button').on('click', function(){
+  $('[data-responsive-toggle] button').on('click', function () {
     $('body').toggleClass('site-header-is-active');
   });
   $('.text-carousel').slick({
@@ -116,14 +160,14 @@ $(function(){
 
 //More Header
 
-$(function(){
+$(function () {
 
-  $('.more-section-menuitem').on('click',function(e){
+  $('.more-section-menuitem').on('click', function (e) {
     e.preventDefault();
 
     // Filter the catrgory dropdown on click
     var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
-    $('.more-section-menu-dropdown-category').show().filter(':not(.'+className+')').hide();
+    $('.more-section-menu-dropdown-category').show().filter(':not(.' + className + ')').hide();
 
     // Filter the category title on click
     var title = $(this).text();
@@ -137,7 +181,7 @@ $(function(){
     var width = $this.width();
     var centerX = offset.left + width / 2 - 50;
     $('.more-section-menu-dropdown-arrow-up').show();
-    $('.more-section-menu-dropdown-arrow-up').css({left: centerX});
+    $('.more-section-menu-dropdown-arrow-up').css({ left: centerX });
 
     //Underline
     $('.tertiary-cta-more').addClass('active');
@@ -152,9 +196,8 @@ $(function(){
   // });
 
 
-
   //Toggle the Open/Close mobile categories menu
-  $('.more-section-menu-mobile-title').on('click', function(e){
+  $('.more-section-menu-mobile-title').on('click', function (e) {
     e.preventDefault();
     $('.more-section-menu-mobile').toggle();
   })
@@ -163,8 +206,8 @@ $(function(){
 
 //Accordion
 
-$('.help-topics-accordion').on('up.zf.accordion', function(event) {
-  setTimeout(function(){
-    $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
+$('.help-topics-accordion').on('up.zf.accordion', function (event) {
+  setTimeout(function () {
+    $('html,body').animate({ scrollTop: $('.is-active').offset().top }, 'slow');
   }, 10); //Adjust to match slideSpeed
 });

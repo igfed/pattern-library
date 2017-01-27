@@ -371,4 +371,41 @@ select {
   .alert.callout {
     padding: 20px;
   }
+
+  // Spinner
+
+  .throbber {
+    background: transparent url("../images/ui/throbber.png") no-repeat scroll center center;
+    animation: 2s linear 0s normal none infinite running spin;
+    height: 4.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4.2rem;
+    background-size: 4.2rem 4.2rem;
+    opacity: .75;
+    filter: alpha(opacity=75);
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+
+  // Success Messages
+
+  &.success form {
+    display: none;
+  }
+
+  &.success .success-message {
+    display: block;
+  }
+
+  & .success-message {
+    display: none;
+  }
 }
