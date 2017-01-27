@@ -85,8 +85,11 @@
     }
   }
 
+  .section-image {
+    margin-bottom: 25px;
+  }
+
   .section-title {
-    margin-top: 25px;
     margin-bottom: 5px;
 
     a {
@@ -111,10 +114,6 @@
       font-weight: 500;
       margin-bottom: 0;
     }
-
-    // @include respond-to(large) {
-    //   line-height:
-    // }
   }
 
   .author {
@@ -153,7 +152,6 @@
     text-align: right;
     margin-top: 25px;
     float: right;
-    background-color: lavender;
 
     @include respond-to(medium) {
       position: absolute;
@@ -187,12 +185,8 @@
       }
 
       @include respond-to(medium) {
-        // position: static;
         margin-top: 0;
         margin-bottom: 0;
-        // width: 150px;
-        // right: 25px;
-        // bottom: 25px;
         overflow: visible;
 
         ul {
@@ -230,6 +224,24 @@
 
       @include respond-to(medium) {
         max-height: 0;
+      }
+    }
+  }
+
+  .highlight-title {
+    display: block;
+
+    h3 {
+      background-image: url(http://investorsgroup.com/more/wp-content/themes/ig_magazine/img/bg-images/highlight.png);
+      background-repeat: repeat-x;
+      background-position: 0 20px;
+      display: inline;
+      font-size: 1.5em;
+      line-height: 1.2em;
+
+      @include respond-to(medium) {
+        background-position: 0 28px;
+        font-size: 2em;
       }
     }
   }
