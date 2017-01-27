@@ -83,6 +83,7 @@ const form = (function () {
     var formDataRaw,
       formDataParsed;
     event.preventDefault();
+
     if ($form.valid()) {
       $form.removeClass('server-error');
       $formWrapper.addClass('submitting');
