@@ -95,18 +95,25 @@
 	.more-section-tagline{
 
 		position: relative;
+		// margin-bottom: 0;
 
 		img{
 			width: 35%;
 
 			@include respond-to(medium){
-				width: 200px;
+				width: 150px;
 				margin-bottom: 0.5rem;
 				margin-right: 1rem;
 			}
 
 			@include respond-to(large){
 				width: auto;
+			}
+		}
+
+		h1{
+			@include respond-to(medium){
+				margin-bottom: 0;
 			}
 		}
 

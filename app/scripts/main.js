@@ -89,7 +89,7 @@ $(function(){
 $(function(){
 
 	$('.more-section-menuitem').on('click',function(e){
-		 e.preventDefault();
+	e.preventDefault();
 
 		 // Filter the catrgory dropdown on click
 		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
@@ -98,7 +98,8 @@ $(function(){
 		// Filter the category title on click
 		var title = $(this).text();
 		$('p.more-section-tagline-tag').fadeOut();
-		// $('h1.more-section-tagline-tag').addClass('active').text(title);
+
+		$('h1.more-section-tagline-tag').removeClass('active');
 		setTimeout(function() {
         	$('h1.more-section-tagline-tag').addClass('active').text(title);
    		 }, 200);
@@ -108,15 +109,14 @@ $(function(){
 		var offset = $this.offset();
 		var width = $this.width();
 		var centerX = offset.left + width / 2 - 50;
-		$('.more-section-menu-dropdown-arrow-up').css({left: centerX});;
+		$('.more-section-menu-dropdown-arrow-up').show().css({left: centerX});;
 
 		//Underline animation
 		$('.tertiary-cta-more').removeClass('animate');
 		setTimeout(function() {
         	$('.tertiary-cta-more').addClass('animate')
-   		 }, 350);
+   		 }, 100);
 	});	
-
 		
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
@@ -138,6 +138,7 @@ $(function(){
 	});
 
 });
+
 
 // More Header Responsive
 

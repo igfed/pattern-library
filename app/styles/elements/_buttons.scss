@@ -157,26 +157,23 @@ a:hover .tertiary-cta:before  {
 		   	animation-fill-mode: forwards;
 
 			left: calc(100% - 100px);
-			// left: 64%;
 			right: 0;
-			// left: 44%;
-			// right: 24%;
 			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			text-decoration: none;
 			cursor: pointer;
 
-			animation: underlineBounce 1s;
+			// animation: underlineBounce 1s;
 
-			@-webkit-keyframes underlineBounce {
-			    from   {left:0; right:0;}
-			    to {left:70%; right: 0;}
-			}
+			// @-webkit-keyframes underlineBounce {
+			//     from   {left:0; right:0;}
+			//     to {left:70%; right: 0;}
+			// }
 
-			@keyframes underlineBounce {
-			    from   {left:0; right:0;}
-			    to {left:70%; right: 0;}
-			}
+			// @keyframes underlineBounce {
+			//     from   {left:0; right:0;}
+			//     to {left:70%; right: 0;}
+			// }
 		}
 	}
  }
