@@ -158,7 +158,7 @@ $more-article-gray: #e0d9d1;
       top: 50%;
       height: 2px;
       width: 10px;
-      background-color: #0c273c;
+      background-color: $darkest-color;
     }
   }
 
@@ -173,17 +173,10 @@ $more-article-gray: #e0d9d1;
         transition: color 0.5s;
       }
 
-      // these pseud class selectors work for adding comma
-      // but the comma changes color on hover
-      // &:after {
-      //   content: ', ';
-      // }
-      //
-      // &:last-of-type {
-      //   &:after {
-      //     content: '';
-      //   }
-      // }
+      &:active {
+        color: $button-primary-color;
+        transition: color 0.5s;
+      }
     }
   }
 
@@ -214,13 +207,24 @@ $more-article-gray: #e0d9d1;
       top: 50%;
       height: 2px;
       width: 10px;
-      background-color: #0c273c;
+      background-color: $darkest-color;
     }
   }
 
   .related {
     border-top: 1px solid $more-article-gray;
     padding: 20px 1em 0 1em;
+
+    @include respond-to(medium) {
+      padding: 20px 0 0 0;
+      position: relative;
+    }
+
+    // .column {
+    //   &:not(:last-of-type) {
+    //     padding-right: 0;
+    //   }
+    // }
 
     .column-block {
       margin-bottom: 0;
@@ -231,6 +235,10 @@ $more-article-gray: #e0d9d1;
       padding-bottom: 20px;
       height: 100%;
 
+      @include respond-to(medium) {
+        position: static;
+      }
+
       .image-title {
         margin-top: 10px;
         margin-bottom: 30px;
@@ -239,6 +247,64 @@ $more-article-gray: #e0d9d1;
       .more-link {
         position: absolute;
         bottom: 0;
+      }
+    }
+  }
+}
+
+.more-top-articles {
+  .sub-title {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      height: 2px;
+      width: 10px;
+      background-color: $darkest-color;
+    }
+  }
+
+  .top-articles-list {
+    li {
+      border-bottom: 1px solid #E0E2E2;
+      padding: 6px 0;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      a {
+        display: block;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        position: relative;
+
+        // active class styles?
+        &:hover {
+          color: $button-primary-color;
+          transition: color 0.5s;
+        }
+
+        &:active {
+          color: $button-primary-color;
+          transition: color 0.5s;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-60%);
+
+        img {
+          width: 10px;
+        }
       }
     }
   }
