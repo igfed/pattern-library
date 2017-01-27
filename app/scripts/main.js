@@ -71,14 +71,28 @@ $(function(){
 	});
 
 	$('.homepage-carousel-slide').hover(
-	  function() {
-	    if ($(window).width() > 1024) {
-	      $('.js-socialdrawer > ul').addClass('show-list-on-hover');
-	    }
-	  }, function() {
-	    if ($(window).width() > 1024) {
-	      $('.js-socialdrawer > ul').removeClass('show-list-on-hover');
-	    }
-	  }
+	  showSocialListOnHover, hideSocialListOnHover
+	);
+
+	$('.tile').hover(
+		showSocialListOnHover, hideSocialListOnHover
 	);
 });
+
+
+// helper functions
+const showSocialListOnHover = function() {
+	if ($(window).width() > 1024) {
+		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
+
+		jsSocialDrawerList.addClass('show-list-on-hover');
+	}
+}
+
+const hideSocialListOnHover = function() {
+	if ($(window).width() > 1024) {
+		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
+
+		jsSocialDrawerList.removeClass('show-list-on-hover');
+	}
+}
