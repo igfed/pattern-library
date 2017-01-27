@@ -4,16 +4,16 @@ Form Inputs
 Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
 
 Markup:
-<form action="" method="post">
+<form action="" class="ig-form" method="post">
    <div class="row">
       <div class="medium-6 columns">
-          <div class="form-group">
+          <div class="form-group-input">
              <input type="text" required>
              <label>.medium-6.columns</label>
           </div>
       </div>
       <div class="medium-6 columns">
-         <div class="form-group">
+         <div class="form-group-input">
             <input type="password" required>
             <label>.medium-6.columns</label>
          </div>
@@ -24,6 +24,7 @@ Markup:
 Styleguide 1.6
 */
 
+// Search form styles - I did not change these
 input[type=search] {
   background-color: transparent;
   border-color: $brand-color;
@@ -92,6 +93,7 @@ select {
 // Shouldn't interfere with Search styles above
 
 .ig-form {
+  margin-top: 20px;
 
   /* Inputs and Selects */
 
@@ -327,34 +329,39 @@ select {
 
   /* Miscellaneous */
 
-  // Use fieldsets to introduce a (bottom) horizontal line
-  fieldset {
-    border-bottom: 1px solid $grey;
-    padding-bottom: 35px;
-    margin-bottom: 35px;
-  }
-
-  .form-section {
-    border-bottom: 1px solid $grey;
-    margin: 55px 0 82px 0;
-
-    h4 {
-      margin-top: 55px;
-      margin-bottom: 40px;
-      padding-bottom: 10px;
-      text-transform: uppercase;
-      border-bottom: 2px solid #000;
-      font-family: "Whitney A", "Whitney B";
-      font-size: 1.2rem;
-      font-weight: bold;
-      letter-spacing: 1.2px;
-      color: #777;
-    }
-  }
-
+  // Main form legend
   legend {
     margin-top: 20px;
     font-size: 28px;
+  }
+
+  // Fieldset groups section off related content and provide a custom legend (i.e. title)
+  fieldset.group {
+    border-top: 1px solid #666;
+    margin: 25px 0 25px 0;
+    padding-top: 30px;
+
+    legend {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      color: #666;
+      text-align: center;
+      display: block;
+      position: absolute;
+      padding: 5px 10px;
+      background: #fff;
+      left: 50%;
+      margin-left: -110px;
+      margin-top: -48px;
+      width: 220px;
+
+      & .wide {
+        width: 320px;
+        margin-left: -160px;
+      }
+    }
   }
 
   input[type=checkbox] ~ label, input[type=radio] ~ label {

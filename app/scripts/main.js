@@ -1,3 +1,83 @@
+// *****************************************************
+// Some Boilerplate Patterns
+// *****************************************************
+
+// Revealing module pattern
+// Perhaps a namespace like 'iglib' could act as our 'global' container where shared functionality lives?
+const iglib = (function () {
+  function _privateMethod() {
+    console.log('init');
+  }
+
+  function init() {
+    _privateMethod();
+  }
+
+  function setValidation(formName) {
+    var form = $(formName);
+
+    $.validator.setDefaults({
+      debug: true,
+      success: 'valid'
+    });
+
+    $.validator.addMethod('cdnPostal', function (postal, element) {
+      return this.optional(element) ||
+        postal.match(/[a-zA-Z][0-9][a-zA-Z](-| |)[0-9][a-zA-Z][0-9]/);
+    }, 'Please specify a valid postal code.');
+
+    form.validate({
+      errorPlacement: function (label, element) {
+        if (element.attr('name') === 'current_client') {
+          label.insertBefore(element);
+        } else if (element.attr('name') === 'opt_in') {
+          label.insertAfter('#optIn + span');
+        } else {
+          label.insertAfter(element); // standard behaviour
+        }
+      },
+      rules: {
+        phone: {
+          required: true,
+          phoneUS: true
+        },
+        postal_code: {
+          required: true,
+          cdnPostal: true
+        },
+        firstname: {
+          required: true,
+          maxlength: 100
+        },
+        lastname: {
+          required: true,
+          maxlength: 100
+        },
+        email: {
+          required: true,
+          maxlength: 100
+        },
+        extension: {
+          number: true
+        }
+      }
+    });
+    form.on('submit', handleSubmit);
+    form.find('.outline-btn.secondary').on('click', function () {
+      form.submit();
+    });
+  }
+
+  return {
+    init, // Can use shorthand notation. (init: init) not required. ES6 for the win!
+    setValidation
+  };
+}());
+
+iglib.init();
+
+// Carousel
+
 $(function(){
   $(document).foundation();
   $('[data-responsive-toggle] button').on('click', function(){
@@ -33,28 +113,6 @@ $(function(){
     ]
   });
 });
-
-// *****************************************************
-// Some Boilerplate Patterns
-// *****************************************************
-
-// Revealing module pattern
-// Perhaps a namespace like 'ig' could act as our 'global' container where shared functionality lives?
-const ig = (function () {
-  function _privateMethod() {
-    console.log('init');
-  }
-
-  function init() {
-    _privateMethod();
-  }
-
-  return {
-    init // Can use shorthand notation. (init: init) not required. ES6 for the win!
-  };
-}());
-
-ig.init();
 
 //More Header
 
