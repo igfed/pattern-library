@@ -99,7 +99,7 @@ select {
 
   .form-group-input, .form-group-select {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     & label {
       color: #999;
@@ -114,7 +114,15 @@ select {
       -webkit-transition: 0.2s ease all;
       text-transform: uppercase;
       letter-spacing: 1px;
+      letter-spacing: 1px;
       border-width: 0;
+
+      &.error {
+        top: 44px;
+        color: $alert-color;
+        position: absolute;
+        font-size: 12px;
+      }
     }
 
     input {
@@ -149,12 +157,12 @@ select {
       border-width: 1px 1px 2px;
     }
 
-    input:focus ~ label,
-    input:valid ~ label,
-    select:focus ~ label,
-    select:valid ~ label,
-    input.is-invalid-input ~ label {
-      top: -20px;
+    input:focus + label,
+    input:valid + label,
+    select:focus + label,
+    select:valid + label,
+    input.error + label {
+      top: -20px !important;
     }
 
     /* errors */
@@ -165,8 +173,8 @@ select {
       margin-top: -13px;
     }
 
-    input.is-invalid-input {
-      border-bottom-color: #cc4b37;
+    input.error {
+      border-color: #cc4b37;
       background-color: #f9ecea;
     }
   }

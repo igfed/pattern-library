@@ -36,13 +36,7 @@ const form = (function () {
 
     $form.validate({
       errorPlacement: function (label, element) {
-        // if (element.attr('name') === 'current_client') {
-        //   label.insertBefore(element);
-        // } else if (element.attr('name') === 'opt_in') {
-        //   label.insertAfter('#optIn + span');
-        // } else {
-        //   label.insertAfter(element); // standard behaviour
-        // }
+        $(element).parent().append(label);
       },
       rules: {
         phone: {
