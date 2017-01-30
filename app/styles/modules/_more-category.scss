@@ -1,0 +1,93 @@
+.category-section-main {
+  padding-bottom: 0;
+
+  @include respond-to(medium) {
+    padding-bottom: 60px;
+  }
+
+  .trending-title {
+    margin-top: 0;
+
+    h4 {
+      font-size: 22px;
+    }
+  }
+
+  .article-count {
+    font-family: "WhitneyLight";
+    font-size: 15px;
+
+    @include respond-to(medium) {
+      font-size: 17px;
+    }
+  }
+
+  .tile {
+
+    @include respond-to(medium) {
+      border-right: 1px solid #E0E2E2 !important;
+      border-bottom: 1px solid #E0E2E2 !important;
+    }
+
+    @include respond-to(large) {
+      border-right: 1px solid #E0E2E2 !important;
+      border-bottom: 1px solid #E0E2E2 !important;
+    }
+  }
+
+
+  .categories-sidebar {
+    background-color: #fff;
+    padding: 25px;
+
+    @include respond-to(medium) {
+      padding-top: 0;
+      background-color: $highlight-color;
+    }
+
+    .mini-title {
+      margin-top: 22px;
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 600;
+      padding-bottom: 10px;
+
+      @include respond-to(medium) {
+        margin-top: 0;
+        border-bottom: solid 1px #E0E2E2;
+      }
+    }
+
+    .section-title {
+      font-size: 20px;
+      padding-bottom: 7px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      border-bottom: solid 1px #E0E2E2;
+
+      @include respond-to(medium) {
+        margin-bottom: 8px;
+        // font-size: 16px;
+        border-bottom: none;
+      }
+    }
+
+    .category-list {
+      li {
+        list-style: none;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $font-stack;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+
+        @include respond-to(medium) {
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
