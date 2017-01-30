@@ -76,6 +76,10 @@ $(function(){
 		showSocialListOnHover, hideSocialListOnHover
 	);
 
+	$('.home-hero').hover(
+		showSocialListOnHover, hideSocialListOnHover
+	);
+
 	$('.tile').hover(
 		showSocialListOnHover, hideSocialListOnHover
 	);
@@ -113,8 +117,8 @@ $(function(){
 		setTimeout(function() {
         	$('.tertiary-cta-more').addClass('animate')
    		 }, 100);
-	});	
-		
+	});
+
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
 
