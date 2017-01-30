@@ -204,6 +204,7 @@
 			z-index: 10;
 			background-color: $lightest-color;
 			width: 100%;
+			border-bottom: 2px solid #e0d9d1;
 
 			.close-button{
 				 border-color: $button-primary-color;
@@ -247,6 +248,7 @@
 
 			.more-section-menu-dropdown-category-wrapper{
 				display: none;
+
 
 				.more-section-menu-dropdown-category{
 					position: relative;
