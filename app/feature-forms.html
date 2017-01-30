@@ -11,7 +11,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css">
     <!-- endbower -->
     <!-- endbuild -->
@@ -38,7 +38,8 @@
                 </div>
 
                 <!-- The form name is what submission/validation will key on -->
-                <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success="" data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
+                <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
+                      data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
 
                     <div class="alert callout" style="display: none;">
                         <p><i class="fi-alert"></i> There are some errors in your form.</p>
@@ -79,7 +80,8 @@
                     <div class="row">
                         <div class="small-12 medium-4 columns">
                             <div class="form-group-input">
-                                <input type="text" id="phone" name="phone" minlength="2" required="required" aria-required="true">
+                                <input type="text" id="phone" name="phone" minlength="2" required="required"
+                                       aria-required="true">
                                 <label for="phone">Phone Number</label>
                             </div>
                         </div>
@@ -127,6 +129,8 @@
                         <div class="small-12 columns">
                             <fieldset class="group" role="group">
                                 <legend>Topics to Discuss</legend>
+                                <span class="custom-error-location"></span>
+                                <!-- Use this when default location is not ideal -->
 
                                 <div class="row">
                                     <div class="small-12 medium-4 columns">
@@ -181,8 +185,10 @@
 
                     <div class="row">
                         <div class="small-12 medium-4 columns padding-top">
-                        <p aria-hidden="true">I am currently a client of Investors Group</p>
-                    </div>
+                            <p aria-hidden="true">I am currently a client of Investors Group</p>
+                            <span class="custom-error-location"></span>
+                            <!-- Use this when default location is not ideal -->
+                        </div>
                         <fieldset>
                             <legend class="show-for-sr">I am currently a client of Investors Group</legend>
                             <div class="small-6 medium-4 large-3 columns">
@@ -206,9 +212,11 @@
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="form-group-checkbox">
-                                <input id="optIn" name="opt_in" type="checkbox" required="required" aria-required="true">
+                                <input id="optIn" name="opt_in" type="checkbox" required="required"
+                                       aria-required="true">
                                 <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
-                                    to Investors Group using this information to contact me for marketing purposes.</label>
+                                    to Investors Group using this information to contact me for marketing
+                                    purposes.</label>
                             </div>
                         </div>
                     </div>

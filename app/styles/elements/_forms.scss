@@ -97,6 +97,16 @@ select {
 
   /* Inputs and Selects */
 
+  label.error {
+    text-transform: uppercase;
+    border: 0;
+    letter-spacing: 1px;
+    font-size: 12px;
+    width: 100%;
+    color: $alert-color !important;
+    position: absolute;
+  }
+
   .form-group-input, .form-group-select {
     position: relative;
     margin-bottom: 60px;
@@ -116,12 +126,29 @@ select {
       letter-spacing: 1px;
       letter-spacing: 1px;
       border-width: 0;
+      background: none;
 
       &.error {
         top: 44px;
         color: $alert-color;
         position: absolute;
         font-size: 12px;
+        width: 100%;
+
+        &:after {
+          content: "";
+          background: transparent url(../images/error-icon.png) no-repeat center center;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background-size: 100%;
+          top: -33px;
+          right: 12px;
+        }
+      }
+
+      &.error.valid:after {
+        background: none;
       }
     }
 
@@ -132,7 +159,7 @@ select {
       border-style: solid;
       box-shadow: none;
       line-height: 1rem;
-      padding: 12px 1.25em;
+      padding: 12px;
       color: $brand-color;
 
       &::-webkit-input-placeholder {
@@ -173,7 +200,7 @@ select {
       margin-top: -13px;
     }
 
-    input.error {
+    input.error, select.error {
       border-color: #cc4b37;
       background-color: #f9ecea;
     }
@@ -200,7 +227,7 @@ select {
     z-index: 1
   }
 
-  .form-group-checkbox label, .form-group-radio label {
+  .form-group-checkbox input + label, .form-group-radio input + label {
     display: inline-block;
     line-height: 24px;
     vertical-align: middle;
@@ -211,7 +238,7 @@ select {
     color: #424242
   }
 
-  .form-group-checkbox label::after, .form-group-radio label::after {
+  .form-group-checkbox input + label::after, .form-group-radio input + label::after {
     position: absolute;
     content: "";
     width: 22px;
@@ -227,7 +254,7 @@ select {
     cursor: pointer
   }
 
-  .form-group-checkbox label::before, .form-group-radio label::before {
+  .form-group-checkbox input + label::before, .form-group-radio input + label::before {
     position: absolute;
     content: "";
     width: 25px;
@@ -281,13 +308,17 @@ select {
     display: none;
   }
 
-  .form-group-radio label::after {
+  .form-group-checkbox > label.error {
+    margin: 8px 0 0 -10px;
+  }
+
+  .form-group-radio input + label::after {
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background-clip: padding-box;
   }
 
-  .form-group-radio label::before {
+  .form-group-radio input + label::before {
     width: 10px;
     height: 10px;
     border: none;

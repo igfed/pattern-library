@@ -36,7 +36,13 @@ const form = (function () {
 
     $form.validate({
       errorPlacement: function (label, element) {
-        $(element).parent().append(label);
+        console.log(element);
+        // Use the custom-error-location marker class to change where the error label shows up
+        if (!$(element).closest('.row').find('.custom-error-location').length) {
+          $(element).parent().append(label);
+        } else {
+          $(element).closest('.row').find('.custom-error-location').append(label);
+        }
       },
       rules: {
         phone: {
