@@ -253,6 +253,8 @@ $more-article-gray: #e0d9d1;
   }
 }
 
+// more-top-articles
+
 .more-top-articles {
   .sub-title {
     margin-bottom: 30px;
@@ -306,6 +308,41 @@ $more-article-gray: #e0d9d1;
           width: 10px;
         }
       }
+    }
+  }
+}
+
+// more-tips
+
+.more-tips {
+  margin: 40px auto;
+
+  .list-row {
+    padding-top: 35px;
+    border-bottom: 1px solid $more-article-gray;
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    .list-title {
+      .list-title-icon {
+        background-image: url('../images/TIP-Icon.svg');
+        float: left;
+        background-size: 100%;
+        width: 40px;
+        background-repeat: no-repeat;
+        height: 40px;
+      }
+
+      .title {
+        padding-left: 55px;
+        margin-bottom: 0;
+      }
+    }
+
+    .list-body {
+      margin-top: 18px;
+      padding-bottom: 35px;
     }
   }
 }
