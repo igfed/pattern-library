@@ -86,7 +86,7 @@ $(function(){
 $(function(){
 
 	$('.more-section-menuitem').on('click',function(e){
-	e.preventDefault();
+		e.preventDefault();
 
 		 // Filter the catrgory dropdown on click
 		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
@@ -113,7 +113,21 @@ $(function(){
 		setTimeout(function() {
         	$('.tertiary-cta-more').addClass('animate')
    		 }, 100);
+
+
+
+	// 	$(document).mouseup(function(e){
+
+	// 		var container = $('.more-section-menu-dropdown');
+
+	// 		if (!container.is(e.target) // if the target of the click isn't the container...
+	//         && container.has(e.target).length === 0) // ... nor a descendant of the container
+	// 	    {
+	// 	        container.hide();
+	// 	    }
+	// 	});
 	});	
+
 		
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
