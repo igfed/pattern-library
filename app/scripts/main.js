@@ -93,7 +93,7 @@ const form = (function () {
       $formWrapper.addClass('submitting');
       formDataRaw = $form.serializeArray();
 
-      // If we need to modify the data, use parse
+      // If we need to modify the data, use parse method
       formDataParsed = parse(formDataRaw);
       submit(formDataParsed);
     }

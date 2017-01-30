@@ -192,11 +192,11 @@ select {
     }
 
     input:focus + label,
-    input:valid + label,
+    input:valid.dirty + label,
     select:focus + label,
-    select:valid + label,
+    select:valid.dirty + label,
     input.error + label {
-      top: -20px !important;
+      top: -20px;
     }
 
     /* errors */
