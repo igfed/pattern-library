@@ -126,7 +126,7 @@ $(function(){
 	// 	        container.hide();
 	// 	    }
 	// 	});
-	// });	
+	});	
 
 		
 	//Toggle the Open/Close mobile categories menu
