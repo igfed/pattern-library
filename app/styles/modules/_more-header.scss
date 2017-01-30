@@ -211,6 +211,14 @@
 				 right: 4%;
 				 float: right;
 
+				 @include respond-to(medium){
+				 	right: 2%;
+				 }
+
+				 @include respond-to(xxlarge){
+				 	right: -2%;
+				 }
+
 				 &::before, &::after{
 				 	 background: $button-primary-color;
 				 }
@@ -285,6 +293,11 @@
 
 			.tertiary-cta{
 				margin-top: 10px;
+				width: 72px;
+
+				@include respond-to(large){
+					width: 90px;
+				}
 			}
 		}
 
