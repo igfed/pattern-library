@@ -103,6 +103,9 @@ $more-article-gray: #e0d9d1;
       padding-bottom: 80%;
       padding-top: 25px;
       height: 0;
+      @include respond-to(medium) {
+        padding-bottom: 40%;
+      }
     }
   }
 }
@@ -152,7 +155,7 @@ $more-article-gray: #e0d9d1;
       }
     }
   }
-  
+
   blockquote {
     border-top: 3px solid $button-primary-color;
     color: inherit;
@@ -282,7 +285,6 @@ $more-article-gray: #e0d9d1;
 }
 
 // more-top-articles
-
 .more-top-articles {
   .sub-title {
     margin-bottom: 30px;
@@ -341,6 +343,7 @@ $more-article-gray: #e0d9d1;
 }
 
 // more-tips
+// extended styling to work for Q & A section too
 
 .more-tips {
   margin: 40px auto;
@@ -356,30 +359,56 @@ $more-article-gray: #e0d9d1;
 
     .list-column {
       display: none;
+      background-position: right 0;
+      background-repeat: no-repeat;
+      top: 3px;
 
       @include respond-to(medium) {
         display: block;
-        background-image: url('../images/TIP-Icon.svg');
-        background-position: right 0;
-        background-size: 50px auto;
-        background-repeat: no-repeat;
-        height: 40px;
-        top: 3px;
       }
     }
 
+    .tips-list-column {
+      @extend .list-column;
+      background-image: url('../images/TIP-Icon.svg');
+      background-size: 50px auto;
+      height: 40px;
+    }
+
+    .questions-list-column {
+      @extend .list-column;
+      background-image: url('../images/Q-Icon.svg');
+      background-size: 45px auto;
+      height: 45px;
+      margin-top: 5px;
+      background-position: center 0;
+    }
+
     .list-title {
-      .list-title-icon {
-        background-image: url('../images/TIP-Icon.svg');
+      margin-bottom: 18px;
+
+      .title-icon {
         float: left;
         background-size: 100%;
         width: 40px;
         background-repeat: no-repeat;
-        height: 40px;
 
         @include respond-to(medium) {
           display: none;
         }
+      }
+
+      .tips-icon {
+        @extend .title-icon;
+        background-image: url('../images/TIP-Icon.svg');
+        height: 40px;
+      }
+
+      .questions-icon {
+        @extend .title-icon;
+        background-image: url('../images/Q-Icon.svg');
+        height: 47px;
+        background-position: 0 center;
       }
 
       .title {
@@ -391,10 +420,15 @@ $more-article-gray: #e0d9d1;
           padding-left: 0;
         }
       }
+
+      // need to check styling with mocups when I have access
+      .questions-title {
+        @extend .title;
+        text-transform: uppercase;
+      }
     }
 
     .list-body {
-      margin-top: 18px;
       padding-bottom: 35px;
       border-bottom: 1px solid $more-article-gray;
     }
