@@ -95,8 +95,9 @@ select {
 .ig-form {
   margin-top: 20px;
 
-  /* Inputs and Selects */
+  /* Default error styling
 
+   */
   label.error {
     text-transform: uppercase;
     border: 0;
@@ -107,9 +108,19 @@ select {
     position: absolute;
   }
 
+  & label.valid {
+    display: none !important;
+  }
+
+  /* Inputs and Selects */
+
   .form-group-input, .form-group-select {
     position: relative;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
+
+    @include respond-to(medium) {
+      margin-bottom: 65px;
+    }
 
     & label {
       color: #999;
@@ -145,10 +156,6 @@ select {
           top: -34px;
           right: 15px;
         }
-      }
-
-      &.error.valid:after {
-        background: none;
       }
     }
 
@@ -409,7 +416,28 @@ select {
 
       & label {
         position: relative;
+        border: 1px solid $alert-color;
+        padding: 5px 10px;
+        border-radius: 4px;
+        width: 96%;
+        margin: 0 2%;
+
+        @include respond-to(medium) {
+          width: 98%;
+          margin: 0 1%;
+        }
+
+        &:before {
+          margin-left: -25px;
+          content: "";
+          background: transparent url(../images/error-icon.png) no-repeat center center;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background-size: 100%;
+        }
       }
+
     }
   }
 

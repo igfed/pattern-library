@@ -25,6 +25,12 @@ const form = (function () {
   }
 
   function validation() {
+    // We need to check whether an input is 'dirty' or not (similar to how Angular 1 works) in order for labels to behave properly
+    var jInput = $(':input');
+    jInput.change(function (objEvent) {
+      $(this).addClass('dirty');
+    });
+
     $.validator.setDefaults({
       debug: true,
       success: 'valid'
@@ -65,9 +71,6 @@ const form = (function () {
         email: {
           required: true,
           maxlength: 100
-        },
-        extension: {
-          number: true
         }
       }
     });
