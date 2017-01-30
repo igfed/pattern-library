@@ -133,3 +133,31 @@ Styleguide 3.5
 		margin-top: 20px;
 	}
 }
+
+// Alternate
+.carousel-alt {
+	.slick-prev{
+		&:before{
+			border-top: solid 3px $lightest-color;
+			border-right: solid 3px $lightest-color;
+		}
+	}
+	.slick-next{
+		&:after{
+			border-top: solid 3px $lightest-color;
+			border-right: solid 3px $lightest-color;
+		}
+	}
+	// Pagination
+	.slick-dots {
+		li {
+
+			button {
+				background: $button-primary-color;
+			}
+			&.slick-active button {
+				background: $lightest-color;
+			}
+		}
+	}
+}
