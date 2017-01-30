@@ -100,33 +100,16 @@ $more-article-gray: #e0d9d1;
       background-size: cover;
       background-position: center center;
       position: relative;
-      padding-bottom: 71%;
+      padding-bottom: 80%;
       padding-top: 25px;
       height: 0;
     }
   }
 }
 
-// .hero-image {
-//   padding: 50px auto;
-//
-//   // hero-image version of article
-//   .cover-image {
-//     background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center center;
-//     // margin-top: 25px;
-//     // height: 100%;
-//     // margin-top: 1.5625rem;
-//     // margin-left: 1.5625rem;
-//     // margin-right: 1.5625rem;
-//     position: relative;
-//     padding-bottom: 71%;
-//     padding-top: 25px;
-//     height: 0;
-//   }
-// }
+.full-width-article-subtitle {
+  padding: 0;
+}
 
 .image-caption {
   color: #a4a39c;
@@ -139,7 +122,6 @@ $more-article-gray: #e0d9d1;
 }
 
 .article-body {
-
   @include respond-to(medium) {
     margin: 35px auto;
   }
@@ -153,24 +135,24 @@ $more-article-gray: #e0d9d1;
     @include respond-to(medium) {
       margin: 18px auto;
     }
+  }
 
-    &:first-child {
-      &:first-letter {
-        color: $button-primary-color;
-        display: block;
-        float: left;
-        font-size: 72px;
-        line-height: 0.5em;
-        margin-right: 10px;
+  .first-letter-styled {
+    &:first-letter {
+      color: $button-primary-color;
+      display: block;
+      float: left;
+      font-size: 72px;
+      line-height: 0.5em;
+      margin-right: 10px;
 
-        @include respond-to(large) {
-          line-height: 0.6em;
-          margin-right: 12px;
-        }
+      @include respond-to(large) {
+        line-height: 0.6em;
+        margin-right: 12px;
       }
     }
   }
-
+  
   blockquote {
     border-top: 3px solid $button-primary-color;
     color: inherit;
