@@ -24,6 +24,7 @@ $more-article-gray: #e0d9d1;
 }
 
 // more-article page
+// includes styling specific to hero-image version
 .title-section {
   position: relative;
   margin-top: 45px;
@@ -81,6 +82,51 @@ $more-article-gray: #e0d9d1;
     }
   }
 }
+
+.full-width-header {
+  margin-bottom: 40px;
+  max-height: 700px;
+  overflow: hidden;
+  position: relative;
+
+  .cover-image-container {
+    margin-top: 25px;
+    position: relative;
+    bottom: 0;
+
+    .cover {
+      background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      padding-bottom: 71%;
+      padding-top: 25px;
+      height: 0;
+    }
+  }
+}
+
+// .hero-image {
+//   padding: 50px auto;
+//
+//   // hero-image version of article
+//   .cover-image {
+//     background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center center;
+//     // margin-top: 25px;
+//     // height: 100%;
+//     // margin-top: 1.5625rem;
+//     // margin-left: 1.5625rem;
+//     // margin-right: 1.5625rem;
+//     position: relative;
+//     padding-bottom: 71%;
+//     padding-top: 25px;
+//     height: 0;
+//   }
+// }
 
 .image-caption {
   color: #a4a39c;
