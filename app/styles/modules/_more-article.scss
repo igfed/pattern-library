@@ -319,9 +319,25 @@ $more-article-gray: #e0d9d1;
 
   .list-row {
     padding-top: 35px;
-    border-bottom: 1px solid $more-article-gray;
+    // override border-bottom property for last tip on page
     &:last-of-type {
-      border-bottom: none;
+      .list-body {
+        border-bottom: none;
+      }
+    }
+
+    .list-column {
+      display: none;
+
+      @include respond-to(medium) {
+        display: block;
+        background-image: url('../images/TIP-Icon.svg');
+        background-position: right 0;
+        background-size: 50px auto;
+        background-repeat: no-repeat;
+        height: 40px;
+        top: 3px;
+      }
     }
 
     .list-title {
@@ -332,17 +348,27 @@ $more-article-gray: #e0d9d1;
         width: 40px;
         background-repeat: no-repeat;
         height: 40px;
+
+        @include respond-to(medium) {
+          display: none;
+        }
       }
 
       .title {
         padding-left: 55px;
         margin-bottom: 0;
+
+        @include respond-to(medium) {
+          position: static;
+          padding-left: 0;
+        }
       }
     }
 
     .list-body {
       margin-top: 18px;
       padding-bottom: 35px;
+      border-bottom: 1px solid $more-article-gray;
     }
   }
 }
