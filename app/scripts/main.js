@@ -14,6 +14,7 @@ const form = (function () {
     $formWrapper;
 
   function init() {
+    // Forms should always be wrapped in '.ig-form'
     if ($('.ig-form').length) {
       $formWrapper = $('.ig-form');
       $form = $formWrapper.find('form');
@@ -110,7 +111,7 @@ const form = (function () {
       url: endpointURL,
       data: data
     }).success(function (msg) {
-      showSuccessModal();
+      $formWrapper.addClass('success');
       $formWrapper.removeClass('submitting');
     })
       .error(function (msg) {

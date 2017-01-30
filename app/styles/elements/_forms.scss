@@ -109,7 +109,7 @@ select {
 
   .form-group-input, .form-group-select {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 
     & label {
       color: #999;
@@ -142,8 +142,8 @@ select {
           width: 18px;
           height: 18px;
           background-size: 100%;
-          top: -33px;
-          right: 12px;
+          top: -34px;
+          right: 15px;
         }
       }
 
@@ -401,6 +401,16 @@ select {
         margin-left: -160px;
       }
     }
+
+    .custom-error-location {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      & label {
+        position: relative;
+      }
+    }
   }
 
   input[type=checkbox] ~ label, input[type=radio] ~ label {
@@ -414,7 +424,7 @@ select {
   // Spinner
 
   .throbber {
-    background: transparent url("../images/ui/throbber.png") no-repeat scroll center center;
+    background: transparent url("../images/throbber.png") no-repeat scroll center center;
     animation: 2s linear 0s normal none infinite running spin;
     height: 4.2rem;
     margin-left: auto;
@@ -423,6 +433,13 @@ select {
     background-size: 4.2rem 4.2rem;
     opacity: .75;
     filter: alpha(opacity=75);
+  }
+
+  body.wc .ig-form.submitting .screen .throbber {
+    left: 50%;
+    margin-left: -2.1rem;
+    position: absolute;
+    top: 50%;
   }
 
   @keyframes spin {
@@ -447,4 +464,96 @@ select {
   & .success-message {
     display: none;
   }
+
+  .success-message {
+    text-align: center;
+
+    > div.row:first-child {
+      background-color: #0ed59a;
+      left: 0;
+      position: absolute;
+      top: 0;
+
+      .check {
+        display: inline-block;
+        width: 8.3333em;
+        height: 8.3333em;
+        margin: 4.1666em;
+        margin-left: 0;
+        background: transparent url("../images/ui/check.png") no-repeat scroll center center;
+        background-size: 8.3333em, 8.3333em;
+        vertical-align: middle;
+
+        @media screen and (max-width: 767px) {
+          margin-right: 1.5em;
+        }
+
+        + span {
+          font-size: 4.3333em;
+          color: #fff;
+          display: inline-block;
+          vertical-align: middle;
+          font-weight: 300;
+
+          @media screen and (max-width: 767px) {
+            font-size: 4em;
+          }
+        }
+      }
+
+      p {
+        margin: 0 auto;
+        text-align: left;
+        width: 60%;
+      }
+
+      + div.row {
+        margin-top: 17.3333em;
+        width: 60%;
+        text-align: left;
+
+        @media screen and (max-width: 767px) {
+          width: 80%;
+        }
+      }
+    }
+
+    .outline-btn {
+      margin-top: 3.16666em;
+      margin-bottom: 6.16666em;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 3em;
+      }
+    }
+  }
+
+  .screen {
+    display: none;
+  }
+
+  &.submitting {
+    .screen {
+      display: block;
+      background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      .throbber {
+        left: 50%;
+        margin-left: -2.1rem;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    .close-modal {
+      z-index: 2;
+    }
+  }
+
 }
