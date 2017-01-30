@@ -12,7 +12,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css">
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css"/>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -135,7 +135,8 @@
                                     <span class="custom-error-location"></span>
                                     <div class="small-12 medium-4 columns">
                                         <div class="form-group-checkbox">
-                                            <input type="checkbox" id="topic1" name="checkbox_group" required="required">
+                                            <input type="checkbox" id="topic1" name="checkbox_group"
+                                                   required="required">
                                             <label for="topic1">Retirement</label>
                                         </div>
                                     </div>
@@ -225,10 +226,31 @@
 
                     <div class="row">
                         <div class="small-12 columns">
+                            <div class="form-group-text">
+                            <textarea id="messageBody" rows="4" cols="50" maxlength="250"
+                                      name="message_body" required="required"></textarea>
+                            <label for="message_body">Personal message
+                                (optional)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 medium-9 columns">
+                            <p class="legal">For your privacy and protection, we remind you that this email service is
+                                not for confidential inquiries. Please do not include any confidential information in
+                                your message (e.g. account numbers, credit card numbers, social insurance numbers, trade
+                                requests or other personal information).</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 columns">
                             <button type="submit" class="button">Submit</button>
                             <button class="cancel button secondary">Cancel</button>
                         </div>
                     </div>
+
                 </form>
 
                 <div class="success-message">

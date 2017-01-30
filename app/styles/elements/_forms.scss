@@ -95,9 +95,7 @@ select {
 .ig-form {
   margin-top: 20px;
 
-  /* Default error styling
-
-   */
+  /* Default error styling */
   label.error {
     text-transform: uppercase;
     border: 0;
@@ -114,7 +112,7 @@ select {
 
   /* Inputs and Selects */
 
-  .form-group-input, .form-group-select {
+  .form-group-input, .form-group-select, .form-group-text {
     position: relative;
     margin-bottom: 55px;
 
@@ -134,7 +132,6 @@ select {
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
       text-transform: uppercase;
-      letter-spacing: 1px;
       letter-spacing: 1px;
       border-width: 0;
       background: none;
@@ -159,7 +156,7 @@ select {
       }
     }
 
-    input {
+    input, textarea {
       background-color: transparent;
       border-color: $brand-color;
       border-width: 0 0 2px;
@@ -184,7 +181,7 @@ select {
     }
 
     /* active state */
-    input:focus {
+    input:focus, textarea:focus {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       border-color: $brand-color;
@@ -192,25 +189,28 @@ select {
     }
 
     input:focus + label,
-    input:valid.dirty + label,
+    input.valid.dirty + label,
     select:focus + label,
-    select:valid.dirty + label,
-    input.error + label {
+    select.valid.dirty + label,
+    input.error + label,
+    textarea:focus + label,
+    textarea.valid.dirty + label,
+    textarea.error + label {
       top: -20px;
     }
 
-    /* errors */
-    .form-error {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding-left: 5px;
-      margin-top: -13px;
-    }
-
-    input.error, select.error {
+    input.error, select.error, textarea.error {
       border-color: #cc4b37;
       background-color: #f9ecea;
     }
+  }
+
+  .form-group-text {
+    margin: 25px 0;
+
+      & label.error {
+        top: 94px !important;
+      }
   }
 
   .form-group-select {
@@ -373,14 +373,6 @@ select {
     }
   }
 
-  /* Miscellaneous */
-
-  // Main form legend
-  legend {
-    margin-top: 20px;
-    font-size: 28px;
-  }
-
   // Fieldset groups section off related content and provide a custom legend (i.e. title)
   fieldset.group {
     border-top: 1px solid #666;
@@ -445,8 +437,25 @@ select {
     border-width: 0;
   }
 
+  /* Miscellaneous */
+
+  // Main form legend
+
+  legend {
+    margin-top: 20px;
+    font-size: 28px;
+  }
+
   .alert.callout {
     padding: 20px;
+  }
+
+  .legal {
+    font-family: $font-whitney-light;
+    font-size: 12px;
+    color: #a5aaaf;
+    text-transform: none;
+    padding: 20px 0;
   }
 
   // Spinner
@@ -461,13 +470,6 @@ select {
     background-size: 4.2rem 4.2rem;
     opacity: .75;
     filter: alpha(opacity=75);
-  }
-
-  body.wc .ig-form.submitting .screen .throbber {
-    left: 50%;
-    margin-left: -2.1rem;
-    position: absolute;
-    top: 50%;
   }
 
   @keyframes spin {
