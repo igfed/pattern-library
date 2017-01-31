@@ -80,8 +80,57 @@ $more-underline: 1px solid $more-article-gray;
   .article-subtitle {
     margin: 18px auto;
 
+    a {
+      color: $button-primary-color;
+      &:hover {
+        color: #0BAB7B;
+        transition: color 0.25s;
+      }
+    }
+
     @include respond-to(medium) {
       margin: 35px auto;
+    }
+  }
+}
+
+// extending styles from regualr title section
+// to account for the fact that picture switches to
+// full width on larger screens
+.full-width-title-section {
+  @extend .title-section;
+  @include respond-to(medium) {
+    padding-top: 125px;
+  }
+
+  p {
+    @include respond-to(medium) {
+      color: $lightest-color;
+    }
+  }
+
+  h1 {
+    @include respond-to(medium) {
+      border-bottom: 2px solid $lightest-color;
+      width: 65%;
+    }
+  }
+
+  .article-category {
+    @include respond-to(medium) {
+      margin-bottom: 10px;
+      p {
+        color: $lightest-color;
+      }
+    }
+  }
+
+  .full-width-share-icons {
+    @extend .share-icons;
+    @include respond-to(medium) {
+      position: static;
+      text-align: left;
+      margin-top: 20px;
     }
   }
 }
@@ -92,24 +141,19 @@ $more-underline: 1px solid $more-article-gray;
   overflow: hidden;
   position: relative;
 
-  .cover-image-container {
-    margin-top: 25px;
-    position: relative;
-    bottom: 0;
+  @include respond-to(medium) {
+    // margin-top: -40px;
+    margin-bottom: 65px;
+  }
 
-    .cover {
-      background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      position: relative;
-      padding-bottom: 80%;
-      padding-top: 25px;
-      height: 0;
-      @include respond-to(medium) {
-        padding-bottom: 40%;
-      }
-    }
+  .hero {
+    // background: lavender;
+    height: 500px;
+    color: white;
+    background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 }
 
@@ -178,9 +222,7 @@ $more-underline: 1px solid $more-article-gray;
   }
 
   // right-image-content
-
   .author-pic-container {
-    // create a variable for this
     padding-bottom: 35px;
     margin-top: 20px;
     overflow: auto;
@@ -208,7 +250,6 @@ $more-underline: 1px solid $more-article-gray;
 }
 
 // more-article-tags
-
 .article-tags-section {
   margin: 55px auto;
 
@@ -260,7 +301,6 @@ $more-underline: 1px solid $more-article-gray;
 }
 
 // more-related-posts
-
 .more-related-posts {
   margin: 40px auto;
 
@@ -380,7 +420,6 @@ $more-underline: 1px solid $more-article-gray;
 
 // more-tips
 // extended styling to work for Q & A section too
-
 .more-tips {
   margin: 40px auto;
 
@@ -459,7 +498,6 @@ $more-underline: 1px solid $more-article-gray;
         }
       }
 
-      // need to check styling with mocups when I have access
       .questions-title {
         @extend .title;
         text-transform: uppercase;
@@ -470,5 +508,53 @@ $more-underline: 1px solid $more-article-gray;
       padding-bottom: 35px;
       border-bottom: $more-underline;
     }
+  }
+}
+
+.styled-list {
+  // overrode margins to center
+  // doesn't match what's on the site
+  // but looks better
+  counter-reset: ordered-ls-counter;
+  margin: 0;
+
+  @include respond-to(medium) {
+    margin-top: 50px;
+    padding-left: 40px;
+  }
+
+   li {
+     border-bottom: $more-underline;
+     list-style-type: none;
+     margin-bottom: 25px;
+     padding-bottom: 25px;
+
+     &:last-of-type {
+       border-bottom: none;
+     }
+
+     &:before {
+      content: counter(ordered-ls-counter);
+      counter-increment: ordered-ls-counter;
+      display: inline-block;
+      background-color: #0ed59a;
+      border-radius: 50%;
+      color: #ffffff;
+      width: 25px;
+      height: 25px;
+      margin-right: 12px;
+      text-align: center;
+      @include respond-to(medium) {
+        width: 28px;
+        height: 28px;
+      }
+     }
+   }
+}
+
+.tips-paragraph {
+  border-bottom: $more-underline;
+  &:last-of-type {
+    border-bottom: none;
   }
 }
