@@ -1,3 +1,7 @@
+// More Homepage carousel
+// .home-hero is for the single slide lower on the More Homepage
+// There are more rules below for .home-hero
+
 .homepage-carousel, .home-hero {
   padding: 0;
 
@@ -192,6 +196,97 @@
       }
 
       @include respond-to(large) {
+        ul {
+          opacity: 0;
+          transition: opacity 250ms;
+          li {
+            opacity: 1;
+            transition: opacity 250ms;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .show-list-on-hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .js-socialdrawer-opened {
+      max-height: 50px;
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        max-height: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// More Homepage hero slide
+.home-hero {
+  position: relative;
+
+  .homepage-hero-slide {
+    margin: 0;
+    position: relative;
+
+    @include respond-to(large) {
+      margin: 0 25px;
+    }
+  }
+
+  .share-box {
+    position: relative;
+    text-align: right;
+    float: right;
+    bottom: 70px;
+    right: 10px;
+
+    @include respond-to(medium) {
+      bottom: 50px;
+      position: static;
+    }
+
+    .js-open-socialdrawer {
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+
+    .share {
+      // position: relative;
+      margin-top: 10px;
+      margin-bottom: 50px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        opacity: 1;
+
+        li {
+          display: inline-block;
+        }
+      }
+
+      @include respond-to(medium) {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 30px;
+        right: 25px;
+        overflow: visible;
+      }
+
+      @include respond-to(large) {
+        right: 0;
         ul {
           opacity: 0;
           transition: opacity 250ms;

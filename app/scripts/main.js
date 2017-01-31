@@ -76,6 +76,10 @@ $(function(){
 		showSocialListOnHover, hideSocialListOnHover
 	);
 
+	$('.home-hero').hover(
+		showSocialListOnHover, hideSocialListOnHover
+	);
+
 	$('.tile').hover(
 		showSocialListOnHover, hideSocialListOnHover
 	);
@@ -114,21 +118,22 @@ $(function(){
         	$('.tertiary-cta-more').addClass('animate')
    		 }, 100);
 
+	});
+
+		// $(document).mouseup(function(e){
+		//
+		// 	var container = $('.more-section-menu-dropdown');
+		//
+		// 	if (!container.is(e.target) // if the target of the click isn't the container...
+	  //       && container.has(e.target).length === 0) // ... nor a descendant of the container
+		//     {
+		//         container.hide();
+		//     }
+		// });
 
 
-	// 	$(document).mouseup(function(e){
+// });
 
-	// 		var container = $('.more-section-menu-dropdown');
-
-	// 		if (!container.is(e.target) // if the target of the click isn't the container...
-	//         && container.has(e.target).length === 0) // ... nor a descendant of the container
-	// 	    {
-	// 	        container.hide();
-	// 	    }
-	// 	});
-	});	
-
-		
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
 
