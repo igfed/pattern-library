@@ -82,7 +82,8 @@ $(function(){
 
 		 // Filter the catrgory dropdown on click
 		var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
-		$('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').filter(':not(.'+className+')').hide();
+		$('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.'+className+')').hide();
+		$('.more-section-menu-dropdown').addClass('active');
 
 		// Filter the category title on click
 		var title = $(this).text();
@@ -108,19 +109,6 @@ $(function(){
 
 	});
 
-		// $(document).mouseup(function(e){
-		//
-		// 	var container = $('.more-section-menu-dropdown');
-		//
-		// 	if (!container.is(e.target) // if the target of the click isn't the container...
-	  //       && container.has(e.target).length === 0) // ... nor a descendant of the container
-		//     {
-		//         container.hide();
-		//     }
-		// });
-
-
-// });
 
 	//Toggle the Open/Close mobile categories menu
 	$('.more-section-menu-mobile-title').on('click', function(){
@@ -130,6 +118,8 @@ $(function(){
 	  //   }, 2000);
 
 		$('.more-section-menu').toggleClass('active');
+		$(this).toggleClass('active');
+
 	})
 
 	// Close button
@@ -139,9 +129,11 @@ $(function(){
 		$('.tertiary-cta-more').removeClass('animate');
 		$('h1.more-section-tagline-tag').removeClass('active');
 		$('p.more-section-tagline-tag').fadeIn('slow');
+		$('.more-section-menu-dropdown').removeClass('active');
 	});
 
 });
+
 
 
 // More Header Responsive
