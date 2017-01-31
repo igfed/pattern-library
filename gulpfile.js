@@ -178,7 +178,13 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('githubpages', [], function () {
+  del.bind(null, ['docs'])
+  return gulp.src(['dist/**/*'], {
+    }).pipe(gulp.dest('docs'));
+});
+
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras','githubpages'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

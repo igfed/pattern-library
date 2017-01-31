@@ -112,26 +112,155 @@ a:hover .tertiary-cta:before  {
  }
 
 
- @include respond-to(medium){
+ .tertiary-cta-more{
 
- 	 .tertiary-cta-more:after{
-	 	display: block;
-	 	position: absolute;
+ 	cursor: pointer;
+    display: inline-block;
+    line-height: 1.3;
+    position: relative;
+	margin-bottom: 25px;
+	margin-top: 25px;
+
+	@include respond-to(medium){
+		width: auto;
+	}
+
+ 	&:before{
+ 		display: block;
+	    position: absolute;
 	    content: ' ';
-	    height: 3px;
-	    left: 0px;
-	    right: 50%;
+	    left: 10px;
+ 		right: 85%;
+	    height: 5px;
+	    top: 110%;
 	    background-color: white;
-	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0s;
-	 }
+    	 -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
+    	transition: right .15s ease-out .15s, left .15s ease-out 0s;
 
-	 .more-section-menuitem:focus + .tertiary-cta-more::after {
-	 	left: 64%;
-	    right: 0;
-	    -webkit-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	    -moz-transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	    transition: right 0.15s ease-out 0.15s, left 0.15s ease-out 0.3s;
-	 }
+ 		@include respond-to(medium){
+ 			left: 14px;
+ 			right: 80%;
+			top: calc(100% - .05rem);
+
+		}
+
+		@include respond-to(large){
+
+			top: calc(100% - .05rem);
+
+		}
+ 	}
+
+ 	&.animate {
+		&:before {
+			-webkit-animation-fill-mode: forwards;
+		   	animation-fill-mode: forwards;
+
+			left: calc(100% - 100px);
+			right: 0;
+			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			text-decoration: none;
+			cursor: pointer;
+
+			// animation: underlineBounce 1s;
+
+			// @-webkit-keyframes underlineBounce {
+			//     from   {left:0; right:0;}
+			//     to {left:70%; right: 0;}
+			// }
+
+			// @keyframes underlineBounce {
+			//     from   {left:0; right:0;}
+			//     to {left:70%; right: 0;}
+			// }
+		}
+	}
  }
+
+
+// Close Button
+.close-button{
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 50%;
+
+  &:hover {
+  	  -webkit-transition: background-color 250ms;
+	  -moz-transition: background-color 250ms;
+	  transition: background-color 250ms;
+    &::before, &::after {
+      -webkit-transition: background-color 250ms;
+	  -moz-transition: background-color 250ms;
+	  transition: background-color 250ms;
+
+    }
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 75%;
+    top: 55%;
+    left: 0;
+    background: black;
+    height: 1.3px;
+    margin-top: -2px;
+    margin-left: 3px;
+  }
+  &::before {
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  &::after {
+  	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
+}
+
+
+.accordion-arrow{
+	&:before{
+		top: 1.1rem;
+		position: absolute;
+		content: '';
+	    display: block;
+	    margin: 0 auto;
+	    width: 15px;
+	    height: 15px;
+	    border: none;
+	    border-bottom: solid 2px;
+	    border-right: solid 2px;
+	    -webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+	    transform: rotate(45deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+}
+
+
+.more-section-menu-mobile-title.active .accordion-arrow {
+
+	&:before{
+		top: 1.6rem;
+		-webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(225deg) translate3d(0, 0, 0);
+	    transform: rotate(225deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+}
