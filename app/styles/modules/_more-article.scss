@@ -2,6 +2,9 @@
 $more-background-yellow: #FAF7E6;
 $more-article-gray: #e0d9d1;
 
+// common underline style
+$more-underline: 1px solid $more-article-gray;
+
 .bg-more-section {
   background-color: $more-background-yellow;
 }
@@ -45,7 +48,7 @@ $more-article-gray: #e0d9d1;
 
   h1 {
     padding-bottom: 8px;
-    border-bottom: 1px solid $more-article-gray;
+    border-bottom: $more-underline;
   }
 
   .byline {
@@ -172,18 +175,29 @@ $more-article-gray: #e0d9d1;
 
   .author-pic-container {
     // create a variable for this
-    border-bottom: 1px solid $more-article-gray;
+    border-bottom: $more-underline;
     padding-bottom: 35px;
+    margin-top: 20px;
     overflow: auto;
 
     .author-pic {
       width: 140px;
       margin-right: 14px;
       float: left;
+
+      @include respond-to(medium) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
 
     .author-description {
       margin: 0 auto;
+      display: block;
+
+      @include respond-to(medium) {
+        color: #9c9c96;
+      }
     }
   }
 }
@@ -213,7 +227,7 @@ $more-article-gray: #e0d9d1;
     padding-left: 0;
 
     .tags {
-      border-top: 1px solid $more-article-gray;
+      border-top: $more-underline;
       padding-top: 20px;
 
       a {
@@ -268,7 +282,7 @@ $more-article-gray: #e0d9d1;
   }
 
   .related {
-    border-top: 1px solid $more-article-gray;
+    border-top: $more-underline;
     padding: 20px 1em 0 1em;
 
     @include respond-to(large) {
@@ -449,7 +463,7 @@ $more-article-gray: #e0d9d1;
 
     .list-body {
       padding-bottom: 35px;
-      border-bottom: 1px solid $more-article-gray;
+      border-bottom: $more-underline;
     }
   }
 }
