@@ -3,10 +3,6 @@ Category
 
 Multi-tile section displaying articles from a specific category
 
-$border-color: #E0E2E2;
-$border-color (defined in _more-trending.scss) is used below as it was not defined
-in _settings.scss
-
 Markup:
 <div class="category-section-main">
   <div class="row">
@@ -160,6 +156,8 @@ Markup:
 
 Styleguide 4.1
 */
+
+// $border-color (defined in _more-trending.scss) is used below as it was not defined in _settings.scss
 
 .category-section-main {
   padding-bottom: 0;

@@ -3,10 +3,6 @@ News & Trending
 
 6 panel news and trending top articles on More Homepage.
 
-$border-color: #E0E2E2;
-$border-color is defined used below (and in the _more-category.scss) as it was not defined
-in _settings.scss
-
 Markup:
 <div class="trending-main">
   <div class="row">
@@ -201,6 +197,8 @@ Markup:
 Styleguide 4.1
 */
 
+
+// $border-color is defined and used below (and in the _more-category.scss) as it was not defined in _settings.scss
 $border-color: #E0E2E2;
 
 .trending-main, .category-section-main {
