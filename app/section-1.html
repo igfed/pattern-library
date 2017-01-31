@@ -97,7 +97,7 @@
                   <li><a href="#section-1.5">Buttons and Links</a></li>
               </li>
               <li>
-                  <li><a href="#section-1.6">Form Inputs</a></li>
+                  <li><a href="#section-1.6">Forms</a></li>
               </li>
               <li>
                   <li><a href="#section-1.7">Tables</a></li>
@@ -462,28 +462,298 @@
 
                 <article class="pattern-content" id="section-1.6">
                   <header>
-                    <h2>Form Inputs</h2>
-                    <p><p>Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.</p>
+                    <h2>Forms</h2>
+                    <p><p>Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
+
+</p>
+<pre><code>      &lt;!-- The form name is what submission/validation will key on --&gt;
+      &lt;form id=&quot;my-form-id&quot; name=&quot;my-form-name&quot; data-endpoint=&quot;https://api.ig.ddb.to/lead&quot; data-success=&quot;&quot;
+            data-cancel=&quot;http://investorsgroup.com&quot; method=&quot;get&quot; novalidate=&quot;novalidate&quot;&gt;
+
+          &lt;div class=&quot;alert callout&quot; style=&quot;display: none;&quot;&gt;
+              &lt;p&gt;&lt;i class=&quot;fi-alert&quot;&gt;&lt;/i&gt; There are some errors in your form.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Form Legend --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;legend&gt;Form Components&lt;/legend&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Form Description --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 medium-10 columns end padding-bottom&quot;&gt;
+                  &lt;p&gt;All possible form elements (ie, inputs, selects, radios etc) are included here.&lt;/p&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Base Form Elements --&gt;
+          &lt;div class=&quot;row padding-top&quot;&gt;
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;firstname&quot;&gt;First Name&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;lastname&quot; name=&quot;lastname&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;lastname&quot;&gt;Last Name&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input type=&quot;text&quot; id=&quot;phone&quot; name=&quot;phone&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;phone&quot;&gt;Phone Number&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;small-12 medium-2 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input type=&quot;number&quot; id=&quot;extension&quot; name=&quot;extension&quot;&gt;
+                      &lt;label for=&quot;extension&quot;&gt;Ext. (optional)&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;email&quot;&gt;Email Address&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-input&quot;&gt;
+                      &lt;input id=&quot;postal_code&quot; name=&quot;postal_code&quot; type=&quot;text&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;postal_code&quot;&gt;Postal Code&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-select&quot;&gt;
+                      &lt;select id=&quot;sampleSelect&quot; name=&quot;sample_select&quot; required&gt;
+                          &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+                          &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+                          &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+                          &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+                          &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+                      &lt;/select&gt;
+                      &lt;label for=&quot;sample_select&quot;&gt;Sample Select Box&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- 2-option toggle --&gt;
+          &lt;div class=&quot;row form-group-toggle&quot;&gt;
+              &lt;p class=&quot;toggle-title&quot;&gt;Toggle Title&lt;/p&gt;
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                      &lt;div class=&quot;small-6 medium-6 large-4 collapse-right columns&quot;&gt;
+                          &lt;input id=&quot;switch1&quot; data-content=&quot;toggle-content-1&quot; class=&quot;toggler&quot; type=&quot;radio&quot;
+                                 value=&quot;&quot; name=&quot;switch&quot; checked=&quot;checked&quot;&gt;
+                          &lt;label for=&quot;switch1&quot;&gt;Option 1&lt;/label&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;small-6 medium-6 large-4 collapse-left columns end&quot;&gt;
+                          &lt;input id=&quot;switch2&quot; data-content=&quot;toggle-content-2&quot; class=&quot;toggler&quot; type=&quot;radio&quot;
+                                 value=&quot;&quot; name=&quot;switch&quot;&gt;
+                          &lt;label for=&quot;switch2&quot;&gt;Option 2&lt;/label&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                      &lt;div class=&quot;small-12 columns toggle-content toggle-content-1&quot;&gt;
+                          &lt;div class=&quot;form-group-input&quot;&gt;
+                              &lt;input id=&quot;phone2&quot; name=&quot;email&quot; type=&quot;tel&quot;&gt;
+                              &lt;label for=&quot;phone2&quot;&gt;Phone&lt;/label&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+
+                  &lt;/div&gt;
+                  &lt;div class=&quot;row&quot;&gt;
+                      &lt;div class=&quot;small-12 columns toggle-content toggle-content-2&quot;&gt;
+                          &lt;div class=&quot;form-group-input&quot;&gt;
+                              &lt;input id=&quot;email2&quot; name=&quot;email2&quot; type=&quot;email&quot;&gt;
+                              &lt;label for=&quot;email2&quot;&gt;Email Address&lt;/label&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Checkbox Group --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;fieldset class=&quot;group&quot; role=&quot;group&quot;&gt;
+                      &lt;legend&gt;Checkbox Group&lt;/legend&gt;
+                      &lt;!-- Use this when default location is not ideal --&gt;
+
+                      &lt;div class=&quot;row&quot;&gt;
+                          &lt;span class=&quot;custom-error-location&quot;&gt;&lt;/span&gt;
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic1&quot; name=&quot;checkbox_group&quot;
+                                         required=&quot;required&quot;&gt;
+                                  &lt;label for=&quot;topic1&quot;&gt;Retirement&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic2&quot; name=&quot;checkbox_group&quot;&gt;
+                                  &lt;label for=&quot;topic2&quot;&gt;Investment&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic3&quot; name=&quot;checkbox_group&quot;&gt;
+                                  &lt;label for=&quot;topic3&quot;&gt;Mortgages&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class=&quot;row&quot;&gt;
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic4&quot; name=&quot;checkbox_group&quot;&gt;
+                                  &lt;label for=&quot;topic4&quot;&gt;Estate Planning&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic5&quot; name=&quot;checkbox_group&quot;&gt;
+                                  &lt;label for=&quot;topic5&quot;&gt;Tax Planning&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+
+                          &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                              &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                  &lt;input type=&quot;checkbox&quot; id=&quot;topic6&quot; name=&quot;checkbox_group&quot;&gt;
+                                  &lt;label for=&quot;topic6&quot;&gt;Insurance&lt;/label&gt;
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/fieldset&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;hr/&gt;
+
+          &lt;!-- Radio Group --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 medium-4 columns padding-top&quot;&gt;
+                  &lt;p aria-hidden=&quot;true&quot;&gt;I am currently a client of Investors Group&lt;/p&gt;
+                  &lt;span class=&quot;custom-error-location&quot;&gt;&lt;/span&gt;
+                  &lt;!-- Use this when default location is not ideal --&gt;
+              &lt;/div&gt;
+              &lt;fieldset&gt;
+                  &lt;legend class=&quot;show-for-sr&quot;&gt;I am currently a client of Investors Group&lt;/legend&gt;
+                  &lt;div class=&quot;small-6 medium-4 large-3 columns&quot;&gt;
+                      &lt;div class=&quot;form-group-radio&quot;&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;current_client&quot; value=&quot;yes&quot; id=&quot;currentClientYes&quot;
+                                 required=&quot;required&quot;&gt;
+                          &lt;label for=&quot;currentClientYes&quot;&gt;Yes&lt;/label&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;small-6 medium-4 large-3 columns end&quot;&gt;
+                      &lt;div class=&quot;form-group-radio&quot;&gt;
+                          &lt;input type=&quot;radio&quot; name=&quot;current_client&quot; value=&quot;no&quot; id=&quot;currentClientNo&quot;&gt;
+                          &lt;label for=&quot;currentClientNo&quot;&gt;No&lt;/label&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/fieldset&gt;
+          &lt;/div&gt;
+
+          &lt;hr/&gt;
+
+          &lt;!-- Single Option Checkbox --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                      &lt;input id=&quot;optIn&quot; name=&quot;opt_in&quot; type=&quot;checkbox&quot; required=&quot;required&quot;
+                             aria-required=&quot;true&quot;&gt;
+                      &lt;label for=&quot;opt_in&quot;&gt;By providing my telephone number and/or email address, I CONSENT
+                          to Investors Group using this information to contact me for marketing
+                          purposes.&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;hr/&gt;
+
+          &lt;!-- Text Area --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;div class=&quot;form-group-text&quot;&gt;
+                  &lt;textarea id=&quot;messageBody&quot; rows=&quot;4&quot; cols=&quot;50&quot; maxlength=&quot;250&quot;
+                            name=&quot;message_body&quot; required=&quot;required&quot;&gt;&lt;/textarea&gt;
+                      &lt;label for=&quot;message_body&quot;&gt;Personal message&lt;/label&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Legal --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 medium-9 columns&quot;&gt;
+                  &lt;p class=&quot;legal&quot;&gt;For your privacy and protection, we remind you that this email service is
+                      not for confidential inquiries. Please do not include any confidential information in
+                      your message (e.g. account numbers, credit card numbers, social insurance numbers, trade
+                      requests or other personal information).&lt;/p&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Submit/Cancel Buttons --&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;button type=&quot;submit&quot; class=&quot;button&quot;&gt;Submit&lt;/button&gt;
+                  &lt;button class=&quot;cancel button secondary&quot;&gt;Cancel&lt;/button&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+
+      &lt;/form&gt;
+
+      &lt;!-- Success Message --&gt;
+      &lt;div class=&quot;success-message&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;div class=&quot;check&quot;&gt;&lt;/div&gt;
+                  &lt;span&gt;Success!&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+                  &lt;p&gt;Your request for a call to discuss your RRSP has been received. An Investors Group
+                      Consultant
+                      will be in touch soon.&lt;/p&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;row text-center&quot;&gt;
+              &lt;div class=&quot;small-10 small-push-1 medium-4 medium-push-4 columns&quot;&gt;
+                  &lt;a href=&quot;&quot; class=&quot;outline-btn&quot;&gt;Return to Retirement Page&lt;/a&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;</code></pre>
 </p>
                   </header>
                   <section>
                     <div class="sample panel">
-                      <form action="" class="ig-form" method="post">
-   <div class="row">
-      <div class="medium-6 columns">
-          <div class="form-group-input">
-             <input type="text" required>
-             <label>.medium-6.columns</label>
+                            <div class="ig-form">
+          <div class="screen">
+              <div class="throbber"></div>
           </div>
-      </div>
-      <div class="medium-6 columns">
-         <div class="form-group-input">
-            <input type="password" required>
-            <label>.medium-6.columns</label>
-         </div>
-      </div>
-   </div>
-</form>
                     </div>
 
 
@@ -491,22 +761,10 @@
                        <li class="accordion-item" data-accordion-item>
                          <a href="#" class="accordion-title" >Code</a>
                          <div class="accordion-content" data-tab-content>
-                            <pre><code class="lang-html">&lt;form action=&quot;&quot; class=&quot;ig-form&quot; method=&quot;post&quot;&gt;
-   &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;medium-6 columns&quot;&gt;
-          &lt;div class=&quot;form-group-input&quot;&gt;
-             &lt;input type=&quot;text&quot; required&gt;
-             &lt;label&gt;.medium-6.columns&lt;/label&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;medium-6 columns&quot;&gt;
-         &lt;div class=&quot;form-group-input&quot;&gt;
-            &lt;input type=&quot;password&quot; required&gt;
-            &lt;label&gt;.medium-6.columns&lt;/label&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+                            <pre><code class="lang-html">      &lt;div class=&quot;ig-form&quot;&gt;
+          &lt;div class=&quot;screen&quot;&gt;
+              &lt;div class=&quot;throbber&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;</code></pre>
                          </div>
                        </li>
                        <li class="accordion-item" data-accordion-item>
@@ -589,6 +847,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <!-- endbower -->
@@ -596,6 +855,7 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/additional-methods.js"></script>
     <!-- endbuild -->
   </body>
 </html>
