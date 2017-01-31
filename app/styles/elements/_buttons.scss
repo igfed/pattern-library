@@ -131,7 +131,7 @@ a:hover .tertiary-cta:before  {
 	    content: ' ';
 	    left: 10px;
  		right: 85%;
-	    height: 5px;
+	    height: 3px;
 	    top: 110%;
 	    background-color: white;
     	 -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
@@ -141,6 +141,7 @@ a:hover .tertiary-cta:before  {
  			left: 14px;
  			right: 80%;
 			top: calc(100% - .05rem);
+			height: 5px;
 
 		}
 
