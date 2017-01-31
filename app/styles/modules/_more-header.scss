@@ -32,20 +32,23 @@
 		display: none;
 
 		@include respond-to(medium){
+			display: table;
 			width: 100%;
-		    display: -webkit-flex;
-		    display: -moz-flex;
-		    display: -ms-flexbox;
-		    display: flex;
-		    -webkit-box-pack: justify;
-		    -moz-box-pack: justify;
-		    box-pack: justify;
-		    -webkit-justify-content: space-between;
-		    -moz-justify-content: space-between;
-		    -ms-justify-content: space-between;
-		    -o-justify-content: space-between;
-		    justify-content: space-between;
-		    -ms-flex-pack: justify;
+		    // display: -webkit-flex;
+		    // display: -moz-flex;
+		    // display: -ms-flexbox;
+		    // display: flex;
+		    // -webkit-box-pack: justify;
+		    // -moz-box-pack: justify;
+		    // box-pack: justify;
+		    // -webkit-justify-content: space-between;
+		    // -moz-justify-content: space-between;
+		    // -ms-justify-content: space-between;
+		    // -o-justify-content: space-between;
+		    // justify-content: space-between;
+		    // -ms-flex-pack: justify;
+		    // -webkit-flex-grow: 1;
+		    // flex-grow: 1;
 		}
 
 		&.active{
@@ -62,8 +65,9 @@
 		    }
 
 			@include respond-to(medium){
+				display: table-cell;
 				border-bottom: none;
-				display: inline-block;
+				// display: inline-block;
 			}
 		}
 
