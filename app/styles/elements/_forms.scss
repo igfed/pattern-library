@@ -8,29 +8,24 @@ Markup:
           <div class="screen">
               <div class="throbber"></div>
           </div>
-
           <!-- The form name is what submission/validation will key on -->
           <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
                 data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
-
               <div class="alert callout" style="display: none;">
                   <p><i class="fi-alert"></i> There are some errors in your form.</p>
               </div>
-
               <!-- Form Legend -->
               <div class="row">
                   <div class="small-12 columns">
-                      <legend>Form Components</legend>
+                      <legend>Form Title</legend>
                   </div>
               </div>
-
               <!-- Form Description -->
               <div class="row">
                   <div class="small-12 medium-10 columns end padding-bottom">
-                      <p>All possible form elements (ie, inputs, selects, radios etc) are included here.</p>
+                      <p>Lorem ipsum dolor form description</p>
                   </div>
               </div>
-
               <!-- Base Form Elements -->
               <div class="row padding-top">
                   <div class="small-12 medium-6 columns">
@@ -48,7 +43,6 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <div class="row">
                   <div class="small-12 medium-4 columns">
                       <div class="form-group-input">
@@ -57,14 +51,12 @@ Markup:
                           <label for="phone">Phone Number</label>
                       </div>
                   </div>
-
                   <div class="small-12 medium-2 columns">
                       <div class="form-group-input">
                           <input type="number" id="extension" name="extension">
                           <label for="extension">Ext. (optional)</label>
                       </div>
                   </div>
-
                   <div class="small-12 medium-6 columns">
                       <div class="form-group-input">
                           <input id="email" name="email" type="email" required="required"
@@ -73,7 +65,6 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <div class="row">
                   <div class="small-12 medium-6 columns">
                       <div class="form-group-input">
@@ -82,7 +73,6 @@ Markup:
                           <label for="postal_code">Postal Code</label>
                       </div>
                   </div>
-
                   <div class="small-12 medium-6 columns">
                       <div class="form-group-select">
                           <select id="sampleSelect" name="sample_select" required>
@@ -96,7 +86,6 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <!-- 2-option toggle -->
               <div class="row form-group-toggle">
                   <p class="toggle-title">Toggle Title</p>
@@ -122,7 +111,6 @@ Markup:
                                   <label for="phone2">Phone</label>
                               </div>
                           </div>
-
                       </div>
                       <div class="row">
                           <div class="small-12 columns toggle-content toggle-content-2">
@@ -134,14 +122,12 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <!-- Checkbox Group -->
               <div class="row">
                   <div class="small-12 columns">
                       <fieldset class="group" role="group">
                           <legend>Checkbox Group</legend>
                           <!-- Use this when default location is not ideal -->
-
                           <div class="row">
                               <span class="custom-error-location"></span>
                               <div class="small-12 medium-4 columns">
@@ -151,14 +137,12 @@ Markup:
                                       <label for="topic1">Retirement</label>
                                   </div>
                               </div>
-
                               <div class="small-12 medium-4 columns">
                                   <div class="form-group-checkbox">
                                       <input type="checkbox" id="topic2" name="checkbox_group">
                                       <label for="topic2">Investment</label>
                                   </div>
                               </div>
-
                               <div class="small-12 medium-4 columns">
                                   <div class="form-group-checkbox">
                                       <input type="checkbox" id="topic3" name="checkbox_group">
@@ -166,7 +150,6 @@ Markup:
                                   </div>
                               </div>
                           </div>
-
                           <div class="row">
                               <div class="small-12 medium-4 columns">
                                   <div class="form-group-checkbox">
@@ -174,14 +157,12 @@ Markup:
                                       <label for="topic4">Estate Planning</label>
                                   </div>
                               </div>
-
                               <div class="small-12 medium-4 columns">
                                   <div class="form-group-checkbox">
                                       <input type="checkbox" id="topic5" name="checkbox_group">
                                       <label for="topic5">Tax Planning</label>
                                   </div>
                               </div>
-
                               <div class="small-12 medium-4 columns">
                                   <div class="form-group-checkbox">
                                       <input type="checkbox" id="topic6" name="checkbox_group">
@@ -192,9 +173,7 @@ Markup:
                       </fieldset>
                   </div>
               </div>
-
               <hr/>
-
               <!-- Radio Group -->
               <div class="row">
                   <div class="small-12 medium-4 columns padding-top">
@@ -219,9 +198,7 @@ Markup:
                       </div>
                   </fieldset>
               </div>
-
               <hr/>
-
               <!-- Single Option Checkbox -->
               <div class="row">
                   <div class="small-12 columns">
@@ -234,9 +211,7 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <hr/>
-
               <!-- Text Area -->
               <div class="row">
                   <div class="small-12 columns">
@@ -247,7 +222,6 @@ Markup:
                       </div>
                   </div>
               </div>
-
               <!-- Legal -->
               <div class="row">
                   <div class="small-12 medium-9 columns">
@@ -257,7 +231,6 @@ Markup:
                           requests or other personal information).</p>
                   </div>
               </div>
-
               <!-- Submit/Cancel Buttons -->
               <div class="row">
                   <div class="small-12 columns">
@@ -265,9 +238,7 @@ Markup:
                       <button class="cancel button secondary">Cancel</button>
                   </div>
               </div>
-
           </form>
-
           <!-- Success Message -->
           <div class="success-message">
               <div class="row">
