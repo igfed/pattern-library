@@ -46,6 +46,14 @@
 
     @include respond-to(large) {
       margin: 0 25px;
+
+      &:hover {
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
@@ -227,7 +235,10 @@
   }
 }
 
-// More Homepage hero slide
+/*
+  More Homepage Hero component
+*/
+
 .home-hero {
   position: relative;
 

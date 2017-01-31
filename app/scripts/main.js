@@ -71,18 +71,6 @@ $(function(){
 			jsSocialDrawer.addClass('js-socialdrawer-opened');
 		}
 	});
-
-	$('.homepage-carousel-slide').hover(
-		showSocialListOnHover, hideSocialListOnHover
-	);
-
-	$('.home-hero').hover(
-		showSocialListOnHover, hideSocialListOnHover
-	);
-
-	$('.tile').hover(
-		showSocialListOnHover, hideSocialListOnHover
-	);
 });
 
 //More Header
@@ -185,20 +173,3 @@ $('.help-topics-accordion').on('up.zf.accordion', function(event) {
         $('html,body').animate({scrollTop: $('.is-active').offset().top}, 'slow');
     }, 10); //Adjust to match slideSpeed
 });
-
-// helper functions
-const showSocialListOnHover = function() {
-	if ($(window).width() > 1024) {
-		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
-
-		jsSocialDrawerList.addClass('show-list-on-hover');
-	}
-}
-
-const hideSocialListOnHover = function() {
-	if ($(window).width() > 1024) {
-		var jsSocialDrawerList = $(this).find('.js-socialdrawer > ul');
-
-		jsSocialDrawerList.removeClass('show-list-on-hover');
-	}
-}

@@ -32,6 +32,14 @@
     @include respond-to(large) {
       border-right: 1px solid #E0E2E2 !important;
       border-bottom: 1px solid #E0E2E2 !important;
+
+      &:hover {
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
