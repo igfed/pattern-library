@@ -20,6 +20,13 @@ const form = (function () {
       $form = $formWrapper.find('form');
       endpointURL = $formWrapper.find('form').data('endpoint');
       cancelURL = $formWrapper.find('form').data('cancel');
+
+      // Very simple form toggler
+      $('.toggler').on('click', function(){
+        $('.toggle-content').hide();
+        $('.' + $(this).data('content')).show();
+      });
+
       validation();
     }
   }

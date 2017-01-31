@@ -45,21 +45,21 @@
                         <p><i class="fi-alert"></i> There are some errors in your form.</p>
                     </div>
 
-                    <!-- Not sure on styles for Legends - but we should use a main legend instead of an h# -->
+                    <!-- Form Legend -->
                     <div class="row">
                         <div class="small-12 columns">
-                            <legend>Request a call</legend>
+                            <legend>Form Components</legend>
                         </div>
                     </div>
 
+                    <!-- Form Description -->
                     <div class="row">
                         <div class="small-12 medium-10 columns end padding-bottom">
-                            <p>If you would like to speak with an Investors Group Advisor about your retirement,
-                                please
-                                complete the fields below, and click “Send Request”.</p>
+                            <p>All possible form elements (ie, inputs, selects, radios etc) are included here.</p>
                         </div>
                     </div>
 
+                    <!-- Base Form Elements -->
                     <div class="row padding-top">
                         <div class="small-12 medium-6 columns">
                             <div class="form-group-input">
@@ -125,10 +125,49 @@
                         </div>
                     </div>
 
+                    <!-- 2-option toggle -->
+                    <div class="row form-group-toggle">
+                        <p class="toggle-title">Toggle Title</p>
+                        <div class="small-12 medium-6 columns">
+                            <div class="row">
+                                <div class="small-6 medium-6 large-4 collapse-right columns">
+                                    <input id="switch1" data-content="toggle-content-1" class="toggler" type="radio"
+                                           value="" name="switch" checked="checked">
+                                    <label for="switch1">Option 1</label>
+                                </div>
+                                <div class="small-6 medium-6 large-4 collapse-left columns end">
+                                    <input id="switch2" data-content="toggle-content-2" class="toggler" type="radio"
+                                           value="" name="switch">
+                                    <label for="switch2">Option 2</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-12 medium-6 columns">
+                            <div class="row">
+                                <div class="small-12 columns toggle-content toggle-content-1">
+                                    <div class="form-group-input">
+                                        <input id="phone2" name="email" type="tel">
+                                        <label for="phone2">Phone</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="small-12 columns toggle-content toggle-content-2">
+                                    <div class="form-group-input">
+                                        <input id="email2" name="email2" type="email">
+                                        <label for="email2">Email Address</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox Group -->
                     <div class="row">
                         <div class="small-12 columns">
                             <fieldset class="group" role="group">
-                                <legend>Topics to Discuss</legend>
+                                <legend>Checkbox Group</legend>
                                 <!-- Use this when default location is not ideal -->
 
                                 <div class="row">
@@ -184,6 +223,7 @@
 
                     <hr/>
 
+                    <!-- Radio Group -->
                     <div class="row">
                         <div class="small-12 medium-4 columns padding-top">
                             <p aria-hidden="true">I am currently a client of Investors Group</p>
@@ -210,6 +250,7 @@
 
                     <hr/>
 
+                    <!-- Single Option Checkbox -->
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="form-group-checkbox">
@@ -224,16 +265,18 @@
 
                     <hr/>
 
+                    <!-- Text Area -->
                     <div class="row">
                         <div class="small-12 columns">
                             <div class="form-group-text">
                             <textarea id="messageBody" rows="4" cols="50" maxlength="250"
                                       name="message_body" required="required"></textarea>
-                            <label for="message_body">Personal message</label>
+                                <label for="message_body">Personal message</label>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Legal -->
                     <div class="row">
                         <div class="small-12 medium-9 columns">
                             <p class="legal">For your privacy and protection, we remind you that this email service is
@@ -243,6 +286,7 @@
                         </div>
                     </div>
 
+                    <!-- Submit/Cancel Buttons -->
                     <div class="row">
                         <div class="small-12 columns">
                             <button type="submit" class="button">Submit</button>
@@ -252,6 +296,7 @@
 
                 </form>
 
+                <!-- Success Message -->
                 <div class="success-message">
                     <div class="row">
                         <div class="small-12 columns">
