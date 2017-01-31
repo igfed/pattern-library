@@ -127,6 +127,10 @@ $more-underline: 1px solid $more-article-gray;
   }
 }
 
+.content-right-image-container {
+  border-bottom: $more-underline;
+}
+
 .article-body {
   @include respond-to(medium) {
     margin: 35px auto;
@@ -173,9 +177,10 @@ $more-underline: 1px solid $more-article-gray;
     }
   }
 
+  // right-image-content
+
   .author-pic-container {
     // create a variable for this
-    border-bottom: $more-underline;
     padding-bottom: 35px;
     margin-top: 20px;
     overflow: auto;
