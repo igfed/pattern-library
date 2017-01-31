@@ -221,14 +221,13 @@ $more-article-gray: #e0d9d1;
 
   .related {
     border-top: 1px solid $more-article-gray;
-    padding: 20px 1em 0 1em;
-
-    @include respond-to(large) {
-      padding: 20px 0 0 0;
-    }
+    padding: 20px 0 0 0;
 
     .column-block {
       margin-bottom: 0;
+      @include respond-to(medium) {
+        padding: 0 10px 0 10px;
+      }
     }
 
     .image-container {
