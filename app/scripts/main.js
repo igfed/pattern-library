@@ -45,6 +45,9 @@ const form = (function () {
     }, 'Please specify a valid postal code.');
 
     $form.validate({
+      submitHandler: function() {
+        form.process();
+      },
       errorPlacement: function (label, element) {
         // Use the custom-error-location marker class to change where the error label shows up
         if (!$(element).closest('.row').find('.custom-error-location').length) {
@@ -84,19 +87,17 @@ const form = (function () {
         }
       }
     });
-    $form.find('button[type=submit]').on('click', function () {
-      $form.submit();
-    });
+
     $form.find('button.cancel').on('click', function () {
       window.location.replace(cancelURL);
     });
 
   }
 
-  function process(event) {
+  function process(form) {
+
     var formDataRaw,
       formDataParsed;
-    event.preventDefault();
 
     if ($form.valid()) {
       $form.removeClass('server-error');
