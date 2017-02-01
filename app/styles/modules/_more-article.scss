@@ -611,6 +611,14 @@ $link-hover: #0BAB7B;
         }
       }
 
+      .list-header {
+        margin-top: 22px;
+
+        @include respond-to(medium) {
+          margin-top: 0;
+        }
+      }
+
       p {
         margin-bottom: 18px;
       }
