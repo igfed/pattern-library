@@ -14,3 +14,27 @@
 // 	<p><a data-open="exampleModal1">Click me for a modal</a></p>
 //
 // Styleguide 2.1
+
+.reveal.full {
+
+  .close-button {
+    right: 40px;
+    top: 25px;
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 55%;
+      top: 49%;
+      left: 10px;
+      background: black;
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}
