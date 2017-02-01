@@ -10,6 +10,7 @@ const form = (function () {
     $formWrapper;
 
   function init() {
+    $(document).foundation();
     // Forms should always be wrapped in '.ig-form'
     if ($('.ig-form').length) {
       $formWrapper = $('.ig-form');
