@@ -103,7 +103,7 @@ Markup:
                           </div>
                       </div>
                   </div>
-                  <div class="small-12 medium-6 columns">
+                  <div class="small-12 medium-6 columns toggle-content-container">
                       <div class="row">
                           <div class="small-12 columns toggle-content toggle-content-1">
                               <div class="form-group-input">
@@ -594,6 +594,16 @@ select {
       margin-bottom: 10px;
     }
 
+    .toggle-content-container {
+      margin-top: 25px;
+    }
+
+    @include respond-to(medium) {
+      .toggle-content-container {
+        margin-top: 0;
+      }
+    }
+
     input.toggler {
       opacity: 0;
       position: absolute;
@@ -800,7 +810,7 @@ select {
         height: 8.3333em;
         margin: 4.1666em;
         margin-left: 0;
-        background: transparent url("../images/ui/check.png") no-repeat scroll center center;
+        background: transparent url("../images/check.png") no-repeat scroll center center;
         background-size: 8.3333em, 8.3333em;
         vertical-align: middle;
 
