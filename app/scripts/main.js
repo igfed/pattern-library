@@ -106,9 +106,9 @@ const form = (function () {
 
       // If we need to modify the data, use parse method
       formDataParsed = parse(formDataRaw);
+      // Submit final data
       submit(formDataParsed);
     }
-    console.log(formDataParsed);
     return false;
   }
 

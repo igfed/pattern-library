@@ -335,6 +335,10 @@ select {
 .ig-form {
   margin-top: 20px;
 
+  &.success {
+    margin-top: 0;
+  }
+
   /* Default error styling */
   label.error {
     text-transform: uppercase;
@@ -595,7 +599,7 @@ select {
     }
 
     .toggle-content-container {
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     @include respond-to(medium) {
@@ -798,11 +802,12 @@ select {
   .success-message {
     text-align: center;
 
+    a.button {
+      margin-top: 50px;
+    }
+
     > div.row:first-child {
       background-color: #0ed59a;
-      left: 0;
-      position: absolute;
-      top: 0;
 
       .check {
         display: inline-block;
@@ -815,7 +820,7 @@ select {
         vertical-align: middle;
 
         @media screen and (max-width: 767px) {
-          margin-right: 1.5em;
+          margin: 20px auto;
         }
 
         + span {
@@ -824,37 +829,24 @@ select {
           display: inline-block;
           vertical-align: middle;
           font-weight: 300;
+          margin-left: 25px;
 
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: 420px) {
             font-size: 4em;
+            margin-left: 0;
+            margin-bottom: 40px;
           }
         }
       }
 
-      p {
-        margin: 0 auto;
-        text-align: left;
-        width: 60%;
-      }
-
       + div.row {
-        margin-top: 17.3333em;
-        width: 60%;
-        text-align: left;
+        margin-top: 60px;
+        text-align: center;
 
         @media screen and (max-width: 767px) {
           width: 80%;
+          margin-left: 10%;
         }
-      }
-    }
-
-    .outline-btn {
-      margin-top: 3.16666em;
-      margin-bottom: 6.16666em;
-
-      @media screen and (max-width: 767px) {
-        margin-top: 0;
-        margin-bottom: 3em;
       }
     }
   }
