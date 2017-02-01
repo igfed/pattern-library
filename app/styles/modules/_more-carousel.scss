@@ -93,7 +93,7 @@ Styleguide 4.1
   }
 
   .large-card-content {
-    padding: 40px 25px;
+    padding: 40px 25px 0 25px;
 
     @include respond-to(medium) {
       padding: 20px 0 0 20px;
@@ -153,10 +153,12 @@ Styleguide 4.1
 
     @include respond-to(medium) {
       margin-bottom: 15px;
+      line-height: 28px;
     }
 
     @include respond-to(large) {
       margin-bottom: 0;
+      line-height: 36px;
     }
   }
 
@@ -241,11 +243,10 @@ Styleguide 4.1
     position: relative;
     text-align: right;
     float: right;
-    bottom: 70px;
-    right: 10px;
+    bottom: 30px;
+    right: 25px;
 
     @include respond-to(medium) {
-      bottom: 0;
       position: static;
     }
 
@@ -256,9 +257,8 @@ Styleguide 4.1
     }
 
     .share {
-      // position: relative;
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       max-height: 0;
       overflow: hidden;
       transition: all 0.5s;
@@ -267,6 +267,7 @@ Styleguide 4.1
         list-style-type: none;
         padding: 0;
         opacity: 1;
+        margin-bottom: 0;
 
         li {
           display: inline-block;
@@ -277,9 +278,9 @@ Styleguide 4.1
         position: absolute;
         margin-top: 0;
         margin-bottom: 0;
-        bottom: 66px;
+        bottom: 20px;
         right: 25px;
-        overflow: visible;
+        max-height: 33px;
       }
 
       @include respond-to(large) {
