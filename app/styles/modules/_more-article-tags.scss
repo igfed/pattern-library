@@ -1,0 +1,81 @@
+/*
+More Article Tags
+
+Template for optional Tags section of the More Articles page.
+
+Markup:
+<div class="article-tags-section">
+  <div class="row">
+    <div class="small-11 small-centered medium-10 medium-offset-1 columns">
+      <div class="small-12 medium-6 columns container">
+        <h3 class="sub-title text-left">
+          Article Tags
+        </h3>
+        <div class="tags body-copy">
+          <a>Canada 150</a>,
+          <a>Cross-country</a>,
+          <a>Provinces</a>,
+          <a>Travel</a>
+        </div>
+      </div>
+      <div class="small-12 medium-6 columns container">
+        <button class="button">
+          Find all relevant stories
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+ */
+
+.article-tags-section {
+  margin: 55px auto;
+
+  h3 {
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      height: 2px;
+      width: 10px;
+      background-color: $darkest-color;
+    }
+  }
+
+  .container {
+    padding-left: 0;
+
+    .tags {
+      border-top: 1px solid $more-article-gray;
+      padding-top: 20px;
+
+      a {
+        &:hover {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
+
+        &:active {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
+      }
+    }
+  }
+
+  button {
+    margin-top: 30px;
+
+    @include respond-to(large) {
+      margin-top: 40px;
+      margin-left: 35px;
+    }
+  }
+}
