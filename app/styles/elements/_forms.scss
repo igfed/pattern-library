@@ -4,262 +4,283 @@ Forms
 Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
 
 Markup:
-      <div class="ig-form">
-          <div class="screen">
-              <div class="throbber"></div>
-          </div>
-          <!-- The form name is what submission/validation will key on -->
-          <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
-                data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
-              <div class="alert callout" style="display: none;">
-                  <p><i class="fi-alert"></i> There are some errors in your form.</p>
-              </div>
-              <!-- Form Legend -->
-              <div class="row">
-                  <div class="small-12 columns">
-                      <legend>Form Title</legend>
-                  </div>
-              </div>
-              <!-- Form Description -->
-              <div class="row">
-                  <div class="small-12 medium-10 columns end padding-bottom">
-                      <p>Lorem ipsum dolor form description</p>
-                  </div>
-              </div>
-              <!-- Base Form Elements -->
-              <div class="row padding-top">
-                  <div class="small-12 medium-6 columns">
-                      <div class="form-group-input">
-                          <input type="text" id="firstname" name="firstname" minlength="2" required="required"
-                                 aria-required="true">
-                          <label for="firstname">First Name</label>
-                      </div>
-                  </div>
-                  <div class="small-12 medium-6 columns">
-                      <div class="form-group-input">
-                          <input type="text" id="lastname" name="lastname" minlength="2" required="required"
-                                 aria-required="true">
-                          <label for="lastname">Last Name</label>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="small-12 medium-4 columns">
-                      <div class="form-group-input">
-                          <input type="text" id="phone" name="phone" minlength="2" required="required"
-                                 aria-required="true">
-                          <label for="phone">Phone Number</label>
-                      </div>
-                  </div>
-                  <div class="small-12 medium-2 columns">
-                      <div class="form-group-input">
-                          <input type="number" id="extension" name="extension">
-                          <label for="extension">Ext. (optional)</label>
-                      </div>
-                  </div>
-                  <div class="small-12 medium-6 columns">
-                      <div class="form-group-input">
-                          <input id="email" name="email" type="email" required="required"
-                                 aria-required="true">
-                          <label for="email">Email Address</label>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="small-12 medium-6 columns">
-                      <div class="form-group-input">
-                          <input id="postal_code" name="postal_code" type="text" required="required"
-                                 aria-required="true">
-                          <label for="postal_code">Postal Code</label>
-                      </div>
-                  </div>
-                  <div class="small-12 medium-6 columns">
-                      <div class="form-group-select">
-                          <select id="sampleSelect" name="sample_select" required>
-                              <option value=""></option>
-                              <option value="volvo">Volvo</option>
-                              <option value="saab">Saab</option>
-                              <option value="mercedes">Mercedes</option>
-                              <option value="audi">Audi</option>
-                          </select>
-                          <label for="sample_select">Sample Select Box</label>
-                      </div>
-                  </div>
-              </div>
-              <!-- 2-option toggle -->
-              <div class="row form-group-toggle">
-                  <p class="toggle-title">Toggle Title</p>
-                  <div class="small-12 medium-6 columns">
-                      <div class="row">
-                          <div class="small-6 medium-6 large-4 collapse-right columns">
-                              <input id="switch1" data-content="toggle-content-1" class="toggler" type="radio"
-                                     value="" name="switch" checked="checked">
-                              <label for="switch1">Option 1</label>
-                          </div>
-                          <div class="small-6 medium-6 large-4 collapse-left columns end">
-                              <input id="switch2" data-content="toggle-content-2" class="toggler" type="radio"
-                                     value="" name="switch">
-                              <label for="switch2">Option 2</label>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="small-12 medium-6 columns toggle-content-container">
-                      <div class="row">
-                          <div class="small-12 columns toggle-content toggle-content-1">
-                              <div class="form-group-input">
-                                  <input id="phone2" name="email" type="tel">
-                                  <label for="phone2">Phone</label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="small-12 columns toggle-content toggle-content-2">
-                              <div class="form-group-input">
-                                  <input id="email2" name="email2" type="email">
-                                  <label for="email2">Email Address</label>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- Checkbox Group -->
-              <div class="row">
-                  <div class="small-12 columns">
-                      <fieldset class="group" role="group">
-                          <legend>Checkbox Group</legend>
-                          <!-- Use this when default location is not ideal -->
-                          <div class="row">
-                              <span class="custom-error-location"></span>
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic1" name="checkbox_group"
-                                             required="required">
-                                      <label for="topic1">Retirement</label>
-                                  </div>
-                              </div>
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic2" name="checkbox_group">
-                                      <label for="topic2">Investment</label>
-                                  </div>
-                              </div>
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic3" name="checkbox_group">
-                                      <label for="topic3">Mortgages</label>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic4" name="checkbox_group">
-                                      <label for="topic4">Estate Planning</label>
-                                  </div>
-                              </div>
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic5" name="checkbox_group">
-                                      <label for="topic5">Tax Planning</label>
-                                  </div>
-                              </div>
-                              <div class="small-12 medium-4 columns">
-                                  <div class="form-group-checkbox">
-                                      <input type="checkbox" id="topic6" name="checkbox_group">
-                                      <label for="topic6">Insurance</label>
-                                  </div>
-                              </div>
-                          </div>
-                      </fieldset>
-                  </div>
-              </div>
-              <hr/>
-              <!-- Radio Group -->
-              <div class="row">
-                  <div class="small-12 medium-4 columns padding-top">
-                      <p aria-hidden="true">I am currently a client of Investors Group</p>
-                      <span class="custom-error-location"></span>
-                      <!-- Use this when default location is not ideal -->
-                  </div>
-                  <fieldset>
-                      <legend class="show-for-sr">I am currently a client of Investors Group</legend>
-                      <div class="small-6 medium-4 large-3 columns">
-                          <div class="form-group-radio">
-                              <input type="radio" name="current_client" value="yes" id="currentClientYes"
-                                     required="required">
-                              <label for="currentClientYes">Yes</label>
-                          </div>
-                      </div>
-                      <div class="small-6 medium-4 large-3 columns end">
-                          <div class="form-group-radio">
-                              <input type="radio" name="current_client" value="no" id="currentClientNo">
-                              <label for="currentClientNo">No</label>
-                          </div>
-                      </div>
-                  </fieldset>
-              </div>
-              <hr/>
-              <!-- Single Option Checkbox -->
-              <div class="row">
-                  <div class="small-12 columns">
-                      <div class="form-group-checkbox">
-                          <input id="optIn" name="opt_in" type="checkbox" required="required"
-                                 aria-required="true">
-                          <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
-                              to Investors Group using this information to contact me for marketing
-                              purposes.</label>
-                      </div>
-                  </div>
-              </div>
-              <hr/>
-              <!-- Text Area -->
-              <div class="row">
-                  <div class="small-12 columns">
-                      <div class="form-group-text">
-                      <textarea id="messageBody" rows="4" cols="50" maxlength="250"
-                                name="message_body" required="required"></textarea>
-                          <label for="message_body">Personal message</label>
-                      </div>
-                  </div>
-              </div>
-              <!-- Legal -->
-              <div class="row">
-                  <div class="small-12 medium-9 columns">
-                      <p class="legal">For your privacy and protection, we remind you that this email service is
-                          not for confidential inquiries. Please do not include any confidential information in
-                          your message (e.g. account numbers, credit card numbers, social insurance numbers, trade
-                          requests or other personal information).</p>
-                  </div>
-              </div>
-              <!-- Submit/Cancel Buttons -->
-              <div class="row">
-                  <div class="small-12 columns">
-                      <button type="submit" class="button">Submit</button>
-                      <button class="cancel button secondary">Cancel</button>
-                  </div>
-              </div>
-          </form>
-          <!-- Success Message -->
-          <div class="success-message">
-              <div class="row">
-                  <div class="small-12 columns">
-                      <div class="check"></div>
-                      <span>Success!</span>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="small-12 columns">
-                      <p>Your request for a call to discuss your RRSP has been received. An Investors Group
-                          Consultant
-                          will be in touch soon.</p></div>
-              </div>
-              <div class="row text-center">
-                  <div class="small-10 small-push-1 medium-4 medium-push-4 columns">
-                      <a href="" class="outline-btn">Return to Retirement Page</a>
-                  </div>
-              </div>
-          </div>
-      </div>
+<div class="ig-form">
+    <div class="row">
+        <div class="medium-12 columns">
+            <!-- Forms must be wrapped with the ig-form class in order to function properly -->
+            <div class="screen">
+                <div class="throbber"></div>
+            </div>
+            <!-- The form name is what submission/validation will key on -->
+            <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
+                  data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
+
+                <div class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                </div>
+                <!-- Form Legend -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <legend>Form Components</legend>
+                    </div>
+                </div>
+                <!-- Form Section Heading(s) -->
+                <div class="row">
+                    <div class="small-12 medium-10 columns end form-group-section-headings padding-bottom">
+                        <h3 class="section-heading">September 12th, 2016</h3>
+                        <h3 class="section-heading">11:00am - 12:00pm</h3>
+                        <h3 class="section-heading">Toronto, Ontario</h3>
+                    </div>
+                </div>
+                <!-- Form Description -->
+                <div class="row">
+                    <div class="small-12 medium-10 columns end padding-bottom">
+                        <p class="form-description">All possible form elements (ie, inputs, selects, radios etc)
+                            are
+                            included here.</p>
+                    </div>
+                </div>
+                <!-- Base Form Elements -->
+                <div class="row padding-top">
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="firstname" name="firstname" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="firstname">First Name</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="lastname" name="lastname" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="phone" name="phone" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input type="number" id="extension" name="extension">
+                            <label for="extension">Ext. (optional)</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input id="email" name="email" type="email" required="required"
+                                   aria-required="true">
+                            <label for="email">Email Address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input id="postal_code" name="postal_code" type="text" required="required"
+                                   aria-required="true">
+                            <label for="postal_code">Postal Code</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-select">
+                            <select id="sampleSelect" name="sample_select" required>
+                                <option value=""></option>
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <label for="sample_select">Sample Select Box</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2-option toggle -->
+                <div class="row form-group-toggle">
+                    <p class="toggle-title">Sample Field Toggler</p>
+                    <div class="small-12 medium-6 columns">
+                        <div class="row">
+                            <div class="small-6 medium-6 large-4 collapse-right columns">
+                                <input id="switch1" data-content="toggle-content-1" class="toggler" type="radio"
+                                       value="" name="switch" checked="checked">
+                                <label for="switch1">Option 1</label>
+                            </div>
+                            <div class="small-6 medium-6 large-4 collapse-left columns end">
+                                <input id="switch2" data-content="toggle-content-2" class="toggler" type="radio"
+                                       value="" name="switch">
+                                <label for="switch2">Option 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns toggle-content-container">
+                        <div class="row">
+                            <div class="small-12 columns toggle-content toggle-content-1">
+                                <div class="form-group-input">
+                                    <input id="phone2" name="phone2" type="tel">
+                                    <label for="phone2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns toggle-content toggle-content-2">
+                                <div class="form-group-input">
+                                    <input id="email2" name="email2" type="email">
+                                    <label for="email2">Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkbox Group -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <fieldset class="group" role="group">
+                            <legend>Checkbox Group</legend>
+                            <!-- Use this when default location is not ideal -->
+                            <div class="row">
+                                <span class="custom-error-location"></span>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic1" name="checkbox_group"
+                                               required="required">
+                                        <label for="topic1">Retirement</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic2" name="checkbox_group">
+                                        <label for="topic2">Investment</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic3" name="checkbox_group">
+                                        <label for="topic3">Mortgages</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic4" name="checkbox_group">
+                                        <label for="topic4">Estate Planning</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic5" name="checkbox_group">
+                                        <label for="topic5">Tax Planning</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic6" name="checkbox_group">
+                                        <label for="topic6">Insurance</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <hr/>
+                <!-- Radio Group -->
+                <div class="row">
+                    <div class="small-12 medium-6 columns padding-top error-icon-left">
+                        <p aria-hidden="true">I am currently a client of Investors Group</p>
+                        <span class="custom-error-location"></span>
+                        <!-- Use this when default location is not ideal -->
+                    </div>
+                    <fieldset>
+                        <legend class="show-for-sr">I am currently a client of Investors Group</legend>
+                        <div class="small-6 medium-4 large-3 columns">
+                            <div class="form-group-radio">
+                                <input type="radio" name="current_client" value="yes" id="currentClientYes"
+                                       required="required">
+                                <label for="currentClientYes">Yes</label>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-4 large-3 columns end">
+                            <div class="form-group-radio">
+                                <input type="radio" name="current_client" value="no" id="currentClientNo">
+                                <label for="currentClientNo">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr/>
+                <!-- Single Option Checkbox -->
+                <div class="row">
+                    <div class="small-12 columns error-icon-left">
+                        <div class="form-group-checkbox">
+                            <input id="optIn" name="opt_in" type="checkbox" required="required"
+                                   aria-required="true">
+                            <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
+                                to Investors Group using this information to contact me for marketing
+                                purposes.</label>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <!-- Text Area -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="form-group-text">
+                        <textarea id="messageBody" rows="4" cols="50" maxlength="250"
+                                  name="message_body" required="required"></textarea>
+                            <label for="message_body">Personal message</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Legal -->
+                <div class="row">
+                    <div class="small-12 medium-9 columns">
+                        <p class="legal">For your privacy and protection, we remind you that this email service
+                            is
+                            not for confidential inquiries. Please do not include any confidential information
+                            in
+                            your message (e.g. account numbers, credit card numbers, social insurance numbers,
+                            trade
+                            requests or other personal information).</p>
+                    </div>
+                </div>
+                <!-- Submit/Cancel Buttons -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <button type="submit" class="button">Submit</button>
+                        <button class="cancel button secondary">Cancel</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!-- Success Message -->
+    <div class="success-message">
+        <div class="row success-message-banner">
+            <div class="check"></div>
+            <span>Success!</span>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <h2 class="sucess-message-title">Success Page Title</h2>
+                <p class="success-message-body">Your request for a call to discuss your RRSP has been received. An
+                    Investors Group
+                    Consultant
+                    will be in touch soon.</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-12 medium-4 medium-push-4 columns">
+                <a href="" class="button">Return to Retirement Page</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 Styleguide 1.6
 */
@@ -334,7 +355,12 @@ select {
 // Shouldn't interfere with Search styles above
 
 .ig-form {
-  margin-top: 20px;
+  margin: 20px auto;
+
+  form {
+    max-width: 820px;
+    margin: 0 auto;
+  }
 
   &.success {
     margin-top: 0;
@@ -349,6 +375,36 @@ select {
     width: 100%;
     color: $alert-color !important;
     position: absolute;
+  }
+
+  @media screen and (max-width: 640px) {
+    .error-icon-left {
+      position: relative;
+      & .custom-error-location {
+        & label.error {
+          top: 94px;
+          left: 45px;
+        }
+      }
+    }
+  }
+
+  .error-icon-left {
+    position: relative;
+
+    & label.error {
+      position: absolute;
+      left: 50px;
+    }
+    & label.error:before {
+      content: "";
+      background: transparent url(../images/error-icon.png) no-repeat center center;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-size: 100%;
+      left: -33px;
+    }
   }
 
   & label.valid {
@@ -366,8 +422,9 @@ select {
     }
 
     & label {
+      font-family: $font-whitney-sc-medium;
       color: #666;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: normal;
       position: absolute;
       pointer-events: none;
@@ -397,7 +454,7 @@ select {
           height: 18px;
           background-size: 100%;
           top: -34px;
-          right: 15px;
+          right: 10px;
         }
       }
     }
@@ -411,6 +468,7 @@ select {
       line-height: 1rem;
       padding: 12px;
       color: $brand-color;
+      background-image: none !important;
 
       &::-webkit-input-placeholder {
         color: $grey;
@@ -443,17 +501,16 @@ select {
     textarea.valid.dirty + label,
     textarea.error + label {
       top: -20px;
-    }
-
-    input.error, select.error, textarea.error {
-      border-color: #cc4b37;
-      background-color: #f9ecea;
+      color: $brand-color;
     }
   }
 
   .form-group-text {
     margin: 25px 0;
 
+    & label {
+      font-family: $font-stack-sc-medium;
+    }
     & label.error {
       top: 94px !important;
     }
@@ -565,7 +622,7 @@ select {
   }
 
   .form-group-checkbox > label.error {
-    margin: 8px 0 0 -10px;
+    margin-left: -15px;
   }
 
   .form-group-radio input + label::after {
@@ -594,10 +651,14 @@ select {
   /* Option Toggle */
 
   .form-group-toggle {
-
     .toggle-title {
-      padding-left: 15px;
-      margin-bottom: 10px;
+      padding-left: 18px;
+      font-family: $font-stack-sc-medium;
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .toggle-content-container {
@@ -616,13 +677,14 @@ select {
     }
 
     input.toggler + label {
+      font-family: $font-stack-sc-medium;
       border: 0;
       border-bottom: 2px solid $brand-color;
       padding-bottom: 4px;
       margin: 10px 0 0 0;
       width: 100%;
       color: #666;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: normal;
       text-align: center;
       transition: 0.2s ease all;
@@ -640,7 +702,7 @@ select {
       height: 100%;
       width: 100%;
       box-sizing: border-box;
-      margin-top: 0px;
+      margin-top: 0;
     }
     //default
     .toggle-content-2 {
@@ -697,13 +759,13 @@ select {
       padding: 5px 10px;
       background: #fff;
       left: 50%;
-      margin-left: -110px;
+      margin-left: -100px;
       margin-top: -48px;
-      width: 220px;
+      width: 200px;
 
       & .wide {
-        width: 320px;
-        margin-left: -160px;
+        width: 300px;
+        margin-left: -150px;
       }
     }
 
@@ -745,11 +807,20 @@ select {
 
   /* Miscellaneous */
 
+  .form-group-section-headings {
+    margin-top: 15px;
+  }
+
+  .form-description {
+    max-width: 600px;
+  }
+
   /* Main form legend */
 
   legend {
     margin-top: 20px;
     font-size: 28px;
+    max-width: 700px;
   }
 
   .alert.callout {
@@ -797,32 +868,34 @@ select {
     display: block;
   }
 
-  & .success-message {
-    display: none;
-  }
-
   .success-message {
+    display: none;
     text-align: center;
 
     a.button {
       margin-top: 50px;
     }
 
-    > div.row:first-child {
+    .success-message-banner {
+      max-width: none;
       background-color: #0ed59a;
 
       .check {
         display: inline-block;
-        width: 8.3333em;
-        height: 8.3333em;
-        margin: 4.1666em;
-        margin-left: 0;
+        width: 100px;
+        height: 100px;
+        margin: 60px 25px 60px 0;
         background: transparent url("../images/check.png") no-repeat scroll center center;
-        background-size: 8.3333em, 8.3333em;
+        background-size: 100px, 100px;
         vertical-align: middle;
 
-        @media screen and (max-width: 767px) {
-          margin: 20px auto;
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+          margin: 30px 20px 30px 0;
+        }
+
+        @media screen and (max-width: 480px) {
+          display: block;
+          margin: 20px auto 15px auto;
         }
 
         + span {
@@ -831,9 +904,8 @@ select {
           display: inline-block;
           vertical-align: middle;
           font-weight: 300;
-          margin-left: 25px;
 
-          @media screen and (max-width: 420px) {
+          @media screen and (max-width: 480px) {
             font-size: 4em;
             margin-left: 0;
             margin-bottom: 40px;
@@ -850,6 +922,16 @@ select {
           margin-left: 10%;
         }
       }
+    }
+
+    .success-message-title {
+      max-width: 700px;
+    }
+
+    .success-message-body {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
     }
   }
 
