@@ -14,7 +14,6 @@ Markup:
             <!-- The form name is what submission/validation will key on -->
             <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
                   data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
-
                 <div class="alert callout" style="display: none;">
                     <p><i class="fi-alert"></i> There are some errors in your form.</p>
                 </div>
@@ -255,7 +254,6 @@ Markup:
                         <button class="cancel button secondary">Cancel</button>
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
