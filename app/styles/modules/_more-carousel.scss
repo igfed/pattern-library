@@ -136,16 +136,16 @@ Styleguide 4.1
     }
   }
 
-  .section-title {
-     a {
-      color: $button-primary-color;
-    };
-
-    h4 {
-      padding: 5px 0;
-      margin: 0;
-    }
-  }
+  // .section-title {
+  //    a {
+  //     color: $button-primary-color;
+  //   };
+  //
+  //   h4 {
+  //     padding: 5px 0;
+  //     margin: 0;
+  //   }
+  // }
 
   .content-title {
     margin: 0;
@@ -167,10 +167,10 @@ Styleguide 4.1
     margin: 10px 0;
     display: block;
 
-    p {
-      font-weight: 500;
-      margin-bottom: 0;
-    }
+    // p {
+    //   font-weight: 500;
+    //   margin-bottom: 0;
+    // }
 
     @include respond-to(medium) {
       display: none;
@@ -180,12 +180,12 @@ Styleguide 4.1
       display: block;
       margin-bottom: 15px;
 
-      p {
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 0;
-      }
+      // p {
+      //   font-weight: 500;
+      //   font-size: 22px;
+      //   line-height: 26px;
+      //   margin-bottom: 0;
+      // }
     }
   }
 
