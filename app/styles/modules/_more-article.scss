@@ -100,8 +100,14 @@ $link-hover: #0BAB7B;
 // full width on larger screens
 .full-width-title-section {
   @extend .title-section;
+
+  @include respond-to(small) {
+    display: none;
+  }
+
   @include respond-to(medium) {
     padding-top: 125px;
+    display: block;
   }
 
   p {
@@ -142,11 +148,17 @@ $link-hover: #0BAB7B;
   overflow: hidden;
   position: relative;
 
+  @include respond-to(small) {
+    display: none;
+  }
+
   @include respond-to(medium) {
     // margin-top: -40px;
     margin-bottom: 65px;
+    display: block;
   }
 
+  // change this - going to have to create an ID for every article with a hero photo
   .hero {
     // background: lavender;
     height: 500px;
@@ -160,6 +172,20 @@ $link-hover: #0BAB7B;
 
 .full-width-article-subtitle {
   padding: 0;
+}
+
+.show-small {
+  @include respond-to(small) {
+    display: block;
+  }
+  @include respond-to(medium) {
+    display: none;
+  }
+
+  .show-small-image {
+    padding-bottom: 71%;
+    margin-bottom: 25px;
+  }
 }
 
 .image-caption {
