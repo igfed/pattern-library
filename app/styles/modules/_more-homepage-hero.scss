@@ -66,8 +66,18 @@ Styleguide 4.1
 
     @include respond-to(large) {
       margin: 0 25px;
+    }
 
+    .large-card-img {
+      padding-left: 0;
+    }
 
+    .large-card-content {
+      padding-right: 25px;
+
+      @include respond-to(medium) {
+        padding-right: 0;
+      }
     }
   }
 
@@ -75,11 +85,9 @@ Styleguide 4.1
     position: relative;
     text-align: right;
     float: right;
-    bottom: 70px;
-    right: 10px;
+    right: 25px;
 
     @include respond-to(medium) {
-      bottom: 50px;
       position: static;
     }
 
@@ -90,17 +98,17 @@ Styleguide 4.1
     }
 
     .share {
-      // position: relative;
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 33px;
       max-height: 0;
       overflow: hidden;
-      transition: all 0.5s;
+      transition: max-height 0.5s, margin-bottom 0.5s;
 
       ul {
         list-style-type: none;
         padding: 0;
         opacity: 1;
+        margin-bottom: 0;
 
         li {
           display: inline-block;
@@ -113,7 +121,7 @@ Styleguide 4.1
         margin-bottom: 0;
         bottom: 30px;
         right: 25px;
-        overflow: visible;
+        max-height: 33px;
       }
 
       @include respond-to(large) {
@@ -138,7 +146,7 @@ Styleguide 4.1
     }
 
     .js-socialdrawer-opened {
-      max-height: 50px;
+      max-height: 33px;
       margin-bottom: 0;
 
       @include respond-to(medium) {
