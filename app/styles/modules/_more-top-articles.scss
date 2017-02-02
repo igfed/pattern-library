@@ -62,10 +62,11 @@ Styleguide 4.1
  */
 
 .more-top-articles {
-  .sub-title {
+  .body-copy-bold {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
 
     &:after {
       content: '';

@@ -163,6 +163,7 @@ $more-article-gray: #e0d9d1;
 .image-caption {
   color: #a4a39c;
   float: left;
+  text-transform: uppercase;
 
   @include respond-to(medium) {
     float: none;
@@ -184,22 +185,6 @@ $more-article-gray: #e0d9d1;
     margin: 45px auto;
     @include respond-to(medium) {
       margin: 18px auto;
-    }
-
-    &:first-child {
-      &:first-letter {
-        color: $button-primary-color;
-        display: block;
-        float: left;
-        font-size: 72px;
-        line-height: 0.5em;
-        margin-right: 10px;
-
-        @include respond-to(large) {
-          line-height: 0.6em;
-          margin-right: 12px;
-        }
-      }
     }
   }
 

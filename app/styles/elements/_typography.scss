@@ -100,12 +100,17 @@ small strong, .legal-copy-bold {
 }
 
 /*11c*/
+// setting some display properties as well
+// only used for the first letter of frist paragraph
 .more-drop-cap {
 	font-size: 60px;
 	font-size: 3.75rem;
 	font-family: $font-stack;
 	// line-height:
 	color: $button-primary-color;
+	line-height: 2.5rem;
+	float: left;
+	margin-right: 12px;
 }
 
 /*12c*/
@@ -133,6 +138,8 @@ small strong, .legal-copy-bold {
 	font-family: $font-stack-sc-medium;
 	// line-height:
 	color: $button-primary-color;
+	text-transform: lowercase;
+
 }
 
 /*27c*/
