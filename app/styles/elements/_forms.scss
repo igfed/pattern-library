@@ -14,7 +14,6 @@ Markup:
             <!-- The form name is what submission/validation will key on -->
             <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
                   data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
-
                 <div class="alert callout" style="display: none;">
                     <p><i class="fi-alert"></i> There are some errors in your form.</p>
                 </div>
@@ -255,7 +254,6 @@ Markup:
                         <button class="cancel button secondary">Cancel</button>
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
@@ -318,7 +316,6 @@ label {
   border-width: 0 0 2px;
   border-style: solid;
   position: relative;
-  font-family: $font-whitney-sc-medium !important;
 
   input[type=search] {
     margin-bottom: 0;
@@ -437,7 +434,6 @@ select {
       letter-spacing: 1px;
       border-width: 0;
       background: none;
-      font-family: $font-whitney-sc-medium !important;
 
       &.error {
         top: 44px;
@@ -680,7 +676,7 @@ select {
       font-family: $font-stack-sc-medium;
       border: 0;
       border-bottom: 2px solid $brand-color;
-      padding-bottom: 4px;
+      padding-bottom: 2px;
       margin: 10px 0 0 0;
       width: 100%;
       color: #666;
@@ -778,7 +774,7 @@ select {
         position: relative;
         border: 1px solid $alert-color;
         padding: 5px 10px;
-        border-radius: 5px;
+        border-radius: 4px;
         width: 96%;
         margin: 0 2%;
 
