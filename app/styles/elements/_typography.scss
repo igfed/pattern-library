@@ -57,11 +57,10 @@ h4, .sub-title {
 	text-transform: lowercase;
 }
 /*06c*/
-// should be 22 on small screens across site
 .callout-body-copy {
 	font-family: $font-stack-light;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 22px;
+	font-size: 1.375rem;
 }
 /*07c*/
 body, p, .large-body-copy .body-copy, li {
@@ -100,13 +99,10 @@ small strong, .legal-copy-bold {
 }
 
 /*11c*/
-// setting some display properties as well
-// only used for the first letter of frist paragraph
 .more-drop-cap {
 	font-size: 60px;
 	font-size: 3.75rem;
 	font-family: $font-stack;
-	// line-height:
 	color: $button-primary-color;
 	line-height: 2.5rem;
 	float: left;
@@ -118,7 +114,6 @@ small strong, .legal-copy-bold {
 	font-size: 24px;
 	font-size: 1.5rem;
 	font-family: $font-stack-semibold;
-	// line-height:
 	color: $brand-color;
 }
 
@@ -127,7 +122,6 @@ small strong, .legal-copy-bold {
 	font-size: 22px;
 	font-size: 1.375rem;
 	font-family: $font-stack-semibold;
-	// line-height:
 	color: $brand-color;
 }
 
@@ -136,7 +130,6 @@ small strong, .legal-copy-bold {
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-family: $font-stack-sc-medium;
-	// line-height:
 	color: $button-primary-color;
 	text-transform: lowercase;
 
