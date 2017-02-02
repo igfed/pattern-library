@@ -297,6 +297,7 @@ label {
   border-width: 0 0 2px;
   border-style: solid;
   position: relative;
+  font-family: $font-whitney-sc-medium !important;
 
   input[type=search] {
     margin-bottom: 0;
@@ -365,7 +366,7 @@ select {
     }
 
     & label {
-      color: #999;
+      color: #666;
       font-size: 13px;
       font-weight: normal;
       position: absolute;
@@ -379,6 +380,7 @@ select {
       letter-spacing: 1px;
       border-width: 0;
       background: none;
+      font-family: $font-whitney-sc-medium !important;
 
       &.error {
         top: 44px;
@@ -619,7 +621,7 @@ select {
       padding-bottom: 4px;
       margin: 10px 0 0 0;
       width: 100%;
-      color: #999;
+      color: #666;
       font-size: 13px;
       font-weight: normal;
       text-align: center;
@@ -714,7 +716,7 @@ select {
         position: relative;
         border: 1px solid $alert-color;
         padding: 5px 10px;
-        border-radius: 4px;
+        border-radius: 5px;
         width: 96%;
         margin: 0 2%;
 
