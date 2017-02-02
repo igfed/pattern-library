@@ -486,7 +486,7 @@ select {
     margin: 25px 0;
 
     & label {
-      font-family: $font-whitney-sc-medium;
+      font-family: $font-stack-sc-medium;
     }
     & label.error {
       top: 94px !important;
@@ -630,7 +630,7 @@ select {
   .form-group-toggle {
     .toggle-title {
       padding-left: 18px;
-      font-family: $font-whitney-sc-medium !important;
+      font-family: $font-stack-sc-medium;
       color: #666;
       font-size: 14px;
       font-weight: normal;
@@ -654,7 +654,7 @@ select {
     }
 
     input.toggler + label {
-      font-family: $font-whitney-sc-medium;
+      font-family: $font-stack-sc-medium;
       border: 0;
       border-bottom: 2px solid $brand-color;
       padding-bottom: 4px;
@@ -846,7 +846,7 @@ select {
   }
 
   .success-message {
-    //display: none;
+    display: none;
     text-align: center;
 
     a.button {
