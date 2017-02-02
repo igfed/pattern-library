@@ -621,6 +621,12 @@ $link-hover: #0BAB7B;
 
       p {
         margin-bottom: 18px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        @include respond-to(medium) {
+          margin-left: 255px;
+        }
       }
     }
   }
