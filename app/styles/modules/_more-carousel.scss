@@ -154,6 +154,7 @@ Styleguide 4.1
     @include respond-to(medium) {
       margin-bottom: 15px;
       line-height: 28px;
+      font-size: 20px;
     }
 
     @include respond-to(large) {
