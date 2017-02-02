@@ -44,14 +44,14 @@ Markup:
                   </div>
               </div>
               <div class="row">
-                  <div class="small-12 medium-4 columns">
+                  <div class="small-12 medium-3 columns">
                       <div class="form-group-input">
                           <input type="text" id="phone" name="phone" minlength="2" required="required"
                                  aria-required="true">
                           <label for="phone">Phone Number</label>
                       </div>
                   </div>
-                  <div class="small-12 medium-2 columns">
+                  <div class="small-12 medium-3 columns">
                       <div class="form-group-input">
                           <input type="number" id="extension" name="extension">
                           <label for="extension">Ext. (optional)</label>
@@ -103,7 +103,7 @@ Markup:
                           </div>
                       </div>
                   </div>
-                  <div class="small-12 medium-6 columns toggle-content-container">
+                  <div class="small-12 medium-3 columns toggle-content-container">
                       <div class="row">
                           <div class="small-12 columns toggle-content toggle-content-1">
                               <div class="form-group-input">
@@ -333,7 +333,8 @@ select {
 // Shouldn't interfere with Search styles above
 
 .ig-form {
-  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 820px;
 
   &.success {
     margin-top: 0;
@@ -348,6 +349,36 @@ select {
     width: 100%;
     color: $alert-color !important;
     position: absolute;
+  }
+
+  @media screen and (max-width: 640px) {
+    .error-icon-left {
+      position: relative;
+      & .custom-error-location {
+        & label.error {
+          top: 94px;
+          left: 45px;
+        }
+      }
+    }
+  }
+
+  .error-icon-left {
+    position: relative;
+
+    & label.error {
+      position: absolute;
+      left: 50px;
+    }
+    & label.error:before {
+      content: "";
+      background: transparent url(../images/error-icon.png) no-repeat center center;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-size: 100%;
+      left: -33px;
+    }
   }
 
   & label.valid {
@@ -365,8 +396,9 @@ select {
     }
 
     & label {
-      color: #999;
-      font-size: 13px;
+      font-family: $font-whitney-sc-medium;
+      color: #666;
+      font-size: 14px;
       font-weight: normal;
       position: absolute;
       pointer-events: none;
@@ -395,7 +427,7 @@ select {
           height: 18px;
           background-size: 100%;
           top: -34px;
-          right: 15px;
+          right: 10px;
         }
       }
     }
@@ -409,6 +441,7 @@ select {
       line-height: 1rem;
       padding: 12px;
       color: $brand-color;
+      background-image: none !important;
 
       &::-webkit-input-placeholder {
         color: $grey;
@@ -441,17 +474,16 @@ select {
     textarea.valid.dirty + label,
     textarea.error + label {
       top: -20px;
-    }
-
-    input.error, select.error, textarea.error {
-      border-color: #cc4b37;
-      background-color: #f9ecea;
+      color: $brand-color;
     }
   }
 
   .form-group-text {
     margin: 25px 0;
 
+    & label {
+      font-family: $font-whitney-sc-medium;
+    }
     & label.error {
       top: 94px !important;
     }
@@ -563,7 +595,7 @@ select {
   }
 
   .form-group-checkbox > label.error {
-    margin: 8px 0 0 -10px;
+    margin-left: -15px;
   }
 
   .form-group-radio input + label::after {
@@ -592,10 +624,14 @@ select {
   /* Option Toggle */
 
   .form-group-toggle {
-
     .toggle-title {
-      padding-left: 15px;
-      margin-bottom: 10px;
+      padding-left: 18px;
+      font-family: $font-whitney-sc-medium !important;
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .toggle-content-container {
@@ -614,13 +650,14 @@ select {
     }
 
     input.toggler + label {
+      font-family: $font-whitney-sc-medium;
       border: 0;
       border-bottom: 2px solid $brand-color;
       padding-bottom: 4px;
       margin: 10px 0 0 0;
       width: 100%;
-      color: #999;
-      font-size: 13px;
+      color: #666;
+      font-size: 14px;
       font-weight: normal;
       text-align: center;
       transition: 0.2s ease all;
@@ -638,7 +675,7 @@ select {
       height: 100%;
       width: 100%;
       box-sizing: border-box;
-      margin-top: 0px;
+      margin-top: 0;
     }
     //default
     .toggle-content-2 {
@@ -695,13 +732,13 @@ select {
       padding: 5px 10px;
       background: #fff;
       left: 50%;
-      margin-left: -110px;
+      margin-left: -100px;
       margin-top: -48px;
-      width: 220px;
+      width: 200px;
 
       & .wide {
-        width: 320px;
-        margin-left: -160px;
+        width: 300px;
+        margin-left: -150px;
       }
     }
 
@@ -743,11 +780,20 @@ select {
 
   /* Miscellaneous */
 
+  .form-group-section-headings {
+    margin-top: 15px;
+  }
+
+  .form-description {
+    max-width: 600px;
+  }
+
   /* Main form legend */
 
   legend {
     margin-top: 20px;
     font-size: 28px;
+    max-width: 700px;
   }
 
   .alert.callout {
