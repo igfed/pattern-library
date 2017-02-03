@@ -64,6 +64,43 @@ html [type="button"]{
 	}
 }
 
+//Dropdown 
+.is-dropdown-submenu{
+	left: auto;
+    border: none;
+    border-radius: 5.5px;
+    box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
+    padding: .8rem 0 2.5rem;
+}
+.is-dropdown-submenu{
+	right: auto;
+    left: 0;
+    // top: 100%;
+}
+
+.is-dropdown-submenu{
+	// width: 100%;
+    top: 4rem;
+}
+
+.is-dropdown-submenu-parent.opens-right{
+	.is-dropdown-submenu{
+	    // right: auto;
+    	// left: 100%;
+
+    	&:hover{
+    		display: block;
+		    position: absolute;
+		    top: 0;
+		    // left: 100%;
+		    z-index: 1;
+		    background: #fefefe;
+		    border: 1px solid #cacaca;
+    	}
+	}
+}
+
+
 .tertiary-cta {
 	font-size: 14px;
 	font-family: $font-stack-sc-medium;
@@ -255,43 +292,5 @@ a:hover .tertiary-cta:before  {
 	    transition: -webkit-transform 0.3s ease-out;
 	    transition: transform 0.3s ease-out;
 	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-	}
-}
-
-
-//Dropdown 
-.dropdown.menu .is-dropdown-submenu{
-	left: auto;
-    border: none;
-    border-radius: 5.5px;
-    box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
-    padding: .8rem 0 2.5rem;
-}
-
-.dropdown.menu > li.opens-right > .is-dropdown-submenu{
-	right: auto;
-    left: 0;
-    top: 100%;
-}
-
-.cwp-search .buttons-column .dropdown .is-dropdown-submenu{
-	width: 100%;
-    top: 4rem;
-}
-
-.is-dropdown-submenu-parent.opens-right{
-	.is-dropdown-submenu{
-	    right: auto;
-    	left: 100%;
-
-    	&:hover{
-    		display: block;
-		    position: absolute;
-		    top: 0;
-		    left: 100%;
-		    z-index: 1;
-		    background: #fefefe;
-		    border: 1px solid #cacaca;
-    	}
 	}
 }
