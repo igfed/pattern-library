@@ -141,18 +141,23 @@ Styleguide 4.1
     .mini-title {
       margin-top: 22px;
       margin-bottom: 0;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 14px;
+      font-family: $font-stack;
       padding-bottom: 10px;
+      text-transform: none;
 
       @include respond-to(medium) {
         margin-top: 0;
+        font-size: 16px;
         border-bottom: solid 1px $border-color;
+      }
+      @include respond-to(large) {
+        font-size: 18px;
       }
     }
 
-    .section-title {
-      font-size: 20px;
+    .body-copy-bold {
+      // font-size: 20px;
       padding-bottom: 7px;
       margin-top: 40px;
       margin-bottom: 30px;
@@ -165,17 +170,17 @@ Styleguide 4.1
     }
 
     .category-list {
-      li {
+      .legal-copy {
         list-style: none;
-        font-size: 16px;
-        font-weight: 500;
-        font-family: $font-stack;
+        // font-size: 16px;
+        // font-weight: 500;
+        // font-family: $font-stack;
         line-height: 24px;
         text-transform: uppercase;
         margin-bottom: 17px;
 
         @include respond-to(medium) {
-          font-size: 12px;
+          // font-size: 12px;
           line-height: 16px;
           margin-bottom: 10px;
         }
