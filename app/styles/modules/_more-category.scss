@@ -168,10 +168,6 @@ Styleguide 4.1
 
   .trending-title {
     margin-top: 0;
-
-    h4 {
-      font-size: 22px;
-    }
   }
 
   .article-count {
@@ -184,7 +180,6 @@ Styleguide 4.1
   }
 
   .tile {
-
     @include respond-to(medium) {
       border-right: 1px solid $border-color  !important;
       border-bottom: 1px solid $border-color !important;
