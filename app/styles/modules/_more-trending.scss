@@ -291,29 +291,32 @@ $border-color: #E0E2E2;
     margin-bottom: 25px;
   }
 
-  .section-title {
-    margin-bottom: 5px;
-
-    a {
-      color: $button-primary-color;
-    };
+  .body-copy-bold {
+    text-transform: uppercase;
   }
 
-  // .more-callout-body-copy-bold {
-  //   text-transform: none;
-  //   font-size: 1.5em;
+  // .section-title {
+  //   margin-bottom: 5px;
   //
-  //   @include respond-to(large) {
-  //     line-height: 1.1em;
-  //   }
+  //   a {
+  //     color: $button-primary-color;
+  //   };
   // }
+
+  .more-callout-body-copy-bold {
+    text-transform: none;
+    // font-size: 1.5em;
+
+    @include respond-to(large) {
+      line-height: 1.1em;
+    }
+  }
 
   .title-excerpt {
     margin: 10px 0;
     display: block;
 
     p {
-      font-weight: 500;
       margin-bottom: 0;
     }
   }
@@ -321,6 +324,7 @@ $border-color: #E0E2E2;
   .legal-copy {
     margin-bottom: 20px;
     display: block;
+    text-transform: uppercase;
 
     @include respond-to(large) {
       margin-bottom: 15px;
@@ -378,6 +382,7 @@ $border-color: #E0E2E2;
 
         li {
           display: inline-block;
+
         }
 
       }
@@ -389,6 +394,14 @@ $border-color: #E0E2E2;
 
         ul {
           margin: 0;
+
+          li {
+            margin-right: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
         }
 
         img {
@@ -404,6 +417,7 @@ $border-color: #E0E2E2;
           li {
             opacity: 1;
             transition: opacity 250ms;
+            margin-right: 0;
 
             &:hover {
               opacity: 0.6;
