@@ -62,7 +62,6 @@ Styleguide 4.1
 
   .homepage-hero-slide {
     margin: 0;
-    position: relative;
 
     @include respond-to(large) {
       margin: 0 25px;
@@ -116,16 +115,15 @@ Styleguide 4.1
       }
 
       @include respond-to(medium) {
-        position: relative;
+        position: absolute;
         margin-top: 0;
         margin-bottom: 0;
-        bottom: 30px;
+        bottom: 25px;
         right: 25px;
         max-height: 33px;
       }
 
       @include respond-to(large) {
-        right: 0;
         ul {
           opacity: 0;
           transition: opacity 250ms;

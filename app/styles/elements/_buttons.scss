@@ -177,11 +177,12 @@ a:hover .tertiary-cta:before  {
 	    background-color: white;
     	 -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
     	transition: right .15s ease-out .15s, left .15s ease-out 0s;
+    	z-index: 1;
 
  		@include respond-to(medium){
  			left: 14px;
  			right: 80%;
-			top: calc(100% - .05rem);
+			top: calc(100% - .2rem);
 			height: 5px;
 
 		}
@@ -198,12 +199,16 @@ a:hover .tertiary-cta:before  {
 			-webkit-animation-fill-mode: forwards;
 		   	animation-fill-mode: forwards;
 
-			left: calc(100% - 100px);
+			left: calc(100% - 85px);
 			right: 0;
 			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			text-decoration: none;
 			cursor: pointer;
+
+			@include respond-to(large){
+				left: calc(100% - 140px);
+			}
 		}
 	}
  }
@@ -272,22 +277,6 @@ a:hover .tertiary-cta:before  {
 	    transform-origin: center middle;
 	    -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
 	    transform: rotate(45deg) translate3d(0, 0, 0);
-	    -webkit-transition: -webkit-transform 0.3s ease-out;
-	    transition: -webkit-transform 0.3s ease-out;
-	    transition: transform 0.3s ease-out;
-	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-	}
-}
-
-
-.more-section-menu-mobile-title.active .accordion-arrow {
-
-	&:before{
-		top: 1.6rem;
-		-webkit-transform-origin: center middle;
-	    transform-origin: center middle;
-	    -webkit-transform: rotate(225deg) translate3d(0, 0, 0);
-	    transform: rotate(225deg) translate3d(0, 0, 0);
 	    -webkit-transition: -webkit-transform 0.3s ease-out;
 	    transition: -webkit-transform 0.3s ease-out;
 	    transition: transform 0.3s ease-out;
