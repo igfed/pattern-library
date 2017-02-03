@@ -76,7 +76,7 @@ Styleguide 4.1
     width: 100%;
     padding: 12px;
 
-    @include respond-to(large) {
+    @include respond-to(medium) {
       margin-top: 35px;
       margin-left: 35px;
       width: 90%;
