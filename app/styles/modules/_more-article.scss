@@ -238,6 +238,7 @@ $link-hover: #0BAB7B;
   }
 
   // change this - going to have to create an ID for every article with a hero photo
+  // need to make this inline
   .hero {
     // background: lavender;
     height: 500px;
@@ -445,33 +446,33 @@ $link-hover: #0BAB7B;
     padding-left: 40px;
   }
 
-   li {
-     border-bottom: $more-underline;
-     list-style-type: none;
-     margin-bottom: 25px;
-     padding-bottom: 25px;
+ li {
+   border-bottom: $more-underline;
+   list-style-type: none;
+   margin-bottom: 25px;
+   padding-bottom: 25px;
 
-     &:last-of-type {
-       border-bottom: none;
-     }
-
-     &:before {
-      content: counter(ordered-ls-counter);
-      counter-increment: ordered-ls-counter;
-      display: inline-block;
-      background-color: #0ed59a;
-      border-radius: 50%;
-      color: #ffffff;
-      width: 25px;
-      height: 25px;
-      margin-right: 12px;
-      text-align: center;
-      @include respond-to(medium) {
-        width: 28px;
-        height: 28px;
-      }
-     }
+   &:last-of-type {
+     border-bottom: none;
    }
+
+   &:before {
+    content: counter(ordered-ls-counter);
+    counter-increment: ordered-ls-counter;
+    display: inline-block;
+    background-color: #0ed59a;
+    border-radius: 50%;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+    text-align: center;
+    @include respond-to(medium) {
+      width: 28px;
+      height: 28px;
+    }
+   }
+  }
 }
 
 .tips-paragraph {
