@@ -11,11 +11,11 @@ Markup:
       <header class="title-section row">
         <div class="small-12 medium-6 columns">
           <span class="article-category">
-            <a><p class="section-title">People</p></a>
+            <a><p class="sub-title">People</p></a>
           </span>
         </div>
         <div class="small-12 columns">
-          <h1 class="more-callout-title">Choose Your Resolution</h1>
+          <h1 class="callout-title">Choose Your Resolution</h1>
         </div>
         <div class="small-12 columns">
           <p class="byline legal-copy">By Renee Sylvestre-Williams / <time datetime="2016-12">December 2016</time></p>
@@ -45,7 +45,7 @@ Markup:
         <div class="small-12 columns">
           <figure>
             <img src="http://investorsgroup.com/more/wp-content/uploads/2016/12/Choose-your-resolution.jpg" alt="test" />
-            <figcaption class="image-caption section-title">
+            <figcaption class="image-caption legal-copy">
               Forget the long list of New Year's resolutions. Choose one thing to do instead.
             </figcaption>
           </figure>
@@ -58,7 +58,7 @@ Markup:
       <!-- article text -->
       <section class="article-body row">
         <div class="small-12 medium-10 small-centered columns">
-          <p class="body-copy">This is the time of the year when we make resolutions – to lose weight, to be better with our money or just to be a better person. But instead of making multiple resolutions that most of us never keep, what if we just decided to do one thing in 2017 to help make our world a better place? Surely one resolution is easier to keep than many.</p>
+          <p class="body-copy"><span class="more-drop-cap">T</span>his is the time of the year when we make resolutions – to lose weight, to be better with our money or just to be a better person. But instead of making multiple resolutions that most of us never keep, what if we just decided to do one thing in 2017 to help make our world a better place? Surely one resolution is easier to keep than many.</p>
           <p class="body-copy">Figuring out what to do, though, can be a challenge – there are so many organizations that need help and so many ways to give back. Candice Lepage, a Guelph, Ontario-based communications professional, is already wondering how she’ll give back in the New Year. “My goal for this year has been to live more intentionally, and I realized that I haven’t been very intentional with my giving,” she says. “It’s something for me to think about for 2017.”</p>
           <blockquote class="callout-body-copy">
           Ask yourself what kind of impact you want to have on people. Consider creating a “multi-plan,” where you’ll write down several things you care about and then narrow it down from there.
@@ -163,6 +163,7 @@ $more-article-gray: #e0d9d1;
 .image-caption {
   color: #a4a39c;
   float: left;
+  text-transform: uppercase;
 
   @include respond-to(medium) {
     float: none;
@@ -184,22 +185,6 @@ $more-article-gray: #e0d9d1;
     margin: 45px auto;
     @include respond-to(medium) {
       margin: 18px auto;
-    }
-
-    &:first-child {
-      &:first-letter {
-        color: $button-primary-color;
-        display: block;
-        float: left;
-        font-size: 72px;
-        line-height: 0.5em;
-        margin-right: 10px;
-
-        @include respond-to(large) {
-          line-height: 0.6em;
-          margin-right: 12px;
-        }
-      }
     }
   }
 

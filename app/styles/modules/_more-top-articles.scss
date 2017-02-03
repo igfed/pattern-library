@@ -8,7 +8,7 @@ Markup:
   <div class="more-top-articles">
     <div class="row">
       <div class="small-11 small-centered medium-uncentered medium-6 columns">
-        <h3 class="sub-title">
+        <h3 class="body-copy-bold">
           Top Articles
         </h3>
         <ul class="top-articles-list no-bullet">
@@ -62,10 +62,11 @@ Styleguide 4.1
  */
 
 .more-top-articles {
-  .sub-title {
+  .body-copy-bold {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
+    text-transform: uppercase;
 
     &:after {
       content: '';

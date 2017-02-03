@@ -136,25 +136,25 @@ Styleguide 4.1
     }
   }
 
-  .section-title {
-     a {
-      color: $button-primary-color;
-    };
+  .more-small-section-title {
+    padding: 5px 0;
 
-    h4 {
-      padding: 5px 0;
-      margin: 0;
+    @include respond-to(medium) {
+      margin-bottom: 0;
+    }
+
+    @include respond-to(large) {
+      margin-bottom: 8px;
     }
   }
 
-  .content-title {
+  .more-content-title-bold {
     margin: 0;
     line-height: 40px;
 
     @include respond-to(medium) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       line-height: 28px;
-      font-size: 20px;
     }
 
     @include respond-to(large) {
@@ -168,7 +168,6 @@ Styleguide 4.1
     display: block;
 
     p {
-      font-weight: 500;
       margin-bottom: 0;
     }
 
@@ -178,28 +177,12 @@ Styleguide 4.1
 
     @include respond-to(large) {
       display: block;
-      margin-bottom: 15px;
-
-      p {
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 26px;
-        margin-bottom: 0;
-      }
+      margin-bottom: 10px;
     }
   }
 
-  .author {
-    font-size: 13px;
-    font-weight: 600;
-    font-family: $font-stack;
-    line-height: 1.4em;
+  .legal-copy {
     text-transform: uppercase;
-    margin-bottom: 20px;
-
-    @include respond-to(large) {
-      margin-bottom: 15px;
-    }
   }
 
   .read-more-box {
@@ -282,6 +265,16 @@ Styleguide 4.1
         bottom: 20px;
         right: 25px;
         max-height: 33px;
+
+        ul {
+          li {
+            margin-right: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
       }
 
       @include respond-to(large) {
@@ -291,6 +284,7 @@ Styleguide 4.1
           li {
             opacity: 1;
             transition: opacity 250ms;
+            margin-right: 0;
 
             &:hover {
               opacity: 0.6;

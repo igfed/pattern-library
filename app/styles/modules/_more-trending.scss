@@ -212,10 +212,6 @@ $border-color: #E0E2E2;
 
     @include respond-to(medium) {
       margin: 15px 25px;
-
-      h4 {
-        font-size: 22px;
-      }
     }
   }
 
@@ -295,17 +291,21 @@ $border-color: #E0E2E2;
     margin-bottom: 25px;
   }
 
-  .section-title {
-    margin-bottom: 5px;
-
-    a {
-      color: $button-primary-color;
-    };
+  .body-copy-bold {
+    text-transform: uppercase;
   }
 
-  .callout-body-copy {
+  // .section-title {
+  //   margin-bottom: 5px;
+  //
+  //   a {
+  //     color: $button-primary-color;
+  //   };
+  // }
+
+  .more-callout-body-copy-bold {
     text-transform: none;
-    font-size: 1.5em;
+    // font-size: 1.5em;
 
     @include respond-to(large) {
       line-height: 1.1em;
@@ -317,18 +317,14 @@ $border-color: #E0E2E2;
     display: block;
 
     p {
-      font-weight: 500;
       margin-bottom: 0;
     }
   }
 
-  .author {
-    font-size: 13px;
-    font-weight: 600;
-    font-family: $font-stack;
-    line-height: 1.4em;
-    text-transform: uppercase;
+  .legal-copy {
     margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
 
     @include respond-to(large) {
       margin-bottom: 15px;
@@ -386,6 +382,7 @@ $border-color: #E0E2E2;
 
         li {
           display: inline-block;
+
         }
 
       }
@@ -397,6 +394,14 @@ $border-color: #E0E2E2;
 
         ul {
           margin: 0;
+
+          li {
+            margin-right: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
         }
 
         img {
@@ -412,6 +417,7 @@ $border-color: #E0E2E2;
           li {
             opacity: 1;
             transition: opacity 250ms;
+            margin-right: 0;
 
             &:hover {
               opacity: 0.6;
@@ -442,12 +448,12 @@ $border-color: #E0E2E2;
       background-repeat: repeat-x;
       background-position: 0 20px;
       display: inline;
-      font-size: 1.5em;
+      // font-size: 1.5em;
       line-height: 1.2em;
 
-      @include respond-to(medium) {
-        background-position: 0 28px;
-        font-size: 2em;
+      @include respond-to(large) {
+        background-position: 0 30px;
+        // font-size: 2em;
       }
     }
   }

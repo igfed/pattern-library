@@ -242,12 +242,12 @@
             </div>
             <div class="small-12 medium-6 large-5 columns buttons-column">
               
-                <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" data-dropdown-menu="svjkem-dropdown-menu" role="menubar" class="dropdown menu">
                   <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
                           Contact Info
                            Phone
                       ">
-                      <a class="button secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                      <a class="button secondary small-icon phone dropdown" type="button" tabindex="0">
                           <span class="hide-for-small-only">Contact Info</span>
                           <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
                       </a>
@@ -267,8 +267,7 @@
                 <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
               <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
             </div>
-           
-            <div class="clear"></div>
+
           </div>
             <div class="row my-team">
                 <div class="medium-12 columns title">
@@ -289,7 +288,7 @@
                       <p class="tp_09 consultant_name">Richard Armstrong</p>
                 
 
-                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                      <ul class="button-dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
                       <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
                               Contact Info
                                Phone

@@ -17,7 +17,7 @@
 
       }
   }
-    
+
 
   .find-an-advisor-search-form-field{
 
@@ -202,7 +202,7 @@
   border-radius: 0.5rem;
   margin-bottom: 0;
   border: none;
-  
+
 
   font-family: $font-stack;
   font-size: 16px;
@@ -247,12 +247,21 @@
   }
 
   .buttons-column{
-    display: flex;
-    width: auto;
-    float: none;
-    align-self: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: inline-block;
+
+    @include respond-to(medium){
+      display: flex;
+      width: auto;
+      float: none;
+      align-self: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .dropdown{
+      display: inline-block;
+      width: 49%;
+    }
   }
 
   .consultant-text{
@@ -324,7 +333,7 @@
           text-align: left;
       }
     }
-      
+
     .title{
       .row{
         margin-top: 4rem!important;
@@ -407,7 +416,7 @@
         width: 14rem;
         @include respond-to(medium){
           margin: 0 auto;
-           width: 100%;
+           // width: 100%;
         }
       }
     }
