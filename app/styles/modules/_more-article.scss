@@ -292,6 +292,10 @@ $link-hover: #0BAB7B;
   .more-callout-body-copy-bold {
     margin-top: 22px;
     margin-bottom: -22px;
+
+    @include respond-to(medium) {
+      margin-bottom: inherit;
+    };
   }
 
   a {
