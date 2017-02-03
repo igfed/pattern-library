@@ -288,6 +288,12 @@ $link-hover: #0BAB7B;
     margin: 35px auto;
   }
 
+  // for articles with many embeded images / captions
+  .more-callout-body-copy-bold {
+    margin-top: 22px;
+    margin-bottom: -22px;
+  }
+
   a {
     color: $button-primary-color;
   }
