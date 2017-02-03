@@ -1,8 +1,210 @@
-.trending-main {
+/*
+News & Trending
+
+6 panel news and trending top articles on More Homepage.
+
+Markup:
+<div class="trending-main">
+  <div class="row">
+    <div class="trending-title">
+      <h4>News &amp; Trending&nbsp;—</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-3 columns tile">
+      <a href="/more-article.html">
+        <img class="section-image" width="600" height="450" src="images/JOMO_Vigg_F-feature-600x450.jpg">
+      </a>
+      <h4 class="section-title"><a href="/more/en/category/life/">Life</a></h4>
+      <h3 class="callout-body-copy">
+        <a href="/more-article.html">So Long, Social Media</a>
+      </h3>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html" style="display: inline;">
+          <p>There’s a movement afoot, called the Joy of Missing Out, where people put down their cell phones and enjoy... </p>
+        </a>
+      </div>
+      <div class="author">By Shawna Cohen</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-6 columns tile">
+      <a href="/more-article.html">
+        <img class="section-image" width="600" height="450" src="images/CPPchanges-600x250.jpg" alt="">
+      </a>
+      <h4 class="section-title"><a href="#">Work</a></h4>
+      <h3 class="callout-body-copy">
+        <a href="/more-article.html">5 Things Your Business Needs to Know About Future CPP Changes</a>
+      </h3>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html" style="display: inline;">
+          <p>Significant changes to the Canada Pension Plan come into effect in 2019. Start getting ready now.</p>
+        </a>
+      </div>
+      <div class="author">By Investors Group</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-3 columns tile">
+      <a href="/more-article.html">
+        <img class="section-image" width="600" height="450" src="images/RetireesSharingEconomy-600x450.jpg" alt="">
+      </a>
+      <h4 class="section-title"><a href="#">Life</a></h4>
+      <h3 class="callout-body-copy">
+        <a href="/more-article.html">Retirees Are Reshaping the Sharing Economy</a>
+      </h3>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html" style="display: inline;">
+          <p>An increasing number of retirees are turning to companies like Uber and Airbnb to stay active.</p>
+        </a>
+      </div>
+      <div class="author">By Investors Group</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-6 columns tile">
+      <a href="/more-article.html">
+        <img class="section-image" width="600" height="450" src="images/LIRA-600x250.jpg" alt="">
+      </a>
+      <h4 class="section-title"><a href="#">Money</a></h4>
+      <h3 class="callout-body-copy">
+        <a href="/more-article.html">Meet LIRA, the Lesser-Known Retirement Savings Plan</a>
+      </h3>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html" style="display: inline;">
+          <p>There’s more to Canadian savings accounts than the RRSP and the TFSA.</p>
+        </a>
+      </div>
+      <div class="author">By Investors Group</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-3 columns tile">
+      <h4 class="section-title"><a href="#">Money</a></h4>
+      <div class="highlight-title">
+        <h3 class="callout-body-copy">
+          <a href="/more-article.html">Why Are Mortgage Rates Rising?</a>
+        </h3>
+      </div>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html" style="display: inline;">
+          <p>While Canada’s overnight rate hasn’t budged in a while...</p>
+        </a>
+      </div>
+      <div class="author">By Investors Group</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-3 columns tile">
+      <a href="/more-article.html">
+        <img class="section-image" width="600" height="450" src="images/MORE_BB-600x450.jpg" alt="">
+      </a>
+      <h4 class="section-title"><a href="#">Money</a></h4>
+      <h3 class="callout-body-copy">
+        <a href="/more-article.html">2017 Market Outlook</a>
+      </h3>
+      <div class="author">By Investors Group</div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+      <div class="share-box">
+        <button class="js-open-socialdrawer">
+          <img src="images/share-green.svg" alt="">
+        </button>
+        <div class="share js-socialdrawer">
+          <ul>
+            <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+            <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+*/
+
+
+// $border-color is defined and used below (and in the _more-category.scss) as it was not defined in _settings.scss
+$border-color: #E0E2E2;
+
+.trending-main, .category-section-main {
   padding-top: 40px;
   padding-bottom: 60px;
   background-color: $highlight-color;
-  max-width: 1200px;
   margin: 0 auto;
 
   .trending-title {
@@ -10,10 +212,6 @@
 
     @include respond-to(medium) {
       margin: 15px 25px;
-
-      h4 {
-        font-size: 22px;
-      }
     }
   }
 
@@ -22,7 +220,7 @@
     padding: 25px;
     border-top: solid 5px $highlight-color;
     transition: background-color 0.2s, border-top-color 0.5s;
-    border-bottom: 1px solid #E0E2E2;
+    border-bottom: 1px solid $border-color;
 
     &:last-child {
       border-bottom: none;
@@ -33,21 +231,21 @@
       height: 665px;
 
       &:nth-of-type(1) {
-        border-right: 1px solid #E0E2E2;
-        border-bottom: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(2) {
-        border-bottom: 1px solid #E0E2E2;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(3) {
-        border-right: 1px solid #E0E2E2;
-        border-bottom: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(4) {
-        border-bottom: 1px solid #E0E2E2;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(5) {
-        border-right: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
         border-bottom: none;
       }
     }
@@ -56,28 +254,34 @@
       height: 555px;
 
       &:hover {
-        background-color: #fff;
+        background-color: $lightest-color;
         border-top-color: $button-primary-color;
+
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
       }
 
       &:nth-of-type(1) {
-        border-right: 1px solid #E0E2E2;
-        border-bottom: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(2) {
-        border-right: 1px solid #E0E2E2;
-        border-bottom: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(3) {
         border-right: none;
-        border-bottom: 1px solid #E0E2E2;
+        border-bottom: 1px solid $border-color;
       }
       &:nth-of-type(4) {
-        border-right: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
         border-bottom: none;
       }
       &:nth-of-type(5) {
-        border-right: 1px solid #E0E2E2;
+        border-right: 1px solid $border-color;
         border-bottom: none;
       }
     }
@@ -95,14 +299,14 @@
     };
   }
 
-  .callout-body-copy {
-    text-transform: none;
-    font-size: 1.5em;
-
-    @include respond-to(large) {
-      line-height: 1.1em;
-    }
-  }
+  // .more-callout-body-copy-bold {
+  //   text-transform: none;
+  //   font-size: 1.5em;
+  //
+  //   @include respond-to(large) {
+  //     line-height: 1.1em;
+  //   }
+  // }
 
   .title-excerpt {
     margin: 10px 0;
@@ -114,13 +318,9 @@
     }
   }
 
-  .author {
-    font-size: 13px;
-    font-weight: 600;
-    font-family: $font-stack;
-    line-height: 1.4em;
-    text-transform: uppercase;
+  .legal-copy {
     margin-bottom: 20px;
+    display: block;
 
     @include respond-to(large) {
       margin-bottom: 15px;
@@ -234,12 +434,12 @@
       background-repeat: repeat-x;
       background-position: 0 20px;
       display: inline;
-      font-size: 1.5em;
+      // font-size: 1.5em;
       line-height: 1.2em;
 
-      @include respond-to(medium) {
-        background-position: 0 28px;
-        font-size: 2em;
+      @include respond-to(large) {
+        background-position: 0 30px;
+        // font-size: 2em;
       }
     }
   }

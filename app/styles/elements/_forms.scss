@@ -1,88 +1,961 @@
 /*
-Form Inputs
+Forms
 
 Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
 
 Markup:
-	<form>
-  <div class="row">
-    <div class="medium-6 columns">
-      <label>Input Label
-        <input type="text" placeholder=".medium-6.columns">
-      </label>
+<div class="ig-form">
+    <div class="row">
+        <div class="medium-12 columns">
+            <!-- Forms must be wrapped with the ig-form class in order to function properly -->
+            <div class="screen">
+                <div class="throbber"></div>
+            </div>
+            <!-- The form name is what submission/validation will key on -->
+            <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
+                  data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
+                <div class="alert callout" style="display: none;">
+                    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                </div>
+                <!-- Form Legend -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <legend>Form Components</legend>
+                    </div>
+                </div>
+                <!-- Form Section Heading(s) -->
+                <div class="row">
+                    <div class="small-12 medium-10 columns end form-group-section-headings padding-bottom">
+                        <h3 class="section-heading">September 12th, 2016</h3>
+                        <h3 class="section-heading">11:00am - 12:00pm</h3>
+                        <h3 class="section-heading">Toronto, Ontario</h3>
+                    </div>
+                </div>
+                <!-- Form Description -->
+                <div class="row">
+                    <div class="small-12 medium-10 columns end padding-bottom">
+                        <p class="form-description">All possible form elements (ie, inputs, selects, radios etc)
+                            are
+                            included here.</p>
+                    </div>
+                </div>
+                <!-- Base Form Elements -->
+                <div class="row padding-top">
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="firstname" name="firstname" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="firstname">First Name</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="lastname" name="lastname" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="lastname">Last Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input type="text" id="phone" name="phone" minlength="2" required="required"
+                                   aria-required="true">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input type="number" id="extension" name="extension">
+                            <label for="extension">Ext. (optional)</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-input">
+                            <input id="email" name="email" type="email" required="required"
+                                   aria-required="true">
+                            <label for="email">Email Address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 medium-3 columns">
+                        <div class="form-group-input">
+                            <input id="postal_code" name="postal_code" type="text" required="required"
+                                   aria-required="true">
+                            <label for="postal_code">Postal Code</label>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="form-group-select">
+                            <select id="sampleSelect" name="sample_select" required>
+                                <option value=""></option>
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <label for="sample_select">Sample Select Box</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2-option toggle -->
+                <div class="row form-group-toggle">
+                    <p class="toggle-title">Sample Field Toggler</p>
+                    <div class="small-12 medium-6 columns">
+                        <div class="row">
+                            <div class="small-6 medium-6 large-4 collapse-right columns">
+                                <input id="switch1" data-content="toggle-content-1" class="toggler" type="radio"
+                                       value="" name="switch" checked="checked">
+                                <label for="switch1">Option 1</label>
+                            </div>
+                            <div class="small-6 medium-6 large-4 collapse-left columns end">
+                                <input id="switch2" data-content="toggle-content-2" class="toggler" type="radio"
+                                       value="" name="switch">
+                                <label for="switch2">Option 2</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns toggle-content-container">
+                        <div class="row">
+                            <div class="small-12 columns toggle-content toggle-content-1">
+                                <div class="form-group-input">
+                                    <input id="phone2" name="phone2" type="tel">
+                                    <label for="phone2">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 columns toggle-content toggle-content-2">
+                                <div class="form-group-input">
+                                    <input id="email2" name="email2" type="email">
+                                    <label for="email2">Email Address</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Checkbox Group -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <fieldset class="group" role="group">
+                            <legend>Checkbox Group</legend>
+                            <!-- Use this when default location is not ideal -->
+                            <div class="row">
+                                <span class="custom-error-location"></span>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic1" name="checkbox_group"
+                                               required="required">
+                                        <label for="topic1">Retirement</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic2" name="checkbox_group">
+                                        <label for="topic2">Investment</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic3" name="checkbox_group">
+                                        <label for="topic3">Mortgages</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic4" name="checkbox_group">
+                                        <label for="topic4">Estate Planning</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic5" name="checkbox_group">
+                                        <label for="topic5">Tax Planning</label>
+                                    </div>
+                                </div>
+                                <div class="small-12 medium-4 columns">
+                                    <div class="form-group-checkbox">
+                                        <input type="checkbox" id="topic6" name="checkbox_group">
+                                        <label for="topic6">Insurance</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <hr/>
+                <!-- Radio Group -->
+                <div class="row">
+                    <div class="small-12 medium-6 columns padding-top error-icon-left">
+                        <p aria-hidden="true">I am currently a client of Investors Group</p>
+                        <span class="custom-error-location"></span>
+                        <!-- Use this when default location is not ideal -->
+                    </div>
+                    <fieldset>
+                        <legend class="show-for-sr">I am currently a client of Investors Group</legend>
+                        <div class="small-6 medium-4 large-3 columns">
+                            <div class="form-group-radio">
+                                <input type="radio" name="current_client" value="yes" id="currentClientYes"
+                                       required="required">
+                                <label for="currentClientYes">Yes</label>
+                            </div>
+                        </div>
+                        <div class="small-6 medium-4 large-3 columns end">
+                            <div class="form-group-radio">
+                                <input type="radio" name="current_client" value="no" id="currentClientNo">
+                                <label for="currentClientNo">No</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr/>
+                <!-- Single Option Checkbox -->
+                <div class="row">
+                    <div class="small-12 columns error-icon-left">
+                        <div class="form-group-checkbox">
+                            <input id="optIn" name="opt_in" type="checkbox" required="required"
+                                   aria-required="true">
+                            <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
+                                to Investors Group using this information to contact me for marketing
+                                purposes.</label>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <!-- Text Area -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="form-group-text">
+                        <textarea id="messageBody" rows="4" cols="50" maxlength="250"
+                                  name="message_body" required="required"></textarea>
+                            <label for="message_body">Personal message</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Legal -->
+                <div class="row">
+                    <div class="small-12 medium-9 columns">
+                        <p class="legal">For your privacy and protection, we remind you that this email service
+                            is
+                            not for confidential inquiries. Please do not include any confidential information
+                            in
+                            your message (e.g. account numbers, credit card numbers, social insurance numbers,
+                            trade
+                            requests or other personal information).</p>
+                    </div>
+                </div>
+                <!-- Submit/Cancel Buttons -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <button type="submit" class="button">Submit</button>
+                        <button class="cancel button secondary">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="medium-6 columns">
-      <label>Input Label
-        <input type="text" placeholder=".medium-6.columns">
-      </label>
+    <!-- Success Message -->
+    <div class="success-message">
+        <div class="row success-message-banner">
+            <div class="check"></div>
+            <span>Success!</span>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <h2 class="sucess-message-title">Success Page Title</h2>
+                <p class="success-message-body">Your request for a call to discuss your RRSP has been received. An
+                    Investors Group
+                    Consultant
+                    will be in touch soon.</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-12 medium-4 medium-push-4 columns">
+                <a href="" class="button">Return to Retirement Page</a>
+            </div>
+        </div>
     </div>
-  </div>
-</form>
+</div>
 
 Styleguide 1.6
 */
 
-input[type=text], input[type=password], input[type=search] {
-	background-color: transparent;
-	border-color: $brand-color;
-	border-width: 0 0 2px;
-	border-style: solid;
-	box-shadow: none;
-	line-height: 1rem;
-	padding: 12px 1.25em;
-	margin-top: .8rem 0 .7rem;
-	color: $brand-color;
+// Search form styles - I did not change these
+input[type=search] {
+  background-color: transparent;
+  border-color: $brand-color;
+  border-width: 0 0 2px;
+  border-style: solid;
+  box-shadow: none;
+  line-height: 1rem;
+  padding: 12px 1.25em;
+  margin: .8rem 0 .7rem; // This was margin-top but I think it should be just 'margin' as there were 3 attributes
+  color: $brand-color;
 
-	&::-webkit-input-placeholder {
-		color: $grey;
-	}
+  &::-webkit-input-placeholder {
+    color: $grey;
+  }
 
-	&:-ms-input-placeholder {
-		color: $grey;
-	}
+  &:-ms-input-placeholder {
+    color: $grey;
+  }
 
-	&::-moz-placeholder {
-		color: $grey;
-		opacity: 1;
-	}
+  &::-moz-placeholder {
+    color: $grey;
+    opacity: 1;
+  }
 }
 
 label {
-	margin-bottom: .7rem;
-	background-color: transparent;
-	border-color: $brand-color;
-	border-width: 0 0 2px;
-	border-style: solid;
-	position: relative;
+  margin-bottom: .7rem;
+  background-color: transparent;
+  border-color: $brand-color;
+  border-width: 0 0 2px;
+  border-style: solid;
+  position: relative;
 
-	input[type=text], input[type=password], input[type=search] {
-		margin-bottom: 0;
-	    border: 1px solid transparent;
-		border-radius: $border-radius;
+  input[type=search] {
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
 
-		&:focus {
-		    border-color: $brand-color;
-		    border-color: transparent;
-		    box-shadow: none;
-		}
-	}
+    &:focus {
+      border-color: $brand-color;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
 
-	&.error {
-		color: $alert-color;
-	}
+  &.error {
+    color: $alert-color;
+  }
 }
 
 select {
-	margin: 0;
-	height: auto;
-    border-color: $brand-color;
-    border-style: none none solid;
-    border-width: medium medium 2px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
+  height: auto;
+  border-color: $brand-color;
+  border-style: none none solid;
+  border-width: medium medium 2px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
 }
 
 .input-group-label {
-	background: transparent;
-	border-color: transparent transparent $brand-color;
-	border-width: 2px;
+  background: transparent;
+  border-color: transparent transparent $brand-color;
+  border-width: 2px;
+}
+
+// Updated form styles that fall under .ig-form
+// Shouldn't interfere with Search styles above
+
+.ig-form {
+  margin: 20px auto;
+
+  form {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  &.success {
+    margin-top: 0;
+  }
+
+  /* Default error styling */
+  label.error {
+    text-transform: uppercase;
+    border: 0;
+    letter-spacing: 1px;
+    font-size: 12px;
+    width: 100%;
+    color: $alert-color !important;
+    position: absolute;
+  }
+
+  @media screen and (max-width: 640px) {
+    .error-icon-left {
+      position: relative;
+      & .custom-error-location {
+        & label.error {
+          top: 94px;
+          left: 45px;
+        }
+      }
+    }
+  }
+
+  .error-icon-left {
+    position: relative;
+
+    & label.error {
+      position: absolute;
+      left: 50px;
+    }
+    & label.error:before {
+      content: "";
+      background: transparent url(../images/error-icon.png) no-repeat center center;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background-size: 100%;
+      left: -33px;
+    }
+  }
+
+  & label.valid {
+    display: none !important;
+  }
+
+  /* Inputs and Selects */
+
+  .form-group-input, .form-group-select, .form-group-text {
+    position: relative;
+    margin-bottom: 55px;
+
+    @include respond-to(medium) {
+      margin-bottom: 65px;
+    }
+
+    & label {
+      font-family: $font-whitney-sc-medium;
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-width: 0;
+      background: none;
+
+      &.error {
+        top: 44px;
+        color: $alert-color;
+        position: absolute;
+        font-size: 12px;
+        width: 100%;
+
+        &:after {
+          content: "";
+          background: transparent url(../images/error-icon.png) no-repeat center center;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background-size: 100%;
+          top: -34px;
+          right: 10px;
+        }
+      }
+    }
+
+    input, textarea {
+      background-color: transparent;
+      border-color: $brand-color;
+      border-width: 0 0 2px;
+      border-style: solid;
+      box-shadow: none;
+      line-height: 1rem;
+      padding: 12px;
+      color: $brand-color;
+      background-image: none !important;
+
+      &::-webkit-input-placeholder {
+        color: $grey;
+      }
+
+      &:-ms-input-placeholder {
+        color: $grey;
+      }
+
+      &::-moz-placeholder {
+        color: $grey;
+        opacity: 1;
+      }
+    }
+
+    /* active state */
+    input:focus, textarea:focus {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-color: $brand-color;
+      border-width: 1px 1px 2px;
+    }
+
+    input:focus + label,
+    input.valid.dirty + label,
+    select:focus + label,
+    select.valid.dirty + label,
+    input.error + label,
+    textarea:focus + label,
+    textarea.valid.dirty + label,
+    textarea.error + label {
+      top: -20px;
+      color: $brand-color;
+    }
+  }
+
+  .form-group-text {
+    margin: 25px 0;
+
+    & label {
+      font-family: $font-stack-sc-medium;
+    }
+    & label.error {
+      top: 94px !important;
+    }
+  }
+
+  .form-group-select {
+    select {
+      margin-top: 2px;
+    }
+  }
+
+  /* Checkboxes and Radio's */
+
+  .form-group-checkbox, .form-group-radio {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 10px
+  }
+
+  .form-group-checkbox input[type="checkbox"], .form-group-checkbox input[type="radio"], .form-group-radio input[type="checkbox"], .form-group-radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1001;
+    height: 20px;
+    width: 20px;
+    left: 0;
+  }
+
+  .form-group-checkbox input + label, .form-group-radio input + label {
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: #424242
+  }
+
+  .form-group-checkbox input + label::after, .form-group-radio input + label::after {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: 0;
+    margin-left: -18px;
+    background-color: white;
+    border: 2px solid #424242;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    background-clip: padding-box;
+    cursor: pointer
+  }
+
+  .form-group-checkbox input + label::before, .form-group-radio input + label::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 10px;
+    top: 0;
+    left: 6px;
+    margin-left: -18px;
+    border: 3px solid #000;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    z-index: 1
+  }
+
+  .form-group-checkbox label:active::before, .form-group-radio label:active::before {
+    opacity: 0.3;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label, .form-group-checkbox input[type="radio"]:checked + label, .form-group-radio input[type="checkbox"]:checked + label, .form-group-radio input[type="radio"]:checked + label {
+    color: #000;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label::after, .form-group-checkbox input[type="radio"]:checked + label::after, .form-group-radio input[type="checkbox"]:checked + label::after, .form-group-radio input[type="radio"]:checked + label::after {
+    border: 2px solid #000;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:checked + label::before, .form-group-checkbox input[type="radio"]:checked + label::before, .form-group-radio input[type="checkbox"]:checked + label::before, .form-group-radio input[type="radio"]:checked + label::before {
+    opacity: 1;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label, .form-group-checkbox input[type="radio"]:disabled + label, .form-group-radio input[type="checkbox"]:disabled + label, .form-group-radio input[type="radio"]:disabled + label {
+    color: #787878;
+    cursor: default;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label::after, .form-group-checkbox input[type="radio"]:disabled + label::after, .form-group-radio input[type="checkbox"]:disabled + label::after, .form-group-radio input[type="radio"]:disabled + label::after {
+    border: 3px solid #787878;
+    background-color: #ffffff;
+  }
+
+  .form-group-checkbox input[type="checkbox"]:disabled + label::before, .form-group-checkbox input[type="radio"]:disabled + label::before, .form-group-radio input[type="checkbox"]:disabled + label::before, .form-group-radio input[type="radio"]:disabled + label::before {
+    display: none;
+  }
+
+  .form-group-checkbox > label.error {
+    margin-left: -15px;
+  }
+
+  .form-group-radio input + label::after {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+  }
+
+  .form-group-radio input + label::before {
+    width: 10px;
+    height: 10px;
+    border: none;
+    top: 6px;
+    left: 6px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    background-color: #000000;
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* Option Toggle */
+
+  .form-group-toggle {
+    .toggle-title {
+      padding-left: 18px;
+      font-family: $font-stack-sc-medium;
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .toggle-content-container {
+      margin-top: 30px;
+    }
+
+    @include respond-to(medium) {
+      .toggle-content-container {
+        margin-top: 0;
+      }
+    }
+
+    input.toggler {
+      opacity: 0;
+      position: absolute;
+    }
+
+    input.toggler + label {
+      font-family: $font-stack-sc-medium;
+      border: 0;
+      border-bottom: 2px solid $brand-color;
+      padding-bottom: 4px;
+      margin: 10px 0 0 0;
+      width: 100%;
+      color: #666;
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    input.toggler:checked + label:before {
+      position: absolute;
+      display: block;
+      content: '';
+      border-bottom: 4px solid #0ed59a;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 0;
+    }
+    //default
+    .toggle-content-2 {
+      display: none;
+    }
+  }
+
+  /* Form Buttons */
+
+  button.button {
+    width: 96%;
+    margin: 10px 2%;
+    text-align: center;
+  }
+
+  button.button + button.button {
+    margin-top: 0;
+  }
+
+  @include respond-to(medium) {
+    button.button {
+      max-width: 200px;
+      margin: 10px 20px 10px 0;
+    }
+
+    button.button + button.button {
+      margin-top: 10px;
+    }
+
+    // Single buttons can be 'centered'
+    button.button.centered {
+      margin: 10px auto;
+      text-align: center;
+      width: 200px;
+      display: block;
+    }
+  }
+
+  // Fieldset groups section off related content and provide a custom legend (i.e. title)
+  fieldset.group {
+    border-top: 1px solid #666;
+    margin: 25px 0 25px 0;
+    padding-top: 30px;
+
+    legend {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      color: #666;
+      text-align: center;
+      display: block;
+      position: absolute;
+      padding: 5px 10px;
+      background: #fff;
+      left: 50%;
+      margin-left: -100px;
+      margin-top: -48px;
+      width: 200px;
+
+      & .wide {
+        width: 300px;
+        margin-left: -150px;
+      }
+    }
+
+    .custom-error-location {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      & label {
+        position: relative;
+        border: 1px solid $alert-color;
+        padding: 5px 10px;
+        border-radius: 4px;
+        width: 96%;
+        margin: 0 2%;
+
+        @include respond-to(medium) {
+          width: 98%;
+          margin: 0 1%;
+        }
+
+        &:before {
+          margin-left: -25px;
+          content: "";
+          background: transparent url(../images/error-icon.png) no-repeat center center;
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background-size: 100%;
+        }
+      }
+
+    }
+  }
+
+  input[type=checkbox] ~ label, input[type=radio] ~ label {
+    border-width: 0;
+  }
+
+  /* Miscellaneous */
+
+  .form-group-section-headings {
+    margin-top: 15px;
+  }
+
+  .form-description {
+    max-width: 600px;
+  }
+
+  /* Main form legend */
+
+  legend {
+    margin-top: 20px;
+    font-size: 28px;
+    max-width: 700px;
+  }
+
+  .alert.callout {
+    padding: 20px;
+  }
+
+  .legal {
+    font-family: $font-whitney-light;
+    font-size: 12px;
+    color: #a5aaaf;
+    text-transform: none;
+    padding: 20px 0;
+  }
+
+  // Spinner
+
+  .throbber {
+    background: transparent url("../images/throbber.png") no-repeat scroll center center;
+    animation: 2s linear 0s normal none infinite running spin;
+    height: 4.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4.2rem;
+    background-size: 4.2rem 4.2rem;
+    opacity: .75;
+    filter: alpha(opacity=75);
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+
+  // Success Messages
+
+  &.success form {
+    display: none;
+  }
+
+  &.success .success-message {
+    display: block;
+  }
+
+  .success-message {
+    display: none;
+    text-align: center;
+
+    a.button {
+      margin-top: 50px;
+    }
+
+    .success-message-banner {
+      max-width: none;
+      background-color: #0ed59a;
+
+      .check {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 60px 25px 60px 0;
+        background: transparent url("../images/check.png") no-repeat scroll center center;
+        background-size: 100px, 100px;
+        vertical-align: middle;
+
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+          margin: 30px 20px 30px 0;
+        }
+
+        @media screen and (max-width: 480px) {
+          display: block;
+          margin: 20px auto 15px auto;
+        }
+
+        + span {
+          font-size: 4.3333em;
+          color: #fff;
+          display: inline-block;
+          vertical-align: middle;
+          font-weight: 300;
+
+          @media screen and (max-width: 480px) {
+            font-size: 4em;
+            margin-left: 0;
+            margin-bottom: 40px;
+          }
+        }
+      }
+
+      + div.row {
+        margin-top: 60px;
+        text-align: center;
+
+        @media screen and (max-width: 767px) {
+          width: 80%;
+          margin-left: 10%;
+        }
+      }
+    }
+
+    .success-message-title {
+      max-width: 700px;
+    }
+
+    .success-message-body {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .screen {
+    display: none;
+  }
+
+  &.submitting {
+    .screen {
+      display: block;
+      background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+
+      .throbber {
+        left: 50%;
+        margin-left: -2.1rem;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    .close-modal {
+      z-index: 2;
+    }
+  }
+
 }

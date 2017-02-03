@@ -162,6 +162,9 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   }
 
   .footer-navigation{
+    // @include respond-to(large) {
+    //   border-bottom: 1px solid #E5ECED;
+    // }
 
     .columns{
       @include respond-to(large){
@@ -176,6 +179,9 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       margin: 0;
 
       .accordion-item{
+        @include respond-to(large) {
+          border-bottom: none;
+        }
 
         .accordion-title{
           padding: 20px 0px;

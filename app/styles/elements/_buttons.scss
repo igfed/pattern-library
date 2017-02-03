@@ -19,6 +19,10 @@ a{
 	}
 }
 
+html [type="button"]{
+	-webkit-appearance: inherit;
+}
+
 .button, .button.primary{
 	padding: 5px 1.25em 7px;
 	min-width: 200px;
@@ -131,7 +135,7 @@ a:hover .tertiary-cta:before  {
 	    content: ' ';
 	    left: 10px;
  		right: 85%;
-	    height: 5px;
+	    height: 3px;
 	    top: 110%;
 	    background-color: white;
     	 -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
@@ -141,6 +145,7 @@ a:hover .tertiary-cta:before  {
  			left: 14px;
  			right: 80%;
 			top: calc(100% - .05rem);
+			height: 5px;
 
 		}
 
@@ -157,26 +162,11 @@ a:hover .tertiary-cta:before  {
 		   	animation-fill-mode: forwards;
 
 			left: calc(100% - 100px);
-			// left: 64%;
 			right: 0;
-			// left: 44%;
-			// right: 24%;
 			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			text-decoration: none;
 			cursor: pointer;
-
-			animation: underlineBounce 1s;
-
-			@-webkit-keyframes underlineBounce {
-			    from   {left:0; right:0;}
-			    to {left:70%; right: 0;}
-			}
-
-			@keyframes underlineBounce {
-			    from   {left:0; right:0;}
-			    to {left:70%; right: 0;}
-			}
 		}
 	}
  }
@@ -265,5 +255,43 @@ a:hover .tertiary-cta:before  {
 	    transition: -webkit-transform 0.3s ease-out;
 	    transition: transform 0.3s ease-out;
 	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+	}
+}
+
+
+//Dropdown 
+.dropdown.menu .is-dropdown-submenu{
+	left: auto;
+    border: none;
+    border-radius: 5.5px;
+    box-shadow: 0 1px 7.5px rgba(0, 0, 0, 0.35);
+    padding: .8rem 0 2.5rem;
+}
+
+.dropdown.menu > li.opens-right > .is-dropdown-submenu{
+	right: auto;
+    left: 0;
+    top: 100%;
+}
+
+.cwp-search .buttons-column .dropdown .is-dropdown-submenu{
+	width: 100%;
+    top: 4rem;
+}
+
+.is-dropdown-submenu-parent.opens-right{
+	.is-dropdown-submenu{
+	    right: auto;
+    	left: 100%;
+
+    	&:hover{
+    		display: block;
+		    position: absolute;
+		    top: 0;
+		    left: 100%;
+		    z-index: 1;
+		    background: #fefefe;
+		    border: 1px solid #cacaca;
+    	}
 	}
 }

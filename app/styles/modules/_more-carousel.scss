@@ -1,3 +1,86 @@
+/*
+Homepage Carousel
+
+Carousel with 1 large image on the left and content on the right.
+
+Markup:
+<div class="row homepage-carousel">
+  <div class="homepage-carousel-slide">
+    <div class="medium-6 columns">
+      <a href="#">
+        <img src="images/choose-your-resolution-900x576.jpg" alt="Win a Trip to Brazil image"></img>
+      </a>
+    </div>
+    <div class="large-card-content columns medium-6">
+      <h4 class="section-title"><a href="#">Life</a></h4>
+      <h2 style="word-wrap: break-word;" class="content-title">
+        <a href="#">Choose Your Resolution</a>
+      </h2>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="#">
+          <p>New Year’s resolutions don’t have to be long lists of things you’ll never get to. Instead, pick one cause... </p>
+        </a>
+      </div>
+      <div class="author">By Renee Sylvestre-Williams / <time class="published" datetime="2016-12-09T13:20:41+00:00">December 2016</time></div>
+      <div class="read-more-box">
+        <a href="#" class="underline-hover tertiary-cta">Read More</a>
+      </div>
+    </div>
+    <div class="share-box">
+      <button class="js-open-socialdrawer">
+        <img src="images/share-green.svg" alt="">
+      </button>
+      <div class="share js-socialdrawer">
+        <ul>
+          <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="homepage-carousel-slide">
+    <div class="medium-6 columns">
+      <a href="#">
+        <img src="images/canadian-ski-resorts-things-to-do-900x576.jpg" alt=""></img>
+      </a>
+    </div>
+    <div class="large-card-content columns medium-6">
+      <h4 class="section-title"><a href="#">Places</a></h4>
+      <h2 style="word-wrap: break-word;" class="content-title">
+        <a href="#">5 Things to Do at Canadian Ski Resorts (That Aren’t Skiing)</a>
+      </h2>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="#">
+          <p>Can’t ski? No problem. There are still plenty of things to do at some of Canada’s best ski...</p>
+        </a>
+      </div>
+      <div class="author">By Kat Tancock / <time class="published" datetime="2016-12-09T13:15:07+00:00">December 2016</time></div>
+      <div class="read-more-box">
+        <a class="underline-hover tertiary-cta">Read More</a>
+      </div>
+    </div>
+    <div class="share-box">
+      <button class="js-open-socialdrawer">
+        <img src="images/share-green.svg" alt="">
+      </button>
+      <div class="share js-socialdrawer">
+        <ul>
+          <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+*/
+
+
 .homepage-carousel, .home-hero {
   padding: 0;
 
@@ -10,7 +93,7 @@
   }
 
   .large-card-content {
-    padding: 40px 25px;
+    padding: 40px 25px 0 25px;
 
     @include respond-to(medium) {
       padding: 20px 0 0 20px;
@@ -42,30 +125,35 @@
 
     @include respond-to(large) {
       margin: 0 25px;
+
+      &:hover {
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 
-  .section-title {
-     a {
-      color: $button-primary-color;
-    };
-
-    h4 {
-      padding: 5px 0;
-      margin: 0;
-    }
+  .more-small-section-title {
+    padding: 5px 0;
+    // margin: 0;
   }
 
-  .content-title {
+  .more-small-section-title {
     margin: 0;
     line-height: 40px;
 
     @include respond-to(medium) {
       margin-bottom: 15px;
+      line-height: 28px;
+      font-size: 20px;
     }
 
     @include respond-to(large) {
       margin-bottom: 0;
+      line-height: 36px;
     }
   }
 
@@ -73,10 +161,10 @@
     margin: 10px 0;
     display: block;
 
-    p {
-      font-weight: 500;
-      margin-bottom: 0;
-    }
+    // p {
+    //   font-weight: 500;
+    //   margin-bottom: 0;
+    // }
 
     @include respond-to(medium) {
       display: none;
@@ -150,11 +238,10 @@
     position: relative;
     text-align: right;
     float: right;
-    bottom: 70px;
-    right: 10px;
+    bottom: 30px;
+    right: 25px;
 
     @include respond-to(medium) {
-      bottom: 0;
       position: static;
     }
 
@@ -165,9 +252,8 @@
     }
 
     .share {
-      // position: relative;
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
       max-height: 0;
       overflow: hidden;
       transition: all 0.5s;
@@ -176,6 +262,7 @@
         list-style-type: none;
         padding: 0;
         opacity: 1;
+        margin-bottom: 0;
 
         li {
           display: inline-block;
@@ -186,9 +273,9 @@
         position: absolute;
         margin-top: 0;
         margin-bottom: 0;
-        bottom: 66px;
+        bottom: 20px;
         right: 25px;
-        overflow: visible;
+        max-height: 33px;
       }
 
       @include respond-to(large) {

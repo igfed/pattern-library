@@ -1,0 +1,120 @@
+/*
+More Top Articles
+
+Optional top posts component sometimes inlcuded at the bottom of More Article pages.
+
+Markup:
+<div class="callout bg-more-section">
+  <div class="more-top-articles">
+    <div class="row">
+      <div class="small-11 small-centered medium-uncentered medium-6 columns">
+        <h3 class="sub-title">
+          Top Articles
+        </h3>
+        <ul class="top-articles-list no-bullet">
+          <li>
+            <a href="">
+              5 Retirement Retreats
+              <span>
+                <img src="images/Arrow-TopArticles-Green.svg" alt="" />
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Saving People with Salt
+              <span>
+                <img src="images/Arrow-TopArticles-Green.svg" alt="" />
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Grey Cup Glory
+              <span>
+                <img src="images/Arrow-TopArticles-Green.svg" alt="" />
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              How Risky Are You?
+              <span>
+                <img src="images/Arrow-TopArticles-Green.svg" alt="" />
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Secrets to Sleeping Well
+              <span>
+                <img src="images/Arrow-TopArticles-Green.svg" alt="" />
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+ */
+
+.more-top-articles {
+  .body-copy-bold {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      height: 2px;
+      width: 10px;
+      background-color: $darkest-color;
+    }
+  }
+
+  .top-articles-list {
+    li {
+      border-bottom: $more-underline;
+      padding: 6px 0;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      a {
+        display: block;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        position: relative;
+
+        &:hover {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
+
+        &:active {
+          color: $button-primary-color;
+          transition: color 0.25s;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-60%);
+
+        img {
+          width: 10px;
+        }
+      }
+    }
+  }
+}

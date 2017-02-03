@@ -133,3 +133,69 @@ Styleguide 3.5
 		margin-top: 20px;
 	}
 }
+
+// Alternate
+.carousel-alt {
+	.slick-prev{
+		&:before{
+			border-top: solid 3px $lightest-color;
+			border-right: solid 3px $lightest-color;
+		}
+	}
+	.slick-next{
+		&:after{
+			border-top: solid 3px $lightest-color;
+			border-right: solid 3px $lightest-color;
+		}
+	}
+	// Pagination
+	.slick-dots {
+		li {
+
+			button {
+				background: $button-primary-color;
+			}
+			&.slick-active button {
+				background: $lightest-color;
+			}
+		}
+	}
+}
+
+
+.svg-wrapper {
+  transition: color 0.2s;
+
+  .fill-circle {
+    margin-left: 5px;
+    position: relative;
+    top: 8px;
+    transition: fill 0.2s;
+    fill: $lightest-color;
+  }
+
+  &:hover {
+    color: #000;
+
+    .fill-circle {
+      fill: #000;
+    }
+  }
+}
+
+// .svg-wrapper {
+//   .fill-circle {
+//     margin-left: 5px;
+//     position: relative;
+//     top: 8px;
+//     transition: fill 0.2s;
+//     fill: $lightest-color;
+//   }
+//
+//   &:hover {
+//     .fill-circle {
+//       fill: #000;
+//     }
+//   }
+
+// }

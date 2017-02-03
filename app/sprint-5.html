@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IG Sprint 4</title>
+    <title>IG Sprint 5</title>
     <meta name="theme-color" content="#7EC4B9">
 
 
@@ -167,11 +167,218 @@
           </div>
         </div>
       </div>
+
+      <!--Find an Advisor Results-->
+      <div class="callout bg-primary">
+          <form id="find-an-advisor-search" class="find-an-advisor-search-form">
+              <div class="row">
+                  <div class="small-12 small-centered columns">
+                      <div class="row text-center">
+                          <div class="small-10 medium-8 large-7 columns small-centered">
+                            <figure class="medium-figure text-center">
+                              <a href="en/opportunities/investment">
+                                <img src="images/find-an-advisor-icon.png" alt="" class="img__icon">
+                                <figcaption>
+                                   <h1 class="text-center content-title">Find an Advisor</h1>
+                                </figcaption>
+                              </a>
+                            </figure>
+                          </div>
+                      </div>
+                      <div class="row collapse find-an-advisor-search-form-fields">
+                          <div class="medium-5 columns find-an-advisor-search-form-field">
+                               <p class="section-title text-left">Search By</p>
+                                <select class="search-select">
+                                  <option value="Location">Location</option>
+                                  <option value="Name">Name</option>
+                              </select>
+                          </div>
+                          <div class="medium-5 columns find-an-advisor-search-form-field">
+                               
+                              <div class="find-an-advisor-search-form-field-location" data-searchtype="location">
+                                  <img src="images/map-marker-blue.png">
+                                  <input class="typeahead itf_location" type="search" placeholder="Enter a city" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_location">
+                              </div>
+
+                              <div class="find-an-advisor-search-form-field-name" style="display:none" data-searchtype="name" >
+                                  <img src="images/find-an-advisor-advisor-icon.png">
+                                  <input class="typeahead itf_name" type="search" placeholder="Enter a name" name="Search" autocomplete="off" spellcheck="false" id="FindAnAdvisor_name">
+                              </div>
+
+                          </div>
+
+                            <div class="medium-3 large-2 columns find-an-advisor-search-form-field">
+                              <button id="SearchSubmitButton" class="button primary-alternative" value="Go">Go</button>
+                            </div>
+                      </div>
+                      <div class="row">
+                          <div class="small-12 columns">
+                               <p class="text-center callout-body-copy">Our consultants can help no matter what financial situation you're in.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+
+      <div class="section search-results">
+          <div class="row">
+              <div class="medium-12 columns">
+                    <p class="tp_08">10 results</p>
+                    <p class="tp_08">No results match your search</p>
+                    <p class="tp_09">Please try different spellings or more general terms</p>
+              </div>
+          </div>
+          <div class="row underline">
+            <div class="small-12 medium-7 large-6 columns portrait-column">
+                <div class="portrait">
+                    <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/Silhouette_Man.png" />
+                </div>
+                <div class="consultant-text">
+                <p class="tp_07 consultant_name">John Smith</p>
+                <p class="tp_05">Consultant</p>
+                <p class="tp_09">Toronto M1B 3V4</p>
+                </div>
+            </div>
+            <div class="small-12 medium-6 large-5 columns buttons-column">
+              
+                <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                  <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                          Contact Info
+                           Phone
+                      ">
+                      <a class="button secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                          <span class="hide-for-small-only">Contact Info</span>
+                          <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                      </a>
+                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                              <a href="mailto:{{myInfo.Email}}">Email me</a>
+                          </li>
+                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                              <a href="tel:{{myInfo.Phone}}">
+                                  <strong>Phone</strong>
+                                  <span>444444444</span>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+                <a onclick="ga('send','event','Consumer Engagement','Click','Click_Email_me_EventPage:FAA', 0);" href="mailto:{{myInfo.Email}}" class="button secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+              <a onclick="ga('send','event','Consumer Engagement','Click','Click_View_Profile_EventPage:FAA', 0);" class="button" type="button" href="{{myInfo.ConsultantUrl}}">View Profile</a>
+            </div>
+           
+            <div class="clear"></div>
+          </div>
+            <div class="row my-team">
+                <div class="medium-12 columns title">
+                  <div class="row">
+                    <div class="small-4 medium-4 columns line">
+                      <div class="clear"></div>
+                    </div>
+                    <div class="small-4 medium-4 columns">
+                      <p class="tp_21">My Team</p>
+                    </div>
+                    <div class="small-4 medium-4 columns line">
+                      <div class="clear"></div>
+                    </div>
+                    </div>
+                </div>
+                <div class="my-consultant-team">
+                    <div class="medium-4 columns">
+                      <p class="tp_09 consultant_name">Richard Armstrong</p>
+                
+
+                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                      <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                              Contact Info
+                               Phone
+                          ">
+                          <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                              <span class="hide-for-small-only">Contact Info</span>
+                              <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
+                          </a>
+                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                  <a href="mailto:{{Email}}">Email me</a>
+                              </li>
+                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                  <a href="tel:{{Phone}}">
+                                      <strong>Phone</strong>
+                                      <span>55555555</span>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                <a href="mailto:{{Email}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                  <div class="clear"></div>
+                    </div>
+                 <div class="row show-for-small-only">
+                       <p class="tp_05">View All Team Members</p>
+                    </div>
+                </div>
+            </div>
+              <div class="row my-team">
+                  <div class="medium-12 columns title">
+                    <div class="row">
+                      <div class="small-4 medium-4 columns line">
+                        <div class="clear"></div>
+                      </div>
+                      <div class="small-4 medium-4 columns">
+                        <p class="tp_21">Associates</p>
+                      </div>
+                      <div class="small-4 medium-4 columns line">
+                        <div class="clear"></div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="my-consultant-team">
+                      <div class="medium-4 columns">
+                        <p class="tp_09 consultant_name"></p>
+                  
+
+                        <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                Contact Info
+                                 Phone
+                            ">
+                            <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                <span class="hide-for-small-only">Contact Info</span>
+                                <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i></span>
+                            </a>
+                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                    <a href="mailto:{{Email__c}}">Email me</a>
+                                </li>
+                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                    <a href="tel:{{Phone__c}}">
+                                        <strong>Phone</strong>
+                                        <span></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                  <a href="mailto:{{Email__c}}" class="outline-btn secondary small-icon email show-for-small-only" type="button"><span><i aria-hidden="true" class="fa fa-envelope"></i></span></a>
+                    <div class="clear"></div>
+                      </div>
+                   <div class="row show-for-small-only">
+                         <p class="tp_05">View All Team Members</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row view-more">
+                  <div class="medium-4 medium-centered">
+                      <a class="outline-btn secondary" type="button" href="#" data-fetch-results>View More Results</a>
+                  </div>
+              </div>
     </main>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="/bower_components/what-input/dist/what-input.js"></script>
     <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>

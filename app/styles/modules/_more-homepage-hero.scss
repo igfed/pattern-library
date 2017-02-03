@@ -1,0 +1,158 @@
+/*
+Homepage Hero
+
+A single slide of the Homepage Carousel. Shares many css rules from the Homepage Carousel.
+
+Markup:
+<div class="row home-hero">
+  <div class="homepage-hero-slide">
+    <div class="medium-6 columns" style="padding-left: 0;">
+      <a href="/more-article.html">
+        <img src="images/choose-your-resolution-900x576.jpg" alt="Win a Trip to Brazil image"></img>
+      </a>
+    </div>
+    <div class="large-card-content medium-6 columns" style="padding-right: 0;">
+      <h4 class="section-title"><a href="#">Life</a></h4>
+      <h2 style="word-wrap: break-word;" class="content-title">
+        <a href="/more-article.html">Choose Your Resolution</a>
+      </h2>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html">
+          <p>New Year’s resolutions don’t have to be long lists of things you’ll never get to. Instead, pick one cause... </p>
+        </a>
+      </div>
+      <div class="author">By Renee Sylvestre-Williams / <time class="published" datetime="2016-12-09T13:20:41+00:00">December 2016</time></div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+    </div>
+    <div class="share-box">
+      <button class="js-open-socialdrawer">
+        <img src="images/share-green.svg" alt="">
+      </button>
+      <div class="share js-socialdrawer">
+        <ul>
+          <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+*/
+
+.home-hero {
+  position: relative;
+
+  @include respond-to(large) {
+    &:hover {
+      .homepage-hero-slide {
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .homepage-hero-slide {
+    margin: 0;
+    position: relative;
+
+    @include respond-to(large) {
+      margin: 0 25px;
+    }
+
+    .large-card-img {
+      padding-left: 0;
+    }
+
+    .large-card-content {
+      padding-right: 25px;
+
+      @include respond-to(medium) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .share-box {
+    position: relative;
+    text-align: right;
+    float: right;
+    right: 25px;
+
+    @include respond-to(medium) {
+      position: static;
+    }
+
+    .js-open-socialdrawer {
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+
+    .share {
+      margin-top: 10px;
+      margin-bottom: 33px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s, margin-bottom 0.5s;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        opacity: 1;
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+        }
+      }
+
+      @include respond-to(medium) {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 30px;
+        right: 25px;
+        max-height: 33px;
+      }
+
+      @include respond-to(large) {
+        right: 0;
+        ul {
+          opacity: 0;
+          transition: opacity 250ms;
+          li {
+            opacity: 1;
+            transition: opacity 250ms;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .show-list-on-hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .js-socialdrawer-opened {
+      max-height: 33px;
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        max-height: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
