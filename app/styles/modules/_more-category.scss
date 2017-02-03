@@ -7,7 +7,7 @@ Markup:
 <div class="category-section-main">
   <div class="row">
     <div class="trending-title">
-      <h4>Life&nbsp;—&nbsp;&nbsp;<span class="article-count">29 articles</span></h4>
+      <h4 class="body-copy-bold">Life&nbsp;—&nbsp;&nbsp;<span class="article-count">29 articles</span></h4>
     </div>
     <div class="column medium-9">
       <div class="row">
@@ -15,16 +15,16 @@ Markup:
           <a href="/more-article.html">
             <img class="section-image" width="600" height="450" src="images/JOMO_Vigg_F-feature-600x450.jpg">
           </a>
-          <h4 class="section-title"><a href="/more/en/category/life/">Life</a></h4>
-          <h3 class="callout-body-copy">
+          <a href="/more/en/category/life/"><h4 class="more-small-section-title">Life</h4></a>
+          <h3 class="more-callout-body-copy-bold">
             <a href="/more-article.html">So Long, Social Media</a>
           </h3>
           <div class="title-excerpt" style="word-wrap: break-word;">
             <a href="/more-article.html" style="display: inline;">
-              <p>There’s a movement afoot, called the Joy of Missing Out, where people put down their cell phones and enjoy... </p>
+              <p class="body-copy">There’s a movement afoot, called the Joy of Missing Out, where people put down their cell phones and enjoy... </p>
             </a>
           </div>
-          <div class="author">By Shawna Cohen</div>
+          <div class="legal-copy">By Shawna Cohen</div>
           <div class="read-more-box">
             <a href="/more-article.html" class="tertiary-cta">Read More</a>
           </div>
@@ -46,78 +46,16 @@ Markup:
           <a href="/more-article.html">
             <img class="section-image" width="600" height="450" src="images/CPPchanges-600x250.jpg" alt="">
           </a>
-          <h4 class="section-title"><a href="#">Work</a></h4>
-          <h3 class="callout-body-copy">
+          <a href="#"><h4 class="more-small-section-title">Work</h4></a>
+          <h3 class="more-callout-body-copy-bold">
             <a href="/more-article.html">5 Things Your Business Needs to Know About Future CPP Changes</a>
           </h3>
           <div class="title-excerpt" style="word-wrap: break-word;">
             <a href="/more-article.html" style="display: inline;">
-              <p>Significant changes to the Canada Pension Plan come into effect in 2019. Start getting ready now.</p>
+              <p class="body-copy">Significant changes to the Canada Pension Plan come into effect in 2019. Start getting ready now.</p>
             </a>
           </div>
-          <div class="author">By Investors Group</div>
-          <div class="read-more-box">
-            <a href="/more-article.html" class="tertiary-cta">Read More</a>
-          </div>
-          <div class="share-box">
-            <button class="js-open-socialdrawer">
-              <img src="images/share-green.svg" alt="">
-            </button>
-            <div class="share js-socialdrawer">
-              <ul>
-                <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="tile column small-10 small-offset-1 medium-offset-0 medium-6 large-8">
-          <a href="/more-article.html">
-            <img class="section-image" width="600" height="450" src="images/CPPchanges-600x250.jpg" alt="">
-          </a>
-          <h4 class="section-title"><a href="#">Work</a></h4>
-          <h3 class="callout-body-copy">
-            <a href="/more-article.html">5 Things Your Business Needs to Know About Future CPP Changes</a>
-          </h3>
-          <div class="title-excerpt" style="word-wrap: break-word;">
-            <a href="/more-article.html" style="display: inline;">
-              <p>Significant changes to the Canada Pension Plan come into effect in 2019. Start getting ready now.</p>
-            </a>
-          </div>
-          <div class="author">By Investors Group</div>
-          <div class="read-more-box">
-            <a href="/more-article.html" class="tertiary-cta">Read More</a>
-          </div>
-          <div class="share-box">
-            <button class="js-open-socialdrawer">
-              <img src="images/share-green.svg" alt="">
-            </button>
-            <div class="share js-socialdrawer">
-              <ul>
-                <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
-                <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="tile column small-10 small-offset-1 medium-offset-0 medium-6 large-4">
-          <a href="/more-article.html">
-            <img class="section-image" width="600" height="450" src="images/JOMO_Vigg_F-feature-600x450.jpg">
-          </a>
-          <h4 class="section-title"><a href="/more/en/category/life/">Life</a></h4>
-          <h3 class="callout-body-copy">
-            <a href="/more-article.html">So Long, Social Media</a>
-          </h3>
-          <div class="title-excerpt" style="word-wrap: break-word;">
-            <a href="/more-article.html" style="display: inline;">
-              <p>There’s a movement afoot, called the Joy of Missing Out, where people put down their cell phones and enjoy... </p>
-            </a>
-          </div>
-          <div class="author">By Shawna Cohen</div>
+          <div class="legal-copy">By Investors Group</div>
           <div class="read-more-box">
             <a href="/more-article.html" class="tertiary-cta">Read More</a>
           </div>
@@ -143,7 +81,6 @@ Markup:
       <div class="category-list">
         <li><a href="#">January 2017</a></li>
         <li><a href="#">December 2016</a></li>
-        <li><a href="#">November 2016</a></li>
       </div>
       <h3 class="section-title">Category&nbsp;—</h3>
       <div class="category-list">
@@ -168,10 +105,6 @@ Styleguide 4.1
 
   .trending-title {
     margin-top: 0;
-
-    h4 {
-      font-size: 22px;
-    }
   }
 
   .article-count {
@@ -184,7 +117,6 @@ Styleguide 4.1
   }
 
   .tile {
-
     @include respond-to(medium) {
       border-right: 1px solid $border-color  !important;
       border-bottom: 1px solid $border-color !important;
@@ -209,18 +141,23 @@ Styleguide 4.1
     .mini-title {
       margin-top: 22px;
       margin-bottom: 0;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 14px;
+      font-family: $font-stack;
       padding-bottom: 10px;
+      text-transform: none;
 
       @include respond-to(medium) {
         margin-top: 0;
+        font-size: 16px;
         border-bottom: solid 1px $border-color;
+      }
+      @include respond-to(large) {
+        font-size: 18px;
       }
     }
 
-    .section-title {
-      font-size: 20px;
+    .body-copy-bold {
+      // font-size: 20px;
       padding-bottom: 7px;
       margin-top: 40px;
       margin-bottom: 30px;
@@ -233,17 +170,17 @@ Styleguide 4.1
     }
 
     .category-list {
-      li {
+      .legal-copy {
         list-style: none;
-        font-size: 16px;
-        font-weight: 500;
-        font-family: $font-stack;
+        // font-size: 16px;
+        // font-weight: 500;
+        // font-family: $font-stack;
         line-height: 24px;
         text-transform: uppercase;
         margin-bottom: 17px;
 
         @include respond-to(medium) {
-          font-size: 12px;
+          // font-size: 12px;
           line-height: 16px;
           margin-bottom: 10px;
         }
