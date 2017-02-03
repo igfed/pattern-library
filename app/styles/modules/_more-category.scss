@@ -76,16 +76,23 @@ Markup:
       </div>
     </div>
     <div class="column medium-3 categories-sidebar">
-      <h1 class="mini-title">Sort Articles</h1>
-      <h3 class="section-title">Date&nbsp;—</h3>
+      <h3 class="mini-title">Sort Articles</h3>
+      <h3 class="body-copy-bold">Date&nbsp;—</h3>
       <div class="category-list">
-        <li><a href="#">January 2017</a></li>
-        <li><a href="#">December 2016</a></li>
+        <li class="legal-copy"><a href="#">January 2017</a></li>
+        <li class="legal-copy"><a href="#">December 2016</a></li>
       </div>
-      <h3 class="section-title">Category&nbsp;—</h3>
+      <h3 class="body-copy-bold">Category&nbsp;—</h3>
       <div class="category-list">
-        <li class="cat-item"><a href="#">People</a></li>
-        <li class="cat-item"><a href="#">Places</a></li>
+        <li class="legal-copy"><a href="#">People</a></li>
+        <li class="legal-copy"><a href="#">Places</a></li>
+        <li class="legal-copy"><a href="#">Work</a></li>
+        <li class="legal-copy"><a href="#">Family</a></li>
+        <li class="legal-copy current-cat">
+          <a href="#">Life</a>
+        </li>
+        <li class="legal-copy"><a href="#">Money</a></li>
+        <li class="legal-copy"><a href="#">Our Readers</a></li>
       </div>
     </div>
   </div>
