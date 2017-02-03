@@ -5,6 +5,7 @@
 	.patterned-more{
 		padding-bottom: 0;
 		padding-top: 0;
+
 		
 		&.active{
 			width: 100%;
@@ -82,6 +83,10 @@
 		margin-top: 1rem;
 		padding-right: 1rem;
 
+		@include respond-to(medium){
+			display: none;
+		}
+
 		p{
 			display: inline-block;
 		}
@@ -91,33 +96,60 @@
 			padding-left: 4px;
 		}
 
-		@include respond-to(medium){
-			display: none;
+		.accordion-arrow{
+			&:before{
+				top: 0;
+				position: relative;
+			}
+		}
+
+		&.active .accordion-arrow {
+
+			&:before{
+				top: 10px;
+				-webkit-transform-origin: center middle;
+			    transform-origin: center middle;
+			    -webkit-transform: rotate(225deg) translate3d(0, 0, 0);
+			    transform: rotate(225deg) translate3d(0, 0, 0);
+			    -webkit-transition: -webkit-transform 0.3s ease-out;
+			    transition: -webkit-transform 0.3s ease-out;
+			    transition: transform 0.3s ease-out;
+			    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+			}
 		}
 	}
 
 	.more-section-tagline{
-
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
 		position: relative;
-		// margin-bottom: 0;
+		padding-right: 0;
 
 		img{
 			width: 35%;
 
 			@include respond-to(medium){
 				width: 150px;
-				margin-bottom: 0.5rem;
-				margin-right: 1rem;
+				margin-bottom: 0.7rem;
+				margin-right: 25px;
 			}
 
 			@include respond-to(large){
 				width: auto;
+				margin-right: 50px;
 			}
 		}
 
 		h1{
+
 			@include respond-to(medium){
 				margin-bottom: 0;
+				line-height: 60px;
+			}
+
+			@include respond-to(large){
+				line-height: 89px;
 			}
 		}
 
@@ -128,6 +160,8 @@
 		.more-section-tagline-tag{
 			display: none;
 			vertical-align: bottom;
+			z-index: 9;
+			position: inherit;
 
 			@include respond-to(medium){
 				display: inline-block; 
