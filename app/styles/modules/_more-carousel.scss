@@ -1,0 +1,311 @@
+/*
+Homepage Carousel
+
+Carousel with 1 large image on the left and content on the right.
+
+Markup:
+<div class="row homepage-carousel">
+  <div class="homepage-carousel-slide">
+    <div class="medium-6 columns">
+      <a href="/more-article.html">
+        <img src="images/choose-your-resolution-900x576.jpg" alt="Win a Trip to Brazil image"></img>
+      </a>
+    </div>
+    <div class="large-card-content columns medium-6">
+      <a href="/sprint-4-category.html"><h4 class="more-small-section-title">Life</h4></a>
+      <h2 style="word-wrap: break-word;" class="more-content-title-bold">
+        <a href="/more-article.html">Choose Your Resolution</a>
+      </h2>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html">
+          <p class="body-copy">New Year’s resolutions don’t have to be long lists of things you’ll never get to. Instead, pick one cause... </p>
+        </a>
+      </div>
+      <div class="legal-copy">By Renee Sylvestre-Williams / <time class="published" datetime="2016-12-09T13:20:41+00:00">December 2016</time></div>
+      <div class="read-more-box">
+        <a href="/more-article.html" class="tertiary-cta">Read More</a>
+      </div>
+    </div>
+    <div class="share-box">
+      <button class="js-open-socialdrawer">
+        <img src="images/share-green.svg" alt="">
+      </button>
+      <div class="share js-socialdrawer">
+        <ul>
+          <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="homepage-carousel-slide">
+    <div class="medium-6 columns">
+      <a href="/more-article.html">
+        <img src="images/canadian-ski-resorts-things-to-do-900x576.jpg" alt=""></img>
+      </a>
+    </div>
+    <div class="large-card-content columns medium-6">
+      <a href="/sprint-4-category.html"><h4 class="more-small-section-title">Places</h4></a>
+      <h2 style="word-wrap: break-word;" class="more-content-title-bold">
+        <a href="/more-article.html">5 Things to Do at Canadian Ski Resorts (That Aren’t Skiing)</a>
+      </h2>
+      <div class="title-excerpt" style="word-wrap: break-word;">
+        <a href="/more-article.html">
+          <p class="body-copy">Can’t ski? No problem. There are still plenty of things to do at some of Canada’s best ski...</p>
+        </a>
+      </div>
+      <div class="legal-copy">By Kat Tancock / <time class="published" datetime="2016-12-09T13:15:07+00:00">December 2016</time></div>
+      <div class="read-more-box">
+        <a class="tertiary-cta">Read More</a>
+      </div>
+    </div>
+    <div class="share-box">
+      <button class="js-open-socialdrawer">
+        <img src="images/share-green.svg" alt="">
+      </button>
+      <div class="share js-socialdrawer">
+        <ul>
+          <li><a href="#"><img src="images/share-linkedin-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-facebook-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-twitter-green.svg" alt=""></a></li>
+          <li><a href="#"><img src="images/share-email-green.svg" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+Styleguide 4.1
+*/
+
+
+.homepage-carousel, .home-hero {
+  padding: 0;
+
+  .columns, .column {
+    padding: 0;
+
+    @include respond-to(large) {
+      padding: 0 20px;
+    }
+  }
+
+  .large-card-content {
+    padding: 40px 25px 0 25px;
+
+    @include respond-to(medium) {
+      padding: 20px 0 0 20px;
+    }
+
+    @include respond-to(large) {
+      padding: 20px 20px 0 20px;
+    }
+  }
+
+  .slick-prev {
+    z-index: 1;
+    &:before {
+      border-top: solid 4px $button-primary-color;
+      border-right: solid 4px $button-primary-color;
+    }
+  }
+
+  .slick-next {
+    &:after {
+      border-top: solid 4px $button-primary-color;
+      border-right: solid 4px $button-primary-color;
+    }
+  }
+
+  .homepage-carousel-slide {
+    margin: 0;
+    position: relative;
+
+    @include respond-to(large) {
+      margin: 0 25px;
+
+      &:hover {
+        .js-socialdrawer {
+          ul {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .more-small-section-title {
+    padding: 5px 0;
+
+    @include respond-to(medium) {
+      margin-bottom: 0;
+    }
+
+    @include respond-to(large) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .more-content-title-bold {
+    margin: 0;
+    line-height: 40px;
+
+    @include respond-to(medium) {
+      margin-bottom: 10px;
+      line-height: 28px;
+    }
+
+    @include respond-to(large) {
+      margin-bottom: 0;
+      line-height: 36px;
+    }
+  }
+
+  .title-excerpt {
+    margin: 10px 0;
+    display: block;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @include respond-to(medium) {
+      display: none;
+    }
+
+    @include respond-to(large) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .legal-copy {
+    text-transform: uppercase;
+  }
+
+  .read-more-box {
+    margin: 7px 0 5px 0;
+
+    .tertiary-cta {
+      margin: 0;
+      padding-bottom: 3px;
+    }
+  }
+
+  .slick-dots {
+    .slick-active > button {
+      opacity: 1;
+    }
+    li > button {
+      background-color: $button-primary-color;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @include respond-to(medium) {
+      position: absolute;
+      bottom: 5px;
+      left: 51.6%;
+      margin-bottom: 0;
+    }
+
+    @include respond-to(large) {
+      left: 51.3%;
+    }
+
+    @include respond-to(xlarge) {
+      left: 51.25%;
+    }
+  }
+
+  .share-box {
+    position: relative;
+    text-align: right;
+    float: right;
+    bottom: 30px;
+    right: 25px;
+
+    @include respond-to(medium) {
+      position: static;
+    }
+
+    .js-open-socialdrawer {
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+
+    .share {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        opacity: 1;
+        margin-bottom: 0;
+
+        li {
+          display: inline-block;
+        }
+      }
+
+      @include respond-to(medium) {
+        position: absolute;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 20px;
+        right: 25px;
+        max-height: 33px;
+
+        ul {
+          li {
+            margin-right: 4px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      @include respond-to(large) {
+        ul {
+          opacity: 0;
+          transition: opacity 250ms;
+          li {
+            opacity: 1;
+            transition: opacity 250ms;
+            margin-right: 0;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .show-list-on-hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .js-socialdrawer-opened {
+      max-height: 50px;
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        max-height: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
