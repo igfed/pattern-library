@@ -177,6 +177,9 @@ $link-hover: #0BAB7B;
 .section-divider {
   border-top: $more-underline;
   padding-bottom: 25px;
+  @include respond-to(medium) {
+    padding-bottom: 10px;
+  }
 }
 
 // extending styles from regualr title section
@@ -351,7 +354,7 @@ $link-hover: #0BAB7B;
 // more-tips
 // extended styling to work for Q & A section too
 .more-tips {
-  margin: 40px auto;
+  margin: 35px auto;
 
   .list-row {
     padding-top: 35px;
@@ -361,7 +364,6 @@ $link-hover: #0BAB7B;
     &:last-of-type {
       .list-body {
         border-bottom: none;
-        padding-bottom: 0;
       }
     }
 
