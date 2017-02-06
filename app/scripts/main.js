@@ -3,7 +3,8 @@
 // ******************************************************
 
 // Let's bootstrap our 'application'
-const ig = (function() {
+const ig = (function () {
+  var pathName = window.location.pathname;
 
   function init() {
     // Probably always need search
@@ -20,11 +21,9 @@ const ig = (function() {
     }
 
     // French language class
-    (function(){
-      if (window.location.pathname.indexOf('/fr/') !== -1) {
-        $('body').addClass('fr');
-      }
-    })();
+    if (pathName.indexOf('/fr/') !== -1) {
+      $('body').addClass('fr');
+    };
 
     // Another module
 
@@ -36,9 +35,10 @@ const ig = (function() {
     // not accessible outside of the ig instance
   }
 
-  // Only return public methods
+  // Only return public methods and variables
   return {
-    init
+    init,
+    pathName
   };
 }());
 
@@ -187,7 +187,6 @@ const form = function () {
 }();
 
 
-
 //Carousel
 $(function () {
   $(document).foundation();
@@ -262,7 +261,6 @@ $(function () {
     }
   });
 });
-
 
 
 //More Header
@@ -598,6 +596,6 @@ $(function () {
 
 
 // Kick things off
-$(document).ready(function(){
+$(document).ready(function () {
   ig.init();
 })
