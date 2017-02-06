@@ -170,7 +170,7 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src(['app/*.html', 'app/templates/*.html'])
+  gulp.src(['app/**/*.html'])
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
     }))

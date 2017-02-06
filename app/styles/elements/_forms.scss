@@ -524,6 +524,15 @@ select {
     }
   }
 
+  .form-group-select {
+    label.error:after {
+      right: 30px;
+    }
+    select {
+      margin-top: 2px;
+    }
+  }
+
   .form-group-text {
     margin: 25px 0;
 
@@ -532,12 +541,6 @@ select {
     }
     & label.error {
       top: 94px !important;
-    }
-  }
-
-  .form-group-select {
-    select {
-      margin-top: 2px;
     }
   }
 
