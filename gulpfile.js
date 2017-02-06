@@ -167,7 +167,15 @@ gulp.task('serve:test', ['scripts'], () => {
 gulp.task('wiredep', () => {
   gulp.src('app/styles/*.scss')
     .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
+      ignorePath: /^(\.\.\/)+/,
+      overrides: {
+        foundation: {
+          main: [
+            'css/foundation.css',
+            'js/foundation.js'
+          ]
+        }
+      }
     }))
     .pipe(gulp.dest('app/styles'));
 

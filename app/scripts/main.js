@@ -2,6 +2,47 @@
 // Forms (Reveal module pattern, form namespace)
 // ******************************************************
 
+// Let's bootstrap our 'application'
+const ig = (function() {
+
+  function init() {
+    // Probably always need search
+    //search.init();
+
+    // Forms
+    if ($('.ig-form').length) {
+      form.init();
+    }
+
+    // Carousel
+    if ($('.ig-carousel').length) {
+      // carousel.init();
+    }
+
+    // French language class
+    (function(){
+      if (window.location.pathname.indexOf('/fr/') !== -1) {
+        $('body').addClass('fr');
+      }
+    })();
+
+    // Another module
+
+    // Another module
+
+  }
+
+  function _privateMethod() {
+    // not accessible outside of the ig instance
+  }
+
+  // Only return public methods
+  return {
+    init
+  };
+}());
+
+
 const form = function () {
   var endpointURL,
     successURL,
@@ -146,13 +187,6 @@ const form = function () {
 }();
 
 
-// Refactor the following in Sprint 5 (put into ig.init)
-// Need to have a class to hook onto for French language page
-(function(){
-  if (window.location.pathname.indexOf('/fr/') !== -1) {
-    $('body').addClass('fr');
-  }
-})();
 
 //Carousel
 $(function () {
@@ -228,7 +262,9 @@ $(function () {
     }
   });
 });
-form.init();
+
+
+
 //More Header
 
 $(function () {
@@ -559,3 +595,9 @@ $(function () {
 
   $location_field.focus();
 });
+
+
+// Kick things off
+$(document).ready(function(){
+  ig.init();
+})
