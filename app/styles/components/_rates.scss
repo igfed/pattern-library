@@ -136,6 +136,14 @@
       }
     }
 
+    .rate-block-info {
+
+      @include respond-to(medium) {
+        padding-top: 15px;
+        text-align: left;
+      }
+    }
+
     // Sections are not text-center by default so we center rate-blocks here
     .rate-block {
       text-align: center;
