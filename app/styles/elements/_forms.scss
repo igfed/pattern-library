@@ -667,6 +667,10 @@ select {
     transform: rotate(0deg);
   }
 
+  // Focus states for custom elements
+  .form-group-checkbox input:focus + label::after,  .form-group-radio input:focus + label::after {
+    border: 3px solid #000;
+  }
   /* Option Toggle */
 
   .form-group-toggle {
