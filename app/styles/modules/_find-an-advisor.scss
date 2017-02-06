@@ -310,12 +310,11 @@
   }
 
   .my-team{
-
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 
     .title{
       .row{
-        margin-top: 4rem!important;
-        margin-bottom:0!important;
 
         p{
           margin-top: -1rem;
@@ -335,6 +334,16 @@
   .my-consultant-team{
 
     .row{
+
+      .columns{
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-to(medium){
+          display: block;
+        }
+      }
+
       @include respond-to(medium){
         display: flex;
         flex-flow: row wrap;
