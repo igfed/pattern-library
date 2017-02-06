@@ -18,70 +18,6 @@
       }
   }
 
-
-  .find-an-advisor-search-form-field{
-
-    @include respond-to(medium){
-      width: auto;
-    }
-
-    img{
-      width: 13px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    .find-an-advisor-search-form-field-location, .find-an-advisor-search-form-field-name{
-      margin-top: 0;
-      background-color: white;
-      height: 40px;
-      border-radius: 0.5rem;
-      position: relative;
-      // width: 100%;
-
-      @include respond-to(medium){
-        width: 320px;
-        border-radius: 0;
-      }
-
-      @include respond-to(large){
-        width: 400px;
-      }
-
-      label{
-        font-family: "whitney_lightregular";
-      }
-
-      input[type="search"]{
-
-        margin-bottom: 0;
-        padding-left: 2rem;
-
-        font-family: $font-stack;
-        font-size: 16px;
-        font-size: 1rem;
-        color: $darkest-color;
-        line-height: 1.5em;
-        margin-bottom: 2px;
-        border-radius: 0.5rem;
-        border: none;
-
-        @include respond-to(medium){
-          border-radius: 0;
-          margin: 0;
-        }
-
-        &:focus{
-          border: none;
-        }
-      }
-
-    }
-
-  }
-
-
   .tt-menu, .typeahead {
       font-size: 1.6rem;
       text-transform: none;
@@ -125,15 +61,6 @@
     }
   }
 
-  .find-an-advisor-search-form-fields{
-    @include respond-to(medium){
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      margin-bottom: 50px;
-    }
-  }
-
   .twitter-typeahead{
     position: relative;
     width: 100%;
@@ -172,7 +99,74 @@
   }
 }
 
-//Go button
+.find-an-advisor-search-form-field{
+
+    @include respond-to(medium){
+      width: auto;
+    }
+
+    img{
+      width: 13px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+}
+
+.find-an-advisor-search-form-field-location, .find-an-advisor-search-form-field-name{
+  margin-top: 0;
+  background-color: white;
+  height: 40px;
+  border-radius: 0.5rem;
+  position: relative;
+  // width: 100%;
+
+  @include respond-to(medium){
+    width: 320px;
+    border-radius: 0;
+  }
+
+  @include respond-to(large){
+    width: 400px;
+  }
+
+  label{
+    font-family: "whitney_lightregular";
+  }
+
+  input[type="search"]{
+
+    margin-bottom: 0;
+    padding-left: 2rem;
+
+    font-family: $font-stack;
+    font-size: 16px;
+    font-size: 1rem;
+    color: $darkest-color;
+    line-height: 1.5em;
+    margin-bottom: 2px;
+    border-radius: 0.5rem;
+    border: none;
+
+    @include respond-to(medium){
+      border-radius: 0;
+      margin: 0;
+    }
+
+    &:focus{
+      border: none;
+    }
+  }
+}
+
+.find-an-advisor-search-form-fields{
+  @include respond-to(medium){
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
 
 #SearchSubmitButton{
   margin-bottom: 0;
@@ -187,9 +181,6 @@
       border-radius: 0 0.5rem 0.5rem 0;
   }
 }
-
-
-/*Search Dropdrown*/
 
 .search-select{
   width: 15rem;
@@ -221,12 +212,39 @@
   }
 }
 
+
+
 /*Counsultant Results*/
 
 .search-results-consultant{
   @include respond-to(medium){
     display:flex;
     justify-content: space-between;
+  }
+
+  .dropdown.menu{
+
+    .is-dropdown-submenu-parent.opens-right{
+      width: 100%;
+      display: inline-block;
+    }
+
+    .is-dropdown-submenu{
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  a.dropdown, .button{
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.search-results-consultant-portrait{
+  width: 80px;
+  @include respond-to(medium){
+    width: 150px;
   }
 }
 
@@ -237,114 +255,36 @@
 .search-results-consultant-info-buttons{
   display: inline-block;
   align-self: center;
+  margin-top: 20px;
+
+  @include respond-to(medium){
+    margin: 0;
+  }
+
+  .button{
+   padding: 5px 1.25em 7px
+  }
+
+  .phone-icon{
+    &:before{
+      top: -8px;
+    }
+  }
+
+  .email-icon{
+    &:before{
+      left: -28px;
+      top: 2px;
+    }
+  }
 }
 
-.search-results{
+.search-results-consultant-team-members{
 
-
-    a.button.dropdown, .button{
-        min-width: auto;
-        width: 100%;
-      }
-
-    .dropdown.menu{
-
-      .is-dropdown-submenu-parent.opens-right{
-        width: 100%;
-        display: inline-block;
-      }
-
-      .is-dropdown-submenu{
-        width: 100%;
-        min-width: auto;
-      }
-    }
-
-  &#results-placeholder{
-    .row{
-      margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
-  }
-
-  &#results-container{
-    >.row{
-       margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
-  }
-
-  .search-results-consultant-portrait{
-    width: 80px;
     @include respond-to(medium){
-      width: 150px;
-    }
-  }
-
-  .underline{
-
-    padding-top: 1rem;
-
-
-    &:before{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
-        width: 100%;
-        padding-top: 2.5rem;
-    }
-
-  }
-
-  .row.underline{
-
-   &:last-child{
-      text-align: inherit!important;
-      margin-top: 0!important;
-    }
-
-  }
-
-  .my-team{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-
-    .title{
-      .row{
-
-        p{
-          margin-top: -1rem;
-          margin-bottom: 1rem;
-          width: 100%!important;
-          text-align: center;
-        }
-      }
-
-      .line{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
-      }
-    }
-  }
-
-  .my-consultant-team{
-
-    .row{
-
-      .columns{
-        display: flex;
-        justify-content: space-between;
-
-        @include respond-to(medium){
-          display: block;
-        }
-      }
-
-      @include respond-to(medium){
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-     }
-    }
+      display: flex;
+      justify-content: center;
+   }
 
     .dropdown{
 
@@ -357,10 +297,114 @@
     }
 
     .email{
-        border: none!important;
+        border: none;
 
         i{
-          border: 2px solid #0d263c!important;
+          border: 2px solid #0d263c;
+        }
+    }
+  }
+
+.search-results-consultant-team-member{
+  display: flex;
+  justify-content: space-between;
+
+  @include respond-to(medium){
+    flex-direction: column;
+  }
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a{
+    padding: 0;
+  }
+
+  .button{
+    min-width: auto;
+  }
+
+  .phone-icon, .email-icon{
+    border-radius: 50%;
+    border: 2px solid $brand-color;
+    height: 30px;
+  }
+
+  .phone-icon{
+    &:before{
+      left: 7.5px;
+      top: 6px;
+    }
+  }
+
+  .email-icon{
+    &:before{
+      top: 6px;
+      left: 3.5px;
+    }
+  }
+}
+
+.search-results-consultant-team-section-title{
+  display: flex;
+  align-items: center;
+}
+
+.search-results-consultant-team-section-title-line{
+  border-top: 0.2rem solid #c1cbd0;
+  content: "";
+}
+
+
+.search-results{
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    display: none;
+
+     @include respond-to(medium){
+      display: block;
+     }
+  }
+
+  .phone-icon, .email-icon{
+    position: relative;
+    width: 30px;
+    padding: 0;
+
+    &:before{
+      position: absolute;
+      width: 10px;
+    }
+  }
+
+  .phone-icon{
+    &:before{
+      content: url(../images/find-an-advisor-phone.svg);
+      width: 13px;
+    }
+  }
+
+  .email-icon{
+    &:before{
+      content: url(../images/find-an-advisor-email.svg);
+      width: 17px;
+    }
+  }
+
+  .underline{
+
+    padding-top: 1rem;
+
+    &:last-child{
+      text-align: inherit;
+      margin-top: 0;
+    }
+
+    &:before{
+        border-top: 0.2rem solid #c1cbd0;
+        content: "";
+        width: 100%;
+        padding-top: 1.5rem;
+
+        @include respond-to(medium){
+          padding-top: 1rem;
         }
     }
   }
