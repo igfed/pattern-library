@@ -1,0 +1,68 @@
+// extending styles from regualr title section
+// to account for the fact that picture switches to
+// full width on larger screens
+.full-width-title-section {
+  @extend .title-section;
+
+  @include respond-to(medium) {
+    padding-top: 125px;
+    display: block;
+  }
+
+  p {
+    @include respond-to(medium) {
+      color: $lightest-color;
+    }
+  }
+
+  h1 {
+    @include respond-to(medium) {
+      border-bottom: 2px solid $lightest-color;
+      width: 65%;
+    }
+  }
+
+  .article-category {
+    @include respond-to(medium) {
+      margin-bottom: 10px;
+      p {
+        color: $lightest-color;
+      }
+    }
+  }
+
+  .full-width-share-icons {
+    @extend .share-icons;
+    @include respond-to(medium) {
+      position: static;
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+}
+
+.full-width-header {
+  margin-bottom: 40px;
+  max-height: 700px;
+  overflow: hidden;
+  position: relative;
+
+  @include respond-to(medium) {
+    margin-bottom: 65px;
+    display: block;
+  }
+
+  .hero {
+    height: 500px;
+    color: white
+  }
+}
+
+.full-width-article-subtitle {
+  padding: 0;
+}
+
+.show-small-image {
+  padding-bottom: 71%;
+  margin-bottom: 25px;
+}

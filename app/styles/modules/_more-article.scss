@@ -87,6 +87,7 @@ $link-hover: #0BAB7B;
 
 .bg-more-section {
   background-color: $more-background-yellow;
+  padding-bottom: 20px;
 }
 
 // specific typography for More section
@@ -107,7 +108,8 @@ $link-hover: #0BAB7B;
 }
 
 // more-article page
-// includes styling specific to hero-image version
+// includes styling for articles with right-aligned images
+// includes styling for image with caption module
 .title-section {
   position: relative;
   margin-top: 45px;
@@ -182,91 +184,21 @@ $link-hover: #0BAB7B;
   }
 }
 
-// extending styles from regualr title section
-// to account for the fact that picture switches to
-// full width on larger screens
-.full-width-title-section {
-  @extend .title-section;
+.image-with-caption {
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  // @include respond-to(small) {
-  //   display: none;
-  // }
+    .image-caption {
+      color: #a4a39c;
+      align-self: flex-start;
+      text-transform: uppercase;
 
-  @include respond-to(medium) {
-    padding-top: 125px;
-    display: block;
-  }
-
-  p {
-    @include respond-to(medium) {
-      color: $lightest-color;
-    }
-  }
-
-  h1 {
-    @include respond-to(medium) {
-      border-bottom: 2px solid $lightest-color;
-      width: 65%;
-    }
-  }
-
-  .article-category {
-    @include respond-to(medium) {
-      margin-bottom: 10px;
-      p {
-        color: $lightest-color;
+      @include respond-to(medium) {
+        align-self: center;
       }
     }
-  }
-
-  .full-width-share-icons {
-    @extend .share-icons;
-    @include respond-to(medium) {
-      position: static;
-      text-align: left;
-      margin-top: 20px;
-    }
-  }
-}
-
-.full-width-header {
-  margin-bottom: 40px;
-  max-height: 700px;
-  overflow: hidden;
-  position: relative;
-
-  // @include respond-to(small) {
-  //   display: none;
-  // }
-
-  @include respond-to(medium) {
-    margin-bottom: 65px;
-    display: block;
-  }
-
-  .hero {
-    height: 500px;
-    color: white
-  }
-}
-
-.full-width-article-subtitle {
-  padding: 0;
-}
-
-.show-small-image {
-  padding-bottom: 71%;
-  margin-bottom: 25px;
-}
-
-.image-caption {
-  color: #a4a39c;
-  float: left;
-  text-transform: uppercase;
-
-  @include respond-to(medium) {
-    float: none;
-    text-align: center;
   }
 }
 
@@ -279,7 +211,6 @@ $link-hover: #0BAB7B;
     margin: 35px auto;
   }
 
-  // for articles with many embeded images / captions
   .more-callout-body-copy-bold {
     margin-top: 22px;
     margin-bottom: -22px;
@@ -323,7 +254,6 @@ $link-hover: #0BAB7B;
     }
   }
 
-  // right-image-content
   .author-pic-container {
     padding-bottom: 35px;
     margin-top: 20px;
@@ -351,217 +281,8 @@ $link-hover: #0BAB7B;
   }
 }
 
-// more-tips
-// extended styling to work for Q & A section too
-.more-tips {
-  margin: 35px auto;
-
-  .list-row {
-    padding-top: 35px;
-    &:first-of-type {
-      padding-top: 0;
-    }
-    &:last-of-type {
-      .list-body {
-        border-bottom: none;
-      }
-    }
-
-    .list-column {
-      display: none;
-      background-position: right 0;
-      background-repeat: no-repeat;
-      top: 3px;
-
-      @include respond-to(medium) {
-        display: block;
-      }
-    }
-
-    .tips-list-column {
-      @extend .list-column;
-      background-image: url('../images/TIP-Icon.svg');
-      background-size: 50px auto;
-      height: 40px;
-    }
-
-    .questions-list-column {
-      @extend .list-column;
-      background-image: url('../images/Q-Icon.svg');
-      background-size: 45px auto;
-      height: 45px;
-      margin-top: 5px;
-      background-position: center 0;
-    }
-
-    .list-title {
-      margin-bottom: 18px;
-
-      .title-icon {
-        float: left;
-        background-size: 100%;
-        width: 40px;
-        background-repeat: no-repeat;
-
-        @include respond-to(medium) {
-          display: none;
-        }
-      }
-
-      .tips-icon {
-        @extend .title-icon;
-        background-image: url('../images/TIP-Icon.svg');
-        height: 40px;
-      }
-
-      .questions-icon {
-        @extend .title-icon;
-        background-image: url('../images/Q-Icon.svg');
-        height: 47px;
-        background-position: 0 center;
-      }
-
-      .title {
-        padding-left: 55px;
-        margin-bottom: 0;
-
-        @include respond-to(medium) {
-          position: static;
-          padding-left: 0;
-        }
-      }
-
-      .questions-title {
-        @extend .title;
-        text-transform: uppercase;
-      }
-    }
-
-    .list-body {
-      padding-bottom: 35px;
-      border-bottom: $more-underline;
-    }
-  }
-}
-
-.styled-list {
-  counter-reset: ordered-ls-counter;
-  margin: 0;
-
-  @include respond-to(medium) {
-    margin-top: 50px;
-    padding-left: 40px;
-  }
-
- li {
-   border-bottom: $more-underline;
-   list-style-type: none;
-   margin-bottom: 25px;
-   padding-bottom: 25px;
-
-   &:last-of-type {
-     border-bottom: none;
-   }
-
-   &:before {
-    content: counter(ordered-ls-counter);
-    counter-increment: ordered-ls-counter;
-    display: inline-block;
-    background-color: #0ed59a;
-    border-radius: 50%;
-    color: #ffffff;
-    width: 25px;
-    height: 25px;
-    margin-right: 12px;
-    text-align: center;
-    @include respond-to(large) {
-      width: 28px;
-      height: 28px;
-    }
-   }
-  }
-}
-
-.tips-paragraph {
-  border-bottom: $more-underline;
-  &:last-of-type {
-    border-bottom: none;
-  }
-}
-
-.embeded-video {
-  padding-bottom: 20px;
-
-  .responsive-video {
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    width: 100%;
-
-    .BrightcoveExperience {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .transcript {
-    color: $button-primary-color;
-    float: right;
-    display: inline-block;
-    margin-top: 10px;
-    &:hover {
-      color: $link-hover;
-      transition: color 0.25s;
-    }
-  }
-
-  .video-list-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 225px;
-
-    .list-content-container {
-      padding: 35px 0 35px 0;
-      border-bottom: $more-underline;
-
-      img {
-        width: 100%;
-        @include respond-to(medium) {
-          float: left;
-          margin-right: 22px;
-          width: 225px;
-        }
-      }
-
-      .list-header {
-        margin-top: 22px;
-
-        @include respond-to(medium) {
-          margin-top: 0;
-        }
-      }
-
-      p {
-        margin-bottom: 18px;
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-        @include respond-to(medium) {
-          margin-left: 255px;
-        }
-      }
-    }
-  }
-}
 
 // more-image-carousel
-
 .more-image-carousel {
   padding-bottom: 20px;
 
