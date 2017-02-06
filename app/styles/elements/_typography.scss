@@ -133,7 +133,15 @@ small strong, .legal-copy-bold {
 	font-family: $font-stack-sc-medium;
 	color: $button-primary-color;
 	text-transform: lowercase;
+}
 
+/*24c*/
+.hyperlink {
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: $font-stack-semibold;
+	// text-transform: lowercase;
+	color: $brand-color;
 }
 
 /*27c*/

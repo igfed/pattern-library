@@ -174,15 +174,20 @@ $link-hover: #0BAB7B;
   }
 }
 
+.section-divider {
+  border-top: $more-underline;
+  padding-bottom: 25px;
+}
+
 // extending styles from regualr title section
 // to account for the fact that picture switches to
 // full width on larger screens
 .full-width-title-section {
   @extend .title-section;
 
-  @include respond-to(small) {
-    display: none;
-  }
+  // @include respond-to(small) {
+  //   display: none;
+  // }
 
   @include respond-to(medium) {
     padding-top: 125px;
@@ -227,26 +232,18 @@ $link-hover: #0BAB7B;
   overflow: hidden;
   position: relative;
 
-  @include respond-to(small) {
-    display: none;
-  }
+  // @include respond-to(small) {
+  //   display: none;
+  // }
 
   @include respond-to(medium) {
-    // margin-top: -40px;
     margin-bottom: 65px;
     display: block;
   }
 
-  // change this - going to have to create an ID for every article with a hero photo
-  // need to make this inline
   .hero {
-    // background: lavender;
     height: 500px;
-    color: white;
-    // background-image: url('../images/Profile-Lloyd-Robertson-FULL.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center center;
+    color: white
   }
 }
 
@@ -254,18 +251,9 @@ $link-hover: #0BAB7B;
   padding: 0;
 }
 
-.show-small {
-  @include respond-to(small) {
-    display: block;
-  }
-  @include respond-to(medium) {
-    display: none;
-  }
-
-  .show-small-image {
-    padding-bottom: 71%;
-    margin-bottom: 25px;
-  }
+.show-small-image {
+  padding-bottom: 71%;
+  margin-bottom: 25px;
 }
 
 .image-caption {
@@ -309,6 +297,15 @@ $link-hover: #0BAB7B;
     }
   }
 
+  .offset-list {
+    padding-left: 30px;
+  }
+
+  .list-source-footer {
+    // need to define variable for this
+    color: #a4a39c;
+  }
+
   blockquote {
     border-top: 3px solid $button-primary-color;
     color: inherit;
@@ -344,7 +341,7 @@ $link-hover: #0BAB7B;
       margin: 0 auto;
       display: block;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         color: #9c9c96;
       }
     }
@@ -364,6 +361,7 @@ $link-hover: #0BAB7B;
     &:last-of-type {
       .list-body {
         border-bottom: none;
+        padding-bottom: 0;
       }
     }
 
@@ -445,9 +443,6 @@ $link-hover: #0BAB7B;
 }
 
 .styled-list {
-  // overrode margins to center
-  // doesn't match what's on the site
-  // but looks better
   counter-reset: ordered-ls-counter;
   margin: 0;
 
@@ -477,7 +472,7 @@ $link-hover: #0BAB7B;
     height: 25px;
     margin-right: 12px;
     text-align: center;
-    @include respond-to(medium) {
+    @include respond-to(large) {
       width: 28px;
       height: 28px;
     }
@@ -538,7 +533,6 @@ $link-hover: #0BAB7B;
         @include respond-to(medium) {
           float: left;
           margin-right: 22px;
-          // margin-bottom: 10px;
           width: 225px;
         }
       }
@@ -568,6 +562,15 @@ $link-hover: #0BAB7B;
 
 .more-image-carousel {
   padding-bottom: 20px;
+
+  // overriding default carousel button placement
+  // to account for figure captions
+  button {
+    top: 35%;
+    @include respond-to(medium) {
+      top: 38.5%;
+    }
+  }
 
   .carousel-figure {
     margin-bottom: 20px;
