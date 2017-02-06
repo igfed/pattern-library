@@ -223,6 +223,13 @@
 
 /*Counsultant Results*/
 
+.consultant-row{
+  @include respond-to(medium){
+    display:flex;
+    justify-content: space-between;
+  }
+}
+
 .section.search-results{
 
 
@@ -239,11 +246,8 @@
       }
 
       .is-dropdown-submenu{
-        width: 14rem;
-        @include respond-to(medium){
-          margin: 0 auto;
-           // width: 100%;
-        }
+        width: 100%;
+        min-width: auto;
       }
     }
 
@@ -264,12 +268,13 @@
   .portrait{
     width: 80px;
     @include respond-to(medium){
-      width: 250px;
+      width: 150px;
     }
   }
 
   .buttons-column{
     display: inline-block;
+    align-self: center;
   }
 
   .underline{
@@ -330,9 +335,11 @@
   .my-consultant-team{
 
     .row{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
+      @include respond-to(medium){
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+     }
     }
 
     .dropdown{
@@ -355,3 +362,7 @@
   }
 }
 
+.view-more{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
