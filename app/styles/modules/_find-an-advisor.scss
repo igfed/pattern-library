@@ -223,7 +223,33 @@
 
 /*Counsultant Results*/
 
+.consultant-row{
+  @include respond-to(medium){
+    display:flex;
+    justify-content: space-between;
+  }
+}
+
 .section.search-results{
+
+
+    a.button.dropdown, .button{
+        min-width: auto;
+        width: 100%;
+      }
+
+    .dropdown.menu{
+
+      .is-dropdown-submenu-parent.opens-right{
+        width: 100%;
+        display: inline-block;
+      }
+
+      .is-dropdown-submenu{
+        width: 100%;
+        min-width: auto;
+      }
+    }
 
   &#results-placeholder{
     .row{
@@ -242,30 +268,13 @@
   .portrait{
     width: 80px;
     @include respond-to(medium){
-      width: 250px;
+      width: 150px;
     }
   }
 
   .buttons-column{
     display: inline-block;
-
-    @include respond-to(medium){
-      display: flex;
-      width: auto;
-      float: none;
-      align-self: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .dropdown{
-      display: inline-block;
-      width: 49%;
-    }
-  }
-
-  .consultant-text{
-    width: 45%;
+    align-self: center;
   }
 
   .underline{
@@ -290,20 +299,7 @@
     }
 
   .portrait-column{
-      display: flex;
-      justify-content: space-between;
-    @include respond-to(medium){
 
-      // width: 100%;
-
-      .consultant_name{
-        display: inline-block;
-      }
-    }
-
-    @media screen and (min-width:844px) and (max-width:1000px){
-        width: 50%;
-      }
 
       p{
         margin-bottom: 0;
@@ -314,25 +310,7 @@
   }
 
   .my-team{
-    .columns:not(:first-child){
-        p{
-          width: 70%;
-          float: left;
 
-          @include respond-to(medium){
-            width: auto;
-            float:none;
-          }
-        }
-      }
-
-    .columns{
-      p{
-          width: 70%;
-          float: left;
-          text-align: left;
-      }
-    }
 
     .title{
       .row{
@@ -356,40 +334,12 @@
 
   .my-consultant-team{
 
-    .show-for-small-only{
-      &.email{
-          top: -1.2rem!important;
-          padding-right:0!important;
-      }
-    }
-    .columns{
-      float: none;
-      display: inline-block;
-      text-align: center;
-
-      @include respond-to (medium){
-        width: auto;
-        padding-bottom: 5rem;
-
-        &:not(:only-child){
-          margin-right: 0.5rem;
-          margin-left: 0.5rem;
-        }
-      }
-
-        &:before{
-          border-top: 0.2rem solid #c1cbd0;
-          content: "";
-          width: 100%;
-          padding-top: 2.5rem;
-        }
-    }
-
     .row{
-      &:last-child{
-        margin-top: 0!important;
-        margin-bottom: 0!important;
-      }
+      @include respond-to(medium){
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+     }
     }
 
     .dropdown{
@@ -409,25 +359,10 @@
           border: 2px solid #0d263c!important;
         }
     }
-
-    .dropdown{
-
-      .is-dropdown-submenu{
-        width: 14rem;
-        @include respond-to(medium){
-          margin: 0 auto;
-           // width: 100%;
-        }
-      }
-    }
   }
 }
 
-
 .view-more{
-  div{
-    width: auto;
-  }
-    width: 100%;
-    margin-top: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }

@@ -82,7 +82,7 @@
               <li>
               </li>
               <li>
-                  <li><a href="#section-2.1">Modals</a></li>
+                  <li><a href="#section-2.1">Modals (Full Screen)</a></li>
               </li>
               <li>
                   <li><a href="#section-2.2">Callout</a></li>
@@ -112,22 +112,38 @@
 
                 <article class="pattern-content" id="section-2.1">
                   <header>
-                    <h2>Modals</h2>
+                    <h2>Modals (Full Screen)</h2>
                     <p><p>A modal is just an empty container, so you can put any kind of content inside it, from text to forms to video to an entire grid.</p>
 </p>
                   </header>
                   <section>
                     <div class="sample panel">
-                      
-	<div class="reveal" id="exampleModal1" data-reveal>
-  <h1>Awesome. I Have It.</h1>
-  <p class="lead">Your couch. It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-	</div>
-	<p><a data-open="exampleModal1">Click me for a modal</a></p>
+                      <main role="main" id="content">
+   <div class="row">
+       <div class="medium-12 columns">
+           <!-- Sample of a modal trigger using data-open and the corresponding ID -->
+           <button class="button" data-open="exampleModal1">Open Modal</button>
+       </div>
+   </div>
+</main>
+<!-- The modal itself -->
+<div class="full reveal" id="exampleModal1" data-reveal>
+   <div class="row modal-header">
+       <div class="small-12 columns">
+           <span class="logo"></span>
+       <button class="close-button" data-close aria-label="Close modal" type="button">
+           <span aria-hidden="true"></span>
+       </button>
+      </div>
+   </div>
+   <div class="row modal-content">
+       <div class="small-12 columns">
+           <h2>Awesome. I Have It.</h2>
+           <p class="lead">Your couch. It is mine.</p>
+           <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+       </div>
+   </div>
+</div>
                     </div>
 
 
@@ -135,16 +151,32 @@
                        <li class="accordion-item" data-accordion-item>
                          <a href="#" class="accordion-title" >Code</a>
                          <div class="accordion-content" data-tab-content>
-                            <pre><code class="lang-html">
-	&lt;div class=&quot;reveal&quot; id=&quot;exampleModal1&quot; data-reveal&gt;
-  &lt;h1&gt;Awesome. I Have It.&lt;/h1&gt;
-  &lt;p class=&quot;lead&quot;&gt;Your couch. It is mine.&lt;/p&gt;
-  &lt;p&gt;I&#x27;m a cool paragraph that lives inside of an even cooler modal. Wins!&lt;/p&gt;
-  &lt;button class=&quot;close-button&quot; data-close aria-label=&quot;Close modal&quot; type=&quot;button&quot;&gt;
-    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
-  &lt;/button&gt;
-	&lt;/div&gt;
-	&lt;p&gt;&lt;a data-open=&quot;exampleModal1&quot;&gt;Click me for a modal&lt;/a&gt;&lt;/p&gt;</code></pre>
+                            <pre><code class="lang-html">&lt;main role=&quot;main&quot; id=&quot;content&quot;&gt;
+   &lt;div class=&quot;row&quot;&gt;
+       &lt;div class=&quot;medium-12 columns&quot;&gt;
+           &lt;!-- Sample of a modal trigger using data-open and the corresponding ID --&gt;
+           &lt;button class=&quot;button&quot; data-open=&quot;exampleModal1&quot;&gt;Open Modal&lt;/button&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- The modal itself --&gt;
+&lt;div class=&quot;full reveal&quot; id=&quot;exampleModal1&quot; data-reveal&gt;
+   &lt;div class=&quot;row modal-header&quot;&gt;
+       &lt;div class=&quot;small-12 columns&quot;&gt;
+           &lt;span class=&quot;logo&quot;&gt;&lt;/span&gt;
+       &lt;button class=&quot;close-button&quot; data-close aria-label=&quot;Close modal&quot; type=&quot;button&quot;&gt;
+           &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+       &lt;/button&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row modal-content&quot;&gt;
+       &lt;div class=&quot;small-12 columns&quot;&gt;
+           &lt;h2&gt;Awesome. I Have It.&lt;/h2&gt;
+           &lt;p class=&quot;lead&quot;&gt;Your couch. It is mine.&lt;/p&gt;
+           &lt;p&gt;I&#x27;m a cool paragraph that lives inside of an even cooler modal. Wins!&lt;/p&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                          </div>
                        </li>
                        <li class="accordion-item" data-accordion-item>

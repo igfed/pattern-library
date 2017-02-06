@@ -6,22 +6,22 @@ A single slide of the Homepage Carousel. Shares many css rules from the Homepage
 Markup:
 <div class="row home-hero">
   <div class="homepage-hero-slide">
-    <div class="medium-6 columns" style="padding-left: 0;">
+    <div class="medium-6 columns large-card-img">
       <a href="/more-article.html">
         <img src="images/choose-your-resolution-900x576.jpg" alt="Win a Trip to Brazil image"></img>
       </a>
     </div>
-    <div class="large-card-content medium-6 columns" style="padding-right: 0;">
-      <h4 class="section-title"><a href="#">Life</a></h4>
-      <h2 style="word-wrap: break-word;" class="content-title">
+    <div class="large-card-content medium-6 columns">
+      <a href="/sprint-4-category.html"><h4 class="more-small-section-title">Life</h4></a>
+      <h2 style="word-wrap: break-word;" class="more-content-title-bold">
         <a href="/more-article.html">Choose Your Resolution</a>
       </h2>
       <div class="title-excerpt" style="word-wrap: break-word;">
         <a href="/more-article.html">
-          <p>New Year’s resolutions don’t have to be long lists of things you’ll never get to. Instead, pick one cause... </p>
+          <p class="body-copy">New Year’s resolutions don’t have to be long lists of things you’ll never get to. Instead, pick one cause... </p>
         </a>
       </div>
-      <div class="author">By Renee Sylvestre-Williams / <time class="published" datetime="2016-12-09T13:20:41+00:00">December 2016</time></div>
+      <div class="legal-copy">By Renee Sylvestre-Williams / <time class="published" datetime="2016-12-09T13:20:41+00:00">December 2016</time></div>
       <div class="read-more-box">
         <a href="/more-article.html" class="tertiary-cta">Read More</a>
       </div>
