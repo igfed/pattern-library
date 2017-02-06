@@ -1,48 +1,57 @@
-// ******************************************************
-// Forms (Reveal module pattern, form namespace)
-// ******************************************************
-
 // Let's bootstrap our 'application'
 const ig = (function () {
-  var pathName = window.location.pathname;
+  var pathName = window.location.pathname,
+    lang = _lang(),
+    browserWidth = _width();
 
   function init() {
-    // Probably always need search
-    //search.init();
+    // Initialize Foundation
+    $(document).foundation();
+
+    // Search
 
     // Forms
     if ($('.ig-form').length) {
       form.init();
     }
 
+    // More
+    if ($('.more-section').length) {
+      more.init();
+    }
+
     // Carousel
     if ($('.ig-carousel').length) {
       // carousel.init();
     }
-
-    // French language class
-    if (pathName.indexOf('/fr/') !== -1) {
-      $('body').addClass('fr');
-    };
-
-    // Another module
-
     // Another module
 
   }
 
-  function _privateMethod() {
-    // not accessible outside of the ig instance
+  // Set page language
+  function _lang() {
+    if (pathName.indexOf('/fr/') !== -1) {
+      return 'fr';
+    } else {
+      return 'en';
+    }
+  }
+
+  // Get initial browser width
+  function _width() {
+    return window.outerWidth;
   }
 
   // Only return public methods and variables
   return {
     init,
-    pathName
+    pathName,
+    lang,
+    browserWidth
   };
 }());
 
-
+// ig Forms
 const form = function () {
   var endpointURL,
     successURL,
@@ -51,25 +60,22 @@ const form = function () {
     $formWrapper;
 
   function init() {
-    $(document).foundation();
     // Forms should always be wrapped in '.ig-form'
-    if ($('.ig-form').length) {
-      $formWrapper = $('.ig-form');
-      $form = $formWrapper.find('form');
-      endpointURL = $formWrapper.find('form').data('endpoint');
-      cancelURL = $formWrapper.find('form').data('cancel');
+    $formWrapper = $('.ig-form');
+    $form = $formWrapper.find('form');
+    endpointURL = $formWrapper.find('form').data('endpoint');
+    cancelURL = $formWrapper.find('form').data('cancel');
 
-      // Very simple form toggler
-      $('.toggler').on('click', function () {
-        $('.toggle-content').hide();
-        $('.' + $(this).data('content')).show();
-      });
+    // Very simple form toggler
+    $('.toggler').on('click', function () {
+      $('.toggle-content').hide();
+      $('.' + $(this).data('content')).show();
+    });
 
-      validation();
-    }
+    _validation();
   }
 
-  function validation() {
+  function _validation() {
     // We need to check whether an input is 'dirty' or not (similar to how Angular 1 works) in order for labels to behave properly
     var jInput = $(':input, textarea');
     jInput.change(function (objEvent) {
@@ -88,7 +94,7 @@ const form = function () {
 
     $form.validate({
       submitHandler: function () {
-        form.process();
+        form._process();
       },
       errorPlacement: function (label, element) {
         // Use the custom-error-location marker class to change where the error label shows up
@@ -136,8 +142,7 @@ const form = function () {
 
   }
 
-  function process(form) {
-
+  function _process(form) {
     var formDataRaw,
       formDataParsed;
 
@@ -145,23 +150,22 @@ const form = function () {
       $form.removeClass('server-error');
       $formWrapper.addClass('submitting');
       formDataRaw = $form.serializeArray();
-
       // If we need to modify the data, use parse method
-      formDataParsed = parse(formDataRaw);
+      formDataParsed = _parse(formDataRaw);
       // Submit final data
-      submit(formDataParsed);
+      _submit(formDataParsed);
     }
     return false;
   }
 
-  function parse(data) {
+  function _parse(data) {
     // Execute any custom logic here
 
 
     return data
   }
 
-  function submit(data) {
+  function _submit(data) {
     $.ajax({
       method: 'POST',
       url: endpointURL,
@@ -178,18 +182,69 @@ const form = function () {
   }
 
   return {
-    init, // Can use shorthand notation. (init: init) not required. ES6 for the win!
-    validation,
-    process,
-    parse,
-    submit
+    init
   };
 }();
+
+// More Article and Category functionality
+const more = (function () {
+  function init() {
+    $('.more-section-menuitem').on('click', function (e) {
+      e.preventDefault();
+
+      var $this = $(this),
+        offset = $this.offset(),
+        width = $this.width(),
+        centerX = offset.left + width / 2 - 50,
+        className = $this.attr('class').match(/[\w-]*category[\w-]*/g),
+        title = $this.text();
+
+      // Filter the catrgory dropdown on click
+      $('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.' + className + ')').hide();
+      $('.more-section-menu-dropdown').addClass('active');
+
+      // Filter the category title on click
+      $('p.more-section-tagline-tag').fadeOut();
+      $('h1.more-section-tagline-tag').removeClass('active');
+      setTimeout(() => {
+        $('h1.more-section-tagline-tag').addClass('active').text(title);
+      }, 200);
+
+      // Arrow position move on click
+      $('.more-section-menu-dropdown-arrow-up').show().css({ left: centerX });
+
+      //Underline animation
+      $('.tertiary-cta-more').removeClass('animate');
+      setTimeout(() => {
+        $('.tertiary-cta-more').addClass('animate')
+      }, 100);
+    });
+
+    //Toggle the Open/Close mobile categories menu
+    $('.more-section-menu-mobile-title').on('click', function () {
+      $('.more-section-menu').toggleClass('active');
+      $(this).toggleClass('active');
+    })
+
+    // Close button
+    $('.close-button').on('click', function () {
+      $('.more-section-menu-dropdown-category-wrapper').hide();
+      $('.more-section-menu-dropdown-arrow-up').hide();
+      $('.tertiary-cta-more').removeClass('animate');
+      $('h1.more-section-tagline-tag').removeClass('active');
+      $('p.more-section-tagline-tag').fadeIn('slow');
+      $('.more-section-menu-dropdown').removeClass('active');
+    });
+  }
+
+  return {
+    init
+  };
+}());
 
 
 //Carousel
 $(function () {
-  $(document).foundation();
   $('[data-responsive-toggle] button').on('click', function () {
     $('body').toggleClass('site-header-is-active');
   });
@@ -260,69 +315,6 @@ $(function () {
       jsSocialDrawer.addClass('js-socialdrawer-opened');
     }
   });
-});
-
-
-//More Header
-
-$(function () {
-
-  $('.more-section-menuitem').on('click', function (e) {
-    e.preventDefault();
-
-    // Filter the catrgory dropdown on click
-    var className = $(this).attr('class').match(/[\w-]*category[\w-]*/g);
-    $('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.' + className + ')').hide();
-    $('.more-section-menu-dropdown').addClass('active');
-
-    // Filter the category title on click
-    var title = $(this).text();
-    $('p.more-section-tagline-tag').fadeOut();
-
-    $('h1.more-section-tagline-tag').removeClass('active');
-    setTimeout(function () {
-      $('h1.more-section-tagline-tag').addClass('active').text(title);
-    }, 200);
-
-    //Arrow position move on click
-    var $this = $(this);
-    var offset = $this.offset();
-    var width = $this.width();
-    var centerX = offset.left + width / 2 - 50;
-    $('.more-section-menu-dropdown-arrow-up').show().css({ left: centerX });
-    ;
-
-    //Underline animation
-    $('.tertiary-cta-more').removeClass('animate');
-    setTimeout(function () {
-      $('.tertiary-cta-more').addClass('animate')
-    }, 100);
-
-  });
-
-
-  //Toggle the Open/Close mobile categories menu
-  $('.more-section-menu-mobile-title').on('click', function () {
-
-    // $('html, body').animate({
-    //       scrollTop: $("#more-mobile-menu").offset().top
-    //   }, 2000);
-
-    $('.more-section-menu').toggleClass('active');
-    $(this).toggleClass('active');
-
-  })
-
-  // Close button
-  $('.close-button').on('click', function () {
-    $('.more-section-menu-dropdown-category-wrapper').hide();
-    $('.more-section-menu-dropdown-arrow-up').hide();
-    $('.tertiary-cta-more').removeClass('animate');
-    $('h1.more-section-tagline-tag').removeClass('active');
-    $('p.more-section-tagline-tag').fadeIn('slow');
-    $('.more-section-menu-dropdown').removeClass('active');
-  });
-
 });
 
 // More Header Responsive
