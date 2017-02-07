@@ -110,27 +110,24 @@ $link-hover: #0BAB7B;
 }
 
 // more-article page
-// includes styling for articles with right-aligned images
-// includes styling for image with caption module
 
-.section-divider-container {
+// includes styling for separator line
+.separator-line-container {
   padding-bottom: 25px;
   padding-top: 25px;
 
   @include respond-to(medium) {
     padding-bottom: 35px;
     padding-top: 35px;
-  };
-
-  .section-divider {
-    border-bottom: $more-underline;
   }
 }
 
+// includes styling for articles with right-aligned images
 .content-right-image-container {
   border-bottom: $more-underline;
 }
 
+// main article content
 .article-body {
   @include respond-to(medium) {
     margin: 35px auto;
