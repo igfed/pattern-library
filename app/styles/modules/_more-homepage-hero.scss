@@ -131,6 +131,10 @@ Styleguide 4.1
 
         li {
           display: inline-block;
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
 
@@ -150,10 +154,6 @@ Styleguide 4.1
           li {
             opacity: 1;
             transition: opacity 250ms;
-
-            &:hover {
-              opacity: 0.6;
-            }
           }
         }
 
