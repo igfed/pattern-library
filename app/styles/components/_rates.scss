@@ -138,7 +138,7 @@
 
     .rate-block-info {
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         padding-top: 15px;
         text-align: left;
       }
@@ -176,10 +176,6 @@
         margin-bottom: 40px;
       }
 
-      .large-offset-custom-30 {
-        margin-left: 30% !important;
-      }
-
       .large-offset-custom-10 {
         margin-left: 10% !important;
       }
@@ -203,7 +199,6 @@
         .rate-value, .rate-bullet {
           border-bottom: none;
         }
-
       }
     }
   }
@@ -239,20 +234,23 @@
       line-height: 1.7;
     }
 
-    .rate-value {
-      letter-spacing: 1px;
-      font-size: 52px;
-      font-family: $font-whitney-light;
-      color: #000;
+    .rate-value-block {
       border-bottom: none;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         border-bottom: 1px solid #ccc;
       }
-    }
+      .rate-value {
+        letter-spacing: 1px;
+        font-size: 52px;
+        font-family: $font-whitney-light;
+        color: #000;
+      }
 
-    .rate-value-secondary {
-      line-height: 30px;
+      .rate-value-secondary {
+        color: #666;
+        margin-top: -15px;
+      }
     }
 
     .rate-bullet {
@@ -264,7 +262,7 @@
         border-bottom: none;
       }
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         border-bottom: 1px solid #ccc;
       }
     }
