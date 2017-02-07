@@ -8,7 +8,7 @@ Markup:
   <div class="row">
     <div class="small-11 small-centered large-10 large-offset-1 columns">
       <div class="small-12 medium-6 columns container">
-        <h3 class="body-copy-bold text-left">
+        <h3 class="section-title text-left">
           Article Tags
         </h3>
         <div class="tags body-copy">
@@ -33,11 +33,11 @@ Styleguide 4.1
 .article-tags-section {
   margin: 55px 0 30px 0;
 
-  .body-copy-bold {
+  .section-title {
     margin-bottom: 10px;
     display: inline-block;
     position: relative;
-    text-transform: uppercase;
+    font-size: 18px;
 
     &:after {
       content: '';
