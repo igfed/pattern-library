@@ -40,6 +40,13 @@
 .tips-paragraph {
   border-bottom: $more-underline;
 
+  p {
+    margin: 45px auto;
+    @include respond-to(medium) {
+      margin: 18px auto;
+    }
+  }
+
   &:last-of-type {
     border-bottom: none;
   }

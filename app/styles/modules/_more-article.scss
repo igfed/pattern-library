@@ -80,6 +80,7 @@ Styleguide 4.1
 // used on multiple components
 $more-background-yellow: #FAF7E6;
 $more-article-gray: #e0d9d1;
+$image-caption-gray: #646464;
 
 // common underline style
 $more-underline: 1px solid $more-article-gray;
@@ -91,6 +92,7 @@ $link-hover: #0BAB7B;
 }
 
 // specific typography for More section
+// check if this is still being used
 .more-callout-title {
 	font-size: 28px;
 	font-size: 1.75rem;
@@ -110,95 +112,18 @@ $link-hover: #0BAB7B;
 // more-article page
 // includes styling for articles with right-aligned images
 // includes styling for image with caption module
-.title-section {
-  position: relative;
-  margin-top: 45px;
 
-  @include respond-to(medium) {
-    margin-top: 50px;
-  }
-
-  .article-category {
-    margin-bottom: 25px;
-    display: block;
-
-    p {
-      color: $button-primary-color;
-      margin: 0;
-    }
-  }
-
-  h1 {
-    padding-bottom: 8px;
-    border-bottom: $more-underline;
-  }
-
-  .byline {
-    text-transform: uppercase;
-  }
-
-  .share-icons {
-    margin: 18px auto;
-
-    @include respond-to(medium) {
-      text-align: right;
-      position: absolute;
-      margin: 0;
-      top: 0;
-      right: 0;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-  }
-
-  .article-subtitle {
-    margin: 18px auto;
-
-    a {
-      color: $button-primary-color;
-      &:hover {
-        color: $link-hover;
-        transition: color 0.25s;
-      }
-    }
-
-    @include respond-to(medium) {
-      margin: 35px auto;
-    }
-  }
-}
-
-.section-divider {
-  border-top: $more-underline;
+.section-divider-container {
   padding-bottom: 25px;
+  padding-top: 25px;
+
   @include respond-to(medium) {
-    padding-bottom: 10px;
-  }
-}
+    padding-bottom: 35px;
+    padding-top: 35px;
+  };
 
-.image-with-caption {
-  figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .image-caption {
-      color: #a4a39c;
-      align-self: flex-start;
-      text-transform: uppercase;
-
-      @include respond-to(medium) {
-        align-self: center;
-      }
-    }
+  .section-divider {
+    border-bottom: $more-underline;
   }
 }
 
@@ -249,7 +174,7 @@ $link-hover: #0BAB7B;
 
     @include respond-to(medium) {
       float: left;
-      margin: 9px 45px 9px 0;
+      margin: 11px 45px 15px 0;
       width: 30%;
     }
   }
