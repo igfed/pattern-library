@@ -20,4 +20,4 @@ gulp serve
 gulp build
 ```
 
-[https://igfed.github.io/pattern-library/]https://igfed.github.io/pattern-library/
+[Pattern guide](https://igfed.github.io/pattern-library/)
