@@ -6,6 +6,7 @@
   "devDependencies": {
     "babel-core": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "babel-register": "^6.5.2",
     "browser-sync": "^2.2.1",
     "del": "^1.1.1",
@@ -21,6 +22,7 @@
     "gulp-kss": "0.0.2",
     "gulp-load-plugins": "^0.10.0",
     "gulp-plumber": "^1.0.1",
+    "gulp-rollup": "^2.11.0",
     "gulp-sass": "^2.0.0",
     "gulp-size": "^1.2.1",
     "gulp-sourcemaps": "^1.5.0",
@@ -28,6 +30,8 @@
     "gulp-useref": "^3.0.0",
     "kss": "^3.0.0-beta.15",
     "main-bower-files": "^2.5.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
     "wiredep": "^2.2.2"
   },
   "eslintConfig": {
@@ -36,11 +40,17 @@
       "node": true,
       "browser": true
     },
+    "globals": {
+      "ENV": true
+    },
     "rules": {
       "quotes": [
         2,
         "single"
       ]
+    },
+    "parserOptions": {
+      "sourceType": "module"
     }
   }
 }
