@@ -179,6 +179,15 @@ Styleguide 4.1
       display: block;
       margin-bottom: 10px;
     }
+
+    .body-copy {
+      font-family: $font-stack-light;
+
+      @include respond-to(large) {
+        font-family: $font-stack;
+        font-size: 18px;
+      }
+    }
   }
 
   .legal-copy {
@@ -273,6 +282,10 @@ Styleguide 4.1
             &:last-child {
               margin-right: 0;
             }
+
+            &:hover {
+              opacity: 0.6;
+            }
           }
         }
       }
@@ -285,10 +298,6 @@ Styleguide 4.1
             opacity: 1;
             transition: opacity 250ms;
             margin-right: 0;
-
-            &:hover {
-              opacity: 0.6;
-            }
           }
         }
 
