@@ -303,7 +303,13 @@
           border: 2px solid #0d263c;
         }
     }
-  }
+}
+
+.search-results-consultant-team-members-view-all{
+  // border-top: 1px solid #c1cbd0;
+  width: auto;
+  display: inline-block;
+}
 
 .search-results-consultant-team-member{
   display: flex;
@@ -315,6 +321,10 @@
 
   .dropdown.menu > li.is-dropdown-submenu-parent > a{
     padding: 0;
+
+    @include respond-to(medium){
+      padding: 5px 1.25em 7px;
+    }
   }
 
   .button{
@@ -325,6 +335,13 @@
     border-radius: 50%;
     border: 2px solid $brand-color;
     height: 30px;
+
+    @include respond-to(medium){
+      border-radius: 5px;
+      min-width: 200px;
+      height: auto;
+      width: auto;
+    }
   }
 
   .phone-icon{
@@ -342,14 +359,27 @@
   }
 }
 
-.search-results-consultant-team-section-title{
+.search-results-consultant-team-member-contact{
   display: flex;
+  justify-content: center;
+
+  .dropdown{
+    margin-right: 10px;
+
+    @include respond-to(medium){
+      margin-right: 0;
+    }
+  }
+}
+
+.search-results-consultant-team-section-divider{
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.search-results-consultant-team-section-title-line{
-  border-top: 0.2rem solid #c1cbd0;
-  content: "";
+.search-results-consultant-team-section-title{
+  width: auto;
 }
 
 
@@ -371,6 +401,10 @@
     &:before{
       position: absolute;
       width: 10px;
+
+      @include respond-to(medium){
+        display: none;
+      }
     }
   }
 
@@ -378,6 +412,11 @@
     &:before{
       content: url(../images/find-an-advisor-phone.svg);
       width: 13px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+      
     }
   }
 
@@ -385,27 +424,34 @@
     &:before{
       content: url(../images/find-an-advisor-email.svg);
       width: 17px;
+
+      @include respond-to(medium){
+        display: none;
+      }
     }
   }
 
-  .underline{
-
-    padding-top: 1rem;
-
-    &:last-child{
-      text-align: inherit;
-      margin-top: 0;
-    }
-
+  .divider{
     &:before{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
-        width: 100%;
-        padding-top: 1.5rem;
+      content: '';
+      border-top: 0.15rem solid #c1cbd0;
+      width: calc(100% - 20px);
+      margin: 0 auto;
 
         @include respond-to(medium){
           padding-top: 1rem;
+          width: calc(100% - 30px);
         }
-    }
+      }
+
+  }
+
+  .underline{
+    border-top: 0.15rem solid #c1cbd0;
+
+      @include respond-to(medium){
+        padding-top: 1rem;
+        width: calc(45% - 30px)
+      }
   }
 }
