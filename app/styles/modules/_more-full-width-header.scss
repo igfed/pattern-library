@@ -2,10 +2,11 @@
 // to account for the fact that picture switches to
 // full width on larger screens
 .full-width-title-section {
-  @extend .title-section;
+  position: relative;
+  margin-top: 45px;
 
   @include respond-to(medium) {
-    padding-top: 125px;
+    padding-top: 160px;
     display: block;
   }
 
@@ -22,6 +23,10 @@
     }
   }
 
+  .byline {
+    text-transform: uppercase;
+  }
+
   .article-category {
     @include respond-to(medium) {
       margin-bottom: 10px;
@@ -31,8 +36,41 @@
     }
   }
 
+  .share-icons {
+    margin: 18px auto;
+
+    @include respond-to(medium) {
+      text-align: right;
+      position: absolute;
+      margin: 0;
+      top: 0;
+      right: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+  }
+
   .full-width-share-icons {
-    @extend .share-icons;
+    margin: 18px auto;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+
     @include respond-to(medium) {
       position: static;
       text-align: left;
