@@ -8,7 +8,7 @@ Markup:
   <div class="more-top-articles">
     <div class="row">
       <div class="small-11 small-centered medium-uncentered medium-6 columns">
-        <h3 class="body-copy-bold">
+        <h3 class="section-title>
           Top Articles
         </h3>
         <ul class="top-articles-list no-bullet">
@@ -62,11 +62,14 @@ Styleguide 4.1
  */
 
 .more-top-articles {
-  .body-copy-bold {
+  .section-title {
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
     text-transform: uppercase;
+    // this doesn't fit with any typography styles
+    // but screen reviews say it should be 18px on all sizes
+    font-size: 18px;
 
     &:after {
       content: '';
