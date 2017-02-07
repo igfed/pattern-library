@@ -223,14 +223,23 @@
 
 /*Counsultant Results*/
 
-.consultant-row{
+.search-results-consultant{
   @include respond-to(medium){
     display:flex;
     justify-content: space-between;
   }
 }
 
-.section.search-results{
+.search-results-consultant-info{
+   display:flex;
+}
+
+.search-results-consultant-info-buttons{
+  display: inline-block;
+  align-self: center;
+}
+
+.search-results{
 
 
     a.button.dropdown, .button{
@@ -265,16 +274,11 @@
     }
   }
 
-  .portrait{
+  .search-results-consultant-portrait{
     width: 80px;
     @include respond-to(medium){
       width: 150px;
     }
-  }
-
-  .buttons-column{
-    display: inline-block;
-    align-self: center;
   }
 
   .underline{
@@ -297,15 +301,6 @@
       text-align: inherit!important;
       margin-top: 0!important;
     }
-
-  .portrait-column{
-
-
-      p{
-        margin-bottom: 0;
-      }
-
-  }
 
   }
 
@@ -369,9 +364,4 @@
         }
     }
   }
-}
-
-.view-more{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
