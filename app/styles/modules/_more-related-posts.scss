@@ -107,7 +107,7 @@ Styleguide 4.1
   }
 
   .container {
-    @include respond-to(large) {
+    @include respond-to(medium) {
       position: relative;
     }
 
@@ -132,7 +132,7 @@ Styleguide 4.1
       padding-bottom: 20px;
       height: 100%;
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         position: static;
       }
 
