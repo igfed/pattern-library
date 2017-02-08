@@ -121,11 +121,26 @@
 
   // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
   .rate-section {
-    padding: 10px 35px;
+    padding: 10px 0px;
 
-    @include respond-to(large) {
+    @include respond-to(medium) {
+      padding: 10px 25px;
+
       &:first-child {
         border-right: 2px solid #ccc;
+      }
+    }
+
+    @include respond-to(large) {
+      padding: 10px 35px;
+    }
+
+    .rate-sub-section {
+
+      @include respond-to(medium) {
+        &:first-child {
+          border-right: 2px solid #ccc;
+        }
       }
     }
 
@@ -144,6 +159,13 @@
         padding-top: 15px;
         text-align: left;
       }
+    }
+
+    .rate-description {
+      text-align: left !important;
+      font-size: 14px;
+      padding-bottom: 0;
+      line-height: 1.7;
     }
 
     // Sections are not text-center by default so we center rate-blocks here
@@ -231,19 +253,12 @@
       border-bottom: none;
     }
 
-    .rate-description, .rate-bullet {
+    .rate-bullet {
       padding: 0;
 
       @include respond-to(medium) {
         padding: 10px;
       }
-    }
-
-    .rate-description {
-      text-align: left !important;
-      font-size: 14px;
-      padding-bottom: 0;
-      line-height: 1.7;
     }
 
     .rate-value-block {
