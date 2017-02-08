@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IG Pattern Library</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <style type="text/css">
+      .pattern-content {
+        padding: 30px 0;
+        margin: 30px 0;
+        border-top: 1px solid #eee;
+      }
+      .sample {
+        position: relative;
+      }
+      .main-navigation .menu > li:nth-child(3) > a:after {display: none;}
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header role="banner">
+      <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
+      <div class="row">
+        <div class="columns">
+          <div class="top-bar">
+            <div class="top-bar-title">
+              <div class="row">
+                <div class="columns">
+                  <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+                  <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
+                    <button class="menu-icon dark" type="button" data-toggle><span class="show-for-sr">Menu</span></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="main-navigation" class="top-bar-right main-navigation">
+              <div class="main-navigation-wrapper">
+                <nav role="navigation" class="primary-nav">
+                  <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
+                    <li><a href="./index.html">Getting Started</a></li>
+                      <li>
+                        <a href="section-1.html">Elements</a>
+                      </li>
+                      <li>
+                        <a href="section-2.html">Components</a>
+                      </li>
+                      <li>
+                        <a href="section-3.html">Modules</a>
+                      </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="row">
+      <div class="medium-3 columns">
+        <nav role="navigation">
+          <ul class="vertical menu">
+              <li>
+              </li>
+              <li>
+                  <li><a href="#section-1.1">Grid &amp; Layout</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.2">Typography</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.3">Color</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.4">Icons and Imagery</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.5">Buttons and Links</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.6">Forms</a></li>
+              </li>
+              <li>
+                  <li><a href="#section-1.7">Tables</a></li>
+              </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main role="main" id="content">
+          <div class="medium-9 columns">
+                <section id="section-1">
+                  <h1>Elements</h1>
+                  <p class="callout-body-copy"><p>Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.</p>
+</p>
+                </section>
+
+
+
+                <article class="pattern-content" id="section-1.1">
+                  <header>
+                    <h2>Grid &amp; Layout</h2>
+                    <p><p>This guideline shows how to use our 12-column responsive grid  to create flexible layouts for a variety of screen sizes and device types.</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <div class="row">
+  <div class="large-12 columns">
+    <div class="bg-primary">
+      <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 medium-6 columns">
+    <div class="bg-primary">
+      <p>Six columns</p>
+    </div>
+  </div>
+  <div class="large-6 medium-6 columns">
+    <div class="bg-primary">
+      <p>Six columns</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 medium-4 small-4 columns">
+    <div class="bg-primary">
+      <p>Four columns</p>
+    </div>
+  </div>
+  <div class="large-4 medium-4 small-4 columns">
+    <div class="bg-primary">
+      <p>Four columns</p>
+    </div>
+  </div>
+  <div class="large-4 medium-4 small-4 columns">
+    <div class="bg-primary ">
+      <p>Four columns</p>
+    </div>
+  </div>
+</div>
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-12 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary&quot;&gt;
+      &lt;p&gt;&lt;strong&gt;This is a twelve column section in a row.&lt;/strong&gt; Each of these includes a div.callout element so you can see where the columns are - it&#x27;s not required at all for the grid.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 medium-6 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary&quot;&gt;
+      &lt;p&gt;Six columns&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-6 medium-6 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary&quot;&gt;
+      &lt;p&gt;Six columns&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-4 medium-4 small-4 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary&quot;&gt;
+      &lt;p&gt;Four columns&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-4 medium-4 small-4 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary&quot;&gt;
+      &lt;p&gt;Four columns&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-4 medium-4 small-4 columns&quot;&gt;
+    &lt;div class=&quot;bg-primary &quot;&gt;
+      &lt;p&gt;Four columns&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.2">
+                  <header>
+                    <h2>Typography</h2>
+                    <p><p>This guideline shows how to use our typographic styles for digital marketing initiatives. It provides recommendations for typefaces, weight, size, line-height and kerning.</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                       <p class="{$modifiers}">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+
+                    <div class="modifier">
+                        <h3>.callout-body-copy</h3>
+                        <p><p>large version of body copy</p>
+</p>
+
+                        <div class="example">
+                             <p class="callout-body-copy">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.hero-title</h3>
+                        <p><p>hero or call out title</p>
+</p>
+
+                        <div class="example">
+                             <p class="hero-title">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.content-title</h3>
+                        <p><p>content title</p>
+</p>
+
+                        <div class="example">
+                             <p class="content-title">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.section-title</h3>
+                        <p><p>section title</p>
+</p>
+
+                        <div class="example">
+                             <p class="section-title">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.sub-title</h3>
+                        <p><p>sub title</p>
+</p>
+
+                        <div class="example">
+                             <p class="sub-title">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.legal</h3>
+                        <p><p>Legal copy</p>
+</p>
+
+                        <div class="example">
+                             <p class="legal">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.punched-out</h3>
+                        <p><p>Usually a number callout</p>
+</p>
+
+                        <div class="example">
+                             <p class="punched-out">The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html"> &lt;p class=&quot;{$modifiers}&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.3">
+                  <header>
+                    <h2>Color</h2>
+                    <p><p>This element is to be used to extend the visual language of our design system. Our color set is broken down into primary, background and illustration groups</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      	<div class="bg-{$modifiers}">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-{$modifiers}">Sample text based overide</p>
+                    </div>
+
+                    <div class="modifier">
+                        <h3>.brand</h3>
+                        <p><p>Brand Colour.</p>
+</p>
+
+                        <div class="example">
+                            	<div class="bg-brand">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-brand">Sample text based overide</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.primary</h3>
+                        <p><p>Primary Colour.</p>
+</p>
+
+                        <div class="example">
+                            	<div class="bg-primary">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-primary">Sample text based overide</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.secondary</h3>
+                        <p><p>Secondary Colour.</p>
+</p>
+
+                        <div class="example">
+                            	<div class="bg-secondary">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-secondary">Sample text based overide</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.highlight</h3>
+                        <p><p>Highlight Colour.</p>
+</p>
+
+                        <div class="example">
+                            	<div class="bg-highlight">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-highlight">Sample text based overide</p>
+                        </div>
+                    </div>
+                    <div class="modifier">
+                        <h3>.alert</h3>
+                        <p><p>Alert Colour.</p>
+</p>
+
+                        <div class="example">
+                            	<div class="bg-alert">
+		<p>It has an easy to override visual style, and is appropriately subdued.</p>
+	</div>
+	<p class="text-alert">Sample text based overide</p>
+                        </div>
+                    </div>
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">	&lt;div class=&quot;bg-{$modifiers}&quot;&gt;
+		&lt;p&gt;It has an easy to override visual style, and is appropriately subdued.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;p class=&quot;text-{$modifiers}&quot;&gt;Sample text based overide&lt;/p&gt;</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.4">
+                  <header>
+                    <h2>Icons and Imagery</h2>
+                    <p><p>Images</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      
+                    </div>
+
+
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.5">
+                  <header>
+                    <h2>Buttons and Links</h2>
+                    <p><p>Buttons are used to allow a user to initiate a desired action. It is an element that is integral in communicating the primary objective of a screen space.</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      	<button class="button {$modifiers}">Click me</button>
+                    </div>
+
+                    <div class="modifier">
+                        <h3>.secondary</h3>
+                        <p><p>A blue button.</p>
+</p>
+
+                        <div class="example">
+                            	<button class="button secondary">Click me</button>
+                        </div>
+                    </div>
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">	&lt;button class=&quot;button {$modifiers}&quot;&gt;Click me&lt;/button&gt;</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.6">
+                  <header>
+                    <h2>Forms</h2>
+                    <p><p>Standing between the user’s goal and the organization’s goals is very often a form. For this reason, we should allow the user to complete a form in the most efficient way possible.
+
+</p>
+<p>Styleguide 1.6</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      <main role="main" id="content">
+   <div class="row">
+       <div class="medium-12 columns">
+           <!-- Sample of a modal trigger using data-open and the corresponding ID -->
+           <button class="button" data-open="exampleModal1">Open Modal with a Form</button>
+       </div>
+   </div>
+</main>
+<!-- The modal itself -->
+<div class="full reveal" id="exampleModal1" data-reveal>
+   <div class="row modal-header">
+       <div class="small-12 columns">
+           <span class="logo"></span>
+           <button class="close-button" data-close aria-label="Open Form in a Modal" type="button">
+               <span aria-hidden="true"></span>
+           </button>
+       </div>
+   </div>
+   <div class="row modal-content">
+     <div class="ig-form">
+         <div class="row">
+             <div class="medium-12 columns">
+                 <!-- Forms must be wrapped with the ig-form class in order to function properly -->
+                 <div class="screen">
+                     <div class="throbber"></div>
+                 </div>
+                 <!-- The form name is what submission/validation will key on -->
+                 <form id="my-form-id" name="my-form-name" data-endpoint="https://api.ig.ddb.to/lead" data-success=""
+                       data-cancel="http://investorsgroup.com" method="get" novalidate="novalidate">
+                     <div class="alert callout" style="display: none;">
+                         <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                     </div>
+                     <!-- Form Legend -->
+                     <div class="row">
+                         <div class="small-12 columns">
+                             <legend>Form Components</legend>
+                         </div>
+                     </div>
+                     <!-- Form Section Heading(s) -->
+                     <div class="row">
+                         <div class="small-12 medium-10 columns end form-group-section-headings padding-bottom">
+                             <h3 class="section-heading">September 12th, 2016</h3>
+                             <h3 class="section-heading">11:00am - 12:00pm</h3>
+                             <h3 class="section-heading">Toronto, Ontario</h3>
+                         </div>
+                     </div>
+                     <!-- Form Description -->
+                     <div class="row">
+                         <div class="small-12 medium-10 columns end padding-bottom">
+                             <p class="form-description">All possible form elements (ie, inputs, selects, radios etc)
+                                 are
+                                 included here.</p>
+                         </div>
+                     </div>
+                     <!-- Base Form Elements -->
+                     <div class="row padding-top">
+                         <div class="small-12 medium-6 columns">
+                             <div class="form-group-input">
+                                 <input type="text" id="firstname" name="firstname" minlength="2" required="required"
+                                        aria-required="true">
+                                 <label for="firstname">First Name</label>
+                             </div>
+                         </div>
+                         <div class="small-12 medium-6 columns">
+                             <div class="form-group-input">
+                                 <input type="text" id="lastname" name="lastname" minlength="2" required="required"
+                                        aria-required="true">
+                                 <label for="lastname">Last Name</label>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="small-12 medium-3 columns">
+                             <div class="form-group-input">
+                                 <input type="text" id="phone" name="phone" minlength="2" required="required"
+                                        aria-required="true">
+                                 <label for="phone">Phone Number</label>
+                             </div>
+                         </div>
+                         <div class="small-12 medium-3 columns">
+                             <div class="form-group-input">
+                                 <input type="number" id="extension" name="extension">
+                                 <label for="extension">Ext. (optional)</label>
+                             </div>
+                         </div>
+                         <div class="small-12 medium-6 columns">
+                             <div class="form-group-input">
+                                 <input id="email" name="email" type="email" required="required"
+                                        aria-required="true">
+                                 <label for="email">Email Address</label>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="row">
+                         <div class="small-12 medium-3 columns">
+                             <div class="form-group-input">
+                                 <input id="postal_code" name="postal_code" type="text" required="required"
+                                        aria-required="true">
+                                 <label for="postal_code">Postal Code</label>
+                             </div>
+                         </div>
+                         <div class="small-12 medium-6 columns">
+                             <div class="form-group-select">
+                                 <select id="sampleSelect" name="sample_select" required>
+                                     <option value=""></option>
+                                     <option value="volvo">Volvo</option>
+                                     <option value="saab">Saab</option>
+                                     <option value="mercedes">Mercedes</option>
+                                     <option value="audi">Audi</option>
+                                 </select>
+                                 <label for="sample_select">Sample Select Box</label>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- 2-option toggle -->
+                     <div class="row form-group-toggle">
+                         <p class="toggle-title">Sample Field Toggler</p>
+                         <div class="small-12 medium-6 columns">
+                             <div class="row">
+                                 <div class="small-6 medium-6 large-4 collapse-right columns">
+                                     <input id="switch1" data-content="toggle-content-1" class="toggler" type="radio"
+                                            value="" name="switch" checked="checked">
+                                     <label for="switch1">Option 1</label>
+                                 </div>
+                                 <div class="small-6 medium-6 large-4 collapse-left columns end">
+                                     <input id="switch2" data-content="toggle-content-2" class="toggler" type="radio"
+                                            value="" name="switch">
+                                     <label for="switch2">Option 2</label>
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="small-12 medium-6 columns toggle-content-container">
+                             <div class="row">
+                                 <div class="small-12 columns toggle-content toggle-content-1">
+                                     <div class="form-group-input">
+                                         <input id="phone2" name="phone2" type="tel">
+                                         <label for="phone2">Phone</label>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="row">
+                                 <div class="small-12 columns toggle-content toggle-content-2">
+                                     <div class="form-group-input">
+                                         <input id="email2" name="email2" type="email">
+                                         <label for="email2">Email Address</label>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- Checkbox Group -->
+                     <div class="row">
+                         <div class="small-12 columns">
+                             <fieldset class="group" role="group">
+                                 <legend>Checkbox Group</legend>
+                                 <!-- Use this when default location is not ideal -->
+                                 <div class="row">
+                                     <span class="custom-error-location"></span>
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic1" name="checkbox_group"
+                                                    required="required">
+                                             <label for="topic1">Retirement</label>
+                                         </div>
+                                     </div>
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic2" name="checkbox_group">
+                                             <label for="topic2">Investment</label>
+                                         </div>
+                                     </div>
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic3" name="checkbox_group">
+                                             <label for="topic3">Mortgages</label>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic4" name="checkbox_group">
+                                             <label for="topic4">Estate Planning</label>
+                                         </div>
+                                     </div>
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic5" name="checkbox_group">
+                                             <label for="topic5">Tax Planning</label>
+                                         </div>
+                                     </div>
+                                     <div class="small-12 medium-4 columns">
+                                         <div class="form-group-checkbox">
+                                             <input type="checkbox" id="topic6" name="checkbox_group">
+                                             <label for="topic6">Insurance</label>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </fieldset>
+                         </div>
+                     </div>
+                     <hr/>
+                     <!-- Radio Group -->
+                     <div class="row">
+                         <div class="small-12 medium-6 columns padding-top error-icon-left">
+                             <p aria-hidden="true">I am currently a client of Investors Group</p>
+                             <span class="custom-error-location"></span>
+                             <!-- Use this when default location is not ideal -->
+                         </div>
+                         <fieldset>
+                             <legend class="show-for-sr">I am currently a client of Investors Group</legend>
+                             <div class="small-6 medium-4 large-3 columns">
+                                 <div class="form-group-radio">
+                                     <input type="radio" name="current_client" value="yes" id="currentClientYes"
+                                            required="required">
+                                     <label for="currentClientYes">Yes</label>
+                                 </div>
+                             </div>
+                             <div class="small-6 medium-4 large-3 columns end">
+                                 <div class="form-group-radio">
+                                     <input type="radio" name="current_client" value="no" id="currentClientNo">
+                                     <label for="currentClientNo">No</label>
+                                 </div>
+                             </div>
+                         </fieldset>
+                     </div>
+                     <hr/>
+                     <!-- Single Option Checkbox -->
+                     <div class="row">
+                         <div class="small-12 columns error-icon-left">
+                             <div class="form-group-checkbox">
+                                 <input id="optIn" name="opt_in" type="checkbox" required="required"
+                                        aria-required="true">
+                                 <label for="opt_in">By providing my telephone number and/or email address, I CONSENT
+                                     to Investors Group using this information to contact me for marketing
+                                     purposes.</label>
+                             </div>
+                         </div>
+                     </div>
+                     <hr/>
+                     <!-- Text Area -->
+                     <div class="row">
+                         <div class="small-12 columns">
+                             <div class="form-group-text">
+                             <textarea id="messageBody" rows="4" cols="50" maxlength="250"
+                                       name="message_body" required="required"></textarea>
+                                 <label for="message_body">Personal message</label>
+                             </div>
+                         </div>
+                     </div>
+                     <!-- Legal -->
+                     <div class="row">
+                         <div class="small-12 medium-9 columns">
+                             <p class="legal">For your privacy and protection, we remind you that this email service
+                                 is
+                                 not for confidential inquiries. Please do not include any confidential information
+                                 in
+                                 your message (e.g. account numbers, credit card numbers, social insurance numbers,
+                                 trade
+                                 requests or other personal information).</p>
+                         </div>
+                     </div>
+                     <!-- Submit/Cancel Buttons -->
+                     <div class="row">
+                         <div class="small-12 columns">
+                             <button type="submit" class="button">Submit</button>
+                             <button class="cancel button secondary">Cancel</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+         </div>
+         <!-- Success Message -->
+         <div class="success-message">
+             <div class="row success-message-banner">
+                 <div class="check"></div>
+                 <span>Success!</span>
+             </div>
+             <div class="row">
+                 <div class="small-12 columns">
+                     <h2 class="sucess-message-title">Success Page Title</h2>
+                     <p class="success-message-body">Your request for a call to discuss your RRSP has been received. An
+                         Investors Group
+                         Consultant
+                         will be in touch soon.</p>
+                 </div>
+             </div>
+             <div class="row text-center">
+                 <div class="small-12 medium-4 medium-push-4 columns">
+                     <a href="" class="button">Return to Retirement Page</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+  </div>
+</div>
+                    </div>
+
+
+                      <ul class="accordion" data-accordion role="tablist">
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Code</a>
+                         <div class="accordion-content" data-tab-content>
+                            <pre><code class="lang-html">&lt;main role=&quot;main&quot; id=&quot;content&quot;&gt;
+   &lt;div class=&quot;row&quot;&gt;
+       &lt;div class=&quot;medium-12 columns&quot;&gt;
+           &lt;!-- Sample of a modal trigger using data-open and the corresponding ID --&gt;
+           &lt;button class=&quot;button&quot; data-open=&quot;exampleModal1&quot;&gt;Open Modal with a Form&lt;/button&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/main&gt;
+&lt;!-- The modal itself --&gt;
+&lt;div class=&quot;full reveal&quot; id=&quot;exampleModal1&quot; data-reveal&gt;
+   &lt;div class=&quot;row modal-header&quot;&gt;
+       &lt;div class=&quot;small-12 columns&quot;&gt;
+           &lt;span class=&quot;logo&quot;&gt;&lt;/span&gt;
+           &lt;button class=&quot;close-button&quot; data-close aria-label=&quot;Open Form in a Modal&quot; type=&quot;button&quot;&gt;
+               &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+           &lt;/button&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;row modal-content&quot;&gt;
+     &lt;div class=&quot;ig-form&quot;&gt;
+         &lt;div class=&quot;row&quot;&gt;
+             &lt;div class=&quot;medium-12 columns&quot;&gt;
+                 &lt;!-- Forms must be wrapped with the ig-form class in order to function properly --&gt;
+                 &lt;div class=&quot;screen&quot;&gt;
+                     &lt;div class=&quot;throbber&quot;&gt;&lt;/div&gt;
+                 &lt;/div&gt;
+                 &lt;!-- The form name is what submission/validation will key on --&gt;
+                 &lt;form id=&quot;my-form-id&quot; name=&quot;my-form-name&quot; data-endpoint=&quot;https://api.ig.ddb.to/lead&quot; data-success=&quot;&quot;
+                       data-cancel=&quot;http://investorsgroup.com&quot; method=&quot;get&quot; novalidate=&quot;novalidate&quot;&gt;
+                     &lt;div class=&quot;alert callout&quot; style=&quot;display: none;&quot;&gt;
+                         &lt;p&gt;&lt;i class=&quot;fi-alert&quot;&gt;&lt;/i&gt; There are some errors in your form.&lt;/p&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Form Legend --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 columns&quot;&gt;
+                             &lt;legend&gt;Form Components&lt;/legend&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Form Section Heading(s) --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-10 columns end form-group-section-headings padding-bottom&quot;&gt;
+                             &lt;h3 class=&quot;section-heading&quot;&gt;September 12th, 2016&lt;/h3&gt;
+                             &lt;h3 class=&quot;section-heading&quot;&gt;11:00am - 12:00pm&lt;/h3&gt;
+                             &lt;h3 class=&quot;section-heading&quot;&gt;Toronto, Ontario&lt;/h3&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Form Description --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-10 columns end padding-bottom&quot;&gt;
+                             &lt;p class=&quot;form-description&quot;&gt;All possible form elements (ie, inputs, selects, radios etc)
+                                 are
+                                 included here.&lt;/p&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Base Form Elements --&gt;
+                     &lt;div class=&quot;row padding-top&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input type=&quot;text&quot; id=&quot;firstname&quot; name=&quot;firstname&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;firstname&quot;&gt;First Name&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input type=&quot;text&quot; id=&quot;lastname&quot; name=&quot;lastname&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;lastname&quot;&gt;Last Name&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-3 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input type=&quot;text&quot; id=&quot;phone&quot; name=&quot;phone&quot; minlength=&quot;2&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;phone&quot;&gt;Phone Number&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                         &lt;div class=&quot;small-12 medium-3 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input type=&quot;number&quot; id=&quot;extension&quot; name=&quot;extension&quot;&gt;
+                                 &lt;label for=&quot;extension&quot;&gt;Ext. (optional)&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;email&quot;&gt;Email Address&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-3 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-input&quot;&gt;
+                                 &lt;input id=&quot;postal_code&quot; name=&quot;postal_code&quot; type=&quot;text&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;postal_code&quot;&gt;Postal Code&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-select&quot;&gt;
+                                 &lt;select id=&quot;sampleSelect&quot; name=&quot;sample_select&quot; required&gt;
+                                     &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+                                     &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+                                     &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+                                     &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+                                     &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+                                 &lt;/select&gt;
+                                 &lt;label for=&quot;sample_select&quot;&gt;Sample Select Box&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- 2-option toggle --&gt;
+                     &lt;div class=&quot;row form-group-toggle&quot;&gt;
+                         &lt;p class=&quot;toggle-title&quot;&gt;Sample Field Toggler&lt;/p&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns&quot;&gt;
+                             &lt;div class=&quot;row&quot;&gt;
+                                 &lt;div class=&quot;small-6 medium-6 large-4 collapse-right columns&quot;&gt;
+                                     &lt;input id=&quot;switch1&quot; data-content=&quot;toggle-content-1&quot; class=&quot;toggler&quot; type=&quot;radio&quot;
+                                            value=&quot;&quot; name=&quot;switch&quot; checked=&quot;checked&quot;&gt;
+                                     &lt;label for=&quot;switch1&quot;&gt;Option 1&lt;/label&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&quot;small-6 medium-6 large-4 collapse-left columns end&quot;&gt;
+                                     &lt;input id=&quot;switch2&quot; data-content=&quot;toggle-content-2&quot; class=&quot;toggler&quot; type=&quot;radio&quot;
+                                            value=&quot;&quot; name=&quot;switch&quot;&gt;
+                                     &lt;label for=&quot;switch2&quot;&gt;Option 2&lt;/label&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns toggle-content-container&quot;&gt;
+                             &lt;div class=&quot;row&quot;&gt;
+                                 &lt;div class=&quot;small-12 columns toggle-content toggle-content-1&quot;&gt;
+                                     &lt;div class=&quot;form-group-input&quot;&gt;
+                                         &lt;input id=&quot;phone2&quot; name=&quot;phone2&quot; type=&quot;tel&quot;&gt;
+                                         &lt;label for=&quot;phone2&quot;&gt;Phone&lt;/label&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                             &lt;div class=&quot;row&quot;&gt;
+                                 &lt;div class=&quot;small-12 columns toggle-content toggle-content-2&quot;&gt;
+                                     &lt;div class=&quot;form-group-input&quot;&gt;
+                                         &lt;input id=&quot;email2&quot; name=&quot;email2&quot; type=&quot;email&quot;&gt;
+                                         &lt;label for=&quot;email2&quot;&gt;Email Address&lt;/label&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Checkbox Group --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 columns&quot;&gt;
+                             &lt;fieldset class=&quot;group&quot; role=&quot;group&quot;&gt;
+                                 &lt;legend&gt;Checkbox Group&lt;/legend&gt;
+                                 &lt;!-- Use this when default location is not ideal --&gt;
+                                 &lt;div class=&quot;row&quot;&gt;
+                                     &lt;span class=&quot;custom-error-location&quot;&gt;&lt;/span&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic1&quot; name=&quot;checkbox_group&quot;
+                                                    required=&quot;required&quot;&gt;
+                                             &lt;label for=&quot;topic1&quot;&gt;Retirement&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic2&quot; name=&quot;checkbox_group&quot;&gt;
+                                             &lt;label for=&quot;topic2&quot;&gt;Investment&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic3&quot; name=&quot;checkbox_group&quot;&gt;
+                                             &lt;label for=&quot;topic3&quot;&gt;Mortgages&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&quot;row&quot;&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic4&quot; name=&quot;checkbox_group&quot;&gt;
+                                             &lt;label for=&quot;topic4&quot;&gt;Estate Planning&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic5&quot; name=&quot;checkbox_group&quot;&gt;
+                                             &lt;label for=&quot;topic5&quot;&gt;Tax Planning&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                     &lt;div class=&quot;small-12 medium-4 columns&quot;&gt;
+                                         &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                             &lt;input type=&quot;checkbox&quot; id=&quot;topic6&quot; name=&quot;checkbox_group&quot;&gt;
+                                             &lt;label for=&quot;topic6&quot;&gt;Insurance&lt;/label&gt;
+                                         &lt;/div&gt;
+                                     &lt;/div&gt;
+                                 &lt;/div&gt;
+                             &lt;/fieldset&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;hr/&gt;
+                     &lt;!-- Radio Group --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-6 columns padding-top error-icon-left&quot;&gt;
+                             &lt;p aria-hidden=&quot;true&quot;&gt;I am currently a client of Investors Group&lt;/p&gt;
+                             &lt;span class=&quot;custom-error-location&quot;&gt;&lt;/span&gt;
+                             &lt;!-- Use this when default location is not ideal --&gt;
+                         &lt;/div&gt;
+                         &lt;fieldset&gt;
+                             &lt;legend class=&quot;show-for-sr&quot;&gt;I am currently a client of Investors Group&lt;/legend&gt;
+                             &lt;div class=&quot;small-6 medium-4 large-3 columns&quot;&gt;
+                                 &lt;div class=&quot;form-group-radio&quot;&gt;
+                                     &lt;input type=&quot;radio&quot; name=&quot;current_client&quot; value=&quot;yes&quot; id=&quot;currentClientYes&quot;
+                                            required=&quot;required&quot;&gt;
+                                     &lt;label for=&quot;currentClientYes&quot;&gt;Yes&lt;/label&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                             &lt;div class=&quot;small-6 medium-4 large-3 columns end&quot;&gt;
+                                 &lt;div class=&quot;form-group-radio&quot;&gt;
+                                     &lt;input type=&quot;radio&quot; name=&quot;current_client&quot; value=&quot;no&quot; id=&quot;currentClientNo&quot;&gt;
+                                     &lt;label for=&quot;currentClientNo&quot;&gt;No&lt;/label&gt;
+                                 &lt;/div&gt;
+                             &lt;/div&gt;
+                         &lt;/fieldset&gt;
+                     &lt;/div&gt;
+                     &lt;hr/&gt;
+                     &lt;!-- Single Option Checkbox --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 columns error-icon-left&quot;&gt;
+                             &lt;div class=&quot;form-group-checkbox&quot;&gt;
+                                 &lt;input id=&quot;optIn&quot; name=&quot;opt_in&quot; type=&quot;checkbox&quot; required=&quot;required&quot;
+                                        aria-required=&quot;true&quot;&gt;
+                                 &lt;label for=&quot;opt_in&quot;&gt;By providing my telephone number and/or email address, I CONSENT
+                                     to Investors Group using this information to contact me for marketing
+                                     purposes.&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;hr/&gt;
+                     &lt;!-- Text Area --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 columns&quot;&gt;
+                             &lt;div class=&quot;form-group-text&quot;&gt;
+                             &lt;textarea id=&quot;messageBody&quot; rows=&quot;4&quot; cols=&quot;50&quot; maxlength=&quot;250&quot;
+                                       name=&quot;message_body&quot; required=&quot;required&quot;&gt;&lt;/textarea&gt;
+                                 &lt;label for=&quot;message_body&quot;&gt;Personal message&lt;/label&gt;
+                             &lt;/div&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Legal --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 medium-9 columns&quot;&gt;
+                             &lt;p class=&quot;legal&quot;&gt;For your privacy and protection, we remind you that this email service
+                                 is
+                                 not for confidential inquiries. Please do not include any confidential information
+                                 in
+                                 your message (e.g. account numbers, credit card numbers, social insurance numbers,
+                                 trade
+                                 requests or other personal information).&lt;/p&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                     &lt;!-- Submit/Cancel Buttons --&gt;
+                     &lt;div class=&quot;row&quot;&gt;
+                         &lt;div class=&quot;small-12 columns&quot;&gt;
+                             &lt;button type=&quot;submit&quot; class=&quot;button&quot;&gt;Submit&lt;/button&gt;
+                             &lt;button class=&quot;cancel button secondary&quot;&gt;Cancel&lt;/button&gt;
+                         &lt;/div&gt;
+                     &lt;/div&gt;
+                 &lt;/form&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;!-- Success Message --&gt;
+         &lt;div class=&quot;success-message&quot;&gt;
+             &lt;div class=&quot;row success-message-banner&quot;&gt;
+                 &lt;div class=&quot;check&quot;&gt;&lt;/div&gt;
+                 &lt;span&gt;Success!&lt;/span&gt;
+             &lt;/div&gt;
+             &lt;div class=&quot;row&quot;&gt;
+                 &lt;div class=&quot;small-12 columns&quot;&gt;
+                     &lt;h2 class=&quot;sucess-message-title&quot;&gt;Success Page Title&lt;/h2&gt;
+                     &lt;p class=&quot;success-message-body&quot;&gt;Your request for a call to discuss your RRSP has been received. An
+                         Investors Group
+                         Consultant
+                         will be in touch soon.&lt;/p&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+             &lt;div class=&quot;row text-center&quot;&gt;
+                 &lt;div class=&quot;small-12 medium-4 medium-push-4 columns&quot;&gt;
+                     &lt;a href=&quot;&quot; class=&quot;button&quot;&gt;Return to Retirement Page&lt;/a&gt;
+                 &lt;/div&gt;
+             &lt;/div&gt;
+         &lt;/div&gt;
+     &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                         </div>
+                       </li>
+                       <li class="accordion-item" data-accordion-item>
+                         <a href="#" class="accordion-title" >Documentation</a>
+                         <div class="accordion-content" data-tab-content>
+
+                         </div>
+                       </li>
+                      </ul>
+                  </section>
+                </article>
+
+
+                <article class="pattern-content" id="section-1.7">
+                  <header>
+                    <h2>Tables</h2>
+                    <p><p>Tables</p>
+</p>
+                  </header>
+                  <section>
+                    <div class="sample panel">
+                      
+                    </div>
+
+
+                  </section>
+                </article>
+
+          </div>
+      </main>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="row footer-back-to-top-button">
+        <div class="columns">
+          <a class="float-right" href="#top">top</a>
+        </div>
+      </div> 
+      <div class="row footer-navigation">
+        <ul class="menu vertical accordion" data-responsive-menu="accordion medium" data-accordion="" data-allow-all-closed="true">
+            <li class="large-4 columns accordion-item" data-accordion-item="">
+              <a class="accordion-title hide-for-large" href="#">Resources</a>
+              <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                <li class="accordion-title hide-for-small">Resources</li>
+                <li><a class="submenu-link" href="/en/who-we-are">Behind the Design System</a></li>
+                <li><a class="submenu-link" href="/en/media-room">Change Log</a></li>
+                <li><a class="submenu-link" href="/en/careers">Github</a></li>
+              </ul>
+            </li>
+            <li class="large-4 columns end accordion-item" data-accordion-item="">
+              <a class="accordion-title hide-for-large" href="#">Help</a>
+              <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                <li class="accordion-title hide-for-small">Help</li>
+                <li><a class="submenu-link" href="/en/products">Faq</a></li>
+                <li><a class="submenu-link" href="/en/how-can-we-help">Glossary</a></li>
+                <li><a class="submenu-link" href="https://docs.google.com/forms/d/e/1FAIpQLScr6Ts51wsAj9u8Tq92s-uGvkCPjNqA7ZFyT8gyDOwHVeWJ9Q/viewform">Give Feedback</a></li>
+            </li>
+        </ul>
+      </div>
+      <div class="row footer-copyright">
+        <div class="columns footer-copyright-border-top">
+          <div class="row">
+            <div class="small-12 medium-12 large-3 columns">
+              <ul class="menu">
+                <li>© 2017 Investors Group Inc. All rights Reserved</li>
+              </ul>
+            </div>
+            <div class="small-12 medium-12 large-9 columns">
+              <ul class="menu horizontal">
+                <li><a href="/en/legal">Legal</a></li>
+                <li><a href="/en/legal/use">Terms Of Use</a></li>
+                <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </footer>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/bower_components/jquery-validation/dist/additional-methods.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

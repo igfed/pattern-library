@@ -182,7 +182,7 @@ gulp.task('githubpages', [], function () {
   return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'githubpages'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
