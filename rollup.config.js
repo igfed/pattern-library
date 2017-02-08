@@ -2,9 +2,9 @@
 import babel from 'rollup-plugin-babel';
 
 export default {
-  entry: 'app/scripts/main.js',
-  dest: 'app/scripts/app.js',
-  format: 'iife',
+  entry: 'app/index.js',
+  dest: './scripts/app.js',
+  format: 'es',
   sourceMap: 'inline',
   plugins: [
     babel({

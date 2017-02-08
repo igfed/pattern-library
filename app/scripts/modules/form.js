@@ -1,4 +1,5 @@
-const form = function () {
+export default (function() {
+
   var endpointURL,
     successURL,
     cancelURL,
@@ -133,6 +134,4 @@ const form = function () {
   return {
     init
   };
-}
-
-export { form }
+}())

@@ -1,4 +1,4 @@
-const more = function() {
+export default (function() {
   function init() {
     // Register resize behaviour
     _resize();
@@ -93,6 +93,4 @@ const more = function() {
   return {
     init
   };
-}
-
-export { more }
+}())

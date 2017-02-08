@@ -1,5 +1,5 @@
-import { more } from './modules/more.js';
-import { form } from './modules/form.js';
+import more from './scripts/modules/more.js';
+import form from './scripts/modules/form.js';
 
 const ig = (function () {
   var pathName = window.location.pathname,
