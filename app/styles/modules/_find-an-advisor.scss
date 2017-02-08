@@ -212,11 +212,30 @@
   }
 }
 
+/*Offices Results*/
+.search-results-offices{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.accordion-arrow{
+      &:before{
+        width: 20px;
+        height: 20px;
+        top: 2rem;
+        right: 20px;
+      }
+    }
+
+    .columns{
+      width: auto;
+    }
+}
 
 
 /*Counsultant Results*/
 
-.search-results-consultant{
+.search-results-consultants{
   @include respond-to(medium){
     display:flex;
     justify-content: space-between;

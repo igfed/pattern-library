@@ -222,6 +222,77 @@
       </div>
 
       <div class="callout search-results">
+
+          <div class="row bg-secondary search-results-offices accordion-arrow">
+            <div class="small-3 medium-2 columns">
+              <figure class="small-figure">
+                <img class="image-circle image-6-pillars" src="images/contact-us_head-office.png" alt="">
+              </figure>
+            </div>
+            <div class="small-6 medium-3 columns">
+              <p class="tp_08">Offices found</p>
+            </div>
+          </div>
+          <div class="row info-toggle-content">
+              <div class="small-12 columns search-results-office">
+                <div class="row underline">
+                  <div class="small-12 medium-7 large-6 columns map-column">
+                    <div class="row">
+                      <div class="small-6 columns">
+                        <div class="maps">
+                          <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
+                              <div class="map-container">
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center={{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}&zoom=17&size=130x130&key=AIzaSyB0n_92iCiJzEB2KBQ19jx88Uu6SWN7aUU" />   
+                                <div class="tp_22">View Map</div>
+                              </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="small-6 columns">
+                        <div class="map-address">
+                          <p class="tp_07">Toronto</p>
+                          <p class="tp_09">Toronto</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="columns">
+                        <ul onmouseover="ga('send','event','Consumer Engagement','Hover','Hover_Contact_Numbers_EventPage:FAA', 0);" class="dropdown menu phone" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                            <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                    Contact Info
+                                     Phone
+                                ">
+                                <a class="outline-btn secondary small-icon phone dropdown-button" type="button" tabindex="0">
+                                    <span class="hide-for-small-only">Contact Info</span>
+                                    <span class="show-for-small-only"><i aria-hidden="true" class="fa fa-phone"></i> Phone</span>
+                                </a>
+                                <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                    <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                        <a href="mailto:{{Director__r.Email}}">Email me</a>
+                                    </li>
+                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                        <a href="tel:{{Phone__c}}">
+                                            <strong>Phone</strong>
+                                            <span>{{Phone__c}}</span>
+                                        </a>
+                                    </li>
+                                    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                        <a href="tel:{{Fax__c}}">
+                                            <strong>Fax</strong>
+                                            <span>{{Fax__c}}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                      <a href="mailto:{{Director__r.Email}}" class="button secondary small-icon email" type="button"><span class="show-for-small-only"><i aria-hidden="true" class="fa fa-envelope"></i> Email</span></a>
+                        <a class="button" type="button" href="{{prettyURL__c}}">View Details</a>
+                    </div>
+                </div>
+              </div>
+          </div>
+
           <div class="row search-results-number">
               <div class="medium-12 columns">
                     <p class="large-body-copy">10 results</p>
@@ -231,7 +302,7 @@
           </div>
           <div class="row divider">
               <div class="small-12 columns">
-                <div class="row search-results-consultant">
+                <div class="row search-results-consultants">
                   <div class="small-12 medium-8 large-6 columns">
                     <div class="row search-results-consultant-info">
                       <div class="search-results-consultant-portrait small-5 columns">
