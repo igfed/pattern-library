@@ -1,3 +1,8 @@
+.full-width{
+    background-position: 0 0;
+    background-repeat: repeat-x;
+}
+
 /*Search Box*/
 
 
@@ -212,66 +217,8 @@
   }
 }
 
-/*Offices Results*/
-.search-results-offices{
-    display: flex;
-    align-items: center;
-    position: relative;
 
-    &.accordion-arrow{
-      &:before{
-        width: 20px;
-        height: 20px;
-        top: 2rem;
-        right: 20px;
-      }
-    }
-
-    .columns{
-      width: auto;
-    }
-}
-
-
-/*Counsultant Results*/
-
-.search-results-consultants{
-  @include respond-to(medium){
-    display:flex;
-    justify-content: space-between;
-  }
-
-  .dropdown.menu{
-
-    .is-dropdown-submenu-parent.opens-right{
-      width: 100%;
-      display: inline-block;
-    }
-
-    .is-dropdown-submenu{
-      width: 100%;
-      min-width: auto;
-    }
-  }
-
-  a.dropdown, .button{
-    min-width: auto;
-    width: 100%;
-  }
-}
-
-.search-results-consultant-portrait{
-  width: 80px;
-  @include respond-to(medium){
-    width: 150px;
-  }
-}
-
-.search-results-consultant-info{
-   display:flex;
-}
-
-.search-results-consultant-info-buttons{
+.search-results-buttons{
   display: inline-block;
   align-self: center;
   margin-top: 20px;
@@ -297,6 +244,140 @@
     }
   }
 }
+
+.search-results-office, .search-results-consultant{
+  
+  .dropdown.menu{
+
+    .is-dropdown-submenu-parent.opens-right{
+      width: 100%;
+      display: inline-block;
+    }
+
+    .is-dropdown-submenu{
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  a.dropdown, .button{
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.search-results-info{
+   display:flex;
+}
+
+.search-results-info-map{
+  width: 110px;
+
+  @include respond-to(medium){
+    width: auto;
+  }
+
+}
+
+.search-results-map-container{
+  position: relative;
+  overflow: hidden;
+
+    &::after{
+      content: "";
+      width: 30px;
+      height: 65px;
+      background-image: url(../images/map-marker-blue.png);
+      background-position-y: 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+
+      @include respond-to(medium){
+        height: 85px;
+      }
+    }
+}
+
+/*Offices Results*/
+.search-results-offices{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+
+    &.accordion-arrow{
+      &:before{
+        width: 20px;
+        height: 20px;
+        top: 2rem;
+        right: 20px;
+      }
+    }
+
+    .columns{
+      width: auto;
+    }
+}
+
+.search-results-number{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.search-results-office{
+    .divider{
+      &:first-child{
+        &:before{
+          border: none;
+        }
+      }
+    }
+}
+
+.search-results-map-tooltip{
+  position: absolute;
+  padding-bottom: 1.7rem;
+  padding-top: .5rem;
+  background-color: #0ed59a;
+  text-align: center;
+  width: 100%;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.search-results-map-container{
+  &:hover{
+    .search-results-map-tooltip{
+      top: 50%;
+    }
+  }
+}
+
+
+/*Counsultant Results*/
+
+.search-results-consultant-wrapper{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.search-results-consultant{
+  @include respond-to(medium){
+    display:flex;
+    justify-content: space-between;
+  }
+}
+
+.search-results-consultant-portrait{
+  width: 80px;
+  @include respond-to(medium){
+    width: 150px;
+  }
+}
+
 
 .search-results-consultant-team-members{
 
