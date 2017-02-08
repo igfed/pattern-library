@@ -121,25 +121,42 @@
 
   // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
   .rate-section {
-    padding: 10px 0px;
+    padding: 10px 40px;
+
+    &:first-child {
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
 
     @include respond-to(medium) {
       padding: 10px 25px;
+
+      &:first-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+    }
+
+    @include respond-to(large) {
+      padding: 10px 35px;
 
       &:first-child {
         border-right: 2px solid #ccc;
       }
     }
 
-    @include respond-to(large) {
-      padding: 10px 35px;
-    }
-
     .rate-sub-section {
+      &:first-child {
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
 
       @include respond-to(medium) {
+        border-bottom: none;
         &:first-child {
           border-right: 2px solid #ccc;
+          border-bottom: none;
+          margin-bottom: 0;
         }
       }
     }
@@ -173,8 +190,8 @@
       text-align: center;
 
       .rate-value, .rate-bullet {
-        margin-left: 20px;
-        margin-right: 20px;
+        // margin-left: 20px;
+        // margin-right: 20px;
       }
     }
   }
@@ -253,14 +270,6 @@
       border-bottom: none;
     }
 
-    .rate-bullet {
-      padding: 0;
-
-      @include respond-to(medium) {
-        padding: 10px;
-      }
-    }
-
     .rate-value-block {
       border-bottom: none;
 
@@ -295,6 +304,7 @@
       color: #666;
       font-size: 22px;
       border-bottom: none;
+      padding: 0;
 
       &:last-child {
         border-bottom: none;
@@ -304,6 +314,7 @@
         border-bottom: 1px solid #ccc;
         font-size: 16px;
         letter-spacing: 0;
+        padding: 10px;
       }
 
       @include respond-to(large) {
