@@ -5,6 +5,8 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const kss = require('gulp-kss');
+const rollup = require('rollup-stream');
+const source = require('vinyl-source-stream');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
@@ -35,8 +37,14 @@ gulp.task('styleguide', () => {
     .emit('end');
 });
 
-gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
+gulp.task('bundle', function() {
+  return rollup('rollup.config.js')
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('app/scripts'));
+});
+
+gulp.task('scripts', ['bundle'], () => {
+  return gulp.src('app/scripts/*.js')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.babel())
