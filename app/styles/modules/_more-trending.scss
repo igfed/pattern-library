@@ -138,7 +138,7 @@ Markup:
     <div class="small-10 small-offset-1 medium-offset-0 medium-6 large-3 columns tile">
       <a href="/sprint-4-category.html"><h4 class="more-small-section-title">Money</h4></a>
       <div class="highlight-title">
-        <h3 class="content-title">
+        <h3 class="content-title-strikethrough">
           <a href="/more-article.html">Why Are Mortgage Rates Rising?</a>
         </h3>
       </div>
@@ -319,6 +319,15 @@ $border-color: #E0E2E2;
     p {
       margin-bottom: 0;
     }
+
+    .callout-body-copy {
+      @include respond-to(small) {
+        font-size: 24px;
+      }
+      @include respond-to(medium) {
+        font-size: 28px;
+      }
+    }
   }
 
   .legal-copy {
@@ -401,6 +410,10 @@ $border-color: #E0E2E2;
             &:last-child {
               margin-right: 0;
             }
+
+            &:hover {
+              opacity: 0.6;
+            }
           }
         }
 
@@ -418,10 +431,6 @@ $border-color: #E0E2E2;
             opacity: 1;
             transition: opacity 250ms;
             margin-right: 0;
-
-            &:hover {
-              opacity: 0.6;
-            }
           }
         }
 
@@ -442,8 +451,18 @@ $border-color: #E0E2E2;
 
   .highlight-title {
     display: block;
+    margin-bottom: 20px;
 
-    h3 {
+    @include respond-to(large) {
+      margin-bottom: 0;
+    }
+
+    .content-title-strikethrough {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-family: $font-stack-light;
+      line-height: 1.4em;
+      text-transform: capitalize;
       background-image: url(http://investorsgroup.com/more/wp-content/themes/ig_magazine/img/bg-images/highlight.png);
       background-repeat: repeat-x;
       background-position: 0 20px;
@@ -451,9 +470,16 @@ $border-color: #E0E2E2;
       // font-size: 1.5em;
       line-height: 1.2em;
 
+      @include respond-to(medium) {
+        font-size: 28px;
+    		font-size: 1.75rem;
+        background-position: 0 25px;
+      }
+
       @include respond-to(large) {
         background-position: 0 30px;
-        // font-size: 2em;
+        font-size: 36px;
+    		font-size: 2.25rem;
       }
     }
   }

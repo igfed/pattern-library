@@ -77,6 +77,26 @@ Styleguide 4.1
       @include respond-to(medium) {
         padding-right: 0;
       }
+
+      .more-content-title-bold {
+        font-size: 22px;
+
+        @include respond-to(large) {
+          font-size: 28px;
+        }
+      }
+
+      .body-copy {
+        font-family: $font-stack;
+
+        @include respond-to(large) {
+          font-size: 16px;
+        }
+      }
+
+      .tertiary-cta {
+        font-size: 18px;
+      }
     }
   }
 
@@ -111,6 +131,10 @@ Styleguide 4.1
 
         li {
           display: inline-block;
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
 
@@ -130,10 +154,6 @@ Styleguide 4.1
           li {
             opacity: 1;
             transition: opacity 250ms;
-
-            &:hover {
-              opacity: 0.6;
-            }
           }
         }
 
