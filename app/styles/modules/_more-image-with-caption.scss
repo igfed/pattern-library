@@ -1,3 +1,29 @@
+/*
+More Image With Caption
+
+Standard layout for images included in More Articles pages. Can be used for header images or in body text.
+
+Markup:
+<article class="bg-more-section">
+  <!-- image with caption -->
+  <section class="row more-image-with-caption">
+    <div class="small-11 small-centered medium-10 medium-offset-1 columns">
+      <div class="row">
+        <div class="small-12 columns">
+          <figure class="image-with-caption">
+            <img src="images/Choose-your-resolution.jpg" alt="test" />
+            <figcaption class="image-caption legal-copy">
+              Forget the long list of New Year's resolutions. Choose one thing to do instead.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+
+Styleguide 4.1
+*/
 
 .more-image-with-caption {
   padding: 10px 0 10px 0;
@@ -14,6 +40,7 @@
 
       @include respond-to(medium) {
         align-self: center;
+        text-align: center;
       }
     }
   }
