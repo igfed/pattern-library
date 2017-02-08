@@ -74,11 +74,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({ safe: true, autoprefixer: false })))
-    .pipe($.if('*.html', $.htmlmin({ collapseWhitespace: true })
-      .on('error', function(e){
-            console.log(e);
-         })
-      ))
+    .pipe($.if('*.html', $.htmlmin({ collapseWhitespace: true })))
     .pipe(gulp.dest('dist'));
 });
 
@@ -113,7 +109,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -131,7 +127,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/styles/**/*.scss', ['styleguide', 'styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -186,7 +182,7 @@ gulp.task('githubpages', [], function () {
   return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['styleguide', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
