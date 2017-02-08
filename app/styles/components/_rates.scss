@@ -123,8 +123,10 @@
   .rate-section {
     padding: 10px 35px;
 
-    &:first-child {
-      border-right: 2px solid #ccc;
+    @include respond-to(large) {
+      &:first-child {
+        border-right: 2px solid #ccc;
+      }
     }
 
     .rate-legal {
@@ -167,8 +169,8 @@
 
   // Following are some special rules for blocks of 10
   .rate-grid-10 {
-    @include respond-to(large) {
-      .large-2 {
+    @include respond-to(medium) {
+      .medium-2 {
         width: 20%;
       }
 
@@ -176,17 +178,27 @@
         margin-bottom: 40px;
       }
 
-      .large-offset-custom-10 {
+      .offset-custom-10 {
         margin-left: 10% !important;
       }
 
-      .large-offset-custom-20 {
+      .offset-custom-20 {
         margin-left: 20% !important;
+      }
+    }
+    @include respond-to(large) {
+      .large-2 {
+        width: 20%;
+      }
+
+      .rate-block {
+        margin-bottom: 40px;
+        font-size: 52px;
       }
     }
 
     // Need a 'custom' media query here otherwise CSS will be much more complex
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 640px) {
       .row + .row {
         border-top: 2px solid #ccc;
       }
@@ -237,14 +249,25 @@
     .rate-value-block {
       border-bottom: none;
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         border-bottom: 1px solid #ccc;
       }
+
       .rate-value {
         letter-spacing: 1px;
         font-size: 52px;
         font-family: $font-whitney-light;
         color: #000;
+
+        @include respond-to(medium) {
+          font-size: 40px;
+          letter-spacing: 0;
+        }
+
+        @include respond-to(large) {
+          font-size: 52px;
+          letter-spacing: 1px;
+        }
       }
 
       .rate-value-secondary {
@@ -262,8 +285,15 @@
         border-bottom: none;
       }
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        letter-spacing: 0;
+      }
+
+      @include respond-to(large) {
+        font-size: 22px;
+        letter-spacing: 1px;
       }
     }
 
