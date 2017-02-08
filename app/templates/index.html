@@ -78,12 +78,10 @@
         <nav role="navigation">
           <ul class="vertical menu">
             {{#eachSection rootNumber}}
-              <li>
-                {{#whenDepth 2}}
-                  <li><a href="#section-{{reference}}">{{header}}</a></li>
-                {{/whenDepth}}
-              </li>
-              {{/eachSection}}
+              {{#whenDepth 2}}
+                <li><a href="#section-{{reference}}">{{header}}</a></li>
+              {{/whenDepth}}
+            {{/eachSection}}
           </ul>
         </nav>
       </div>
@@ -176,6 +174,7 @@
                 <li><a class="submenu-link" href="/en/products">Faq</a></li>
                 <li><a class="submenu-link" href="/en/how-can-we-help">Glossary</a></li>
                 <li><a class="submenu-link" href="https://docs.google.com/forms/d/e/1FAIpQLScr6Ts51wsAj9u8Tq92s-uGvkCPjNqA7ZFyT8gyDOwHVeWJ9Q/viewform">Give Feedback</a></li>
+                </ul>
             </li>
         </ul>
       </div>
@@ -210,7 +209,7 @@
     <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
