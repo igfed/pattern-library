@@ -1,0 +1,70 @@
+
+.more-article-header {
+  padding: 10px auto;
+
+  .title-section {
+    position: relative;
+    margin-top: 45px;
+
+    @include respond-to(medium) {
+      margin-top: 50px;
+    }
+
+    .article-category {
+      margin-bottom: 25px;
+      display: block;
+
+      p {
+        color: $button-primary-color;
+        margin: 0;
+      }
+    }
+
+    h1 {
+      padding-bottom: 8px;
+      border-bottom: $more-underline;
+    }
+
+    .byline {
+      text-transform: uppercase;
+    }
+
+    .share-icons {
+      margin: 18px auto;
+
+      @include respond-to(medium) {
+        text-align: right;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        right: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .article-subtitle {
+      margin: 18px auto;
+
+      a {
+        color: $button-primary-color;
+        &:hover {
+          color: $link-hover;
+          transition: color 0.25s;
+        }
+      }
+
+      @include respond-to(medium) {
+        margin: 35px auto;
+      }
+    }
+  }
+}

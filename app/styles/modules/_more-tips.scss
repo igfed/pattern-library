@@ -1,0 +1,92 @@
+// more-tips
+// extended styling to work for Q & A section too
+.more-tips, .question-answer {
+  margin-top: 35px;
+
+  .list-row {
+    padding-top: 35px;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      .list-body {
+        border-bottom: none;
+      }
+    }
+
+    .list-column {
+      display: none;
+      background-position: right 0;
+      background-repeat: no-repeat;
+      top: 3px;
+
+      @include respond-to(medium) {
+        display: block;
+      }
+    }
+
+    .tips-list-column {
+      @extend .list-column;
+      background-image: url('../images/TIP-Icon.svg');
+      background-size: 50px auto;
+      height: 40px;
+    }
+
+    .questions-list-column {
+      @extend .list-column;
+      background-image: url('../images/Q-Icon.svg');
+      background-size: 45px auto;
+      height: 45px;
+      margin-top: 5px;
+      background-position: center 0;
+    }
+
+    .list-title {
+      margin-bottom: 18px;
+
+      .title-icon {
+        float: left;
+        background-size: 100%;
+        width: 40px;
+        background-repeat: no-repeat;
+
+        @include respond-to(medium) {
+          display: none;
+        }
+      }
+
+      .tips-icon {
+        @extend .title-icon;
+        background-image: url('../images/TIP-Icon.svg');
+        height: 40px;
+      }
+
+      .questions-icon {
+        @extend .title-icon;
+        background-image: url('../images/Q-Icon.svg');
+        height: 47px;
+        background-position: 0 center;
+      }
+
+      .title {
+        padding-left: 55px;
+        margin-bottom: 0;
+
+        @include respond-to(medium) {
+          position: static;
+          padding-left: 0;
+        }
+      }
+
+      .questions-title {
+        @extend .title;
+        text-transform: uppercase;
+      }
+    }
+
+    .list-body {
+      padding-bottom: 35px;
+      border-bottom: $more-underline;
+    }
+  }
+}

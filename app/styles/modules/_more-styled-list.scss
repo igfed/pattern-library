@@ -1,0 +1,53 @@
+.styled-list {
+  counter-reset: ordered-ls-counter;
+  margin: 0;
+
+  @include respond-to(medium) {
+    margin-top: 50px;
+    padding-left: 40px;
+  }
+
+  li {
+    border-bottom: $more-underline;
+    list-style-type: none;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:before {
+      content: counter(ordered-ls-counter);
+      counter-increment: ordered-ls-counter;
+      display: inline-block;
+      background-color: $button-primary-color;
+      border-radius: 50%;
+      color: $lightest-color;
+      width: 25px;
+      height: 25px;
+      margin-right: 12px;
+      text-align: center;
+
+      @include respond-to(medium) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+.tips-paragraph {
+  border-bottom: $more-underline;
+
+  p {
+    margin: 45px auto;
+    @include respond-to(medium) {
+      margin: 18px auto;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}

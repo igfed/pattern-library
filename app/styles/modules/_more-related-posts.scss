@@ -7,7 +7,7 @@ Markup:
 <div class="more-related-posts">
   <div class="row container">
     <div class="small-11 small-centered large-10 large-offset-1 columns">
-      <h3 class="body-copy-bold text-left">
+      <h3 class="section-title text-left">
         Related Posts
       </h3>
       <div class="related small-up-2 medium-up-5">
@@ -89,10 +89,11 @@ Styleguide 4.1
 .more-related-posts {
   margin: 10px 0 40px 0;
 
-  h3 {
+  .section-title {
     margin-bottom: 10px;
     display: inline-block;
     position: relative;
+    font-size: 18px;
 
     &:after {
       content: '';
@@ -116,7 +117,7 @@ Styleguide 4.1
   }
 
   .related {
-    border-top: 1px solid $more-article-gray;
+    border-top: $more-underline;
     padding: 20px 0 0 0;
 
     .column-block {

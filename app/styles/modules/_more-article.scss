@@ -80,12 +80,19 @@ Styleguide 4.1
 // used on multiple components
 $more-background-yellow: #FAF7E6;
 $more-article-gray: #e0d9d1;
+$image-caption-gray: #646464;
+
+// common underline style
+$more-underline: 1px solid $more-article-gray;
+$link-hover: #0BAB7B;
 
 .bg-more-section {
   background-color: $more-background-yellow;
+  padding-bottom: 20px;
 }
 
 // specific typography for More section
+// check if this is still being used
 .more-callout-title {
 	font-size: 28px;
 	font-size: 1.75rem;
@@ -102,79 +109,37 @@ $more-article-gray: #e0d9d1;
   }
 }
 
-.title-section {
-  position: relative;
-  margin-top: 45px;
+// more-article page
+
+// includes styling for separator line
+.separator-line-container {
+  padding-bottom: 25px;
+  padding-top: 25px;
 
   @include respond-to(medium) {
-    margin-top: 50px;
-  }
-
-  .article-category {
-    margin-bottom: 25px;
-    display: block;
-
-    p {
-      color: $button-primary-color;
-      margin: 0;
-    }
-  }
-
-  h1 {
-    padding-bottom: 8px;
-    border-bottom: 1px solid $more-article-gray;
-  }
-
-  .byline {
-    text-transform: uppercase;
-  }
-
-  .share-icons {
-    margin: 18px auto;
-
-    @include respond-to(medium) {
-      text-align: right;
-      position: absolute;
-      margin: 0;
-      top: 0;
-      right: 0;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-  }
-
-  .article-subtitle {
-    margin: 18px auto;
-
-    @include respond-to(medium) {
-      margin: 35px auto;
-    }
+    padding-bottom: 35px;
+    padding-top: 35px;
   }
 }
 
-.image-caption {
-  color: #a4a39c;
-  float: left;
-  text-transform: uppercase;
-
-  @include respond-to(medium) {
-    float: none;
-    text-align: center;
-  }
+// includes styling for articles with right-aligned images
+.content-right-image-container {
+  border-bottom: $more-underline;
 }
 
+// main article content
 .article-body {
-
   @include respond-to(medium) {
     margin: 35px auto;
+  }
+
+  .more-callout-body-copy-bold {
+    margin-top: 22px;
+    margin-bottom: -22px;
+
+    @include respond-to(medium) {
+      margin-bottom: inherit;
+    };
   }
 
   a {
@@ -188,6 +153,15 @@ $more-article-gray: #e0d9d1;
     }
   }
 
+  .offset-list {
+    padding-left: 30px;
+  }
+
+  .list-source-footer {
+    // need to define variable for this
+    color: #a4a39c;
+  }
+
   blockquote {
     border-top: 3px solid $button-primary-color;
     color: inherit;
@@ -197,8 +171,53 @@ $more-article-gray: #e0d9d1;
 
     @include respond-to(medium) {
       float: left;
-      margin: 9px 45px 9px 0;
+      margin: 11px 45px 15px 0;
       width: 30%;
     }
+  }
+
+  .author-pic-container {
+    padding-bottom: 35px;
+    margin-top: 20px;
+    overflow: auto;
+
+    .author-pic {
+      width: 140px;
+      margin-right: 14px;
+      float: left;
+
+      @include respond-to(medium) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .author-description {
+      margin: 0 auto;
+      display: block;
+
+      @include respond-to(large) {
+        color: #9c9c96;
+      }
+    }
+  }
+}
+
+
+// more-image-carousel
+.more-image-carousel {
+  padding-bottom: 20px;
+
+  // overriding default carousel button placement
+  // to account for figure captions
+  button {
+    top: 35%;
+    @include respond-to(medium) {
+      top: 38.5%;
+    }
+  }
+
+  .carousel-figure {
+    margin-bottom: 20px;
   }
 }
