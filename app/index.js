@@ -1,11 +1,12 @@
 import more from './scripts/modules/more.js';
 import form from './scripts/modules/form.js';
+import form from './scripts/modules/carousel.js';
 
 const ig = (function () {
   var pathName = window.location.pathname,
     lang = _lang(),
     browserWidth = _width();
-
+    modules = ['form', 'more', 'carousel']
   function init() {
     // Initialize Foundation
     $(document).foundation();
@@ -24,7 +25,7 @@ const ig = (function () {
 
     // Carousel
     if ($('.ig-carousel').length) {
-      // carousel.init();
+      carousel.init();
     }
     // Another module
 

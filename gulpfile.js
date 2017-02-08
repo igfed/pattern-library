@@ -37,7 +37,7 @@ gulp.task('styleguide', () => {
     .emit('end');
 });
 
-gulp.task('bundle', function() {
+gulp.task('bundle', () => {
   return rollup('rollup.config.js')
     .pipe(source('main.js'))
     .pipe(gulp.dest('app/scripts'));
@@ -137,7 +137,7 @@ gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles', 'styleguide']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch(['app/scripts/**/*.js', 'app/index.js'], ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
