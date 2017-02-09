@@ -2,89 +2,6 @@
 // to account for the fact that picture switches to
 // full width on larger screens
 
-.full-width-title-section {
-  position: relative;
-  margin-top: 45px;
-
-  .column, .columns {
-      padding: 0;
-    }
-
-  @include respond-to(medium) {
-    padding-top: 130px;
-    display: block;
-  }
-
-  p {
-    @include respond-to(medium) {
-      color: $lightest-color;
-    }
-  }
-
-  h1 {
-    @include respond-to(large) {
-      border-bottom: 2px solid $lightest-color;
-      width: 65%;
-    }
-  }
-
-  .byline {
-    text-transform: uppercase;
-  }
-
-  .article-category {
-    p {
-      color: $lightest-color;
-    }
-
-    @include respond-to(medium) {
-      margin-bottom: 10px;
-    }
-  }
-
-  .share-icons {
-    margin: 18px auto;
-
-    @include respond-to(medium) {
-      text-align: right;
-      position: absolute;
-      margin: 0;
-      top: 0;
-      right: 0;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-  }
-
-  .full-width-share-icons {
-    margin: 18px auto;
-
-    ul {
-      margin: 0;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        margin-right: 5px;
-      }
-    }
-
-    @include respond-to(medium) {
-      position: static;
-      text-align: left;
-      margin-top: 20px;
-    }
-  }
-}
-
 .full-width-header {
   margin-bottom: 40px;
   max-height: 700px;
@@ -98,9 +15,67 @@
 
   .hero {
     height: 500px;
-    color: white
+    color: white;
     padding-left: 0;
     padding-right: 0;
+    position: relative;
+
+    .full-width-title-section {
+      position: absolute;
+      bottom: 25px;
+      display: block;
+
+      p {
+        color: $lightest-color;
+      }
+
+      .title-underline {
+        width: 80%;
+
+        @include respond-to(large) {
+          width: 70%;
+        }
+
+        hr {
+          margin: 0 0 10px 0;
+          border-color: $lightest-color;
+        }
+      }
+
+      .byline {
+        text-transform: uppercase;
+      }
+
+      .article-category {
+        p {
+          color: $lightest-color;
+        }
+
+        @include respond-to(medium) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .full-width-share-icons {
+        margin: 18px auto;
+
+        ul {
+          margin: 0;
+          padding: 0;
+
+          li {
+            display: inline-block;
+            margin-right: 5px;
+          }
+        }
+
+        @include respond-to(medium) {
+          position: static;
+          text-align: left;
+          margin-top: 20px;
+        }
+      }
+    }
   }
 }
 
@@ -108,7 +83,13 @@
   padding: 0;
 }
 
-.show-small-image {
-  padding-bottom: 71%;
-  margin-bottom: 25px;
+.show-for-small-only {
+  .show-small-image {
+    padding-bottom: 90%;
+    margin-bottom: 25px;
+  }
+
+  .callout-title {
+    width: 75%;
+  }
 }
