@@ -4,6 +4,7 @@ More Related Posts
 Optional related posts section added to some More Article pages.
 
 Markup:
+<!-- more-related-posts -->
 <div class="more-related-posts">
   <div class="row container">
     <div class="small-11 small-centered large-10 large-offset-1 columns">
@@ -84,8 +85,6 @@ Markup:
 Styleguide 4.1
 */
 
-// more-related-posts
-
 .more-related-posts {
   margin: 10px 0 40px 0;
 
@@ -107,7 +106,7 @@ Styleguide 4.1
   }
 
   .container {
-    @include respond-to(large) {
+    @include respond-to(medium) {
       position: relative;
     }
 
@@ -132,7 +131,7 @@ Styleguide 4.1
       padding-bottom: 20px;
       height: 100%;
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         position: static;
       }
 
@@ -145,6 +144,10 @@ Styleguide 4.1
       .more-link {
         position: absolute;
         bottom: 0;
+      }
+
+      .tertiary-cta {
+        letter-spacing: 0;
       }
     }
   }
