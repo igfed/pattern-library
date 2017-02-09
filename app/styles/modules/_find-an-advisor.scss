@@ -274,14 +274,14 @@
 
   .phone-icon{
     &:before{
-      top: -8px;
+      top: 2px;
     }
   }
 
   .email-icon{
     &:before{
-      left: -28px;
-      top: 2px;
+      left: 0;
+      top: 1px;
     }
   }
 }
@@ -305,6 +305,17 @@
       margin-bottom: 0;
     } 
   }
+
+  span{
+    display: flex;
+    justify-content: center;
+
+    @include respond-to(medium){
+      display: inline-block;
+    }
+  }
+
+
 }
 
 .search-results-office, .search-results-consultant{
@@ -332,6 +343,16 @@
   a.dropdown, .button{
     min-width: auto;
     width: 100%;
+  }
+}
+
+.search-results-consultant{
+  .search-results-button{
+    .button{
+      .phone-icon, .email-icon{
+        width: 30px;
+      }
+    }
   }
 }
 
@@ -383,8 +404,11 @@
       &:before{
         width: 20px;
         height: 20px;
-        top: 2rem;
         right: 20px;
+
+        @include respond-to(medium){
+           top: 2rem;
+        }
       }
     }
 
@@ -434,12 +458,18 @@
 .search-results-consultant-portrait{
   width: 80px;
   @include respond-to(medium){
+    width: 125px;
+  }
+
+  @include respond-to(large){
     width: 150px;
   }
 }
 
 .search-results-consultant-info-name{
-  padding-bottom: 1rem;
+  @include respond-to(medium){
+    padding-bottom: 1rem;
+  }
 }
 
 .search-results-consultant-team-members{
@@ -538,6 +568,10 @@
       margin-right: 0;
     }
   }
+
+  .phone-icon, .email-icon{
+    width: 30px;
+  }
 }
 
 .search-results-consultant-team-section-divider{
@@ -568,17 +602,18 @@
       border-right: solid 1.5px;
     }
   }
-
-  .expanded-accordion-arrow{
-    &:before{
-      transform: rotate(225deg) translate3d(0, 0, 0);
-    }
-  }
 }
 
 
 
 .search-results{
+
+  .expanded-accordion-arrow{
+    &:before{
+      transform: rotate(225deg) translate3d(0, 0, 0);
+      top: 8px;
+    }
+  }
 
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
     display: none;
@@ -590,7 +625,6 @@
 
   .phone-icon, .email-icon{
     position: relative;
-    width: 30px;
     padding: 0;
 
     &:before{
@@ -618,7 +652,7 @@
   .email-icon{
     &:before{
       content: url(../images/find-an-advisor-email.svg);
-      width: 17px;
+      width: 16px;
 
       @include respond-to(medium){
         display: none;
@@ -646,6 +680,10 @@
       @include respond-to(medium){
         padding-top: 1rem;
         width: calc(35% - 20px)
+      }
+
+      @include respond-to(large){
+        width: calc(40% - 50px);
       }
   }
 }
