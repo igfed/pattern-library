@@ -287,10 +287,23 @@
 }
 
 .search-results-button{
+
   &:last-child{
     .button{
       margin-bottom: 0;
     }
+  }
+
+  @include respond-to(medium){
+    .button{
+      margin-bottom: 0.5rem;
+    } 
+  }
+
+  @include respond-to(large){
+    .button{
+      margin-bottom: 0;
+    } 
   }
 }
 
@@ -459,6 +472,7 @@
 
     .search-results-consultant-team-member{
       margin:0;
+      margin-bottom: 1rem;
     }
 }
 .search-results-consultant-team-member{
