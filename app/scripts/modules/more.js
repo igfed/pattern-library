@@ -28,14 +28,17 @@ export default (() => {
       _animationUnderline();
     });
 
-    // Register Click Handlers
-    //
+    // Register Miscellaneous Click Handlers
+    // ********************************************************8
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
 
     // Close button
     $('.close-button').on('click', _closeButton);
+
+    // Social drawer
+    $('.js-open-socialdrawer').on('click', _openSocialDrawer);
   }
 
   function _resize() {
@@ -89,6 +92,18 @@ export default (() => {
   function _mobileCategoryMenu() {
     $('.more-section-menu').toggleClass('active');
     $(this).toggleClass('active');
+  }
+
+  function _openSocialDrawer() {
+    // this.next() selects next sibling element
+    // any suggestions on a better way to do this?
+    var jsSocialDrawer = $(this).next();
+
+    if (jsSocialDrawer.hasClass('js-socialdrawer-opened')) {
+      jsSocialDrawer.removeClass('js-socialdrawer-opened');
+    } else {
+      jsSocialDrawer.addClass('js-socialdrawer-opened');
+    }
   }
 
   return {

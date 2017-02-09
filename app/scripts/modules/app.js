@@ -5,6 +5,7 @@ import accordion from './accordion.js';
 
 const app = (function () {
   function init() {
+
     // Initialize Foundation
     $(document).foundation();
 
@@ -29,13 +30,6 @@ const app = (function () {
     init
   }
 
-//Accordion
-
-// $('.help-topics-accordion').on('up.zf.accordion', function (event) {
-//   setTimeout(function () {
-//     $('html,body').animate({ scrollTop: $('.is-active').offset().top }, 'slow');
-//   }, 10); //Adjust to match slideSpeed
-// });
 })()
 
 // Bootstrap app
