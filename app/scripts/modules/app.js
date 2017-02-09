@@ -1,6 +1,7 @@
 import more from './more.js';
 import forms from './forms.js';
 import carousel from './carousel.js';
+import accordion from './accordion.js';
 
 const app = (function () {
   function init() {
