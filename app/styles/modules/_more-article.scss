@@ -227,10 +227,10 @@ $link-hover: #0BAB7B;
       align-content: center;
 
       // this is a strange css hack
-      // that allows me to target only IE 10 and above
-      // fixes some flexbox bugs
+      // that fixes some flexbox bugs on IE 10 and above
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         display: block;
+        text-align: center;
       }
 
       .image-caption {
