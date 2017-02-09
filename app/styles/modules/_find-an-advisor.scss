@@ -3,6 +3,24 @@
     background-repeat: repeat-x;
 }
 
+.is-hidden-mobile{
+  display: none;
+
+  @include respond-to(medium){
+    display: block;
+  }
+}
+
+.ex-small-figure{
+  width: 50px;
+  height: 50px;
+
+  @include respond-to(medium){
+    width: 80px;
+    height: 80px;
+  }
+}
+
 /*Search Box*/
 
 
@@ -217,6 +235,29 @@
   }
 }
 
+.view-more-results-button{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include respond-to(medium){
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.search-results-filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  p{
+    &:not(:last-child){
+      padding-right: 3rem;
+    }
+  }
+}
 
 .search-results-buttons{
   display: inline-block;
@@ -228,7 +269,7 @@
   }
 
   .button{
-   padding: 5px 1.25em 7px
+   padding: 5px 1.25em 7px;
   }
 
   .phone-icon{
@@ -245,7 +286,22 @@
   }
 }
 
+.search-results-button{
+  &:last-child{
+    .button{
+      margin-bottom: 0;
+    }
+  }
+}
+
 .search-results-office, .search-results-consultant{
+   padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  @include respond-to(medium){
+    display:flex;
+    justify-content: space-between;
+  }
   
   .dropdown.menu{
 
@@ -266,8 +322,10 @@
   }
 }
 
+
 .search-results-info{
    display:flex;
+   align-items: center;
 }
 
 .search-results-info-map{
@@ -327,7 +385,7 @@
     padding-bottom: 1rem;
 }
 
-.search-results-office{
+#search-results-offices-expand{
     .divider{
       &:first-child{
         &:before{
@@ -346,6 +404,7 @@
   width: 100%;
   -ms-transform: translateY(0);
   transform: translateY(0);
+  z-index: 10;
 }
 
 .search-results-map-container{
@@ -359,18 +418,6 @@
 
 /*Counsultant Results*/
 
-.search-results-consultant-wrapper{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.search-results-consultant{
-  @include respond-to(medium){
-    display:flex;
-    justify-content: space-between;
-  }
-}
-
 .search-results-consultant-portrait{
   width: 80px;
   @include respond-to(medium){
@@ -378,12 +425,18 @@
   }
 }
 
+.search-results-consultant-info-name{
+  padding-bottom: 1rem;
+}
 
 .search-results-consultant-team-members{
 
     @include respond-to(medium){
       display: flex;
       justify-content: center;
+      flex-flow: row wrap;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
    }
 
     .dropdown{
@@ -403,20 +456,21 @@
           border: 2px solid #0d263c;
         }
     }
-}
 
-.search-results-consultant-team-members-view-all{
-  // border-top: 1px solid #c1cbd0;
-  width: auto;
-  display: inline-block;
+    .search-results-consultant-team-member{
+      margin:0;
+    }
 }
-
 .search-results-consultant-team-member{
   display: flex;
   justify-content: space-between;
 
   @include respond-to(medium){
     flex-direction: column;
+  }
+
+  &:only-child{
+    flex-direction: row;
   }
 
   .dropdown.menu > li.is-dropdown-submenu-parent > a{
@@ -475,12 +529,39 @@
 .search-results-consultant-team-section-divider{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+
+  @include respond-to(medium){
+    padding-top: 1rem;
+  }
 }
 
-.search-results-consultant-team-section-title{
+.search-results-consultant-team-members-view-all{
+  // border-top: 1px solid #c1cbd0;
   width: auto;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  padding-bottom: 0.5rem;
+
+  .accordion-arrow{
+    &:before{
+      top: 0.2rem;
+      width: 10px;
+      height: 10px;
+      right:0;
+      border-bottom: solid 1.5px;
+      border-right: solid 1.5px;
+    }
+  }
+
+  .expanded-accordion-arrow{
+    &:before{
+      transform: rotate(225deg) translate3d(0, 0, 0);
+    }
+  }
 }
+
 
 
 .search-results{
@@ -539,7 +620,6 @@
       margin: 0 auto;
 
         @include respond-to(medium){
-          padding-top: 1rem;
           width: calc(100% - 30px);
         }
       }
@@ -547,11 +627,11 @@
   }
 
   .underline{
-    border-top: 0.15rem solid #c1cbd0;
+    border-top: 0.10rem solid #c1cbd0;
 
       @include respond-to(medium){
         padding-top: 1rem;
-        width: calc(45% - 30px)
+        width: calc(35% - 20px)
       }
   }
 }
