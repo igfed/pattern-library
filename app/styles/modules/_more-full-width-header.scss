@@ -1,9 +1,14 @@
 // extending styles from regualr title section
 // to account for the fact that picture switches to
 // full width on larger screens
+
 .full-width-title-section {
   position: relative;
   margin-top: 45px;
+
+  .column, .columns {
+      padding: 0;
+    }
 
   @include respond-to(medium) {
     padding-top: 130px;
@@ -17,7 +22,7 @@
   }
 
   h1 {
-    @include respond-to(medium) {
+    @include respond-to(large) {
       border-bottom: 2px solid $lightest-color;
       width: 65%;
     }
@@ -28,11 +33,12 @@
   }
 
   .article-category {
+    p {
+      color: $lightest-color;
+    }
+
     @include respond-to(medium) {
       margin-bottom: 10px;
-      p {
-        color: $lightest-color;
-      }
     }
   }
 
@@ -93,6 +99,8 @@
   .hero {
     height: 500px;
     color: white
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
