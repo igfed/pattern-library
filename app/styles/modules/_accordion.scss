@@ -61,17 +61,17 @@ Styleguide 3.4
 
   // .accordion{
   //   background-color: transparent;
-
+  //
   //   p,ul{
   //     margin-bottom: 1rem;
   //   }
-
+  //
   //   ul{
   //     list-style: none;
   //     margin-left: 0;
   //   }
   // }
-
+  //
   // .accordion-title{
   //   background-color: transparent;
   //   border: none;
@@ -79,17 +79,17 @@ Styleguide 3.4
   //   font-size: 18px;
   //   font-size: 1.1125rem;
   //   padding: 0.5rem 1rem;
-
+  //
   //   &:hover, &:focus{
   //     background-color: transparent;
   //   }
   // }
-
-
+  //
+  //
   // .accordion-item{
   //   border-bottom: 1px solid $accordion-lightgrey-line;
   // }
-
+  //
   // .accordion-title::before{
   //   content: url('http://investorsgroup.com/en/images/corp/svg/expandGreenArrow.png');
   //   -webkit-transform-origin: center middle;
@@ -101,7 +101,7 @@ Styleguide 3.4
   //   transition: transform 0.3s ease-out;
   //   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   // }
-
+  //
   // .accordion-item.is-active .accordion-title::before{
   //   -webkit-transform-origin: center middle;
   //   transform-origin: center middle;
@@ -112,25 +112,88 @@ Styleguide 3.4
   //   transition: transform 0.3s ease-out;
   //   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   // }
-
+  //
   // .accordion-image{
   //   margin-right: 1rem;
   //   width: 40px;
-
+  //
   //   @include respond-to(medium){
   //     width: 50px;
   //   }
   // }
-
+  //
   // .accordion-content{
   //   background: transparent;
   //   border: none;
-
+  //
   //   &:last-child{
   //     border:none;
   //   }
-
+  //
   //   a{
   //     border-bottom: 1px solid $brand-color;
   //   }
   // }
+
+  .help-accordion-main {
+    padding: 100px 0;
+
+    .section-title {
+      padding-bottom: 8px;
+    }
+
+    .accordion {
+      background-color: $secondary-color;
+    }
+
+    .accordion-item .is-accordion-submenu-parent .is-active {
+      a .accordion-title {
+        border-bottom: none;
+      }
+    }
+
+    .is-accordion-submenu-parent {
+      .accordion-title::after {
+        width: $arrow-size*2.5;
+        height: $arrow-size*2.5;
+        border: none;
+        border-bottom: solid 3px $button-primary-color;
+        border-right: solid 3px $button-primary-color;
+        transform-origin: center middle;
+        transform: rotate(45deg);
+        top: 25%;
+        margin-top: -$arrow-size/2;
+      }
+
+      .accordion-title {
+        border: none;
+        border-bottom: solid 1px $accordion-lightgrey-line;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:focus {
+          background-color: transparent;
+        }
+      }
+
+      .accordion-content {
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px $accordion-lightgrey-line;
+      }
+    }
+
+    .is-accordion-submenu-parent .is-active {
+      .accordion-title::after {
+        border: none;
+        border-right: solid 3px $button-primary-color;
+        border-top: solid 3px $button-primary-color;
+        transform: rotate(-45deg);
+        top: 45%;
+        margin-top: $arrow-size/2;
+      }
+    }
+  }
