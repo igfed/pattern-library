@@ -1,4 +1,6 @@
-export default (function() {
+import * as ig from './global.js';
+
+export default (() => {
   function init() {
     // Register resize behaviour
     _resize();
@@ -38,8 +40,7 @@ export default (function() {
 
   function _resize() {
     $(window).resize(function () {
-      var width = window.outerWidth;
-      if (width < 640) {
+      if (ig.browserWidth < 640) {
         $('.tertiary-cta-more').removeClass('animate');
         if ($('.more-section-menu').css('display') === 'flex') {
           $('.more-section-menu').css('display', 'block');
@@ -93,4 +94,4 @@ export default (function() {
   return {
     init
   };
-}())
+})()

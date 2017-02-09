@@ -1,3 +1,17 @@
+import * as ig from './global.js';
+
+export default (() => {
+
+  function init() {
+    console.log('Carousel init!')
+    // console.log('This is a shared variable, ig.width:' + ig.browserWidth);
+  }
+
+  return {
+    init
+  };
+})()
+
 //Carousel
 // $(function () {
 //   $('[data-responsive-toggle] button').on('click', function () {

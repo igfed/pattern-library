@@ -1,4 +1,6 @@
-export default (function() {
+import * as ig from './global.js';
+
+export default (() => {
 
   var endpointURL,
     successURL,
@@ -36,7 +38,7 @@ export default (function() {
 
     $form.validate({
       submitHandler: function () {
-        form._process();
+        _process();
       },
       errorPlacement: function (label, element) {
         // Use the custom-error-location marker class to change where the error label shows up
@@ -134,4 +136,4 @@ export default (function() {
   return {
     init
   };
-}())
+})()

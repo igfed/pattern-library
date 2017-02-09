@@ -40,17 +40,8 @@ gulp.task('styleguide', () => {
 gulp.task('bundle', () => {
   return rollup('rollup.config.js')
     .pipe(source('main.js'))
-    .pipe(gulp.dest('app/scripts'));
-});
-
-gulp.task('scripts', ['bundle'], () => {
-  return gulp.src('app/scripts/*.js')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest('app/scripts'))
     .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({ stream: true }));
 });
 
 function lint(files, options) {
@@ -78,7 +69,7 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec/**/*.js'));
 });
 
-gulp.task('html', ['styleguide', 'styles', 'scripts'], () => {
+gulp.task('html', ['styleguide', 'styles', 'bundle'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if('*.js', $.uglify()))
@@ -118,7 +109,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styleguide', 'styles', 'bundle', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -137,7 +128,7 @@ gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/styles/**/*.scss', ['styles', 'styleguide']);
-  gulp.watch(['app/scripts/**/*.js', 'app/index.js'], ['scripts']);
+  gulp.watch('app/scripts/modules/*.js', ['bundle']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
@@ -152,7 +143,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('serve:test', ['scripts'], () => {
+gulp.task('serve:test', ['bundle'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -166,7 +157,7 @@ gulp.task('serve:test', ['scripts'], () => {
     }
   });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/modules/*.js', ['bundle']);
   gulp.watch('test/spec/**/*.js').on('change', reload);
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
@@ -198,3 +189,4 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'githubpages'],
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
+
