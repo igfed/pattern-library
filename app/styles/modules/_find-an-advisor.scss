@@ -1,3 +1,4 @@
+/*GLOBAL*/
 .full-width{
     background-position: 0 0;
     background-repeat: repeat-x;
@@ -19,6 +20,116 @@
     width: 80px;
     height: 80px;
   }
+}
+
+
+/*Search results global*/
+.search-results{
+
+  .ig-form{
+    .form-group-select{
+    margin-bottom: 0;
+    }
+
+    p{
+      margin-top: 10px;
+    }
+  }
+
+  .expanded-accordion-arrow{
+    &:before{
+      transform: rotate(225deg) translate3d(0, 0, 0);
+    }
+  }
+
+  .dropdown{
+    text-align: center;
+    
+    &:after{
+      border-right: 1px solid grey;
+    }
+  }
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    display: none;
+
+     @include respond-to(medium){
+      display: block;
+     }
+  }
+
+  .phone-icon, .email-icon{
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+
+    &:before{
+      position: absolute;
+      width: 10px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+    }
+  }
+
+  .phone-icon{
+    &:before{
+      content: url(../images/find-an-advisor-phone.svg);
+      width: 13px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+      
+    }
+  }
+
+  .email-icon{
+    &:before{
+      content: url(../images/find-an-advisor-email.svg);
+      width: 16px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+    }
+  }
+
+  .divider{
+    &:before{
+      content: '';
+      border-top: 0.15rem solid #dee1e4;
+      width: calc(100% - 20px);
+      margin: 0 auto;
+
+        @include respond-to(medium){
+          width: calc(100% - 30px);
+        }
+      }
+
+  }
+
+  .overline{
+    border-top: 0.10rem solid #dee1e4;
+  }
+
+
+  .underline{
+    border-bottom: 0.10rem solid #dee1e4;
+  }
+
+  .overline, .underline{
+      @include respond-to(medium){
+        padding-top: 1rem;
+        width: calc(35% - 20px)
+      }
+
+      @include respond-to(large){
+        width: calc(40% - 50px);
+      }
+  }
+
 }
 
 /*Search Box*/
@@ -265,6 +376,8 @@
 
   @include respond-to(medium){
     margin: 0;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .button{
@@ -294,15 +407,14 @@
   }
 
   @include respond-to(medium){
-    .button{
-      margin-bottom: 0.5rem;
-    } 
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 5px;
   }
 
   @include respond-to(large){
-    .button{
       margin-bottom: 0;
-    } 
   }
 
   span{
@@ -331,6 +443,10 @@
     .is-dropdown-submenu-parent.opens-right{
       width: 100%;
       display: inline-block;
+
+      @include respond-to(medium){
+        display: table-cell;
+      }
     }
 
     .is-dropdown-submenu{
@@ -342,6 +458,11 @@
   a.dropdown, .button{
     min-width: auto;
     width: 100%;
+
+    @include respond-to(medium){
+      min-width: 200px;
+      width: auto;
+    }
   }
 }
 
@@ -406,6 +527,7 @@
     align-items: center;
     position: relative;
     padding: 0.5rem 0rem;
+    cursor: pointer;
 
     &.accordion-arrow{
       &:before{
@@ -426,6 +548,11 @@
 
 .search-results-number{
     padding-bottom: 0.5rem;
+    text-align: center;
+
+    @include respond-to(medium){
+      text-align: left;
+    }
 }
 
 #search-results-offices-expand{
@@ -461,6 +588,20 @@
 
 /*Counsultant Results*/
 
+.search-results-consultant-wrapper{
+  .divider{
+    &:first-child{
+      &::before{
+        display: none;
+
+        @include respond-to(medium){
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 .search-results-consultant-portrait{
   width: 80px;
   @include respond-to(medium){
@@ -486,6 +627,7 @@
 }
 
 .search-results-consultant-team-members{
+  padding-top: 0.5rem;
 
     @include respond-to(medium){
       display: flex;
@@ -516,14 +658,20 @@
     .search-results-consultant-team-member{
       margin:0;
       margin-bottom: 1rem;
+
+      @include respond-to(medium){
+        margin-bottom: 0.5rem;
+      }
     }
 }
 .search-results-consultant-team-member{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0.5rem;
 
   @include respond-to(medium){
     flex-direction: column;
+
   }
 
   &:only-child{
@@ -544,11 +692,12 @@
 
   .phone-icon, .email-icon{
     border-radius: 50%;
-    border: 2px solid $brand-color;
+    border: 1px solid $brand-color;
     height: 30px;
 
     @include respond-to(medium){
       border-radius: 5px;
+      border: 2px solid $brand-color;
       min-width: 200px;
       height: auto;
       width: auto;
@@ -564,15 +713,37 @@
 
   .email-icon{
     &:before{
-      top: 6px;
-      left: 3.5px;
+      top: 6.5px;
+      left: 5.3px;
     }
+  }
+
+  &.underline{
+
+    &:last-child{
+      border: none;
+      margin-bottom: 0.5rem;
+    }
+
+    @include respond-to(medium){
+      border: none;
+      width: auto;
+    }
+  }
+}
+
+.search-results-consultant-team-member-name{
+  text-align: left;
+
+  @include respond-to(medium){
+    text-align: center;
   }
 }
 
 .search-results-consultant-team-member-contact{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  text-align: right;
 
   .dropdown{
     margin-right: 10px;
@@ -590,9 +761,10 @@
 .search-results-consultant-team-section-divider{
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
   @include respond-to(medium){
+    align-items: flex-end;
     padding-top: 1rem;
   }
 }
@@ -604,6 +776,7 @@
   position: relative;
   padding-right: 20px;
   padding-bottom: 0.5rem;
+  cursor: pointer;
 
   .accordion-arrow{
     &:before{
@@ -620,104 +793,5 @@
     &:before{
       top: 8px;
     }
-  }
-}
-
-
-
-.search-results{
-
-  .ig-form{
-    .form-group-select{
-    margin-bottom: 0;
-    }
-
-    p{
-      margin-top: 10px;
-    }
-  }
-
-  .expanded-accordion-arrow{
-    &:before{
-      transform: rotate(225deg) translate3d(0, 0, 0);
-    }
-  }
-
-  .dropdown{
-    &:after{
-      border-right: 1px solid grey;
-    }
-  }
-
-  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
-    display: none;
-
-     @include respond-to(medium){
-      display: block;
-     }
-  }
-
-  .phone-icon, .email-icon{
-    position: relative;
-    padding: 0;
-
-    &:before{
-      position: absolute;
-      width: 10px;
-
-      @include respond-to(medium){
-        display: none;
-      }
-    }
-  }
-
-  .phone-icon{
-    &:before{
-      content: url(../images/find-an-advisor-phone.svg);
-      width: 13px;
-
-      @include respond-to(medium){
-        display: none;
-      }
-      
-    }
-  }
-
-  .email-icon{
-    &:before{
-      content: url(../images/find-an-advisor-email.svg);
-      width: 16px;
-
-      @include respond-to(medium){
-        display: none;
-      }
-    }
-  }
-
-  .divider{
-    &:before{
-      content: '';
-      border-top: 0.15rem solid #c1cbd0;
-      width: calc(100% - 20px);
-      margin: 0 auto;
-
-        @include respond-to(medium){
-          width: calc(100% - 30px);
-        }
-      }
-
-  }
-
-  .underline{
-    border-top: 0.10rem solid #c1cbd0;
-
-      @include respond-to(medium){
-        padding-top: 1rem;
-        width: calc(35% - 20px)
-      }
-
-      @include respond-to(large){
-        width: calc(40% - 50px);
-      }
   }
 }

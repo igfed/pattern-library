@@ -449,7 +449,7 @@
                 <p class="body-copy text-center">Please try different spellings or more general terms</p>
             </div>
           </div>
-          <div class="row">
+          <div class="row search-results-consultant-wrapper">
               <div class="small-12 columns">
                 <div class="row divider">
                   <div class="small-12 columns">
@@ -554,53 +554,59 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="medium-12 columns">
-                        <div class="row search-results-consultant-team-section-divider hide-for-small-only">
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          <div class="small-4 medium-3 large-2 columns">
-                            <p class="section-title text-center">My Team</p>
-                          </div>
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          </div>
-                      </div>
                       <div class="small-12 columns">
-                          <div id="view-all-team-members-expand-1" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                            <div class="medium-12 columns text-center search-results-consultant-team-members">
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
+                        <div id="view-all-team-members-expand-1" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
+                          <div class="medium-12 columns">
+                            <div class="row search-results-consultant-team-section-divider">
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              <div class="small-4 medium-3 large-2 columns">
+                                <p class="section-title text-center">My Team</p>
+                              </div>
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              </div>
+                          </div>
+                          <div class="small-12 columns">
+                              <div class="row">
+                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
                                       </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="small-12 columns">
                           <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all underline" data-toggle="view-all-team-members-expand-1 view-all-team-members-arrrow-expand-1">View All Team Members
+                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-1 view-all-team-members-arrrow-expand-1">View All Team Members
                               <span id="view-all-team-members-arrrow-expand-1"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
                             </p>
                           </div>
@@ -659,135 +665,147 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="medium-12 columns">
-                        <div class="row search-results-consultant-team-section-divider hide-for-small-only">
-                          <div class="small-3 medium-6 columns underline">
+                      <div class="small-12 columns">
+                        <div id="view-all-team-members-expand-2" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
+                          <div class="medium-12 columns">
+                            <div class="row search-results-consultant-team-section-divider">
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              <div class="small-4 medium-3 large-2 columns">
+                                <p class="section-title text-center">My Team</p>
+                              </div>
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              </div>
                           </div>
-                          <div class="small-4 medium-3 large-2 columns">
-                            <p class="section-title text-center">My Team</p>
+                          <div class="small-12 columns">
+                              <div class="row">
+                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                           </div>
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          </div>
+                        </div>
                       </div>
                       <div class="small-12 columns">
-                          <div id="view-all-team-members-expand-2" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                            <div class="medium-12 columns text-center search-results-consultant-team-members">
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                </div>
-                              </div>
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all underline" data-toggle="view-all-team-members-expand-2 view-all-team-members-arrrow-expand-2">View All Team Members
+                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-2 view-all-team-members-arrrow-expand-2">View All Team Members
                               <span id="view-all-team-members-arrrow-expand-2"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
                             </p>
                           </div>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="medium-12 columns">
-                        <div class="row search-results-consultant-team-section-divider hide-for-small-only">
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          <div class="small-4 medium-3 large-2 columns">
-                            <p class="section-title text-center">My Associates</p>
-                          </div>
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          </div>
-                      </div>
                       <div class="small-12 columns">
-                          <div id="view-all-team-members-expand-3" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                            <div class="medium-12 columns text-center search-results-consultant-team-members">
-                              <div class="row search-results-consultant-team-member">
-                                 <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
+                        <div id="view-all-team-members-expand-3" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
+                          <div class="medium-12 columns">
+                            <div class="row search-results-consultant-team-section-divider">
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              <div class="small-4 medium-3 large-2 columns">
+                                <p class="section-title text-center">My Associate</p>
+                              </div>
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              </div>
+                          </div>
+                          <div class="small-12 columns">
+                              <div class="row">
+                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
+                                  <div class="row search-results-consultant-team-member">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                        <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                          <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                                Contact Info
+                                                 Phone
+                                            ">
+                                            <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                                <span class="hide-for-small-only">Contact Info</span>
+                                            </a>
+                                            <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                                <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                    <a href="mailto:{{Email__c}}">Email me</a>
+                                                </li>
+                                                <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                    <a href="tel:{{Phone__c}}">
+                                                        <strong>Phone</strong>
+                                                        <span></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                           </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                        </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="small-12 columns">
                           <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all underline" data-toggle="view-all-team-members-expand-3 view-all-team-members-arrrow-expand-3">View All Associate Members
+                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-3 view-all-team-members-arrrow-expand-3">View All Associate Members
                               <span id="view-all-team-members-arrrow-expand-3"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
                             </p>
                           </div>
@@ -846,111 +864,117 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="medium-12 columns">
-                        <div class="row search-results-consultant-team-section-divider hide-for-small-only">
-                          <div class="small-3 medium-6 columns underline">
+                      <div class="small-12 columns">
+                        <div id="view-all-team-members-expand-4" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
+                          <div class="medium-12 columns">
+                            <div class="row search-results-consultant-team-section-divider">
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              <div class="small-4 medium-3 large-2 columns">
+                                <p class="section-title text-center">My Team</p>
+                              </div>
+                              <div class="small-3 medium-6 columns overline">
+                              </div>
+                              </div>
                           </div>
-                          <div class="small-4 medium-3 large-2 columns">
-                            <p class="section-title text-center">My Team</p>
+                          <div class="small-12 columns">
+                              <div class="row">
+                                <div class="small-11 small-centered medium-12 columns text-center search-results-consultant-team-members">
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
+                                  <div class="row search-results-consultant-team-member underline">
+                                    <div class="small-6 medium-12 columns search-results-consultant-team-member-name">
+                                      <p class="tp_09 consultant_name">John Smith</p>
+                                    </div>
+                                      <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
+                                      <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
+                                        <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
+                                              Contact Info
+                                               Phone
+                                          ">
+                                          <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
+                                              <span class="hide-for-small-only">Contact Info</span>
+                                          </a>
+                                          <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+                                              <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
+                                                  <a href="mailto:{{Email__c}}">Email me</a>
+                                              </li>
+                                              <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+                                                  <a href="tel:{{Phone__c}}">
+                                                      <strong>Phone</strong>
+                                                      <span></span>
+                                                  </a>
+                                              </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                      <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                           </div>
-                          <div class="small-3 medium-6 columns underline">
-                          </div>
-                          </div>
+                        </div>
                       </div>
                       <div class="small-12 columns">
-                          <div id="view-all-team-members-expand-4" class="row is-hidden-mobile" data-toggler="is-hidden-mobile">
-                            <div class="medium-12 columns text-center search-results-consultant-team-members">
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                </div>
-                              </div>
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                </div>
-                              </div>
-                              <div class="row search-results-consultant-team-member">
-                                <div class="small-6 medium-12 columns">
-                                  <p class="tp_09 consultant_name">John Smith</p>
-                                </div>
-                                  <div class="small-6 medium-12 columns search-results-consultant-team-member-contact">
-                                  <ul class="dropdown menu" data-dropdown-menu="svjkem-dropdown-menu" role="menubar">
-                                    <li role="menuitem" class="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label="
-                                          Contact Info
-                                           Phone
-                                      ">
-                                      <a class="button dropdown secondary small-icon phone-icon dropdown-button" type="button" tabindex="0">
-                                          <span class="hide-for-small-only">Contact Info</span>
-                                      </a>
-                                      <ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
-                                          <li class="hide-for-small-only emphasize is-submenu-item is-dropdown-submenu-item" role="menuitem">
-                                              <a href="mailto:{{Email__c}}">Email me</a>
-                                          </li>
-                                          <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
-                                              <a href="tel:{{Phone__c}}">
-                                                  <strong>Phone</strong>
-                                                  <span></span>
-                                              </a>
-                                          </li>
-                                      </ul>
-                                    </li>
-                                  </ul>
-                                  <a href="mailto:{{Email__c}}" class="button secondary small-icon email-icon show-for-small-only" type="button"></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                           <div class="row show-for-small-only text-center" >
-                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all underline" data-toggle="view-all-team-members-expand-4 view-all-team-members-arrrow-expand-4">View All Team Members
+                             <p id="view-all-team-members-expand-arrow"class="section-title text-center search-results-consultant-team-members-view-all overline" data-toggle="view-all-team-members-expand-4 view-all-team-members-arrrow-expand-4">View All Team Members
                               <span id="view-all-team-members-arrrow-expand-4"class="accordion-arrow" data-toggler="expanded-accordion-arrow"></span>
                             </p>
                           </div>
