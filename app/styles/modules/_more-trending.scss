@@ -348,6 +348,10 @@ $border-color: #E0E2E2;
 
     .tertiary-cta {
       margin: 0;
+
+      @include respond-to(medium) {
+        font-size: 18px;
+      }
     }
 
     @include respond-to(medium) {
@@ -430,7 +434,6 @@ $border-color: #E0E2E2;
           li {
             opacity: 1;
             transition: opacity 250ms;
-            margin-right: 0;
           }
         }
 

@@ -69,7 +69,7 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec/**/*.js'));
 });
 
-gulp.task('html', ['styleguide', 'styles', 'scripts'], () => {
+gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if('*.js', $.uglify()))
@@ -127,7 +127,7 @@ gulp.task('serve', ['styleguide', 'styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.scss', ['styles', 'styleguide']);
+  gulp.watch('app/styles/**/*.scss', ['styleguide', 'styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -182,7 +182,7 @@ gulp.task('githubpages', [], function () {
   return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'githubpages'], () => {
+gulp.task('build', ['styleguide', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
