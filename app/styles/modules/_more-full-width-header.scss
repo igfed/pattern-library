@@ -1,6 +1,6 @@
 .full-width-header {
   max-height: 700px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   p, a, h1 {
     color: $lightest-color;
@@ -32,7 +32,7 @@
       .title-container {
         position: absolute;
         bottom: 0;
-        padding-bottom: 30px;
+        padding-bottom: 25px;
 
         h1 {
           border-bottom: 1px solid $lightest-color;
@@ -57,5 +57,16 @@
       display: inline-block;
       margin-right: 5px;
     }
+  }
+}
+
+.show-for-small-only {
+  .show-small-image {
+    padding-bottom: 90%;
+    margin-bottom: 25px;
+  }
+
+  .callout-title {
+    width: 75%;
   }
 }
