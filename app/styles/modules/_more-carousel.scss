@@ -4,7 +4,7 @@ Homepage Carousel
 Carousel with 1 large image on the left and content on the right.
 
 Markup:
-<div class="row ig-carousel homepage-carousel">
+<div class="row ig-carousel homepage-carousel" data-dots="true" data-infinite="true" data-speed="500" data-mobile-first="true" data-arrows="false" data-responsive="[{breakpoint: 640, settings: {fade: true}}, {breakpoint: 1024, settings: {arrows: true, fade: true}}]">
   <div class="homepage-carousel-slide">
     <div class="medium-6 columns">
       <a href="/more-article.html">
