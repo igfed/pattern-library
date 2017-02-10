@@ -223,12 +223,27 @@
 
       <div class="search-results">
           <div class="row">
-            <div class="small-12 columns search-results-filters">
-              <p class="section-title">Fiter By</p>
-              <p class="section-title">Province</p>
+            <div class="small-12 columns search-results-filters ig-form">
+              <p class="section-title">Filter By</p>
+              <div class="form-group-select">
+                <select id="sampleSelect" name="sample_select" required="">
+                    <option value=""></option>
+                    <option value="alberta">Alberta</option>
+                    <option value="britishColumbia">British Columbia</option>
+                    <option value="manitoba">Manitoba</option>
+                    <option value="newBrunswick">New Brunswick</option>
+                    <option value="newfoundlandAndLabrador">Newfoundland and Labrador</option>
+                    <option value="novaScotia">Nova Scotia</option>
+                    <option value="ontario">Ontario</option>
+                    <option value="princeEdwardIsland">Prince Edward Island</option>
+                    <option value="quebec">Quebec</option>
+                    <option value="saskatchewan">Saskatchewan</option>
+                </select>
+                <label for="sample_select">Province</label>
+              </div>
             </div>
           </div>
-          <div class="bg-secondary full-width">
+          <div class="bg-secondary full-width search-results-offices-wrapper">
             <div class="row">
               <div class="small-12 columns" data-toggle="search-results-offices-expand search-results-offices-accordion-arrow">
                 <div id="search-results-offices-accordion-arrow" class="row search-results-offices accordion-arrow" data-toggler="expanded-accordion-arrow">
@@ -246,7 +261,7 @@
                 <div class="row divider">
                   <div class="small-12 columns">
                     <div class="row search-results-office">
-                      <div class="small-12 medium-7 large-6 columns map-column">
+                      <div class="small-12 medium-8 large-6 columns map-column">
                         <div class="row search-results-info">
                           <div class="small-6 columns maps search-results-info-map">
                               <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
@@ -256,7 +271,7 @@
                                   </div>
                               </a>
                           </div>
-                          <div class="small-6 columns">
+                          <div class="small-6 columns search-results-office-info">
                             <div class="map-address">
                               <p class="callout-body-copy">200 Yorkland Blvd</p>
                               <p class="body-copy">Toronto, ON, M2J 5C1</p>
@@ -305,7 +320,7 @@
                 <div class="row divider">
                   <div class="small-12 columns">
                     <div class="row search-results-office">
-                      <div class="small-12 medium-7 large-6 columns map-column">
+                      <div class="small-12 medium-8 large-6 columns map-column">
                         <div class="row search-results-info">
                           <div class="small-6 columns maps search-results-info-map">
                               <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
@@ -315,7 +330,7 @@
                                   </div>
                               </a>
                           </div>
-                          <div class="small-6 columns">
+                          <div class="small-6 columns search-results-office-info">
                             <div class="map-address">
                               <p class="callout-body-copy">145 King St W</p>
                               <p class="body-copy">Toronto, ON, M5H 1J8</p>
@@ -364,7 +379,7 @@
                 <div class="row divider">
                   <div class="small-12 columns">
                     <div class="row search-results-office">
-                      <div class="small-12 medium-7 large-6 columns map-column">
+                      <div class="small-12 medium-8 large-6 columns map-column">
                         <div class="row search-results-info">
                           <div class="small-6 columns maps search-results-info-map">
                               <a class="map-anchor" href="https://www.google.ca/maps/dir//{{Address_Line_1__c}} {{Address_Line_2__c}}, {{City__c}}, {{Province_Territory_State__c}}, {{Postal_Code__c}}">
@@ -374,7 +389,7 @@
                                   </div>
                               </a>
                           </div>
-                          <div class="small-6 columns">
+                          <div class="small-6 columns search-results-office-info">
                             <div class="map-address">
                               <p class="callout-body-copy">1 Yorkland Rd</p>
                               <p class="body-copy">Toronto, ON, M6A 3A1</p>
@@ -444,7 +459,7 @@
                           <div class="search-results-consultant-portrait small-5 columns">
                             <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/27166.PNG" />
                           </div>
-                          <div class="small-8 medium-5 columns">
+                          <div class="small-8 medium-9 columns search-results-consultant-info">
                             <p class="callout-body-copy search-results-consultant-info-name">Phyllis Vance</p>
                             <p class="sub-title">Consultant</p>
                             <p class="body-copy">Whitby, ON, M6Q 8H0</p>
@@ -496,7 +511,7 @@
                           <div class="search-results-consultant-portrait small-5 columns">
                             <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/27166.PNG" />
                           </div>
-                          <div class="small-8 medium-5 columns">
+                          <div class="small-8 medium-9 columns search-results-consultant-info">
                             <p class="callout-body-copy search-results-consultant-info-name">Michael Scott</p>
                             <p class="sub-title">Consultant</p>
                             <p class="body-copy">Whitby, ON, M6Q 8H0</p>
@@ -601,7 +616,7 @@
                           <div class="search-results-consultant-portrait small-5 columns">
                             <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/27166.PNG" />
                           </div>
-                          <div class="small-8 medium-5 columns">
+                          <div class="small-8 medium-9 columns search-results-consultant-info">
                             <p class="callout-body-copy search-results-consultant-info-name">David Wallace</p>
                             <p class="sub-title">Consultant</p>
                             <p class="body-copy">Whitby, ON, M6Q 8H0</p>
@@ -788,7 +803,7 @@
                           <div class="search-results-consultant-portrait small-5 columns">
                             <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/27166.PNG" />
                           </div>
-                          <div class="small-8 medium-5 columns">
+                          <div class="small-8 medium-9 columns search-results-consultant-info">
                             <p class="callout-body-copy search-results-consultant-info-name">Angela Martin</p>
                             <p class="sub-title">executive financial consultant</p>
                             <p class="body-copy">Whitby, ON, M6Q 8H0</p>
@@ -951,7 +966,7 @@
                           <div class="search-results-consultant-portrait small-5 columns">
                             <img src="https://www.investorsgroup.com/en/images/ig-cwpb/profilePhotos/27166.PNG" />
                           </div>
-                          <div class="small-8 medium-5 columns">
+                          <div class="small-8 medium-9 columns search-results-consultant-info">
                             <p class="callout-body-copy search-results-consultant-info-name">Jim Halpert</p>
                             <p class="sub-title">Associate Consultant</p>
                             <p class="body-copy">Whitby, ON, M6Q 8H0</p>

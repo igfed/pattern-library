@@ -249,8 +249,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0;
 
   p{
     &:not(:last-child){
@@ -346,7 +345,7 @@
   }
 }
 
-.search-results-consultant{
+.search-results-consultant, .search-results-office{
   .search-results-button{
     .button{
       .phone-icon, .email-icon{
@@ -366,7 +365,10 @@
   width: 110px;
 
   @include respond-to(medium){
-    width: auto;
+    width: 125px;
+  }
+  @include respond-to(large){
+    width: 145px;
   }
 
 }
@@ -394,6 +396,11 @@
 }
 
 /*Offices Results*/
+
+.search-results-offices-wrapper{
+  margin: 1rem 0 3rem 0;
+}
+
 .search-results-offices{
     display: flex;
     align-items: center;
@@ -418,8 +425,7 @@
 }
 
 .search-results-number{
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 #search-results-offices-expand{
@@ -463,6 +469,13 @@
 
   @include respond-to(large){
     width: 150px;
+  }
+}
+
+.search-results-consultant-info, .search-results-office-info{
+  @include respond-to(medium){
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
@@ -602,16 +615,37 @@
       border-right: solid 1.5px;
     }
   }
+
+  .expanded-accordion-arrow{
+    &:before{
+      top: 8px;
+    }
+  }
 }
 
 
 
 .search-results{
 
+  .ig-form{
+    .form-group-select{
+    margin-bottom: 0;
+    }
+
+    p{
+      margin-top: 10px;
+    }
+  }
+
   .expanded-accordion-arrow{
     &:before{
       transform: rotate(225deg) translate3d(0, 0, 0);
-      top: 8px;
+    }
+  }
+
+  .dropdown{
+    &:after{
+      border-right: 1px solid grey;
     }
   }
 
