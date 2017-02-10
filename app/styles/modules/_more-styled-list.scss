@@ -38,8 +38,6 @@
 }
 
 .tips-paragraph {
-  border-bottom: $more-underline;
-
   p {
     margin: 45px auto;
     @include respond-to(medium) {
@@ -48,6 +46,6 @@
   }
 
   &:last-of-type {
-    border-bottom: none;
+    padding-bottom: 50px;
   }
 }
