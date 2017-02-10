@@ -18,23 +18,22 @@ export default (() => {
       nextArrow,
       $carousel = $('.ig-carousel');
 
-    console.log($carousel);
     prevArrow = ($carousel.data('prevArrowText')) ? '<button type="button" class="slick-prev"><span class="show-for-sr">' + $carousel.data('prevArrowText') + '</span></button>' : '<button type="button" class="slick-prev"><span class="show-for-sr">Previous</span></button>';
     nextArrow = ($carousel.data('nextArrowText')) ? '<button type="button" class="slick-next"><span class="show-for-sr">' + $carousel.data('nextArrowText') + '</span></button>' : '<button type="button" class="slick-next"><span class="show-for-sr">Next</span></button>';
 
     $('.ig-carousel').slick({
       adaptiveHeight: $carousel.data('adaptiveHeight') || false,
-      arrows: $carousel.data('arrows') || true,
+      arrows: $carousel.data('arrows') || false,
       autoPlay: $carousel.data('autoPlay') || false,
       dots: $carousel.data('dots') || false,
       fade: $carousel.data('fade') || false,
       infinite: $carousel.data('infinite') || false,
-      mobileFirst: $carousel.data('mobileFirst') || false,
+      mobileFirst: true,
       nextArrow: nextArrow,
       prevArrow: prevArrow,
       responsive: $carousel.data('responsive') || '',
       slide: $carousel.data('slide') || '',
-      slidesToScroll: $carousel.data('slidesToScroll') || 1,
+      slidesToScroll: $carousel.data('slideToScroll') || 1,
       slidesToShow: $carousel.data('slidesToShow') || 1,
       speed: $carousel.data('speed') || 300,
     })
