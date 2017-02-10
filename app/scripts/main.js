@@ -145,6 +145,27 @@ const form = function () {
   };
 }();
 
+// *****************************************************
+// Some Boilerplate Patterns
+// *****************************************************
+
+// Revealing module pattern
+// Perhaps a namespace like 'ig' could act as our 'global' container where shared functionality lives?
+const ig = (function () {
+  function _privateMethod() {
+    console.log('init');
+  }
+
+  function init() {
+    _privateMethod();
+  }
+
+  return {
+    init // Can use shorthand notation. (init: init) not required. ES6 for the win!
+  };
+}());
+
+ig.init();
 
 // Refactor the following in Sprint 5 (put into ig.init)
 // Need to have a class to hook onto for French language page
@@ -229,6 +250,8 @@ $(function () {
   });
 });
 form.init();
+
+
 //More Header
 
 $(function () {
@@ -324,7 +347,7 @@ $('.help-topics-accordion').on('up.zf.accordion', function (event) {
 
 // //Find an Advisor
 
-// // GLOBALS 
+// // GLOBALS
 // var modelUrl = 'https://search.investorsgroup.com/api/cwpsearch?';
 // var $location_field = $('#FindAnAdvisor_location');
 // var $name_field = $('#FindAnAdvisor_name');
