@@ -1,95 +1,61 @@
-// extending styles from regualr title section
-// to account for the fact that picture switches to
-// full width on larger screens
-
 .full-width-header {
-  margin-bottom: 40px;
   max-height: 700px;
-  overflow: hidden;
-  position: relative;
+  margin-bottom: 40px;
 
-  @include respond-to(medium) {
-    margin-bottom: 65px;
-    display: block;
+  p, a, h1 {
+    color: $lightest-color;
   }
 
-  .hero {
-    height: 500px;
-    color: white;
-    padding-left: 0;
-    padding-right: 0;
+  .full-image-container {
     position: relative;
 
-    .full-width-title-section {
+    &:after {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.1);
       position: absolute;
-      bottom: 25px;
-      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+    }
 
-      p {
-        color: $lightest-color;
-      }
+    .full-width-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 200;
 
-      .title-underline {
-        width: 80%;
+      .title-container {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 30px;
 
-        @include respond-to(large) {
-          width: 70%;
+        h1 {
+          border-bottom: 1px solid $lightest-color;
         }
 
-        hr {
-          margin: 0 0 10px 0;
-          border-color: $lightest-color;
-        }
-      }
-
-      .byline {
-        text-transform: uppercase;
-      }
-
-      .article-category {
-        p {
-          color: $lightest-color;
-        }
-
-        @include respond-to(medium) {
-          margin-bottom: 10px;
-        }
-      }
-
-      .full-width-share-icons {
-        margin: 18px auto;
-
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            display: inline-block;
-            margin-right: 5px;
-          }
-        }
-
-        @include respond-to(medium) {
-          position: static;
-          text-align: left;
-          margin-top: 20px;
+        .byline {
+          text-transform: uppercase;
         }
       }
     }
   }
 }
 
-.full-width-article-subtitle {
-  padding: 0;
-}
+.full-width-share-icons {
+  margin: 18px auto;
 
-.show-for-small-only {
-  .show-small-image {
-    padding-bottom: 90%;
-    margin-bottom: 25px;
-  }
+  ul {
+    margin: 0;
+    padding: 0;
 
-  .callout-title {
-    width: 75%;
+    li {
+      display: inline-block;
+      margin-right: 5px;
+    }
   }
 }
