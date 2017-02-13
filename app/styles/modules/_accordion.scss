@@ -189,15 +189,23 @@ $accordion-link-color: #008cba;
 
   .is-accordion-submenu-parent {
     .accordion-title::after {
-      width: $arrow-size*1.5;
-      height: $arrow-size*1.5;
+      width: $arrow-size*1;
+      height: $arrow-size*1;
       border: none;
-      border-bottom: solid 3px $button-primary-color;
-      border-right: solid 3px $button-primary-color;
+      border-bottom: solid 2px $button-primary-color;
+      border-right: solid 2px $button-primary-color;
       transform-origin: center middle;
       transform: rotate(45deg);
-      top: 40%;
+      top: 45%;
       margin-top: -$arrow-size/2;
+
+      @include respond-to(medium) {
+        width: $arrow-size*1.5;
+        height: $arrow-size*1.5;
+        border-bottom-width: 3px;
+        border-right-width: 3px;
+        top: 40%;
+      }
 
       @include respond-to(large) {
         width: $arrow-size*2.5;
@@ -282,11 +290,17 @@ $accordion-link-color: #008cba;
   .is-accordion-submenu-parent.is-active {
     .accordion-title::after {
       border: none;
-      border-right: solid 3px $button-primary-color;
-      border-top: solid 3px $button-primary-color;
+      border-right: solid 2px $button-primary-color;
+      border-top: solid 2px $button-primary-color;
       transform: rotate(-45deg);
-      top: 40%;
       margin-top: $arrow-size/2;
+      top: 45%;
+
+      @include respond-to(medium) {
+        border-right-width: 3px;
+        border-top-width: 3px;
+        top: 40%;
+      }
 
       @include respond-to(large) {
         top: 35%;
