@@ -1,68 +1,72 @@
-// extending styles from regualr title section
-// to account for the fact that picture switches to
-// full width on larger screens
-.full-width-title-section {
-  @extend .title-section;
+.full-width-header {
+  max-height: 700px;
+  margin-bottom: 60px;
 
-  @include respond-to(medium) {
-    padding-top: 125px;
-    display: block;
+  p, a, h1 {
+    color: $lightest-color;
   }
 
-  p {
-    @include respond-to(medium) {
-      color: $lightest-color;
+  .full-image-container {
+    position: relative;
+
+    &:after {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
     }
-  }
 
-  h1 {
-    @include respond-to(medium) {
-      border-bottom: 2px solid $lightest-color;
-      width: 65%;
-    }
-  }
+    .full-width-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 200;
 
-  .article-category {
-    @include respond-to(medium) {
-      margin-bottom: 10px;
-      p {
-        color: $lightest-color;
+      .title-container {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 25px;
+
+        h1 {
+          border-bottom: 1px solid $lightest-color;
+        }
+
+        .byline {
+          text-transform: uppercase;
+        }
       }
     }
   }
+}
 
-  .full-width-share-icons {
-    @extend .share-icons;
-    @include respond-to(medium) {
-      position: static;
-      text-align: left;
-      margin-top: 20px;
+.full-width-share-icons {
+  margin: 18px auto;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 5px;
     }
   }
 }
 
-.full-width-header {
-  margin-bottom: 40px;
-  max-height: 700px;
-  overflow: hidden;
-  position: relative;
-
-  @include respond-to(medium) {
-    margin-bottom: 65px;
-    display: block;
+.show-for-small-only {
+  .show-small-image {
+    padding-bottom: 90%;
+    margin-bottom: 25px;
   }
 
-  .hero {
-    height: 500px;
-    color: white
+  .callout-title {
+    width: 75%;
   }
-}
-
-.full-width-article-subtitle {
-  padding: 0;
-}
-
-.show-small-image {
-  padding-bottom: 71%;
-  margin-bottom: 25px;
 }

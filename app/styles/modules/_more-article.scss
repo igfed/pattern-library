@@ -41,7 +41,7 @@ $link-hover: #0BAB7B;
 
 .bg-more-section {
   background-color: $more-background-yellow;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
 }
 
 // specific typography for More section
@@ -172,5 +172,30 @@ $link-hover: #0BAB7B;
 
   .carousel-figure {
     margin-bottom: 20px;
+
+    .image-with-caption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+
+      // this is a strange css hack
+      // that fixes some flexbox bugs on IE 10 and above
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
+        text-align: center;
+      }
+
+      .image-caption {
+        color: $image-caption-gray;
+        align-self: flex-start;
+        text-transform: uppercase;
+
+        @include respond-to(medium) {
+          align-self: center;
+          text-align: center;
+        }
+      }
+    }
   }
 }
