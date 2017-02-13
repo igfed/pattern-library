@@ -30,7 +30,7 @@ Styleguide 3.3
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 
 	&.patterned {
 		background-image: url(../images/tiled-weathered-pattern.jpg);
@@ -52,7 +52,7 @@ Styleguide 3.3
 .hero-copy {
 	text-align: center;
 	z-index: 100;
-	
+
 	h1, p{
 		widows: 2;// Just in case its supported
 	}
