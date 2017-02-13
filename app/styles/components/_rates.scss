@@ -1,0 +1,343 @@
+// Rate
+//
+// A rate is a type of component that exists within a callout. It contains roughly 8 different elements which are a mix of
+// callout elements and elements specific to just rates (i.e., .rate-block). These 8 elements can be used to build a wide
+// array of rate structures (there are currently 4 variations at this time)
+//
+// Markup (Variation One):
+//<div class="callout bg-highlight text-center">
+//    <div class="row rates">
+//        <div class="medium-centered medium-10 small-12 columns">
+//            <h3 class="section-title margin-bottom-lg">Special Offers</h3>
+//            <h5 class="callout-body-copy margin-bottom-lg">Investors Group is please to offer the following limited-time
+//                mortgage offers.<sup>1</sup></h5>
+//        </div>
+//
+//        <div class="rate-grid small-10 medium-12 large-8 small-offset-1 large-offset-2 small-centered columns">
+//            <div class="row" data-equalizer data-equalize-on="medium">
+//                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+//                    <p class="rate-value">2.60%</p>
+//                    <p class="rate-bullet">(Prime - 0.25%)</p>
+//                    <p class="rate-bullet">5 year Closed<sup>2</sup><br/>Variable rate</p>
+//                </div>
+//
+//                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+//                    <p class="rate-value">2.60%</p>
+//                    <p class="rate-bullet">5 year Closed<br/>Fixed rate</p>
+//                </div>
+//
+//                <div class="rate-block small-12 medium-4 columns" data-equalizer-watch>
+//                    <p class="rate-value">2.60%</p>
+//                    <p class="rate-bullet">(Prime - 0.25%)</p>
+//                    <p class="rate-bullet">5 year Closed<sup>3</sup><br/>Adjusted rate</p>
+//                </div>
+//            </div>
+//        </div>
+//
+//        <button class="button margin-top-xl">View All Rates</button>
+//
+//    </div>
+//</div>
+//
+// Markup (Variation Two):
+//<div class="callout text-center">
+//    <div class="row rates">
+//        <div class="small-centered small-10 medium-8 columns">
+//            <h3 class="section-title margin-bottom-lg">Current Offers</h3>
+//            <h3 class="content-title margin-bottom-lg">Fixed Rates</h3>
+//            <p class="rate-legal margin-bottom-lg">Provides a locked-in interest rate for the term you select. If rates increase,
+//                your fixed rate stays the same, giving you the security of a fixed payment of the mortgage.<sup>4</sup>
+//            </p>
+//        </div>
+//
+//        <div class="rate-grid-10 small-8 large-12 small-centered columns">
+//            <div class="row" data-equalizer data-equalize-on="large">
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">6.5%</p>
+//                    <p class="rate-bullet">6 Month Open</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">4.2%</p>
+//                    <p class="rate-bullet">6 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">6.3%</p>
+//                    <p class="rate-bullet">12 Month Open</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">3.14%</p>
+//                    <p class="rate-bullet">12 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns end" data-equalizer-watch>
+//                    <p class="rate-value">3.09%</p>
+//                    <p class="rate-bullet">24 Month Closed</p>
+//                </div>
+//            </div>
+//
+//            <div class="row" data-equalizer data-equalize-on="large">
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">3.39%</p>
+//                    <p class="rate-bullet">36 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">3.89%</p>
+//                    <p class="rate-bullet">48 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">4.64%</p>
+//                    <p class="rate-bullet">60 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns" data-equalizer-watch>
+//                    <p class="rate-value">6.5%</p>
+//                    <p class="rate-bullet">84 Month Closed</p>
+//                </div>
+//
+//                <div class="rate-block small-12 large-2 columns end" data-equalizer-watch>
+//                    <p class="rate-value">6.75%</p>
+//                    <p class="rate-bullet">120 Month Closed</p>
+//                </div>
+//            </div>
+//        </div>
+//
+//        <button class="button margin-top-xl">View All Rates</button>
+//
+//    </div>
+//</div>
+// Styleguide 2.2
+
+.rates {
+
+  .rate-grid, .rate-grid-10 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
+  .rate-section {
+    padding: 10px 40px;
+    text-align: center;
+
+    // &:first-child {
+    //   border-bottom: 2px solid #ccc;
+    //   margin-bottom: 20px;
+    // }
+
+    &:last-child {
+      border-top: solid 2px #ccc;
+      padding-top: 30px;
+    }
+
+    @include respond-to(medium) {
+      padding: 10px 25px;
+      text-align: left;
+
+      &:last-child {
+        border-top: none;
+        padding-top: 10px;
+      }
+    }
+
+    @include respond-to(large) {
+      padding: 10px 35px;
+
+      &:last-child {
+        border-left: 2px solid #ccc;
+      }
+    }
+
+    .rate-sub-section {
+      &:first-child {
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      @include respond-to(medium) {
+        border-bottom: none;
+        &:first-child {
+          border-right: 2px solid #ccc;
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .rate-legal {
+      height: auto;
+      margin-bottom: 20px;
+
+      @include respond-to(large) {
+        min-height: 100px;
+      }
+    }
+
+    .rate-block-info {
+
+      @include respond-to(large) {
+        padding-top: 15px;
+        text-align: left;
+      }
+    }
+
+    .rate-description {
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 0;
+      line-height: 1.7;
+
+      @include respond-to(medium) {
+        text-align: left;
+      }
+    }
+
+    // Sections are not text-center by default so we center rate-blocks here
+    .rate-block {
+      text-align: center;
+
+      .rate-value, .rate-bullet {
+        // margin-left: 20px;
+        // margin-right: 20px;
+      }
+    }
+  }
+
+  // This sub-heading requires a fixed-height
+  .rate-sub-title {
+    height: auto;
+    margin-bottom: 20px;
+
+    @include respond-to(large) {
+      height: 60px;
+    }
+  }
+
+  // Following are some special rules for blocks of 10
+  .rate-grid-10 {
+    @include respond-to(medium) {
+      .medium-2 {
+        width: 20%;
+      }
+
+      .rate-block {
+        margin-bottom: 40px;
+      }
+
+      .offset-custom-10 {
+        margin-left: 10% !important;
+      }
+
+      .offset-custom-20 {
+        margin-left: 20% !important;
+      }
+    }
+    @include respond-to(large) {
+      .large-2 {
+        width: 20%;
+      }
+
+      .rate-block {
+        margin-bottom: 40px;
+        font-size: 52px;
+      }
+    }
+
+    // Need a 'custom' media query here otherwise CSS will be much more complex
+    @media only screen and (max-width: 640px) {
+      .row + .row {
+        border-top: 2px solid #ccc;
+      }
+
+      .rate-block {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding: 15px 0 20px 0;
+
+        .rate-value, .rate-bullet {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // Universal rate-block styles (the styles that are present in all variations of rate-grids)
+  .rate-block {
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 30px;
+
+    &:last-child {
+      border-right: none;
+      border-bottom: none;
+      margin-bottom: 30px;
+    }
+
+    @include respond-to(medium) {
+      border-right: 2px solid #ccc;
+      border-bottom: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .rate-value-block {
+      border-bottom: none;
+
+      @include respond-to(medium) {
+        border-bottom: 1px solid #ccc;
+      }
+
+      .rate-value {
+        letter-spacing: 1px;
+        font-size: 52px;
+        font-family: $font-whitney-light;
+        color: #000;
+
+        @include respond-to(medium) {
+          font-size: 40px;
+          letter-spacing: 0;
+        }
+
+        @include respond-to(large) {
+          font-size: 52px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .rate-value-secondary {
+        color: #666;
+        margin-top: -15px;
+      }
+    }
+
+    .rate-bullet {
+      color: #666;
+      font-size: 22px;
+      border-bottom: none;
+      padding: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include respond-to(medium) {
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        letter-spacing: 0;
+        padding: 10px;
+      }
+
+      @include respond-to(large) {
+        font-size: 22px;
+        letter-spacing: 1px;
+      }
+    }
+
+  }
+}
