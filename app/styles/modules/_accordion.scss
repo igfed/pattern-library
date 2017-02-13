@@ -243,6 +243,31 @@ $accordion-link-color: #008cba;
       background-color: transparent;
       border: none;
       border-bottom: solid 1px $accordion-lightgrey-line;
+
+      .table {
+        border-top: solid 2px $dark-grey;
+        border-bottom: solid 2px $dark-grey;
+
+        thead {
+          background-color: transparent;
+
+          .sub-title {
+            padding: 5px;
+            font-size: 16px;
+          }
+        }
+        tbody {
+          background-color: transparent;
+
+          tr {
+            background-color: transparent;
+
+            .accordion-table-td {
+              padding: 5px;
+            }
+          }
+        }
+      }
     }
 
     .accordion-link {
