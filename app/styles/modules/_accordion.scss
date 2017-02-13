@@ -34,6 +34,9 @@ Markup:
 Styleguide 3.4
 */
 
+// $accordion-link-color
+$accordion-link-color: #008cba;
+
 // Arrows
 .is-accordion-submenu-parent {
   > a::after {
@@ -135,65 +138,124 @@ Styleguide 3.4
   //   }
   // }
 
-  .help-accordion-main {
-    padding: 100px 0;
+.help-accordion-main {
+  padding: 100px 0;
 
-    .section-title {
-      padding-bottom: 8px;
+  .section-title {
+    padding-bottom: 8px;
+  }
+
+  .accordion {
+    background-color: $secondary-color;
+  }
+
+  .accordion-item.is-accordion-submenu-parent.is-active {
+    .accordion-title {
+      border-bottom: none;
     }
+  }
 
-    .accordion {
-      background-color: $secondary-color;
-    }
+  .is-accordion-submenu-parent {
+    .accordion-title::before {
+      content: " ";
+      position: static;
+      background-image: url('/images/info.png');
+      background-position: 100% center;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+      margin-left: -20px;
+      padding: 20px;
 
-    .accordion-item .is-accordion-submenu-parent .is-active {
-      a .accordion-title {
-        border-bottom: none;
-      }
-    }
+      // @include respond-to(medium) {
+      //   background-position: 100% center;
+      //   background-size: 40px;
+      //   background-repeat: no-repeat;
+      //   margin-right: 10px;
+      //   margin-left: -20px;
+      //   padding: 20px;
+      // }
 
-    .is-accordion-submenu-parent {
-      .accordion-title::after {
-        width: $arrow-size*2.5;
-        height: $arrow-size*2.5;
-        border: none;
-        border-bottom: solid 3px $button-primary-color;
-        border-right: solid 3px $button-primary-color;
-        transform-origin: center middle;
-        transform: rotate(45deg);
-        top: 25%;
-        margin-top: -$arrow-size/2;
-      }
-
-      .accordion-title {
-        border: none;
-        border-bottom: solid 1px $accordion-lightgrey-line;
-        background-color: transparent;
-
-        &:hover {
-          background-color: transparent;
-        }
-
-        &:focus {
-          background-color: transparent;
-        }
-      }
-
-      .accordion-content {
-        background-color: transparent;
-        border: none;
-        border-bottom: solid 1px $accordion-lightgrey-line;
-      }
-    }
-
-    .is-accordion-submenu-parent .is-active {
-      .accordion-title::after {
-        border: none;
-        border-right: solid 3px $button-primary-color;
-        border-top: solid 3px $button-primary-color;
-        transform: rotate(-45deg);
-        top: 45%;
-        margin-top: $arrow-size/2;
+      @include respond-to(large) {
+        background-position: 100% center;
+        background-size: 60px;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+        margin-left: -20px;
+        padding: 30px;
       }
     }
   }
+
+  .is-accordion-submenu-parent {
+    .accordion-title::after {
+      width: $arrow-size*2.5;
+      height: $arrow-size*2.5;
+      border: none;
+      border-bottom: solid 3px $button-primary-color;
+      border-right: solid 3px $button-primary-color;
+      transform-origin: center middle;
+      transform: rotate(45deg);
+      top: 25%;
+      margin-top: -$arrow-size/2;
+    }
+
+    .accordion-title {
+      border: none;
+      border-bottom: solid 1px $accordion-lightgrey-line;
+      background-color: transparent;
+      color: $brand-color;
+
+      @include respond-to(large) {
+        line-height: 38px;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    .accordion-title.accordion-menu-section-title {
+      font-family: $font-stack-sc-medium;
+      text-transform: lowercase;
+      font-size: 18px;
+
+      @include respond-to(medium) {
+        font-size: 20px;
+      }
+
+      @include respond-to(large) {
+        font-size: 24px;
+      }
+    }
+
+    .accordion-content {
+      background-color: transparent;
+      border: none;
+      border-bottom: solid 1px $accordion-lightgrey-line;
+    }
+
+    .accordion-link {
+      color: $accordion-link-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .is-accordion-submenu-parent.is-active {
+    .accordion-title::after {
+      border: none;
+      border-right: solid 3px $button-primary-color;
+      border-top: solid 3px $button-primary-color;
+      transform: rotate(-45deg);
+      top: 45%;
+      margin-top: $arrow-size/2;
+    }
+  }
+}
