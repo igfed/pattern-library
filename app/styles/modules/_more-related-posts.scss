@@ -106,7 +106,7 @@ Styleguide 4.1
   }
 
   .container {
-    @include respond-to(large) {
+    @include respond-to(medium) {
       position: relative;
     }
 
@@ -131,7 +131,7 @@ Styleguide 4.1
       padding-bottom: 20px;
       height: 100%;
 
-      @include respond-to(large) {
+      @include respond-to(medium) {
         position: static;
       }
 
@@ -144,6 +144,10 @@ Styleguide 4.1
       .more-link {
         position: absolute;
         bottom: 0;
+      }
+
+      .tertiary-cta {
+        letter-spacing: 0;
       }
     }
   }
