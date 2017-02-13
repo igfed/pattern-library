@@ -156,6 +156,8 @@ $accordion-link-color: #008cba;
   }
 
   .is-accordion-submenu-parent {
+    border-bottom: solid 1px $accordion-grey-line;
+
     .accordion-title::before {
       content: " ";
       position: static;
@@ -216,7 +218,6 @@ $accordion-link-color: #008cba;
 
     .accordion-title {
       border: none;
-      border-bottom: solid 1px $accordion-lightgrey-line;
       background-color: transparent;
       color: $brand-color;
 
@@ -250,7 +251,6 @@ $accordion-link-color: #008cba;
     .accordion-content {
       background-color: transparent;
       border: none;
-      border-bottom: solid 1px $accordion-lightgrey-line;
 
       .table {
         border-top: solid 2px $dark-grey;
