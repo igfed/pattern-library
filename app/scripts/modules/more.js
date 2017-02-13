@@ -1,3 +1,7 @@
+// This is less of a module than it is a collection of code for a complete page (More page in this case).
+// At some point, we should consider splitting it up into bite-sized pieces. Ex: more-nav.js, more-social.js
+// and so on.
+
 import * as ig from './global.js';
 
 export default (() => {
