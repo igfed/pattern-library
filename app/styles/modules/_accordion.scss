@@ -189,15 +189,21 @@ $accordion-link-color: #008cba;
 
   .is-accordion-submenu-parent {
     .accordion-title::after {
-      width: $arrow-size*2.5;
-      height: $arrow-size*2.5;
+      width: $arrow-size*1.5;
+      height: $arrow-size*1.5;
       border: none;
       border-bottom: solid 3px $button-primary-color;
       border-right: solid 3px $button-primary-color;
       transform-origin: center middle;
       transform: rotate(45deg);
-      top: 25%;
+      top: 40%;
       margin-top: -$arrow-size/2;
+
+      @include respond-to(large) {
+        width: $arrow-size*2.5;
+        height: $arrow-size*2.5;
+        top: 35%;
+      }
     }
 
     .accordion-title {
@@ -254,8 +260,12 @@ $accordion-link-color: #008cba;
       border-right: solid 3px $button-primary-color;
       border-top: solid 3px $button-primary-color;
       transform: rotate(-45deg);
-      top: 45%;
+      top: 40%;
       margin-top: $arrow-size/2;
+
+      @include respond-to(large) {
+        top: 35%;
+      }
     }
   }
 }
