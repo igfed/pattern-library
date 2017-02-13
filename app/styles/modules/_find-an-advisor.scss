@@ -22,17 +22,46 @@
   }
 }
 
-
 /*Search results global*/
 .search-results{
 
+// this is the foundation dropdown styles
+// need to create an additional class for the menu dropdown in dropdown.scss
+// otherwise it overwrites the foundation styles which I dublicated here
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    transform: rotate(0);
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    content: '';
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #282828 transparent transparent;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > .is-dropdown-submenu a{
+    font-family: "WhitneySCMedium", "WhitneyBook", sans-serif;
+  }
+
+
   .ig-form{
     .form-group-select{
-    margin-bottom: 0;
+      margin-bottom: 0;
+      label{
+        font-size: 11px;
+
+        @include respond-to(medium){
+          font-size: 14px;
+        }
+      }
     }
 
     p{
-      margin-top: 10px;
+      margin-top: 8px;
     }
   }
 
@@ -44,11 +73,37 @@
 
   .dropdown{
     text-align: center;
-    
-    &:after{
-      border-right: 1px solid grey;
+
+    &:hover{
+      background-color: inherit;
+      color: inherit;
+
+      .dropdown.button{
+         &:after{
+            transform: rotate(180deg);
+            transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
+         }
+      }
     }
   }
+
+@include respond-to(medium){
+  .dropdown.menu{
+    position: relative;
+
+     &:before{
+      content: "";
+      display: block;
+      border-left: 0.1rem solid #45757a;
+      height: 55%;
+      position: absolute;
+      right: 2.8rem;
+      top: 20%;
+      transition: transform .3s ease 0s, border-color .3s ease 0s;
+    }
+  }
+}
+
 
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
     display: none;
@@ -697,7 +752,7 @@
 
     @include respond-to(medium){
       border-radius: 5px;
-      border: 2px solid $brand-color;
+      border: 1px solid $dark-grey;
       min-width: 200px;
       height: auto;
       width: auto;
@@ -751,6 +806,14 @@
     @include respond-to(medium){
       margin-right: 0;
     }
+
+    &.menu{
+      &:before{
+        @include respond-to(medium){
+           border-left: 0.1rem solid $dark-grey;
+        }
+      }
+    }
   }
 
   .phone-icon, .email-icon{
@@ -770,7 +833,6 @@
 }
 
 .search-results-consultant-team-members-view-all{
-  // border-top: 1px solid #c1cbd0;
   width: auto;
   display: inline-block;
   position: relative;
@@ -794,4 +856,8 @@
       top: 8px;
     }
   }
+}
+
+.dropdown-phone-number{
+  font-family: "WhitneyBook", sans-serif;
 }
