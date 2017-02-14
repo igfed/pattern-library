@@ -54,13 +54,19 @@
   }
 }
 
-.show-for-small-only {
-  .show-small-image {
-    padding-bottom: 90%;
-    margin-bottom: 25px;
-  }
+.small-image-container {
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 90%;
 
-  .callout-title {
-    width: 75%;
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: -50%;
+    height: 100%;
+    // max-width is needed to override foundations styling
+    max-width: none;
   }
 }
