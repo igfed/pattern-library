@@ -9,8 +9,7 @@
   .full-image-container {
     position: relative;
 
-    &:after {
-      content: '';
+    .image-overlay {
       background-color: rgba(0, 0, 0, 0.1);
       position: absolute;
       top: 0;
@@ -22,12 +21,7 @@
     }
 
     .full-width-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-      z-index: 200;
+      z-index: 1000;
 
       .title-container {
         position: absolute;
