@@ -22,6 +22,10 @@
   }
 }
 
+.dropdown .menu{
+  border: 1px solid #cacaca;
+}
+
 /*Search results global*/
 .search-results{
 
@@ -41,6 +45,11 @@
     border-color: #282828 transparent transparent;
     right: 0;
     margin-top: -0.5px;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+
+  .dropdown.menu .is-dropdown-submenu-parent.is-active  > a::after{
+    transform: rotate(180deg);
   }
 
   .dropdown.menu .is-dropdown-submenu li a{
@@ -908,3 +917,5 @@
     }
   }
 }
+
+
