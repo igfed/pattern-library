@@ -1,4 +1,4 @@
-/* This file is for methods and variables that will are going to be
+/* This file is for methods and variables that are going to be
 useful across all modules. In order to use them anywhere, import with:
 
  import * as ig from './global.js';
