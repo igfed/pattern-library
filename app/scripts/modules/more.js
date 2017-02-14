@@ -74,7 +74,6 @@ export default (() => {
     _animationUnderline();
   }
 
-
   function _filterDropdown(className) {
     $('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.' + className + ')').hide();
     $('.more-section-menu-dropdown').addClass('active');
