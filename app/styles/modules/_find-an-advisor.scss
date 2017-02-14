@@ -116,33 +116,12 @@
     }
   }
 
-  .ig-form{
-    .form-group-select{
-      margin-bottom: 0;
-      label{
-        font-size: 11px;
-
-        @include respond-to(medium){
-          font-size: 14px;
-        }
-      }
-    }
-
-    p{
-      margin-top: 8px;
-    }
-  }
 
   .expanded-accordion-arrow{
     &:before{
       transform: rotate(225deg) translate3d(0, 0, 0);
     }
   }
-
-  // .is-dropdown-submenu-parent.opens-right .is-dropdown-submenu:hover{
-  //   transform: rotate(180deg);
-  //   transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
-  // }
 
   .dropdown{
     text-align: center;
@@ -151,12 +130,6 @@
       background-color: inherit;
       color: inherit;
 
-      // .dropdown.button{
-      //    &:after{
-      //       transform: rotate(180deg);
-      //       transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
-      //    }
-      // }
     }
   }
 
@@ -186,7 +159,6 @@
   }
 
   .dropdown.menu > li.opens-right > .is-dropdown-submenu {
-    // padding-bottom: 1rem;
     padding-top:0;
     padding-bottom: 0;
   }
@@ -652,7 +624,7 @@
 /*Offices Results*/
 
 .search-results-offices-wrapper{
-  margin: 1rem 0 3rem 0;
+  margin-bottom: 1.5rem;
 }
 
 .search-results-offices{
@@ -681,6 +653,7 @@
 
 .search-results-number{
     padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
     text-align: center;
 
     @include respond-to(medium){
