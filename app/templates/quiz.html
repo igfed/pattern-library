@@ -1,13 +1,7 @@
-<div id="quiz" class="quiz section  animated fadeIn">
-
-    <quiz-progress></quiz-progress>
-
-    <div ng-repeat="question in questions | startFrom:currentPage*pageSize | limitTo:pageSize">
-        
-        <quiz-question></quiz-question>
-        
-        <quiz-answers></quiz-answers> 
-
-    </div>
-
+<div id="quiz" class="quiz section animated fadeIn">
+  <quiz-progress></quiz-progress>
+  <div ng-repeat="question in questions | startFrom:currentPage*pageSize | limitTo:pageSize">
+    <quiz-question></quiz-question>
+    <quiz-answers></quiz-answers>
+  </div>
 </div>

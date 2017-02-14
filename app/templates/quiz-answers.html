@@ -1,21 +1,38 @@
-<div class="quiz-choice-selector">
+<!-- removed ng-classes while figuring out other styling -->
+<div class="row quiz-answers" data-equalizer data-equalize-on="medium">
+  <div ng-repeat="answer in question.answers track by $index" class="answer">
+    <div class="medium-offset-2 medium-3 large-offset-0 columns" data-equalizer-watch>
+      <div class="quiz-choice" id="c_{{$index}}">
+        <div class="choice-icon left">
+          <div class="ring"></div>
+          <div class="checkmark"></div>
+        </div>
+        <div class="choice-label text-left left">
+          <span class="sub-title">{{answer.answer}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="quiz-choice-selector">
     <div class="c-break">
         <div ng-repeat="answer in question.answers track by $index">
-            <div class="quiz-choice" 
-                 id="c_{{$index}}" 
+            <div class="quiz-choice"
+                 id="c_{{$index}}"
 ng-class="{
-'selected': $index == selected, 
-'inactive': $index != selected && selected != '0', 
-'disabled': disableInputs, 
+'selected': $index == selected,
+'inactive': $index != selected && selected != '0',
+'disabled': disableInputs,
 'isTouch': isTouch,
 'hover': hover
-}" 
+}"
 ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="selectAnswer({q: currentPage, a: $index})">
-                
+
                 <div class="animated  choice-icon"
-                        ng-class="{ 
-'fadeOut': leaveAnimation && !enterAnimation, 
-'fadeIn': enterAnimation && !leaveAnimation 
+                        ng-class="{
+'fadeOut': leaveAnimation && !enterAnimation,
+'fadeIn': enterAnimation && !leaveAnimation
 }">
                     <div class="ring"></div>
                     <div class="checkmark"></div>
@@ -23,9 +40,9 @@ ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="selectAnswe
                 <div class="choice-label-hold">
                     <div class="choice-label">
                         <div class="animated  choice-txt"
-                        ng-class="{ 
-'slideOutRight': leaveAnimation && !enterAnimation, 
-'slideInLeft': enterAnimation && !leaveAnimation 
+                        ng-class="{
+'slideOutRight': leaveAnimation && !enterAnimation,
+'slideInLeft': enterAnimation && !leaveAnimation
 }">
                             <span>{{answer.answer}}</span>
                             <div class="choice-underline">
@@ -37,4 +54,4 @@ ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="selectAnswe
             </div>
         </div>
     </div>
-</div>
+</div> -->
