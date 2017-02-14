@@ -177,13 +177,13 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('githubpages', [], function () {
-  del.bind(null, ['docs'])
-  return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
-});
-
 gulp.task('build', ['styleguide', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
+});
+
+gulp.task('githubpages', ['build'], function () {
+  del.bind(null, ['docs'])
+  return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
 });
 
 gulp.task('default', ['clean'], () => {
