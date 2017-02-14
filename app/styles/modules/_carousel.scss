@@ -4,9 +4,9 @@ Carousels
 An image and content carousel with animation support and many customizable options.
 
 Markup:
-<div class="row carousel">
+<div class="row ig-carousel carousel" data-dots="true" data-infinite="true" data-arrows="true" data-responsive='[{"breakpoint": 640, "settings": {"slidesToShow": 2, "slidesToScroll": 2}}]'>
   <div class="medium-4 columns">
-	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image"></img>
+	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image" />
   </div>
   <div class="medium-4 columns">
 	<img src="images/featured-topics-investments-fez.jpg" alt=""></img>
@@ -15,7 +15,7 @@ Markup:
 	<img src="images/featured-topics-client-statement.jpg" alt=""></img>
   </div>
   <div class="medium-4 columns">
-	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image"></img>
+	<img src="images/featured-topics-brazil.jpg" alt="Win a Trip to Brazil image" />
   </div>
   <div class="medium-4 columns">
 	<img src="images/featured-topics-investments-fez.jpg" alt=""></img>
