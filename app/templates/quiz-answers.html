@@ -1,0 +1,40 @@
+<div class="quiz-choice-selector">
+    <div class="c-break">
+        <div ng-repeat="answer in question.answers track by $index">
+            <div class="quiz-choice" 
+                 id="c_{{$index}}" 
+ng-class="{
+'selected': $index == selected, 
+'inactive': $index != selected && selected != '0', 
+'disabled': disableInputs, 
+'isTouch': isTouch,
+'hover': hover
+}" 
+ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="selectAnswer({q: currentPage, a: $index})">
+                
+                <div class="animated  choice-icon"
+                        ng-class="{ 
+'fadeOut': leaveAnimation && !enterAnimation, 
+'fadeIn': enterAnimation && !leaveAnimation 
+}">
+                    <div class="ring"></div>
+                    <div class="checkmark"></div>
+                </div>
+                <div class="choice-label-hold">
+                    <div class="choice-label">
+                        <div class="animated  choice-txt"
+                        ng-class="{ 
+'slideOutRight': leaveAnimation && !enterAnimation, 
+'slideInLeft': enterAnimation && !leaveAnimation 
+}">
+                            <span>{{answer.answer}}</span>
+                            <div class="choice-underline">
+                                <div class="highlight"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

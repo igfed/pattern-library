@@ -1,0 +1,40 @@
+
+<div class="report-modal animated fadeIn">
+    <div class="_modal report-container">
+        <div class="report-nav">
+            <a ui-sref="quiz" class="underline-link">
+                {{copy.btn_restart}}
+            </a>
+        </div>
+        <div class="report-content">
+            <h1 class="content-heading">{{copy.yourFinancialOpportunities}}</h1>
+            <div class="tips">
+                <div class="tip-holder">
+                    <div class="tip" ng-repeat="tip in tips.tips">
+                        <div class="table-row">
+                            <div class="area-icons">
+                                <div class="icon-group">
+                                    <div class="icon animated zoomIn" style="background-image: url('{{tip.imageURL}}');"></div>
+                                </div>
+                            </div>
+                            <h2 class="area-heading">{{tip.type}}</h2>
+                            <p class="area-tip">{{tip.tip}}</p>
+                        </div>
+                        <div>
+                            <div class="learn-more-holder">
+                                <a href="{{tip.url}}" class="underline-link">{{copy.learn_more}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="report-footer">
+                    <h2 class="footer-heading">{{copy.beyondTheBank}}</h2>
+                    <a href="#" class="outline-btn">
+                        {{copy.btn_contact}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
