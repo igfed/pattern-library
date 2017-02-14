@@ -155,9 +155,39 @@ $accordion-link-color: #008cba;
     }
   }
 
+
   .is-accordion-submenu-parent {
     border-bottom: solid 1px $accordion-grey-line;
 
+    .accordion-title {
+      border: none;
+      background-color: transparent;
+      color: $brand-color;
+      padding-left: 50px;
+      padding-right: 30px;
+      text-indent: -50px;
+
+      @include respond-to(medium) {
+        padding-right: 40px;
+      }
+
+      @include respond-to(large) {
+        line-height: 38px;
+        padding-left: 80px;
+        padding-right: 50px;
+        text-indent: -80px;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    // Info Icon
     .accordion-title::before {
       content: " ";
       position: static;
@@ -166,30 +196,23 @@ $accordion-link-color: #008cba;
       background-size: 40px;
       background-repeat: no-repeat;
       margin-right: 10px;
-      margin-left: -20px;
       padding: 20px;
 
-      // @include respond-to(medium) {
-      //   background-position: 100% center;
-      //   background-size: 40px;
-      //   background-repeat: no-repeat;
-      //   margin-right: 10px;
-      //   margin-left: -20px;
-      //   padding: 20px;
-      // }
+      @include respond-to(medium) {
+        margin-right: 10px;
+        padding: 20px;
+      }
 
       @include respond-to(large) {
         background-position: 100% center;
         background-size: 60px;
         background-repeat: no-repeat;
         margin-right: 20px;
-        margin-left: -20px;
         padding: 30px;
       }
     }
-  }
 
-  .is-accordion-submenu-parent {
+    // Menu open/close arrow
     .accordion-title::after {
       width: $arrow-size*1;
       height: $arrow-size*1;
@@ -200,6 +223,7 @@ $accordion-link-color: #008cba;
       transform: rotate(45deg);
       top: 45%;
       margin-top: -$arrow-size/2;
+      margin-right: -10px;
 
       @include respond-to(medium) {
         width: $arrow-size*1.5;
@@ -207,30 +231,13 @@ $accordion-link-color: #008cba;
         border-bottom-width: 3px;
         border-right-width: 3px;
         top: 40%;
+        margin-right: 0;
       }
 
       @include respond-to(large) {
         width: $arrow-size*2.5;
         height: $arrow-size*2.5;
         top: 35%;
-      }
-    }
-
-    .accordion-title {
-      border: none;
-      background-color: transparent;
-      color: $brand-color;
-
-      @include respond-to(large) {
-        line-height: 38px;
-      }
-
-      &:hover {
-        background-color: transparent;
-      }
-
-      &:focus {
-        background-color: transparent;
       }
     }
 
@@ -251,6 +258,13 @@ $accordion-link-color: #008cba;
     .accordion-content {
       background-color: transparent;
       border: none;
+      padding-left: 0;
+      padding-right: 0;
+
+      @include respond-to(medium) {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
 
       .table {
         border-top: solid 2px $dark-grey;
