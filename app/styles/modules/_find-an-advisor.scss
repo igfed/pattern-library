@@ -40,13 +40,81 @@
     border-top-style: solid;
     border-color: #282828 transparent transparent;
     right: 0;
-    margin-top: 0;
+    margin-top: -0.5px;
   }
 
-  .dropdown.menu > li.is-dropdown-submenu-parent > .is-dropdown-submenu a{
-    font-family: "WhitneySCMedium", "WhitneyBook", sans-serif;
+  .dropdown.menu .is-dropdown-submenu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 12% 1rem;
+    font-family: "WhitneySCMedium";
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+
+    @include respond-to(medium){
+      padding: 1rem 16% 1rem;
+    }
   }
 
+  .is-dropdown-submenu-item{
+      position: relative;
+      margin-bottom: 0;
+
+    &.emphasize{
+
+      &:after{
+        border-top: 0.1rem solid #c1cbd0;
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0%;
+      }
+
+      &:hover{
+        &:before{
+          top: calc(23% + .3rem);
+          height: 16px;
+        }
+      }
+    }
+
+    &:hover{
+      &:before{
+        content: "";
+        left: calc(15% - 0.8rem);
+        top: calc(27% + .3rem);
+        height: 26px;
+        position: absolute;
+        border-left: 2px solid #0ed59a;
+      }
+    }
+
+    strong{
+      margin-bottom: 0.2rem;
+      font-weight: 400;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-family: "WhitneySCMedium";
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+
+    span{
+      font-size: 1.8rem;
+      font-family: "WhitneyBook";
+      font-size: 18px;
+      color: #0d263c;
+      display: block;
+    }
+
+    strong, span{
+      text-align: left;
+    }
+  }
 
   .ig-form{
     .form-group-select{
@@ -71,6 +139,11 @@
     }
   }
 
+  // .is-dropdown-submenu-parent.opens-right .is-dropdown-submenu:hover{
+  //   transform: rotate(180deg);
+  //   transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
+  // }
+
   .dropdown{
     text-align: center;
 
@@ -78,12 +151,12 @@
       background-color: inherit;
       color: inherit;
 
-      .dropdown.button{
-         &:after{
-            transform: rotate(180deg);
-            transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
-         }
-      }
+      // .dropdown.button{
+      //    &:after{
+      //       transform: rotate(180deg);
+      //       transition: transform .3s ease 0s, border-color .3s ease 0s, -webkit-transform .3s ease 0s;
+      //    }
+      // }
     }
   }
 
@@ -104,13 +177,18 @@
   }
 }
 
-
   .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
     display: none;
 
      @include respond-to(medium){
       display: block;
      }
+  }
+
+  .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    // padding-bottom: 1rem;
+    padding-top:0;
+    padding-bottom: 0;
   }
 
   .phone-icon, .email-icon{
@@ -856,8 +934,4 @@
       top: 8px;
     }
   }
-}
-
-.dropdown-phone-number{
-  font-family: "WhitneyBook", sans-serif;
 }
