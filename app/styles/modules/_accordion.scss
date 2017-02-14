@@ -290,6 +290,21 @@ $accordion-link-color: #008cba;
           }
         }
       }
+
+      .help-options-list {
+        list-style: none;
+        margin-bottom: 20px;
+        // list-style-position: outside;
+        margin-left: 0;
+      }
+
+      .address {
+        margin: 20px 0;
+      }
+
+      .margin-bottom-20 {
+        margin-bottom: 20px;
+      }
     }
 
     .accordion-link {
