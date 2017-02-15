@@ -112,7 +112,37 @@
 //</div>
 // Styleguide 2.2
 
+.callout.current-offers {
+  padding-top: 50px;
+}
+
+.callout.base-rates {
+  padding-top: 70px;
+  padding-bottom: 130px;
+
+  .content-title {
+    margin-bottom: 65px;
+    line-height: 30px;
+  }
+}
+
 .rates {
+
+  .margin-bottom-lg {
+    @include respond-to(large) {
+      margin-bottom: 70px;
+    }
+  }
+
+  .margin-top-xl {
+    @include respond-to(large) {
+      margin-top: 70px;
+    }
+  }
+
+  .rate-legal {
+    font-size: 14px;
+  }
 
   .rate-grid, .rate-grid-10 {
     margin: 0 auto;
@@ -146,10 +176,16 @@
 
     @include respond-to(large) {
       padding: 10px 35px;
+      padding-top: 30px;
 
       &:last-child {
+        padding-top: 30px;
         border-left: 2px solid #ccc;
       }
+    }
+
+    .content-title {
+      line-height: 30px;
     }
 
     .rate-sub-section {
@@ -167,14 +203,25 @@
         }
       }
     }
+    .rate-sub-section.adjustable-rate-section {
+      @include respond-to(large) {
+        padding-bottom: 40px;
+      }
+    }
 
     .rate-legal {
       height: auto;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       @include respond-to(large) {
-        min-height: 100px;
+        // min-height: 100px;
+        margin-bottom: 95px;
+        font-size: 18px;
       }
+    }
+
+    .rate-legal.adjustable-rate-section {
+      margin-bottom: 55px;
     }
 
     .rate-block-info {
@@ -193,6 +240,14 @@
 
       @include respond-to(medium) {
         text-align: left;
+        margin-bottom: 88px;
+      }
+    }
+
+    .rate-description.adjustable-rate-section {
+
+      @include respond-to(large) {
+        margin-bottom: 20px;
       }
     }
 
@@ -207,13 +262,19 @@
     }
   }
 
+  .rate-section.adjustable-rate-section {
+    padding-bottom: 0;
+  }
+
   // This sub-heading requires a fixed-height
   .rate-sub-title {
     height: auto;
     margin-bottom: 20px;
 
     @include respond-to(large) {
-      height: 60px;
+      // height: 60px;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
   }
 
@@ -269,17 +330,19 @@
   .rate-block {
     border-right: none;
     border-bottom: 2px solid #ccc;
-    padding: 10px 30px;
+    padding: 55px 15px;
+    max-width: 240px;
 
     &:last-child {
       border-right: none;
       border-bottom: none;
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
     }
 
     @include respond-to(medium) {
       border-right: 2px solid #ccc;
       border-bottom: none;
+      padding: 15px;
 
       &:last-child {
         margin-bottom: 0;
@@ -295,40 +358,48 @@
 
       .rate-value {
         letter-spacing: 1px;
-        font-size: 52px;
+        font-size: 36px;
+        line-height: 30px;
         font-family: $font-whitney-light;
         color: #000;
+        margin-bottom: 15px;
 
         @include respond-to(medium) {
           font-size: 40px;
           letter-spacing: 0;
+          line-height: 34px;
         }
 
         @include respond-to(large) {
           font-size: 52px;
           letter-spacing: 1px;
+          line-height: 45px;
         }
       }
 
       .rate-value-secondary {
         color: #666;
         margin-top: -15px;
+        font-family: $font-stack-light;
       }
     }
 
     .rate-bullet {
       color: #666;
-      font-size: 22px;
+      font-family: $font-stack-light;
+      font-size: 16px;
       border-bottom: none;
       padding: 0;
 
       &:last-child {
         border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
 
       @include respond-to(medium) {
         border-bottom: 1px solid #ccc;
-        font-size: 16px;
+        // font-size: 16px;
         letter-spacing: 0;
         padding: 10px;
       }
