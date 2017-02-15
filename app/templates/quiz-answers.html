@@ -1,13 +1,17 @@
 <!-- removed ng-classes while figuring out other styling -->
 <div class="row quiz-answers" data-equalizer data-equalize-on="medium">
-  <div ng-repeat="answer in question.answers track by $index" class="answer">
-    <div class="medium-offset-2 medium-3 large-offset-0 columns" data-equalizer-watch>
-      <div class="quiz-choice" id="c_{{$index}}">
+  <div ng-repeat="answer in question.answers track by $index">
+    <div class="answer medium-offset-2 medium-3 large-offset-0 columns" data-equalizer-watch>
+      <div
+        class="quiz-choice"
+        id="c_{{$index}}"
+        ng-click="selectAnswer({q: currentPage, a: $index})"
+      >
         <div class="choice-icon left">
           <div class="ring"></div>
           <div class="checkmark"></div>
         </div>
-        <div class="choice-label text-left left">
+        <div class="choice-label">
           <span class="sub-title">{{answer.answer}}</span>
         </div>
       </div>

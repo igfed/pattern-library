@@ -1,8 +1,5 @@
 // defining animations
-// browser prefixing for opera?
-// is autoprefixer automatically doing this?
-// fadeIn Animation
-@keyframes fadeIn {
+@keyframes zoomIn {
   0% {
     transform: scale(0);
     opacity: 0.0;
@@ -19,43 +16,125 @@
     opacity: 1;
   }
 }
-
-// slideUp Animation
-@keyframes slideUp {
-  0% {
-    transform: translateY(33%);
+// fadeIn Animation
+// @keyframes fadeIn {
+//   0% {
+//     transform: scale(0);
+//     opacity: 0.0;
+//   }
+//   60% {
+//     transform: scale(1.1);
+//   }
+//   80% {
+//     transform: scale(0.9);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+// }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
   }
-  50%{
-    transform: translateY(-8%);
-  }
-  65%{
-    transform: translateY(-6%);
-  }
-  80%{
-    transform: translateY(-4%);
-  }
-  95%{
-    transform: translateY(2%);
-  }
-  100% {
-    transform: translateY(0%);
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-  .fade-in {
-    // browser prefixing for opera?
-    animation: fadeIn 1s ease-in-out;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
   }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
-  .slide-up {
-    animation: slideUp 1.5s ease;
+// slideUp Animation
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
   }
+  to {
+    transform: none;
+  }
+  // from {
+  //   transform: translateY(25%);
+  // }
+  // to {
+  //   transform: translateY(0%);
+  // }
+  // 0% {
+  //   transform: translateY(25%);
+  // }
+  // 50%{
+  //   transform: translateY(-4%);
+  // }
+  // 65%{
+  //   transform: translateY(-3%);
+  // }
+  // 80%{
+  //   transform: translateY(-2%);
+  // }
+  // 95%{
+  //   transform: translateY(-1%);
+  // }
+  // 100% {
+  //   transform: translateY(0%);
+  // }
+}
+// @keyframes slideUp {
+//   0% {
+//     transform: translateY(33%);
+//   }
+//   50%{
+//     transform: translateY(-8%);
+//   }
+//   65%{
+//     transform: translateY(-6%);
+//   }
+//   80%{
+//     transform: translateY(-4%);
+//   }
+//   95%{
+//     transform: translateY(2%);
+//   }
+//   100% {
+//     transform: translateY(0%);
+//   }
+// }
+
+.fade-in {
+  animation: fadeIn 0.6s;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.5s;
+}
+
+.zoom-in {
+  animation: zoomIn 1s;
+  animation-fill-mode: both;
+}
+
+.slide-up {
+  animation: slideUp 1s;
+  animation-fill-mode: both;
+}
 
 // quiz start directive/template
 .quiz-start {
   // override default figure styling
   figure {
     margin: 0;
+    transform-origin: center;
 
     h1 {
       margin-bottom: 0;
@@ -95,29 +174,37 @@
 
 // quiz answers directive/template
 .quiz-answers {
+
   .answer {
     margin-bottom: 20px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
 
     @include respond-to(medium) {
       margin-bottom: 0;
     }
 
-    .ring {
-      transition: all 0.2s;
-      width: 40px;
-      height: 40px;
-      transform-origin: center;
-      border-radius: 50%;
-      border: 3px solid $button-primary-color;
-    }
+    .quiz-choice {
+      display: flex;
+      flex-direction: row;
+      position: relative;
 
-    .choice-label {
-      color: $steps-grey;
-      transform: translateY(25%);
+      .ring {
+        transition: all 0.2s;
+        width: 40px;
+        height: 40px;
+        transform-origin: center;
+        border-radius: 50%;
+        border: 3px solid $button-primary-color;
+      }
+
+      .choice-label {
+        color: $steps-grey;
+        // transform: translateY(25%);
+        // margin-left: 20px;
+        left: 20%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }

@@ -1,18 +1,18 @@
 <!-- not sure if this requires a contianing DOM element -->
-<div class="quiz-start">
+<div class="quiz-start text-center">
   <figure class="medium-figure">
-    <img class="fade-in image-circle" src="../images/quiz/quiz-start@2x.jpg" alt="" />
+    <img class="zoom-in image-circle" src="../images/quiz/quiz-start@2x.jpg" alt="quiz-start" />
     <figcaption class="slide-up">
-      <h1 class="callout-title text-center">
+      <h2 class="callout-title text-center">
         {{copy.header}}
-      </h1>
+      </h2>
     </figcaption>
   </figure>
-  <div class="slide-up">
-    <p class="quiz-start-text callout-body-copy">
+  <div>
+    <h3 class="slide-up quiz-start-text callout-body-copy">
       {{copy.text}}
-    </p>
-    <button class="button" ui-sref="quiz">
+    </h3>
+    <button class="button slide-up" ui-sref="quiz">
       {{copy.start}}
     </button>
   </div>
