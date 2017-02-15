@@ -205,10 +205,10 @@ $accordion-link-color: #008cba;
 
       @include respond-to(large) {
         background-position: 100% center;
-        background-size: 60px;
+        background-size: 62px;
         background-repeat: no-repeat;
         margin-right: 20px;
-        padding: 30px;
+        padding: 32px;
       }
     }
 
@@ -289,6 +289,20 @@ $accordion-link-color: #008cba;
             }
           }
         }
+      }
+
+      .help-options-list {
+        list-style: none;
+        margin-bottom: 20px;
+        margin-left: 0;
+      }
+
+      .address {
+        margin: 20px 0;
+      }
+
+      .margin-bottom-20 {
+        margin-bottom: 20px;
       }
     }
 
