@@ -43,25 +43,6 @@ $link-hover: #0BAB7B;
   background-color: $more-background-yellow;
 }
 
-// specific typography for More section
-// check if this is still being used
-// move to the typography section?
-.more-callout-title {
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-family: $font-stack-semibold;
-	line-height: 1.1em;
-
-  @include respond-to(medium) {
-    font-size: 40px;
-    font-size: 2.5rem;
-  }
-
-  @include respond-to(large) {
-    font-size: 44px;
-  }
-}
-
 // more-article page
 
 // includes styling for separator line
