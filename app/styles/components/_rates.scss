@@ -126,6 +126,27 @@
   }
 }
 
+.callout.term-loans-section {
+  .variable-rates {
+    margin-top: 90px;
+  }
+}
+
+.callout.variation-six {
+  padding-bottom: 120px;
+  .rates {
+    &:last-child {
+
+    }
+
+    .content-title {
+      margin-bottom: 25px;
+    }
+
+
+  }
+}
+
 .rates {
 
   .margin-bottom-lg {
@@ -176,7 +197,6 @@
 
     @include respond-to(large) {
       padding: 10px 35px;
-      padding-top: 30px;
 
       &:last-child {
         padding-top: 30px;
@@ -266,6 +286,12 @@
     padding-bottom: 0;
   }
 
+  .rate-section.split-view {
+    @include respond-to(large) {
+      padding-top: 30px;
+    }
+  }
+
   // This sub-heading requires a fixed-height
   .rate-sub-title {
     height: auto;
@@ -303,7 +329,7 @@
       }
 
       .rate-block {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         font-size: 52px;
       }
     }
@@ -379,7 +405,7 @@
 
       .rate-value-secondary {
         color: #666;
-        margin-top: -15px;
+        margin-top: -10px;
         font-family: $font-stack-light;
       }
     }
