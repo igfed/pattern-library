@@ -17,7 +17,7 @@
 
   .list-column {
     display: none;
-    background-position: right 0;
+    background-position: center 0;
     background-repeat: no-repeat;
     top: 3px;
 
@@ -53,6 +53,7 @@
       background-size: 100%;
       width: 40px;
       background-repeat: no-repeat;
+      background-position: center 0;
 
       @include respond-to(medium) {
         display: none;
