@@ -91,11 +91,6 @@ $link-hover: #0BAB7B;
     padding-left: 30px;
   }
 
-  .list-source-footer {
-    // need to define variable for this
-    color: #a4a39c;
-  }
-
   blockquote {
     border-top: 3px solid $button-primary-color;
     color: inherit;
@@ -142,6 +137,16 @@ $link-hover: #0BAB7B;
   }
 }
 
+// some offset lists have source info at the bottom
+// the text is in a shade of gray not used elsewehre on the site
+.list-source-footer {
+  color: #a4a39c;
+  margin: 20px auto;
+
+  a {
+    color: $button-primary-color;
+  }
+}
 
 // more-image-carousel
 .more-image-carousel {
