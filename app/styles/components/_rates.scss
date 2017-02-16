@@ -112,11 +112,26 @@
 //</div>
 // Styleguide 2.2
 
-.callout.current-offers {
-  padding-top: 50px;
+.variation-one.callout {
+  @include respond-to(medium) {
+    padding-top: 50px;
+  }
 }
 
-.callout.base-rates {
+.current-offers.callout {
+  @include respond-to(medium) {
+    padding-top: 50px;
+  }
+  @include respond-to(large) {
+    padding-top: 50px;
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+}
+
+.base-rates.callout {
   padding-top: 70px;
   padding-bottom: 130px;
 
@@ -126,24 +141,68 @@
   }
 }
 
-.callout.term-loans-section {
+.term-loans-section.callout {
   .variable-rates {
-    margin-top: 90px;
+
+    @include respond-to(medium) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include respond-to(large) {
+      margin-top: 90px;
+      margin-bottom: 40px;
+    }
   }
 }
 
-.callout.variation-six {
-  padding-bottom: 120px;
-  .rates {
-    &:last-child {
+.variation-four {
+  .medium-3 {
 
+    @include respond-to(medium) {
+      margin-left: 37.5%;
     }
 
+    @include respond-to(large) {
+      margin-left: 0;
+    }
+  }
+}
+
+.variation-six.callout {
+
+  @include respond-to(medium) {
+    padding-bottom: 80px;
+  }
+
+  @include respond-to(large) {
+    padding-bottom: 120px;
+  }
+
+  .medium-4 {
+
+    @include respond-to(medium) {
+      margin-left: 33.3%;
+    }
+
+    @include respond-to(large) {
+      margin-left: 0;
+    }
+  }
+
+  .rates {
     .content-title {
       margin-bottom: 25px;
     }
 
-
+    .variable-rates {
+      @include respond-to(medium) {
+        margin-top: 20px;
+      }
+      @include respond-to(large) {
+        margin-top: 70px;
+      }
+    }
   }
 }
 
@@ -158,6 +217,18 @@
   .margin-top-xl {
     @include respond-to(large) {
       margin-top: 70px;
+    }
+  }
+
+  .section-title {
+    line-height: 12px;
+
+    @include respond-to(medium) {
+      line-height: 14px;
+    }
+
+    @include respond-to(large) {
+      line-height: 14px;
     }
   }
 
@@ -225,13 +296,17 @@
     }
     .rate-sub-section.adjustable-rate-section {
       @include respond-to(large) {
-        padding-bottom: 40px;
+        padding-bottom: 60px;
       }
     }
 
     .rate-legal {
       height: auto;
       // margin-bottom: 20px;
+
+      @include respond-to(medium) {
+        font-size: 14px;
+      }
 
       @include respond-to(large) {
         // min-height: 100px;
@@ -245,6 +320,7 @@
     }
 
     .rate-block-info {
+      text-align: center;
 
       @include respond-to(large) {
         padding-top: 15px;
@@ -260,11 +336,25 @@
 
       @include respond-to(medium) {
         text-align: left;
-        margin-bottom: 88px;
+        margin-bottom: 20px;
+        font-size: 12px;
+      }
+
+      @include respond-to(large) {
+        margin-bottom: 60px;
       }
     }
 
     .rate-description.adjustable-rate-section {
+
+      &:last-child {
+        @include respond-to(medium) {
+          padding-left: 15px;
+        }
+        @include respond-to(large) {
+          padding-left: 0;
+        }
+      }
 
       @include respond-to(large) {
         margin-bottom: 20px;
@@ -289,6 +379,31 @@
   .rate-section.split-view {
     @include respond-to(large) {
       padding-top: 30px;
+    }
+
+    .variable-rate-legal {
+      @include respond-to(medium) {
+        // line-height: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      @include respond-to(large) {
+        // line-height: 18px;
+        margin-top: 70px;
+        margin-bottom: 85px;
+      }
+    }
+  }
+
+  .split-view.custom-medium-offset {
+    @include respond-to(medium) {
+      margin-left: 4.166666%;
+      margin-right: 4.166666%;
+    }
+    @include respond-to(large) {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -357,7 +472,7 @@
     border-right: none;
     border-bottom: 2px solid #ccc;
     padding: 55px 15px;
-    max-width: 240px;
+    // max-width: 240px;
 
     &:last-child {
       border-right: none;
