@@ -6,43 +6,38 @@
 
 .list-row {
   padding-top: 35px;
+
+  .list-body {
+    padding-bottom: 35px;
+    border-bottom: $more-underline;
+  }
+
   &:first-of-type {
     padding-top: 0;
   }
+
   &:last-of-type {
     .list-body {
       border-bottom: none;
     }
   }
 
-  .list-column {
-    display: none;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    top: 3px;
-
-    @include respond-to(medium) {
-      display: block;
-    }
-
-    @include respond-to(large) {
-      background-position: left 0;
-    }
-  }
-
   .tips-list-column {
-    @extend .list-column;
-    background-image: url('../images/TIP-Icon.svg');
-    background-size: 50px auto;
     height: 40px;
+
+    img {
+      max-width: 50px;
+    }
   }
 
   .questions-list-column {
-    @extend .list-column;
-    background-image: url('../images/Q-Icon.svg');
-    background-size: 45px auto;
     height: 45px;
     margin-top: 5px;
+
+    img {
+      max-height: 45px;
+      max-width: 45px;
+    }
   }
 
   .list-title {
@@ -61,15 +56,15 @@
     }
 
     .tips-icon {
-      @extend .title-icon;
-      background-image: url('../images/TIP-Icon.svg');
-      height: 40px;
+      // @extend .title-icon;
+      // background-image: url('../images/TIP-Icon.svg');
+      float: left;
+      width: 40px;
     }
 
     .questions-icon {
-      @extend .title-icon;
-      background-image: url('../images/Q-Icon.svg');
-      height: 47px;
+      float: left;
+      width: 40px;
     }
 
     .title {
@@ -86,10 +81,5 @@
       @extend .title;
       text-transform: uppercase;
     }
-  }
-
-  .list-body {
-    padding-bottom: 35px;
-    border-bottom: $more-underline;
   }
 }
