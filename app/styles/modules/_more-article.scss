@@ -95,37 +95,46 @@ $link-hover: #0BAB7B;
       width: 30%;
     }
   }
+}
 
-  .author-pic-container {
-    padding-bottom: 35px;
-    margin-top: 20px;
-    overflow: auto;
+.author-pic-container {
+  padding-bottom: 35px;
+  margin-top: 20px;
+  overflow: auto;
 
-    .author-pic {
-      width: 140px;
-      margin-right: 14px;
-      float: left;
+  .author-pic {
+    width: 140px;
+    margin-right: 14px;
+    float: left;
 
-      @include respond-to(medium) {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-    }
-
-    .author-description {
-      margin: 0 auto;
-      display: block;
-
-      @include respond-to(large) {
-        color: #9c9c96;
-      }
-
-      .author-title {
-        text-transform: uppercase;
-        padding-bottom: 20px;
-      }
+    @include respond-to(medium) {
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
+
+  .author-description {
+    margin: 0 auto;
+    display: block;
+
+    @include respond-to(large) {
+      color: #9c9c96;
+    }
+
+    .author-title {
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.byline {
+  text-transform: uppercase;
+
+  @include respond-to(large) {
+    font-size: 18px;
+    font-size: 1.125rem;
+  };
 }
 
 // some offset lists have source info at the bottom
@@ -139,49 +148,6 @@ $link-hover: #0BAB7B;
 
     &:hover {
       color: $link-hover;
-    }
-  }
-}
-
-// more-image-carousel
-.more-image-carousel {
-  padding-bottom: 20px;
-
-  // overriding default carousel button placement
-  // to account for figure captions
-  button {
-    top: 35%;
-    @include respond-to(medium) {
-      top: 38.5%;
-    }
-  }
-
-  .carousel-figure {
-    margin-bottom: 20px;
-
-    .image-with-caption {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-
-      // this is a strange css hack
-      // that fixes some flexbox bugs on IE 10 and above
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        display: block;
-        text-align: center;
-      }
-
-      .image-caption {
-        color: $image-caption-gray;
-        align-self: flex-start;
-        text-transform: uppercase;
-
-        @include respond-to(medium) {
-          align-self: center;
-          text-align: center;
-        }
-      }
     }
   }
 }
