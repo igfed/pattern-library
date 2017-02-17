@@ -112,22 +112,62 @@
 //</div>
 // Styleguide 2.2
 
-.variation-one.callout {
-  @include respond-to(medium) {
-    padding-top: 50px;
+.variation-one {
+  .callout {
+    @include respond-to(medium) {
+      padding-top: 50px;
+    }
+
+    .callout-body-copy {
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        margin-bottom: 40px;
+      }
+
+      @include respond-to(large) {
+        margin-bottom: 70px;
+      }
+    }
+
+    .button {
+      margin-top: 5px;
+
+      @include respond-to(medium) {
+        margin-top: 60px;
+      }
+
+      @include respond-to(large) {
+        margin-top: 70px;
+      }
+    }
   }
 }
 
-.current-offers.callout {
-  @include respond-to(medium) {
-    padding-top: 50px;
-  }
-  @include respond-to(large) {
-    padding-top: 50px;
-  }
+.current-offers {
+  .callout {
+    @include respond-to(medium) {
+      padding-top: 50px;
+    }
+    @include respond-to(large) {
+      padding-top: 50px;
+    }
 
-  .button {
-    margin-top: 30px;
+    .content-title {
+      margin-bottom: 20px;
+
+      @include respond-to(medium) {
+        margin-bottom: 40px;
+      }
+
+      @include respond-to(large) {
+        margin-bottom: 70px;
+      }
+    }
+
+    .button {
+      margin-top: 30px;
+    }
   }
 }
 
@@ -206,6 +246,11 @@
   }
 }
 
+.separator-line {
+  background-color: transparent;
+  border-bottom: solid 1px $dark-grey;
+}
+
 .rates {
 
   .margin-bottom-lg {
@@ -252,7 +297,6 @@
     // }
 
     &:last-child {
-      border-top: solid 2px #ccc;
       padding-top: 30px;
     }
 
@@ -261,7 +305,6 @@
       text-align: left;
 
       &:last-child {
-        border-top: none;
         padding-top: 10px;
       }
     }
@@ -383,13 +426,11 @@
 
     .variable-rate-legal {
       @include respond-to(medium) {
-        // line-height: 18px;
         margin-top: 10px;
         margin-bottom: 10px;
       }
 
       @include respond-to(large) {
-        // line-height: 18px;
         margin-top: 70px;
         margin-bottom: 85px;
       }
