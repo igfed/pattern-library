@@ -1,5 +1,5 @@
 .styled-list {
-  counter-reset: ordered-ls-counter;
+  counter-reset: numbered-list;
   margin: 0;
 
   @include respond-to(medium) {
@@ -18,8 +18,8 @@
     }
 
     &:before {
-      content: counter(ordered-ls-counter);
-      counter-increment: ordered-ls-counter;
+      content: counter(numbered-list);
+      counter-increment: numbered-list;
       display: inline-block;
       background-color: $button-primary-color;
       border-radius: 50%;
@@ -28,8 +28,10 @@
       height: 25px;
       margin-right: 12px;
       text-align: center;
+      vertical-align: middle;
+      font-family: $font-stack-semibold;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         width: 28px;
         height: 28px;
       }
