@@ -1,10 +1,21 @@
 <div class="row">
   <div class="small-centered small-11 columns">
       <figure class="quiz-figure">
-      <!-- do animations with angular? -->
-      <!-- add in ng class -->
-      <img src={{question.image}} alt="" class="fade-in image-circle">
-      <figcaption class="fade-in-down">
+      <img
+        src={{question.image}}
+        alt="question image"
+        class="image-circle"
+        ng-class="{
+          'fade-in': enterAnimation && !leaveAnimation,
+          'fade-out': leaveAnimation && !enterAnimation
+        }"
+      >
+      <figcaption
+        ng-class="{
+          'fade-in-down': enterAnimation && !leaveAnimation,
+          'fade-out-down': leaveAnimation && !enterAnimation
+        }"
+      >
         <h2 class="callout-title text-center">
           {{question.question}}
         </h2>
@@ -12,3 +23,27 @@
     </figure>
   </div>
 </div>
+
+
+<!-- <div class="question-holder">
+    <div class="question">
+        <div class="cell">
+            <div class="animated  question-icon"
+ng-class="{
+'zoomOut': leaveAnimation && !enterAnimation,
+'zoomIn': enterAnimation && !leaveAnimation
+}"
+                 style="background-image: url('{{question.image}}');">
+            </div>
+            <div class="question-overflow">
+                <h2 style="overflow: hidden;" class="animated"
+ng-class="{
+'fadeOutDown': leaveAnimation && !enterAnimation,
+'fadeInDown': enterAnimation && !leaveAnimation
+}">
+                    {{question.question}}
+                </h2>
+            </div>
+        </div>
+    </div>
+</div> -->

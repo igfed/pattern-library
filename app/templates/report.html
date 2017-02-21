@@ -1,40 +1,40 @@
-
-<div class="report-modal animated fadeIn">
-    <div class="_modal report-container">
-        <div class="report-nav">
-            <a ui-sref="quiz" class="underline-link">
-                {{copy.btn_restart}}
-            </a>
-        </div>
-        <div class="report-content">
-            <h1 class="content-heading">{{copy.yourFinancialOpportunities}}</h1>
-            <div class="tips">
-                <div class="tip-holder">
-                    <div class="tip" ng-repeat="tip in tips.tips">
-                        <div class="table-row">
-                            <div class="area-icons">
-                                <div class="icon-group">
-                                    <div class="icon animated zoomIn" style="background-image: url('{{tip.imageURL}}');"></div>
-                                </div>
-                            </div>
-                            <h2 class="area-heading">{{tip.type}}</h2>
-                            <p class="area-tip">{{tip.tip}}</p>
-                        </div>
-                        <div>
-                            <div class="learn-more-holder">
-                                <a href="{{tip.url}}" class="underline-link">{{copy.learn_more}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="report-footer">
-                    <h2 class="footer-heading">{{copy.beyondTheBank}}</h2>
-                    <a href="#" class="outline-btn">
-                        {{copy.btn_contact}}
-                    </a>
-                </div>
-            </div>
-        </div>
+<div class="quiz-report fade-in">
+  <div class="report-nav">
+    <a ui-sref="quiz" class="tertiary-cta">
+      {{copy.btn_restart}}
+    </a>
+  </div>
+  <div class="report-body">
+    <h2 class="callout-title text-center">
+      {{copy.yourFinancialOpportunities}}
+    </h2>
+    <div class="tip-container" ng-repeat="tip in tips.tips">
+      <figure class="wide-figure">
+        <img class="image-circle" src="{{tip.imageURL}}" alt="tip image">
+        <figcaption class="text-left">
+          <h3 class="callout-title">
+            {{tip.type}}
+          </h3>
+          <p class="tip-text">
+            {{tip.tip}}
+          </p>
+        </figcaption>
+      </figure>
+      <div>
+        <a href="{{tip.url}}" class="tertiary-cta">
+          {{copy.learn_more}}
+        </a>
+      </div>
     </div>
+    <div class="report-footer">
+      <h3 class="content-title text-center">
+        {{copy.beyondTheBank}}
+      </h3>
+      <div class="report-button text-center">
+        <a href="#" class="button">
+          {{copy.btn_contact}}
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
