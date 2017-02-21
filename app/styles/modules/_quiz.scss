@@ -1,4 +1,6 @@
 // defining animations
+
+// zoomIn animation
 @keyframes zoomIn {
   0% {
     transform: scale(0);
@@ -16,24 +18,8 @@
     opacity: 1;
   }
 }
-// fadeIn Animation
-// @keyframes fadeIn {
-//   0% {
-//     transform: scale(0);
-//     opacity: 0.0;
-//   }
-//   60% {
-//     transform: scale(1.1);
-//   }
-//   80% {
-//     transform: scale(0.9);
-//     opacity: 1;
-//   }
-//   100% {
-//     transform: scale(1);
-//     opacity: 1;
-//   }
-// }
+
+// fadeIn animation
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -45,6 +31,17 @@
   }
 }
 
+// fadeOut animation
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// fadeInDown animation
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -56,7 +53,7 @@
   }
 }
 
-// slideUp Animation
+// slideUp animation
 @keyframes slideUp {
   from {
     transform: translate3d(0, 50%, 0);
@@ -65,54 +62,37 @@
   to {
     transform: none;
   }
-  // from {
-  //   transform: translateY(25%);
-  // }
-  // to {
-  //   transform: translateY(0%);
-  // }
-  // 0% {
-  //   transform: translateY(25%);
-  // }
-  // 50%{
-  //   transform: translateY(-4%);
-  // }
-  // 65%{
-  //   transform: translateY(-3%);
-  // }
-  // 80%{
-  //   transform: translateY(-2%);
-  // }
-  // 95%{
-  //   transform: translateY(-1%);
-  // }
-  // 100% {
-  //   transform: translateY(0%);
-  // }
 }
-// @keyframes slideUp {
-//   0% {
-//     transform: translateY(33%);
-//   }
-//   50%{
-//     transform: translateY(-8%);
-//   }
-//   65%{
-//     transform: translateY(-6%);
-//   }
-//   80%{
-//     transform: translateY(-4%);
-//   }
-//   95%{
-//     transform: translateY(2%);
-//   }
-//   100% {
-//     transform: translateY(0%);
-//   }
-// }
+
+// slideInLeft animation
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// slideOutRight animation
+@keyframes slideOutRight {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+    // visibility: hidden;
+  }
+}
 
 .fade-in {
   animation: fadeIn 0.6s;
+}
+
+.fade-out {
+  animation: fadeOut 0.65s;
 }
 
 .fade-in-down {
@@ -129,26 +109,43 @@
   animation-fill-mode: both;
 }
 
-// quiz start directive/template
-.quiz-start {
-  // override default figure styling
-  figure {
-    margin: 0;
-    transform-origin: center;
+.slide-in-left {
+  animation-delay: 0.2s;
+  animation: slideInLeft 0.3s;
+  // animation-fill-mode: both;
+}
 
-    h1 {
-      margin-bottom: 0;
-    }
+.slide-out-right {
+  animation-delay: 0.3s;
+  animation: slideOutRight 0.3s;
+  animation-fill-mode: both;
+}
+
+.quiz-figure {
+  margin-bottom: 40px;
+
+  img {
+    width: 200px;
+    height: 200px;
   }
 
-  .quiz-start-text {
-    margin: 25px 0 45px 0;
-
-    @include respond-to(large) {
-      margin: 30px 0 50px 0;
-    }
+  figcaption {
+    text-align: center;
+    margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		margin-top: 45px;
   }
 }
+
+// quiz start directive/template
+.quiz-start-text {
+  margin: 25px 0 45px 0;
+
+  @include respond-to(large) {
+    margin: 30px 0 50px 0;
+  }
+}
+
 
 // quiz progress directive/template
 .quiz-progress {

@@ -5,13 +5,34 @@
       <div
         class="quiz-choice"
         id="c_{{$index}}"
+        ng-class="{
+          'selected': $index == selected,
+          'inactive': $index !== selected && selected !='0',
+          'disabled': disableInputs,
+          'isTouch': isTouch,
+          'hover': hover
+        }"
+        ng-mouseenter="hover = true"
+        ng-mouseleave="hover = false"
         ng-click="selectAnswer({q: currentPage, a: $index})"
       >
-        <div class="choice-icon left">
+        <div
+          class="choice-icon left"
+          ng-class="{
+            'fade-out': leaveAnimation && !enterAnimation,
+            'fade-in': enterAnimation && !leaveAnimation
+          }"
+        >
           <div class="ring"></div>
           <div class="checkmark"></div>
         </div>
-        <div class="choice-label">
+        <div
+          class="choice-label"
+          ng-class="{
+            'slide-out-right': leaveAnimation && !enterAnimation,
+            'slide-in-left': enterAnimation && !leaveAnimation
+          }"
+        >
           <span class="sub-title">{{answer.answer}}</span>
         </div>
       </div>
