@@ -11,6 +11,7 @@
  styles for each language.
  */
 
+import findAnAdvisor from './find-an-advisor-search.js';
 import more from './more.js';
 import forms from './forms.js';
 import carousel from './carousel.js';

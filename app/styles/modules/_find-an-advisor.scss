@@ -300,21 +300,25 @@
   .tt-menu{
     background: white;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 4rem;
     margin-left: 0;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     top: 3.7rem;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
-    padding-top:4rem;
     text-align: left;
+    padding: 40px 30px 30px 30px;
 
-
-    :last-child{
-      border: none;
+    &:before{
+      content: 'Suggested Results';
+      position: absolute;
+      z-index: 55555;
+      left: 5px;
+      top: 0;
+      font-size: 13px;
+      padding-left: 24px;
+      padding-top: 14px;
+      color: grey;
     }
   }
 
@@ -322,7 +326,6 @@
     position: relative;
     width: 100%;
     display: inline-block;
-    padding: 0.5rem;
 
     input{
       &:first-child{
@@ -333,26 +336,49 @@
 
   .typeahead{
     border-color: transparent;
+    margin: 0 0 1rem;
   }
 
   .tt-suggestion{
-      border-bottom: 1px solid #eff1f2;
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
+      border-top: 1px solid #eff1f2;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      font-size: 16px;
+      color: $search-grey;
 
       &:hover, &.tt-cursor{
 
         @include respond-to(medium){
           background-color: #eff1f2;
-          margin-left: -3rem;
-          padding-left: 3rem;
-          width: 137.5%;
+          margin-left: -30px;
+          padding-left: 30px;
+          width: 123%;
         }
 
         @include respond-to(large){
           width: 117.5%;
         }
       }
+  }
+
+  .tt-suggestion:hover + .tt-suggestion{
+    @include respond-to(medium){
+      border-top: 1px solid transparent;
+    }
+  }
+
+  .tt-highlight{
+    color: $brand-color;
+  }
+
+  .tt-dataset{
+    &:first-child{
+      .tt-suggestion{
+        &:first-child{
+          border: none;
+        }
+      }
+    }
   }
 }
 
@@ -401,7 +427,6 @@
     font-size: 1rem;
     color: $darkest-color;
     line-height: 1.5em;
-    margin-bottom: 2px;
     border-radius: 0.5rem;
     border: none;
 
@@ -929,3 +954,11 @@
 }
 
 
+.email-icon{
+
+    &:hover{
+        &:before{
+      content: url(../images/email-white.svg);
+    }
+  }
+}
