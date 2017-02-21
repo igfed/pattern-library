@@ -67,6 +67,11 @@ $accordion-link-color: #008cba;
 
   .section-title {
     padding-bottom: 8px;
+    font-family: $font-stack-sc;
+
+    @include respond-to(large) {
+      font-size: 16px;
+    }
   }
 
   .accordion {
@@ -166,7 +171,7 @@ $accordion-link-color: #008cba;
     }
 
     .accordion-title.accordion-menu-section-title {
-      font-family: $font-stack-sc-medium;
+      font-family: $font-stack-sc;
       text-transform: lowercase;
       font-size: 18px;
 
@@ -190,6 +195,21 @@ $accordion-link-color: #008cba;
         padding-right: 1em;
       }
 
+      .large-12 {
+        @include respond-to(large) {
+          padding-left: 80px;
+          padding-right: 80px;
+        }
+      }
+
+      .section-title {
+        padding-bottom: 8px;
+
+        @include respond-to(large) {
+          font-size: 18px;
+        }
+      }
+
       .table {
         border-top: solid 2px $dark-grey;
         border-bottom: solid 2px $dark-grey;
@@ -200,6 +220,7 @@ $accordion-link-color: #008cba;
           .sub-title {
             padding: 5px;
             font-size: 16px;
+            font-family: $font-stack-sc;
           }
         }
         tbody {
@@ -219,6 +240,14 @@ $accordion-link-color: #008cba;
         list-style: none;
         margin-bottom: 20px;
         margin-left: 0;
+
+        li {
+          font-family: $font-stack-light;
+
+          // @include respond-to(large) {
+          //   font-size: 18px;
+          // }
+        }
       }
 
       .address {
@@ -227,6 +256,11 @@ $accordion-link-color: #008cba;
 
       .margin-bottom-20 {
         margin-bottom: 20px;
+      }
+
+      .body-copy-light {
+        font-family: $font-stack-light;
+        font-size: 18px;
       }
     }
 
