@@ -23,8 +23,20 @@
             'fade-in': enterAnimation && !leaveAnimation
           }"
         >
-          <div class="ring"></div>
-          <div class="checkmark"></div>
+          <div class="ring"
+            ng-class="{
+              'thick-border': $index == selected
+            }"
+          >
+          </div>
+          <div
+            class="checkmark"
+            ng-class="{
+              'slide-in': $index == selected,
+              'hidden': $index !== selected
+            }"
+          >
+          </div>
         </div>
         <div
           class="choice-label"
@@ -33,7 +45,20 @@
             'slide-in-left': enterAnimation && !leaveAnimation
           }"
         >
-          <span class="sub-title">{{answer.answer}}</span>
+          <span class="sub-title"
+            ng-class="{
+              'dark-text': $index == selected
+            }"
+          >{{answer.answer}}</span>
+          <div class="answer-underline">
+            <div
+              class="highlight"
+              ng-class="{
+                'highlight-underline': $index == selected,
+                'fade-in-left': $index == selected
+              }"
+            ></div>
+          </div>
         </div>
       </div>
     </div>

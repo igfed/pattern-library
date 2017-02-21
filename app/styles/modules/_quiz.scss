@@ -31,6 +31,20 @@
   }
 }
 
+// custom slide in animation
+// specifically for checkmark
+@keyframes slideIn {
+  0% {
+    transform: translate3d(0, -100%, 0) scale(0);
+    // transform: scale(0);
+    opacity: 0.0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 // fadeOut animation
 @keyframes fadeOut {
   from {
@@ -78,10 +92,12 @@
 // slideOutRight animation
 @keyframes slideOutRight {
   0% {
-    transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(100%, 0, 0);
+    // transform: translate3d(100%, 0, 0);
+    transform: translateX(100%);
     opacity: 0;
     // visibility: hidden;
   }
@@ -93,6 +109,7 @@
 
 .fade-out {
   animation: fadeOut 0.65s;
+  animation-delay: 0.2s;
 }
 
 .fade-in-down {
@@ -109,16 +126,18 @@
   animation-fill-mode: both;
 }
 
+.slide-in {
+  animation: slideIn 0.2s;
+}
+
 .slide-in-left {
-  animation-delay: 0.2s;
   animation: slideInLeft 0.3s;
-  // animation-fill-mode: both;
 }
 
 .slide-out-right {
-  animation-delay: 0.3s;
   animation: slideOutRight 0.3s;
   animation-fill-mode: both;
+  animation-delay: 0.3s;
 }
 
 .quiz-figure {
@@ -170,38 +189,72 @@
 }
 
 // quiz answers directive/template
-.quiz-answers {
+// going to want to un-nest some of this
+.answer {
+  margin-bottom: 20px;
 
-  .answer {
-    margin-bottom: 20px;
+  @include respond-to(medium) {
+    margin-bottom: 0;
+  }
 
-    @include respond-to(medium) {
-      margin-bottom: 0;
+  .quiz-choice {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+
+    .ring {
+      transition: all 0.2s;
+      width: 40px;
+      height: 40px;
+      transform-origin: center;
+      border-radius: 50%;
+      border: 3px solid $button-primary-color;
     }
 
-    .quiz-choice {
-      display: flex;
-      flex-direction: row;
-      position: relative;
+    .thick-border {
+      border-width: 5px;
+    }
 
-      .ring {
-        transition: all 0.2s;
-        width: 40px;
-        height: 40px;
-        transform-origin: center;
-        border-radius: 50%;
-        border: 3px solid $button-primary-color;
-      }
+    .checkmark {
+      // transition: all 1.5s cubic-bezier(0.21, 1.05, 0.73, 1.4);
+      position: absolute;
+      background: url('../images/quiz/quiz-checkmark.svg') no-repeat top left;
+      height: 40px;
+      top: -10px;
+      left: 8px;
+      width: 50px;
+    }
 
-      .choice-label {
-        color: $steps-grey;
-        // transform: translateY(25%);
-        // margin-left: 20px;
-        left: 20%;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+    .hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+.choice-label {
+  color: $steps-grey;
+  left: 20%;
+  position: absolute;
+
+  .dark-text {
+    color: $brand-color;
+  }
+
+  .answer-underline {
+    height: 1px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .highlight {
+      position: absolute;
+      background-color: $brand-color;
+    }
+
+    .highlight-underline {
+      height: 100%;
+      width: 100%;
     }
   }
 }
