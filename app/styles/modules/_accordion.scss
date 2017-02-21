@@ -53,17 +53,55 @@ $accordion-link-color: #008cba;
 }
 .is-accordion-submenu-parent[aria-expanded='true'] {
 	> a::after {
-      border: none;
-      border-right: solid 1px $darkest-color;
-      border-top: solid 1px $darkest-color;
-	    transform: rotate(-45deg);
-      top: 45%;
-      margin-top: $arrow-size/2;
-    }
+    border: none;
+    border-right: solid 1px $darkest-color;
+    border-top: solid 1px $darkest-color;
+    transform: rotate(-45deg);
+    top: 45%;
+    margin-top: $arrow-size/2;
+  }
 }
 
 .help-accordion-main {
   padding: 100px 0;
+
+  // #accordion-mortgage-afford {
+  //
+  // }
+
+  #accordion-mortgage-payments {
+    .body-copy:last-child {
+      padding-top: 20px;
+    }
+  }
+
+  #accordion-mortgage-free {
+    .large-12 {
+      @include respond-to(large) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  // #accordion-mortgage-penalty {
+  //
+  // }
+
+  #accordion-contact-satisfaction {
+    .large-12 {
+      @include respond-to(large) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  // #accordion-contact-unclaimed {
+  //
+  // }
+
+  // #accordion-contact-accessibility {
+  //
+  // }
 
   .section-title {
     padding-bottom: 8px;
@@ -80,7 +118,6 @@ $accordion-link-color: #008cba;
       border-bottom: none;
     }
   }
-
 
   .is-accordion-submenu-parent {
     border-bottom: solid 1px $accordion-grey-line;
@@ -192,6 +229,10 @@ $accordion-link-color: #008cba;
         padding-right: 1em;
       }
 
+      @include respond-to(large) {
+        padding-top: 6px;
+      }
+
       .large-12 {
         @include respond-to(large) {
           padding-left: 80px;
@@ -200,7 +241,8 @@ $accordion-link-color: #008cba;
       }
 
       .section-title {
-        padding-bottom: 8px;
+        padding-bottom: 15px;
+        padding-top: 10px;
         font-size: 14px;
 
         @include respond-to(medium) {
@@ -245,6 +287,8 @@ $accordion-link-color: #008cba;
       .table {
         border-top: solid 2px $dark-grey;
         border-bottom: solid 2px $dark-grey;
+        margin-top: 10px;
+        // margin-bottom: 0;
 
         thead {
           background-color: transparent;
