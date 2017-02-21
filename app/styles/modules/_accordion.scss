@@ -65,19 +65,31 @@ $accordion-link-color: #008cba;
 .help-accordion-main {
   padding: 100px 0;
 
-  // #accordion-mortgage-afford {
-  //
-  // }
+  #accordion-mortgage-afford {
+    .body-copy:last-child {
+
+      @include respond-to(medium) {
+        padding-top: 20px;
+      }
+
+      @include respond-to(large) {
+        padding-top: 0;
+      }
+    }
+  }
 
   #accordion-mortgage-payments {
     .body-copy:last-child {
-      padding-top: 20px;
+
+      @include respond-to(medium) {
+        padding-top: 20px;
+      }
     }
   }
 
   #accordion-mortgage-free {
     .large-12 {
-      @include respond-to(large) {
+      @include respond-to(medium) {
         margin-bottom: 16px;
       }
     }
@@ -89,10 +101,20 @@ $accordion-link-color: #008cba;
 
   #accordion-contact-satisfaction {
     .large-12 {
-      @include respond-to(large) {
+      @include respond-to(medium) {
         margin-bottom: 80px;
       }
     }
+
+    .callout-body-copy {
+      @include respond-to(medium) {
+        margin-bottom: 25px;
+      }
+      @include respond-to(large) {
+        margin-bottom: 20px;
+      }
+    }
+
   }
 
   // #accordion-contact-unclaimed {
@@ -272,6 +294,16 @@ $accordion-link-color: #008cba;
         }
       }
 
+      .faq-links-list {
+        @include respond-to(medium) {
+          padding-top: 20px;
+        }
+
+        @include respond-to(large) {
+          padding-top: 0;
+        }
+      }
+
       .consultant-contact {
         @include respond-to(medium) {
           font-size: 18px;
@@ -328,8 +360,19 @@ $accordion-link-color: #008cba;
 
       .address {
         margin: 20px 0;
+
         p {
           font-family: $font-stack-light;
+        }
+
+        @include respond-to(medium) {
+          margin-top: 30px;
+          margin-bottom: 27px;
+        }
+
+        @include respond-to(large) {
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
       }
 
