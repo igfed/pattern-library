@@ -118,6 +118,13 @@
       padding-top: 50px;
     }
 
+    .medium-10:first-child {
+      @media only screen and (max-width: 640px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
     .callout-body-copy {
       margin-bottom: 0;
 
@@ -171,27 +178,54 @@
   }
 }
 
-.base-rates.callout {
-  padding-top: 70px;
-  padding-bottom: 130px;
+.base-rates {
+  .callout {
+    padding-top: 70px;
+    padding-bottom: 15px;
 
-  .content-title {
-    margin-bottom: 65px;
-    line-height: 30px;
+    @include respond-to(medium) {
+      padding-bottom: 130px;
+    }
+
+    .content-title {
+      margin-bottom: 0;
+
+      @include respond-to(medium) {
+        margin-bottom: 65px;
+        line-height: 30px;
+      }
+    }
   }
 }
 
-.term-loans-section.callout {
-  .variable-rates {
-
-    @include respond-to(medium) {
-      margin-top: 30px;
-      margin-bottom: 30px;
+.variation-three {
+  .rate-section:first-child {
+    .rate-block {
+      padding-bottom: 30px;
     }
+  }
+}
 
-    @include respond-to(large) {
-      margin-top: 90px;
-      margin-bottom: 40px;
+.term-loans-section {
+  .callout {
+    .variable-rates {
+
+      @include respond-to(medium) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      @include respond-to(large) {
+        margin-top: 90px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .large-body-copy {
+    @media only screen and (max-width: 640px) {
+      font-family: $font-stack-light;
+      font-size: 22px;
     }
   }
 }
@@ -209,38 +243,47 @@
   }
 }
 
-.variation-six.callout {
-
-  @include respond-to(medium) {
-    padding-bottom: 80px;
-  }
-
-  @include respond-to(large) {
-    padding-bottom: 120px;
-  }
-
-  .medium-4 {
+.variation-six {
+  .callout {
 
     @include respond-to(medium) {
-      margin-left: 33.3%;
+      padding-bottom: 80px;
     }
 
     @include respond-to(large) {
-      margin-left: 0;
-    }
-  }
-
-  .rates {
-    .content-title {
-      margin-bottom: 25px;
+      padding-bottom: 120px;
     }
 
-    .variable-rates {
+    .medium-4 {
+
       @include respond-to(medium) {
-        margin-top: 20px;
+        margin-left: 33.3%;
       }
+
       @include respond-to(large) {
-        margin-top: 70px;
+        margin-left: 0;
+      }
+    }
+
+    .rates {
+      .content-title {
+        margin-bottom: 25px;
+      }
+
+      .variable-rates, .fixed-rates {
+        @media only screen and (max-width: 640px) {
+          font-family: $font-stack-light;
+          font-size: 22px;
+        }
+      }
+
+      .variable-rates {
+        @include respond-to(medium) {
+          margin-top: 20px;
+        }
+        @include respond-to(large) {
+          margin-top: 70px;
+        }
       }
     }
   }
