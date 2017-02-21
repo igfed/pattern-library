@@ -68,10 +68,7 @@ $accordion-link-color: #008cba;
   .section-title {
     padding-bottom: 8px;
     font-family: $font-stack-sc;
-
-    @include respond-to(medium) {
-      font-size: 16px;
-    }
+    font-size: 16px;
   }
 
   .accordion {
@@ -173,10 +170,10 @@ $accordion-link-color: #008cba;
     .accordion-title.accordion-menu-section-title {
       font-family: $font-stack-sc;
       text-transform: lowercase;
-      font-size: 18px;
+      font-size: 14px;
 
       @include respond-to(medium) {
-        font-size: 20px;
+        font-size: 24px;
       }
 
       @include respond-to(large) {
@@ -204,6 +201,7 @@ $accordion-link-color: #008cba;
 
       .section-title {
         padding-bottom: 8px;
+        font-size: 14px;
 
         @include respond-to(medium) {
           font-size: 18px;
@@ -211,8 +209,24 @@ $accordion-link-color: #008cba;
       }
 
       .callout-body-copy {
+        font-size: 20px;
+
         @include respond-to(medium) {
           font-size: 28px;
+        }
+      }
+
+      .large-body-copy {
+        font-family: $font-stack-light;
+        font-size: 20px;
+
+        @include respond-to(medium) {
+          font-size: 20px;
+          font-family: $font-stack;
+        }
+
+        @include respond-to(large) {
+          font-size: 22px;
         }
       }
 
@@ -224,7 +238,7 @@ $accordion-link-color: #008cba;
 
         @include respond-to(large) {
           font-size: 18px;
-          font-family: $font-stack;
+          font-family: $font-stack-light;
         }
       }
 
@@ -270,6 +284,9 @@ $accordion-link-color: #008cba;
 
       .address {
         margin: 20px 0;
+        p {
+          font-family: $font-stack-light;
+        }
       }
 
       .margin-bottom-20 {
@@ -278,7 +295,11 @@ $accordion-link-color: #008cba;
 
       .body-copy-light {
         font-family: $font-stack-light;
-        font-size: 18px;
+        font-size: 16px;
+
+        @include respond-to(medium) {
+          font-size: 18px;
+        }
       }
     }
 
