@@ -1,7 +1,7 @@
 <!-- removed ng-classes while figuring out other styling -->
 <div class="row quiz-answers" data-equalizer data-equalize-on="medium">
   <div ng-repeat="answer in question.answers track by $index">
-    <div class="answer medium-5 medium-offset-1 large-offset-0 columns" data-equalizer-watch>
+    <div class="answer medium-5 medium-offset-1 large-4 large-offset-0 columns" data-equalizer-watch>
       <div
         class="quiz-choice"
         id="c_{{$index}}"
@@ -23,12 +23,7 @@
             'fade-in': enterAnimation && !leaveAnimation
           }"
         >
-          <div class="ring"
-            ng-class="{
-              'thick-border': $index == selected
-            }"
-          >
-          </div>
+          <div class="ring"></div>
           <div
             class="checkmark"
             ng-class="{
@@ -45,63 +40,14 @@
             'slide-in-left': enterAnimation && !leaveAnimation
           }"
         >
-          <span class="sub-title"
-            ng-class="{
-              'dark-text': $index == selected
-            }"
-          >{{answer.answer}}</span>
+          <span class="sub-title">
+            {{answer.answer}}
+          </span>
           <div class="answer-underline">
-            <div
-              class="highlight"
-              ng-class="{
-                'highlight-underline': $index == selected,
-                'fade-in-left': $index == selected
-              }"
-            ></div>
+            <div class="highlight"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="quiz-choice-selector">
-    <div class="c-break">
-        <div ng-repeat="answer in question.answers track by $index">
-            <div class="quiz-choice"
-                 id="c_{{$index}}"
-ng-class="{
-'selected': $index == selected,
-'inactive': $index != selected && selected != '0',
-'disabled': disableInputs,
-'isTouch': isTouch,
-'hover': hover
-}"
-ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-click="selectAnswer({q: currentPage, a: $index})">
-
-                <div class="animated  choice-icon"
-                        ng-class="{
-'fadeOut': leaveAnimation && !enterAnimation,
-'fadeIn': enterAnimation && !leaveAnimation
-}">
-                    <div class="ring"></div>
-                    <div class="checkmark"></div>
-                </div>
-                <div class="choice-label-hold">
-                    <div class="choice-label">
-                        <div class="animated  choice-txt"
-                        ng-class="{
-'slideOutRight': leaveAnimation && !enterAnimation,
-'slideInLeft': enterAnimation && !leaveAnimation
-}">
-                            <span>{{answer.answer}}</span>
-                            <div class="choice-underline">
-                                <div class="highlight"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->

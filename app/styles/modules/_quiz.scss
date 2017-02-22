@@ -216,42 +216,39 @@
   @include respond-to(medium) {
     margin-bottom: 30;
   }
+}
 
-  .quiz-choice {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
+.quiz-choice {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
 
-    .ring {
-      transition: all 0.2s;
-      width: 40px;
-      height: 40px;
-      transform-origin: center;
-      border-radius: 50%;
-      border: 3px solid $button-primary-color;
-    }
+  .ring {
+    transition: all 0.2s;
+    width: 40px;
+    height: 40px;
+    transform-origin: center;
+    border-radius: 50%;
+    border: 3px solid $button-primary-color;
+  }
 
-    .thick-border {
-      border-width: 5px;
-    }
+  .checkmark {
+    position: absolute;
+    background: url('../images/quiz/quiz-checkmark.svg') no-repeat top left;
+    height: 40px;
+    top: -10px;
+    left: 8px;
+    width: 50px;
+  }
 
-    .checkmark {
-      position: absolute;
-      background: url('../images/quiz/quiz-checkmark.svg') no-repeat top left;
-      height: 40px;
-      top: -10px;
-      left: 8px;
-      width: 50px;
-    }
-
-    .hidden {
-      visibility: hidden;
-    }
+  .hidden {
+    visibility: hidden;
   }
 }
 
 .choice-label {
+  transition: all 0.3s;
   color: $steps-grey;
   left: 20%;
   position: absolute;
@@ -270,15 +267,31 @@
     position: relative;
     overflow: hidden;
 
+    @include respond-to(medium) {
+      height: 3px;
+    }
+
     .highlight {
       position: absolute;
       background-color: $brand-color;
     }
+  }
+}
 
-    .highlight-underline {
-      height: 100%;
-      width: 100%;
-    }
+// changing styling when ng-classes added
+.hover, .selected {
+
+  .ring {
+    border-width: 5px;
+  }
+
+  .choice-label {
+    color: $brand-color;
+  }
+
+  .highlight {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -303,7 +316,7 @@
     .tip-container {
       margin-top: 40px;
 
-      @include respond-to(medium) {
+      @include respond-to(large) {
         padding-right: 40px;
         padding-left: 40px;
       }
