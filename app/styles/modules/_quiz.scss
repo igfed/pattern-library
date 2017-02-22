@@ -1,5 +1,3 @@
-// defining animations
-
 // zoomIn animation
 @keyframes zoomIn {
   0% {
@@ -31,7 +29,7 @@
   }
 }
 
-// custom slide in animation
+// slideIn animation
 // specifically for checkmark
 @keyframes slideIn {
   0% {
@@ -104,14 +102,11 @@
 // slideOutRight animation
 @keyframes slideOutRight {
   0% {
-    // transform: translate3d(0, 0, 0);
     transform: translateX(0);
   }
   100% {
-    // transform: translate3d(100%, 0, 0);
     transform: translateX(100%);
     opacity: 0;
-    // visibility: hidden;
   }
 }
 
@@ -157,6 +152,7 @@
   animation-delay: 0.3s;
 }
 
+// custom figure styling for quiz section
 .quiz-figure {
   margin-bottom: 40px;
 
@@ -197,7 +193,6 @@
     margin: 0 20px;
   }
 
-  // confirm styling - creating new text style?
   .current {
     font-weight: bold;
     color: $brand-color;
@@ -209,12 +204,11 @@
 }
 
 // quiz answers directive/template
-// going to want to un-nest some of this
 .answer {
   margin-bottom: 20px;
 
   @include respond-to(medium) {
-    margin-bottom: 30;
+    margin-bottom: 30px;
   }
 }
 
@@ -257,23 +251,24 @@
     left: 25%;
   }
 
-  .dark-text {
-    color: $brand-color;
-  }
-
-  .answer-underline {
-    height: 1px;
-    width: 100%;
+  .sub-title {
+    display: inline-block;
     position: relative;
-    overflow: hidden;
 
-    @include respond-to(medium) {
-      height: 3px;
-    }
-
-    .highlight {
+    &:before {
+      display: block;
       position: absolute;
+      content: ' ';
+      left: 0;
+      right: 100%;
+      height: 1px;
+      top: calc(100% - .05rem);
       background-color: $brand-color;
+      transition: right .15s ease-out .15s;
+
+      @include respond-to(medium) {
+        height: 3px;
+      }
     }
   }
 }
@@ -289,66 +284,75 @@
     color: $brand-color;
   }
 
-  .highlight {
-    height: 100%;
-    width: 100%;
+  .sub-title {
+    &:before {
+      left: 0;
+      right: 0;
+      transition: right .15s ease-out .15s;
+    }
   }
 }
 
-// report directive
+// quiz report directive
 .quiz-report {
   position: relative;
   width: 100%;
   height: 100%;
+}
 
-  .report-nav {
-    float: right;
+.report-nav {
+  float: right;
 
-    @include respond-to(medium) {
-      margin-bottom: 50px;
+  @include respond-to(medium) {
+    margin-bottom: 50px;
+  }
+}
+
+.report-body {
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  .tip-container {
+    margin-top: 40px;
+
+    @include respond-to(large) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    img {
+      @include respond-to(medium) {
+        float: none;
+      }
+    }
+
+    h3 {
+      margin: 20px 0 30px 0;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.report-footer {
+  border-top: 1px solid #d4d4d4;
+  padding-top: 30px;
+  margin-top: 40px;
+
+  @include respond-to(medium) {
+    border-top: none;
+    margin-top: 20px;
+  }
+
+  .callout-body-copy {
+    &:first-letter {
+      text-transform: uppercase;
     }
   }
 
-  .report-body {
-    padding-top: 30px;
-    padding-bottom: 10px;
-
-    .tip-container {
-      margin-top: 40px;
-
-      @include respond-to(large) {
-        padding-right: 40px;
-        padding-left: 40px;
-      }
-
-      img {
-        @include respond-to(medium) {
-          float: none;
-        }
-      }
-
-      h3 {
-        margin: 20px 0 30px 0;
-
-        &:first-letter {
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .report-footer {
-      border-top: 1px solid #d4d4d4;
-      padding-top: 30px;
-      margin-top: 40px;
-
-      @include respond-to(medium) {
-        border-top: none;
-        margin-top: 20px;
-      }
-
-      .report-button {
-        margin-top: 30px;
-      }
-    }
+  .report-button {
+    margin-top: 30px;
   }
 }
