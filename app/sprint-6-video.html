@@ -11,8 +11,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/foundation-sites/dist/css/foundation.css" />
-    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="../bower_components/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -20,106 +20,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <style>
-        .alert-box {
-            padding: 1.3rem;
-            border-width: 0 0 0 0.35rem;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-        }
-
-        .alert-box.radius {
-            border-radius: 0.6rem;
-        }
-
-        .alert-box.primary {
-            border-left-color: #446cb3;
-            background-color: #8da6d4;
-        }
-
-        .alert-box.primary strong {
-            color: #446cb3;
-        }
-
-        .alert-box.secondary {
-            border-left-color: #adb2bd;
-            background-color: #ced1d7;
-        }
-
-        .alert-box.secondary strong {
-            color: #adb2bd;
-        }
-
-        .alert-box.info {
-            border-left-color: #89c4f4;
-            background-color: #b8dcf8;
-        }
-
-        .alert-box.info strong {
-            color: #89c4f4;
-        }
-
-        .alert-box.alert {
-            border-left-color: #f22613;
-            background-color: #f77d71;
-        }
-
-        .alert-box.alert strong {
-            color: #f22613;
-        }
-
-        .alert-box.success {
-            border-left-color: #87d37c;
-            background-color: #b7e5b0;
-        }
-
-        .alert-box.success strong {
-            color: #87d37c;
-        }
-
-        .alert-box.warning {
-            border-left-color: #f89406;
-            background-color: #fbbf69;
-        }
-
-        .alert-box.warning strong {
-            color: #f89406;
-        }
-
-        .ig-evt1, .ig-evt2 {
-            margin: 30px 0;
-            padding: 30px 25px 200px;
-            background: #fbfbfb;
-            border: 3px solid #fff;
-        }
-
-        a.button {
-            font-size: 40px;
-            margin: 50px auto 0;
-            text-align: center;
-            display: block;
-            padding: 20px 0;
-        }
-
-        a.button:focus {
-            background: #0ED59A;
-        }
-
-        a.button:active {
-            background: transparent;
-        }
-
-        .ig-evt2 h2 {
-            margin-bottom: 50px;
-        }
-
-        p.alert-box.alert {
-            font-size: 25px;
-            border-radius: 5px;
-            padding: 5px 15px;
-            margin-bottom: 5px;
-        }
-    </style>
 </head>
 <body id="top">
 <!--[if lt IE 10]>
@@ -217,19 +117,54 @@
 
 
 <main role="main" id="main-content">
-    <div class="row">
-        <!-- Component 1 -->
-        <div class="ig-evt1 medium-6 columns">
-            <h2>I am a Component (ig-evt1)</h2>
-            <a href="#" class="button message" role="button">Say 'Hello'</a>
-        </div>
 
-        <!-- Component 2 is Listening to Component 1 -->
-        <div class="ig-evt2 medium-6 columns">
-            <h2>I am another Component (ig-evt2)</h2>
-        </div>
+    <div class="row ig-video">
+        <div class="medium-4 columns video-subsection">
+            <div class="video-container">
+                <span class="video-overlay"></span>
+                <div class="video-container-responsive">
+                    <!-- Start of Brightcove Player -->
+                    <div style="display:none"></div>
+                    <!--
+                    By use of this code snippet, I agree to the Brightcove Publisher T and C
+                    found at https://accounts.brightcove.com/en/terms-and-conditions/.
+                    -->
+                    <object id="myExperience4692154245001" class="BrightcoveExperience">
+                        <param name="htmlFallback" value="true"/>
+                        <param name="bgcolor" value="#FFFFFF "/>
+                        <param name="width" value="100%"/>
+                        <param name="height" value="100%"/>
+                        <param name="playerID" value="4721138328001"/>
+                        <param name="playerKey" value="AQ~~,AAADjafw_sk~,383Vbs13HVAXHnb_e-BAb9SMMY6kMHnV"/>
+                        <param name="isVid" value="true"/>
+                        <param name="isUI" value="true"/>
+                        <param name="dynamicStreaming" value="true"/>
+                        <param name="wmode" value="opaque"/>
+                        <param name="@videoPlayer" value="4219153214001"/>
+                        <param name="includeAPI" value="true"/>
+                        <param name="templateLoadHandler" value="onTemplateLoad"/>
+                        <param name="templateReadyHandler" value="onTemplateReady"/>
+                    </object>
 
+                    <!--<video data-video-id="4093372393001"-->
+                    <!--data-account="1507807800001"-->
+                    <!--data-player="H15p1gTkg"-->
+                    <!--data-embed="default"-->
+                    <!--data-application-id-->
+                    <!--class="video-js"-->
+                    <!--controls></video>-->
+                    <!--<script src="//players.brightcove.net/1507807800001/H15p1gTkg_default/index.min.js"></script>-->
+                    data-video-id: The ID of the Video Cloud video
+                    <!-- End of Brightcove Player -->
+                </div>
+            </div>
+            <div class="header tp_03a">Business Owner: Pierre Senecal</div>
+            <p class="tp_09a">As a former business owner, Pierre recognized the importance of the planning
+                process, and delivering a total solution to clients. This is what led him to Investors
+                Group.</p>
+        </div>
     </div>
+
 </main>
 
 <footer class="site-footer" role="contentinfo">
@@ -330,15 +265,15 @@
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
-<script src="bower_components/jquery-validation/dist/additional-methods.js"></script>
-<script src="bower_components/what-input/dist/what-input.js"></script>
-<script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-<script src="bower_components/slick-carousel/slick/slick.js"></script>
-<script src="bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
-<script src="bower_components/eventemitter3/index.js"></script>
-<script src="bower_components/mustache.js/mustache.js"></script>
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+<script src="../bower_components/jquery-validation/dist/additional-methods.js"></script>
+<script src="../bower_components/what-input/dist/what-input.js"></script>
+<script src="../bower_components/foundation-sites/dist/js/foundation.js"></script>
+<script src="../bower_components/slick-carousel/slick/slick.js"></script>
+<script src="../bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+<script src="../bower_components/eventemitter3/index.js"></script>
+<script src="../bower_components/mustache.js/mustache.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

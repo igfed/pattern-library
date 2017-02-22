@@ -7,7 +7,8 @@
     "foundation-sites": "^6.2.4",
     "slick-carousel": "slick.js#^1.6.0",
     "typeahead.js": "^0.11.1",
-    "eventemitter3": "^2.0.2"
+    "eventemitter3": "^2.0.2",
+    "mustache.js": "mustache#^2.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -38,6 +39,11 @@
     "eventemitter3": {
       "main": [
         "index.js"
+      ]
+    },
+    "mustache.js": {
+      "main": [
+        "mustache.js"
       ]
     }
   }
