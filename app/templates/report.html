@@ -4,36 +4,46 @@
       {{copy.btn_restart}}
     </a>
   </div>
+  <div class="row">
+    <div class="medium-9 medium-centered columns">
+      <h1 class="callout-title text-center">
+        {{copy.yourFinancialOpportunities}}
+      </h1>
+    </div>
+  </div>
   <div class="report-body">
-    <h2 class="callout-title text-center">
-      {{copy.yourFinancialOpportunities}}
-    </h2>
-    <div class="tip-container" ng-repeat="tip in tips.tips">
-      <figure class="wide-figure">
-        <img class="image-circle" src="{{tip.imageURL}}" alt="tip image">
-        <figcaption class="text-left">
-          <h3 class="callout-title">
-            {{tip.type}}
-          </h3>
-          <p class="tip-text">
-            {{tip.tip}}
-          </p>
-        </figcaption>
-      </figure>
-      <div>
-        <a href="{{tip.url}}" class="tertiary-cta">
-          {{copy.learn_more}}
-        </a>
+    <div class="row">
+      <div class="tip-container medium-4 columns" ng-repeat="tip in tips.tips">
+        <figure class="wide-figure">
+          <img class="image-circle" src="{{tip.imageURL}}" alt="tip image">
+          <figcaption class="text-left">
+            <h3 class="callout-title">
+              {{tip.type}}
+            </h3>
+            <p class="tip-text">
+              {{tip.tip}}
+            </p>
+          </figcaption>
+        </figure>
+        <div>
+          <a href="{{tip.url}}" class="tertiary-cta">
+            {{copy.learn_more}}
+          </a>
+        </div>
       </div>
     </div>
-    <div class="report-footer">
-      <h3 class="content-title text-center">
-        {{copy.beyondTheBank}}
-      </h3>
-      <div class="report-button text-center">
-        <a href="#" class="button">
-          {{copy.btn_contact}}
-        </a>
+    <div class="row">
+      <div class="medium-9 medium-centered columns">
+        <div class="report-footer">
+          <h3 class="content-title text-center">
+            {{copy.beyondTheBank}}
+          </h3>
+          <div class="report-button text-center">
+            <a href="#" class="button">
+              {{copy.btn_contact}}
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

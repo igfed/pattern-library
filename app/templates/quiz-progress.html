@@ -1,9 +1,12 @@
 <div class="quiz-progress text-center">
   <span ng-repeat="page in questions">
-    <span class="content-title digit" ng-class="{
-    'current': $index == currentPage,
-    'answered': $index <= currentPage
-    }">
+    <span
+      class="content-title digit"
+      ng-class="{
+        'current': $index == currentPage,
+        'answered': $index <= currentPage
+      }"
+      >
       <span class="fade-in">
         {{$index+1}}
       </span>
