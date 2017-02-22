@@ -76,6 +76,10 @@ $accordion-link-color: #008cba;
         padding-top: 0;
       }
     }
+
+    .large-12 {
+      margin-bottom: 20px;
+    }
   }
 
   #accordion-mortgage-payments {
@@ -83,6 +87,14 @@ $accordion-link-color: #008cba;
 
       @include respond-to(medium) {
         padding-top: 20px;
+      }
+    }
+
+    .large-12 {
+      margin-bottom: 20px;
+
+      @include respond-to(medium) {
+        margin-bottom: 40px;
       }
     }
   }
@@ -95,15 +107,23 @@ $accordion-link-color: #008cba;
     }
   }
 
-  // #accordion-mortgage-penalty {
-  //
-  // }
+  #accordion-mortgage-penalty {
+    .large-12 {
+      margin-bottom: 35px;
+
+      @include respond-to(medium) {
+        margin-bottom: 40px;
+      }
+    }
+  }
 
   #accordion-contact-satisfaction {
     .large-12 {
-      @include respond-to(medium) {
-        margin-bottom: 80px;
-      }
+      margin-bottom: 80px;
+
+      // @include respond-to(medium) {
+      //   margin-bottom: 80px;
+      // }
     }
 
     .callout-body-copy {
@@ -126,9 +146,14 @@ $accordion-link-color: #008cba;
   // }
 
   .section-title {
-    padding-bottom: 8px;
+    padding-bottom: 35px;
     font-family: $font-stack-sc;
     font-size: 16px;
+
+    @include respond-to(medium) {
+      padding-bottom: 8px;
+    }
+
   }
 
   .accordion {
@@ -245,10 +270,13 @@ $accordion-link-color: #008cba;
       border: none;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 0;
+
 
       @include respond-to(medium) {
         padding-left: 1em;
         padding-right: 1em;
+        padding-top: 16px;
       }
 
       @include respond-to(large) {
@@ -264,11 +292,14 @@ $accordion-link-color: #008cba;
 
       .section-title {
         padding-bottom: 15px;
-        padding-top: 10px;
+        padding-top: 0;
         font-size: 14px;
+        margin-bottom: 0;
 
         @include respond-to(medium) {
           font-size: 18px;
+          margin-bottom: 40px;
+          padding-top: 10px;
         }
       }
 
@@ -319,8 +350,13 @@ $accordion-link-color: #008cba;
       .table {
         border-top: solid 2px $dark-grey;
         border-bottom: solid 2px $dark-grey;
-        margin-top: 10px;
-        // margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 48px;
+
+        @include respond-to(medium) {
+          margin-top: 10px;
+          margin-bottom: 16px;
+        }
 
         thead {
           background-color: transparent;
