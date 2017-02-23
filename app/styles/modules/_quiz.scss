@@ -245,6 +245,9 @@
   transition: all 0.3s;
   color: $steps-grey;
   left: 20%;
+  top: 0;
+  right: 0;
+  bottom: 0;
   position: absolute;
 
   @include respond-to(medium) {
