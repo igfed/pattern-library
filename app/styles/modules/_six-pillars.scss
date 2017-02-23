@@ -1,0 +1,23 @@
+.six-pillars.french {
+  figcaption {
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    @include respond-to(medium) {
+      margin-top: 40px;
+    }
+  }
+  span.tertiary-cta {
+    display: inline;
+
+    @include respond-to(large) {
+      // font-size: 14px;
+      // white-space: nowrap;
+      // letter-spacing: 0;
+      // -webkit-box-decoration-break: clone;
+      // box-decoration-break: clone;
+      // background-color: lavender;
+    }
+
+  }
+}
