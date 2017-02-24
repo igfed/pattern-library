@@ -140,6 +140,16 @@ small strong, .legal-copy-bold {
 	text-transform: lowercase;
 }
 
+// small styling not specified in typography guide
+// but specified in screen reviews where this class used
+.more-callout-title-alternate-bold {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-family: $font-stack-semibold;
+  color: $brand-color;
+  line-height: 1.1em;
+}
+
 /*24c*/
 .hyperlink {
 	font-size: 16px;
@@ -221,6 +231,12 @@ sup {
 		font-family: $font-stack;
 		color: $brand-color;
 	}
+
+  /*17b*/
+  .more-callout-title-alternate-bold {
+    font-size: 44px;
+    font-size: 2.75rem;
+  }
 }
 
 @include respond-to(large) {

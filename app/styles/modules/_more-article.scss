@@ -41,38 +41,6 @@ $link-hover: #0BAB7B;
 
 .bg-more-section {
   background-color: $more-background-yellow;
-  // padding-bottom: 20px;
-}
-
-// specific typography for More section
-// check if this is still being used
-.more-callout-title {
-	font-size: 28px;
-	font-size: 1.75rem;
-	font-family: $font-stack-semibold;
-	line-height: 1.1em;
-
-  @include respond-to(medium) {
-    font-size: 40px;
-    font-size: 2.5rem;
-  }
-
-  @include respond-to(large) {
-    font-size: 44px;
-  }
-}
-
-// more-article page
-
-// includes styling for separator line
-.separator-line-container {
-  padding-bottom: 25px;
-  padding-top: 25px;
-
-  @include respond-to(medium) {
-    padding-bottom: 35px;
-    padding-top: 35px;
-  }
 }
 
 // includes styling for articles with right-aligned images
@@ -97,6 +65,10 @@ $link-hover: #0BAB7B;
 
   a {
     color: $button-primary-color;
+
+    &:hover {
+      color: $link-hover;
+    }
   }
 
   p {
@@ -108,11 +80,6 @@ $link-hover: #0BAB7B;
 
   .offset-list {
     padding-left: 30px;
-  }
-
-  .list-source-footer {
-    // need to define variable for this
-    color: #a4a39c;
   }
 
   blockquote {
@@ -128,74 +95,59 @@ $link-hover: #0BAB7B;
       width: 30%;
     }
   }
+}
 
-  .author-pic-container {
-    padding-bottom: 35px;
-    margin-top: 20px;
-    overflow: auto;
+.author-pic-container {
+  padding-bottom: 35px;
+  margin-top: 20px;
+  overflow: auto;
 
-    .author-pic {
-      width: 140px;
-      margin-right: 14px;
-      float: left;
+  .author-pic {
+    width: 140px;
+    margin-right: 14px;
+    float: left;
 
-      @include respond-to(medium) {
-        width: 100%;
-        margin-bottom: 10px;
-      }
+    @include respond-to(medium) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .author-description {
+    margin: 0 auto;
+    display: block;
+
+    @include respond-to(large) {
+      color: #9c9c96;
     }
 
-    .author-description {
-      margin: 0 auto;
-      display: block;
-
-      @include respond-to(large) {
-        color: #9c9c96;
-      }
+    .author-title {
+      text-transform: uppercase;
+      padding-bottom: 20px;
     }
   }
 }
 
+.byline {
+  text-transform: uppercase;
 
-// more-image-carousel
-.more-image-carousel {
-  padding-bottom: 20px;
+  @include respond-to(large) {
+    font-size: 18px;
+    font-size: 1.125rem;
+  };
+}
 
-  // overriding default carousel button placement
-  // to account for figure captions
-  button {
-    top: 35%;
-    @include respond-to(medium) {
-      top: 38.5%;
-    }
-  }
+// some offset lists have source info at the bottom
+// the text is in a shade of gray not used elsewehre on the site
+.list-source-footer {
+  color: #a4a39c;
+  margin: 20px auto;
 
-  .carousel-figure {
-    margin-bottom: 20px;
+  a {
+    color: $button-primary-color;
 
-    .image-with-caption {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-
-      // this is a strange css hack
-      // that fixes some flexbox bugs on IE 10 and above
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        display: block;
-        text-align: center;
-      }
-
-      .image-caption {
-        color: $image-caption-gray;
-        align-self: flex-start;
-        text-transform: uppercase;
-
-        @include respond-to(medium) {
-          align-self: center;
-          text-align: center;
-        }
-      }
+    &:hover {
+      color: $link-hover;
     }
   }
 }
