@@ -82,12 +82,24 @@ Styleguide 3.1
 */
 .site-header {
 	border-bottom: 1px solid $grey;
-	
+
+	@include respond-to(large) {
+		margin-top: 4px;
+	}
+
   .top-bar-title {
     width: 100%;
     padding: 0.5rem 0;
   }
-  .home-link { margin: 0; }
+  .home-link {
+		margin: 0;
+
+		.image-logo {
+			@include respond-to(large) {
+				margin-top: 3px;
+			}
+		}
+	}
 
   @include respond-to(large) {
     padding-top: 36px;
@@ -117,7 +129,6 @@ Styleguide 3.1
   right: 0;
   z-index: 1000;
   background: $lightest-color;
-
   transform: translate3d(0,0,0);
   transform-origin: top right;
   opacity: 1;
@@ -125,6 +136,7 @@ Styleguide 3.1
 
   .menu {
     > li {
+			margin-bottom: 0;
       @include respond-to(large) {
         // Divider between services | Advice and Client support | <lang toggle>
         &:nth-child(3) {
@@ -144,6 +156,7 @@ Styleguide 3.1
         }
       }
       > a {
+				font-family: $font-stack-sc;
         text-transform: uppercase;
         border-bottom: 1px solid $light-grey;
         padding-top: 1.3rem;
@@ -153,12 +166,14 @@ Styleguide 3.1
         font-size: 0.875rem;
         margin: 0;
         @include respond-to(large) {
+					height: 40px;
           margin: 0 0.875rem;
+					font-family: $font-stack;
         }
         &:hover, &:focus {
           background: $light-grey;
 
-          &:before {                  
+          &:before {
             content: '';
             position: absolute;
             border-left: 2px solid $brand-color;
@@ -169,13 +184,13 @@ Styleguide 3.1
         }
 
         @include respond-to(large) {
-          padding: 0.5rem 1rem;
+          padding: 0.75rem 1rem;
           border-bottom: none;
 
           &:hover, &:focus {
             background: transparent;
 
-            &:before {                  
+            &:before {
               border-bottom: 3px solid $brand-color;
               height: 0;
               top: auto;
@@ -268,17 +283,17 @@ Styleguide 3.1
           text-transform: none;
           // margin: 0 1rem;
           margin: 0;
-          padding-left: 1rem;
+          padding-left: 25px;
           padding-right: 1rem;
           border-color: $light-grey;
           &:hover, &:focus {
             background-color: $light-grey;
-            &:before {                  
+            &:before {
               content: '';
               border-left: 2px solid $brand-color;
               height: 14px;
-              top: 0.5rem;
-              left: 0.5rem;
+              top: 0.75rem;
+              left: 0.75rem;
               border-bottom: none;
             }
           }
@@ -352,7 +367,7 @@ Styleguide 3.1
           text-transform: none;
           padding: 0.7rem 1rem;
           &:hover, &:focus {
-            &:before {                  
+            &:before {
               bottom: -1px;
             }
           }
@@ -364,9 +379,8 @@ Styleguide 3.1
     @include respond-to(large) {
       background: $light-grey;
       li > a {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        border-color: $grey;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         &:hover, &:focus {
           background: $lightest-color;
         }
