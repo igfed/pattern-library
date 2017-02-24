@@ -10,8 +10,13 @@
     "node": true
   },
   "globals": {
-    "Foundation": true
-    },
+    "Foundation": true,
+    "ScrollMan": true,
+    "Bloodhound": true,
+    "brightcove": true,
+    "Mustache": true,
+    "EventEmitter": true
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "impliedStrict": true,
@@ -46,7 +51,7 @@
     "no-iterator": 2,
     "no-loop-func": 2,
     "no-multi-str": 2,
-    "no-new": 2,
+    "no-new": 1,
     "no-plusplus": 0,
     "no-proto": 2,
     "no-script-url": 2,
@@ -59,6 +64,7 @@
     "semi": [0, "never"],
     "strict": [1, "global"],
     "valid-typeof": 2,
-    "wrap-iife": 0
+    "wrap-iife": [2, "inside"]
   }
 }
+
