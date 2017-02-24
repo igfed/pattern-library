@@ -169,7 +169,7 @@ Styleguide 3.1
         font-size: 0.875rem;
         margin: 0;
         @include respond-to(large) {
-					height: 40px;
+					// height: 40px;
           margin: 0 0.875rem;
 					font-family: $font-stack;
         }
@@ -198,14 +198,14 @@ Styleguide 3.1
               height: 0;
               top: auto;
               left: 1rem;
-              bottom: -10px;
+              bottom: -9px;
               right: 1rem;
             }
           }
         }
         &.site-header-cta {
           @include respond-to(large) {
-            padding: 7px 1.25em 10px;
+            padding: 3px 1.25em 6px;
             background-color: transparent;
             color: $darkest-color;
             text-align: center;
@@ -472,7 +472,7 @@ Styleguide 3.1
   left: 50%;
   right: auto;
   transform: translate3d(-50%,0,0);
-  top: 44px;
+  top: 50px;
 	min-width: 180px;
 }
 .aux-nav .dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
