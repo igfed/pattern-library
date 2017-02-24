@@ -1,0 +1,50 @@
+<!-- removed ng-classes while figuring out other styling -->
+<div class="row quiz-answers" data-equalizer data-equalize-on="medium">
+  <div ng-repeat="answer in question.answers track by $index">
+    <div class="answer medium-5 medium-offset-1 large-4 large-offset-0 columns" data-equalizer-watch>
+      <div
+        class="quiz-choice"
+        id="c_{{$index}}"
+        ng-class="{
+          'selected': $index == selected,
+          'inactive': $index !== selected && selected !='0',
+          'disabled': disableInputs,
+          'isTouch': isTouch,
+          'hover': hover
+        }"
+        ng-mouseenter="hover = true"
+        ng-mouseleave="hover = false"
+        ng-click="selectAnswer({q: currentPage, a: $index})"
+      >
+        <div
+          class="choice-icon left"
+          ng-class="{
+            'fade-out': leaveAnimation && !enterAnimation,
+            'fade-in': enterAnimation && !leaveAnimation
+          }"
+        >
+          <div class="ring"></div>
+          <div
+            class="checkmark"
+            ng-class="{
+              'slide-in': $index == selected,
+              'hidden': $index !== selected
+            }"
+          >
+          </div>
+        </div>
+        <div
+          class="choice-label"
+          ng-class="{
+            'slide-out-right': leaveAnimation && !enterAnimation,
+            'slide-in-left': enterAnimation && !leaveAnimation
+          }"
+        >
+          <span class="sub-title">
+            {{answer.answer}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
