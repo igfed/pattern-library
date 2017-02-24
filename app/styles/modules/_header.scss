@@ -123,7 +123,7 @@ Styleguide 3.1
 
 .main-navigation {
   position: fixed;
-  top: 51px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -133,6 +133,9 @@ Styleguide 3.1
   transform-origin: top right;
   opacity: 1;
   transition: 500ms transform ease-out, 300ms opacity ease-out;
+	@include respond-to(large) {
+		top: 51px;
+	}
 
   .menu {
     > li {
@@ -317,6 +320,14 @@ Styleguide 3.1
     height: auto;
     overflow-x: visible;
   }
+
+	.close-button-circle {
+		padding: 0.7rem 1rem 2.5rem 1rem;
+
+		img {
+			height: 25px;
+		}
+	}
 }
 
 .main-navigation-close-toggle {
