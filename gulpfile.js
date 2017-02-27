@@ -54,9 +54,9 @@ function lint(files, options) {
 
 gulp.task('lint', () => {
   return lint('app/scripts/modules/*.js', {
-    fix: true
+    fix: false
   })
-    .pipe(gulp.dest('app/scripts'));
+    .pipe(gulp.dest('app/scripts/modules'));
 });
 
 gulp.task('lint:test', () => {

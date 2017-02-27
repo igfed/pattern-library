@@ -1,51 +1,41 @@
 .ig-video {
-
-  .video-overlay {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    content: "";
-    z-index: 100;
-    width: 478px;
-    height: 270px;
-    background-image: url('../images/video_mask_1.jpg');
-    background-repeat: no-repeat;
-  }
+  margin-top: 50px;
 
   .video-container {
     width: 100%;
+    max-width: 768px;
     position: relative;
-    margin-bottom: 1.9rem;
-    margin-top: 0;
-    background-color: black;
-    overflow: hidden;
+    margin: 20px auto;
+    left: 0;
+    right: 0;
+    top: 0
+  }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-    }
+  .video-section {
+    background-color: #faf7e6;
+    position: relative;
+    padding-bottom: 10%
+  }
 
-    .video-container-responsive {
-      height: 0;
-      margin: auto;
-      padding-bottom: 56.25%;
-      position: relative;
-      width: 100%;
-      z-index: 1;
-    }
+  .video-container-responsive {
+    margin: auto;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+    width: 100%;
+    z-index: 1
+  }
 
-    .BrightcoveExperience {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+  .video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  .video-title {
+
   }
 
 }
