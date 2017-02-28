@@ -1,4 +1,4 @@
-.ig-video {
+.ig-video-group {
   margin-top: 50px;
 
   .video-container {
@@ -12,6 +12,7 @@
   }
 
   .video-overlay {
+    display: none;
     left: 0;
     right: 0;
     top: 0;
@@ -22,7 +23,6 @@
     background-size: 100%;
     background-image: url('../images/video-overlay.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     transition: opacity 0.4s ease-in;
   }
 

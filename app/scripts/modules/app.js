@@ -32,7 +32,7 @@ const app = (() => {
     if ($('.ig-form').length) forms.init();
     if ($('.more-section').length) more.init();
     if ($('.ig-carousel').length) carousel.init();
-    if ($('.ig-video').length) video.init();
+    if ($('.ig-video-group').length) video.init();
 
     // Components can also be setup to receive an HTML 'scope' (.ig-evt1... .ig-evt2.... etc)
     if ($('.ig-evt1').length) evt1.init('.ig-evt1');
