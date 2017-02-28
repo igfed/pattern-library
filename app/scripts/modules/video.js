@@ -44,7 +44,7 @@ export default (() => {
   }
 
   function _injectTemplate($video, data, index) {
-    var html = `<div class="video-container"><div class="video-container-responsive"><video data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video><script src="//players.brightcove.net/${data.account}/${data.player}_default/index.min.js"></script></div></div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
+    var html = `<div class="video-container"><span class="video-overlay"></span><div class="video-container-responsive"><video data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video><script src="//players.brightcove.net/${data.account}/${data.player}_default/index.min.js"></script></div></div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
     $video.replaceWith(html);
   }
 

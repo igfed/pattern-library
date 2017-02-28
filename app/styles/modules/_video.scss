@@ -11,6 +11,34 @@
     top: 0
   }
 
+  .video-overlay {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    z-index: 100;
+    background-size: 100%;
+    background-image: url('../images/video-overlay.jpg');
+    background-repeat: no-repeat;
+  }
+
+  .video-overlay:before {
+    position: absolute;
+    content: "";
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    background-size: 100%;
+    background-image: url('../images/spinner.svg');
+    background-repeat: no-repeat;
+  }
+
   .video-section {
     background-color: #faf7e6;
     position: relative;
