@@ -45,7 +45,7 @@ export default (() => {
         data.ctrl = $video.data('controls') ? 'controls' : '';
         data.preload = (preloadOptions.indexOf($video.data('preload')) > -1) ? $video.data('preload') : 'auto';
 
-        // Store ID's for all video's on the page - in case we want to run a post-load process
+        // Store ID's for all video's on the page - in case we want to run a post-load process on each
         vids.push(data.id);
 
         // Let's replace the ig-video-js 'directive' with the necessary Brightcove code
