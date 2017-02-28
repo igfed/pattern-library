@@ -2,32 +2,23 @@ import * as ig from './global.js';
 
 export default (() => {
 
-  var vids = [], timerID;
+  var vids = [], brightCove;
 
   function init() {
     _parseVideoComponents();
 
-    // timerID = setInterval(function () {
-    //   if (videojs.ready) {
-    //     console.log(videojs);
-    //     _showVideos();
-    //   }
-    // }, 100)
-    window.setTimeout(function () {
-      vids.forEach(function (el) {
-        videojs('#' + el).ready(function () {
-          console.log(el)
-          $('.video-overlay.'+ el).addClass('hidden');
-        });
-      })
-    }, 2000)
-
+    // Make sure the VideoJS method is available and fire ready event handlers if so
+    brightCove = setInterval(function () {
+      if ($('.video-js > video').length) {
+        _brightCoveReady();
+        clearInterval(brightCove);
+      }
+    }, 500)
   }
 
   function _parseVideoComponents() {
     var $video,
       data = {},
-      html,
       preloadOptions = ['auto', 'metadata', 'none']
 
     $('.ig-video-js').each(function (index) {
@@ -56,6 +47,14 @@ export default (() => {
   function _injectTemplate($video, data, index) {
     var html = `<div class="video-container"><span class="video-overlay ${data.id}"></span><div class="video-container-responsive"><video data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video><script src="//players.brightcove.net/${data.account}/${data.player}_default/index.min.js"></script></div></div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
     $video.replaceWith(html);
+  }
+
+  function _brightCoveReady() {
+    vids.forEach(function (el) {
+      videojs('#' + el).ready(function () {
+        $('.video-overlay.'+ el).addClass('hidden');
+      });
+    })
   }
 
   return {
