@@ -1,0 +1,50 @@
+<div class="quiz-report">
+  <div class="report-nav slide-up">
+    <a ui-sref="quiz" class="tertiary-cta">
+      {{copy.btn_restart}}
+    </a>
+  </div>
+  <div class="row">
+    <div class="medium-9 medium-centered columns">
+      <h1 class="content-title text-center slide-up">
+        {{copy.yourFinancialOpportunities}}
+      </h1>
+    </div>
+  </div>
+  <div class="report-body">
+    <div class="row">
+      <div class="tip-container medium-4 columns" ng-repeat="tip in tips.tips">
+        <figure class="wide-figure">
+          <img class="image-circle fade-in" src="{{tip.imageURL}}" alt="tip image">
+          <figcaption class="text-left slide-up">
+            <h3 class="content-title">
+              {{tip.type}}
+            </h3>
+            <p class="tip-text">
+              {{tip.tip}}
+            </p>
+          </figcaption>
+        </figure>
+        <div>
+          <a href="{{tip.url}}" class="tertiary-cta">
+            {{copy.learn_more}}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-6 medium-centered columns slideo-up">
+        <div class="report-footer">
+          <h3 class="callout-body-copy text-center">
+            {{copy.beyondTheBank}}
+          </h3>
+          <div class="report-button text-center">
+            <a href="#" class="button">
+              {{copy.btn_contact}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

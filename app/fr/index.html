@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ lang='fr' }}" ng-app="quizApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IG Quiz</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body class="fr" id="top">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <main role="main" id="main-content">
+      <!-- <navigation></navigation> -->
+      <div class="callout bg-highlight">
+        <div class="small-centered small-10 medium-9 column row">
+          <div ui-view></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts from original angular project -->
+    <!-- probably a better way to include angular -->
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="../js/vendor.bundle.js"></script>
+    <script src="../js/app.bundle.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/bower_components/jquery-validation/dist/additional-methods.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="/bower_components/eventemitter3/index.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="../scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
