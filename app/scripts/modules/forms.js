@@ -137,3 +137,6 @@ export default (() => {
     init
   };
 })()
+
+
+$(this)
