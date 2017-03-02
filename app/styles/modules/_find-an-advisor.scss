@@ -1,3 +1,251 @@
+/*GLOBAL*/
+.full-width{
+    background-position: 0 0;
+    background-repeat: repeat-x;
+}
+
+.is-hidden-mobile{
+  display: none;
+
+  @include respond-to(medium){
+    display: block;
+  }
+}
+
+.ex-small-figure{
+  width: 50px;
+  height: 50px;
+
+  @include respond-to(medium){
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.dropdown .menu{
+  border: 1px solid #cacaca;
+}
+
+/*Search results global*/
+.search-results{
+
+// this is the foundation dropdown styles
+// need to create an additional class for the menu dropdown in dropdown.scss
+// otherwise it overwrites the foundation styles which I dublicated here
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    transform: rotate(0);
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 6px;
+    content: '';
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-color: #282828 transparent transparent;
+    right: 0;
+    margin-top: -0.5px;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+
+  .dropdown.menu .is-dropdown-submenu-parent.is-active  > a::after{
+    transform: rotate(180deg);
+  }
+
+  .dropdown.menu .is-dropdown-submenu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 12% 1rem;
+    font-family: "WhitneySCMedium";
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+
+    @include respond-to(medium){
+      padding: 1rem 16% 1rem;
+    }
+  }
+
+  .is-dropdown-submenu-item{
+      position: relative;
+      margin-bottom: 0;
+
+    &.emphasize{
+
+      &:after{
+        border-top: 0.1rem solid #c1cbd0;
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0%;
+      }
+
+      &:hover{
+        &:before{
+          top: calc(23% + .3rem);
+          height: 16px;
+        }
+      }
+    }
+
+    &:hover{
+      &:before{
+        content: "";
+        left: calc(15% - 0.8rem);
+        top: calc(27% + .3rem);
+        height: 26px;
+        position: absolute;
+        border-left: 2px solid #0ed59a;
+      }
+    }
+
+    strong{
+      margin-bottom: 0.2rem;
+      font-weight: 400;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-family: "WhitneySCMedium";
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      font-size: 1rem;
+    }
+
+    span{
+      font-size: 1.8rem;
+      font-family: "WhitneyBook";
+      font-size: 18px;
+      color: #0d263c;
+      display: block;
+    }
+
+    strong, span{
+      text-align: left;
+    }
+  }
+
+
+  .expanded-accordion-arrow{
+    &:before{
+      transform: rotate(225deg) translate3d(0, 0, 0);
+    }
+  }
+
+  .dropdown{
+    text-align: center;
+
+    &:hover{
+      background-color: inherit;
+      color: inherit;
+
+    }
+  }
+
+@include respond-to(medium){
+  .dropdown.menu{
+    position: relative;
+
+     &:before{
+      content: "";
+      display: block;
+      border-left: 0.1rem solid #45757a;
+      height: 55%;
+      position: absolute;
+      right: 2.8rem;
+      top: 20%;
+      transition: transform .3s ease 0s, border-color .3s ease 0s;
+    }
+  }
+}
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    display: none;
+
+     @include respond-to(medium){
+      display: block;
+     }
+  }
+
+  .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    padding-top:0;
+    padding-bottom: 0;
+  }
+
+  .phone-icon, .email-icon{
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+
+    &:before{
+      position: absolute;
+      width: 10px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+    }
+  }
+
+  .phone-icon{
+    &:before{
+      content: url(../images/find-an-advisor-phone.svg);
+      width: 13px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+      
+    }
+  }
+
+  .email-icon{
+    &:before{
+      content: url(../images/find-an-advisor-email.svg);
+      width: 16px;
+
+      @include respond-to(medium){
+        display: none;
+      }
+    }
+  }
+
+  .divider{
+    &:before{
+      content: '';
+      border-top: 0.15rem solid #dee1e4;
+      width: calc(100% - 20px);
+      margin: 0 auto;
+
+        @include respond-to(medium){
+          width: calc(100% - 30px);
+        }
+      }
+
+  }
+
+  .overline{
+    border-top: 0.10rem solid #dee1e4;
+  }
+
+
+  .underline{
+    border-bottom: 0.10rem solid #dee1e4;
+  }
+
+  .overline, .underline{
+      @include respond-to(medium){
+        padding-top: 1rem;
+        width: calc(35% - 20px)
+      }
+
+      @include respond-to(large){
+        width: calc(40% - 50px);
+      }
+  }
+
+}
+
 /*Search Box*/
 
 
@@ -8,6 +256,15 @@
   }
 
   .medium-figure{
+
+      figcaption{
+        margin-top: 10px;
+
+        .content-title{
+          margin-bottom: 10px;
+        }
+      }
+
       img{
 
         @include respond-to(medium){
@@ -17,70 +274,6 @@
 
       }
   }
-
-
-  .find-an-advisor-search-form-field{
-
-    @include respond-to(medium){
-      width: auto;
-    }
-
-    img{
-      width: 13px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    .find-an-advisor-search-form-field-location, .find-an-advisor-search-form-field-name{
-      margin-top: 0;
-      background-color: white;
-      height: 40px;
-      border-radius: 0.5rem;
-      position: relative;
-      // width: 100%;
-
-      @include respond-to(medium){
-        width: 320px;
-        border-radius: 0;
-      }
-
-      @include respond-to(large){
-        width: 400px;
-      }
-
-      label{
-        font-family: "whitney_lightregular";
-      }
-
-      input[type="search"]{
-
-        margin-bottom: 0;
-        padding-left: 2rem;
-
-        font-family: $font-stack;
-        font-size: 16px;
-        font-size: 1rem;
-        color: $darkest-color;
-        line-height: 1.5em;
-        margin-bottom: 2px;
-        border-radius: 0.5rem;
-        border: none;
-
-        @include respond-to(medium){
-          border-radius: 0;
-          margin: 0;
-        }
-
-        &:focus{
-          border: none;
-        }
-      }
-
-    }
-
-  }
-
 
   .tt-menu, .typeahead {
       font-size: 1.6rem;
@@ -107,30 +300,25 @@
   .tt-menu{
     background: white;
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 4rem;
     margin-left: 0;
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
     top: 3.7rem;
     box-shadow: 0 4px 10px rgba(1, 0, 0, 0.3);
     border-top: 1px solid #a9a9a9;
-    padding-top:4rem;
     text-align: left;
+    padding: 40px 30px 30px 30px;
 
-
-    :last-child{
-      border: none;
-    }
-  }
-
-  .find-an-advisor-search-form-fields{
-    @include respond-to(medium){
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      margin-bottom: 50px;
+    &:before{
+      content: 'Suggested Results';
+      position: absolute;
+      z-index: 55555;
+      left: 5px;
+      top: 0;
+      font-size: 13px;
+      padding-left: 24px;
+      padding-top: 14px;
+      color: grey;
     }
   }
 
@@ -138,7 +326,6 @@
     position: relative;
     width: 100%;
     display: inline-block;
-    padding: 0.5rem;
 
     input{
       &:first-child{
@@ -149,20 +336,23 @@
 
   .typeahead{
     border-color: transparent;
+    margin: 0 0 1rem;
   }
 
   .tt-suggestion{
-      border-bottom: 1px solid #eff1f2;
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
+      border-top: 1px solid #eff1f2;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      font-size: 16px;
+      color: $search-grey;
 
       &:hover, &.tt-cursor{
 
         @include respond-to(medium){
           background-color: #eff1f2;
-          margin-left: -3rem;
-          padding-left: 3rem;
-          width: 137.5%;
+          margin-left: -30px;
+          padding-left: 30px;
+          width: 123%;
         }
 
         @include respond-to(large){
@@ -170,9 +360,95 @@
         }
       }
   }
+
+  .tt-suggestion:hover + .tt-suggestion{
+    @include respond-to(medium){
+      border-top: 1px solid transparent;
+    }
+  }
+
+  .tt-highlight{
+    color: $brand-color;
+  }
+
+  .tt-dataset{
+    &:first-child{
+      .tt-suggestion{
+        &:first-child{
+          border: none;
+        }
+      }
+    }
+  }
 }
 
-//Go button
+.find-an-advisor-search-form-field{
+
+    @include respond-to(medium){
+      width: auto;
+    }
+
+    img{
+      width: 13px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+}
+
+.find-an-advisor-search-form-field-location, .find-an-advisor-search-form-field-name{
+  margin-top: 0;
+  background-color: white;
+  height: 40px;
+  border-radius: 0.5rem;
+  position: relative;
+  // width: 100%;
+
+  @include respond-to(medium){
+    width: 320px;
+    border-radius: 0;
+  }
+
+  @include respond-to(large){
+    width: 400px;
+  }
+
+  label{
+    font-family: "whitney_lightregular";
+  }
+
+  input[type="search"]{
+
+    margin-bottom: 0;
+    padding-left: 2rem;
+
+    font-family: $font-stack;
+    font-size: 16px;
+    font-size: 1rem;
+    color: $darkest-color;
+    line-height: 1.5em;
+    border-radius: 0.5rem;
+    border: none;
+
+    @include respond-to(medium){
+      border-radius: 0;
+      margin: 0;
+    }
+
+    &:focus{
+      border: none;
+    }
+  }
+}
+
+.find-an-advisor-search-form-fields{
+  @include respond-to(medium){
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
 
 #SearchSubmitButton{
   margin-bottom: 0;
@@ -188,9 +464,6 @@
   }
 }
 
-
-/*Search Dropdrown*/
-
 .search-select{
   width: 15rem;
   background-position: right -1px center;
@@ -200,8 +473,8 @@
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==");
   width: 100%;
   border-radius: 0.5rem;
-  margin-bottom: 0;
   border: none;
+  margin-top: 10px; 
 
 
   font-family: $font-stack;
@@ -218,133 +491,301 @@
   @include respond-to(medium){
     width: 140px;
     border-radius: 0.5rem 0 0 0.5rem;
+    margin-bottom: 0;
   }
 }
 
-/*Counsultant Results*/
+.view-more-results-button{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
-.search-results-consultant{
+  @include respond-to(medium){
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.search-results-filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 0;
+
+  p{
+    &:not(:last-child){
+      padding-right: 3rem;
+    }
+  }
+}
+
+.search-results-buttons{
+  display: inline-block;
+  align-self: center;
+  margin-top: 20px;
+
+  @include respond-to(medium){
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button{
+   padding: 5px 1.25em 7px;
+  }
+
+  .phone-icon{
+    &:before{
+      top: 2px;
+    }
+  }
+
+  .email-icon{
+    &:before{
+      left: 0;
+      top: 1px;
+    }
+  }
+}
+
+.search-results-button{
+
+  &:last-child{
+    .button{
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to(medium){
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+
+  @include respond-to(large){
+      margin-bottom: 0;
+  }
+
+  span{
+    display: flex;
+    justify-content: center;
+
+    @include respond-to(medium){
+      display: inline-block;
+    }
+  }
+
+
+}
+
+.search-results-office, .search-results-consultant{
+   padding-top: 1rem;
+  padding-bottom: 1rem;
+
   @include respond-to(medium){
     display:flex;
     justify-content: space-between;
   }
-}
+  
+  .dropdown.menu{
 
-.search-results-consultant-info{
-   display:flex;
-}
+    .is-dropdown-submenu-parent.opens-right{
+      width: 100%;
+      display: inline-block;
 
-.search-results-consultant-info-buttons{
-  display: inline-block;
-  align-self: center;
-}
-
-.search-results{
-
-
-    a.button.dropdown, .button{
-        min-width: auto;
-        width: 100%;
-      }
-
-    .dropdown.menu{
-
-      .is-dropdown-submenu-parent.opens-right{
-        width: 100%;
-        display: inline-block;
-      }
-
-      .is-dropdown-submenu{
-        width: 100%;
-        min-width: auto;
+      @include respond-to(medium){
+        display: table-cell;
       }
     }
 
-  &#results-placeholder{
-    .row{
-      margin-top: 4rem;
-      margin-bottom: 4rem;
+    .is-dropdown-submenu{
+      width: 100%;
+      min-width: auto;
     }
   }
 
-  &#results-container{
-    >.row{
-       margin-top: 4rem;
-      margin-bottom: 4rem;
-    }
-  }
+  a.dropdown, .button{
+    min-width: auto;
+    width: 100%;
 
-  .search-results-consultant-portrait{
-    width: 80px;
     @include respond-to(medium){
-      width: 150px;
+      min-width: 200px;
+      width: auto;
     }
   }
+}
 
-  .underline{
-
-    padding-top: 1rem;
-
-
-    &:before{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
-        width: 100%;
-        padding-top: 2.5rem;
+.search-results-consultant, .search-results-office{
+  .search-results-button{
+    .button{
+      .phone-icon, .email-icon{
+        width: 30px;
+      }
     }
+  }
+}
 
+
+.search-results-info{
+   display:flex;
+   align-items: center;
+}
+
+.search-results-info-map{
+  width: 110px;
+
+  @include respond-to(medium){
+    width: 125px;
+  }
+  @include respond-to(large){
+    width: 145px;
   }
 
-  .row.underline{
+}
 
-   &:last-child{
-      text-align: inherit!important;
-      margin-top: 0!important;
+.search-results-map-container{
+  position: relative;
+  overflow: hidden;
+
+    &::after{
+      content: "";
+      width: 30px;
+      height: 65px;
+      background-image: url(../images/map-marker-blue.png);
+      background-position-y: 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%);
+
+      @include respond-to(medium){
+        height: 85px;
+      }
     }
+}
 
-  }
+/*Offices Results*/
 
-  .my-team{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+.search-results-offices-wrapper{
+  margin-bottom: 1.5rem;
+}
 
-    .title{
-      .row{
+.search-results-offices{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    cursor: pointer;
 
-        p{
-          margin-top: -1rem;
-          margin-bottom: 1rem;
-          width: 100%!important;
-          text-align: center;
+    &.accordion-arrow{
+      &:before{
+        width: 20px;
+        height: 20px;
+        right: 20px;
+
+        @include respond-to(medium){
+           top: 2rem;
         }
       }
+    }
 
-      .line{
-        border-top: 0.2rem solid #c1cbd0;
-        content: "";
+    .columns{
+      width: auto;
+    }
+}
+
+.search-results-number{
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+
+    @include respond-to(medium){
+      text-align: left;
+    }
+}
+
+#search-results-offices-expand{
+    .divider{
+      &:first-child{
+        &:before{
+          border: none;
+        }
       }
     }
+}
+
+.search-results-map-tooltip{
+  position: absolute;
+  padding-bottom: 1.7rem;
+  padding-top: .5rem;
+  background-color: #0ed59a;
+  text-align: center;
+  width: 100%;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  z-index: 10;
+}
+
+.search-results-map-container{
+  &:hover{
+    .search-results-map-tooltip{
+      top: 50%;
+    }
   }
+}
 
-  .my-consultant-team{
 
-    .row{
+/*Counsultant Results*/
 
-      .columns{
-        display: flex;
-        justify-content: space-between;
+.search-results-consultant-wrapper{
+  .divider{
+    &:first-child{
+      &::before{
+        display: none;
 
         @include respond-to(medium){
           display: block;
         }
       }
-
-      @include respond-to(medium){
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-     }
     }
+  }
+}
+
+.search-results-consultant-portrait{
+  width: 80px;
+  @include respond-to(medium){
+    width: 125px;
+  }
+
+  @include respond-to(large){
+    width: 150px;
+  }
+}
+
+.search-results-consultant-info, .search-results-office-info{
+  @include respond-to(medium){
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.search-results-consultant-info-name{
+  @include respond-to(medium){
+    padding-bottom: 1rem;
+  }
+}
+
+.search-results-consultant-team-members{
+  padding-top: 0.5rem;
+
+    @include respond-to(medium){
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+   }
 
     .dropdown{
 
@@ -357,11 +798,167 @@
     }
 
     .email{
-        border: none!important;
+        border: none;
 
         i{
-          border: 2px solid #0d263c!important;
+          border: 2px solid #0d263c;
         }
+    }
+
+    .search-results-consultant-team-member{
+      margin:0;
+      margin-bottom: 1rem;
+
+      @include respond-to(medium){
+        margin-bottom: 0.5rem;
+      }
+    }
+}
+.search-results-consultant-team-member{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+
+  @include respond-to(medium){
+    flex-direction: column;
+
+  }
+
+  &:only-child{
+    flex-direction: row;
+  }
+
+  .dropdown.menu > li.is-dropdown-submenu-parent > a{
+    padding: 0;
+
+    @include respond-to(medium){
+      padding: 5px 1.25em 7px;
+    }
+  }
+
+  .button{
+    min-width: auto;
+  }
+
+  .phone-icon, .email-icon{
+    border-radius: 50%;
+    border: 1px solid $brand-color;
+    height: 30px;
+
+    @include respond-to(medium){
+      border-radius: 5px;
+      border: 1px solid $dark-grey;
+      min-width: 200px;
+      height: auto;
+      width: auto;
+    }
+  }
+
+  .phone-icon{
+    &:before{
+      left: 7.5px;
+      top: 6px;
+    }
+  }
+
+  .email-icon{
+    &:before{
+      top: 6.5px;
+      left: 5.3px;
+    }
+  }
+
+  &.underline{
+
+    &:last-child{
+      border: none;
+      margin-bottom: 0.5rem;
+    }
+
+    @include respond-to(medium){
+      border: none;
+      width: auto;
+    }
+  }
+}
+
+.search-results-consultant-team-member-name{
+  text-align: left;
+
+  @include respond-to(medium){
+    text-align: center;
+  }
+}
+
+.search-results-consultant-team-member-contact{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+
+  .dropdown{
+    margin-right: 10px;
+
+    @include respond-to(medium){
+      margin-right: 0;
+    }
+
+    &.menu{
+      &:before{
+        @include respond-to(medium){
+           border-left: 0.1rem solid $dark-grey;
+        }
+      }
+    }
+  }
+
+  .phone-icon, .email-icon{
+    width: 30px;
+  }
+}
+
+.search-results-consultant-team-section-divider{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to(medium){
+    align-items: flex-end;
+    padding-top: 1rem;
+  }
+}
+
+.search-results-consultant-team-members-view-all{
+  width: auto;
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+
+  .accordion-arrow{
+    &:before{
+      top: 0.2rem;
+      width: 10px;
+      height: 10px;
+      right:0;
+      border-bottom: solid 1.5px;
+      border-right: solid 1.5px;
+    }
+  }
+
+  .expanded-accordion-arrow{
+    &:before{
+      top: 8px;
+    }
+  }
+}
+
+
+.email-icon{
+
+    &:hover{
+        &:before{
+      content: url(../images/email-white.svg);
     }
   }
 }
