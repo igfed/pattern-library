@@ -20,106 +20,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-    <style>
-        .alert-box {
-            padding: 1.3rem;
-            border-width: 0 0 0 0.35rem;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-        }
-
-        .alert-box.radius {
-            border-radius: 0.6rem;
-        }
-
-        .alert-box.primary {
-            border-left-color: #446cb3;
-            background-color: #8da6d4;
-        }
-
-        .alert-box.primary strong {
-            color: #446cb3;
-        }
-
-        .alert-box.secondary {
-            border-left-color: #adb2bd;
-            background-color: #ced1d7;
-        }
-
-        .alert-box.secondary strong {
-            color: #adb2bd;
-        }
-
-        .alert-box.info {
-            border-left-color: #89c4f4;
-            background-color: #b8dcf8;
-        }
-
-        .alert-box.info strong {
-            color: #89c4f4;
-        }
-
-        .alert-box.alert {
-            border-left-color: #f22613;
-            background-color: #f77d71;
-        }
-
-        .alert-box.alert strong {
-            color: #f22613;
-        }
-
-        .alert-box.success {
-            border-left-color: #87d37c;
-            background-color: #b7e5b0;
-        }
-
-        .alert-box.success strong {
-            color: #87d37c;
-        }
-
-        .alert-box.warning {
-            border-left-color: #f89406;
-            background-color: #fbbf69;
-        }
-
-        .alert-box.warning strong {
-            color: #f89406;
-        }
-
-        .ig-evt1, .ig-evt2 {
-            margin: 30px 0;
-            padding: 30px 25px 200px;
-            background: #fbfbfb;
-            border: 3px solid #fff;
-        }
-
-        a.button {
-            font-size: 40px;
-            margin: 50px auto 0;
-            text-align: center;
-            display: block;
-            padding: 20px 0;
-        }
-
-        a.button:focus {
-            background: #0ED59A;
-        }
-
-        a.button:active {
-            background: transparent;
-        }
-
-        .ig-evt2 h2 {
-            margin-bottom: 50px;
-        }
-
-        p.alert-box.alert {
-            font-size: 25px;
-            border-radius: 5px;
-            padding: 5px 15px;
-            margin-bottom: 5px;
-        }
-    </style>
 </head>
 <body id="top">
 <!--[if lt IE 10]>
@@ -217,19 +117,51 @@
 
 
 <main role="main" id="main-content">
-    <div class="row">
-        <!-- Component 1 -->
-        <div class="ig-evt1 medium-6 columns">
-            <h2>I am a Component (ig-evt1)</h2>
-            <a href="#" class="button message" role="button">Say 'Hello'</a>
+
+    <!-- Important: Related video's that use the same player should be wrapped with an 'ig-video-group' class
+         that defines the account and player id to use -->
+    <div class="row ig-video-group" data-account="3906942861001" data-player="BJNX9uitx">
+
+        <div class="medium-4 columns">
+            <!-- Similar to an Angular Directive, this code will be replaced by JavaScript. -->
+            <div class="ig-video-js"
+                 data-id="4219153214001"
+                 data-controls="true"
+                 data-autoplay="false"
+                 data-preload="none"
+                 data-title="Business Owner: Pierre Senecal"
+                 data-description="As a former business owner, Pierre recognized the importance of the planning
+                 process, and delivering a total solution to clients. This is what led him to Investors Group.">
+            </div>
         </div>
 
-        <!-- Component 2 is Listening to Component 1 -->
-        <div class="ig-evt2 medium-6 columns">
-            <h2>I am another Component (ig-evt2)</h2>
+        <div class="medium-4 columns">
+            <!-- Similar to an Angular Directive, this code will be replaced by JavaScript -->
+            <div class="ig-video-js"
+                 data-id="4193078404001"
+                 data-controls="true"
+                 data-autoplay="false"
+                 data-preload="none"
+                 data-title="Banker: Sue Neal"
+                 data-description="Sue Neal transitioned from a career in banking where she lived according to
+                her paycheque, to a career where she designed her own.">
+            </div>
         </div>
 
+        <div class="medium-4 columns">
+            <!-- Similar to an Angular Directive, this code will be replaced by JavaScript -->
+            <div class="ig-video-js"
+                 data-id="4193078348001"
+                 data-controls="true"
+                 data-autoplay="false"
+                 data-preload="none"
+                 data-title="Sales: Sunil Arora"
+                 data-description="Coming from a career in sales, Sunil’s path to success is due in part to the
+                confidence he received from Investors Group.">
+            </div>
+        </div>
     </div>
+
 </main>
 
 <footer class="site-footer" role="contentinfo">
