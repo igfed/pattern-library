@@ -53,10 +53,10 @@ function lint(files, options) {
 }
 
 gulp.task('lint', () => {
-  return lint('app/scripts/**/*.js', {
-    fix: true
+  return lint('app/scripts/modules/*.js', {
+    fix: false
   })
-    .pipe(gulp.dest('app/scripts'));
+    .pipe(gulp.dest('app/scripts/modules'));
 });
 
 gulp.task('lint:test', () => {
@@ -177,7 +177,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['wiredep', 'styleguide', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'wiredep', 'styleguide', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
