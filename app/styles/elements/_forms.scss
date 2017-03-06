@@ -418,7 +418,7 @@ select {
     }
     & label.error:before {
       content: "";
-      background: transparent url(../images/error-icon.png) no-repeat center center;
+      background: transparent url('../images/error-icon.png') no-repeat center center;
       position: absolute;
       width: 18px;
       height: 18px;
@@ -467,7 +467,7 @@ select {
 
         &:after {
           content: "";
-          background: transparent url(../images/error-icon.png) no-repeat center center;
+          background: transparent url('../images/error-icon.png') no-repeat center center;
           position: absolute;
           width: 18px;
           height: 18px;
@@ -816,7 +816,7 @@ select {
         &:before {
           margin-left: -25px;
           content: "";
-          background: transparent url(../images/error-icon.png) no-repeat center center;
+          background: transparent url('../images/error-icon.png') no-repeat center center;
           position: absolute;
           width: 18px;
           height: 18px;
@@ -864,7 +864,7 @@ select {
   // Spinner
 
   .throbber {
-    background: transparent url("../images/throbber.png") no-repeat scroll center center;
+    background: transparent url('../images/throbber.png') no-repeat scroll center center;
     animation: 2s linear 0s normal none infinite running spin;
     height: 4.2rem;
     margin-left: auto;
@@ -911,7 +911,7 @@ select {
         width: 100px;
         height: 100px;
         margin: 60px 25px 60px 0;
-        background: transparent url("../images/check.png") no-repeat scroll center center;
+        background: transparent url('../images/check.png') no-repeat scroll center center;
         background-size: 100px, 100px;
         vertical-align: middle;
 
