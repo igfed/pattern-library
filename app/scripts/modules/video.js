@@ -7,6 +7,8 @@ export default (() => {
   function init() {
     _parseVideos();
 
+    // Not using this functionality at the moment (essentially an onLoadComplete) - might be required down the road
+    //
     // Make sure the VideoJS method is available and fire ready event handlers if so
     // brightCove = setInterval(function () {
     //   if ($('.vjs-plugins-ready').length) {
