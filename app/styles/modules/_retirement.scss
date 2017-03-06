@@ -1,0 +1,12 @@
+.two-column-cta{
+	display: flex;
+}
+.records-list{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	.record-item{
+		margin: 15px;
+	}
+}
