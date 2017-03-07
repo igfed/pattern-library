@@ -1,5 +1,43 @@
+/*Global*/
+
+.split-bg{
+	height:100%;
+	background: url(../images/tiled-weathered-pattern.jpg);
+    min-height: 100px;
+    position: relative;
+    margin-bottom: calc(50% - 90px);
+
+    @include respond-to(medium){
+    	min-height: 150px;
+    	margin-bottom: 150px;
+    }
+
+    @include respond-to(large){
+    	min-height: 225px;
+    	margin-bottom: 225px;
+    }
+
+    .video-container{
+    	position: absolute;
+    	padding: 0 30px;
+
+    	@include respond-to(medium){
+    		padding: 0 100px;
+    	}
+
+    	@include respond-to(large){
+    		padding: 0;
+    	}
+    }
+}
+
+.ig-video-group{
+	margin-top: 0;
+}
+
 .two-column-cta{
 	display: flex;
+	flex-flow: column wrap;
 }
 .records-list{
 	display: flex;
@@ -8,6 +46,7 @@
 
 	.record-item{
 		margin: 15px;
+		width: 30%;
 	}
 }
 
@@ -87,9 +126,9 @@ article{
 }
 
 .section-retirement-tips-intro{
-	@include respond-to(medium){
-		padding: 100px 40px;
-	}
+	// @include respond-to(medium){
+		padding: 40px;
+	// }
 }
 
 .section-retirement-tips{
