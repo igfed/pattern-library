@@ -52,6 +52,7 @@ Styleguide 3.3
 .hero-copy {
 	text-align: center;
 	z-index: 100;
+	max-width: 750px;
 
 	h1, p{
 		widows: 2;// Just in case its supported
