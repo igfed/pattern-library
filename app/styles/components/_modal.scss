@@ -78,6 +78,16 @@
         margin-top: 0;
         margin-left: 0;
       }
+
+      &.small{
+        width: 30px;
+        height: 30px;
+
+        &:after, &:before{
+          top: 48%;
+          left: 6px;
+        }
+      }
     }
   }
 

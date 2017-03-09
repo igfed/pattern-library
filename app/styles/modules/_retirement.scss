@@ -1,5 +1,6 @@
 /*Global*/
 
+/*video.scss*/
 .split-bg{
 	height:100%;
 	background: url(../images/tiled-weathered-pattern.jpg);
@@ -31,9 +32,56 @@
     }
 }
 
+.split-bg-description{
+	max-width: 768px;
+    margin: 0 auto;
+    text-align: right;
+
+    p{
+    	text-decoration: underline;
+    }
+}
+
 .ig-video-group{
 	margin-top: 0;
 }
+
+/*Module.scss*/
+.reveal.retirement.large{
+
+	.modal-header{
+		max-width: 100%;
+	}
+
+	.modal-content{
+		max-width: 100%;
+		display: flex;
+    	justify-content: center;
+	}
+
+	.small-figure{
+		width: auto;
+	}
+
+	.wide-figure-tertiary-cta{
+		display: flex;
+    	justify-content: flex-start;
+
+    	.columns{
+    		width: auto;
+    	}
+	}
+
+	.slick-prev{
+		left: 40px;
+	}
+
+	.slick-next{
+		right: 40px;
+	}
+}
+
+
 
 .two-column-cta{
 	display: flex;
@@ -140,4 +188,37 @@ article{
 	padding: 0 50px;
 }
 
+
+.section.records{
+	.record-item {
+		position: relative;
+		cursor: pointer;
+
+		img{
+			opacity: 1;
+		}
+		.overlay{
+			// opacity: 0;
+			display: none;
+			transition: .5s ease;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		&:hover{
+			.overlay{
+				transition: .5s ease;
+    			display: block;
+    			background: rgba(0, 0, 0, 0.3);
+    			display: flex;
+			    justify-content: center;
+			    align-items: center;
+
+			    .button{
+			    	margin-bottom: 0;
+			    }
+			}
+		}
+	}
+}
 

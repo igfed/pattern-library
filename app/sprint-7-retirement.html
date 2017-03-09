@@ -30,19 +30,26 @@
       </div>
     </div>
 
+  <div class="split-bg-video">
     <div class="split-bg">
-      <div class="row ig-video-group" data-account="3906942861001" data-player="BJNX9uitx">
-          <div class="small-12 columns">
-              <!-- Similar to an Angular Directive, this code will be replaced by JavaScript. -->
-              <div class="ig-video-js"
-                   data-id="4219153214001"
-                   data-controls="true"
-                   data-autoplay="false"
-                   data-preload="none">
-              </div>
-          </div>
-      </div>
+        <div class="row ig-video-group" data-account="3906942861001" data-player="BJNX9uitx">
+            <div class="small-12 columns">
+                <!-- Similar to an Angular Directive, this code will be replaced by JavaScript. -->
+                <div class="ig-video-js"
+                     data-id="4219153214001"
+                     data-controls="true"
+                     data-autoplay="false"
+                     data-preload="none">
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="split-bg-description">
+      <p>Transcript</p>
+    </div>
+
+  </div>
 
     <main role="main" id="main-content">
       <div class="row">
@@ -75,7 +82,7 @@
                     </div>
                 </div>
 
-                <div id="expanded-article-content-1" data-toggler class="expanded-article-content">
+                <div id="expanded-article-content-1" data-toggler="expanded-article-content" class="expanded-article-content">
                     <div class="row">
                         <div class="small-12 medium-6 columns tip section-retirement-tip">
                             <h3>Tip</h3>
@@ -85,17 +92,16 @@
                                 contribution now and not claim the deduction until you’re in a higher tax bracket.</p>
                         </div>
                     </div>
-
-                  </div>
-
                     <div class="row">
                         <div class="small-12 columns pdf small-centered">
                             <p>Learn more about getting the most of your RRSP.</p>
                             <button><a href="external/app/tribal/pdf/MP1313_O_4723641_394052.pdf" target="_blank"
-                               class="outline-btn" onClick="igTrack.inline(this)" data-tracking-category="Consumer Engagement"
+                               class="button" onClick="igTrack.inline(this)" data-tracking-category="Consumer Engagement"
                                data-tracking-label="2017RRSP_Click_Download_PDF_EventPage:Retirement">View Top 10 Tips</a></button>
                         </div>
                     </div>
+
+                  </div>
 
                   <div data-toggle="expanded-article-content-1" class="expand-article-toggle">
                     <div class="mask"></div>
@@ -118,105 +124,248 @@
                 <div class="records-container">
                     <div class="records-list">
                         <div class="record-item investments" data-itemid="investments">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal1">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_02.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Investments</div>
-                                <div class="content"><p>A great way to add savings to your retirement is incorporating a
-                                    Tax-Free Savings Account (TFSA) into your plan. This type of account allows your investments
-                                    to grow without you having to pay any tax on that growth. If you haven’t taken advantage of
-                                    a TFSA yet, as of 2017, you are allowed to contribute up to $52,000 if you were 18 as of
-                                    2009.</p>
+
+                            <div class="reveal retirement large" id="exampleModal1" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Investments</h2>
+                                    <p class="body-copy wide-figure-copy">A great way to add savings to your retirement is incorporating a Tax-Free Savings Account (TFSA) into your plan. This type of account allows your investments to grow without you having to pay any tax on that growth. If you haven’t taken advantage of a TFSA yet, as of 2017, you are allowed to contribute up to $52,000 if you were 18 as of 2009.</p>
+
+                                    <p>Remember, you have until March 1st of this year to make your contributions.</p>
+
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Inv_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="https://www.investorsgroup.com/external/search/index.html" class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Inv_Find_an_advisor_RC_EventPage:Retirement">Find an advisor</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Find an advisor</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
 
                         </div>
                         <div class="record-item tax-planning" data-itemid="tax-planning">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal2">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_05.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Tax Planning</div>
-                                <div class="content"><p>Living the retirement lifestyle you want means making the most of your
+                            <div class="reveal retirement large" id="exampleModal2" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Tax Planning</h2>
+                                    <p class="body-copy wide-figure-copy">Living the retirement lifestyle you want means making the most of your
                                     retirement income over a longer period of time. We can help you establish effective tax
                                     planning and tax management strategies, aimed at maximizing your retirement income by
                                     reducing taxes and potential OAS ‘clawback’ pressures.</p>
+
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Tax_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="https://www.investorsgroup.com/external/search/index.html" class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Tax_Find_an_advisor_RC_EventPage:Retirement">Find an advisor</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Find an advisor</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
+
                         </div>
                         <div class="record-item mortgage" data-itemid="mortgage">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal3">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_03.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Mortgage</div>
-                                <div class="content"><p>Will you have a mortgage when you retire? Paying it off before you
+                            <div class="reveal retirement large" id="exampleModal3" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Mortgage</h2>
+                                    <p class="body-copy wide-figure-copy">Will you have a mortgage when you retire? Paying it off before you
                                     retire may not be as important as you think. In a low interest rate environment, carrying a
                                     mortgage into retirement may be the better option. Talk to us about which option is the best
                                     for your situation, so you can get the most out of your retirement.</p>
+
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Mort_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="http://www.investorsgroup.com/en/contact-us/mortgage" class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Mort_Find_an_advisor_RC_EventPage:Retirement">Get mortgage advice</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Get mortgage advice</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
                         </div>
                         <div class="record-item insurance" data-itemid="insurance">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal4">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_06.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Insurance</div>
-                                <div class="content"><p>Spending years building a sound retirement could all be for not if you
+                            <div class="reveal retirement large" id="exampleModal4" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Insurance</h2>
+                                    <p class="body-copy wide-figure-copy">Spending years building a sound retirement could all be for not if you
                                     don’t protect it. Our advisors help you pick the right insurance options for your family,
                                     lifestyle, and retirement plans so you get coverage that delivers the best value and ensures
                                     your future is protected.</p>
+
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Insur_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="https://www.investorsgroup.com/external/search/index.html" class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Insur_Find_an_advisor_RC_EventPage:Retirement">Find an advisor</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Get mortgage advice</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
                         </div>
                         <div class="record-item estate-planning" data-itemid="estate-planning">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal5">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_01.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Estate Planning</div>
-                                <div class="content"><p>When planning for retirement, it’s easy to avoid thinking about the end
+
+                            <div class="reveal retirement large" id="exampleModal5" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Estate Planning</h2>
+                                    <p class="body-copy wide-figure-copy">When planning for retirement, it’s easy to avoid thinking about the end
                                     of our lives and how our legacy is passed on. Canadians typically worry about probate fees,
                                     particularly when it’s income tax they need to be prepared for. We can help you think ahead
                                     and establish an estate plan now to ensure your estate is distributed in accordance with
                                     your intentions.</p>
+
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Estate_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="https://www.investorsgroup.com/external/search/index.html"
-                                       class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Estate_Find_an_advisor_RC_EventPage:Retirement">Find an advisor</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Get mortgage advice</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
                         </div>
                         <div class="record-item retirement" data-itemid="retirement">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal6">Click here to expand</button>
+                            </div>
                              <img style="width:350px" src="images/vinyls_final_english_Page_04.jpg"/>
-                            <div style="display:none" class="modal-content">
-                                <div class="title">Retirement</div>
-                                <div class="content"><p>RRSPs are the foundation of retirement planning. There are ways we can
+
+                            <div class="reveal retirement large" id="exampleModal6" data-reveal>
+                               <div class="row modal-header">
+                                   <div class="small-12 columns">
+                                   <button class="close-button small" data-close aria-label="Close modal" type="button">
+                                       <span aria-hidden="true"></span>
+                                   </button>
+                                  </div>
+                               </div>
+                               <div class="row modal-content">
+                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+
+                                  <div class="small-figure medium-3 large-2 columns">
+                                    <img src="images/investments.png" alt="" class="image-circle" />
+                                  </div>
+                                  <div class="medium-9 large-6 columns end">
+                                    <h2 class="content-title wide-figure-title">Retirement</h2>
+                                    <p class="body-copy wide-figure-copy">RRSPs are the foundation of retirement planning. There are ways we can
                                     help you maximize their benefits. We’ll help you set up automatic monthly contributions or
                                     an RRSP loan to take advantage of your contribution room. This could help you increase the
                                     size of your tax refund, and also have more tax-deferred money growing inside your RRSP.</p>
                                     <p>Remember, you have until March 1st of this year to make your contributions.</p>
                                     <p>Let’s talk about your options.</p>
-                                    <a href="request-a-call.html" class="cta underline-link js-geo active" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Ret_Request_a_call_EventPage:Retirement">Request a call</a>
-                                    <a href="https://www.investorsgroup.com/external/search/index.html"
-                                       class="cta underline-link" onClick="igTrack.inline(this)" data-tracking-category="Consumer Conversion"
-                                       data-tracking-label="2017RRSP_Click_Ret_Find_an_advisor_RC_EventPage:Retirement">Find an advisor</a>
-                                </div>
+                                    <div class="row wide-figure-tertiary-cta">
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                                      </div>
+                                      <div class="medium-5 large-4 columns">
+                                        <a class="tertiary-cta" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Get mortgage advice</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                               </div>
                             </div>
                         </div>
 
@@ -252,7 +401,7 @@
       </div>
 
             <!-- Have Questions 2 pillars -->
-      <div class="callout bg-muted two-column-cta">
+      <div class="callout two-column-cta">
         <div class="row">
           <div class="medium-3 large-offset-1 large-2 columns">
             <img src="images/investments.png" alt="" class="image-circle" />
