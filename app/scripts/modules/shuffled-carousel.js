@@ -2,250 +2,91 @@ import * as ig from './global.js';
 
 export default (() => {
 
-    var data = {
-            "content": {
-                "0": {
-                    "title": "A lifetime of memories awaits!",
-                    "description": "Introduce a friend, collegue or a family member to an Investors Group Consultant to win a trip for two.",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "1": {
-                    "title": "This week in the markets",
-                    "description": "Central bank action prompts equity market gains.",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "2": {
-                    "title": "About your client statement",
-                    "description": "To help you get the most value out of your statement, this guide explains what's behind each section.",
-                    "image-path": "images/featured-topics-client-statement.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "3": {
-                    "title": "Item 4",
-                    "description": "Item 4",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "4": {
-                    "title": "Item 5",
-                    "description": "Item 5",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "5": {
-                    "title": "Item 6",
-                    "description": "Item 6",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "6": {
-                    "title": "Item 7",
-                    "description": "Item 7",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-
-                "7": {
-                    "title": "Item 8",
-                    "description": "Item 8",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "8": {
-                    "title": "Item 9",
-                    "description": "Item 9",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "9": {
-                    "title": "Item 10",
-                    "description": "Item 10",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "10": {
-                    "title": "Item 11",
-                    "description": "Item 11",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "11": {
-                    "title": "Item 12",
-                    "description": "Item 12",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "12": {
-                    "title": "Item 13",
-                    "description": "Item 13",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "13": {
-                    "title": "Item 14",
-                    "description": "Item 14",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "14": {
-                    "title": "Item 15",
-                    "description": "Item 15",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "15": {
-                    "title": "Item 16",
-                    "description": "Item 16",
-                    "image-path": "images/featured-topics-brazil.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "16": {
-                    "title": "Item 17",
-                    "description": "Item 17",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "17": {
-                    "title": "Item 18",
-                    "description": "Item 18",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "18": {
-                    "title": "Item 19",
-                    "description": "Item 19",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                },
-                "19": {
-                    "title": "Item 20",
-                    "description": "Item 20",
-                    "image-path": "images/featured-topics-investments-fez.jpg",
-                    "image-alt": "Win a Trip to Brazil image",
-                    "cta": "Learn More",
-                    "link": "more/en/"
-                }
-            }
-        },
-        template, html, availableItems, seenItems, igls;
+    var availableItems, seenItems, igls, dataKey, articleLimit;
 
     function init() {
 
-        igls = getLocalStorage(),
-        availableItems = data.content;
-        seenItems = {
-          "0": {
-              "title": "A lifetime of memories awaits!",
-              "description": "Introduce a friend, collegue or a family member to an Investors Group Consultant to win a trip for two.",
-              "image-path": "images/featured-topics-brazil.jpg",
-              "image-alt": "Win a Trip to Brazil image",
-              "cta": "Learn More",
-              "link": "more/en/"
-          },
-          "7": {
-            "title": "Item 8",
-            "description": "Item 8",
-            "image-path": "images/featured-topics-investments-fez.jpg",
-            "image-alt": "Win a Trip to Brazil image",
-            "cta": "Learn More",
-            "link": "more/en/"
-          }
-        };
+        console.log('Shuffle Carousel Initialized');
 
-        //Will have to do a check later to see if this already exists in ls, 
-        //but for POC I will do this
-        igls['advice-stories'] = seenItems;
+        igls = getLocalStorage();
+        dataKey = $('.ig-shuffled-carousel').data('articles');
+        availableItems = shuffledCarouselData[dataKey];
+        articleLimit = $('.ig-shuffled-carousel').data('limit');
 
-        generateTemplate(getRandEight(igls['advice-stories']));
+        if (!igls[dataKey]) {
+            //object does not exist yet
+            seenItems = {};
+        } else {
+            seenItems = igls[dataKey];
+        }
+
+        generateTemplate(getRandArticles());
     }
 
     function getLocalStorage() {
         if (typeof(Storage) !== "undefined") {
-            return localStorage.getItem("ig") ? JSON.parse(localStorage.getItem("ig")) : localStorage.setItem("ig", JSON.stringify({}));
+            return localStorage.getItem("ig") ? JSON.parse(localStorage.getItem("ig")) : createIGLS();
         } else {
             console.warn('localstorage is not available!')
             return;
         }
     }
 
-    function getRandEight(blackList) {
-      var unseen = [];
-      Object.keys(availableItems).forEach((key) => {
-        if(!seenItems[key]) {
-          unseen.push(availableItems[key]);
-        }
-      });
-      return shuffle(unseen).splice(0, 8);
+    function createIGLS() {
+        localStorage.setItem("ig", JSON.stringify({}));
+        return JSON.parse(localStorage.getItem("ig"));
     }
 
-    function generateTemplate(data) {
+    function updateLocalStorage(articles) {
+        var updatedObj = Object.assign({}, seenItems);
+        articles.forEach((item, i) => {
+            if (i <= 1) {
+                Object.keys(item).map((k) => {
+                    item[k]['timestamp'] = Date.now();
+                    updatedObj[k] = item[k];
+                });
+            }
+        });
 
-        template = `
-        <div class="row ig-carousel carousel" data-dots="true" data-infinite="true" data-arrows="true" data-responsive='[{"breakpoint": 640, "settings": {"slidesToShow": 3}}]'>
-            {{#content}}
-            <div class="medium-4 columns">
-              <figure>
-                <a href="{{link}}">
-                  <img src="{{image-path}}" alt="{{image-alt}}" />
-                  <figcaption>
-                    <h2>{{title}}</h2>
-                    <p>{{description}}</p>
-                    <p class="tertiary-cta">{{cta}}</p>
-                  </figcaption>
-                </a>
-              </figure>
-            </div>
-            {{/content}}
-        </div>`;
+        igls[dataKey] = updatedObj;
+        localStorage.setItem("ig", JSON.stringify(igls));
+    }
 
-        var html = Mustache.to_html(template, { "content" : data } );
-        $('.ig-shuffled-carousel').html(html);
+    function resetLocalStorage() {
+        delete igls[dataKey];
+        localStorage.setItem("ig", JSON.stringify(igls));
+    }
 
-        buildCarousel();
+    function getRandArticles() {
+        var
+            unseen = [],
+            randArticles;
+
+        Object.keys(availableItems).forEach((key, i) => {
+            var newObj = {};
+            newObj[key] = availableItems[key];
+
+            if (!seenItems[key]) {
+                unseen.push(newObj);
+            }
+        });
+
+        randArticles = unseen.splice(0, articleLimit);
+
+        if (randArticles.length < articleLimit) {
+            //There's less unseen articles that the limit
+            //clear seenItems, reset ls, and reinit
+            seenItems = {};
+            resetLocalStorage();
+            init();
+        }
+
+        return shuffle(randArticles);
     }
 
     function shuffle(array) {
-        var currentIndex = array.length,
+        var
+            currentIndex = array.length,
             temporaryValue, randomIndex;
 
         // While there remain elements to shuffle...
@@ -262,6 +103,44 @@ export default (() => {
         }
 
         return array;
+    }
+
+    function generateTemplate(randomArticles) {
+
+        var
+            html,
+            templateData = [],
+            template = `
+            <div class="row ig-carousel carousel" data-dots="true" data-infinite="true" data-arrows="true" data-responsive='[{"breakpoint": 640, "settings": {"slidesToShow": 2}}]'>
+                {{#articles}}
+                <div class="medium-4 columns">
+                  <figure>
+                    <a href="{{link}}">
+                      <img src="{{image-path}}" alt="{{image-alt}}" />
+                      <figcaption>
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+                        <p class="tertiary-cta">{{cta}}</p>
+                      </figcaption>
+                    </a>
+                  </figure>
+                </div>
+                {{/articles}}
+            </div>`;
+
+        randomArticles.forEach((article) => {
+            Object.keys(article).map((key) => {
+                templateData.push(article[key]);
+            });
+        });
+
+        html = Mustache.to_html(template, { "articles": templateData });
+
+        $('.ig-shuffled-carousel').html(html);
+
+        updateLocalStorage(randomArticles);
+
+        buildCarousel();
     }
 
     function buildCarousel() {
