@@ -40,7 +40,6 @@ export default (() => {
         articles.forEach((item, i) => {
             if (i <= 1) {
                 Object.keys(item).map((k) => {
-                    item[k]['timestamp'] = Date.now();
                     updatedObj[k] = item[k];
                 });
             }
