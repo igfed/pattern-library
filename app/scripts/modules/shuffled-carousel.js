@@ -6,8 +6,6 @@ export default (() => {
 
     function init() {
 
-        console.log('Shuffle Carousel Initialized');
-
         igls = getLocalStorage();
         dataKey = $('.ig-shuffled-carousel').data('articles');
         availableItems = shuffledCarouselData[dataKey];
@@ -109,24 +107,7 @@ export default (() => {
 
         var
             html,
-            templateData = [],
-            template = `
-            <div class="row ig-carousel carousel" data-dots="true" data-infinite="true" data-arrows="true" data-responsive='[{"breakpoint": 640, "settings": {"slidesToShow": 2}}]'>
-                {{#articles}}
-                <div class="medium-4 columns">
-                  <figure>
-                    <a href="{{link}}">
-                      <img src="{{image-path}}" alt="{{image-alt}}" />
-                      <figcaption>
-                        <h2>{{title}}</h2>
-                        <p>{{description}}</p>
-                        <p class="tertiary-cta">{{cta}}</p>
-                      </figcaption>
-                    </a>
-                  </figure>
-                </div>
-                {{/articles}}
-            </div>`;
+            templateData = [];
 
         randomArticles.forEach((article) => {
             Object.keys(article).map((key) => {
@@ -134,7 +115,7 @@ export default (() => {
             });
         });
 
-        html = Mustache.to_html(template, { "articles": templateData });
+        html = Mustache.to_html($(`#${dataKey}`).html(), { "articles": templateData });
 
         $('.ig-shuffled-carousel').html(html);
 
