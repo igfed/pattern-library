@@ -1,3 +1,16 @@
+/**
+ * Shuffled Carousel
+ * Takes eight items from an object of 20, and renders them in a carousel in random order.
+ *
+ * Upon refresh of the browser, the first two items are added to the seenItems object
+ * and written to local storage, when the amount of unseen items drops below 8, seenItems 
+ * is cleared and the carousel reset.
+ *
+ * There are two configurable data attributes that need to be added to the markup:
+ * @param data-articles = The key of the data in the json object
+ * @return data-limit = The amount of items to be rendered in the carousel
+ * Ex. <div class="ig-shuffled-carousel" data-articles="advice-stories" data-limit="8"></div>
+ */
 import * as ig from './global.js';
 
 export default (() => {
@@ -71,11 +84,12 @@ export default (() => {
         randArticles = unseen.splice(0, articleLimit);
 
         if (randArticles.length < articleLimit) {
+            //console.log('Less than ' + articleLimit + ' items left to view, emptying seenItems and restarting.');
             //There's less unseen articles that the limit
             //clear seenItems, reset ls, and reinit
             seenItems = {};
             resetLocalStorage();
-            init();
+            return init();
         }
 
         return shuffle(randArticles);
@@ -107,6 +121,8 @@ export default (() => {
         var
             html,
             templateData = [];
+
+        if(!randomArticles) { return; }
 
         randomArticles.forEach((article) => {
             Object.keys(article).map((key) => {
