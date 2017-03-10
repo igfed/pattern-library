@@ -24,7 +24,8 @@ Styleguide 3.3
 .hero {
 	background-position: 0 0;
 	background-repeat: repeat-x;
-	padding: 80px 10px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -38,9 +39,6 @@ Styleguide 3.3
 		justify-content: flex-start;
 		padding-left: 20px;
 		padding-right: 20px;
-		@include respond-to(medium) {
-			padding: 80px 10vw;
-		}
 	}
 	&.patterned-more{
 		background: url(../images/header-rp.png);
@@ -51,12 +49,13 @@ Styleguide 3.3
 .hero-copy {
 	text-align: center;
 	z-index: 100;
+	flex-grow: 1;
 
 	h1, p{
 		widows: 2;// Just in case its supported
 	}
 
-	h1{
+	h1 {
 		margin-bottom: 25px;
 	}
 }
