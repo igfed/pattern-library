@@ -36,9 +36,7 @@ Styleguide 3.3
 		background-image: url(../images/tiled-weathered-pattern.jpg);
 	}
 	&.super-hero {
-		justify-content: flex-start;
-		padding-left: 20px;
-		padding-right: 20px;
+		min-height: 600px;
 	}
 	&.patterned-more{
 		background: url(../images/header-rp.png);
@@ -61,10 +59,6 @@ Styleguide 3.3
 }
 .super-hero .hero-copy {
 	text-align: left;
-	max-width: 70vw;
-	@include respond-to(medium) {
-		max-width: 50vw;
-	}
 }
 
 .hero-image {
@@ -81,11 +75,10 @@ Styleguide 3.3
 	}
 }
 .super-hero .hero-image {
-	right: 0;
 	left: auto;
-	max-width: 30vw;
-	@include respond-to(medium) {
-		max-width: 50vw;
+	max-width: 30%;
+	@include respond-to(large) {
+		max-width: 40%;
 	}
 }
 
