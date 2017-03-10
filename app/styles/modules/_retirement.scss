@@ -1,5 +1,28 @@
 /*Global*/
 
+.small-text-center{
+	text-align: center;
+
+	@include respond-to(medium){
+		text-align: initial;
+	}
+}
+
+.medium-text-center{
+	@include respond-to(medium){
+		text-align: center;
+	}
+	@include respond-to(large){
+		text-align: initial;
+	}
+}
+
+.large-text-center{
+	@include respond-to(large){
+		text-align: center;
+	}
+}
+
 /*video.scss*/
 .split-bg{
 	height:100%;
@@ -10,7 +33,7 @@
 
     @include respond-to(medium){
     	min-height: 150px;
-    	margin-bottom: 150px;
+    	margin-bottom: 170px;
     }
 
     @include respond-to(large){
@@ -33,9 +56,17 @@
 }
 
 .split-bg-description{
-	max-width: 768px;
+	max-width: 550px;
     margin: 0 auto;
     text-align: right;
+
+    @include respond-to(medium){
+    	max-width: 567px;
+    }
+
+    @include respond-to(large){
+    	max-width: 768px;
+    }
 
     p{
     	text-decoration: underline;
@@ -164,12 +195,16 @@ article{
 }
 
 article{
-	.expanded-article-content{
+	.expand-to-read-button{
 		// overflow: hidden;
 	    // max-height: 0;
 	    transition: max-height 0.5s ease 0s, padding-top 0.5s ease 0s;
 	    padding-top: 0;
 	    // display: none;
+	}
+
+	.collapsed-article-content{
+		display: none;
 	}
 }
 

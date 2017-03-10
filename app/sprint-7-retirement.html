@@ -82,28 +82,7 @@
                     </div>
                 </div>
 
-                <div id="expanded-article-content-1" data-toggler="expanded-article-content" class="expanded-article-content">
-                    <div class="row">
-                        <div class="small-12 medium-6 columns tip section-retirement-tip">
-                            <h3>Tip</h3>
-                            <h4 class="content-title">Make tax-efficient deduction decisions</h4>
-                            <p>Although it may seem counter-intuitive, if you expect to have a significantly higher income
-                                in coming years, you can defer taking the tax deduction this year. You can make an RRSP
-                                contribution now and not claim the deduction until you’re in a higher tax bracket.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-12 columns pdf small-centered">
-                            <p>Learn more about getting the most of your RRSP.</p>
-                            <button><a href="external/app/tribal/pdf/MP1313_O_4723641_394052.pdf" target="_blank"
-                               class="button" onClick="igTrack.inline(this)" data-tracking-category="Consumer Engagement"
-                               data-tracking-label="2017RRSP_Click_Download_PDF_EventPage:Retirement">View Top 10 Tips</a></button>
-                        </div>
-                    </div>
-
-                  </div>
-
-                  <div data-toggle="expanded-article-content-1" class="expand-article-toggle">
+                <div data-toggle="expanded-article-content-1" class="expand-article-toggle expand-to-read-button">
                     <div class="mask"></div>
                     <div class="mask"></div>
                     <div class="row">
@@ -113,10 +92,33 @@
                     </div>
                   </div>
 
+                <div id="expanded-article-content-1" data-toggler="collapsed-article-content" class="collapsed-article-content">
+                    <div class="row">
+                        <div class="small-12 medium-6 columns tip section-retirement-tip">
+                            <h3>Tip</h3>
+                            <h4 class="content-title">Make tax-efficient deduction decisions</h4>
+                            <p>Although it may seem counter-intuitive, if you expect to have a significantly higher income
+                                in coming years, you can defer taking the tax deduction this year. You can make an RRSP
+                                contribution now and not claim the deduction until you’re in a higher tax bracket.</p>
+                        </div>
+                    </div>
+
+                    <div class="callout text-center">
+                      <div class="row">
+                        <div class="small-centered small-10 medium-9 large-8 columns">
+                          <p class="callout-body-copy padding-top padding-bottom-small">Learn more about getting the most of your RRSP.</p>
+                          <p class="padding-top">
+                            <a href="external/app/tribal/pdf/MP1313_O_4723641_394052.pdf" class="button" role="button">View Top 10 Tips</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </article>
           </div>
         </div>
       </div>
+      
       <div class="callout bg-highlight">
         <div class="row">
           <div class="small-12 medium-12 medium-centered columns">
@@ -401,31 +403,37 @@
       </div>
 
             <!-- Have Questions 2 pillars -->
-      <div class="callout two-column-cta">
+      <div class="callout two-column-cta small-text-center">
         <div class="row">
-          <div class="medium-3 large-offset-1 large-2 columns">
-            <img src="images/investments.png" alt="" class="image-circle" />
-          </div>
-          <div class="medium-9 large-8 columns end">
-            <h2 class="content-title wide-figure-title">Request a call</h2>
-            <p class="callout-body-copy wide-figure-copy">Have questions about your RRSP? Request a call and we’ll be in touch.</p>
-            <div class="row wide-figure-tertiary-cta">
-              <div class="medium-5 large-4 columns">
-                <a class="button" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+          <div class="small-12 medium-6 columns">
+            <div class="row">
+              <div class="medium-3 large-offset-1 large-3 columns small-fugure">
+                <img src="images/investments.png" alt="" class="image-circle" />
+              </div>
+              <div class="medium-9 large-8 columns end">
+                <h2 class="content-title wide-figure-title">Request a call</h2>
+                <p class="callout-body-copy wide-figure-copy">Have questions about your RRSP? Request a call and we’ll be in touch.</p>
+                <div class="row wide-figure-tertiary-cta">
+                  <div class="medium-5 large-4 columns">
+                    <a class="button" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Request a call</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="medium-3 large-offset-1 large-2 columns">
-            <img src="images/investments.png" alt="" class="image-circle" />
-          </div>
-          <div class="medium-9 large-8 columns end">
-            <h2 class="content-title wide-figure-title">Find an advisor</h2>
-            <p class="callout-body-copy wide-figure-copy">Maximizing your RRSP is vital to your retirement plan. Our advisors can help.</p>
-            <div class="row wide-figure-tertiary-cta">
-              <div class="medium-5 large-4 columns">
-                <a class="button" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Find an advisor</a>
+          <div class="small-12 medium-6 columns">
+            <div class="row">
+              <div class="medium-3 large-offset-1 large-3 columns small-fugure">
+                <img src="images/investments.png" alt="" class="image-circle" />
+              </div>
+              <div class="medium-9 large-8 columns end">
+                <h2 class="content-title wide-figure-title">Find an advisor</h2>
+                <p class="callout-body-copy wide-figure-copy">Maximizing your RRSP is vital to your retirement plan. Our advisors can help.</p>
+                <div class="row wide-figure-tertiary-cta">
+                  <div class="medium-5 large-4 columns">
+                    <a class="button" href="/en/client-resources/prices-and-rates/solutions-banking-all-in-one-rates">Find an advisor</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -452,5 +460,12 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript">
+      var expandToRead = function () {
+        $(".expand-to-read-button").on("click", function(){
+          $(".expand-to-read-button").fadeOut("slow");
+        });
+      }();
+    </script>
   </body>
 </html>
