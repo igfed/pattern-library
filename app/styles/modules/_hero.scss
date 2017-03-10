@@ -36,7 +36,10 @@ Styleguide 3.3
 		background-image: url(../images/tiled-weathered-pattern.jpg);
 	}
 	&.super-hero {
-		min-height: 600px;
+		min-height: 500px;
+		@include respond-to(large) {
+			min-height: 600px;
+		}
 	}
 	&.patterned-more{
 		background: url(../images/header-rp.png);
