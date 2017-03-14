@@ -14,6 +14,7 @@
 import more from './more.js';
 import forms from './forms.js';
 import carousel from './carousel.js';
+import shuffledCarousel from './shuffled-carousel.js';
 import accordion from './accordion.js';
 import video from './video.js';
 import * as ig from './global.js';
@@ -32,6 +33,7 @@ const app = (() => {
     if ($('.ig-form').length) forms.init();
     if ($('.more-section').length) more.init();
     if ($('.ig-carousel').length) carousel.init();
+    if ($('.ig-shuffled-carousel').length) shuffledCarousel.init();
     if ($('.ig-video-group').length) video.init();
 
     // Components can also be setup to receive an HTML 'scope' (.ig-evt1... .ig-evt2.... etc)
