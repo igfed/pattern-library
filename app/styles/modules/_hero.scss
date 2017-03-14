@@ -38,7 +38,7 @@ Styleguide 3.3
 	&.super-hero {
 		min-height: 500px;
 		@include respond-to(large) {
-			min-height: 600px;
+			min-height: 780px;
 		}
 	}
 	&.patterned-more{
@@ -75,6 +75,14 @@ Styleguide 3.3
 
 	img {
 		width: 100%;
+
+		@include respond-to(medium) {
+			width: 75%;
+		}
+
+		@include respond-to(large) {
+			width: 100%;
+		}
 	}
 }
 .super-hero .hero-image {
