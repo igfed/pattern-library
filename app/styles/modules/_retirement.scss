@@ -4,7 +4,7 @@
 	text-align: center;
 
 	@include respond-to(medium){
-		text-align: initial;
+		text-align: left;
 	}
 }
 
@@ -13,13 +13,34 @@
 		text-align: center;
 	}
 	@include respond-to(large){
-		text-align: initial;
+		text-align: left;
 	}
 }
 
 .large-text-center{
 	@include respond-to(large){
 		text-align: center;
+	}
+}
+
+.arrow{
+	&:after{
+		content: '';
+	    display: inline-block;
+	    margin: 0 0 2px 15px;
+	    width: 12px;
+	    height: 12px;
+	    border: none;
+	    border-bottom: solid 1px;
+	    border-right: solid 1px;
+	    -webkit-transform-origin: center middle;
+	    transform-origin: center middle;
+	    -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+	    transform: rotate(45deg) translate3d(0, 0, 0);
+	    -webkit-transition: -webkit-transform 0.3s ease-out;
+	    transition: -webkit-transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out;
+	    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 	}
 }
 
@@ -90,6 +111,10 @@
     	justify-content: center;
 	}
 
+	.ig-carousel{
+		width: 100%;
+	}
+
 	.small-figure{
 		width: auto;
 	}
@@ -118,6 +143,11 @@
 	display: flex;
 	flex-flow: column wrap;
 }
+
+.two-column-cta-row{
+	width: 100%;
+}
+
 .records-list{
 	display: flex;
 	flex-flow: row wrap;
@@ -180,7 +210,7 @@ article{
 article{
 	&.initial-view{
 		.expand-article-toggle{
-			// top: -5rem;
+			top: 0;
 
 			.mask{
 				opacity: 1;
@@ -195,16 +225,22 @@ article{
 }
 
 article{
-	.expand-to-read-button{
-		// overflow: hidden;
-	    // max-height: 0;
-	    transition: max-height 0.5s ease 0s, padding-top 0.5s ease 0s;
-	    padding-top: 0;
-	    // display: none;
+	.expand-article-toggle{
+		overflow: visible;
+	    position: relative;
+	    clear: both;
+	    
+	    // padding-top: 0;
+    	transition: top 0.5s ease 0s;
+    	top: 300px;
 	}
 
-	.collapsed-article-content{
-		display: none;
+	.expand-article-content{
+		// overflow: hidden;
+	 //    max-height: 0;
+	    transition: max-height 0.5s ease 0s, padding-top 0.5s ease 0s;
+	    // padding-top: 0;
+	    display: none;
 	}
 }
 

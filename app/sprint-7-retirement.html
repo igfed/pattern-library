@@ -15,6 +15,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -32,11 +34,13 @@
 
   <div class="split-bg-video">
     <div class="split-bg">
-        <div class="row ig-video-group" data-account="3906942861001" data-player="BJNX9uitx">
+        <div class="row ig-video-group" data-illustrationid="L2--retirement" data-account="3906942861001" data-player="BJNX9uitx">
             <div class="small-12 columns">
+              <!-- data-id="4219153214001" -->
                 <!-- Similar to an Angular Directive, this code will be replaced by JavaScript. -->
                 <div class="ig-video-js"
-                     data-id="4219153214001"
+                     
+                     data-id ="4727877521001"
                      data-controls="true"
                      data-autoplay="false"
                      data-preload="none">
@@ -64,7 +68,7 @@
                   </div>
                 </div>
                 <div class="row section-retirement-tips">
-                    <div class="small-12 medium-6 columns tip section-retirement-tip">
+                    <div class="small-12 medium-12 large-6 columns tip section-retirement-tip">
                         <h3>Tip</h3>
                         <h4 class="content-title">Give yourself a raise</h4>
                         <p>File a T1213 form to the Canada Revenue Agency (CRA), and you could potentially reduce the amount
@@ -72,7 +76,7 @@
                             your immediate use – like your RRSP.</p>
                     </div>
 
-                    <div class="small-12 medium-6 columns tip section-retirement-tip">
+                    <div class="small-12 medium-12 large-6 columns tip section-retirement-tip">
                         <h3>Tip</h3>
                         <h4 class="content-title">Tax planning for two through spousal RRSP's</h4>
                         <p>A spousal RRSP is an RRSP for the benefit of one spouse, but contributions are made, and
@@ -82,19 +86,19 @@
                     </div>
                 </div>
 
-                <div data-toggle="expanded-article-content-1" class="expand-article-toggle expand-to-read-button">
+                <div class="expand-article-toggle">
                     <div class="mask"></div>
                     <div class="mask"></div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h3>Expand to read full article</h3>
+                            <a href="#expand-article-content"><h3 class="arrow">Expand to read full article</h3></a>
                         </div>
                     </div>
                   </div>
 
-                <div id="expanded-article-content-1" data-toggler="collapsed-article-content" class="collapsed-article-content">
+                <div id="expand-article-content" class="expand-article-content">
                     <div class="row">
-                        <div class="small-12 medium-6 columns tip section-retirement-tip">
+                        <div class="small-12 medium-12 large-6 columns tip section-retirement-tip">
                             <h3>Tip</h3>
                             <h4 class="content-title">Make tax-efficient deduction decisions</h4>
                             <p>Although it may seem counter-intuitive, if you expect to have a significantly higher income
@@ -140,7 +144,18 @@
                                   </div>
                                </div>
                                <div class="row modal-content">
-                                <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
+                                  <div class="row ig-carousel text-carousel" data-dots="true" data-infinite="true" data-arrows="true">
+                                    <div class="columns">
+                                        <p class="callout-body-copy">Frequently asked questions, on subjects such as deposits, withdrawals, redemptions and account information.</p>
+                                    </div>
+                                    <div class="columns">
+                                        <p class="callout-body-copy">Frequently asked questions, on subjects such as deposits, withdrawals, redemptions and account information.</p>
+                                    </div>
+                                    <div class="columns">
+                                        <p class="callout-body-copy">Frequently asked questions, on subjects such as deposits, withdrawals, redemptions and account information.</p>
+                                    </div>
+                                  </div>
+<!--                                 <button type="button" class="slick-prev slick-arrow" style="display: block;"><span class="show-for-sr">Previous</span></button>
 
                                   <div class="small-figure medium-3 large-2 columns">
                                     <img src="images/investments.png" alt="" class="image-circle" />
@@ -161,7 +176,7 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button>
+                                  <button type="button" class="slick-next slick-arrow" style="display: block;"><span class="show-for-sr">Next</span></button> -->
                                </div>
                             </div>
 
@@ -404,7 +419,7 @@
 
             <!-- Have Questions 2 pillars -->
       <div class="callout two-column-cta small-text-center">
-        <div class="row">
+        <div class="row two-column-cta-row">
           <div class="small-12 medium-6 columns">
             <div class="row">
               <div class="medium-3 large-offset-1 large-3 columns small-fugure">
@@ -461,11 +476,21 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <script type="text/javascript">
+
       var expandToRead = function () {
-        $(".expand-to-read-button").on("click", function(){
-          $(".expand-to-read-button").fadeOut("slow");
+        var expandSection,
+        expandScrollDelay = .25,
+        expandScrollDuration = 1.5;
+
+        $(".expand-article-toggle").on("click", function(){
+          var toExpand = $('.expand-article-content');
+          $(".initial-view").removeClass("initial-view");
+          // $(".expand-article-toggle").fadeOut("slow");
+          $(".expand-article-content").show();
+          $(".expand-article-toggle").fadeOut("slow");
         });
       }();
+
     </script>
   </body>
 </html>
