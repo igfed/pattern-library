@@ -321,9 +321,8 @@ $border-color: #E0E2E2;
     }
 
     .callout-body-copy {
-      @include respond-to(small) {
-        font-size: 24px;
-      }
+      font-size: 24px;
+      
       @include respond-to(medium) {
         font-size: 28px;
       }
