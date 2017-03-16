@@ -129,12 +129,6 @@
             <div class="area-l2 section records" data-areaid="retirement">
                 <div class="records-container">
                     <div class="records-list">
-                        <div class="record-item investments" data-itemid="investments">
-                            <div class="overlay">
-                              <button class="button" data-open="exampleModal1">Click here to expand</button>
-                            </div>
-                             <img style="width:350px" src="images/vinyls_final_english_Page_02.jpg"/>
-
                             <div class="reveal retirement large" id="exampleModal1" data-reveal>
                                <div class="row modal-header">
                                    <div class="small-12 columns">
@@ -145,7 +139,7 @@
                                </div>
                                <div class="row modal-content">
                                   <div class="row ig-carousel" data-dots="true" data-infinite="true" data-arrows="true">
-                                    <div class="columns carousel-investments">
+                                    <div class="columns carousel investments">
                                         <div class="small-figure medium-3 large-2 columns">
                                           <img src="images/investments.png" alt="" class="image-circle" />
                                         </div>
@@ -166,7 +160,7 @@
                                           </div>
                                         </div>
                                     </div>
-                                    <div class="columns carousel-tax-planning">
+                                    <div class="columns carousel tax-planning">
                                         <div class="small-figure medium-3 large-2 columns">
                                           <img src="images/investments.png" alt="" class="image-circle" />
                                         </div>
@@ -188,7 +182,7 @@
                                           </div>
                                         </div>
                                     </div>
-                                    <div class="columns carousel-mortgage">
+                                    <div class="columns carousel mortgage">
                                          <div class="small-figure medium-3 large-2 columns">
                                             <img src="images/investments.png" alt="" class="image-circle" />
                                           </div>
@@ -210,7 +204,7 @@
                                             </div>
                                           </div>
                                     </div>
-                                    <div class="columns carousel-insurance">
+                                    <div class="columns carousel insurance">
                                       <div class="small-figure medium-3 large-2 columns">
                                         <img src="images/investments.png" alt="" class="image-circle" />
                                       </div>
@@ -232,7 +226,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="columns carousel-estate-planning">
+                                    <div class="columns carousel estate-planning">
                                         <div class="small-figure medium-3 large-2 columns">
                                           <img src="images/investments.png" alt="" class="image-circle" />
                                         </div>
@@ -255,7 +249,7 @@
                                           </div>
                                         </div>
                                     </div>
-                                    <div class="columns carousel-retirement">
+                                    <div class="columns carousel retirement">
                                       <div class="small-figure medium-3 large-2 columns">
                                         <img src="images/investments.png" alt="" class="image-circle" />
                                       </div>
@@ -280,7 +274,11 @@
                                   </div>
                                </div>
                             </div>
-
+                        <div class="record-item investments" data-itemid="investments">
+                            <div class="overlay">
+                              <button class="button" data-open="exampleModal1">Click here to expand</button>
+                            </div>
+                             <img style="width:350px" src="images/vinyls_final_english_Page_02.jpg"/>
                         </div>
                         <div class="record-item tax-planning" data-itemid="tax-planning">
                             <div class="overlay">
@@ -474,8 +472,19 @@
       }();
 
       $('[data-reveal]').on('open.zf.reveal', function() {
-    $('.slick-slider').resize();
-});
+        $('.slick-slider').resize();
+      });
+
+      var index = $('.tax-planning').index(); 
+
+      $(".record-item.tax-planning button").on("click", function(){
+         var index = $('carousel.tax-planning').index(); 
+         $('.slick-slide').slick(index);
+      });
+
+      $(".record-item button").on("click", function(){
+        $(".reveal").toggleClass(".show");
+      });
 
     </script>
   </body>
