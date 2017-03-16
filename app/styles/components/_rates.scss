@@ -327,6 +327,28 @@
   .rate-grid, .rate-grid-10 {
     margin: 0 auto;
     text-align: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+    }
+
+    .align-center {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; 
+      }
   }
 
   // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
