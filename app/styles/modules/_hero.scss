@@ -24,7 +24,8 @@ Styleguide 3.3
 .hero {
 	background-position: 0 0;
 	background-repeat: repeat-x;
-	padding: 80px 10px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	position: relative;
 	overflow: hidden;
 	display: flex;
@@ -35,11 +36,9 @@ Styleguide 3.3
 		background-image: url(../images/tiled-weathered-pattern.jpg);
 	}
 	&.super-hero {
-		justify-content: flex-start;
-		padding-left: 20px;
-		padding-right: 20px;
-		@include respond-to(medium) {
-			padding: 80px 10vw;
+		min-height: 500px;
+		@include respond-to(large) {
+			min-height: 780px;
 		}
 	}
 	&.patterned-more{
@@ -51,22 +50,19 @@ Styleguide 3.3
 .hero-copy {
 	text-align: center;
 	z-index: 100;
-	max-width: 750px;
+	//max-width: 750px;
+	flex-grow: 1;
 
 	h1, p{
 		widows: 2;// Just in case its supported
 	}
 
-	h1{
+	h1 {
 		margin-bottom: 25px;
 	}
 }
 .super-hero .hero-copy {
 	text-align: left;
-	max-width: 70vw;
-	@include respond-to(medium) {
-		max-width: 50vw;
-	}
 }
 
 .hero-image {
@@ -80,14 +76,21 @@ Styleguide 3.3
 
 	img {
 		width: 100%;
+
+		@include respond-to(medium) {
+			width: 75%;
+		}
+
+		@include respond-to(large) {
+			width: 100%;
+		}
 	}
 }
 .super-hero .hero-image {
-	right: 0;
 	left: auto;
-	max-width: 30vw;
-	@include respond-to(medium) {
-		max-width: 50vw;
+	max-width: 30%;
+	@include respond-to(large) {
+		max-width: 40%;
 	}
 }
 

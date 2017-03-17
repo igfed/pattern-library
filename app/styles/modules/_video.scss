@@ -72,4 +72,13 @@
 
   }
 
+  .video-transcript {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 }
