@@ -196,16 +196,17 @@ article{
     			margin-top: 1.5rem;
 		    }
 
-		    h3{
+		   .expand-to-read-button{
 			    margin: 0;
 			    cursor: pointer;
 			    transition: color 0.3s ease 0s;
 			    padding: 10px 10px 20px 20px;
 			    border: 1px solid #aaa;
 			    border-top: 1px solid #fff;
-			    width: 300px;
+			    max-width: 300px;
 			    margin: -1px auto 0 auto;
 			    border-radius: 0 0 5px 5px;
+			    text-align: center;
 
 		    }
 	    }
