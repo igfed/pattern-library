@@ -421,15 +421,12 @@
         $('.slick-slider').resize();
       });
 
-       // $('[data-slide]').click(function(e) {
-       //   e.preventDefault();
-       //   var slideno = $(this).data('slide');
-       //   $('.carousel-records').slick('slickGoTo', slideno - 1);
-       // });
+      //Get the data-slide value/number of the element and use it as an idex to show the correct slide
 
-         $('.records-list .record-item').on('click', function () {
-            var slideIndex = $(this).data($('[data-slide]'));
-            $('.slick-slider').slickGoTo($(this).attr('index'));
+         $('.records-list .record-item').on('click', function (e) {
+          e.preventDefault();
+            var slideIndex = $(this).attr('data-slide');
+            $('.slick-slider').slick('slickGoTo', slideIndex-1, true);
         });
 
 
