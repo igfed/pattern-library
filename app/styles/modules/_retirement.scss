@@ -121,7 +121,9 @@
 	}
 
 	.small-figure{
-		width: auto;
+		@include respond-to(medium){
+			width: auto;
+		}
 	}
 
 	.wide-figure-tertiary-cta{
@@ -134,11 +136,22 @@
 	}
 
 	.slick-prev{
-		left: 40px;
+
+		left: -40px;
+	    position: absolute;
+
+		@include respond-to(medium){
+			left: 40px;
+		}
 	}
 
 	.slick-next{
-		right: 40px;
+		right: -40px;
+    	position: absolute;
+
+		@include respond-to(medium){
+			right: 40px;
+		}
 	}
 }
 
