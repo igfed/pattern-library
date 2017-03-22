@@ -8,7 +8,11 @@
 		// Now set up the states
 		$stateProvider
 			.state('quiz', {
+<<<<<<< HEAD
 				templateUrl: "/content/dam/investorsgroup/app/quiz/quiz.html",
+=======
+				templateUrl: "../templates/quiz.html",
+>>>>>>> develop
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -17,7 +21,11 @@
 				}
 			})
 			.state('report', {
+<<<<<<< HEAD
 				templateUrl: 'report.html',
+=======
+				templateUrl: '../templates/report.html',
+>>>>>>> develop
 				controller: 'TipController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -27,7 +35,11 @@
 			})
 			.state('start', {
 				url: "/",
+<<<<<<< HEAD
 				templateUrl: '/content/dam/investorsgroup/app/quiz/start.html',
+=======
+				templateUrl: '../templates/start.html',
+>>>>>>> develop
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -58,35 +70,55 @@
   app.directive("navigation", function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       templateUrl: "nav.html"
+=======
+      templateUrl: "../templates/nav.html"
+>>>>>>> develop
     };
   });
   
   app.directive("quizProgress", function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       templateUrl: "quiz-progress.html"
+=======
+      templateUrl: "../templates/quiz-progress.html"
+>>>>>>> develop
     };
   });
 
   app.directive("quizQuestion", function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       templateUrl: "quiz-question.html"
+=======
+      templateUrl: "../templates/quiz-question.html"
+>>>>>>> develop
     };
   });
 
   app.directive("quizAnswers", function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       templateUrl: "quiz-answers.html"
+=======
+      templateUrl: "../templates/quiz-answers.html"
+>>>>>>> develop
     };
   });
 
   app.directive("quizReport", function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       templateUrl: "quiz-report.html"
+=======
+      templateUrl: "../templates/quiz-report.html"
+>>>>>>> develop
     };
   });
 
