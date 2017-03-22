@@ -8,7 +8,7 @@
 		// Now set up the states
 		$stateProvider
 			.state('quiz', {
-				templateUrl: "/content/dam/investorsgroup/app/quiz/quiz.html",
+				templateUrl: "../templates/quiz.html",
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -17,7 +17,7 @@
 				}
 			})
 			.state('report', {
-				templateUrl: 'report.html',
+				templateUrl: '../templates/report.html',
 				controller: 'TipController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -27,7 +27,7 @@
 			})
 			.state('start', {
 				url: "/",
-				templateUrl: '/content/dam/investorsgroup/app/quiz/start.html',
+				templateUrl: '../templates/start.html',
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -58,35 +58,35 @@
   app.directive("navigation", function() {
     return {
       restrict: 'E',
-      templateUrl: "nav.html"
+      templateUrl: "../templates/nav.html"
     };
   });
   
   app.directive("quizProgress", function() {
     return {
       restrict: 'E',
-      templateUrl: "quiz-progress.html"
+      templateUrl: "../templates/quiz-progress.html"
     };
   });
 
   app.directive("quizQuestion", function() {
     return {
       restrict: 'E',
-      templateUrl: "quiz-question.html"
+      templateUrl: "../templates/quiz-question.html"
     };
   });
 
   app.directive("quizAnswers", function() {
     return {
       restrict: 'E',
-      templateUrl: "quiz-answers.html"
+      templateUrl: "../templates/quiz-answers.html"
     };
   });
 
   app.directive("quizReport", function() {
     return {
       restrict: 'E',
-      templateUrl: "quiz-report.html"
+      templateUrl: "../templates/quiz-report.html"
     };
   });
 
