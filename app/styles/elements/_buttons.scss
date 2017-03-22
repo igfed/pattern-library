@@ -131,8 +131,8 @@ html [type="button"]{
 	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
 	    transition: right .15s ease-out .15s, left .15s ease-out 0s;
 	}
-	&:hover {
-		&:hover, &:focus {
+	&:hover, &:focus {
+		&:before{
 			left: calc(100% - 20px);
 			right: 0;
 			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
