@@ -342,12 +342,28 @@
   padding-top: 30px;
   padding-bottom: 10px;
 
+  .row{
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(medium){
+      flex-direction: row;
+    }
+  }
+
   .tip-container {
     margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
 
     @include respond-to(large) {
       padding-right: 40px;
       padding-left: 40px;
+    }
+
+    .wide-figure{
+      height: 100%;
     }
 
     img {
