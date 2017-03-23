@@ -7,6 +7,7 @@ export default (() => {
         brightCove;
 
     function init() {
+        // We need to capture the video player settings defined in the HTML and create the markup that Brightcove requires
         _parseVideos();
 
         // Make sure the VideoJS method is available and fire ready event handlers
@@ -17,7 +18,7 @@ export default (() => {
             }
         }, 500)
 
-        // Funtion for checking if video's have scrolled off screen and need to be paused
+        // Function for checking if video's have scrolled off screen and need to be paused
         _viewStatus();
     }
 
