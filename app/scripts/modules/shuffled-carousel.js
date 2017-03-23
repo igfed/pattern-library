@@ -20,7 +20,7 @@ export default (() => {
     function init() {
 
         igls = getLocalStorage();
-        availableItems = $('.ig-shuffled-carousel').data('articles')['articles'];
+        availableItems = $('.ig-shuffled-carousel').data('articles').articles;
         dataKey = $('.ig-shuffled-carousel').data('name');
         articleLimit = $('.ig-shuffled-carousel').data('limit');
 
