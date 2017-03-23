@@ -8,7 +8,9 @@
 		// Now set up the states
 		$stateProvider
 			.state('quiz', {
+
 				templateUrl: "../templates/quiz.html",
+
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -17,7 +19,9 @@
 				}
 			})
 			.state('report', {
+
 				templateUrl: '../templates/report.html',
+
 				controller: 'TipController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -27,7 +31,9 @@
 			})
 			.state('start', {
 				url: "/",
+
 				templateUrl: '../templates/start.html',
+
 				controller: 'QuizController',
 				resolve: {
 					myData: ["$rootScope", function($rootScope){
@@ -58,35 +64,45 @@
   app.directive("navigation", function() {
     return {
       restrict: 'E',
+
       templateUrl: "../templates/nav.html"
+
     };
   });
   
   app.directive("quizProgress", function() {
     return {
       restrict: 'E',
+
       templateUrl: "../templates/quiz-progress.html"
+
     };
   });
 
   app.directive("quizQuestion", function() {
     return {
       restrict: 'E',
+
       templateUrl: "../templates/quiz-question.html"
+
     };
   });
 
   app.directive("quizAnswers", function() {
     return {
       restrict: 'E',
+
       templateUrl: "../templates/quiz-answers.html"
+
     };
   });
 
   app.directive("quizReport", function() {
     return {
       restrict: 'E',
+
       templateUrl: "../templates/quiz-report.html"
+
     };
   });
 
