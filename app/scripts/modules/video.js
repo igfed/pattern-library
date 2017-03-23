@@ -2,20 +2,24 @@ import * as ig from './global.js';
 
 export default (() => {
 
-    var vids = [], brightCove;
+    var vids = [], players = [], brightCove;
 
     function init() {
         _parseVideos();
 
-        // Not using this functionality at the moment (essentially an onLoadComplete) - might be required down the road
-        //
         // Make sure the VideoJS method is available and fire ready event handlers if so
-        // brightCove = setInterval(function () {
-        //   if ($('.vjs-plugins-ready').length) {
-        //     _brightCoveReady();
-        //     clearInterval(brightCove);
-        //   }
-        // }, 500)
+        brightCove = setInterval(function () {
+            if ($('.vjs-plugins-ready').length) {
+                _brightCoveReady();
+                clearInterval(brightCove);
+            }
+        }, 500)
+
+        $(window).scroll(function () {
+            vids.forEach(function (el) {
+                console.log($('#' + el).visible());
+            })
+        });
     }
 
     function _parseVideos() {
@@ -73,11 +77,30 @@ export default (() => {
     }
 
     function _brightCoveReady() {
+        var player;
         vids.forEach(function (el) {
             videojs('#' + el).ready(function () {
-                // $('.video-overlay.'+ el).addClass('hidden');
+                // assign this player to a variable
+                player = this;
+                // assign an event listener for play event
+                player.on('play', _onPlay);
+                // push the player to the players array
+                players.push(player);
             });
         })
+    }
+
+    function _onPlay(e) {
+        // determine which player the event is coming from
+        var id = e.target.id;
+        // go through the array of players
+        for (var i = 0; i < players.length; i++) {
+            // get the player(s) that did not trigger the play event
+            if (players[i].id() !== id) {
+                // pause the other player(s)
+                videojs(players[i].id()).pause();
+            }
+        }
     }
 
     return {
