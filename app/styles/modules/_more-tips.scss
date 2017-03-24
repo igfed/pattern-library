@@ -27,6 +27,7 @@
 
     img {
       max-width: 50px;
+      height: 25px;
     }
   }
 
@@ -46,6 +47,10 @@
     .tips-questions-icon {
       float: left;
       width: 40px;
+      
+      img{
+        width:50px;
+      }
     }
 
     .title {
