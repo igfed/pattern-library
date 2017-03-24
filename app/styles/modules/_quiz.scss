@@ -17,6 +17,19 @@
   }
 }
 
+// zoomOut animation
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
 // fadeIn animation
 @keyframes fadeIn {
   from {
@@ -132,6 +145,11 @@
 
 .zoom-in {
   animation: zoomIn 1s;
+  animation-fill-mode: both;
+}
+
+.zoom-out{
+  animation: zoomOut 1s;
   animation-fill-mode: both;
 }
 
@@ -324,12 +342,28 @@
   padding-top: 30px;
   padding-bottom: 10px;
 
+  .row{
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(medium){
+      flex-direction: row;
+    }
+  }
+
   .tip-container {
     margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
 
     @include respond-to(large) {
       padding-right: 40px;
       padding-left: 40px;
+    }
+
+    .wide-figure{
+      height: 100%;
     }
 
     img {
