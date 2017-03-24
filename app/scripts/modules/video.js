@@ -2,20 +2,24 @@ import * as ig from './global.js';
 
 export default (() => {
 
-    var vids = [], brightCove;
+    var videoIDs = [],
+        players = [],
+        brightCove;
 
     function init() {
+        // We need to capture the video player settings defined in the HTML and create the markup that Brightcove requires
         _parseVideos();
 
-        // Not using this functionality at the moment (essentially an onLoadComplete) - might be required down the road
-        //
-        // Make sure the VideoJS method is available and fire ready event handlers if so
-        // brightCove = setInterval(function () {
-        //   if ($('.vjs-plugins-ready').length) {
-        //     _brightCoveReady();
-        //     clearInterval(brightCove);
-        //   }
-        // }, 500)
+        // Make sure the VideoJS method is available and fire ready event handlers
+        brightCove = setInterval(function () {
+            if ($('.vjs-plugins-ready').length) {
+                _brightCoveReady();
+                clearInterval(brightCove);
+            }
+        }, 500)
+
+        // Function for checking if video's have scrolled off screen and need to be paused
+        _viewStatus();
     }
 
     function _parseVideos() {
@@ -49,7 +53,7 @@ export default (() => {
                 data.transcript = $video.data('transcript') ? $video.data('transcript') : '';
 
                 // Store ID's for all video's on the page - in case we want to run a post-load process on each
-                vids.push(data.id);
+                videoIDs.push(data.id);
 
                 // Let's replace the ig-video-js 'directive' with the necessary Brightcove code
                 _injectTemplate($video, data, index)
@@ -73,11 +77,39 @@ export default (() => {
     }
 
     function _brightCoveReady() {
-        vids.forEach(function (el) {
+        var player;
+        videoIDs.forEach(function (el) {
             videojs('#' + el).ready(function () {
-                // $('.video-overlay.'+ el).addClass('hidden');
+                // assign this player to a variable
+                player = this;
+                // assign an event listener for play event
+                player.on('play', _onPlay);
+                // push the player to the players array
+                players.push(player);
             });
         })
+    }
+
+    function _onPlay(e) {
+        // determine which player the event is coming from
+        var id = e.target.id;
+        // go through players
+        players.forEach(function (player) {
+            if (player.id() !== id) {
+                // pause the other player(s)
+                videojs(player.id()).pause();
+            }
+        })
+    }
+
+    function _viewStatus() {
+        $(window).scroll(function () {
+            players.forEach(function (player) {
+                if (!$('#' + player.id()).visible()) {
+                    videojs(player.id()).pause();
+                }
+            })
+        });
     }
 
     return {
