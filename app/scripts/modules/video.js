@@ -45,6 +45,7 @@ export default (() => {
                 data.id = $video.data('id');
 
                 // Capture options (optional)
+                data.overlay = $video.data('overlay') ? $video.data('overlay') : '';
                 data.title = $video.data('title') ? $video.data('title') : '';
                 data.description = $video.data('description') ? $video.data('description') : '';
                 data.auto = $video.data('autoplay') ? 'autoplay' : '';
@@ -68,12 +69,22 @@ export default (() => {
     }
 
     function _injectTemplate($video, data, index) {
-        var html = `<div class="video-container"><span class="video-overlay ${data.id}"></span><div class="video-container-responsive"><video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video></div>`
+        var html = `<div class="video-container"><div class="video-container-responsive">`
+        if (data.overlay.length > 0) {
+            html += `<span class="video-overlay ${data.id}" style="background-image: url('../${data.overlay}');"></span>`;
+        }
+        html += `<video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video></div>`
         if (data.transcript.length > 0) {
             html += `<div class="video-transcript"><a target="_blank" href="${data.transcript}">Transcript</a></div>`;
         }
         html += `</div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
-        $video.replaceWith(html);
+        $video = $video.replaceWith(html);
+
+        if (data.overlay) {
+            $(document).on('click', '#' + data.id, function () {
+                $(this).siblings('.video-overlay').hide();
+            })
+        }
     }
 
     function _brightCoveReady() {
