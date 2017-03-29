@@ -31,6 +31,13 @@ Styleguide 3.3
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-height: 300px;
+	max-height: 300px;
+
+	@include respond-to(small) {
+		min-height: 400px;
+		max-height: 400px;
+	}
 
 	&.patterned {
 		background-image: url(../images/tiled-weathered-pattern.jpg);
@@ -76,10 +83,6 @@ Styleguide 3.3
 	img {
 		width: 100%;
 
-		@include respond-to(medium) {
-			width: 75%;
-		}
-
 		@include respond-to(large) {
 			width: 100%;
 		}
@@ -88,8 +91,22 @@ Styleguide 3.3
 .super-hero .hero-image {
 	left: auto;
 	max-width: 30%;
+
 	@include respond-to(large) {
 		max-width: 40%;
+	}
+
+	img {
+
+		width: 75%;
+
+		@include respond-to(small) {
+			width: 75%;
+		}
+
+		@include respond-to(large) {
+			width: 100%;
+		}
 	}
 }
 
