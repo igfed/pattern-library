@@ -104,6 +104,16 @@ Styleguide 3.3
 		transform: translate3d(-50%,0,0);
 		left: 50%;
 	}
+
+	.right-focus {
+		transform: translate3d(-95%,0,0);
+		left: 95%;
+	}
+
+	.left-focus {
+		transform: translate3d(-5%,0,0);
+		left: 5%;
+	}
 }
 
 .super-hero .hero-image {
