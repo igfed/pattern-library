@@ -20,8 +20,8 @@ export default (() => {
     function init() {
 
         igls = getLocalStorage();
-        dataKey = $('.ig-shuffled-carousel').data('articles');
-        availableItems = shuffledCarouselData[dataKey];
+        availableItems = $('.ig-shuffled-carousel').data('articles').articles;
+        dataKey = $('.ig-shuffled-carousel').data('name');
         articleLimit = $('.ig-shuffled-carousel').data('limit');
 
         if (!igls[dataKey]) {
@@ -70,7 +70,7 @@ export default (() => {
     function getRandArticles() {
         var
             unseen = [],
-            randArticles;
+            randArticles;   
 
         Object.keys(availableItems).forEach((key, i) => {
             var newObj = {};
@@ -89,6 +89,7 @@ export default (() => {
             //clear seenItems, reset ls, and reinit
             seenItems = {};
             resetLocalStorage();
+           
             return init();
         }
 

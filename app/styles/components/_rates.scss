@@ -111,7 +111,6 @@
 //    </div>
 //</div>
 // Styleguide 2.2
-
 // .variation-one {
 //   .callout {
 //     @include respond-to(medium) {
@@ -243,419 +242,371 @@
 //     }
 //   }
 // }
-
 .separator-line {
-  background-color: transparent;
-  border-bottom: solid 1px $dark-grey;
+    background-color: transparent;
+    border-bottom: solid 1px $dark-grey;
 }
 
 .rates-type-a {
-  .callout {
-    .variable-rates {
-
-      @include respond-to(medium) {
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-
-      @include respond-to(large) {
-        margin-top: 90px;
-        margin-bottom: 40px;
-      }
+    .callout {
+        .variable-rates {
+            @include respond-to(medium) {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            @include respond-to(large) {
+                margin-top: 90px;
+                margin-bottom: 40px;
+            }
+        }
     }
-  }
-
-  .large-body-copy {
-    @media only screen and (max-width: 640px) {
-      font-family: $font-stack-light;
-      font-size: 22px;
+    .large-body-copy {
+        font-family: $font-stack-light;
+        @media only screen and (max-width: 640px) {
+            font-size: 22px;
+        }
     }
-  }
 }
 
 .rates-type-b {
-  .rate-section:first-child {
-    .rate-block {
-      padding-bottom: 30px;
+    .rate-section:first-child {
+        .rate-block {
+            padding-bottom: 30px;
+        }
     }
-  }
 }
 
 .rates-type-c {
-  .medium-3 {
-
-    @include respond-to(medium) {
-      margin-left: 37.5%;
+    .callout-body-copy {
+        font-size: 16px;
+        @include respond-to(large) {
+            font-size: 18px;
+        }
+    }
+    .medium-3 {
+        @include respond-to(medium) {
+            margin-left: 37.5%;
+        }
+        @include respond-to(large) {
+            margin-left: 0;
+        }
     }
 
-    @include respond-to(large) {
-      margin-left: 0;
+    .row {
+        .rate-block {
+            float: none;
+
+            @include respond-to(large) {
+                float: right;
+                margin-top: -50px;
+            }
+        }
     }
-  }
 }
 
 .rates {
-
-  .margin-bottom-lg {
-    @include respond-to(large) {
-      margin-bottom: 70px;
-    }
-  }
-
-  .margin-top-xl {
-    @include respond-to(large) {
-      margin-top: 70px;
-    }
-  }
-
-  .section-title {
-    line-height: 12px;
-
-    @include respond-to(medium) {
-      line-height: 14px;
-    }
-
-    @include respond-to(large) {
-      line-height: 14px;
-    }
-  }
-
-  .rate-legal {
-    font-size: 14px;
-  }
-
-  .rate-grid, .rate-grid-10 {
-    margin: 0 auto;
-    text-align: center;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-
-    .row {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-    }
-
-    .align-center {
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center; 
-      }
-  }
-
-  // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
-  .rate-section {
-    padding: 10px 40px;
-    text-align: center;
-
-    // &:first-child {
-    //   border-bottom: 2px solid #ccc;
-    //   margin-bottom: 20px;
-    // }
-
-    &:last-child {
-      padding-top: 30px;
-    }
-
-    @include respond-to(medium) {
-      padding: 10px 25px;
-      text-align: left;
-
-      &:last-child {
-        padding-top: 10px;
-      }
-    }
-
-    @include respond-to(large) {
-      padding: 10px 35px;
-
-      &:last-child {
-        padding-top: 30px;
-        border-left: 2px solid #ccc;
-      }
-    }
-
-    .content-title {
-      line-height: 30px;
-    }
-
-    .rate-sub-section {
-      &:first-child {
-        border-bottom: 2px solid #ccc;
-        margin-bottom: 20px;
-      }
-
-      @include respond-to(medium) {
-        border-bottom: none;
-        &:first-child {
-          border-right: 2px solid #ccc;
-          border-bottom: none;
-          margin-bottom: 0;
-        }
-      }
-    }
-    .rate-sub-section.adjustable-rate-section {
-      @include respond-to(large) {
-        padding-bottom: 60px;
-      }
-    }
-
-    .rate-legal {
-      height: auto;
-      // margin-bottom: 20px;
-
-      @include respond-to(medium) {
-        font-size: 14px;
-      }
-
-      @include respond-to(large) {
-        // min-height: 100px;
-        margin-bottom: 95px;
-        font-size: 18px;
-      }
-    }
-
-    .rate-legal.adjustable-rate-section {
-      margin-bottom: 55px;
-    }
-
-    .rate-block-info {
-      text-align: center;
-
-      @include respond-to(large) {
-        padding-top: 15px;
-        text-align: left;
-      }
-    }
-
-    .rate-description {
-      text-align: center;
-      font-size: 14px;
-      padding-bottom: 0;
-      line-height: 1.7;
-
-      @include respond-to(medium) {
-        text-align: left;
-        margin-bottom: 20px;
-        font-size: 12px;
-      }
-
-      @include respond-to(large) {
-        margin-bottom: 60px;
-      }
-    }
-
-    .rate-description.adjustable-rate-section {
-
-      &:last-child {
+    .margin-bottom-lg {
         @include respond-to(medium) {
-          padding-left: 15px;
+            margin-bottom: 26px;
+        }
+    }
+    .margin-top-xl {
+        @include respond-to(large) {
+            margin-top: 70px;
+        }
+    }
+    .section-title {
+        line-height: 12px;
+        @include respond-to(medium) {
+            line-height: 14px;
         }
         @include respond-to(large) {
-          padding-left: 0;
+            line-height: 14px;
         }
-      }
+    }
+    .rate-legal {
+        font-size: 14px;
+    }
+    .rate-grid,
+    .rate-grid-10 {
+        margin: 0 auto;
+        text-align: center;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        .row {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 
-      @include respond-to(large) {
+          &:before,
+          &:after {
+            content: normal; // IE doesn't support `initial`
+          }
+        }
+        .align-center {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+    // Some rate callouts are divided into 'sections' which require slighly different treatment than straight grids
+    .rate-section {
+        padding: 10px 40px;
+        text-align: center;
+        &:last-child {
+            padding-top: 30px;
+        }
+        @include respond-to(medium) {
+            padding: 10px 25px;
+            text-align: left;
+            &:last-child {
+                padding-top: 10px;
+            }
+        }
+        @include respond-to(large) {
+            padding: 10px 35px 0;
+            &:last-child {
+                padding-top: 30px;
+                border-left: 2px solid #ccc;
+            }
+        }
+        .content-title {
+            line-height: 30px;
+        }
+        .rate-sub-section {
+            &:first-child {
+                border-bottom: 2px solid #ccc;
+                margin-bottom: 20px;
+            }
+            @include respond-to(medium) {
+                border-bottom: none;
+                &:first-child {
+                    border-right: 2px solid #ccc;
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .rate-sub-section.adjustable-rate-section {
+            @include respond-to(large) {
+                padding-bottom: 20px;
+            }
+        }
+        .rate-legal {
+            height: auto;
+            @include respond-to(medium) {
+                font-size: 16px;
+            }
+            @include respond-to(large) {
+                margin-bottom: 95px;
+                font-size: 18px;
+            }
+        }
+        .rate-legal.adjustable-rate-section {
+            margin-bottom: 49px;
+        }
+        .rate-block-info {
+            text-align: center;
+            @include respond-to(large) {
+                padding-top: 15px;
+                text-align: left;
+            }
+        }
+        .rate-description {
+            text-align: center;
+            font-size: 16px;
+            padding-bottom: 0;
+            line-height: 1.7;
+            @include respond-to(medium) {
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+            @include respond-to(large) {
+                margin-bottom: 20px;
+            }
+        }
+        .rate-description.adjustable-rate-section {
+            font-size: 16px;
+            @include respond-to(small) {
+                font-size: 12px;
+            }
+            @include respond-to(medium) {
+                font-size: 16px;
+            }
+            &:last-child {
+                @include respond-to(medium) {
+                    padding-left: 15px;
+                }
+                @include respond-to(large) {
+                    padding-left: 0;
+                }
+            }
+            @include respond-to(large) {
+                margin-bottom: 20px;
+            }
+        }
+        // Sections are not text-center by default so we center rate-blocks here
+        .rate-block {
+            text-align: center;
+        }
+    }
+    .rate-section.adjustable-rate-section {
+        padding-bottom: 0;
+    }
+    .rate-section.split-view {
+        @include respond-to(large) {
+            padding-top: 30px;
+        }
+        .variable-rate-legal {
+            @include respond-to(medium) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            @include respond-to(large) {
+                margin-top: 70px;
+                margin-bottom: 96px;
+            }
+        }
+    }
+    .split-view.custom-medium-offset {
+        @include respond-to(medium) {
+            margin-left: 4.166666%;
+            margin-right: 4.166666%;
+        }
+        @include respond-to(large) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    // This sub-heading requires a fixed-height
+    .rate-sub-title {
+        height: auto;
         margin-bottom: 20px;
-      }
+        @include respond-to(large) {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
     }
-
-    // Sections are not text-center by default so we center rate-blocks here
+    // Following are some special rules for blocks of 10
+    .rate-grid-10 {
+        @include respond-to(medium) {
+            .row {
+                max-height: 160px;
+            }
+            .medium-2 {
+                width: 20%;
+            }
+            .rate-block {
+                margin-bottom: 40px;
+            }
+            .offset-custom-10 {
+                margin-left: 10% !important;
+            }
+            .offset-custom-20 {
+                margin-left: 20% !important;
+            }
+        }
+        @include respond-to(large) {
+            .large-2 {
+                width: 20%;
+            }
+            .rate-block {
+                margin-bottom: 30px;
+                font-size: 52px;
+            }
+        }
+        // Need a 'custom' media query here otherwise CSS will be much more complex
+        @media only screen and (max-width: 640px) {
+            .row + .row {
+                border-top: 2px solid #ccc;
+            }
+            .rate-block {
+                border-right: none;
+                border-bottom: 2px solid #ccc;
+                padding: 15px 0 20px 0;
+                .rate-value,
+                .rate-bullet {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    // Universal rate-block styles (the styles that are present in all variations of rate-grids)
     .rate-block {
-      text-align: center;
-
-      .rate-value, .rate-bullet {
-        // margin-left: 20px;
-        // margin-right: 20px;
-      }
-    }
-  }
-
-  .rate-section.adjustable-rate-section {
-    padding-bottom: 0;
-  }
-
-  .rate-section.split-view {
-    @include respond-to(large) {
-      padding-top: 30px;
-    }
-
-    .variable-rate-legal {
-      @include respond-to(medium) {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-
-      @include respond-to(large) {
-        margin-top: 70px;
-        margin-bottom: 85px;
-      }
-    }
-  }
-
-  .split-view.custom-medium-offset {
-    @include respond-to(medium) {
-      margin-left: 4.166666%;
-      margin-right: 4.166666%;
-    }
-    @include respond-to(large) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
-  // This sub-heading requires a fixed-height
-  .rate-sub-title {
-    height: auto;
-    margin-bottom: 20px;
-
-    @include respond-to(large) {
-      // height: 60px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
-  }
-
-  // Following are some special rules for blocks of 10
-  .rate-grid-10 {
-    @include respond-to(medium) {
-      .medium-2 {
-        width: 20%;
-      }
-
-      .rate-block {
-        margin-bottom: 40px;
-      }
-
-      .offset-custom-10 {
-        margin-left: 10% !important;
-      }
-
-      .offset-custom-20 {
-        margin-left: 20% !important;
-      }
-    }
-    @include respond-to(large) {
-      .large-2 {
-        width: 20%;
-      }
-
-      .rate-block {
-        margin-bottom: 30px;
-        font-size: 52px;
-      }
-    }
-
-    // Need a 'custom' media query here otherwise CSS will be much more complex
-    @media only screen and (max-width: 640px) {
-      .row + .row {
-        border-top: 2px solid #ccc;
-      }
-
-      .rate-block {
         border-right: none;
         border-bottom: 2px solid #ccc;
-        padding: 15px 0 20px 0;
-
-        .rate-value, .rate-bullet {
-          border-bottom: none;
+        padding: 45px 15px 55px;
+        max-width: 240px;
+        &:last-child {
+            border-right: none;
+            border-bottom: none;
         }
-      }
-    }
-  }
-
-  // Universal rate-block styles (the styles that are present in all variations of rate-grids)
-  .rate-block {
-    border-right: none;
-    border-bottom: 2px solid #ccc;
-    padding: 55px 15px;
-    // max-width: 240px;
-
-    &:last-child {
-      border-right: none;
-      border-bottom: none;
-      // margin-bottom: 30px;
-    }
-
-    @include respond-to(medium) {
-      border-right: 2px solid #ccc;
-      border-bottom: none;
-      padding: 15px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .rate-value-block {
-      border-bottom: none;
-
-      @include respond-to(medium) {
-        border-bottom: 1px solid #ccc;
-      }
-
-      .rate-value {
-        letter-spacing: 1px;
-        font-size: 36px;
-        line-height: 30px;
-        font-family: $font-whitney-light;
-        color: #000;
-        margin-bottom: 15px;
-
         @include respond-to(medium) {
-          font-size: 40px;
-          letter-spacing: 0;
-          line-height: 34px;
+            border-right: 2px solid #ccc;
+            border-bottom: none;
+            padding: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
-
-        @include respond-to(large) {
-          font-size: 52px;
-          letter-spacing: 1px;
-          line-height: 45px;
+        .rate-value-block {
+            border-bottom: none;
+            width: auto;
+            @include respond-to(medium) {
+                border-bottom: 1px solid #ccc;
+            }
+            .rate-value {
+                letter-spacing: 1px;
+                font-size: 36px;
+                line-height: 30px;
+                font-family: $font-whitney-light;
+                color: #000;
+                margin-bottom: 15px;
+                width: auto;
+                @include respond-to(medium) {
+                    font-size: 40px;
+                    letter-spacing: 0;
+                    line-height: 34px;
+                }
+                @include respond-to(large) {
+                    font-size: 52px;
+                    letter-spacing: 1px;
+                    line-height: 45px;
+                }
+            }
+            .rate-value-secondary {
+                color: #666;
+                margin-top: -10px;
+                font-family: $font-stack-light;
+            }
         }
-      }
-
-      .rate-value-secondary {
-        color: #666;
-        margin-top: -10px;
-        font-family: $font-stack-light;
-      }
+        .rate-bullet {
+            color: #666;
+            font-family: $font-stack-light;
+            font-size: 16px;
+            border-bottom: none;
+            padding: 15px 0 0 0;
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            @include respond-to(medium) {
+                border-bottom: 1px solid #ccc;
+                letter-spacing: 0;
+                padding: 10px;
+            }
+            @include respond-to(large) {
+                font-size: 22px;
+                letter-spacing: 1px;
+            }
+        }
     }
-
-    .rate-bullet {
-      color: #666;
-      font-family: $font-stack-light;
-      font-size: 16px;
-      border-bottom: none;
-      padding: 0;
-
-      &:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      @include respond-to(medium) {
-        border-bottom: 1px solid #ccc;
-        // font-size: 16px;
-        letter-spacing: 0;
-        padding: 10px;
-      }
-
-      @include respond-to(large) {
-        font-size: 22px;
-        letter-spacing: 1px;
-      }
-    }
-
-  }
 }
