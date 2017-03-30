@@ -88,6 +88,24 @@ Styleguide 3.3
 		}
 	}
 }
+
+.hero-maintain-aspect {
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	
+	img {
+		position: relative;
+		min-height: 400px;
+		min-width: 1280px;
+		transform: translate3d(-50%,0,0);
+		left: 50%;
+	}
+}
+
 .super-hero .hero-image {
 	left: auto;
 	max-width: 30%;
