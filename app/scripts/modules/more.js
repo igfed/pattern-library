@@ -13,7 +13,7 @@ export default (() => {
     // Register Click Handlers
 
     // Mobile Category menu
-    $('.more-section-menuitem').on('click', event, _moreSectionMenuItem);
+    $('.more-section-menuitem').on('click', _moreSectionMenuItem);
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
@@ -51,7 +51,7 @@ export default (() => {
     $('.more-section-menu-dropdown').removeClass('active');
   }
 
-  function _moreSectionMenuItem() {
+  function _moreSectionMenuItem(event) {
     event.preventDefault();
 
     var $this = $(this),

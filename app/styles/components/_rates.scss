@@ -264,6 +264,7 @@
         font-family: $font-stack-light;
         @media only screen and (max-width: 640px) {
             font-size: 22px;
+            margin-bottom: 34px;
         }
     }
 }
@@ -551,7 +552,7 @@
         @include respond-to(medium) {
             border-right: 2px solid #ccc;
             border-bottom: none;
-            padding: 15px;
+            padding: 10px 15px 5px;
             &:last-child {
                 margin-bottom: 0;
             }
