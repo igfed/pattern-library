@@ -42,7 +42,7 @@ var more = (function () {
     // Register Click Handlers
 
     // Mobile Category menu
-    $('.more-section-menuitem').on('click', event, _moreSectionMenuItem);
+    $('.more-section-menuitem').on('click', _moreSectionMenuItem);
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
@@ -71,7 +71,7 @@ var more = (function () {
     });
   }
 
-  function _moreSectionMenuItem() {
+  function _moreSectionMenuItem(event) {
     event.preventDefault();
 
     var $this = $(this),
