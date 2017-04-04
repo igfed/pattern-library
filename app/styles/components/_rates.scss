@@ -338,8 +338,10 @@
         flex: 0 0 100%;
         max-width: 100%;
         .row {
+            display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
+            display: flex;
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
