@@ -102,22 +102,20 @@ Styleguide 3.5
 
 		button {
 			color: transparent;
-			background: $dark-grey;
+			background: none;
 			border-radius: 50%;
 			font-size: 8px;
-			height: 10px;
-			width: 10px;
-			border: 6px solid transparent;
-			opacity: .6;
+			height: 13px;
+			width: 13px;
+			border: 2px solid $darker-grey;
 
 			transition: opacity 0.3s ease-out;
 			&:hover, &:focus {
 				opacity: 1;
-				// cursor: pointer;
 			}
 		}
 		&.slick-active button {
-			background: $button-primary-color;
+			background: $darker-grey;
 			opacity: 1;
 		}
 

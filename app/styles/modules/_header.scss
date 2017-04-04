@@ -482,8 +482,12 @@ Styleguide 3.1
 // States of the component
 .site-header-is-active {
   overflow: hidden;
+  position: fixed;
+
   @include respond-to(large) {
     overflow: visible;
+    position: static;
+
   }
   .menu-icon.dark {
     &::before, &::after {
