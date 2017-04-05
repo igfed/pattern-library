@@ -13,7 +13,7 @@ export default (() => {
     // Register Click Handlers
 
     // Mobile Category menu
-    $('.more-section-menuitem').on('click', _moreSectionMenuItem);
+    $('.more-section-menuitem').on('click', ig.debounce(_moreSectionMenuItem, 500, true));
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
