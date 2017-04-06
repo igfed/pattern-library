@@ -81,6 +81,12 @@ Styleguide 3.3
 	}
 
 	.columns {
+		padding-left: 10%;
+
+		@include respond-to(xlarge) {
+	    	padding-left: 0.9375rem;
+		}
+
 		@include respond-to(xxlarge) {
 			width: 100%;
 		}
