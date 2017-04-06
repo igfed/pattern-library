@@ -69,6 +69,22 @@ Styleguide 3.3
 }
 .super-hero .hero-copy {
 	text-align: left;
+
+	.callout-body-copy {
+		width: 90%;
+	}
+
+	.row {
+		@include respond-to(xxlarge) {
+			max-width: 70%;
+		}
+	}
+
+	.columns {
+		@include respond-to(xxlarge) {
+			width: 100%;
+		}
+	}
 }
 
 .hero-image {
