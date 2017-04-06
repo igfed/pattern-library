@@ -80,8 +80,15 @@ Markup:
 
 Styleguide 3.1
 */
+
+// FOUC (Flash of unstyled content)
+.no-js .site-header {
+  opacity: 0;
+}
 .site-header {
 	border-bottom: 1px solid $grey;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
 
 	@include respond-to(large) {
 		margin-top: 4px;
