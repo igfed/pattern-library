@@ -235,7 +235,7 @@ $border-color: #E0E2E2;
     }
 
     @include respond-to(medium) {
-      // height: 665px;
+      height: 665px;
 
       &:nth-of-type(1) {
         border-right: 1px solid $border-color;
@@ -258,7 +258,7 @@ $border-color: #E0E2E2;
     }
 
     @include respond-to(large) {
-      // height: 555px;
+      height: 555px;
 
       &:hover {
         background-color: $lightest-color;
