@@ -48,6 +48,7 @@
 	display: block;
 }
 
+
 /*video.scss*/
 
 .vjs-play-progress{
@@ -201,10 +202,15 @@
 	display: -webkit-flex;
 	-webkit-flex-flow: column wrap;
 
+	.wide-figure-copy{
+		padding-bottom: 25px;
+	}
+
 }
 
 .two-column-cta-row{
 	width: 100%;
+	padding: 0 100px;
 }
 
 .records-list{
