@@ -147,6 +147,8 @@
 		max-width: 100%;
 		display: flex;
     	justify-content: center;
+		display: -webkit-flex;
+		-webkit-justify-content: center;
 	}
 
 	.ig-carousel{
@@ -163,6 +165,8 @@
 	.wide-figure-tertiary-cta{
 		display: flex;
     	justify-content: flex-start;
+		display: -webkit-flex;
+		-webkit-justify-content: flex-start;
 
     	.columns{
     		width: auto;
@@ -194,6 +198,9 @@
 .two-column-cta{
 	display: flex;
 	flex-flow: column wrap;
+	display: -webkit-flex;
+	-webkit-flex-flow: column wrap;
+
 }
 
 .two-column-cta-row{
@@ -202,8 +209,11 @@
 
 .records-list{
 	display: flex;
+	display: -webkit-flex;
 	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
 	justify-content: center;
+	-webkit-justify-content: center;
 
 	.record-item{
 		margin: 15px;
@@ -306,6 +316,8 @@ article{
 .section-retirement-tips{
 	display: flex;
 	flex-flow: row wrap;
+	display: -webkit-flex;
+	-webkit-flex-flow: row wrap;
 }
 
 .section-retirement-tip{
@@ -337,6 +349,10 @@ article{
     			display: flex;
 			    justify-content: center;
 			    align-items: center;
+
+				display: -webkit-flex;
+				-webkit-justify-content: center;
+				-webkit-align-items: center;
 
 			    .button{
 			    	margin-bottom: 0;
