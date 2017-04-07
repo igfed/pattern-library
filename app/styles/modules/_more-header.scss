@@ -61,14 +61,14 @@
 		    text-align: center;
 		    padding: 8px 0;
 
+
 		    &:last-child{
 		    	border: none;
 		    }
 
 			@include respond-to(medium){
-				// display: table-cell;
 				border-bottom: none;
-				display: inline-block;
+				display: block;
 			}
 		}
 
