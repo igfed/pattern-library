@@ -94,7 +94,7 @@ export default (() => {
   }
 
   function _repositionArrow(centerX) {
-    $('.more-section-menu-dropdown-arrow-up').delay(5000).show().css({ left: centerX });
+    $('.more-section-menu-dropdown-arrow-up').show().css({ left: centerX });
   }
 
   function _animationUnderline() {
