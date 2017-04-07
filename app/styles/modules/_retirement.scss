@@ -140,6 +140,8 @@
 /*Module.scss*/
 .reveal.retirement.large{
 
+	max-width: 890px;
+
 	.modal-header{
 		max-width: 100%;
 	}
@@ -155,6 +157,8 @@
 	.ig-carousel{
 		width: 100%;
 		max-width: 100%;
+
+		padding: 50px;
 	}
 
 	.small-figure{
@@ -172,6 +176,10 @@
     	.columns{
     		width: auto;
     	}
+	}
+
+	.wide-figure-copy{
+		padding-bottom: 10px;
 	}
 
 	.slick-prev{
