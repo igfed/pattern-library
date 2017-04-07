@@ -50,39 +50,6 @@
 
 /*video.scss*/
 
-.vjs-play-progress{
-	background: #0ed59a!important;
-}
-
-.vjs-volume-level{
-	background: #0ed59a!important;
-}
-
-.vjs-big-play-button{
-	&:focus{
-		background: #0ed59a!important;
-	}
-	&:hover{
-		background: #0ed59a!important;
-	}
-}
-
-.bc-player-BJNX9uitx_default:hover .vjs-big-play-button{
-	background: #0ed59a!important
-}
-
-.ig-video-group .video-transcript {
-	&:hover{
-		text-decoration: none;
-	}
-	
-	a{
-		font-size: 18px;
-		font-family: $font-stack;
-		border-bottom: 1px solid $brand-color;
-	}
-}
-
 .split-bg{
 	height:100%;
 	background: url(../images/tiled-weathered-pattern.jpg);
@@ -132,7 +99,7 @@
     }
 }
 
-.ig-video-group{
+.split-bg-video .ig-video-group{
 	margin-top: 0;
 }
 
