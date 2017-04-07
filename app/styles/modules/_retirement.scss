@@ -48,20 +48,6 @@
 	display: block;
 }
 
-.small-centered{
-	margin: 0 auto;
-
-	@include respond-to(medium){
-		clear: none;
-		float: left;
-	}
-}
-
-.hero-copy{
-	max-width: 800px;
-    margin: 0 auto;
-}
-
 /*video.scss*/
 
 .vjs-play-progress{
