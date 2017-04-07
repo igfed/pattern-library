@@ -1,300 +1,320 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" class="no-js">
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IG Sprint 1</title>
-
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css" />
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body id="top">
+</head>
+
+<body id="top">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <header role="banner" class="site-header">
-      <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
-      <div class="row">
-        <div class="columns">
-          <div class="top-bar">
-            <div class="top-bar-title">
-              <div class="row">
-                <div class="columns">
-                  <a class="home-link" href="/">
-                    <img src="images/logo-en-color.svg" alt="" class="image-logo">
-                  </a>
-                  <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
+        <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
+        <div class="row">
+            <div class="columns">
+                <div class="top-bar">
+                    <div class="top-bar-title">
+                        <div class="row">
+                            <div class="columns">
+                                <a class="home-link" href="/">
+                                    <img src="images/logo-en-color.svg" alt="" class="image-logo">
+                                </a>
+                                <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
                     <button class="menu-icon dark" type="button" data-toggle><span class="show-for-sr">Menu</span></button>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div id="main-navigation" class="top-bar-right main-navigation">
-              <div class="main-navigation-wrapper">
-                <div class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
-                  <button class="close-button-circle" type="button" data-toggle>
-                    <img src="images/close-button-icon.png" alt="close button">
-                  </button>
-                </div>
-                <nav role="navigation" class="primary-nav">
-                  <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
-                    <li>
-                      <form id="site-search" class="site-search" action="/en/search" data-toggler=".site-search-is-active">
-                        <div class="input-group">
-                          <span class="input-group-label"><img src="images/search-icon.svg" alt="Search icon"/></span>
-                          <label for="site-search-q" class="input-group-field">
-                            <span class="show-for-sr">Search Investors Group</span>
-                            <input type="search" id="site-search-q" name="q" placeholder="Search Investors Group">
-                          </label>
-                          <span data-toggle="site-search" class="input-group-label show-for-large"><img src="images/close-button-icon.png" alt="Close"/></span>
+                                </span>
+                            </div>
                         </div>
-                      </form>
-                    </li>
-                    <li><a href="#">Services</a>
-                      <ul class="menu vertical">
-                        <li><a href="/en/opportunities/investment">Investments</a></li>
-                        <li><a href="/en/opportunities/retirement">Retirement</a></li>
-                        <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
-                        <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
-                        <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
-                        <li><a href="/en/opportunities/insurance">Insurance</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="/more/en/">Advice & stories</a></li>
-                    <li><a href="/en/find-an-advisor" class="site-header-cta">Find an Advisor</a></li>
-                    <li><a href="/en/contact-us/mortgage" class="site-header-cta alternate-cta">Get mortgage advice</a></li>
-                    <li class="show-for-large"><a data-toggle="site-search"><img src="images/search-icon.svg" alt="Search"/></a></li>
-                  </ul>
-                </nav>
-                <div class="top-bar aux-nav">
-                  <div class="row">
-                    <div class="columns">
-                      <nav class="top-bar-right" role="navigation">
-                        <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
-                          <li><a href="#">Login</a>
-                            <ul class="menu vertical">
-                              <li><a href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do">Client Login</a></li>
-                              <li><a href="https://bvi.bnc.ca/auth/Login?GAREASONCODE=-1&GARESOURCEID=SbipIgA&GAURI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup&Reason=-1&APPID=SbipIgA&URI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup">Solutions Banking&trade;</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="/en/client-resources">Client Support</a></li>
-                          <li class="language-toggle"><a href="/fr">Français</a></li>
-                        </ul>
-                      </nav>
                     </div>
-                  </div>
+                    <div id="main-navigation" class="top-bar-right main-navigation">
+                        <div class="main-navigation-wrapper">
+                            <div class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
+                                <button class="close-button-circle" type="button" data-toggle>
+                                    <img src="images/close-button-icon.png" alt="close button">
+                                </button>
+                            </div>
+                            <nav role="navigation" class="primary-nav">
+                                <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
+                                    <li>
+                                        <form id="site-search" class="site-search" action="/en/search" data-toggler=".site-search-is-active">
+                                            <div class="input-group">
+                                                <span class="input-group-label"><img src="images/search-icon.svg" alt="Search icon"/></span>
+                                                <label for="site-search-q" class="input-group-field">
+                                                    <span class="show-for-sr">Search Investors Group</span>
+                                                    <input type="search" id="site-search-q" name="q" placeholder="Search Investors Group">
+                                                </label>
+                                                <span data-toggle="site-search" class="input-group-label show-for-large"><img src="images/close-button-icon.png" alt="Close"/></span>
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li><a href="#">Services</a>
+                                        <ul class="menu vertical">
+                                            <li><a href="/en/opportunities/investment">Investments</a></li>
+                                            <li><a href="/en/opportunities/retirement">Retirement</a></li>
+                                            <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+                                            <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+                                            <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+                                            <li><a href="/en/opportunities/insurance">Insurance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/more/en/">Advice & stories</a></li>
+                                    <li><a href="/en/find-an-advisor" class="site-header-cta">Find an Advisor</a></li>
+                                    <li><a href="/en/contact-us/mortgage" class="site-header-cta alternate-cta">Get mortgage advice</a></li>
+                                    <li class="show-for-large">
+                                        <a data-toggle="site-search"><img src="images/search-icon.svg" alt="Search" /></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="top-bar aux-nav">
+                                <div class="row">
+                                    <div class="columns">
+                                        <nav class="top-bar-right" role="navigation">
+                                            <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
+                                                <li><a href="#">Login</a>
+                                                    <ul class="menu vertical">
+                                                        <li><a href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do">Client Login</a></li>
+                                                        <li><a href="https://bvi.bnc.ca/auth/Login?GAREASONCODE=-1&GARESOURCEID=SbipIgA&GAURI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup&Reason=-1&APPID=SbipIgA&URI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup">Solutions Banking&trade;</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="/en/client-resources">Client Support</a></li>
+                                                <li class="language-toggle"><a href="/fr">Français</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </header>
     <div class="hero patterned super-hero">
-      <div class="hero-copy">
-        <div class="row">
-          <div class="small-10 medium-8 columns">
-            <h1>Life is rich and varied. Your financial plan should be, too.</h1>
-            <p class="callout-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
-          </div>
+        <div class="hero-copy">
+            <div class="row">
+                <div class="small-10 medium-8 columns">
+                    <h1>Life is rich and varied. Your financial plan should be, too.</h1>
+                    <p class="large-body-copy">We focus on six areas of your financial life to help you get more out of your money, so you can get more out of life.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img alt="Man with many hats" src="images/hat-stacks.png" />
-      </div>
-      <a href="#main-content" class="hero-cta">let's get started</a>
+        <div class="hero-image">
+            <img alt="Man with many hats" src="images/hat-stacks.png" />
+        </div>
+        <a href="#main-content" class="hero-cta">let's get started</a>
     </div>
-
     <p class="row">Patterned Super Hero w/ image</p>
-
     <div class="hero bg-primary">
-      <div class="hero-copy">
-        <div class="row">
-          <div class="small-10 medium-8 small-centered columns">
-            <h1>Contact Us</h1>
-            <!-- <h2 class="callout-body-copy">Do you have questions? Give us a call.</h2> -->
-            <h2 class="callout-body-copy">It's easy to get in touch with Investors Group. Whether you prefer to call, email or write to us, we welcome your questions and comments.</h2>
-          </div>
+        <div class="hero-copy">
+            <div class="row">
+                <div class="small-10 medium-8 small-centered columns">
+                    <h1>Contact Us</h1>
+                    <p class="large-body-copy">It's easy to get in touch with Investors Group. Whether you prefer to call, email or write to us, we welcome your questions and comments.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-
     <p class="row">Base Hero</p>
-    <div class="hero patterned bg-primary">
-      <div class="hero-copy">
-        <div class="row">
-          <div class="small-10 medium-8 small-centered columns">
-            <h1>Mortgages</h1>
-            <h2 class="callout-body-copy">Buying a home? We can help.</h2>
-          </div>
+    <div class="hero bg-primary">
+        <div class="hero-copy">
+            <div class="row">
+                <div class="small-10 medium-8 small-centered columns">
+                    <h1>Mortgages</h1>
+                    <p class="large-body-copy">Buying a home? We can help.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="hero-image">
-        <img alt="Man with many hats" src="images/mortgage-scene.jpg" />
-      </div>
-      <a href="#main-content" class="hero-cta">Learn more</a>
+        <div class="hero-maintain-aspect">
+            <img alt="Man with many hats" src="images/HL--tax-planning.jpg" />
+        </div>
+        <a href="#main-content" class="hero-cta">Learn more</a>
     </div>
-
-    <p class="row">Patterned Hero w/ image</p>
-
+    <p class="row">Hero Centered</p>
+    <div class="hero bg-primary">
+        <div class="hero-copy">
+            <div class="row">
+                <div class="small-10 medium-8 small-centered columns">
+                    <h1>Mortgages</h1>
+                    <p class="large-body-copy">Buying a home? We can help.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-maintain-aspect">
+            <img class="right-focus" alt="Man with many hats" src="images/HL--investments.jpg" />
+        </div>
+        <a href="#main-content" class="hero-cta">Learn more</a>
+    </div>
+    <p class="row">Hero Centered Right</p>
+    <div class="hero bg-primary">
+        <div class="hero-copy">
+            <div class="row">
+                <div class="small-10 medium-8 small-centered columns">
+                    <h1>Mortgages</h1>
+                    <p class="large-body-copy">Buying a home? We can help.</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-maintain-aspect">
+            <img class="left-focus" alt="Man with many hats" src="images/mortgage-scene.jpg" />
+        </div>
+        <a href="#main-content" class="hero-cta">Learn more</a>
+    </div>
+    <p class="row">Hero Centered Left</p>
     <main role="main" id="main-content">
-      <div class="row">
-        <div class="medium-8 columns">
-          <h2>Typography</h2>
-          <p>This document captures a baseline of fonts colors and sizes being used on Investorsgroup.com. A baseline unify all digital properties of Investors Group giving one voice. Any additions to the font list will need to be approved by the Digital Marketing Team.</p>
-          <div class="modifier">
-              <h3>.callout-body-copy</h3>
-              <p>large version of body copy</p>
-              <div class="example">
-                   <p class="callout-body-copy">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.hero-title, .callout-title</h3>
-              <p>hero or call out title</p>
-              <div class="example">
-                   <p class="hero-title,">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.content-title</h3>
-              <p>content title</p>
-              <div class="example">
-                   <p class="content-title">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.section-title</h3>
-              <p>section title</p>
-              <div class="example">
-                   <p class="section-title">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.sub-title</h3>
-              <p>sub title</p>
-              <div class="example">
-                   <p class="sub-title">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.legal</h3>
-              <p>Legal copy</p>
-              <div class="example">
-                   <p class="legal">The quick brown fox jumps over the lazy dog.</p>
-              </div>
-          </div>
-          <div class="modifier">
-              <h3>.punched-out</h3>
-              <p>Usually a number callout</p>
-              <div class="example">
-                   <p class="punched-out">5</p>
-              </div>
-          </div>
+        <div class="row">
+            <div class="medium-8 columns">
+                <h2>Typography</h2>
+                <p>This document captures a baseline of fonts colors and sizes being used on Investorsgroup.com. A baseline unify all digital properties of Investors Group giving one voice. Any additions to the font list will need to be approved by the Digital Marketing Team.</p>
+                <div class="modifier">
+                    <h3>.callout-body-copy</h3>
+                    <p>large version of body copy</p>
+                    <div class="example">
+                        <p class="callout-body-copy">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.hero-title, .callout-title</h3>
+                    <p>hero or call out title</p>
+                    <div class="example">
+                        <p class="hero-title,">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.content-title</h3>
+                    <p>content title</p>
+                    <div class="example">
+                        <p class="content-title">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.section-title</h3>
+                    <p>section title</p>
+                    <div class="example">
+                        <p class="section-title">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.sub-title</h3>
+                    <p>sub title</p>
+                    <div class="example">
+                        <p class="sub-title">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.legal</h3>
+                    <p>Legal copy</p>
+                    <div class="example">
+                        <p class="legal">The quick brown fox jumps over the lazy dog.</p>
+                    </div>
+                </div>
+                <div class="modifier">
+                    <h3>.punched-out</h3>
+                    <p>Usually a number callout</p>
+                    <div class="example">
+                        <p class="punched-out">5</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </main>
-
     <footer class="site-footer" role="contentinfo">
-      <div class="row footer-back-to-top-button">
-        <div class="columns">
-          <a class="float-right" href="#top">top</a>
-        </div>
-      </div>
-
-      <div class="row footer-navigation">
-        <ul class="menu vertical accordion" data-responsive-menu="accordion medium" data-accordion="" data-allow-all-closed="true">
-          <li class="large-4 columns accordion-item" data-accordion-item="">
-            <a class="accordion-title hide-for-large" href="#">Company</a>
-            <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
-              <li class="accordion-title hide-for-small">Company</li>
-              <li><a class="submenu-link" href="/en/who-we-are">Who We Are</a></li>
-              <li><a class="submenu-link" href="/en/media-room">Media Room</a></li>
-              <li><a class="submenu-link" href="/en/careers">Careers</a></li>
-              <li><a class="submenu-link" href="/en/contact-us">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="large-4 columns accordion-item" data-accordion-item="">
-            <a class="accordion-title hide-for-large" href="#">Financial advice</a>
-            <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
-              <li class="accordion-title hide-for-small">Financial advice</li>
-              <li><a class="submenu-link" href="/en/products">Products</a></li>
-              <li><a class="submenu-link" href="/en/how-can-we-help">How Can We Help</a></li>
-              <li><a class="submenu-link" href="/en/value-of-the-plan">Value Of The Plan</a></li>
-              <li><a class="submenu-link" href="/more/">More - Advice & Stories</a></li>
-            </ul>
-          </li>
-          <li class="large-4 columns accordion-item" data-accordion-item="">
-            <a class="accordion-title hide-for-large" href="#">Resources</a>
-            <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
-               <li class="accordion-title hide-for-small">Resources</li>
-              <li><a class="submenu-link" href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do" target="_blank">Client Account Access</a></li>
-              <li><a class="submenu-link" href="https://bvi.bnc.ca/index/investorsgroup/indexen.html" target="_blank">Solutions Banking Access</a></li>
-              <li><a class="submenu-link" href="/en/products/invest/mutual-funds">Mutual Funds</a></li>
-              <li><a class="submenu-link" href="/en/client-resources/prices-and-rates/mortgage-rates">Mortgage Rates</a></li>
-              <li><a class="submenu-link" href="#" target="_blank">View My Funds</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="row footer-social-media social-media">
-        <div class="small-12">
-          <ul class="row menu horizontal">
-            <li>
-              <a class="social-media-icon facebook-icon" href="https://www.facebook.com/InvestorsGroup"><img src="images/socialfacebook.svg"></a>
-            </li>
-            <li>
-              <a class="social-media-icon linkedin-icon" href="https://www.linkedin.com/company/investors-group"><img src="images/sociallinkedin.svg"></a>
-            </li>
-            <li>
-              <a class="social-media-icon twitter-icon" href="https://twitter.com/Investors_Group" ><img src="images/socialtwitter.svg"></a>
-            </li>
-            <li>
-              <a class="social-media-icon youtube-icon" href="https://www.youtube.com/user/InvestorsGroupCanada"><img src="images/socialyoutube.svg"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row footer-copyright">
-        <div class="columns footer-copyright-border-top">
-          <div class="row">
-            <div class="small-12 medium-12 large-3 columns">
-              <ul class="menu">
-                <li>© 2016 Investors Group Inc. All rights Reserved</li>
-              </ul>
+        <div class="row footer-back-to-top-button">
+            <div class="columns">
+                <a class="float-right" href="#top">top</a>
             </div>
-            <div class="small-12 medium-12 large-9 columns">
-              <ul class="menu horizontal">
-                <li><a href="/en/legal">Legal</a></li>
-                <li><a href="/en/legal/use">Terms Of Use</a></li>
-                <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div class="small-12 columns">
-              <ul class="menu">
-                <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
-                <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="row footer-navigation">
+            <ul class="menu vertical accordion" data-responsive-menu="accordion medium" data-accordion="" data-allow-all-closed="true">
+                <li class="large-4 columns accordion-item" data-accordion-item="">
+                    <a class="accordion-title hide-for-large" href="#">Company</a>
+                    <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                        <li class="accordion-title hide-for-small">Company</li>
+                        <li><a class="submenu-link" href="/en/who-we-are">Who We Are</a></li>
+                        <li><a class="submenu-link" href="/en/media-room">Media Room</a></li>
+                        <li><a class="submenu-link" href="/en/careers">Careers</a></li>
+                        <li><a class="submenu-link" href="/en/contact-us">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="large-4 columns accordion-item" data-accordion-item="">
+                    <a class="accordion-title hide-for-large" href="#">Financial advice</a>
+                    <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                        <li class="accordion-title hide-for-small">Financial advice</li>
+                        <li><a class="submenu-link" href="/en/products">Products</a></li>
+                        <li><a class="submenu-link" href="/en/how-can-we-help">How Can We Help</a></li>
+                        <li><a class="submenu-link" href="/en/value-of-the-plan">Value Of The Plan</a></li>
+                        <li><a class="submenu-link" href="/more/">More - Advice & Stories</a></li>
+                    </ul>
+                </li>
+                <li class="large-4 columns accordion-item" data-accordion-item="">
+                    <a class="accordion-title hide-for-large" href="#">Resources</a>
+                    <ul class="menu vertical accordion-content accordion-submenu" data-tab-content="">
+                        <li class="accordion-title hide-for-small">Resources</li>
+                        <li><a class="submenu-link" href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do" target="_blank">Client Account Access</a></li>
+                        <li><a class="submenu-link" href="https://bvi.bnc.ca/index/investorsgroup/indexen.html" target="_blank">Solutions Banking Access</a></li>
+                        <li><a class="submenu-link" href="/en/products/invest/mutual-funds">Mutual Funds</a></li>
+                        <li><a class="submenu-link" href="/en/client-resources/prices-and-rates/mortgage-rates">Mortgage Rates</a></li>
+                        <li><a class="submenu-link" href="#" target="_blank">View My Funds</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row footer-social-media social-media">
+            <div class="small-12">
+                <ul class="row menu horizontal">
+                    <li>
+                        <a class="social-media-icon facebook-icon" href="https://www.facebook.com/InvestorsGroup"><img src="images/socialfacebook.svg"></a>
+                    </li>
+                    <li>
+                        <a class="social-media-icon linkedin-icon" href="https://www.linkedin.com/company/investors-group"><img src="images/sociallinkedin.svg"></a>
+                    </li>
+                    <li>
+                        <a class="social-media-icon twitter-icon" href="https://twitter.com/Investors_Group"><img src="images/socialtwitter.svg"></a>
+                    </li>
+                    <li>
+                        <a class="social-media-icon youtube-icon" href="https://www.youtube.com/user/InvestorsGroupCanada"><img src="images/socialyoutube.svg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer-copyright">
+            <div class="columns footer-copyright-border-top">
+                <div class="row">
+                    <div class="small-12 medium-12 large-3 columns">
+                        <ul class="menu">
+                            <li>© 2016 Investors Group Inc. All rights Reserved</li>
+                        </ul>
+                    </div>
+                    <div class="small-12 medium-12 large-9 columns">
+                        <ul class="menu horizontal">
+                            <li><a href="/en/legal">Legal</a></li>
+                            <li><a href="/en/legal/use">Terms Of Use</a></li>
+                            <li><a href="/en/legal/privacy-and-personal-information">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="small-12 columns">
+                        <ul class="menu">
+                            <li><a href="/en/contact-us/accessibility">Accessibility</a></li>
+                            <li><a href="/fr/default.aspx" target="_parent">Afficher En Francais</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-
-
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -306,11 +326,12 @@
     <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
     <script src="/bower_components/eventemitter3/index.js"></script>
     <script src="/bower_components/mustache.js/mustache.js"></script>
+    <script src="/bower_components/jquery-visible/jquery.visible.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-  </body>
+</body>
+
 </html>

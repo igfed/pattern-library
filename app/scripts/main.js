@@ -14,20 +14,36 @@ useful across all modules. In order to use them anywhere, import with:
 
 // language
 var lang = function () {
-  if (window.location.pathname.indexOf('/fr/') !== -1) {
-    return 'fr';
-  } else {
-    return 'en';
-  }
+	if (window.location.pathname.indexOf('/fr.') !== -1 || window.location.pathname.indexOf('/fr/') !== -1) {
+		return 'fr';
+	} else {
+		return 'en';
+	}
 }();
 
 // browser width
 var browserWidth = function () {
-  return window.outerWidth;
+	return window.outerWidth;
 }();
 
 // base eventEmitter
 var emitter = new EventEmitter();
+
+var debounce = function debounce(func, wait, immediate) {
+	var timeout;
+	return function () {
+		var context = this,
+		    args = arguments;
+		var later = function later() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
 
 // This is less of a module than it is a collection of code for a complete page (More page in this case).
 // At some point, we should consider splitting it up into bite-sized pieces. Ex: more-nav.js, more-social.js
@@ -42,7 +58,7 @@ var more = (function () {
     // Register Click Handlers
 
     // Mobile Category menu
-    $('.more-section-menuitem').on('click', event, _moreSectionMenuItem);
+    $('.more-section-menuitem').on('click', debounce(_moreSectionMenuItem, 500, true));
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
@@ -71,8 +87,13 @@ var more = (function () {
     });
   }
 
-  function _moreSectionMenuItem() {
-    event.preventDefault();
+  function _moreSectionMenuItem(event) {
+
+    try {
+      event.returnValue = false;
+    } catch (err) {
+      event.preventDefault();
+    }
 
     var $this = $(this),
         offset = $this.offset(),
@@ -95,7 +116,8 @@ var more = (function () {
   }
 
   function _filterDropdown(className) {
-    $('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.' + className + ')').hide();
+    $('.more-section-menu-dropdown-category-wrapper').hide();
+    $('.' + className[0]).fadeIn('slow').focus();
     $('.more-section-menu-dropdown').addClass('active');
   }
 
@@ -324,6 +346,8 @@ var carousel = (function () {
   };
 })();
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 /**
  * Shuffled Carousel
  * Takes eight items from an object of 20, and renders them in a carousel in random order.
@@ -344,8 +368,8 @@ var shuffledCarousel = (function () {
     function init() {
 
         igls = getLocalStorage();
-        dataKey = $('.ig-shuffled-carousel').data('articles');
-        availableItems = shuffledCarouselData[dataKey];
+        availableItems = $('.ig-shuffled-carousel').data('articles').articles;
+        dataKey = $('.ig-shuffled-carousel').data('name');
         articleLimit = $('.ig-shuffled-carousel').data('limit');
 
         if (!igls[dataKey]) {
@@ -373,7 +397,7 @@ var shuffledCarousel = (function () {
     }
 
     function updateLocalStorage(articles) {
-        var updatedObj = Object.assign({}, seenItems);
+        var updatedObj = _extends({}, seenItems);
         articles.forEach(function (item, i) {
             if (i <= 1) {
                 Object.keys(item).map(function (k) {
@@ -412,6 +436,7 @@ var shuffledCarousel = (function () {
             //clear seenItems, reset ls, and reinit
             seenItems = {};
             resetLocalStorage();
+
             return init();
         }
 
@@ -498,21 +523,24 @@ var shuffledCarousel = (function () {
 
 var video = (function () {
 
-    var vids = [],
+    var videoIDs = [],
+        players = [],
         brightCove;
 
     function init() {
+        // We need to capture the video player settings defined in the HTML and create the markup that Brightcove requires
         _parseVideos();
 
-        // Not using this functionality at the moment (essentially an onLoadComplete) - might be required down the road
-        //
-        // Make sure the VideoJS method is available and fire ready event handlers if so
-        // brightCove = setInterval(function () {
-        //   if ($('.vjs-plugins-ready').length) {
-        //     _brightCoveReady();
-        //     clearInterval(brightCove);
-        //   }
-        // }, 500)
+        // Make sure the VideoJS method is available and fire ready event handlers
+        brightCove = setInterval(function () {
+            if ($('.vjs-plugins-ready').length) {
+                _brightCoveReady();
+                clearInterval(brightCove);
+            }
+        }, 500);
+
+        // Function for checking if video's have scrolled off screen and need to be paused
+        _viewStatus();
     }
 
     function _parseVideos() {
@@ -538,6 +566,7 @@ var video = (function () {
                 data.id = $video.data('id');
 
                 // Capture options (optional)
+                data.overlay = $video.data('overlay') ? $video.data('overlay') : '';
                 data.title = $video.data('title') ? $video.data('title') : '';
                 data.description = $video.data('description') ? $video.data('description') : '';
                 data.auto = $video.data('autoplay') ? 'autoplay' : '';
@@ -546,7 +575,7 @@ var video = (function () {
                 data.transcript = $video.data('transcript') ? $video.data('transcript') : '';
 
                 // Store ID's for all video's on the page - in case we want to run a post-load process on each
-                vids.push(data.id);
+                videoIDs.push(data.id);
 
                 // Let's replace the ig-video-js 'directive' with the necessary Brightcove code
                 _injectTemplate($video, data, index);
@@ -560,12 +589,58 @@ var video = (function () {
     }
 
     function _injectTemplate($video, data, index) {
-        var html = '<div class="video-container"><span class="video-overlay ' + data.id + '"></span><div class="video-container-responsive"><video data-setup=\'{"techOrder": ["html5"]}\' data-video-id="' + data.id + '" preload="' + data.preload + '" data-account="' + data.account + '" data-player="' + data.player + '" data-embed="default" data-application-id="' + index + '" class="video-js" id="' + data.id + '" ' + data.ctrl + ' ' + data.auto + '></video></div>';
+        var html = '<div class="video-container"><div class="video-container-responsive">';
+        if (data.overlay.length > 0) {
+            html += '<span class="video-overlay ' + data.id + '" style="background-image: url(\'../' + data.overlay + '\');"></span>';
+        }
+        html += '<video data-setup=\'{"techOrder": ["html5"]}\' data-video-id="' + data.id + '" preload="' + data.preload + '" data-account="' + data.account + '" data-player="' + data.player + '" data-embed="default" data-application-id="' + index + '" class="video-js" id="' + data.id + '" ' + data.ctrl + ' ' + data.auto + '></video></div>';
         if (data.transcript.length > 0) {
             html += '<div class="video-transcript"><a target="_blank" href="' + data.transcript + '">Transcript</a></div>';
         }
         html += '</div><h2 class="video-title">' + data.title + '</h2><p class="video-description">' + data.description + '</p>';
-        $video.replaceWith(html);
+        $video = $video.replaceWith(html);
+
+        if (data.overlay) {
+            $(document).on('click', '#' + data.id, function () {
+                $(this).siblings('.video-overlay').hide();
+            });
+        }
+    }
+
+    function _brightCoveReady() {
+        var player;
+        videoIDs.forEach(function (el) {
+            videojs('#' + el).ready(function () {
+                // assign this player to a variable
+                player = this;
+                // assign an event listener for play event
+                player.on('play', _onPlay);
+                // push the player to the players array
+                players.push(player);
+            });
+        });
+    }
+
+    function _onPlay(e) {
+        // determine which player the event is coming from
+        var id = e.target.id;
+        // go through players
+        players.forEach(function (player) {
+            if (player.id() !== id) {
+                // pause the other player(s)
+                videojs(player.id()).pause();
+            }
+        });
+    }
+
+    function _viewStatus() {
+        $(window).scroll(function () {
+            players.forEach(function (player) {
+                if (!$('#' + player.id()).visible()) {
+                    videojs(player.id()).pause();
+                }
+            });
+        });
     }
 
     return {

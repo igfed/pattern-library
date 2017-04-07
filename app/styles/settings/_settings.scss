@@ -1,6 +1,6 @@
 // Breakpoints
 $breakpoints: (
-  small: 0px,
+  small: 375px,
   medium: 640px,
   large: 1024px,
   xlarge: 1200px,
@@ -35,6 +35,7 @@ $lighter-grey: #f1f7f7;
 $light-grey: #f3f4f5;
 $grey: #DBDFE2; //
 $dark-grey: #c1cbd0;
+$darker-grey: #687a87;
 $darkest-color: #282828; // Charcoal near Black
 
 $footer-darkblue-line: #263c50;

@@ -31,6 +31,13 @@ Styleguide 3.3
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-height: 300px;
+	max-height: 300px;
+
+	@include respond-to(small) {
+		min-height: 400px;
+		max-height: 400px;
+	}
 
 	&.patterned {
 		background-image: url(../images/tiled-weathered-pattern.jpg);
@@ -44,6 +51,7 @@ Styleguide 3.3
 	&.patterned-more{
 		background: url(../images/header-rp.png);
 		background-repeat: round;
+		background-size: 100% auto;
 	}
 }
 
@@ -58,11 +66,33 @@ Styleguide 3.3
 	}
 
 	h1 {
-		margin-bottom: 25px;
+		margin-bottom: 30px;
 	}
 }
 .super-hero .hero-copy {
 	text-align: left;
+
+	.callout-body-copy {
+		width: 90%;
+	}
+
+	.row {
+		@include respond-to(xxlarge) {
+			max-width: 70%;
+		}
+	}
+
+	.columns {
+		padding-left: 10%;
+
+		@include respond-to(xlarge) {
+	    	padding-left: 0.9375rem;
+		}
+
+		@include respond-to(xxlarge) {
+			width: 100%;
+		}
+	}
 }
 
 .hero-image {
@@ -77,20 +107,58 @@ Styleguide 3.3
 	img {
 		width: 100%;
 
-		@include respond-to(medium) {
+		@include respond-to(large) {
+			width: 100%;
+		}
+	}
+}
+
+.hero-maintain-aspect {
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	
+	img {
+		position: relative;
+		min-height: 400px;
+		min-width: 1280px;
+		transform: translate3d(-50%,0,0);
+		left: 50%;
+	}
+
+	.right-focus {
+		transform: translate3d(-95%,0,0);
+		left: 95%;
+	}
+
+	.left-focus {
+		transform: translate3d(-5%,0,0);
+		left: 5%;
+	}
+}
+
+.super-hero .hero-image {
+	left: auto;
+	max-width: 30%;
+
+	@include respond-to(large) {
+		max-width: 40%;
+	}
+
+	img {
+
+		width: 75%;
+
+		@include respond-to(small) {
 			width: 75%;
 		}
 
 		@include respond-to(large) {
 			width: 100%;
 		}
-	}
-}
-.super-hero .hero-image {
-	left: auto;
-	max-width: 30%;
-	@include respond-to(large) {
-		max-width: 40%;
 	}
 }
 

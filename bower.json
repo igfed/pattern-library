@@ -9,7 +9,8 @@
     "typeahead.js": "^0.11.1",
     "eventemitter3": "^2.0.2",
     "what-input": "~4.0.3",
-    "mustache.js": "mustache#^2.3.0"
+    "mustache.js": "mustache#^2.3.0",
+    "jquery-visible": "~1.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

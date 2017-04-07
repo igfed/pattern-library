@@ -13,7 +13,7 @@ export default (() => {
     // Register Click Handlers
 
     // Mobile Category menu
-    $('.more-section-menuitem').on('click', event, _moreSectionMenuItem);
+    $('.more-section-menuitem').on('click', ig.debounce(_moreSectionMenuItem, 500, true));
 
     // Mobile Category menu
     $('.more-section-menu-mobile-title').on('click', _mobileCategoryMenu);
@@ -51,8 +51,13 @@ export default (() => {
     $('.more-section-menu-dropdown').removeClass('active');
   }
 
-  function _moreSectionMenuItem() {
-    event.preventDefault();
+  function _moreSectionMenuItem(event) {
+
+    try {
+      event.returnValue = false;
+    } catch(err) {
+      event.preventDefault();
+    }
 
     var $this = $(this),
       offset = $this.offset(),
@@ -75,7 +80,8 @@ export default (() => {
   }
 
   function _filterDropdown(className) {
-    $('.more-section-menu-dropdown-category-wrapper').fadeIn('slow').focus().filter(':not(.' + className + ')').hide();
+    $('.more-section-menu-dropdown-category-wrapper').hide();
+    $('.' + className[0]).fadeIn('slow').focus();
     $('.more-section-menu-dropdown').addClass('active');
   }
 

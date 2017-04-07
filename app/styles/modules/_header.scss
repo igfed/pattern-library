@@ -80,8 +80,15 @@ Markup:
 
 Styleguide 3.1
 */
+
+// FOUC (Flash of unstyled content)
+.no-js .site-header {
+  opacity: 0;
+}
 .site-header {
 	border-bottom: 1px solid $grey;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
 
 	@include respond-to(large) {
 		margin-top: 4px;
@@ -482,8 +489,12 @@ Styleguide 3.1
 // States of the component
 .site-header-is-active {
   overflow: hidden;
+  position: fixed;
+
   @include respond-to(large) {
     overflow: visible;
+    position: static;
+
   }
   .menu-icon.dark {
     &::before, &::after {

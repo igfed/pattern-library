@@ -5,7 +5,7 @@
 	.patterned-more{
 		padding-bottom: 0;
 		padding-top: 0;
-
+		min-height: 0;
 		
 		&.active{
 			width: 100%;
@@ -61,14 +61,14 @@
 		    text-align: center;
 		    padding: 8px 0;
 
+
 		    &:last-child{
 		    	border: none;
 		    }
 
 			@include respond-to(medium){
-				// display: table-cell;
 				border-bottom: none;
-				display: inline-block;
+				display: block;
 			}
 		}
 
@@ -120,9 +120,9 @@
 	}
 
 	.more-section-tagline{
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
+		// display: flex;
+		// align-items: baseline;
+		// justify-content: space-between;
 		position: relative;
 		padding-right: 0;
 
