@@ -4,12 +4,6 @@ export default (() => {
 
   function init() {
     console.log('Carousel Initialized!')
-
-    // Not sure what this does at this point or how it relates to Carousels
-    $('[data-responsive-toggle] button').on('click', function () {
-      $('body').toggleClass('site-header-is-active');
-    });
-
     _buildCarousel();
   }
 
