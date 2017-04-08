@@ -53,9 +53,12 @@ export default (() => {
 
   function _moreSectionMenuItem(event) {
 
-    try {
-      event.returnValue = false;
-    } catch(err) {
+    if(window.matchMedia("(min-width: 640px)").matches) {
+      try {
+        //IE fix
+        event.returnValue = false;
+      } catch(err) { console.warn('event.returnValue not available')}
+
       event.preventDefault();
     }
 
