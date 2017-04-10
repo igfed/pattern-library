@@ -11,6 +11,7 @@
  styles for each language.
  */
 
+import navigation from './navigation.js'
 import more from './more.js';
 import forms from './forms.js';
 import carousel from './carousel.js';
@@ -30,6 +31,7 @@ const app = (() => {
     $(document).foundation();
 
     // Check for components
+    if($('#main-navigation').length) navigation.init();
     if ($('.ig-form').length) forms.init();
     if ($('.more-section').length) more.init();
     if ($('.ig-carousel').length) carousel.init();

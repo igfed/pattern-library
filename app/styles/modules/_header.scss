@@ -85,6 +85,11 @@ Styleguide 3.1
 .no-js .site-header {
   opacity: 0;
 }
+
+.no-scroll {
+	overflow: hidden;
+}
+
 .site-header {
 	border-bottom: 1px solid $grey;
   opacity: 1;
