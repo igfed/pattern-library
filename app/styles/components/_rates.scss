@@ -500,9 +500,6 @@
     // Following are some special rules for blocks of 10
     .rate-grid-10 {
         @include respond-to(medium) {
-            .row {
-                max-height: 160px;
-            }
             .medium-2 {
                 width: 20%;
             }
