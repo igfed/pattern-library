@@ -29,7 +29,7 @@ export default (() => {
 
   function _resize() {
     $(window).resize(function () {
-      if (ig.browserWidth < 640) {
+      if ($(window).width() <= 375) {
         $('.tertiary-cta-more').removeClass('animate');
         if ($('.more-section-menu').css('display') === 'flex') {
           $('.more-section-menu').css('display', 'block');
