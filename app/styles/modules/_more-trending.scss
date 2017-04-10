@@ -226,8 +226,8 @@ $border-color: #E0E2E2;
     border-top: solid 5px $highlight-color;
     transition: background-color 0.2s, border-top-color 0.5s;
     border-bottom: 1px solid $border-color;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 
     &:last-child {
       border-bottom: none;
@@ -375,6 +375,10 @@ $border-color: #E0E2E2;
     margin-bottom: 5px;
     display: inline-block;
     float: left;
+
+    position: absolute;
+    bottom:0;
+    margin-bottom: 30px;
 
     .tertiary-cta {
       margin: 0;
