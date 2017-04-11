@@ -48,6 +48,7 @@
 	display: block;
 }
 
+
 /*video.scss*/
 
 .split-bg{
@@ -106,6 +107,8 @@
 /*Module.scss*/
 .reveal.retirement.large{
 
+	max-width: 890px;
+
 	.modal-header{
 		max-width: 100%;
 	}
@@ -121,6 +124,8 @@
 	.ig-carousel{
 		width: 100%;
 		max-width: 100%;
+
+		padding: 50px;
 	}
 
 	.small-figure{
@@ -138,6 +143,10 @@
     	.columns{
     		width: auto;
     	}
+	}
+
+	.wide-figure-copy{
+		padding-bottom: 10px;
 	}
 
 	.slick-prev{
@@ -168,10 +177,18 @@
 	display: -webkit-flex;
 	-webkit-flex-flow: column wrap;
 
+	.wide-figure-copy{
+		padding-bottom: 25px;
+	}
+
 }
 
 .two-column-cta-row{
 	width: 100%;
+
+	@include respond-to(medium){
+		padding: 0 100px;
+	}
 }
 
 .records-list{
@@ -288,7 +305,7 @@ article{
 }
 
 .section-retirement-tip{
-	padding: 0 50px;
+	padding: 15px 50px;
 }
 
 
