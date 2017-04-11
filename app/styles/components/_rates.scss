@@ -338,8 +338,10 @@
         flex: 0 0 100%;
         max-width: 100%;
         .row {
+            display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
+            display: flex;
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -498,9 +500,6 @@
     // Following are some special rules for blocks of 10
     .rate-grid-10 {
         @include respond-to(medium) {
-            .row {
-                max-height: 160px;
-            }
             .medium-2 {
                 width: 20%;
             }

@@ -51,7 +51,12 @@ Styleguide 3.3
 	&.patterned-more{
 		background: url(../images/header-rp.png);
 		background-repeat: round;
+		background-size: 100% auto;
 	}
+}
+
+.hero.support-contact {
+	min-height: 0;
 }
 
 .hero-copy {
@@ -69,6 +74,28 @@ Styleguide 3.3
 }
 .super-hero .hero-copy {
 	text-align: left;
+
+	.callout-body-copy {
+		width: 90%;
+	}
+
+	.row {
+		@include respond-to(xxlarge) {
+			max-width: 70%;
+		}
+	}
+
+	.columns {
+		padding-left: 10%;
+
+		@include respond-to(xlarge) {
+	    	padding-left: 0.9375rem;
+		}
+
+		@include respond-to(xxlarge) {
+			width: 100%;
+		}
+	}
 }
 
 .hero-image {
