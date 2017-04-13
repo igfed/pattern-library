@@ -1,5 +1,23 @@
 // more-tips
 // extended styling to work for Q & A section too
+
+body.fr{
+  .list-row{
+    .tips-list-column {
+
+      position: relative;
+
+      img {
+        max-width: 60px;
+        height: 17px;
+        position: absolute;
+        top: 6px;
+        left: 0px;
+      }
+    }
+  }
+}
+
 .more-tips, .question-answer {
   margin-top: 35px;
 }
