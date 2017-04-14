@@ -7,7 +7,9 @@ export default (() => {
 	let 
 		body = $('body'),
 		menuIcon = $('.menu-icon'),
-		closeButton = $('.close-button-circle');
+		closeButton = $('.close-button-circle'),
+		showForLarge = $('.show-for-large'),
+		searchInput = $('#site-search-q');
 
 	function init(scope) {
 		menuIcon.click((e) => {
@@ -16,6 +18,10 @@ export default (() => {
 
 		closeButton.click((e) => {
 			body.removeClass('no-scroll');	
+		});
+
+		showForLarge.click((e) => {
+			searchInput.focus();
 		});
 	}
 
