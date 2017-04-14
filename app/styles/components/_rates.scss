@@ -303,6 +303,12 @@
             }
         }
     }
+    .rates .rate-block {
+        padding-bottom: 0;
+        @include respond-to(medium) {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .rates {
