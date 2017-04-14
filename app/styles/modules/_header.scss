@@ -154,7 +154,8 @@ Styleguide 3.1
 	}
 
 	.is-accordion-submenu-parent .has-subnav,
-	.is-accordion-submenu-parent .has-subnav:focus {
+	.is-accordion-submenu-parent .has-subnav:focus,
+	.is-accordion-submenu-parent .has-subnav:hover {
 		background-image: url('../images/expandArrow.png');
 		background-repeat: no-repeat;
 		background-position: calc(100% - 32px) 22px;
@@ -164,7 +165,8 @@ Styleguide 3.1
 	}
 
 	.is-accordion-submenu-parent .has-subnav.active,
-	.is-accordion-submenu-parent .has-subnav.active:focus {
+	.is-accordion-submenu-parent .has-subnav.active:focus,
+	.is-accordion-submenu-parent .has-subnav.active:hover {
 		background-image: url('../images/collapseArrow.png');
 		background-repeat: no-repeat;
 		background-position: calc(100% - 32px) 22px;
