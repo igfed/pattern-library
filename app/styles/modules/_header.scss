@@ -149,6 +149,30 @@ Styleguide 3.1
 		top: 51px;
 	}
 
+	.is-accordion-submenu-parent > a::after {
+		display: none;
+	}
+
+	.is-accordion-submenu-parent .has-subnav,
+	.is-accordion-submenu-parent .has-subnav:focus {
+		background-image: url('../images/expandArrow.png');
+		background-repeat: no-repeat;
+		background-position: calc(100% - 32px) 22px;
+		opacity: 1;
+		background-size: 16px;
+		margin-right: -14px;
+	}
+
+	.is-accordion-submenu-parent .has-subnav.active,
+	.is-accordion-submenu-parent .has-subnav.active:focus {
+		background-image: url('../images/collapseArrow.png');
+		background-repeat: no-repeat;
+		background-position: calc(100% - 32px) 22px;
+		opacity: 1;
+		background-size: 16px;
+		margin-right: -14px;
+	}
+
   .menu {
     > li {
 			margin-bottom: 0;
