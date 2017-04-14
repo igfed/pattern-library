@@ -2,17 +2,20 @@ import * as ig from './global.js';
 
 export default (() => {
 
-  function init() {
-    console.log('Accordion init!')
+	let sectionTitle = $('.accordion-menu-section-title');
 
-    // $('.help-topics-accordion').on('up.zf.accordion', function (event) {
-    //   setTimeout(function () {
-    //     $('html,body').animate({ scrollTop: $('.is-active').offset().top }, 'slow');
-    //   }, 10); //Adjust to match slideSpeed
-    // });
-  }
+	function init() {
+		sectionTitle.click((e) => {
+			try {
+				//IE fix
+				e.returnValue = false;
+			} catch(err) { console.warn('event.returnValue not available')}
+			
+			e.preventDefault();
+		});
+	}
 
-  return {
-    init
-  };
+	return {
+		init
+	};
 })()

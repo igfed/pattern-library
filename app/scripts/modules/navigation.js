@@ -9,7 +9,8 @@ export default (() => {
 		menuIcon = $('.menu-icon'),
 		closeButton = $('.close-button-circle'),
 		showForLarge = $('.show-for-large'),
-		searchInput = $('#site-search-q');
+		searchInput = $('#site-search-q'),
+		hasSubNav = $('.has-subnav');
 
 	function init(scope) {
 		menuIcon.click((e) => {
@@ -22,6 +23,17 @@ export default (() => {
 
 		showForLarge.click((e) => {
 			searchInput.focus();
+		});
+
+		hasSubNav.click((e) => {
+			let snTarget = $(e.currentTarget);
+			if( snTarget.hasClass("active") ) {
+				//deactivate
+				snTarget.removeClass('active');
+			} else {
+				//activate
+				snTarget.addClass('active');
+			}
 		});
 	}
 
