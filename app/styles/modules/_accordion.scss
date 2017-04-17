@@ -153,6 +153,9 @@ $accordion-link-color: #008cba;
 
   .accordion {
     background-color: transparent;
+    .bg-muted, .bg-secondary {
+      padding-top: 60px;
+    }
   }
 
   .accordion-item.is-accordion-submenu-parent.is-active {
