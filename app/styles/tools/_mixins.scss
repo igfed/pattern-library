@@ -74,6 +74,17 @@
 }
 
 // =============================================================================
+// Cross browser calc
+// =============================================================================
+
+@mixin calc($property, $expression...) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
+
+// =============================================================================
 // Make breakpoints
 // =============================================================================
 
@@ -97,4 +108,12 @@
 @mixin make-color($name, $color) { 
   .bg-#{unquote($name)} { background: $color; }
   .text-#{unquote($name)} {color: $color; }
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
 }

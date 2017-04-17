@@ -20,7 +20,6 @@ Markup:
 
 Styleguide 3.3
 */
-
 .hero {
 	background-position: 0 0;
 	background-repeat: repeat-x;
@@ -143,25 +142,24 @@ Styleguide 3.3
 	}
 }
 
+//Vars for super hero image dimensions
+$origImageW: 348px;
+$origImageH: 722px;
+$defaultWidth: 220px;
+$largeWidth: 360px;
+
 .super-hero .hero-image {
 	left: auto;
-	max-width: 30%;
+	margin-right: -100px;
+	@include scale($origImageW, $origImageH, $defaultWidth);
 
-	@include respond-to(large) {
-		max-width: 40%;
+	@include respond-to(medium) {
+		left: auto;
+		margin-right: 0;
 	}
 
-	img {
-
-		width: 75%;
-
-		@include respond-to(small) {
-			width: 75%;
-		}
-
-		@include respond-to(large) {
-			width: 100%;
-		}
+	@include respond-to(large) {
+		@include scale($origImageW, $origImageH, $largeWidth);
 	}
 }
 
@@ -188,7 +186,6 @@ Styleguide 3.3
 	    border-right: solid 1px;
 	    transform-origin: center middle;
 	    transform: rotate(45deg) translate3d(0,0,0);
-
 	    transition: transform 0.3s ease-out;
 	}
 

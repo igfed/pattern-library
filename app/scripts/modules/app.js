@@ -37,6 +37,7 @@ const app = (() => {
     if ($('.ig-carousel').length) carousel.init();
     if ($('.ig-shuffled-carousel').length) shuffledCarousel.init();
     if ($('.ig-video-group').length) video.init();
+    if ($('.accordion').length) accordion.init();
 
     // Components can also be setup to receive an HTML 'scope' (.ig-evt1... .ig-evt2.... etc)
     if ($('.ig-evt1').length) evt1.init('.ig-evt1');
