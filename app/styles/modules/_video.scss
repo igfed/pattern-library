@@ -8,7 +8,54 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 0
+    top: 0;
+    overflow: hidden;
+
+    &.complete {
+      .video-cta {
+        transform: translate(600px, 0);
+      }
+    }
+  }
+
+  .video-cta {
+    left: -600px;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ededed;
+    z-index: 10001;
+    padding: 20px 20px;
+    border: 10px solid #305A7B;
+    transition: transform 0.4s ease-in;
+
+    button.cta-button {
+      display: block;
+      margin: 15px auto;
+    }
+
+    * {
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      p {
+        font-size: 3.5vw;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 1023px) {
+      p {
+        font-size: 2vw;
+      }
+    }
+
+    @media (min-width: 1024px){
+      p {
+        font-size: 16px;
+      }
+    }
   }
 
   .video-overlay {
