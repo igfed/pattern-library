@@ -20,7 +20,6 @@ Markup:
 
 Styleguide 3.3
 */
-
 .hero {
 	background-position: 0 0;
 	background-repeat: repeat-x;
@@ -51,7 +50,12 @@ Styleguide 3.3
 	&.patterned-more{
 		background: url(../images/header-rp.png);
 		background-repeat: round;
+		background-size: 100% auto;
 	}
+}
+
+.hero.support-contact {
+	min-height: 0;
 }
 
 .hero-copy {
@@ -69,6 +73,28 @@ Styleguide 3.3
 }
 .super-hero .hero-copy {
 	text-align: left;
+
+	.callout-body-copy {
+		width: 90%;
+	}
+
+	.row {
+		@include respond-to(xxlarge) {
+			max-width: 70%;
+		}
+	}
+
+	.columns {
+		padding-left: 10%;
+
+		@include respond-to(xlarge) {
+	    	padding-left: 0.9375rem;
+		}
+
+		@include respond-to(xxlarge) {
+			width: 100%;
+		}
+	}
 }
 
 .hero-image {
@@ -88,25 +114,52 @@ Styleguide 3.3
 		}
 	}
 }
-.super-hero .hero-image {
-	left: auto;
-	max-width: 30%;
 
-	@include respond-to(large) {
-		max-width: 40%;
+.hero-maintain-aspect {
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	
+	img {
+		position: relative;
+		min-height: 400px;
+		min-width: 1280px;
+		transform: translate3d(-50%,0,0);
+		left: 50%;
 	}
 
-	img {
+	.right-focus {
+		transform: translate3d(-95%,0,0);
+		left: 95%;
+	}
 
-		width: 75%;
+	.left-focus {
+		transform: translate3d(-5%,0,0);
+		left: 5%;
+	}
+}
 
-		@include respond-to(small) {
-			width: 75%;
-		}
+//Vars for super hero image dimensions
+$origImageW: 348px;
+$origImageH: 722px;
+$defaultWidth: 220px;
+$largeWidth: 360px;
 
-		@include respond-to(large) {
-			width: 100%;
-		}
+.super-hero .hero-image {
+	left: auto;
+	margin-right: -100px;
+	@include scale($origImageW, $origImageH, $defaultWidth);
+
+	@include respond-to(medium) {
+		left: auto;
+		margin-right: 0;
+	}
+
+	@include respond-to(large) {
+		@include scale($origImageW, $origImageH, $largeWidth);
 	}
 }
 
@@ -133,7 +186,6 @@ Styleguide 3.3
 	    border-right: solid 1px;
 	    transform-origin: center middle;
 	    transform: rotate(45deg) translate3d(0,0,0);
-
 	    transition: transform 0.3s ease-out;
 	}
 

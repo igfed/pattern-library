@@ -26,7 +26,7 @@ export default (() => {
         var $group,
             $video,
             data = {},
-            preloadOptions = ['auto', 'metadata', 'none']
+            preloadOptions = ['auto', 'metadata', 'none'];
 
         // Each group can effectively use a different player which will only be loaded once
         $('.ig-video-group').each(function () {
@@ -69,13 +69,14 @@ export default (() => {
     }
 
     function _injectTemplate($video, data, index) {
+        var transcriptText = {'en': 'Transcript', 'fr': 'Transcription'};
         var html = `<div class="video-container"><div class="video-container-responsive">`
         if (data.overlay.length > 0) {
             html += `<span class="video-overlay ${data.id}" style="background-image: url('../${data.overlay}');"></span>`;
         }
         html += `<video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video></div>`
         if (data.transcript.length > 0) {
-            html += `<div class="video-transcript"><a target="_blank" href="${data.transcript}">Transcript</a></div>`;
+            html += `<div class="video-transcript"><a target="_blank" href="${data.transcript}">${transcriptText[ig.lang]}</a></div>`;
         }
         html += `</div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
         $video = $video.replaceWith(html);

@@ -80,8 +80,20 @@ Markup:
 
 Styleguide 3.1
 */
+
+// FOUC (Flash of unstyled content)
+.no-js .site-header {
+  opacity: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
 .site-header {
 	border-bottom: 1px solid $grey;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
 
 	@include respond-to(large) {
 		margin-top: 4px;
@@ -135,6 +147,32 @@ Styleguide 3.1
   transition: 500ms transform ease-out, 300ms opacity ease-out;
 	@include respond-to(large) {
 		top: 51px;
+	}
+
+	.is-accordion-submenu-parent > a::after {
+		display: none;
+	}
+
+	.is-accordion-submenu-parent .has-subnav,
+	.is-accordion-submenu-parent .has-subnav:focus,
+	.is-accordion-submenu-parent .has-subnav:hover {
+		background-image: url('../images/expandArrow.png');
+		background-repeat: no-repeat;
+		background-position: calc(100% - 32px) 22px;
+		opacity: 1;
+		background-size: 16px;
+		margin-right: -14px;
+	}
+
+	.is-accordion-submenu-parent .has-subnav.active,
+	.is-accordion-submenu-parent .has-subnav.active:focus,
+	.is-accordion-submenu-parent .has-subnav.active:hover {
+		background-image: url('../images/collapseArrow.png');
+		background-repeat: no-repeat;
+		background-position: calc(100% - 32px) 22px;
+		opacity: 1;
+		background-size: 16px;
+		margin-right: -14px;
 	}
 
   .menu {
@@ -482,8 +520,12 @@ Styleguide 3.1
 // States of the component
 .site-header-is-active {
   overflow: hidden;
+  position: fixed;
+
   @include respond-to(large) {
     overflow: visible;
+    position: static;
+
   }
   .menu-icon.dark {
     &::before, &::after {
