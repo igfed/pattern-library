@@ -21,8 +21,8 @@ import video from './video.js';
 import * as ig from './global.js';
 
 // Event Emitter test modules
-import evt1 from './event-test-1.js';
-import evt2 from './event-test-2.js';
+// import evt1 from './event-test-1.js';
+// import evt2 from './event-test-2.js';
 
 const app = (() => {
   function init() {
@@ -40,8 +40,8 @@ const app = (() => {
     if ($('.accordion').length) accordion.init();
 
     // Components can also be setup to receive an HTML 'scope' (.ig-evt1... .ig-evt2.... etc)
-    if ($('.ig-evt1').length) evt1.init('.ig-evt1');
-    if ($('.ig-evt2').length) evt2.init('.ig-evt2');
+    // if ($('.ig-evt1').length) evt1.init('.ig-evt1');
+    // if ($('.ig-evt2').length) evt2.init('.ig-evt2');
 
     // Add language class to body
     _language();

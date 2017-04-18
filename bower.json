@@ -7,7 +7,6 @@
     "foundation-sites": "^6.2.4",
     "slick-carousel": "slick.js#^1.6.0",
     "typeahead.js": "^0.11.1",
-    "eventemitter3": "^2.0.2",
     "what-input": "~4.0.3",
     "mustache.js": "mustache#^2.3.0",
     "jquery-visible": "~1.2.0"
@@ -35,11 +34,6 @@
     "typeahead.js": {
       "main": [
         "dist/typeahead.bundle.js"
-      ]
-    },
-    "eventemitter3": {
-      "main": [
-        "index.js"
       ]
     },
     "mustache.js": {
