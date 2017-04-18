@@ -1,3 +1,44 @@
+/*
+Videos
+
+Documentation to follow
+
+Markup:
+<div class="row ig-video-group" data-account="3906942861001" data-player="BJNX9uitx">
+        <div class="medium-6 columns">
+            <!-- Similar to an Angular Directive, this code will be replaced by JavaScript. -->
+            <div class="ig-video-js"
+                 data-id="4219153214001"
+                 data-overlay="images/video-overlay.jpg"
+                 data-controls="true"
+                 data-autoplay="false"
+                 data-preload="none"
+                 data-title="Business Owner: Pierre Senecal"
+                 data-transcript="http://www.investorsgroup.com/transcript-sample.pdf"
+                 data-description="As a former business owner, Pierre recognized the importance of the planning
+                 process, and delivering a total solution to clients. This is what led him to Investors Group."
+                 data-cta-template="<p>There's never been a better time to join the growing team of advisors at Investors Group. What are you waiting for?</p><button class='button cta-button'>Sign me up</button>">
+            </div>
+        </div>
+        <div class="medium-6 columns">
+            <!-- Similar to an Angular Directive, this code will be replaced by JavaScript -->
+            <div class="ig-video-js"
+                 data-id="4193078404001"
+                 data-overlay="images/video-overlay.jpg"
+                 data-controls="true"
+                 data-autoplay="false"
+                 data-preload="none"
+                 data-title="Banker: Sue Neal"
+                 data-description="Sue Neal transitioned from a career in banking where she lived according to
+                her paycheque, to a career where she designed her own."
+                 data-cta-template="<p>There's never been a better time to join the growing team of advisors at Investors Group. What are you waiting for?</p><button class='button cta-button'>Sign me up</button>">
+            </div>
+        </div>
+    </div>
+
+Styleguide 3.6
+*/
+
 .ig-video-group {
   margin-top: 50px;
 
