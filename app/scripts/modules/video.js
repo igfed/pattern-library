@@ -41,10 +41,10 @@ export default (() => {
             $group.find('.ig-video-js').each(function(index) {
                 $video = $(this);
 
-                // Capture options (required)
+                // Capture required options
                 data.id = $video.data('id');
 
-                // Capture options (optional)
+                // Capture options that are optional
                 data.overlay = $video.data('overlay')
                     ? $video.data('overlay')
                     : '';
@@ -53,8 +53,7 @@ export default (() => {
                     'description') : '';
                 data.auto = $video.data('autoplay') ? 'autoplay' : '';
                 data.ctrl = $video.data('controls') ? 'controls' : '';
-                data.preload = (preloadOptions.indexOf($video.data('preload')) >
-                -1) ? $video.data('preload') : 'auto';
+                data.preload = (preloadOptions.indexOf($video.data('preload')) > -1) ? $video.data('preload') : 'auto';
                 data.transcript = $video.data('transcript') ? $video.data(
                     'transcript') : '';
                 data.ctaTemplate = $video.data('ctaTemplate') ? $video.data(
