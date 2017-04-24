@@ -26,7 +26,7 @@ export var browserWidth = (() => {
 })()
 
 // base eventEmitter
-export var emitter = new EventEmitter();
+//export var emitter = new EventEmitter();
 
 export var debounce = (func, wait, immediate) => {
 	var timeout;
