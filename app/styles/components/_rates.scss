@@ -260,13 +260,13 @@
             }
         }
     }
-    .large-body-copy {
-        font-family: $font-stack-light;
-        @media only screen and (max-width: 640px) {
-            font-size: 22px;
-            margin-bottom: 34px;
-        }
-    }
+    // .large-body-copy {
+    //     font-family: $font-stack-light;
+    //     @media only screen and (max-width: 640px) {
+    //         font-size: 22px;
+    //         margin-bottom: 34px;
+    //     }
+    // }
 }
 
 .rates-type-b {
