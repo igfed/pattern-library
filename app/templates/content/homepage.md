@@ -38,7 +38,7 @@ This is our official framework for experiences, interactions and code libraries.
     </figure>
   </div>
 </div>
-<div class="row">
+<div class="row bg-muted">
   <div class="medium-6 columns">
   	<div class="callout bg-muted">
   		<h2>Behind the design system</h2>

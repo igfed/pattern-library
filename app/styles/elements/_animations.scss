@@ -1,0 +1,173 @@
+// zoomIn animation
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// zoomOut animation
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+// fadeIn animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// slideIn animation
+// specifically for checkmark
+@keyframes slideIn {
+  0% {
+    transform: translate3d(0, -100%, 0) scale(0);
+    opacity: 0.0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+// fadeOut animation
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+// fadeOutDown animation
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+}
+
+// fadeInDown animation
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// slideUp animation
+@keyframes slideUp {
+  from {
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: none;
+  }
+}
+
+// slideInLeft animation
+// -50% Y value related to centering the label relative to the ring
+// without setting this, label will go down when animating in or out
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-100%, -50%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+// slideOutRight animation
+@keyframes slideOutRight {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(100%, -50%, 0);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s;
+}
+
+.fade-out {
+  animation: fadeOut 0.65s;
+  animation-delay: 0.2s;
+}
+
+.fade-out-down {
+  animation: fadeOutDown 0.3s;
+  animation-fill-mode: both;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.5s;
+}
+
+.zoom-in {
+  animation: zoomIn 1s;
+  animation-fill-mode: both;
+}
+
+.zoom-out{
+  animation: zoomOut 1s;
+  animation-fill-mode: both;
+}
+
+.slide-up {
+  animation: slideUp 1s;
+  animation-fill-mode: both;
+}
+
+.slide-in {
+  animation: slideIn 0.2s;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.3s;
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+}
