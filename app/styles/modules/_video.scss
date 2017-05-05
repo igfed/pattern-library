@@ -172,6 +172,21 @@ Styleguide 3.6
     }
   }
 
+  // AEM placeholders
+
+  .video-container.undefined {
+    height: 200px;
+    background-color: #efefef;
+    border: 1px solid #ddd;
+  }
+
+  .video-container.undefined:before {
+    padding-top: 23%;
+    text-align: center;
+    display: block;
+    content: "Enter Video Metadata";
+  }
+
 }
 
 .ig-video-group .video-transcript {
