@@ -1,192 +1,83 @@
-// generated on 2016-10-04 using generator-webapp 2.1.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const browserSync = require('browser-sync');
-const del = require('del');
-const wiredep = require('wiredep').stream;
-const kss = require('gulp-kss');
-const rollup = require('rollup-stream');
-const source = require('vinyl-source-stream');
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
 
-gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
-    .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({ stream: true }));
+//Tasks
+const clean = require('./gulpfiles/clean');
+const styles = require('./gulpfiles/styles');
+const bundle = require('./gulpfiles/bundle');
+const html = require('./gulpfiles/html');
+const images = require('./gulpfiles/images');
+const fonts = require('./gulpfiles/fonts');
+const extras = require('./gulpfiles/extras');
+const lint = require('./gulpfiles/lint');
+const wiredep = require('./gulpfiles/wiredep');
+const styleGuide = require('./gulpfiles/styleguide');
+const githubPages = require('./gulpfiles/githubpages');
+
+
+//Generic Tasks
+gulp.task('bundle', bundle());
+
+//IG.com Tasks
+gulp.task('igc-styles', styles({
+	'src': 'app/ig-com/styles/*.scss',
+	'dest': '.tmp/ig-com/styles'
+}));
+
+gulp.task('igc-html', ['igc-styles', 'bundle'], html({
+	'src': 'app/ig-com/*.html',
+	'dest': 'dist/ig-com',
+	'searchPath': ['.tmp', 'app', '.']
+}));
+
+gulp.task('igc-images', images({
+	'src': 'app/ig-com/images/**/*',
+	'dest': 'dist/ig-com/images'
+}));
+
+gulp.task('igc-clean', clean({
+	'dest': 'dist/ig-com'
+}));
+
+gulp.task('igc-fonts', fonts({
+	'tmp': '.tmp/ig-com/fonts',
+	'dest': 'dist/ig-com/fonts'
+}));
+
+gulp.task('igc-extras', extras({
+	'src': 'app/ig-com',
+	'dest': 'dist/ig-com'
+}));
+
+gulp.task('igc-lint', lint());
+
+gulp.task('igc-wiredep', wiredep({
+	'cssSrc': 'app/ig-com/styles/*.scss',
+	'cssDest': 'app/ig-com/styles',
+	'htmlSrc': 'app/ig-com/**/*.html',
+	'htmlDest': 'app/ig-com'
+}));
+
+gulp.task('igc-styleguide', styleGuide({
+	'src': 'app/ig-com/styles/**/*.scss',
+	'templateDirectory': 'app/templates',
+	'overview': 'app/templates/content/homepage.md',
+	'dest': 'app'
+}));
+
+//IGC Build
+gulp.task('igc-build', ['igc-lint', 'igc-wiredep', 'igc-styleguide', 'igc-html', 'igc-images', 'igc-fonts', 'igc-extras'], () => {
+  return gulp.src('dist/ig-com/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
-gulp.task('styleguide', () => {
-  return gulp.src(['app/styles/**/*.scss'])
-    .pipe($.plumber())
-    .pipe(kss({
-      templateDirectory: 'app/templates/',
-      overview: 'app/templates/content/homepage.md'
-    }))
-    .pipe(gulp.dest('app/'))
-    .pipe(reload({ stream: true }))
-    .emit('end');
+gulp.task('githubpages', githubPages({
+	'src': 'dist/**/*',
+	'docs': 'docs/ig-com'
+}));
+
+gulp.task('default', ['igc-clean'], function(){
+	gulp.start('igc-build');
 });
 
-gulp.task('bundle', () => {
-  return rollup('rollup.config.js')
-    .pipe(source('main.js'))
-    .pipe(gulp.dest('app/scripts'))
-    .pipe(gulp.dest('.tmp/scripts'))
-});
-
-function lint(files, options) {
-  return gulp.src(files)
-    .pipe(reload({ stream: true, once: true }))
-    .pipe($.eslint(options))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-}
-
-gulp.task('lint', () => {
-  return lint('app/scripts/modules/*.js', {
-    fix: false
-  })
-    .pipe(gulp.dest('app/scripts/modules'));
-});
-
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js', {
-    fix: true,
-    env: {
-      mocha: true
-    }
-  })
-    .pipe(gulp.dest('test/spec/**/*.js'));
-});
-
-gulp.task('html', ['styles', 'bundle'], () => {
-  return gulp.src('app/*.html')
-    .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
-    .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({ safe: true, autoprefixer: false })))
-    .pipe($.if('*.html', $.htmlmin({ collapseWhitespace: true })))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('images', () => {
-  return gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
-      svgoPlugins: [{ cleanupIDs: false }]
-    })))
-    .pipe(gulp.dest('dist/images'));
-});
-
-gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {
-  })
-    .concat('app/fonts/**/*'))
-    .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('extras', () => {
-  return gulp.src([
-    'app/*.*',
-    '!app/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
-});
-
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
-
-gulp.task('serve', ['styleguide', 'styles', 'bundle', 'fonts'], () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch([
-    'app/*.html',
-    'app/images/**/*',
-    '.tmp/fonts/**/*'
-  ]).on('change', reload);
-
-  gulp.watch('app/styles/**/*.scss', ['styleguide', 'styles']);
-  gulp.watch('app/scripts/modules/*.js', ['bundle']);
-  gulp.watch('app/fonts/**/*', ['fonts']);
-  gulp.watch('bower.json', ['wiredep', 'fonts']);
-});
-
-gulp.task('serve:dist', () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    server: {
-      baseDir: ['dist']
-    }
-  });
-});
-
-gulp.task('serve:test', ['bundle'], () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/scripts': '.tmp/scripts',
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch('app/scripts/modules/*.js', ['bundle']);
-  gulp.watch('test/spec/**/*.js').on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
-
-// inject bower components
-gulp.task('wiredep', () => {
-  gulp.src('app/styles/*.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('app/styles'));
-
-  gulp.src(['app/**/*.html'])
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('app'));
-});
-
-gulp.task('build', ['lint', 'wiredep', 'styleguide', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
-});
-
-gulp.task('githubpages', ['build'], function () {
-  del.bind(null, ['docs'])
-  return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
-});
-
-gulp.task('default', ['clean'], () => {
-  gulp.start('build');
-});
-
+//IG-Client Portal Tasks
