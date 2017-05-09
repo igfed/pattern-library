@@ -24,12 +24,13 @@
   }
 
   .media-hero__header.bg-image, .media-hero__footer.bg-image {
-
+    background: no-repeat center center;
+    background-size: cover;
   }
 
   .media-hero__header.bg-image.tiled, .media-hero__footer.bg-image.tiled {
-
-
+    background: repeat;
+    background-size: auto;
   }
 
   .media-hero__header {
@@ -88,7 +89,7 @@
     padding-top: 8%;
     height: 63%;
 
-    @media screen and (min-width: 400px) and (max-width: 1023px){
+    @media screen and (min-width: 400px) and (max-width: 1023px) {
       padding-top: 13%;
     }
 
