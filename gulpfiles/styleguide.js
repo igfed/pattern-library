@@ -7,14 +7,15 @@ const kss = require('gulp-kss');
 
 module.exports = function(params) {
     return function() {
-        gulp.src([params.src])
+        let stream = gulp.src([params.src])
             .pipe($.plumber())
             .pipe(kss({
-                templateDirectory: params.templateDirectory,
-                overview: params.overview
+                templateDirectory: 'app/docs/templates',
+                overview: 'app/docs/templates/content/homepage.md'
             }))
-            .pipe(gulp.dest(params.dest))
+            .pipe(gulp.dest('docs'))
             .pipe(reload({ stream: true }))
             .emit('end');
+       	return stream;
     };
 };

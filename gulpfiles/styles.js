@@ -5,8 +5,9 @@ const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
 module.exports = function (params) {
-    return function () {
-        gulp.src(params.src)
+    return function () {       
+    	console.log(`${params.dest ? params.dest : '.tmp/styles'}`);
+    	stream = gulp.src(params.src)
 		    .pipe($.plumber())
 		    .pipe($.sourcemaps.init())
 		    .pipe($.sass.sync({
@@ -16,7 +17,7 @@ module.exports = function (params) {
 		    }).on('error', $.sass.logError))
 		    .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
 		    .pipe($.sourcemaps.write())
-		    .pipe(gulp.dest(params.dest))
-		    .pipe(reload({ stream: true }));
+		    .pipe(gulp.dest(`${params.dest ? params.dest : '.tmp/styles'}`))
+		    .pipe(reload({ stream: true }))
     };
 };

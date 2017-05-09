@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
+const argv = require('yargs').argv;
 
 //Tasks
 const clean = require('./gulpfiles/clean');
@@ -14,70 +15,75 @@ const lint = require('./gulpfiles/lint');
 const wiredep = require('./gulpfiles/wiredep');
 const styleGuide = require('./gulpfiles/styleguide');
 const githubPages = require('./gulpfiles/githubpages');
+const serve = require('./gulpfiles/serve');
 
+const projConfig = {
+	'igc' : 'ig-com',
+	'igcp' : 'ig-cp'
+};
 
-//Generic Tasks
+function getProj() {
+	//If project is not used, revert to default
+	return `${projConfig[argv.proj] ? projConfig[argv.proj] : projConfig['igc']}`
+}
+
 gulp.task('bundle', bundle());
 
-//IG.com Tasks
-gulp.task('igc-styles', styles({
-	'src': 'app/ig-com/styles/*.scss',
-	'dest': '.tmp/ig-com/styles'
+gulp.task('styles', styles({
+	'src': `app/${getProj()}/styles/*.scss`
 }));
 
-gulp.task('igc-html', ['igc-styles', 'bundle'], html({
-	'src': 'app/ig-com/*.html',
-	'dest': 'dist/ig-com',
-	'searchPath': ['.tmp', 'app', '.']
+gulp.task('html', ['styles', 'bundle'], html({
+	'src': `app/${getProj()}/*.html`
 }));
 
-gulp.task('igc-images', images({
-	'src': 'app/ig-com/images/**/*',
-	'dest': 'dist/ig-com/images'
+gulp.task('images', images({
+	'src': `app/${getProj()}/images/**/*`
 }));
 
-gulp.task('igc-clean', clean({
-	'dest': 'dist/ig-com'
+gulp.task('clean', clean());
+
+gulp.task('fonts', fonts());
+
+gulp.task('extras', extras({
+	'src': `app/${getProj()}`
 }));
 
-gulp.task('igc-fonts', fonts({
-	'tmp': '.tmp/ig-com/fonts',
-	'dest': 'dist/ig-com/fonts'
+gulp.task('lint', lint());
+
+gulp.task('wiredep', wiredep({
+	'cssSrc': `app/${getProj()}/styles/*.scss`,
+	'htmlSrc': `app/${getProj()}/**/*.html`
 }));
 
-gulp.task('igc-extras', extras({
-	'src': 'app/ig-com',
-	'dest': 'dist/ig-com'
+gulp.task('serve', ['build'], serve({
+	'projPath' : getProj() 
 }));
 
-gulp.task('igc-lint', lint());
-
-gulp.task('igc-wiredep', wiredep({
-	'cssSrc': 'app/ig-com/styles/*.scss',
-	'cssDest': 'app/ig-com/styles',
-	'htmlSrc': 'app/ig-com/**/*.html',
-	'htmlDest': 'app/ig-com'
-}));
-
-gulp.task('igc-styleguide', styleGuide({
-	'src': 'app/ig-com/styles/**/*.scss',
-	'templateDirectory': 'app/templates',
-	'overview': 'app/templates/content/homepage.md',
-	'dest': 'app'
-}));
-
-//IGC Build
-gulp.task('igc-build', ['igc-lint', 'igc-wiredep', 'igc-styleguide', 'igc-html', 'igc-images', 'igc-fonts', 'igc-extras'], () => {
-  return gulp.src('dist/ig-com/**/*').pipe($.size({ title: 'build', gzip: true }));
+gulp.task('build', ['lint', 'wiredep', 'html', 'images', 'fonts', 'extras'], () => {
+  return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
-gulp.task('githubpages', githubPages({
-	'src': 'dist/**/*',
-	'docs': 'docs/ig-com'
-}));
+// gulp.task('doc-styles', styles({
+// 	'src': 'app/base/styles/*.scss',
+// 	'dest': 'docs/styles'
+// }));
 
-gulp.task('default', ['igc-clean'], function(){
-	gulp.start('igc-build');
+
+
+// gulp.task('doc-styleguide', styleGuide({
+// 	'src': `app/base/styles/**/*.scss`
+// }));
+
+// gulp.task('doc-wiredep', wiredep({
+// 	'cssSrc': 'app/base/styles/*.scss',
+// 	'cssDest': 'app/base/styles',
+// 	'htmlSrc': 'app/docs/**/*.html',
+// 	'htmlDest': 'docs'
+// }));
+
+// gulp.task('githubpages', ['doc-wiredep', 'doc-styleguide', 'doc-styles']);
+
+gulp.task('default', ['clean'], function(){
+	gulp.start('build');
 });
-
-//IG-Client Portal Tasks

@@ -3,16 +3,18 @@ const wiredep = require('wiredep').stream;
 
 module.exports = function(params) {
     return function() {
-        gulp.src(params.cssSrc)
+        let stream = gulp.src(params.cssSrc)
             .pipe(wiredep({
                 ignorePath: /^(\.\.\/)+/
             }))
-            .pipe(gulp.dest(params.cssDest));
+            .pipe(gulp.dest(`${params.cssDest ? params.cssDest : '.tmp/styles'}`));
 
         gulp.src([params.htmlSrc])
             .pipe(wiredep({
                 ignorePath: /^(\.\.\/)*\.\./
             }))
-            .pipe(gulp.dest(params.htmlDest));
+            .pipe(gulp.dest(`${params.htmlDest ? params.htmlDest : 'dist'}`));
+
+      	return stream;
     };
 };

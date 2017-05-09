@@ -4,7 +4,7 @@ const $ = gulpLoadPlugins();
 
 module.exports = function(params) {
     return function() {
-        gulp.src(params.src)
+        let stream = gulp.src([params.src, 'app/base/images/**/*'])
             .pipe($.cache($.imagemin({
                 progressive: true,
                 interlaced: true,
@@ -12,6 +12,8 @@ module.exports = function(params) {
                 // as hooks for embedding and styling
                 svgoPlugins: [{ cleanupIDs: false }]
             })))
-            .pipe(gulp.dest(params.dest));
+            .pipe(gulp.dest('dist/images'));
+
+        return stream;
     };
 };

@@ -4,9 +4,10 @@ const $ = gulpLoadPlugins();
 
 module.exports = function(params) {
     return function() {
-        gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
+        let stream = gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
             .concat('app/base/fonts/**/*'))
-            .pipe(gulp.dest(params.tmp))
-            .pipe(gulp.dest(params.dest));
+            .pipe(gulp.dest('.tmp/fonts'))
+            .pipe(gulp.dest('dist/fonts'));
+        return stream;
     };
 };

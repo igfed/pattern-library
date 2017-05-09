@@ -4,7 +4,7 @@ const source = require('vinyl-source-stream');
 
 module.exports = function(params={}) {
     return function() {
-        rollup(params.config || 'rollup.config.js')
+        rollup('rollup.config.js')
             .pipe(source('main.js'))
             .pipe(gulp.dest('app/scripts'))
             .pipe(gulp.dest('.tmp/scripts'))
