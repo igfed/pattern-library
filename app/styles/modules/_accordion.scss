@@ -64,73 +64,73 @@ $accordion-link-color: #008cba;
 
 .help-accordion-main {
 
-  #accordion-mortgage-afford {
-    .body-copy:last-child {
+  // #accordion-mortgage-afford {
+  //   .body-copy:last-child {
 
-      @include respond-to(medium) {
-        padding-top: 20px;
-      }
+  //     @include respond-to(medium) {
+  //       padding-top: 20px;
+  //     }
 
-      @include respond-to(large) {
-        padding-top: 0;
-      }
-    }
+  //     @include respond-to(large) {
+  //       padding-top: 0;
+  //     }
+  //   }
 
-    .large-12 {
-      margin-bottom: 20px;
-    }
-  }
+  //   .large-12 {
+  //     margin-bottom: 20px;
+  //   }
+  // }
 
-  #accordion-mortgage-payments {
-    .body-copy:last-child {
+  // #accordion-mortgage-payments {
+  //   .body-copy:last-child {
 
-      @include respond-to(medium) {
-        padding-top: 20px;
-      }
-    }
+  //     @include respond-to(medium) {
+  //       padding-top: 20px;
+  //     }
+  //   }
 
-    .large-12 {
-      margin-bottom: 20px;
+  //   .large-12 {
+  //     margin-bottom: 20px;
 
-      @include respond-to(medium) {
-        margin-bottom: 40px;
-      }
-    }
-  }
+  //     @include respond-to(medium) {
+  //       margin-bottom: 40px;
+  //     }
+  //   }
+  // }
 
-  #accordion-mortgage-free {
-    .large-12 {
-      @include respond-to(medium) {
-        margin-bottom: 16px;
-      }
-    }
-  }
+  // #accordion-mortgage-free {
+  //   .large-12 {
+  //     @include respond-to(medium) {
+  //       margin-bottom: 16px;
+  //     }
+  //   }
+  // }
 
-  #accordion-mortgage-penalty {
-    .large-12 {
-      margin-bottom: 35px;
+  // #accordion-mortgage-penalty {
+  //   .large-12 {
+  //     margin-bottom: 35px;
 
-      @include respond-to(medium) {
-        margin-bottom: 40px;
-      }
-    }
-  }
+  //     @include respond-to(medium) {
+  //       margin-bottom: 40px;
+  //     }
+  //   }
+  // }
 
-  #accordion-contact-satisfaction {
-    .large-12 {
-      margin-bottom: 80px;
-    }
+  // #accordion-contact-satisfaction {
+  //   .large-12 {
+  //     margin-bottom: 80px;
+  //   }
 
-    .callout-body-copy {
-      @include respond-to(medium) {
-        margin-bottom: 25px;
-      }
-      @include respond-to(large) {
-        margin-bottom: 20px;
-      }
-    }
+  //   .callout-body-copy {
+  //     @include respond-to(medium) {
+  //       margin-bottom: 25px;
+  //     }
+  //     @include respond-to(large) {
+  //       margin-bottom: 20px;
+  //     }
+  //   }
 
-  }
+  // }
 
   // #accordion-contact-unclaimed {
   //
@@ -277,6 +277,7 @@ $accordion-link-color: #008cba;
         padding-left: 1em;
         padding-right: 1em;
         padding-top: 16px;
+        padding-bottom: 45px;
       }
 
       @include respond-to(large) {
