@@ -2,9 +2,12 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
+const getProject = require('./helper/get-project');
+
 module.exports = function(params) {
     return function() {
-        let stream = gulp.src([params.src, 'app/base/images/**/*'])
+    	let imagePath = getProject() === 'ig-base' ? ['app/ig-base/images/**/*'] : [`app/${getProject()}/images/**/*`, 'app/ig-base/images/**/*'];
+        let stream = gulp.src(imagePath)
             .pipe($.cache($.imagemin({
                 progressive: true,
                 interlaced: true,

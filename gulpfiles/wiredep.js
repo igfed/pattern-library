@@ -1,20 +1,20 @@
 const gulp = require('gulp');
 const wiredep = require('wiredep').stream;
 
+const getProject = require('./helper/get-project');
+
 module.exports = function(params) {
     return function() {
-        let stream = gulp.src(params.cssSrc)
+        gulp.src(`app/${getProject()}/styles/*.scss`)
             .pipe(wiredep({
                 ignorePath: /^(\.\.\/)+/
             }))
-            .pipe(gulp.dest(`${params.cssDest ? params.cssDest : '.tmp/styles'}`));
+            .pipe(gulp.dest('.tmp/styles'));
 
-        gulp.src([params.htmlSrc])
+        gulp.src([`app/${getProject()}/**/*.html`])
             .pipe(wiredep({
                 ignorePath: /^(\.\.\/)*\.\./
             }))
-            .pipe(gulp.dest(`${params.htmlDest ? params.htmlDest : 'dist'}`));
-
-      	return stream;
+            .pipe(gulp.dest('dist'));
     };
 };

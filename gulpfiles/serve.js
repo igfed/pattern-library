@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
+const getProject = require('./helper/get-project');
+
 module.exports = function(params) {
     return function() {
         browserSync({
@@ -16,14 +18,14 @@ module.exports = function(params) {
         });
 
         gulp.watch([
-            'app/*.html',
-            'app/images/**/*',
+            `app/${getProject()}/*.html`,
+            `app/${getProject()}/images/**/*`,
             '.tmp/fonts/**/*'
         ]).on('change', reload);
 
-        gulp.watch('app/styles/**/*.scss', ['styleguide', 'styles']);
-        gulp.watch('app/scripts/modules/*.js', ['bundle']);
-        gulp.watch('app/fonts/**/*', ['fonts']);
+        gulp.watch(`app/${getProject()}/styles/**/*.scss`, ['styleguide', 'styles']);
+        gulp.watch(`app/scripts/modules/*.js`, ['bundle']);
+        gulp.watch('app/ig-base/fonts/**/*', ['fonts']);
         gulp.watch('bower.json', ['wiredep', 'fonts']);
     };
 };

@@ -4,10 +4,11 @@ const $ = gulpLoadPlugins();
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
+const getProject = require('./helper/get-project');
+
 module.exports = function (params) {
-    return function () {       
-    	console.log(`${params.dest ? params.dest : '.tmp/styles'}`);
-    	stream = gulp.src(params.src)
+    return function () {     
+    	stream = gulp.src(`app/${getProject()}/styles/*.scss`)
 		    .pipe($.plumber())
 		    .pipe($.sourcemaps.init())
 		    .pipe($.sass.sync({
@@ -17,7 +18,7 @@ module.exports = function (params) {
 		    }).on('error', $.sass.logError))
 		    .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
 		    .pipe($.sourcemaps.write())
-		    .pipe(gulp.dest(`${params.dest ? params.dest : '.tmp/styles'}`))
+		    .pipe(gulp.dest('.tmp/styles'))
 		    .pipe(reload({ stream: true }))
     };
 };

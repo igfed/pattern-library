@@ -2,7 +2,7 @@
 @import "settings/settings";
 
 // Tools - globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
-@import "../../base/styles/tools/mixins";
+@import "../../ig-base/styles/tools/mixins";
 
 // Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. This is our vendor.css file
 
@@ -13,26 +13,26 @@ Styling for bare HTML elements (like H1, A, etc.). These come with default styli
 
 Styleguide 1.
 */
-@import "../../base/styles/elements/grid";
-@import "../../base/styles/elements/typography";
-@import "../../base/styles/elements/color";
-@import "../../base/styles/elements/images";
-@import "../../base/styles/elements/buttons";
-@import "../../base/styles/elements/forms";
-@import "../../base/styles/elements/tables";
-@import "../../base/styles/elements/animations";
+@import "../../ig-base/styles/elements/grid";
+@import "../../ig-base/styles/elements/typography";
+@import "../../ig-base/styles/elements/color";
+@import "../../ig-base/styles/elements/images";
+@import "../../ig-base/styles/elements/buttons";
+@import "../../ig-base/styles/elements/forms";
+@import "../../ig-base/styles/elements/tables";
+@import "../../ig-base/styles/elements/animations";
 
 // Components
 //
 // class-based selectors which define undecorated design patterns
 //
 // Styleguide 2.
-@import "../../base/styles/components/callout";
-@import "../../base/styles/components/topBar";
-@import "../../base/styles/components/dropdown";
-@import "../../base/styles/components/modal";
-@import "../../base/styles/components/figure";
-@import "../../base/styles/components/rates";
+@import "../../ig-base/styles/components/callout";
+@import "../../ig-base/styles/components/topBar";
+@import "../../ig-base/styles/components/dropdown";
+@import "../../ig-base/styles/components/modal";
+@import "../../ig-base/styles/components/figure";
+@import "../../ig-base/styles/components/rates";
 
 // Modules
 //

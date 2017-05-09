@@ -1,0 +1,35 @@
+// Settings - used with preprocessors and contain font, colors definitions, etc.
+@import "settings/settings";
+
+// Tools - globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+@import "tools/mixins";
+
+// Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS. This is our vendor.css file
+
+/*
+Elements
+
+Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+
+Styleguide 1.
+*/
+@import "elements/grid";
+@import "elements/typography";
+@import "elements/color";
+@import "elements/images";
+@import "elements/buttons";
+@import "elements/forms";
+@import "elements/tables";
+@import "elements/animations";
+
+// Components
+//
+// class-based selectors which define undecorated design patterns
+//
+// Styleguide 2.
+@import "components/callout";
+@import "components/topBar";
+@import "components/dropdown";
+@import "components/modal";
+@import "components/figure";
+@import "components/rates";

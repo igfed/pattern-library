@@ -4,8 +4,11 @@ const $ = gulpLoadPlugins();
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 
+const getProject = require('./helper/get-project');
+
 module.exports = function(params) {
     return function() {
+
         lint('app/scripts/modules/*.js', {
                 fix: false
             })

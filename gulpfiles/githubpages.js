@@ -12,7 +12,7 @@ module.exports = function (params) {
         //let stream = gulp.src('app/docs')
         	//.pipe
   		//return gulp.src([params.src], {}).pipe(gulp.dest(params.docs));
-  		let stream = gulp.src(['app/base/styles/**/*.scss'])
+  		let stream = gulp.src(['app/ig-base/styles/**/*.scss'])
             .pipe($.plumber())
             .pipe(kss({
                 templateDirectory: 'app/docs/templates',
