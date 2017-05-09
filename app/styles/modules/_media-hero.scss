@@ -5,44 +5,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 500px;
+  height: 450px;
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    height: 650px;
+  @media screen and (min-width: 420px) and (max-width: 599px) {
+    height: 575px;
   }
 
-  @media screen and (min-width: 1024px) {
-    height: 800px;
+  @media screen and (min-width: 600px) and (max-width: 767px) {
+    height: 675px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 750px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    height: 1000px;
   }
 
   .media-hero__header {
     position: absolute;
     top: 0;
-    height: 60%;
+    height: 65%;
     width: 100%;
     background-color: #ccc;
     text-align: center;
-    padding: 50px 0;
+    padding: 120px 15px 0;
+
+    @media screen and (max-width: 767px) {
+      padding: 60px 15px 0;
+    }
   }
 
   .media-hero__footer {
     position: absolute;
-    top: 40%;
-    height: 50%;
+    top: 65%;
+    height: 35%;
     width: 100%;
   }
 
   .media-hero__content {
-    margin-top: 100px;
+    margin-top: 15%;
     height: 50%;
-    width: 90%;
+    width: 95%;
     max-width: 520px;
-    background: #ddd;
     z-index: 10000;
-
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-      width: 85%;
-    }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 70%;
