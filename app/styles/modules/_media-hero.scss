@@ -20,13 +20,13 @@
   }
 
   @media screen and (min-width: 1025px) {
-    height: 1000px;
+    height: 975px;
   }
 
   .media-hero__header {
     position: absolute;
     top: 0;
-    height: 65%;
+    height: 63%;
     width: 100%;
     background-color: #ccc;
     text-align: center;
@@ -34,24 +34,24 @@
     padding-left: 15px;
     padding-right: 15px;
 
-    @media screen and (min-width: 1025px) {
-      padding-top: 10%;
+    @media screen and (min-width: 1024px) {
+      padding-top: 120px;
     }
   }
 
   .media-hero__footer {
     position: absolute;
-    top: 65%;
-    height: 35%;
+    top: 63%;
+    height: 37%;
     width: 100%;
   }
 
   .media-hero__content {
-    margin-top: 15%;
+    margin-top: 13%;
     height: 50%;
     width: 95%;
     max-width: 520px;
-    z-index: 10000;
+    z-index: 100;
 
     @media screen and (min-width: 768px) {
       max-width: 768px;
