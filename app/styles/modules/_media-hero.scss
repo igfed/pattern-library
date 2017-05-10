@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14% 0 10%;
+  padding: 14% 0 6%;
 
   .media-hero__header.bg-image, .media-hero__footer.bg-image {
     background: no-repeat center center;
@@ -67,7 +67,6 @@
 }
 
 .media-hero.title-block {
-  padding-bottom: 10%;
 
   .media-hero__header {
     padding-top: 10%;
