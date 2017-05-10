@@ -7,5 +7,5 @@ const projConfig = {
 };
 
 module.exports = function() {
-    return `${projConfig[argv.proj] ? projConfig[argv.proj] : projConfig['igc']}`
+    return `${projConfig[argv.project || argv.p] ? projConfig[argv.project || argv.p] : projConfig['igc']}`
 };
