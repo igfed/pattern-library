@@ -6,16 +6,6 @@
   justify-content: center;
   padding: 14% 0 6%;
 
-  .media-hero__header.bg-image, .media-hero__footer.bg-image {
-    background: no-repeat center center;
-    background-size: cover;
-  }
-
-  .media-hero__header.bg-image.tiled, .media-hero__footer.bg-image.tiled {
-    background: repeat;
-    background-size: auto;
-  }
-
   .media-hero__header {
     position: absolute;
     top: 0;
@@ -38,17 +28,12 @@
     width: 90%;
     max-width: 520px;
     z-index: 100;
+    padding-bottom: 0;
+    position: relative;
 
     @media screen and (min-width: 768px) {
-      max-width: 768px;
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
       width: 70%;
-    }
-
-    @media screen and (min-width: 1024px) {
-      width: 60%;
+      max-width: 768px;
     }
 
     // Make sure to override any Foundation layout classes
@@ -62,6 +47,15 @@
 
     .columns {
       padding: 0;
+    }
+
+    &.image {
+      padding-bottom: 43.3%;
+
+      @media screen and (min-width: 1280px) {
+        height: 430px;
+        padding-bottom: 0;
+      }
     }
   }
 }
