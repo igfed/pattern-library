@@ -1,0 +1,87 @@
+.media-hero {
+  position: relative;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14% 0 6%;
+
+  .media-hero__header {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #ccc;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .media-hero__footer {
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    width: 100%;
+  }
+
+  .media-hero__content {
+    margin-top: 0;
+    width: 90%;
+    max-width: 520px;
+    z-index: 100;
+    padding-bottom: 0;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      max-width: 768px;
+    }
+
+    // Make sure to override any Foundation layout classes
+    .large-4, .medium-6 {
+      width: 100%;
+    }
+
+    .ig-video-group {
+      margin-top: 0;
+    }
+
+    .columns {
+      padding: 0;
+    }
+
+    &.image {
+      padding-bottom: 43.3%;
+
+      @media screen and (min-width: 1280px) {
+        min-height: 500px;
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.media-hero.title-block {
+
+  .media-hero__header {
+    padding-top: 10%;
+    height: 63%;
+  }
+
+  .media-hero__footer {
+    top: 63%;
+    height: 37%;
+  }
+
+  .media-hero__content {
+    margin-top: 12%;
+
+    @media (max-width: 420px) {
+      margin-top: 35%;
+    }
+
+    @media (min-width: 421px) and (max-width: 768px){
+      margin-top: 20%;
+    }
+  }
+
+}
