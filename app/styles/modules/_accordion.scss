@@ -277,12 +277,11 @@ $accordion-link-color: #008cba;
       @include respond-to(medium) {
         padding-left: 1em;
         padding-right: 1em;
-        padding-top: 16px;
-        // padding-bottom: 45px;
+        padding-bottom: 70px;
       }
 
       @include respond-to(large) {
-        // padding-top: 6px;
+         padding-bottom: 80px;
       }
 
       .large-12 {
