@@ -176,6 +176,10 @@ Styleguide 4.1
     }
 
     .category-list {
+      ul{
+        margin-left: 0px;
+      }
+      
       .legal-copy {
         list-style: none;
         // font-size: 16px;
