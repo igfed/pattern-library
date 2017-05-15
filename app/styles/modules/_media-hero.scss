@@ -4,67 +4,89 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14% 0 6%;
+  padding: 8% 0 6%;
+  max-height: 940px;
+}
 
-  .media-hero__header {
-    position: absolute;
-    top: 0;
-    height: 50%;
-    width: 100%;
-    background-color: #ccc;
-    text-align: center;
-    padding: 0 15px;
+.media-hero__header {
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  background-color: #ccc;
+  text-align: center;
+  padding: 0 15px;
+  background-position: center center;
+  background-size: cover;
+
+  &.tiled {
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+}
+
+.media-hero__footer {
+  position: absolute;
+  top: 50%;
+  height: 50%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+
+  &.tiled {
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
+  }
+}
+
+.media-hero__content {
+  margin-top: 0;
+  width: 90%;
+  max-width: 520px;
+  z-index: 100;
+  padding-bottom: 0;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 70%;
+    max-width: 768px;
   }
 
-  .media-hero__footer {
-    position: absolute;
-    top: 50%;
-    height: 50%;
+  // Make sure to override any Foundation layout classes
+  .large-4, .medium-6 {
     width: 100%;
   }
 
-  .media-hero__content {
+  .ig-video-group {
     margin-top: 0;
-    width: 90%;
-    max-width: 520px;
-    z-index: 100;
-    padding-bottom: 0;
-    position: relative;
+  }
 
-    @media screen and (min-width: 768px) {
-      width: 70%;
-      max-width: 768px;
-    }
+  .columns {
+    padding: 0;
+  }
 
-    // Make sure to override any Foundation layout classes
-    .large-4, .medium-6 {
-      width: 100%;
-    }
+  &.image {
+    padding-bottom: 43.3%;
+    background-size: cover;
+    background-position: center center;
 
-    .ig-video-group {
-      margin-top: 0;
-    }
-
-    .columns {
-      padding: 0;
-    }
-
-    &.image {
-      padding-bottom: 43.3%;
-
-      @media screen and (min-width: 1280px) {
-        min-height: 500px;
-        padding-bottom: 0;
-      }
+    @media screen and (min-width: 1280px) {
+      min-height: 500px;
+      padding-bottom: 0;
     }
   }
 }
 
 .media-hero.title-block {
-
   .media-hero__header {
-    padding-top: 10%;
+    padding-top: 8%;
     height: 63%;
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 110px !important;
+    }
   }
 
   .media-hero__footer {
@@ -73,14 +95,14 @@
   }
 
   .media-hero__content {
-    margin-top: 12%;
+    margin-top: 20%;
 
-    @media (max-width: 420px) {
-      margin-top: 35%;
+    @media (max-width: 600px) {
+      margin-top: 125px;
     }
 
-    @media (min-width: 421px) and (max-width: 768px){
-      margin-top: 20%;
+    @media (min-width: 1024px) {
+      margin-top: 260px;
     }
   }
 
