@@ -92,7 +92,7 @@ Styleguide 3.6
       }
     }
 
-    @media (min-width: 1024px){
+    @media (min-width: 1024px) {
       p {
         font-size: 16px;
       }
@@ -175,10 +175,22 @@ Styleguide 3.6
 
   // AEM placeholders
 
-  .video-container.undefined {
-    height: 200px;
-    background-color: #efefef;
-    border: 1px solid #ddd;
+  @media (max-width: 657px) {
+    .video-container.undefined {
+      width: inherit;
+      height: 250px;
+      background-color: #efefef;
+      border: 1px solid #ddd;
+    }
+  }
+
+  @media (min-width: 658px) {
+    .video-container.undefined {
+      width: 300% !important;
+      height: 400px;
+      background-color: #efefef;
+      border: 1px solid #ddd;
+    }
   }
 
   .video-container.undefined:before {
