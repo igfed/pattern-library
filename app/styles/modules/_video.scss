@@ -172,34 +172,21 @@ Styleguide 3.6
       text-decoration: underline;
     }
   }
-
   // AEM placeholders
 
-  @media (max-width: 657px) {
-    .video-container.undefined {
-      width: inherit;
-      height: 250px;
-      background-color: #efefef;
-      border: 1px solid #ddd;
-    }
+  .video-container.undefined {
+    display: none;
   }
 
-  @media (min-width: 658px) {
-    .video-container.undefined {
-      width: 300% !important;
-      height: 400px;
-      background-color: #efefef;
-      border: 1px solid #ddd;
-    }
-  }
+}
 
-  .video-container.undefined:before {
-    padding-top: 23%;
+.mediaHeroVideo {
+  .cq-placeholder {
     text-align: center;
-    display: block;
-    content: "Enter Video Metadata";
+    padding: 10px 0 0 0;
+    font-size: 13px;
+    color: #bbb;
   }
-
 }
 
 .ig-video-group .video-transcript {
