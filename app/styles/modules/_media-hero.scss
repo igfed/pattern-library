@@ -45,15 +45,20 @@
 
 .media-hero__content {
   margin-top: 0;
-  width: 90%;
-  max-width: 520px;
   z-index: 100;
   padding-bottom: 0;
   position: relative;
 
-  @media screen and (min-width: 768px) {
-    width: 70%;
+  img, video {
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 800px) {
     max-width: 768px;
+  }
+
+  @media screen and (max-width: 799px){
+    max-width: 90%;
   }
 
   // Make sure to override any Foundation layout classes
