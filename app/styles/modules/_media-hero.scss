@@ -68,18 +68,6 @@
   .columns {
     padding: 0;
   }
-
-  &.image {
-    padding-bottom: 43.3%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-    @media screen and (min-width: 1280px) {
-      min-height: 500px;
-      padding-bottom: 0;
-    }
-  }
 }
 
 .media-hero.title-block {
@@ -98,9 +86,9 @@
   }
 
   .media-hero__content {
-    margin-top: 20%;
+    margin-top: 160px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 639px) {
       margin-top: 125px;
     }
 
