@@ -55,11 +55,11 @@
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 800px) {
-    max-width: 768px;
+  @media screen and (min-width: 1023px) {
+    max-width: 800px;
   }
 
-  @media screen and (max-width: 799px){
+  @media screen and (max-width: 1024px){
     max-width: 90%;
   }
 
