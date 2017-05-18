@@ -502,6 +502,17 @@ Styleguide 3.1
         opacity: 1;
       }
     }
+
+    .search-icon{
+      &:after{
+        border-left: 2px solid #0D263C;
+      }
+    }
+
+    .close-icon{
+      min-width: 27px!important;
+      height: 27px;
+    }
   }
 }
 
