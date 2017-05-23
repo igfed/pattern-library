@@ -319,7 +319,16 @@ Styleguide 3.1
         margin-right: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        border-bottom: 1px solid $grey;
+        // border-bottom: 1px solid $grey;
+
+        &:before{
+          content: "";
+          border-bottom: 1px solid #DBDFE2;
+          width: 70%;
+          display: block;
+          position: absolute;
+          bottom: 0;
+        }
         @include respond-to(large) {
           text-transform: none;
           // margin: 0 1rem;
@@ -464,6 +473,11 @@ Styleguide 3.1
     img {
       min-width: 20px;
       width: 20px;
+
+      &::after{
+        content: "";
+        border-color: #0d263c transparent transparent;
+      }
     }
   }
   input {
