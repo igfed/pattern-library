@@ -178,24 +178,6 @@ Styleguide 3.1
   .menu {
     > li {
 			margin-bottom: 0;
-      @include respond-to(large) {
-        // Divider between services | Advice and Client support | <lang toggle>
-        &:nth-child(3) {
-          > a {
-            position: relative;
-            &:after {
-              content: '';
-              display: block;
-              width: 1px;
-              height: 30px;
-              background: $grey;
-              position: absolute;
-              top: 7px;
-              left: -3px;
-            }
-          }
-        }
-      }
       > a {
 				font-family: $font-stack-sc;
         text-transform: uppercase;
@@ -288,9 +270,6 @@ Styleguide 3.1
         cursor: pointer;
         &:hover {
           &::before {
-            // left: 0;
-            // right: -5px;
-            // bottom: -17px;
             display: none;
           }
         }
@@ -307,11 +286,7 @@ Styleguide 3.1
         border-radius: 0 0 $border-radius $border-radius;
       }
     > li {
-      &:nth-child(2) a::after,
-      &:nth-child(3) a::after {
-        display: none;
-      }
-      &:last-child a {
+      &:last-child a:after {
         border-bottom: none;
       }
       a {
@@ -319,15 +294,21 @@ Styleguide 3.1
         margin-right: 2rem;
         padding-left: 2rem;
         padding-right: 2rem;
-        // border-bottom: 1px solid $grey;
 
-        &:before{
+        &:after{
           content: "";
           border-bottom: 1px solid #DBDFE2;
-          width: 70%;
+          width: 91%;
           display: block;
           position: absolute;
           bottom: 0;
+          right: auto;
+          left: 0;
+
+          @include respond-to(large){
+            width: 70%;
+            left: auto;
+          }
         }
         @include respond-to(large) {
           text-transform: none;
