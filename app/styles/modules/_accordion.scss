@@ -34,111 +34,10 @@ Markup:
 Styleguide 3.4
 */
 
-// $accordion-link-color
 $accordion-link-color: #008cba;
-
-// Arrows
-// .is-accordion-submenu-parent {
-//   > a::after {
-//     width: $arrow-size;
-//     height: $arrow-size;
-//     border: none;
-//     border-bottom: solid 1px $darkest-color;
-//     border-right: solid 1px $darkest-color;
-//     transform-origin: center middle;
-//     transform: rotate(45deg);
-//     top: 45%;
-//     margin-top: -$arrow-size/2;
-//   }
-// }
-// .is-accordion-submenu-parent[aria-expanded='true'] {
-// 	> a::after {
-//     border: none;
-//     border-right: solid 1px $darkest-color;
-//     border-top: solid 1px $darkest-color;
-//     transform: rotate(-45deg);
-//     top: 45%;
-//     margin-top: $arrow-size/2;
-//   }
-// }
 
 .help-accordion-main {
 
-  #accordion-mortgage-afford {
-    .body-copy:last-child {
-
-      @include respond-to(medium) {
-        padding-top: 20px;
-      }
-
-      @include respond-to(large) {
-        padding-top: 0;
-      }
-    }
-
-    .large-12 {
-      margin-bottom: 20px;
-    }
-  }
-
-  #accordion-mortgage-payments {
-    .body-copy:last-child {
-
-      @include respond-to(medium) {
-        padding-top: 20px;
-      }
-    }
-
-    .large-12 {
-      margin-bottom: 20px;
-
-      @include respond-to(medium) {
-        margin-bottom: 40px;
-      }
-    }
-  }
-
-  #accordion-mortgage-free {
-    .large-12 {
-      @include respond-to(medium) {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  #accordion-mortgage-penalty {
-    .large-12 {
-      margin-bottom: 35px;
-
-      @include respond-to(medium) {
-        margin-bottom: 40px;
-      }
-    }
-  }
-
-  #accordion-contact-satisfaction {
-    .large-12 {
-      margin-bottom: 80px;
-    }
-
-    .callout-body-copy {
-      @include respond-to(medium) {
-        margin-bottom: 25px;
-      }
-      @include respond-to(large) {
-        margin-bottom: 20px;
-      }
-    }
-
-  }
-
-  // #accordion-contact-unclaimed {
-  //
-  // }
-
-  // #accordion-contact-accessibility {
-  //
-  // }
 
   .section-title {
     padding-bottom: 35px;
@@ -206,11 +105,10 @@ $accordion-link-color: #008cba;
       background-size: 40px;
       background-repeat: no-repeat;
       margin-right: 10px;
-      padding: 20px;
+      padding: 25px 20px;
 
       @include respond-to(medium) {
         margin-right: 10px;
-        padding: 20px;
       }
 
       @include respond-to(large) {
@@ -270,17 +168,18 @@ $accordion-link-color: #008cba;
       border: none;
       padding-left: 0;
       padding-right: 0;
-      padding-top: 0;
+      padding-top: 5px;
+      padding-bottom: 90px;
 
 
       @include respond-to(medium) {
         padding-left: 1em;
         padding-right: 1em;
-        padding-top: 16px;
+        padding-bottom: 70px;
       }
 
       @include respond-to(large) {
-        padding-top: 6px;
+         padding-bottom: 80px;
       }
 
       .large-12 {

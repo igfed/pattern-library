@@ -4,17 +4,20 @@
 .padding-bottom-lg { padding-bottom: 40px; }
 .padding-bottom-xl { padding-bottom: 60px; }
 .padding-none { padding: 0; }
+.padding-bottom-none { padding-bottom: 0 !important; }
+.padding-top-small { padding-top: 10px; }
+.padding-bottom-small { padding-bottom: 10px; }
+
+.margin-none{ margin: 0px; }
 .margin-top { margin-top: 20px; }
 .margin-top-lg {margin-top: 40px; }
 .margin-top-xl {margin-top: 60px;}
 .margin-bottom { margin-bottom: 20px; }
 .margin-bottom-lg { margin-bottom: 40px; }
 .margin-bottom-xl { margin-bottom: 60px; }
-.padding-top-small { padding-top: 10px; }
-.padding-bottom-small { padding-bottom: 10px; }
 .margin-top-small { margin-top: 10px; }
 .margin-bottom-small { margin-bottom: 10px; }
-.padding-bottom-none { padding-bottom: 0 !important; }
+
 .collapse-left { padding-left: 0; }
 .collapse-right { padding-right: 0; }
 
