@@ -25,17 +25,19 @@ gulp.task('styles', () => {
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('styleguide', () => {
-  return gulp.src(['app/styles/**/*.scss'])
-    .pipe($.plumber())
-    .pipe(kss({
-      templateDirectory: 'app/templates/',
-      overview: 'app/templates/content/homepage.md'
-    }))
-    .pipe(gulp.dest('app/'))
-    .pipe(reload({ stream: true }))
-    .emit('end');
-});
+// Not part of build process for now (May 29th, 2017 - DennisE)
+//
+// gulp.task('styleguide', () => {
+//   return gulp.src(['app/styles/**/*.scss'])
+//     .pipe($.plumber())
+//     .pipe(kss({
+//       templateDirectory: 'app/templates/',
+//       overview: 'app/templates/content/homepage.md'
+//     }))
+//     .pipe(gulp.dest('app/'))
+//     .pipe(reload({ stream: true }))
+//     .emit('end');
+// });
 
 gulp.task('bundle', () => {
   return rollup('rollup.config.js')
@@ -181,6 +183,9 @@ gulp.task('build', ['lint', 'wiredep', 'html', 'images', 'fonts', 'extras'], () 
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 });
 
+
+// Not required currently (May 29th, 2017 - DennisE)
+//
 // gulp.task('githubpages', ['build'], function () {
 //   del.bind(null, ['docs'])
 //   return gulp.src(['dist/**/*'], {}).pipe(gulp.dest('docs'));
