@@ -44,7 +44,7 @@ Styleguide 3.6
 
   .video-container {
     width: 100%;
-    max-width: 768px;
+    max-width: 800px;
     position: relative;
     margin: 0 auto;
     left: 0;
@@ -54,13 +54,13 @@ Styleguide 3.6
 
     &.complete {
       .video-cta {
-        transform: translate(600px, 0);
+        transform: translate(900px, 0);
       }
     }
   }
 
   .video-cta {
-    left: -600px;
+    left: -900px;
     top: 0;
     position: absolute;
     height: 100%;
@@ -92,7 +92,7 @@ Styleguide 3.6
       }
     }
 
-    @media (min-width: 1024px){
+    @media (min-width: 1024px) {
       p {
         font-size: 16px;
       }
@@ -115,6 +115,7 @@ Styleguide 3.6
   .vjs-big-play-button {
     z-index: 1001;
   }
+
   .vjs-play-progress {
     background: #0ed59a !important;
   }
@@ -171,7 +172,21 @@ Styleguide 3.6
       text-decoration: underline;
     }
   }
+  // AEM placeholders
 
+  .video-container.undefined {
+    display: none;
+  }
+
+}
+
+.mediaHeroVideo {
+  .cq-placeholder {
+    text-align: center;
+    padding: 10px 0 0 0;
+    font-size: 13px;
+    color: #bbb;
+  }
 }
 
 .ig-video-group .video-transcript {

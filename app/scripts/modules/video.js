@@ -53,7 +53,6 @@ export default (() => {
         data.description = $video.data('description') ? $video.data(
           'description') : '';
         data.auto = $video.data('autoplay') ? 'autoplay' : '';
-        data.ctrl = $video.data('controls') ? 'controls' : '';
         data.preload = (preloadOptions.indexOf($video.data('preload')) > -1) ? $video.data('preload') : 'auto';
         data.transcript = $video.data('transcript') ? $video.data(
           'transcript') : '';
@@ -85,7 +84,7 @@ export default (() => {
     if (data.overlay.length > 0) {
       html += `<span class="video-overlay" style="background-image: url('${data.overlay}');"></span>`;
     }
-    html += `<video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" ${data.ctrl} ${data.auto}></video></div>`;
+    html += `<video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" controls ${data.auto}></video></div>`;
     if (data.transcript.length > 0) {
       html += `<div class="video-transcript"><a target="_blank" href="${data.transcript}">${transcriptText[ig.lang]}</a></div>`;
     }
