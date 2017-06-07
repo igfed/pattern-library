@@ -107,6 +107,9 @@ var more = (function () {
 
     // Social drawer
     $('.js-open-socialdrawer').on('click', _openSocialDrawer);
+
+    $('.more-section-menuitem').on('click', _toggleClassActive);
+
   }
 
   // End of Init
@@ -157,6 +160,9 @@ var more = (function () {
 
     // Underline animation
     _animationUnderline();
+
+    // Toggles class Active on click
+    _toggleClassActive();
   }
 
   function _filterDropdown(className) {
@@ -208,6 +214,11 @@ var more = (function () {
     } else {
       jsSocialDrawer.addClass('js-socialdrawer-opened');
     }
+  }
+
+  function _toggleClassActive(){
+    // $('.more-section-menuitem').toggleClass('active');
+    $(this).toggleClass('active');
   }
 
   return {
