@@ -57,11 +57,16 @@
 			display: block;
 		}
 
+		.more-section-menuitem.active{
+			a{
+				border-bottom: 3px solid #0d263c;
+			}
+		}
+
 		.more-section-menuitem{
 			border-bottom: 1px solid white;
 		    text-align: center;
 		    padding: 8px 0;
-
 
 		    &:last-child{
 		    	border: none;
