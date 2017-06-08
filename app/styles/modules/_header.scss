@@ -451,6 +451,22 @@ Styleguide 3.1
     margin-bottom: 0;
   }
   .input-group-label {
+
+    &:after{
+      content: "";
+      height: 14px;
+      top: 3px;
+      right: -5px;
+      position: relative;
+      border-left: 2px solid $brand-color;
+    }
+
+    &.show-for-large{
+      &:after{
+         border: none;
+      }
+    }
+
     img {
       min-width: 20px;
       width: 20px;
