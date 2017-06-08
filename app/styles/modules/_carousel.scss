@@ -66,6 +66,7 @@ Styleguide 3.5
 		border-right: solid 3px $button-primary-color;
 		transform-origin: center;
 		transform: rotate(225deg);
+		cursor: pointer;
 	}
 }
 .slick-next{
@@ -83,6 +84,7 @@ Styleguide 3.5
 		border-right: solid 3px $button-primary-color;
 		transform-origin: center;
 		transform: rotate(45deg);
+		cursor: pointer;
 	}
 }
 .slick-disabled {
@@ -108,8 +110,9 @@ Styleguide 3.5
 			height: 13px;
 			width: 13px;
 			border: 2px solid $darker-grey;
-
 			transition: opacity 0.3s ease-out;
+			cursor: pointer;
+			
 			&:hover, &:focus {
 				opacity: 1;
 			}
