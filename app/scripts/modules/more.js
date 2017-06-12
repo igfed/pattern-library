@@ -23,6 +23,8 @@ export default (() => {
 
     // Social drawer
     $('.js-open-socialdrawer').on('click', _openSocialDrawer);
+
+    $('.more-section-menu > li').on('click', _toggleClassActive);
   }
 
   // End of Init
@@ -80,6 +82,11 @@ export default (() => {
 
     // Underline animation
     _animationUnderline();
+
+    // Toggles class Active on click
+    _toggleClassActive();
+
+
   }
 
   function _filterDropdown(className) {
@@ -131,6 +138,11 @@ export default (() => {
     } else {
       jsSocialDrawer.addClass('js-socialdrawer-opened');
     }
+  }
+
+  function _toggleClassActive(){
+    $('.more-section-menu > li').removeClass('active');
+    $(this).addClass('active');
   }
 
   return {
