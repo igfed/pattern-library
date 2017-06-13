@@ -1,21 +1,13 @@
 .ig-layout-container {
 
-  h1, h2, h3, h4, h5, h6, p, .ig-button {
-    text-align: center;
-  }
-
-  .ig-title.align-left, .ig-button.align-left, .ig-text.align-left {
-    text-align: left !important;
-  }
-
-  .ig-title.align-right, .ig-button.align-right, .ig-text.align-right {
-    text-align: right !important;
-  }
-
   a .ig-title {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .ig-custom-10.medium-2, .ig-custom-10.large-2 {
+    width: 20% !important;
   }
 
 }
