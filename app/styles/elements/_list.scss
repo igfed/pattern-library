@@ -1,0 +1,48 @@
+.ig-list {
+
+  // Border classes for each list block
+  &.border-left {
+    border-left: 2px solid #ccc;
+  }
+
+  &.border-right {
+    border-right: 2px solid #ccc;
+  }
+
+  &.border-bottom {
+    border-bottom: 2px solid #ccc;
+  }
+
+  // Add these alignment classes via AEM dialog dropdown
+  .ig-list-heading-group.align-left, .ig-list-ul.align-left  {
+    text-align: left;
+  }
+
+  .ig-list-heading-group.align-right, .ig-list-ul.align-right  {
+    text-align: right;
+  }
+
+  .ig-list-heading-group.align-center, .ig-list-ul.align-center  {
+    text-align: center;
+  }
+
+  // Special subheading classes
+  p.small {
+    font-size: 15px;
+  }
+
+  p.legal {
+    font-size: 15px;
+    color: #999
+  }
+
+  // Borders on list items
+  .ig-list-item.border-top {
+    border-top: 1px solid #ccc;
+  }
+
+  .ig-list-item.border-bottom {
+    border-bottom: 1px solid #ccc;
+  }
+
+}

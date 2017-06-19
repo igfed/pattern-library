@@ -196,13 +196,9 @@
 
 ig-list
     .classes (for component margins and padding)
-    .border-left (checkbox)
-    .border-right (checkbox)
-    .border-bottom (checkbox)
-
-    if any of above 3 are checked:
-    ${border-color} [dialog] #?????
-    ${border-thickness} [dialog] ??px
+    .border-left (checkbox) border: 2px solid #ccc;
+    .border-right (checkbox) border: 2px solid #ccc;
+    .border-bottom (checkbox) border: 2px solid #ccc;
 
 ig-list-heading-group
     .align-left (dropdown)
@@ -214,7 +210,7 @@ ig-list-heading
     ${margin} ?px ?px ?px ?px
 
 ig-list-subheading
-    <h1-h6> <p> <small> <legal>
+    <h1-h6> <p> <p.small> <p.legal>
 
 ig-list-ul
     .align-left (dropdown)
@@ -224,12 +220,11 @@ ig-list-ul
 
     for list items:
        ${margin} ?px ?px ?px ?px
-       ${border-color} [dialog] #?????
-       ${border-thickness} [dialog] ??px
 
 ig-list-item (insert as required)
-    .border-bottom (checkbox)
-    .border-top (checkbox)
+    .border-bottom (checkbox) border: 1px solid #ccc
+    .border-top (checkbox) border: 1px solid #ccc
+    ${font-color} 000000
 
 -->
 
