@@ -1,9 +1,7 @@
 .media-hero {
   position: relative;
   clear: both;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   padding: 8% 0;
   max-height: 960px;
 }
@@ -46,11 +44,11 @@
 }
 
 .media-hero__content {
-  margin-top: 0;
   z-index: 100;
   padding-bottom: 0;
   position: relative;
-  width: 90%;
+  margin: 0 auto;
+  text-align: center;
 
   img, video {
     margin: 0 auto;
@@ -136,3 +134,4 @@
   }
 
 }
+
