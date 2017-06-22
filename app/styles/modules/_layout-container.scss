@@ -10,4 +10,7 @@
     width: 20% !important;
   }
 
+  &.column-padding-inside > .row > .ig-component-block.columns {
+    padding: 0;
+  }
 }

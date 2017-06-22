@@ -13,16 +13,20 @@
     border-bottom: 2px solid #ccc;
   }
 
+  .ig-list__heading {
+    margin-bottom: 0;
+  }
+
   // Add these alignment classes via AEM dialog dropdown
-  .ig-list-heading-group.align-left, .ig-list-ul.align-left  {
+  .ig-list__heading-group.align-left, .ig-list__ul.align-left  {
     text-align: left;
   }
 
-  .ig-list-heading-group.align-right, .ig-list-ul.align-right  {
+  .ig-list__heading-group.align-right, .ig-list__ul.align-right  {
     text-align: right;
   }
 
-  .ig-list-heading-group.align-center, .ig-list-ul.align-center  {
+  .ig-list__heading-group.align-center, .ig-list__ul.align-center  {
     text-align: center;
   }
 
@@ -37,12 +41,43 @@
   }
 
   // Borders on list items
-  .ig-list-item.border-top {
-    border-top: 1px solid #ccc;
+  .ig-list__ul--border-style-1 li {
+    border-top: none;
+    border-bottom: none;
   }
 
-  .ig-list-item.border-bottom {
-    border-bottom: 1px solid #ccc;
+  .ig-list__ul--border-style-2 li {
+    border-top: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .ig-list__ul--border-style-3 li {
+    border-top: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .ig-list__ul--border-style-4 li {
+    border-top: 1px solid #ccc;
+    border-bottom: none;
+
+    &:first-child {
+      border-top: none !important;
+    }
+  }
+
+  .ig-list__ul {
+    margin: 0;
+  }
+
+  .ig-list__item, .ig-list__item p {
+    font-size: 22px;
+    letter-spacing: 1px;
   }
 
 }
