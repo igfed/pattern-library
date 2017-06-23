@@ -13,4 +13,21 @@
   &.column-padding-inside > .row > .ig-component-block.columns {
     padding: 0;
   }
+
+
+  @media screen and (min-width: 641px) {
+    &.equal-heights {
+      display: flex;
+      flex-wrap: wrap;
+
+      .ig-component-block {
+        display: flex;
+        height: 100%;
+
+        .ig-list, .ig-figure {
+          height: 100%;
+        }
+      }
+    }
+  }
 }
