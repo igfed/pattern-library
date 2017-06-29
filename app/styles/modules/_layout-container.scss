@@ -6,8 +6,10 @@
     }
   }
 
-  .ig-custom-10.medium-2, .ig-custom-10.large-2 {
-    width: 20% !important;
+  @media screen and (max-width: 640px) {
+    .ig-custom-10 {
+      width: 100% !important;
+    }
   }
 
   &.column-padding-inside > .row > .ig-component-block.columns {
@@ -16,6 +18,9 @@
 
 
   @media screen and (min-width: 641px) {
+    .ig-custom-10 {
+      width: 20% !important;
+    }
     &.equal-heights {
       display: flex;
       flex-wrap: wrap;

@@ -13,20 +13,35 @@
     border-bottom: 2px solid #ccc;
   }
 
+  @media screen and (max-width: 640px) {
+    border: none !important;
+  }
+
   .ig-list__heading {
     margin-bottom: 0;
   }
 
+  // Mostly just for demo
+  h1.ig-list__heading {
+    font-size: 52px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1.ig-list__heading {
+      font-size: 40px;
+    }
+  }
+
   // Add these alignment classes via AEM dialog dropdown
-  .ig-list__heading-group.align-left, .ig-list__ul.align-left  {
+  .ig-list__heading-group.align-left, .ig-list__ul.align-left {
     text-align: left;
   }
 
-  .ig-list__heading-group.align-right, .ig-list__ul.align-right  {
+  .ig-list__heading-group.align-right, .ig-list__ul.align-right {
     text-align: right;
   }
 
-  .ig-list__heading-group.align-center, .ig-list__ul.align-center  {
+  .ig-list__heading-group.align-center, .ig-list__ul.align-center {
     text-align: center;
   }
 
@@ -78,6 +93,8 @@
   .ig-list__item, .ig-list__item p {
     font-size: 22px;
     letter-spacing: 1px;
+    color: #666;
+    font-family: WhitneyLight,WhitneyBook,sans-serif;
   }
 
 }

@@ -15,11 +15,11 @@ export default (() => {
       if ($('.vjs-plugins-ready').length) {
         _brightCoveReady();
         clearInterval(brightCove);
+
+        // Function for checking if video's have scrolled off screen and need to be paused
+        _viewStatus();
       }
     }, 500);
-
-    // Function for checking if video's have scrolled off screen and need to be paused
-    _viewStatus();
 
   }
 
