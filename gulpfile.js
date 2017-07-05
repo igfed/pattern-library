@@ -3,8 +3,7 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
-const wiredep = require('wiredep').stream;
-const kss = require('gulp-kss');
+const wiredep = require('wiredep').strea
 const rollup = require('rollup-stream');
 const source = require('vinyl-source-stream');
 const $ = gulpLoadPlugins();
@@ -24,20 +23,6 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({ stream: true }));
 });
-
-// Not part of build process for now (May 29th, 2017 - DennisE)
-//
-// gulp.task('styleguide', () => {
-//   return gulp.src(['app/styles/**/*.scss'])
-//     .pipe($.plumber())
-//     .pipe(kss({
-//       templateDirectory: 'app/templates/',
-//       overview: 'app/templates/content/homepage.md'
-//     }))
-//     .pipe(gulp.dest('app/'))
-//     .pipe(reload({ stream: true }))
-//     .emit('end');
-// });
 
 gulp.task('bundle', () => {
   return rollup('rollup.config.js')
