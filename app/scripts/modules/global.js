@@ -1,5 +1,5 @@
 /* This file is for methods and variables that are going to be
-useful across all modules. In order to use them anywhere, import with:
+ useful across all modules. In order to use them anywhere, import with:
 
  import * as ig from './global.js';
 
@@ -25,20 +25,29 @@ export var browserWidth = (() => {
   return window.outerWidth;
 })()
 
+// check for IE11
+export var oldIE = (() => {
+  if (!(window.ActiveXObject) && "ActiveXObject" in window) {
+    return true;
+  } else {
+    return false;
+  }
+})()
+
 // base eventEmitter
 // export var emitter = new EventEmitter();
 
 export var debounce = (func, wait, immediate) => {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
+  var timeout;
+  return function () {
+    var context = this, args = arguments;
+    var later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 };
