@@ -18,6 +18,7 @@ import carousel from './carousel.js';
 import shuffledCarousel from './shuffled-carousel.js';
 import accordion from './accordion.js';
 import video from './video.js';
+import modal from './modal.js';
 import * as ig from './global.js';
 
 // Event Emitter test modules
@@ -38,6 +39,7 @@ const app = (() => {
     if ($('.ig-shuffled-carousel').length) shuffledCarousel.init();
     if ($('.ig-video-group').length) video.init();
     if ($('.accordion').length) accordion.init();
+    if ($('[data-open]').length) modal.init();
 
     // Components can also be setup to receive an HTML 'scope' (.ig-evt1... .ig-evt2.... etc)
     // if ($('.ig-evt1').length) evt1.init('.ig-evt1');
