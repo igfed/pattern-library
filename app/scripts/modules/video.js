@@ -3,6 +3,7 @@ import * as ig from './global.js';
 export default (() => {
 
   var videoIDs = [],
+    player,
     players = [],
     brightCove;
 
@@ -13,14 +14,12 @@ export default (() => {
     // Make sure the VideoJS method is available and fire ready event handlers
     brightCove = setInterval(function () {
       if ($('.vjs-plugins-ready').length) {
-        _brightCoveReady();
         clearInterval(brightCove);
-
-        // Function for checking if video's have scrolled off screen and need to be paused
-        _viewStatus();
+        _brightCoveReady();
       }
     }, 500);
 
+    // _viewStatus()
   }
 
   function _parseVideos() {
@@ -70,7 +69,7 @@ export default (() => {
   }
 
   function _injectBrightCoveJS(data) {
-    var indexjs = `<script src="//players.brightcove.net/${data.account}/${data.player}_default/index.min.js"></script>`;
+    var indexjs = `<script src="//players.brightcove.net/${data.account}/${data.player}_default/index.js"></script>`;
     $('body').append(indexjs);
   }
 
@@ -99,7 +98,6 @@ export default (() => {
   }
 
   function _brightCoveReady() {
-    var player;
     videoIDs.forEach(function (el) {
       videojs('#' + el).ready(function () {
         // assign this player to a variable
@@ -130,15 +128,17 @@ export default (() => {
     $('.' + e.target.id).addClass('complete');
   }
 
-  function _viewStatus() {
-    $(window).scroll(function () {
-      players.forEach(function (player) {
-        if (!$('#' + player.id()).visible()) {
-          videojs(player.id()).pause();
-        }
-      });
-    });
-  }
+  // function _viewStatus() {
+  //   $(window).scroll(function () {
+  //     if (player.length && players.length) {
+  //       players.forEach(function (player) {
+  //         if (!$('#' + player.id()).visible()) {
+  //           videojs(player.id()).pause();
+  //         }
+  //       });
+  //     }
+  //   });
+  // }
 
   return {
     init,
