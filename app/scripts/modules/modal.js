@@ -6,8 +6,6 @@ export default (() => {
 
 	function init() {
 		$(document).on('open.zf.reveal', function () {
-			window._satellite = window._satellite || {};
-			window._satellite.track = window._satellite.track || function(){};
 			_satellite.track(directCallRule);
 		});
 	}
