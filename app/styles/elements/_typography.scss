@@ -4,69 +4,50 @@
 @include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);
 
-body, p, .large-body-copy .body-copy, li {
+.type-base, body, p, li, h6 {
   font-family: $font-stack;
-  font-size: 16px;
-  font-size: 1rem;
-  color: $darkest-color;
-  line-height: 1.5em;
-  margin-bottom: 2px;
+  font-size: $font-size-base;
+  line-height: $font-line-base;
 }
-
-strong, .body-copy-bold {
-  font-family: $font-stack-semibold;
-  font-size: 16px;
-  font-size: 1rem;
+.type-mini, small, sup, sub {
+  font-size: $font-size-mini;
+  line-height: $font-line-mini;
 }
-
-small, .legal-copy {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.06rem;
-  display: inline-block;
+.type-medium, h5 {
+  font-size: $font-size-medium;
+  line-height: $font-line-medium;
 }
-
-small strong, .legal-copy-bold {
-  font-family: $font-stack-semibold;
+.type-medium-plus, h4 {
+  font-size: $font-size-medium-plus;
+  line-height: $font-line-medium-plus;
 }
-
-
-// Superscript
-sup {
-  padding-left: 2px;
-  font-size: 65%;
-  top: -0.6em;
+.type-large, h3 {
+  font-size: $font-size-large;
+  line-height: $font-line-large;
 }
-
-h1, .hero-title, .callout-title {
-  font-size: 28px;
-  font-size: 1.75rem;
+.type-xl, h2 {
   font-family: $font-stack-light;
-  line-height: 1.1em;
+  font-size: $font-size-xl;
+  line-height: $font-line-xl;
 }
-
-h2, .content-title {
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-family: $font-stack;
-  line-height: 1.4em;
-  text-transform: inherit;
+.type-xxl, h1 {
+  font-family: $font-stack-light;
+  font-size: $font-size-xxl;
+  line-height: $font-line-xxl;
 }
-
-h3, .section-title {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.42em;
-  text-transform: lowercase;
+.type-super {
+  font-size: $font-size-super;
+  line-height: $font-line-super;
 }
-
-h4, .sub-title {
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-family: $font-stack-sc-medium;
-	line-height: 1.42em;
-	text-transform: lowercase;
-}
-
 
 @include respond-to(medium) {}
+
+
+// Backwards compatibility classes
+.large-body-copy .body-copy { @extend .type-medium; }
+.body-copy-bold, .legal-copy-bold { font-family: $font-stack-semibold; }
+.legal-copy { @extend .type-mini; }
+.hero-title, .callout-title { @extend .type-xxl; }
+.content-title { @extend .type-xl; }
+.section-title { @extend .type-large; }
+.sub-title { @extend .type-medium-plus; }

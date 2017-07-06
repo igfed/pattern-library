@@ -1,3 +1,6 @@
+// Globals
+$base-spacing: 8px;
+
 // Breakpoints
 $breakpoints: (
   small: 375px,
@@ -12,30 +15,115 @@ $brand-font: 'WhitneyBook';
 $font-whitney-light: 'WhitneyLight';
 $font-semibold: 'WhitneySemibold';
 
-// Font Stacks
 $font-stack: $brand-font, sans-serif;
 $font-stack-light: $font-whitney-light, $font-stack;
 $font-stack-semibold: $font-semibold, $font-stack;
 
-// Neutrals Colors
-$lightest-color: #FFF; // White
-$lighter-grey: #f1f7f7;
-$light-grey: #f3f4f5;
-$grey: #DBDFE2; //
-$dark-grey: #c1cbd0;
-$darker-grey: #687a87;
-$darkest-color: #282828; // Charcoal near Black
+$font-size: 1rem;
+$font-size-mini: $font-size * 0.875;
+$font-size-base: $font-size;
+$font-size-medium: $font-size * 1.25;
+$font-size-medium-plus: $font-size * 1.5;
+$font-size-large: $font-size * 2;
+$font-size-xl: $font-size * 3;
+$font-size-xxl: $font-size * 4.5;
+$font-size-super: $font-size * 9;
 
-// Colors
-$brand-color: #0D263C; // Brand Navy Blue
-$primary-color: #7EC4B9; // Green
-$secondary-color: #F1F7F7; // Light Blue
-$highlight-color: #FbF7EB; // Beige
-$alert-color: #d42f1a; //Red
-$button-primary-color: #0ED59A; //Green
+$font-line: 1.5rem;
+$font-line-mini: $font-line;
+$font-line-base: $font-line;
+$font-line-medium: $font-line * 1.33;
+$font-line-medium-plus: $font-line * 1.33;
+$font-line-large: $font-size * 1.66;
+$font-line-xl: $font-size * 2.33;
+$font-line-xxl: $font-size * 3.66;
+$font-line-super: $font-size*9;
+
+// Color
+$color-darkest: #000;
+$color-lightest: #FFF;
+$color-grey: #A5A2A2;
+$color-grey-dark-20: darken( $color-grey, 20% );
+$color-grey-dark-40: darken( $color-grey, 40% );
+$color-grey-dark-60: darken( $color-grey, 60% );
+$color-grey-dark-80: darken( $color-grey, 80% );
+$color-grey-light-15: lighten( $color-grey, 15% );
+$color-grey-light-30: lighten( $color-grey, 30% );
+$color-grey-light-45: lighten( $color-grey, 45% );
+$color-grey-light-60: lighten( $color-grey, 60% );
+$color-grey-light-75: lighten( $color-grey, 75% );
+$color-success: #00855F;
+$color-success-dark-20: darken( $color-success, 20% );
+$color-success-dark-40: darken( $color-success, 40% );
+$color-success-dark-60: darken( $color-success, 60% );
+$color-success-dark-80: darken( $color-success, 80% );
+$color-success-light-15: lighten( $color-success, 15% );
+$color-success-light-30: lighten( $color-success, 30% );
+$color-success-light-45: lighten( $color-success, 45% );
+$color-success-light-60: lighten( $color-success, 60% );
+$color-success-light-75: lighten( $color-success, 75% );
+$color-alert: #D42F1A;
+$color-alert-dark-20: darken( $color-alert, 20% );
+$color-alert-dark-40: darken( $color-alert, 40% );
+$color-alert-dark-60: darken( $color-alert, 60% );
+$color-alert-dark-80: darken( $color-alert, 80% );
+$color-alert-light-15: lighten( $color-alert, 15% );
+$color-alert-light-30: lighten( $color-alert, 30% );
+$color-alert-light-45: lighten( $color-alert, 45% );
+$color-alert-light-60: lighten( $color-alert, 60% );
+$color-alert-light-75: lighten( $color-alert, 75% );
+$color-information: #0E75D5;
+$color-information-dark-20: darken( $color-information, 20% );
+$color-information-dark-40: darken( $color-information, 40% );
+$color-information-dark-60: darken( $color-information, 60% );
+$color-information-dark-80: darken( $color-information, 80% );
+$color-information-light-15: lighten( $color-information, 15% );
+$color-information-light-30: lighten( $color-information, 30% );
+$color-information-light-45: lighten( $color-information, 45% );
+$color-information-light-60: lighten( $color-information, 60% );
+$color-information-light-75: lighten( $color-information, 75% );
+$color-brand: #6E7D8A;
+$color-brand-dark-20: darken( $color-brand, 20% );
+$color-brand-dark-40: darken( $color-brand, 40% );
+$color-brand-dark-60: darken( $color-brand, 60% );
+$color-brand-dark-80: darken( $color-brand, 80% );
+$color-brand-light-15: lighten( $color-brand, 15% );
+$color-brand-light-30: lighten( $color-brand, 30% );
+$color-brand-light-45: lighten( $color-brand, 45% );
+$color-brand-light-60: lighten( $color-brand, 60% );
+$color-brand-light-75: lighten( $color-brand, 75% );
+$color-brand-primary: $color-brand-dark-80;
+$color-brand-secondary: #0ED59A;
+$color-brand-secondary-dark-20: darken( $color-brand-secondary, 20% );
+$color-brand-secondary-dark-40: darken( $color-brand-secondary, 40% );
+$color-brand-secondary-dark-60: darken( $color-brand-secondary, 60% );
+$color-brand-secondary-dark-80: darken( $color-brand-secondary, 80% );
+$color-brand-secondary-light-15: lighten( $color-brand-secondary, 15% );
+$color-brand-secondary-light-30: lighten( $color-brand-secondary, 30% );
+$color-brand-secondary-light-45: lighten( $color-brand-secondary, 45% );
+$color-brand-secondary-light-60: lighten( $color-brand-secondary, 60% );
+$color-brand-secondary-light-75: lighten( $color-brand-secondary, 75% );
 
 // Border Radius
-$border-radius: 4px;
+$border-radius: $base-spacing / 2;
 
 // Arrows
-$arrow-size: 8px;
+$arrow-size: $base-spacing;
+
+
+// legacy
+$font-stack-sc: $font-stack;
+$accordion-grey-line: $color-grey;
+$lightest-color: $color-lightest;
+$lighter-grey: $color-grey-light-75;
+$light-grey: $color-grey-light-60;
+$grey: $color-grey;
+$dark-grey: $color-grey-dark-20;
+$darker-grey: $color-grey-light-75;
+$darkest-color: $color-darkest;
+$brand-color: $color-brand-primary;
+$primary-color: $color-brand-secondary; // Green
+$secondary-color: $color-brand-secondary-light-75; // Light Blue
+$highlight-color: #FbF7EB; // Beige
+$alert-color: $color-alert;
+$button-primary-color: $primary-color;
