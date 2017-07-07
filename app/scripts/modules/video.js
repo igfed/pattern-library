@@ -8,6 +8,8 @@ export default (() => {
     brightCove;
 
   function init() {
+    console.log("v322");
+
     // We need to capture the video player settings defined in the HTML and create the markup that Brightcove requires
     _parseVideos();
 
@@ -19,7 +21,7 @@ export default (() => {
       }
     }, 500);
 
-    // _viewStatus()
+    _viewStatus()
   }
 
   function _parseVideos() {
@@ -35,7 +37,7 @@ export default (() => {
       data.player = $group.data('player');
 
       // Load required JS for a player
-      _injectBrightCoveJS(data);
+      // _injectBrightCoveJS(data);
 
       // Loop through video's
       $group.find('.ig-video-js').each(function (index) {
@@ -43,6 +45,9 @@ export default (() => {
 
         // Capture required options
         data.id = $video.data('id');
+
+        // Set tech order
+        data.techOrder = '["html5", "flash"]';
 
         // Capture options that are optional
         data.overlay = $video.data('overlay')
@@ -69,8 +74,8 @@ export default (() => {
   }
 
   function _injectBrightCoveJS(data) {
-    var indexjs = `<script src="//players.brightcove.net/${data.account}/${data.player}_default/index.js"></script>`;
-    $('body').append(indexjs);
+    var indexjs = `<script src="//players.brightcove.net/${data.account}/${data.player}_default/index.min.js"></script>`;
+    $('body').prepend(indexjs);
   }
 
   function _injectTemplate($video, data, index) {
@@ -83,7 +88,7 @@ export default (() => {
     if (data.overlay.length > 0) {
       html += `<span class="video-overlay" style="background-image: url('${data.overlay}');"></span>`;
     }
-    html += `<video data-setup='{"techOrder": ["html5"]}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" controls ${data.auto}></video></div>`;
+    html += `<video data-setup='{"techOrder": ${data.techOrder}}' data-video-id="${data.id}" preload="${data.preload}" data-account="${data.account}" data-player="${data.player}" data-embed="default" data-application-id="${index}" class="video-js" id="${data.id}" controls ${data.auto}></video></div>`;
     if (data.transcript.length > 0) {
       html += `<div class="video-transcript"><a target="_blank" href="${data.transcript}">${transcriptText[ig.lang]}</a></div>`;
     }
@@ -128,19 +133,21 @@ export default (() => {
     $('.' + e.target.id).addClass('complete');
   }
 
-  // function _viewStatus() {
-  //   $(window).scroll(function () {
-  //     if (player.length && players.length) {
-  //       players.forEach(function (player) {
-  //         if (!$('#' + player.id()).visible()) {
-  //           videojs(player.id()).pause();
-  //         }
-  //       });
-  //     }
-  //   });
-  // }
+  function _viewStatus() {
+    $(window).scroll(function () {
+      if (player.length && players.length) {
+        players.forEach(function (player) {
+          if (!$('#' + player.id()).visible()) {
+            videojs(player.id()).pause();
+          }
+        });
+      }
+    });
+  }
 
   return {
     init,
   };
 })();
+
+
