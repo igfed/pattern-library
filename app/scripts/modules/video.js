@@ -8,7 +8,6 @@ export default (() => {
     $video;
 
   function init() {
-    console.log("v938");
 
     _parseVideos();
 
