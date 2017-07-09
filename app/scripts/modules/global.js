@@ -25,9 +25,9 @@ export var browserWidth = (() => {
   return window.outerWidth;
 })()
 
-// check for IE11
+// check for IE (pre Edge)
 export var oldIE = (() => {
-  if (!(window.ActiveXObject) && "ActiveXObject" in window) {
+  if ("ActiveXObject" in window) {
     return true;
   } else {
     return false;
