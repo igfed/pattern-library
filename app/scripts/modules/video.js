@@ -41,6 +41,8 @@ export default (() => {
         $video = $(this);
 
         data.id = $video.data('id');
+        data.title = $video.data('title') ? $video.data('title') : '';
+        data.description = $video.data('description') ? $video.data('description') : '';
 
         if (ig.oldIE) {
 
@@ -48,13 +50,10 @@ export default (() => {
 
         } else {
 
-          // Capture options that are optional
+          // Capture options that are used with modern browsers
           data.overlay = $video.data('overlay')
             ? $video.data('overlay')
             : '';
-          data.title = $video.data('title') ? $video.data('title') : '';
-          data.description = $video.data('description') ? $video.data(
-            'description') : '';
           data.auto = $video.data('autoplay') ? 'autoplay' : '';
           data.preload = (preloadOptions.indexOf($video.data('preload')) > -1) ? $video.data('preload') : 'auto';
           data.transcript = $video.data('transcript') ? $video.data(
@@ -70,7 +69,7 @@ export default (() => {
         }
       });
 
-      // Only inject Brightcove JS if not IE11
+      // Only inject Brightcove JS if modern browser
       if (!ig.oldIE) {
         injectBrightCoveJS(data);
       }
@@ -108,7 +107,7 @@ export default (() => {
       <iframe class="video-js" src='//players.brightcove.net/3906942861001/${data.player}_default/index.html?videoId=${data.id}'
     allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
     </div>
-    </div>`;
+    </div><h2 class="video-title">${data.title}</h2><p class="video-description">${data.description}</p>`;
     $video = $video.replaceWith(html);
   }
 
