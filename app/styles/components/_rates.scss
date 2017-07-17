@@ -602,8 +602,19 @@
             }
             .rate-value-secondary {
                 color: #666;
-                margin-top: -10px;
+                margin-top: 8px;
+                margin-bottom: 2px;
                 font-family: $font-stack-light;
+
+                @include respond-to(medium) {
+                    margin-top: -3px;
+                    margin-bottom: 10px;
+                }
+
+                @include respond-to(large) {
+                    margin-top: -6px;
+                    margin-bottom: 10px;
+                }
             }
         }
         .rate-bullet {
