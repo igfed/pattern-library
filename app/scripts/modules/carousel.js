@@ -5,6 +5,7 @@ export default (() => {
   function init() {
     console.log('Carousel Initialized!')
     _buildCarousel();
+    _addTrackingHandlers();
   }
 
   function _buildCarousel() {
@@ -33,6 +34,12 @@ export default (() => {
         slidesToShow: $carousel.data('slidesToShow') || 1,
         speed: $carousel.data('speed') || 300,
       })
+    });
+  }
+
+  function _addTrackingHandlers() {
+    $(document).on('click', ".slick-arrow", function () {
+      ig.track('carousel_scroll');
     });
   }
 
