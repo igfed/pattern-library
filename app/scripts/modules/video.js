@@ -134,7 +134,7 @@ export default (() => {
 
   function _onPlay(e) {
     // Adobe Analytics
-    ig.track('video_end');
+    _satellite.track('video_start');
     // determine which player the event is coming from
     var id = e.target.id;
     // go through players
@@ -148,7 +148,7 @@ export default (() => {
 
   function _onComplete(e) {
     // Adobe Analytics
-    ig.track('video_end');
+    _satellite.track('video_end');
     $('.' + e.target.id).addClass('complete');
   }
 

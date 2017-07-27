@@ -9,3 +9,5 @@ debug.log
 gh-pages
 .idea
 /nbproject/private/
+.vscode
+.history

@@ -35,11 +35,14 @@ export default (() => {
         speed: $carousel.data('speed') || 300,
       })
     });
+
   }
 
   function _addTrackingHandlers() {
-    $(document).on('click', ".slick-arrow", function () {
-      ig.track('carousel_scroll');
+    $('.ig-carousel').on('click', 'button', function () {
+      console.log(_satellite);
+      console.log("Carousel Scroll")
+      _satellite.track('carousel_scroll');
     });
   }
 

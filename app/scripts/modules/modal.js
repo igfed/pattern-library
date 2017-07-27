@@ -4,7 +4,7 @@ export default (() => {
 
 	function init() {
 		$(document).on('open.zf.reveal', function () {
-		  ig.track('modal_click');
+      _satellite.track('modal_click');
 		});
 	}
 

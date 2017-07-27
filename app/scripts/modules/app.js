@@ -11,6 +11,10 @@
  styles for each language.
  */
 
+// Init Satellite
+window._satellite = window._satellite || {};
+window._satellite.track = window._satellite.track || function(){};
+
 import navigation from './navigation.js'
 import more from './more.js';
 import forms from './forms.js';

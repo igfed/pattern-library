@@ -34,12 +34,6 @@ export var oldIE = (() => {
   }
 })()
 
-export var track = ((dcrName) => {
-  window._satellite = window._satellite || {};
-  window._satellite.track = window._satellite.track || function(){};
-  _satellite.track(dcrName);
-})()
-
 // base eventEmitter
 // export var emitter = new EventEmitter();
 
