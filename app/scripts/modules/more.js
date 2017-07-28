@@ -4,7 +4,7 @@
 
 import * as ig from './global.js';
 
-export default (() => {
+export default ((window) => {
   function init() {
 
     // Register resize behaviour
@@ -23,6 +23,38 @@ export default (() => {
 
     // Social drawer
     $('.js-open-socialdrawer').on('click', _openSocialDrawer);
+
+    // Adobe Analytics
+    $('.ga-article-share').on('click', function () {
+      var shareType, title;
+      var $this = $(this);
+
+      window.digitalData.event = {};
+      title = $this.data("gaTitle").replace(/[\s]+/g, "_");
+
+      if (title.substring(0, title.length) === "_") {
+        title = title.substring(0, title.length - 1)
+      }
+
+      if ($this.hasClass("facebook-share")) {
+        shareType = "Facebook";
+      }
+
+      if ($this.hasClass("linkedin-share")) {
+        shareType = "LinkedIn";
+      }
+
+      if ($this.hasClass("twitter-share")) {
+        shareType = "Twitter";
+      }
+
+      if ($this.hasClass("email-share")) {
+        shareType = "Email";
+      }
+
+      window.digitalData.event.shareType = shareType;
+      window.digitalData.event.title = title;
+    });
   }
 
   // End of Init
@@ -53,11 +85,13 @@ export default (() => {
 
   function _moreSectionMenuItem(event) {
 
-    if(window.matchMedia("(min-width: 640px)").matches) {
+    if (window.matchMedia("(min-width: 640px)").matches) {
       try {
         //IE fix
         event.returnValue = false;
-      } catch(err) { console.warn('event.returnValue not available')}
+      } catch (err) {
+        console.warn('event.returnValue not available')
+      }
 
       event.preventDefault();
     }
@@ -97,7 +131,9 @@ export default (() => {
   }
 
   function _repositionArrow(centerX) {
-    $('.more-section-menu-dropdown-arrow-up').show().css({ left: centerX });
+    $('.more-section-menu-dropdown-arrow-up').show().css({
+      left: centerX
+    });
   }
 
   function _animationUnderline() {
@@ -136,4 +172,4 @@ export default (() => {
   return {
     init
   };
-})()
+})(window)

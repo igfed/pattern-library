@@ -5,7 +5,6 @@ export default (() => {
   function init() {
     console.log('Carousel Initialized!')
     _buildCarousel();
-    _addTrackingHandlers();
   }
 
   function _buildCarousel() {
@@ -36,14 +35,6 @@ export default (() => {
       })
     });
 
-  }
-
-  function _addTrackingHandlers() {
-    $('.ig-carousel').on('click', 'button', function () {
-      console.log(_satellite);
-      console.log("Carousel Scroll")
-      _satellite.track('carousel_scroll');
-    });
   }
 
   return {

@@ -11,9 +11,10 @@
  styles for each language.
  */
 
-// Init Satellite
+// Init Satellite and event object
 window._satellite = window._satellite || {};
-window._satellite.track = window._satellite.track || function(){};
+window._satellite.track = window._satellite.track || function () {};
+window.digitalData.event = {};
 
 import navigation from './navigation.js'
 import more from './more.js';
@@ -51,12 +52,21 @@ const app = (() => {
 
     // Add language class to body
     _language();
+
+    // Due to different implementations of carousels, tracking needs to be added here and not in carousel.js
+    _addCarouselTracking();
   }
 
   // Let's use a global variable (global as in available to all our components - not the window object!)
   // to add a class to the body tag
   function _language() {
     $('body').addClass(ig.lang);
+  }
+
+  function _addCarouselTracking() {
+    $('.slick-arrow').on('click', function () {
+      _satellite.track('carousel_scroll');
+    });
   }
 
   return {
