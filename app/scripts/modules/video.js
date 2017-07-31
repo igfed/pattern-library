@@ -61,7 +61,10 @@ export default ((window) => {
             'ctaTemplate') : '';
 
           // Store ID's for all video's on the page - in case we want to run a post-load process on each
-          videoIDs.push(data.id);
+          // The check for an id already being stored is necessary for video's in a Slick carousel
+          if (videoIDs.indexOf(data.id) === -1) {
+            videoIDs.push(data.id);
+          }
 
           // Let's replace the ig-video-js 'directive' with the necessary Brightcove code
           _injectTemplate(data, index);
