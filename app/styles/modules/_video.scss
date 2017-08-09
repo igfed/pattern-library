@@ -112,6 +112,10 @@ Styleguide 3.6
     transition: 0.4s opacity ease;
   }
 
+  .vjs-progress-control {
+    //display: none;
+  }
+
   .vjs-big-play-button {
     z-index: 1001;
   }

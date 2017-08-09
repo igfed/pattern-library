@@ -20,8 +20,9 @@ export default ((window) => {
         }
       }, 500);
 
-      // Function for checking if video's have scrolled off screen and need to be paused
+      // Function for checking if video'cs have scrolled off screen and need to be paused
       _viewStatus();
+
     }
   }
 
@@ -139,9 +140,12 @@ export default ((window) => {
 
   function _onPlay(e) {
     // Adobe Analytics
-    window.digitalData.event.id = e.target.id;
-    window.digitalData.event.title = _retrieveTitle(e.target.id);
-    _satellite.track('video_start');
+    if (!$('.' + e.target.id).hasClass('played')) {
+      $('.' + e.target.id).addClass('played');
+      window.digitalData.event.id = e.target.id;
+      window.digitalData.event.title = _retrieveTitle(e.target.id);
+      _satellite.track('video_start');
+    }
 
     // determine which player the event is coming from
     var id = e.target.id;
@@ -156,11 +160,10 @@ export default ((window) => {
 
   function _onComplete(e) {
     // Adobe Analytics
+    $('.' + e.target.id).addClass('complete');
     window.digitalData.event.id = e.target.id;
     window.digitalData.event.title = _retrieveTitle(e.target.id);
     _satellite.track('video_end');
-
-    $('.' + e.target.id).addClass('complete');
   }
 
   function _viewStatus() {
@@ -178,6 +181,6 @@ export default ((window) => {
   }
 
   return {
-    init,
+    init
   };
 })(window);
