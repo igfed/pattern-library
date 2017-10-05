@@ -1,0 +1,524 @@
+/*
+Header
+
+This module is used to let a user navigate to the main sections of a site. It consists of top main and footer navigation.
+
+Markup:
+ <header role="banner" class="site-header">
+      <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
+      <div class="row">
+        <div class="columns">
+          <div class="top-bar">
+            <div class="top-bar-title">
+              <div class="row">
+                <div class="columns">
+                  <a class="home-link" href="/">
+                    <img src="images/logo-en-color.svg" alt="" class="image-logo">
+                  </a>
+                  <span class="float-right" data-responsive-toggle="main-navigation" data-hide-for="large">
+                    <button class="menu-icon dark" type="button" data-toggle><span class="show-for-sr">Menu</span></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div id="main-navigation" class="top-bar-right main-navigation">
+              <div class="main-navigation-wrapper">
+                <nav role="navigation" class="primary-nav">
+                  <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
+                    <li>
+                      <form id="site-search" class="site-search" action="/en/search" data-toggler=".site-search-is-active">
+                        <div class="input-group">
+                          <span class="input-group-label"><img src="images/search-icon.svg" alt="Search icon"/></span>
+                          <label for="site-search-q" class="input-group-field">
+                            <span class="show-for-sr">Search Investors Group</span>
+                            <input type="search" id="site-search-q" name="q" placeholder="Search Investors Group">
+                          </label>
+                          <span data-toggle="site-search" class="input-group-label show-for-large"><img src="images/close-button-icon.png" alt="Close"/></span>
+                        </div>
+                      </form>
+                    </li>
+                    <li><a href="#">Services</a>
+                      <ul class="menu vertical">
+                        <li><a href="/en/opportunities/investment">Investments</a></li>
+                        <li><a href="/en/opportunities/retirement">Retirement</a></li>
+                        <li><a href="/en/opportunities/mortgage">Mortgages</a></li>
+                        <li><a href="/en/opportunities/estate-planning">Estate Planning</a></li>
+                        <li><a href="/en/opportunities/tax-planning">Tax Planning</a></li>
+                        <li><a href="/en/opportunities/insurance">Insurance</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/more/en/">Advice & stories</a></li>
+                    <li><a href="/en/find-an-advisor" class="site-header-cta">Find an Advisor</a></li>
+                    <li><a href="/en/contact-us/mortgage" class="site-header-cta alternate-cta">Get mortgage advice</a></li>
+                    <li class="show-for-large"><a data-toggle="site-search"><img src="images/search-icon.svg" alt="Search"/></a></li>
+                  </ul>
+                </nav>
+                <div class="top-bar aux-nav">
+                  <div class="row">
+                    <div class="columns">
+                      <nav class="top-bar-right" role="navigation">
+                        <ul class="menu vertical large-horizontal" data-responsive-menu="accordion large-dropdown" data-click-open="true" data-disable-hover="true">
+                          <li><a href="#">Login</a>
+                            <ul class="menu vertical">
+                              <li><a href="https://www.clientvu.ca/login/cana/cai/clie/priusacquiro.do">Client Login</a></li>
+                              <li><a href="https://bvi.bnc.ca/auth/Login?GAREASONCODE=-1&GARESOURCEID=SbipIgA&GAURI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup&Reason=-1&APPID=SbipIgA&URI=https://bvi.bnc.ca/investorsgroup/page%3FaliasDispatcher%3Dstartup">Solutions Banking &trade;</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="/en/client-resources">Client Support</a></li>
+                          <li class="language-toggle"><a href="/fr">Français</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+Styleguide 3.1
+*/
+
+// FOUC (Flash of unstyled content)
+.no-js .site-header {
+  opacity: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.site-header {
+	border-bottom: 1px solid $grey;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+
+	@include respond-to(large) {
+		margin-top: 4px;
+	}
+
+  .top-bar-title {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .home-link {
+		margin: 0;
+
+		.image-logo {
+			@include respond-to(large) {
+				margin-top: 3px;
+			}
+		}
+	}
+
+  @include respond-to(large) {
+    padding-top: 36px;
+    .top-bar-title {
+      width: auto;
+      padding: 0;
+    }
+  }
+}
+
+#skip-navigation {
+	top: 1em;
+	left: 1em;
+  position: fixed !important;
+  z-index: 1000;
+}
+[data-responsive-toggle="main-navigation"] {
+  position: relative;
+  top: 4px;
+}
+
+.main-navigation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $lightest-color;
+  transform: translate3d(0,0,0);
+  transform-origin: top right;
+  opacity: 1;
+  transition: 500ms transform ease-out, 300ms opacity ease-out;
+	@include respond-to(large) {
+		top: 51px;
+	}
+
+  .menu {
+    > li {
+			margin-bottom: 0;
+      @include respond-to(large) {
+        // Divider between services | Advice and Client support | <lang toggle>
+        &:nth-child(3) {
+          > a {
+            position: relative;
+            &:after {
+              content: '';
+              display: block;
+              width: 1px;
+              height: 30px;
+              background: $grey;
+              position: absolute;
+              top: 7px;
+              left: -3px;
+            }
+          }
+        }
+      }
+      > a {
+				font-family: $font-stack-sc;
+        text-transform: uppercase;
+        border-bottom: 1px solid $light-grey;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+        position: relative;
+        font-size: 14px;
+        font-size: 0.875rem;
+        margin: 0;
+        @include respond-to(large) {
+					// height: 40px;
+          margin: 0 0.875rem;
+					font-family: $font-stack;
+        }
+        &:hover, &:focus {
+          background: $light-grey;
+
+          &:before {
+            content: '';
+            position: absolute;
+            border-left: 2px solid $brand-color;
+            height: 14px;
+            top: 1.3rem;
+            left: 7px;
+          }
+        }
+
+        @include respond-to(large) {
+          padding: 0.75rem 1rem;
+          border-bottom: none;
+
+          &:hover, &:focus {
+            background: transparent;
+
+            &:before {
+              border-bottom: 3px solid $brand-color;
+              height: 0;
+              top: auto;
+              left: 1rem;
+              bottom: -9px;
+              right: 1rem;
+            }
+          }
+        }
+        &.site-header-cta {
+          @include respond-to(large) {
+            padding: 3px 1.25em 6px;
+            background-color: transparent;
+            color: $darkest-color;
+            text-align: center;
+            border-radius: $border-radius;
+            line-height: 1em;
+            border: 1px solid $dark-grey;
+
+            &:hover, &:focus {
+              background-color: $darkest-color;
+              color: $lightest-color;
+              border-color: $darkest-color;
+              &:before {
+                display: none;
+              }
+            }
+
+            &.alternate-cta {
+              background-color: $darkest-color;
+              color: $lightest-color;
+              border-color: $darkest-color;
+
+              &:hover, &:focus {
+                background-color: $lightest-color;
+                color: $darkest-color;
+                border-color: $dark-grey;
+
+              }
+            }
+          }
+        }
+      }
+      &.language-toggle {
+        text-align: center;
+        a {
+          border-bottom: none;
+        }
+      }
+      [data-toggle=site-search] {
+        padding: 0;
+        height: 20px;
+        width: 23px;
+        cursor: pointer;
+        &:hover {
+          &::before {
+            // left: 0;
+            // right: -5px;
+            // bottom: -17px;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .menu.submenu {
+    background: $light-grey;
+      @include respond-to(large) {
+        border: none;
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+        background: $lightest-color;
+        border-radius: 0 0 $border-radius $border-radius;
+      }
+    > li {
+      &:nth-child(2) a::after,
+      &:nth-child(3) a::after {
+        display: none;
+      }
+      &:last-child a {
+        border-bottom: none;
+      }
+      a {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-bottom: 1px solid $grey;
+        @include respond-to(large) {
+          text-transform: none;
+          // margin: 0 1rem;
+          margin: 0;
+          padding-left: 25px;
+          padding-right: 1rem;
+          border-color: $light-grey;
+          &:hover, &:focus {
+            background-color: $light-grey;
+            &:before {
+              content: '';
+              border-left: 2px solid $brand-color;
+              height: 14px;
+              top: 0.75rem;
+              left: 0.75rem;
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Keeping in place for future animated header nav
+  @include respond-to(large) {
+    position: static;
+    transform:none;
+    opacity: 1;
+  }
+}
+
+.main-navigation-wrapper {
+  height: 100%;
+  overflow-x: hidden;
+  @include respond-to(large) {
+    height: auto;
+    overflow-x: visible;
+  }
+
+	.close-button-circle {
+		padding: 1rem 1rem 2.5rem 1rem;
+
+		img {
+			height: 25px;
+		}
+	}
+}
+
+.main-navigation-close-toggle {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  float: right;
+}
+
+.aux-nav {
+	padding: 0;
+  @include respond-to(large) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $light-grey;
+    min-height: 36px;
+    > .row {
+      max-width: 75rem !important; // Special case of nested rows in order to get the lock up just right
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .menu {
+    > li {
+      @include respond-to(large) {
+        // Divider between services | Advice and Client support | <lang toggle>
+        &:nth-child(3), &:nth-child(2) {
+          > a {
+            position: relative;
+            &:after {
+              content: '' !important;
+              display: block;
+              width: 1px;
+              height: 20px;
+              background: $grey;
+              position: absolute;
+              top: 10px;
+              left: -12px;
+            }
+          }
+        }
+      }
+      > a {
+        @include respond-to(large) {
+          text-transform: none;
+          padding: 0.7rem 1rem;
+          &:hover, &:focus {
+            &:before {
+              bottom: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu.submenu {
+    @include respond-to(large) {
+      background: $light-grey;
+      li > a {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        &:hover, &:focus {
+          background: $lightest-color;
+        }
+      }
+    }
+  }
+}
+.primary-nav {
+  @include respond-to(large) {
+    position: relative;
+    > .menu > li > a {
+        font-family: $font-stack-sc;
+        text-transform: lowercase;
+        font-size: 18px;
+        font-size: 1.125rem;
+      }
+
+    .submenu, .submenu li {
+      background: $lightest-color;
+    }
+  }
+}
+.site-search {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+
+  .input-group {
+    margin-bottom: 0;
+  }
+  .input-group-label {
+    img {
+      min-width: 20px;
+      width: 20px;
+    }
+  }
+  input {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  @include respond-to(large) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $lightest-color;
+    padding: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: center right;
+
+    transition: transform 0.3s ease-out;
+
+    [data-toggle=site-search] img {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      transition-delay: 0.33s;
+    }
+
+    &.site-search-is-active {
+      transform: scaleX(1);
+      z-index: 500;
+
+      [data-toggle=site-search] img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Dropdown adjustments for header
+.dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
+  left: 50%;
+  right: auto;
+  transform: translate3d(-50%,0,0);
+  top: 50px;
+	min-width: 180px;
+}
+.aux-nav .dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
+  top: 36px;
+}
+
+// States of the component
+.site-header-is-active {
+  overflow: hidden;
+  position: fixed;
+
+  @include respond-to(large) {
+    overflow: visible;
+    position: static;
+
+  }
+  .menu-icon.dark {
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: #000;
+      box-shadow: none;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

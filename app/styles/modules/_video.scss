@@ -115,6 +115,28 @@ Styleguide 3.6
   .vjs-big-play-button {
     z-index: 1001;
   }
+  .vjs-play-progress{
+  background: #0ed59a!important;
+}
+
+.vjs-volume-level{
+  background: #0ed59a!important;
+}
+
+.vjs-big-play-button{
+  &:focus{
+    background: #0ed59a!important;
+  }
+  &:hover{
+    background: #0ed59a!important;
+  }
+}
+
+.bc-player-BJNX9uitx_default:hover .vjs-big-play-button{
+  background: #0ed59a!important
+}
+
+
 
   .vjs-play-progress {
     background: #0ed59a !important;
@@ -190,11 +212,11 @@ Styleguide 3.6
 }
 
 .ig-video-group .video-transcript {
-  &:hover {
+  &:hover{
     text-decoration: none;
   }
-
-  a {
+  
+  a{
     font-size: 18px;
     font-family: $font-stack;
     border-bottom: 1px solid $brand-color;
