@@ -20,95 +20,113 @@ $font-stack-light: $font-whitney-light, $font-stack;
 $font-stack-semibold: $font-semibold, $font-stack;
 
 $font-size: 1rem;
+$font-size-xmini: $font-size * 0.75;
 $font-size-mini: $font-size * 0.875;
 $font-size-base: $font-size;
 $font-size-medium: $font-size * 1.25;
 $font-size-medium-plus: $font-size * 1.5;
-$font-size-large: $font-size * 2;
-$font-size-xl: $font-size * 3;
-$font-size-xxl: $font-size * 4.5;
-$font-size-super: $font-size * 9;
+$font-size-large: $font-size * 1.5;
+$font-size-xl: $font-size * 1.5;
+$font-size-xxl: $font-size * 2;
+$font-size-super: $font-size * 3;
 
 $font-line: 1.5rem;
+$font-line-xmini: $font-size;
 $font-line-mini: $font-line;
 $font-line-base: $font-line;
 $font-line-medium: $font-line * 1.33;
 $font-line-medium-plus: $font-line * 1.33;
-$font-line-large: $font-size * 1.66;
-$font-line-xl: $font-size * 2.33;
-$font-line-xxl: $font-size * 3.66;
-$font-line-super: $font-size*9;
+$font-line-large: $font-line * 1.66;
+$font-line-xl: $font-line * 2.33;
+$font-line-xxl: $font-line * 3.66;
+$font-line-super: $font-line*3;
 
 // Color
+@function tint($color, $percentage) {
+  @return scale-color($color, $saturation: -$percentage/4, $lightness: $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return scale-color($color, $saturation: $percentage/4, $lightness: -$percentage);
+}
 $color-darkest: #000;
 $color-lightest: #FFF;
 $color-grey: #A5A2A2;
-$color-grey-dark-20: darken( $color-grey, 20% );
-$color-grey-dark-40: darken( $color-grey, 40% );
-$color-grey-dark-60: darken( $color-grey, 60% );
-$color-grey-dark-80: darken( $color-grey, 80% );
-$color-grey-light-15: lighten( $color-grey, 15% );
-$color-grey-light-30: lighten( $color-grey, 30% );
-$color-grey-light-45: lighten( $color-grey, 45% );
-$color-grey-light-60: lighten( $color-grey, 60% );
-$color-grey-light-75: lighten( $color-grey, 75% );
+$color-grey-dark-20: shade( $color-grey, 20% );
+$color-grey-dark-40: shade( $color-grey, 40% );
+$color-grey-dark-60: shade( $color-grey, 60% );
+$color-grey-dark-80: shade( $color-grey, 80% );
+$color-grey-light-5: tint( $color-grey, 95% );
+$color-grey-light-15: tint( $color-grey, 85% );
+$color-grey-light-30: tint( $color-grey, 70% );
+$color-grey-light-45: tint( $color-grey, 55% );
+$color-grey-light-60: tint( $color-grey, 40% );
+$color-grey-light-75: tint( $color-grey, 25% );
 $color-success: #00855F;
-$color-success-dark-20: darken( $color-success, 20% );
-$color-success-dark-40: darken( $color-success, 40% );
-$color-success-dark-60: darken( $color-success, 60% );
-$color-success-dark-80: darken( $color-success, 80% );
-$color-success-light-15: lighten( $color-success, 15% );
-$color-success-light-30: lighten( $color-success, 30% );
-$color-success-light-45: lighten( $color-success, 45% );
-$color-success-light-60: lighten( $color-success, 60% );
-$color-success-light-75: lighten( $color-success, 75% );
+$color-success-dark-20: shade( $color-success, 20% );
+$color-success-dark-40: shade( $color-success, 40% );
+$color-success-dark-60: shade( $color-success, 60% );
+$color-success-dark-80: shade( $color-success, 80% );
+$color-success-light-5: tint( $color-success, 95% );
+$color-success-light-15: tint( $color-success, 85% );
+$color-success-light-30: tint( $color-success, 70% );
+$color-success-light-45: tint( $color-success, 55% );
+$color-success-light-60: tint( $color-success, 40% );
+$color-success-light-75: tint( $color-success, 25% );
 $color-alert: #D42F1A;
-$color-alert-dark-20: darken( $color-alert, 20% );
-$color-alert-dark-40: darken( $color-alert, 40% );
-$color-alert-dark-60: darken( $color-alert, 60% );
-$color-alert-dark-80: darken( $color-alert, 80% );
-$color-alert-light-15: lighten( $color-alert, 15% );
-$color-alert-light-30: lighten( $color-alert, 30% );
-$color-alert-light-45: lighten( $color-alert, 45% );
-$color-alert-light-60: lighten( $color-alert, 60% );
-$color-alert-light-75: lighten( $color-alert, 75% );
+$color-alert-dark-20: shade( $color-alert, 20% );
+$color-alert-dark-40: shade( $color-alert, 40% );
+$color-alert-dark-60: shade( $color-alert, 60% );
+$color-alert-dark-80: shade( $color-alert, 80% );
+$color-alert-light-5: tint( $color-alert, 95% );
+$color-alert-light-15: tint( $color-alert, 85% );
+$color-alert-light-30: tint( $color-alert, 70% );
+$color-alert-light-45: tint( $color-alert, 55% );
+$color-alert-light-60: tint( $color-alert, 40% );
+$color-alert-light-75: tint( $color-alert, 25% );
 $color-information: #0E75D5;
-$color-information-dark-20: darken( $color-information, 20% );
-$color-information-dark-40: darken( $color-information, 40% );
-$color-information-dark-60: darken( $color-information, 60% );
-$color-information-dark-80: darken( $color-information, 80% );
-$color-information-light-15: lighten( $color-information, 15% );
-$color-information-light-30: lighten( $color-information, 30% );
-$color-information-light-45: lighten( $color-information, 45% );
-$color-information-light-60: lighten( $color-information, 60% );
-$color-information-light-75: lighten( $color-information, 75% );
-$color-brand: #6E7D8A;
-$color-brand-dark-20: darken( $color-brand, 20% );
-$color-brand-dark-40: darken( $color-brand, 40% );
-$color-brand-dark-60: darken( $color-brand, 60% );
-$color-brand-dark-80: darken( $color-brand, 80% );
-$color-brand-light-15: lighten( $color-brand, 15% );
-$color-brand-light-30: lighten( $color-brand, 30% );
-$color-brand-light-45: lighten( $color-brand, 45% );
-$color-brand-light-60: lighten( $color-brand, 60% );
-$color-brand-light-75: lighten( $color-brand, 75% );
+$color-information-dark-20: shade( $color-information, 20% );
+$color-information-dark-40: shade( $color-information, 40% );
+$color-information-dark-60: shade( $color-information, 60% );
+$color-information-dark-80: shade( $color-information, 80% );
+$color-information-light-5: tint( $color-information, 95% );
+$color-information-light-15: tint( $color-information, 85% );
+$color-information-light-30: tint( $color-information, 70% );
+$color-information-light-45: tint( $color-information, 55% );
+$color-information-light-60: tint( $color-information, 40% );
+$color-information-light-75: tint( $color-information, 25% );
+$color-brand: #0e79d8;
+$color-brand-dark-20: shade( $color-brand, 20% );
+$color-brand-dark-40: shade( $color-brand, 40% );
+$color-brand-dark-60: shade( $color-brand, 60% );
+$color-brand-dark-80: shade( $color-brand, 70% );
+$color-brand-light-5: tint( $color-brand, 95% );
+$color-brand-light-15: tint( $color-brand, 85% );
+$color-brand-light-30: tint( $color-brand, 70% );
+$color-brand-light-45: tint( $color-brand, 55% );
+$color-brand-light-60: tint( $color-brand, 40% );
+$color-brand-light-75: tint( $color-brand, 25% );
 $color-brand-primary: $color-brand-dark-80;
 $color-brand-secondary: #0ED59A;
-$color-brand-secondary-dark-20: darken( $color-brand-secondary, 20% );
-$color-brand-secondary-dark-40: darken( $color-brand-secondary, 40% );
-$color-brand-secondary-dark-60: darken( $color-brand-secondary, 60% );
-$color-brand-secondary-dark-80: darken( $color-brand-secondary, 80% );
-$color-brand-secondary-light-15: lighten( $color-brand-secondary, 15% );
-$color-brand-secondary-light-30: lighten( $color-brand-secondary, 30% );
-$color-brand-secondary-light-45: lighten( $color-brand-secondary, 45% );
-$color-brand-secondary-light-60: lighten( $color-brand-secondary, 60% );
-$color-brand-secondary-light-75: lighten( $color-brand-secondary, 75% );
+$color-brand-secondary-dark-20: shade( $color-brand-secondary, 20% );
+$color-brand-secondary-dark-40: shade( $color-brand-secondary, 40% );
+$color-brand-secondary-dark-60: shade( $color-brand-secondary, 60% );
+$color-brand-secondary-dark-80: shade( $color-brand-secondary, 80% );
+$color-brand-secondary-light-5: tint( $color-brand-secondary, 95% );
+$color-brand-secondary-light-15: tint( $color-brand-secondary, 85% );
+$color-brand-secondary-light-30: tint( $color-brand-secondary, 70% );
+$color-brand-secondary-light-45: tint( $color-brand-secondary, 55% );
+$color-brand-secondary-light-60: tint( $color-brand-secondary, 40% );
+$color-brand-secondary-light-75: tint( $color-brand-secondary, 25% );
 
 // Border Radius
 $border-radius: $base-spacing / 2;
 
 // Arrows
 $arrow-size: $base-spacing;
+
+// Hero
+$hero-height: 40vh;
 
 
 // legacy

@@ -3,13 +3,16 @@
 a {
 	color: $color-information;
 	text-decoration: none;
-
+	&:visited, {
+		background-color: $color-information-light-30;
+	}
 	&:hover, .focus{
 		color: $color-information-dark-20;
 		text-decoration: underline;
 	}
 	&:active{
 		color: $color-information-dark-20;
+		background-color: $color-information-light-30;
 	}
 }
 
@@ -18,21 +21,102 @@ html [type="button"]{
 }
 
 .button {
-	padding: $base-spacing $base-spacing*2;
-	min-width: 160px;
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: $base-spacing/2 $base-spacing*2;
+	min-width: 144px;
 	text-align: center;
 	border-radius: $border-radius;
-	font-size: $font-size-base;
+	font-size: $font-size-mini;
 	line-height: 1em;
-	border: 2px solid $color-grey;
+	border: 2px solid $color-darkest;
 	font-family: $font-stack;
 	margin: 0;
-	background: $color-grey;
+	background: $color-darkest;
 	color: $color-lightest;
+	display: inline-block;
 
 	&:hover, &:focus {
 		text-decoration: none;
-		background: $color-grey-dark-20;
-		border-color: $color-grey-light-15;
+		background: transparent;
+		color: $color-darkest;
 	}
+	&:visited{
+		background-color: inherit;
+	}
+
+	@include respond-to(medium) {
+      min-width: 216px;
+    }
+    @include respond-to(large) {
+      min-width: 280px;
+    }
+}
+
+.button.button-large {
+	padding: $base-spacing $base-spacing*2;
+}
+.button.button-full {
+	display: block;
+	width: 83.33333%;
+	margin-left: auto;
+	margin-right: auto;
+	@include respond-to(medium) {
+      display: inline-block;
+      width: auto;
+    }
+}
+
+.button.button-secondary {
+	background-color: transparent;
+	color: $color-darkest;
+	border: 2px solid $color-darkest;
+
+	&:hover, &:focus {
+		background-color: $color-darkest;
+		color: $color-lightest;
+	}
+}
+
+.button.button-tertiary {	
+    position: relative;
+    background: transparent;
+    border: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: auto;
+    color: $color-darkest;
+
+    &:before{
+		display: block;
+	    position: absolute;
+	    content: ' ';
+	    left: 0;
+	    right: calc(100% - 20px);
+	    height: 3px;
+	    top: calc(100% - .05rem);
+	    background-color: $color-brand-secondary;
+	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	    transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	}
+
+	&:hover {
+		&:before {
+			left: calc(100% - 20px);
+			right: 0;
+			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			transition: right .15s ease-out .15s, left .15s ease-out .3s;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+}
+
+a:hover .tertiary-cta:before  {
+    left: calc(100% - 20px);
+    right: 0;
+    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    transition: right .15s ease-out .15s, left .15s ease-out .3s;
+    text-decoration: none;
+    cursor: pointer;
 }

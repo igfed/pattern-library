@@ -1,0 +1,13 @@
+.hero {
+  background: $color-brand-secondary-light-60;
+  min-height: $hero-height;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}

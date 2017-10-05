@@ -19,6 +19,11 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <style>
+      .section {
+        padding-bottom: 2em;
+      }
+    </style>
   </head>
   <body>
 
@@ -35,39 +40,231 @@
       <div class="row">
         <div class="large-8 columns">
           <h1>Design System</h1>
-          <p>Below are some samples</p>
         </div>
       </div>
       <section class="row">
         <div class="medium-3 columns">
+          <p>Elements</p>
           <ul>
             <li><a href="#typography">Typography</a></li>
             <li><a href="#color">Color</a></li>
             <li><a href="#buttons">Buttons and CTAs</a></li>
           </ul>
+          <p>Components</p>
+          <ul>
+            <li><a href="#heros">Heros</a></li>
+            <li><a href="#cards">Cards</a></li>
+          </ul>
         </div>
         <div class="large-9 columns">
-          <div id="typography">
+          <section class="section" id="typography">
             <h2>Typography</h2>
-            <p class="type-base">The quick brown fox jumps over the lazy dog</p>
-            <p class="type-mini">The quick brown fox jumps over the lazy dog</p>
             <p class="type-xxl">The quick brown fox jumps over the lazy dog</p>
             <p class="type-xl">The quick brown fox jumps over the lazy dog</p>
             <p class="type-large">The quick brown fox jumps over the lazy dog</p>
             <p class="type-medium-plus">The quick brown fox jumps over the lazy dog</p>
             <p class="type-medium">The quick brown fox jumps over the lazy dog</p>
-            <p class="type-super">100</p>
-          </div>
-          <div id="color">
+            <p class="type-base">The quick brown fox jumps over the lazy dog</p>
+            <p class="type-mini">The quick brown fox jumps over the lazy dog</p>
+            <p class="type-xmini">The quick brown fox jumps over the lazy dog</p>
+            <p class="type-super">Super</p>
+          </section>
+          <section class="section" id="color">
             <h2>Color</h2>
-          </div>
-          <div id="buttons">
+            <p class="bg-lightest text-darkest">Lightest</p>
+            <p class="text-lightest bg-darkest">The quick brown fox jumps over the lazy dog</p>
+            <p class="bg-darkest text-lightest">Darkest</p>
+            <p class="text-darkest">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-grey-d80">&nbsp;</td>
+                <td class="bg-grey-d60">&nbsp;</td>
+                <td class="bg-grey-d40">&nbsp;</td>
+                <td class="bg-grey-d20">&nbsp;</td>
+                <td class="bg-grey">&nbsp;</td>
+                <td class="bg-grey-l75">&nbsp;</td>
+                <td class="bg-grey-l60">&nbsp;</td>
+                <td class="bg-grey-l45">&nbsp;</td>
+                <td class="bg-grey-l30">&nbsp;</td>
+                <td class="bg-grey-l15">&nbsp;</td>
+                <td class="bg-grey-l5">&nbsp;</td>
+              </tr>
+            </table>
+            <p class="bg-brand text-lightest">Brand</p>
+            <p class="text-brand">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-brand-d80">&nbsp;</td>
+                <td class="bg-brand-d60">&nbsp;</td>
+                <td class="bg-brand-d40">&nbsp;</td>
+                <td class="bg-brand-d20">&nbsp;</td>
+                <td class="bg-brand-base">&nbsp;</td>
+                <td class="bg-brand-l75">&nbsp;</td>
+                <td class="bg-brand-l60">&nbsp;</td>
+                <td class="bg-brand-l45">&nbsp;</td>
+                <td class="bg-brand-l30">&nbsp;</td>
+                <td class="bg-brand-l15">&nbsp;</td>
+                <td class="bg-brand-l5">&nbsp;</td>
+              </tr>
+            </table>
+
+            <p class="bg-brand-secondary text-lightest">Brand Secondary</p>
+            <p class="text-brand-secondary">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-brand-secondary-d80">&nbsp;</td>
+                <td class="bg-brand-secondary-d60">&nbsp;</td>
+                <td class="bg-brand-secondary-d40">&nbsp;</td>
+                <td class="bg-brand-secondary-d20">&nbsp;</td>
+                <td class="bg-brand-secondary">&nbsp;</td>
+                <td class="bg-brand-secondary-l75">&nbsp;</td>
+                <td class="bg-brand-secondary-l60">&nbsp;</td>
+                <td class="bg-brand-secondary-l45">&nbsp;</td>
+                <td class="bg-brand-secondary-l30">&nbsp;</td>
+                <td class="bg-brand-secondary-l15">&nbsp;</td>
+                <td class="bg-brand-secondary-l5">&nbsp;</td>
+              </tr>
+            </table>
+
+            <p class="bg-information text-lightest">Information</p>
+            <p class="text-information">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-information-d80">&nbsp;</td>
+                <td class="bg-information-d60">&nbsp;</td>
+                <td class="bg-information-d40">&nbsp;</td>
+                <td class="bg-information-d20">&nbsp;</td>
+                <td class="bg-information">&nbsp;</td>
+                <td class="bg-information-l75">&nbsp;</td>
+                <td class="bg-information-l60">&nbsp;</td>
+                <td class="bg-information-l45">&nbsp;</td>
+                <td class="bg-information-l30">&nbsp;</td>
+                <td class="bg-information-l15">&nbsp;</td>
+                <td class="bg-information-l5">&nbsp;</td>
+              </tr>
+            </table>
+
+            <p class="bg-success text-lightest">Success</p>
+            <p class="text-success">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-success-d80">&nbsp;</td>
+                <td class="bg-success-d60">&nbsp;</td>
+                <td class="bg-success-d40">&nbsp;</td>
+                <td class="bg-success-d20">&nbsp;</td>
+                <td class="bg-success">&nbsp;</td>
+                <td class="bg-success-l75">&nbsp;</td>
+                <td class="bg-success-l60">&nbsp;</td>
+                <td class="bg-success-l45">&nbsp;</td>
+                <td class="bg-success-l30">&nbsp;</td>
+                <td class="bg-success-l15">&nbsp;</td>
+                <td class="bg-success-l5">&nbsp;</td>
+              </tr>
+            </table>
+
+            <p class="bg-alert text-lightest">Alert</p>
+            <p class="text-alert">The quick brown fox jumps over the lazy dog</p>
+            <table>
+              <tr>
+                <td class="bg-alert-d80">&nbsp;</td>
+                <td class="bg-alert-d60">&nbsp;</td>
+                <td class="bg-alert-d40">&nbsp;</td>
+                <td class="bg-alert-d20">&nbsp;</td>
+                <td class="bg-alert">&nbsp;</td>
+                <td class="bg-alert-l75">&nbsp;</td>
+                <td class="bg-alert-l60">&nbsp;</td>
+                <td class="bg-alert-l45">&nbsp;</td>
+                <td class="bg-alert-l30">&nbsp;</td>
+                <td class="bg-alert-l15">&nbsp;</td>
+                <td class="bg-alert-l5">&nbsp;</td>
+              </tr>
+            </table>
+
+          </section>
+          <section class="section" id="buttons">
             <h2>Buttons and CTAs</h2>
-            <p>In text links <a href="#">appear like this</a>.</p>
-            <a href="#" class="button">Primary button</a>
-            <a href="#" class="button button-secondary">Secondary button</a>
-            <a href="#" class="button button-tertiary">Tertiary button</a>
-          </div>
+            <p>In text links <a href="#">appear like this</a> visited <a href="http://www.google.ca">appear like this</a>.</p>
+            <div class="row">
+              <div class="medium-4 columns">
+                <a href="#" class="button">Primary button</a>
+                <a href="#" class="button button-secondary">Secondary button</a>
+                <a href="#" class="button button-tertiary">Tertiary button</a>
+              </div>
+              <div class="medium-4 columns">
+                <a href="#" class="button button-large">Primary button</a>
+                <a href="#" class="button button-secondary button-large">Secondary button</a>
+                <a href="#" class="button button-tertiary button-large">Tertiary button</a>
+              </div>
+              <div class="medium-4 columns">
+                <a href="#" class="button button-full">Primary button</a>
+                <a href="#" class="button button-secondary button-full">Secondary button</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="heros">
+            <h2>Hero</h2>
+            <div class="hero">
+              <div class="hero-content">
+                <h2 class="type-xxl">Yeti Snowcone Agency</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis, maxime libero natus qui minus!</p>
+                <a href="#" class="button button-large">learn more</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="cards">
+            <h2>Cards</h2>
+            <div class="row">
+              <div class="medium-6 columns">
+                <div class="card">
+                  <img src="https://i.imgur.com/6jMbuU1.jpg">
+                  <div class="card-section">
+                    <article class="card-article">
+                      <h3><a href="#">5 Features To Watch Out For in Angular v4</a></h3>
+                      <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                    </article>
+                    <a href="" class="button button-tertiary">Continue</a>
+                  </div>
+                </div>
+              </div>
+              <div class="medium-6 columns">
+                <div class="card">
+                  <div class="card-section">
+                    <article class="card-article">
+                      <h3><a href="#">5 Features To Watch Out For in Angular v4</a></h3>
+                      <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere</p>
+                    </article>
+                    <a href="" class="button button-tertiary">Continue</a>
+                  </div>
+                </div>
+              </div>
+              <div class="medium-6 columns">
+                <a class="card">
+                  <img src="https://i.imgur.com/6jMbuU1.jpg">
+                  <div class="card-section">
+                    <article class="card-article">
+                      <h3>5 Features To Watch Out For in Angular v4</h3>
+                      <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                    </article>
+                    <p class="button button-tertiary">Continue</p>
+                  </div>
+                </a>
+              </div>
+              <div class="medium-6 columns">
+                <a class="card">
+                  <div class="card-section">
+                    <article class="card-article">
+                      <h3>5 Features To Watch Out For in Angular v4</h3>
+                      <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae facere, ipsam quae sit, eaque perferendis commodi!...</p>
+                    </article>
+                    <p class="button button-tertiary">Continue</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+
         </div>
       </section>
     </main>

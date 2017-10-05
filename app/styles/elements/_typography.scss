@@ -4,10 +4,18 @@
 @include font-render("WhitneySemibold", "../fonts/whitney-semibold-webfont", null, null, woff2 woff ttf);
 @include font-render("WhitneyLight", "../fonts/whitney-light-webfont", null, null, woff2 woff ttf);
 
+.type-lighten {
+  font-family: $font-stack-light;
+}
+
 .type-base, body, p, li, h6 {
   font-family: $font-stack;
   font-size: $font-size-base;
   line-height: $font-line-base;
+}
+.type-xmini {
+  font-size: $font-size-xmini;
+  line-height: $font-line-xmini;
 }
 .type-mini, small, sup, sub {
   font-size: $font-size-mini;
@@ -40,8 +48,33 @@
   line-height: $font-line-super;
 }
 
-@include respond-to(medium) {}
-
+@include respond-to(medium) {
+  .type-xl, h2 {
+    font-size: $font-size-xl * 1.333;
+  }
+  .type-xxl, h1 {
+    font-size: $font-size-xxl * 1.5;
+  }
+  .type-super {
+    font-size: $font-size-super * 1.5;
+  }
+}
+@include respond-to(large) {
+  .type-large, h3 {
+    font-size: $font-size-large * 1.333;
+  }
+}
+@include respond-to(xlarge) {
+  .type-xl, h2 {
+    font-size: $font-size-xl * 2;
+  }
+  .type-xxl, h1 {
+    font-size: $font-size-xxl * 2.25;
+  }
+ .type-super {
+    font-size: $font-size-super * 3;
+  } 
+}
 
 // Backwards compatibility classes
 .large-body-copy .body-copy { @extend .type-medium; }

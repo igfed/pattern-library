@@ -1,26 +1,80 @@
-/*
-Color
 
-This element is to be used to extend the visual language of our design system. Our color set is broken down into primary, background and illustration groups
+@include make-color("brand", $color-brand-primary);
+@include make-color("brand-base", $color-brand);
+@include make-color("brand-d20", $color-brand-dark-20);
+@include make-color("brand-d40", $color-brand-dark-40);
+@include make-color("brand-d60", $color-brand-dark-60);
+@include make-color("brand-d80", $color-brand-dark-80);
+@include make-color("brand-l5", $color-brand-light-5);
+@include make-color("brand-l15", $color-brand-light-15);
+@include make-color("brand-l30", $color-brand-light-30);
+@include make-color("brand-l45", $color-brand-light-45);
+@include make-color("brand-l60", $color-brand-light-60);
+@include make-color("brand-l75", $color-brand-light-75);
 
-Markup:
-	<div class="bg-{$modifiers}">
-		<p>It has an easy to override visual style, and is appropriately subdued.</p>
-	</div>
-	<p class="text-{$modifiers}">Sample text based overide</p>
+@include make-color("brand-secondary", $color-brand-secondary);
+@include make-color("brand-secondary-d20", $color-brand-secondary-dark-20);
+@include make-color("brand-secondary-d40", $color-brand-secondary-dark-40);
+@include make-color("brand-secondary-d60", $color-brand-secondary-dark-60);
+@include make-color("brand-secondary-d80", $color-brand-secondary-dark-80);
+@include make-color("brand-secondary-l5", $color-brand-secondary-light-5);
+@include make-color("brand-secondary-l15", $color-brand-secondary-light-15);
+@include make-color("brand-secondary-l30", $color-brand-secondary-light-30);
+@include make-color("brand-secondary-l45", $color-brand-secondary-light-45);
+@include make-color("brand-secondary-l60", $color-brand-secondary-light-60);
+@include make-color("brand-secondary-l75", $color-brand-secondary-light-75);
 
-.brand - Brand Colour.
-.primary - Primary Colour.
-.secondary - Secondary Colour.
-.highlight - Highlight Colour.
-.alert - Alert Colour.
+@include make-color("darkest", $color-darkest);
+@include make-color("lightest", $color-lightest);
+@include make-color("grey", $color-grey);
+@include make-color("grey-d20", $color-grey-dark-20);
+@include make-color("grey-d40", $color-grey-dark-40);
+@include make-color("grey-d60", $color-grey-dark-60);
+@include make-color("grey-d80", $color-grey-dark-80);
+@include make-color("grey-l5", $color-grey-light-5);
+@include make-color("grey-l15", $color-grey-light-15);
+@include make-color("grey-l30", $color-grey-light-30);
+@include make-color("grey-l45", $color-grey-light-45);
+@include make-color("grey-l60", $color-grey-light-60);
+@include make-color("grey-l75", $color-grey-light-75);
 
-Styleguide 1.3
-*/
-@include make-color(brand, $brand-color);
-@include make-color(primary, $primary-color);
-@include make-color(secondary, $secondary-color);
-@include make-color(highlight, $highlight-color);
-@include make-color(alert, $alert-color);
-@include make-color(muted, $light-grey);
-@include make-color(lightest, $lightest-color);
+@include make-color("success", $color-success);
+@include make-color("success-d20", $color-success-dark-20);
+@include make-color("success-d40", $color-success-dark-40);
+@include make-color("success-d60", $color-success-dark-60);
+@include make-color("success-d80", $color-success-dark-80);
+@include make-color("success-l5", $color-success-light-5);
+@include make-color("success-l15", $color-success-light-15);
+@include make-color("success-l30", $color-success-light-30);
+@include make-color("success-l45", $color-success-light-45);
+@include make-color("success-l60", $color-success-light-60);
+@include make-color("success-l75", $color-success-light-75);
+
+@include make-color("alert", $color-alert);
+@include make-color("alert-d20", $color-alert-dark-20);
+@include make-color("alert-d40", $color-alert-dark-40);
+@include make-color("alert-d60", $color-alert-dark-60);
+@include make-color("alert-d80", $color-alert-dark-80);
+@include make-color("alert-l5", $color-alert-light-5);
+@include make-color("alert-l15", $color-alert-light-15);
+@include make-color("alert-l30", $color-alert-light-30);
+@include make-color("alert-l45", $color-alert-light-45);
+@include make-color("alert-l60", $color-alert-light-60);
+@include make-color("alert-l75", $color-alert-light-75);
+
+@include make-color("information", $color-information);
+@include make-color("information-d20", $color-information-dark-20);
+@include make-color("information-d40", $color-information-dark-40);
+@include make-color("information-d60", $color-information-dark-60);
+@include make-color("information-d80", $color-information-dark-80);
+@include make-color("information-l5", $color-information-light-5);
+@include make-color("information-l15", $color-information-light-15);
+@include make-color("information-l30", $color-information-light-30);
+@include make-color("information-l45", $color-information-light-45);
+@include make-color("information-l60", $color-information-light-60);
+@include make-color("information-l75", $color-information-light-75);
+
+/* Legacy */
+@include make-color("highlight", $highlight-color);
+@include make-color("muted", $light-grey);
+@include make-color("lightest", $lightest-color);
