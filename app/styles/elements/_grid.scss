@@ -1,17 +1,108 @@
-$total-columns: 6;
+.grid-container {
+	max-width: $max-site-width;
+	padding-right: $grid-margin-xsmall;
+    padding-left: $grid-margin-xsmall;
 
-$col-widths: ();
-@for $i from 1 through $total-columns {
-    @for $j from 1 through $i {
-        $w: ($j/$i);
+	@include respond-to(small) {
+		padding-right: $grid-margin-small;
+		padding-left: $grid-margin-small;
+    }
+    @include respond-to(medium) {
+    	padding-right: $grid-margin-medium;
+		padding-left: $grid-margin-medium;
+    }
+    @include respond-to(large) {
+    	padding-right: $grid-margin-large;
+		padding-left: $grid-margin-large;
+    }
+    @include respond-to(xlarge) {
+    	padding-right: $grid-margin-xlarge;
+		padding-left: $grid-margin-xlarge;
+    }
+}
 
-        @if not index($col-widths, $w) {
-            .col-#{$j}-#{$i} {
-                width: $w * 100%;
-            }
+.grid-margin-x > .cell {
+    margin-right: $grid-gutter-xsmall;
+    margin-left: $grid-gutter-xsmall;
 
-            $col-widths: append($col-widths, $w, comma);
-        }
-        
+    @include respond-to(small) {
+		margin-right: $grid-gutter-small;
+		margin-left: $grid-gutter-small;
+    }
+    @include respond-to(medium) {
+    	margin-right: $grid-gutter-medium;
+		margin-left: $grid-gutter-medium;
+    }
+    @include respond-to(large) {
+    	margin-right: $grid-gutter-large;
+		margin-left: $grid-gutter-large;
+    }
+    @include respond-to(xlarge) {
+    	margin-right: $grid-gutter-xlarge;
+		margin-left: $grid-gutter-xlarge;
+    }
+}
+.grid-margin-y > .cell {
+    margin-top: $grid-gutter-xsmall;
+    margin-bottom: $grid-gutter-xsmall;
+
+    @include respond-to(small) {
+		margin-top: $grid-gutter-small;
+		margin-bottom: $grid-gutter-small;
+    }
+    @include respond-to(medium) {
+    	margin-top: $grid-gutter-medium;
+		margin-bottom: $grid-gutter-medium;
+    }
+    @include respond-to(large) {
+    	margin-top: $grid-gutter-large;
+		margin-bottom: $grid-gutter-large;
+    }
+    @include respond-to(xlarge) {
+    	margin-top: $grid-gutter-xlarge;
+		margin-bottom: $grid-gutter-xlarge;
+    }
+}
+
+.grid-padding-x > .cell {
+    padding-right: $grid-gutter-xsmall;
+    padding-left: $grid-gutter-xsmall;
+
+    @include respond-to(small) {
+		padding-right: $grid-gutter-small;
+		padding-left: $grid-gutter-small;
+    }
+    @include respond-to(medium) {
+    	padding-right: $grid-gutter-medium;
+		padding-left: $grid-gutter-medium;
+    }
+    @include respond-to(large) {
+    	padding-right: $grid-gutter-large;
+		padding-left: $grid-gutter-large;
+    }
+    @include respond-to(xlarge) {
+    	padding-right: $grid-gutter-xlarge;
+		padding-left: $grid-gutter-xlarge;
+    }
+}
+.grid-padding-y > .cell {
+    padding-top: $grid-gutter-xsmall;
+    padding-bottom: $grid-gutter-xsmall;
+
+    @include respond-to(small) {
+		padding-top: $grid-gutter-small;
+		padding-bottom: $grid-gutter-small;
+    }
+    @include respond-to(medium) {
+    	padding-top: $grid-gutter-medium;
+		padding-bottom: $grid-gutter-medium;
+    }
+    @include respond-to(large) {
+    	padding-top: $grid-gutter-large;
+		padding-bottom: $grid-gutter-large;
+    }
+    @include respond-to(xlarge) {
+    	padding-top: $grid-gutter-xlarge;
+		padding-bottom: $grid-gutter-xlarge;
     }
 }

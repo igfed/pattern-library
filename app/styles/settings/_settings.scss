@@ -11,7 +11,19 @@ $breakpoints: (
 );
 
 $grid-margin: $base-spacing;
-$grid-gutter: $base-spacing;
+$grid-margin-xsmall: 10px; //Special case for very small phones
+$grid-margin-small: $grid-margin;
+$grid-margin-medium: $grid-margin*2;
+$grid-margin-large: $grid-margin*2.5;
+$grid-margin-xlarge: $grid-margin*7;
+
+$grid-gutter: $base-spacing/2;
+$grid-gutter-xsmall: $grid-gutter*2;
+$grid-gutter-small: $grid-gutter*2;
+$grid-gutter-medium: $grid-gutter*2.5;
+$grid-gutter-large: $grid-gutter*3;
+$grid-gutter-xlarge: $grid-gutter*4;
+
 $max-site-width: 1280px;
 
 // Typography

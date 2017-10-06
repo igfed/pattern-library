@@ -25,25 +25,25 @@
       }
     </style>
   </head>
-  <body>
+  <body class="grid-container">
 
     <header role="banner" class="padding-top padding-bottom">
       <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
-      <div class="row">
-        <div class="columns">
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
           <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
         </div>
       </div>
     </header>
 
     <main role="main" id="content" class="padding-top padding-bottom">
-      <div class="row">
-        <div class="large-8 columns">
+      <div class="grid-y grid-padding-y">
+        <div class="large-8 cell">
           <h1>Design System</h1>
         </div>
       </div>
-      <section class="row">
-        <div class="medium-3 columns">
+      <section class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
           <p>Elements</p>
           <ul>
             <li><a href="#typography">Typography</a></li>
@@ -56,7 +56,7 @@
             <li><a href="#cards">Cards</a></li>
           </ul>
         </div>
-        <div class="large-9 columns">
+        <div class="medium-9 cell">
           <section class="section" id="typography">
             <h2>Typography</h2>
             <p class="type-xxl">The quick brown fox jumps over the lazy dog</p>
@@ -185,19 +185,19 @@
             <h2>Buttons and CTAs</h2>
             <p>In text links <a href="#">appear like this</a>.</p>
             <div class="row">
-              <div class="medium-4 columns">
+              <div class="medium-4 cell">
                 <p class="text-lighten">Regular</p>
                 <a href="#" class="button">Primary button</a>
                 <a href="#" class="button button-secondary">Secondary button</a>
                 <a href="#" class="button button-tertiary">Tertiary button</a>
               </div>
-              <div class="medium-4 columns">
+              <div class="medium-4 cell">
                 <p class="text-lighten">Large</p>
                 <a href="#" class="button button-large">Primary button</a>
                 <a href="#" class="button button-secondary button-large">Secondary button</a>
                 <a href="#" class="button button-tertiary button-large">Tertiary button</a>
               </div>
-              <div class="medium-4 columns">
+              <div class="medium-4 cell">
                 <p class="text-lighten">Full (Small only)</p>
                 <a href="#" class="button button-full">Primary button</a>
                 <a href="#" class="button button-secondary button-full">Secondary button</a>
@@ -218,8 +218,8 @@
 
           <section class="section" id="cards">
             <h2>Cards</h2>
-            <div class="row">
-              <div class="medium-6 columns">
+            <div class="grid-x grid-margin-x">
+              <div class="medium-6 large-3 cell">
                 <div class="card">
                   <img src="https://i.imgur.com/6jMbuU1.jpg">
                   <div class="card-section">
@@ -231,7 +231,7 @@
                   </div>
                 </div>
               </div>
-              <div class="medium-6 columns">
+              <div class="medium-6 large-3 cell">
                 <div class="card">
                   <div class="card-section">
                     <article class="card-article">
@@ -242,7 +242,7 @@
                   </div>
                 </div>
               </div>
-              <div class="medium-6 columns">
+              <div class="medium-6 large-3 cell">
                 <a class="card">
                   <img src="https://i.imgur.com/6jMbuU1.jpg">
                   <div class="card-section">
@@ -254,7 +254,7 @@
                   </div>
                 </a>
               </div>
-              <div class="medium-6 columns">
+              <div class="medium-6 large-3 cell">
                 <a class="card">
                   <div class="card-section">
                     <article class="card-article">
