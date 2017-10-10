@@ -3,38 +3,4 @@ Tables
 
 This guideline shows how to use our table styles. Words to the left, numbers to the right and no centered content. Headers align to their content
 
-Markup:
-  <table>
-	<thead>
-		<tr>
-			<th>Header 1</th>
-			<th class="text-right">Header 2</th>
-			<th class="text-right">Header 3</th>
-			<th class="text-right">Header 4</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Name 1</td>
-			<td class="text-right">40</td>
-			<td class="text-right">40</td>
-			<td class="text-right">20</td>
-		</tr>
-		<tr>
-			<td>Name 2</td>
-			<td class="text-right">30</td>
-			<td class="text-right">30</td>
-			<td class="text-right">10</td>
-		</tr>
-		<tr>
-			<td>Name 3</td>
-			<td class="text-right">20</td>
-			<td class="text-right">20</td>
-			<td class="text-right">40</td>
-		</tr>
-	</tbody>
-</table>
-
-Styleguide 1.7
-
 */
