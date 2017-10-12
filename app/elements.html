@@ -195,19 +195,19 @@
             <h2>Buttons and CTAs</h2>
             <p>In text links <a href="#">appear like this</a>.</p>
             <div class="grid-x">
-              <div class="medium-4 cell">
+              <div class="medium-6 cell">
                 <p class="text-lighten">Regular</p>
                 <a href="#" class="button">Primary button</a>
                 <a href="#" class="button button-secondary">Secondary button</a>
                 <a href="#" class="button button-tertiary">Tertiary button</a>
               </div>
-              <div class="medium-4 cell">
+              <div class="medium-6 cell">
                 <p class="text-lighten">Large</p>
                 <a href="#" class="button button-large">Primary button</a>
                 <a href="#" class="button button-secondary button-large">Secondary button</a>
                 <a href="#" class="button button-tertiary button-large">Tertiary button</a>
               </div>
-              <div class="medium-4 cell">
+              <div class="medium-6 cell">
                 <p class="text-lighten">Full (Small only)</p>
                 <a href="#" class="button button-full">Primary button</a>
                 <a href="#" class="button button-secondary button-full">Secondary button</a>
@@ -217,6 +217,7 @@
 
           <section class="section" id="tables">
             <h2>Tables</h2>
+            <h3>Regular table</h3>
             <table>
               <thead>
                 <tr>
@@ -247,10 +248,112 @@
                 </tr>
               </tbody>
             </table>
+            <h3>Scrolling table</h3>
+            <table class="scroll">
+                <thead>
+                  <tr>
+                    <th>This is the description!</th>
+                    <th>One</th>
+                    <th>Two</th>
+                    <th>Three</th>
+                    <th>Four</th>
+                    <th>Five</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="display:block; width:400px;">These are all the words that people use to describe Foundation 6!</td>
+                    <td>Cool</td>
+                    <td>Swag</td>
+                    <td>Chill</td>
+                    <td>Killer</td>
+                    <td>Rad</td>
+                  </tr>
+                  <tr>
+                    <td>These are some words that people use to describe other web frameworks.</td>
+                    <td>Whatevs</td>
+                    <td>Ugh.</td>
+                    <td>LOL</td>
+                    <td>K</td>
+                    <td>Aight</td>
+                  </tr>
+                  <tr>
+                    <td>Here are some great super heros.</td>
+                    <td>Batman</td>
+                    <td>Superman</td>
+                    <td>Spiderman</td>
+                    <td>Wonder Woman</td>
+                    <td>Hulk</td>
+                  </tr>
+                </tbody>
+            </table>
           </section>
 
           <section class="section" id="forms">
             <h2>Forms</h2>
+            <form action="/" method="post">
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label>
+                    Input Label
+                    <input type="text" placeholder=".medium-6.cell">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>
+                    How many puppies?
+                    <input type="number" value="100">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>
+                    What books did you read over summer break?
+                    <textarea placeholder="None"></textarea>
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>Select Menu
+                    <select>
+                      <option value="husker">Husker</option>
+                      <option value="starbuck">Starbuck</option>
+                      <option value="hotdog">Hot Dog</option>
+                      <option value="apollo">Apollo</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="grid-x grid-padding-x">
+                <fieldset class="large-6 cell">
+                  <legend>Choose Your Favorite</legend>
+                  <input type="radio" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">Red</label>
+                  <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+                  <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
+                </fieldset>
+                <fieldset class="large-6 cell">
+                  <legend>Check these out</legend>
+                  <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+                  <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+                  <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
+                </fieldset>
+              </div>
+              <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label>Password
+                    <input type="password" aria-describedby="passwordHelpText">
+                  </label>
+                  <p class="help-text" id="passwordHelpText">Your password must have at least 10 characters, a number, and an Emoji.</p>
+                </div>
+                <div class="medium-6 cell">
+                  <label id="ageLabel">Age</label>
+                  <div class="slider" aria-labelledby="ageLabel" aria-describedby="ageHelpText" data-slider data-initial-start='50' data-end='200'>
+                    <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                    <span class="slider-fill" data-slider-fill></span>
+                    <input type="hidden">
+                  </div>
+                  <p class="help-text" id="ageHelpText">How old are you?</p>
+                </div>
+              </div>
+            </form>
           </section>
 
         </div>
