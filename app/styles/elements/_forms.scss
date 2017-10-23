@@ -5,8 +5,8 @@ label {
   background-color: transparent;
   position: relative;
   font-family: $font-stack-semibold;
-  font-size: $font-size-xmini;
-  line-height: $font-line-xmini;
+  font-size: $font-size-mini;
+  line-height: $font-line-mini;
   color: $color-brand-primary;
 
   &.error {
@@ -19,9 +19,37 @@ input, select, [type='text'], [type='password'], [type='date'], [type='datetime'
   border: 1px solid $color-darkest;
   font-family: $font-stack;
   font-size: $font-size-mini;
+
+  &.error {
+    border-color: $color-alert;
+  }
+
+
 }
 
 select {
   height: auto;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2813, 38, 60%29'></polygon></svg>")
+}
+
+// Slider
+.slider {
+  .slider-handle {
+    background-color: $color-brand-primary;
+    border-radius: $border-radius;
+  }
+}
+
+
+// Help Message
+.help-text {
+  font-size: $font-size-mini;
+  margin-top: -$base-spacing;
+}
+
+// Error Messages
+.error-text {
+  font-size: $font-size-mini;
+  margin-top: -$base-spacing;
+  color: $color-alert;
 }
