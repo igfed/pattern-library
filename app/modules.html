@@ -1,1 +1,79 @@
-modules.html
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IG Pattern Library</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <style>
+      .section {
+        padding-bottom: 2em;
+      }
+    </style>
+  </head>
+  <body class="grid-container">
+
+    <header role="banner" class="padding-top padding-bottom">
+      <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
+      <div class="grid-x grid-padding-x">
+        <div class="cell">
+          <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation -->
+    <main role="main" id="content" class="padding-top padding-bottom">
+      <div class="grid-y grid-padding-y">
+        <div class="large-8 cell">
+          <h1>Design System</h1>
+        </div>
+      </div>
+      <!-- Nav Links -->
+      <section class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <p><a href="elements.html">Elements</a></p>
+          <p><a href="components.html">Components</a></p>
+          <p>Modules</p>
+          <ul>
+            <li><a href="#accordions">Accordions</a></li>
+          </ul>
+        </div>
+      <!-- Content -->
+
+
+      </section>
+    </main>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/bower_components/jquery-validation/dist/additional-methods.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="/bower_components/mustache.js/mustache.js"></script>
+    <script src="/bower_components/jquery-visible/jquery.visible.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
