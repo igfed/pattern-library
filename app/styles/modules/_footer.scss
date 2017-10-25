@@ -1,4 +1,317 @@
 .site-footer {
-  background: $color-grey-light-5;
-  color: $color-grey;
+  
+}
+
+/*.hide-for-small is supposed to be a class in foundation css,
+it doesnt work for me maybe we need to update to the latest version of foundation*/
+.hide-for-small{
+  @media screen and (max-width: 1024px){
+    display: none!important;
+  }
+}
+
+
+.site-footer {
+	background: $color-grey-light-75;
+  color: $color-grey-dark-80;
+	padding-top: $base-spacing*5;
+
+  @include respond-to(large){
+    padding-top: 90px;
+  }
+
+	a, p {
+		color: $color-grey-dark-80;
+	}
+
+  .columns{
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+
+  .footer-back-to-top-button{
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-bottom: 40px;
+
+    .columns{
+      border-bottom: 1px solid $color-grey-dark-60;
+      padding-bottom: 8px;
+
+      a{
+
+        &::before{
+          content: '';
+          display: block;
+          margin: 0 auto;
+          width: $arrow-size*1.5;
+          height: $arrow-size*1.5;
+          border: none;
+          border-bottom: solid 1px;
+          border-right: solid 1px;
+          transform-origin: center middle;
+          transform: rotate(225deg) translate3d(0,0,0);
+          transition: transform 0.3s ease-out;
+          margin-bottom: -3px;
+        }
+
+        &:hover, &:focus{
+          &::before{
+            transform: rotate(225deg) translate3d(3px,3px,0);
+          }
+        }
+      }
+      hr{
+        border-color: $color-grey-dark-60;
+        padding-bottom: 8px;
+      }
+    }
+  }
+
+  .footer-navigation{
+    // @include respond-to(large) {
+    //   border-bottom: 1px solid #E5ECED;
+    // }
+
+    .columns{
+      @include respond-to(large){
+        text-align: center;
+      }
+    }
+
+    .accordion{
+
+      background: none;
+      border: none;
+      margin: 0;
+
+      .accordion-item{
+        @include respond-to(large) {
+          border-bottom: none;
+        }
+
+        .accordion-title{
+          padding: 20px 0px;
+          border: none;
+          border-bottom: 1px solid #314659;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: $color-grey-dark-60;
+
+          &:before{
+            top: 40%;
+          }
+
+          @include respond-to(large){
+            pointer-events: none;
+            border: none;
+            font-size: 16px;
+            padding-bottom: 35px;
+          }
+
+          &:hover, &:focus{
+            background: none;
+          }
+
+          &::before{
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: $arrow-size;
+            height: $arrow-size;
+            border: none;
+            border-bottom: solid 1px;
+            border-right: solid 1px;
+            transform-origin: center middle;
+            transform: rotate(45deg) translate3d(0,0,0);
+            transition: transform 0.3s ease-out;
+            right: 5px;
+            color: #acb7c0;
+
+            @include respond-to(large){
+              display: none;
+             }
+          }
+        }
+
+        &.is-active{
+          .accordion-title{
+            &::before{
+              transform: rotate(225deg) translate3d(0,0,0);
+            }
+          }
+
+          .accordion-content{
+            border-bottom: 1px solid $color-grey-dark-20;
+
+            @include respond-to(large){
+              border-bottom: none;
+            }
+          }
+        }
+
+        .accordion-content{
+          background: none;
+          border: none;
+          padding-left: 0;
+          padding-right: 0;
+
+          width: auto;
+          float: none;
+          text-align: left;
+
+
+           @include respond-to(large){
+            display: inline-block!important;
+           }
+
+           li{
+              a{
+
+                padding: 0.9rem 0;
+                padding-left: 1.8rem;
+                position: relative;
+
+                &:before{
+                  content: "\00a0";
+                  width: 18px;
+                  display: inline-block;
+                  border-left: 2px solid #0d263c;
+                  left: 1rem;
+                  position: absolute;
+                }
+
+                &:hover{
+                  background: #314659;
+
+                  &:before{
+                    border-left: 2px solid $color-grey-dark-60;
+                  }
+                }
+
+                @include respond-to(large){
+                  padding-left:0;
+
+                  &:before{
+                    display: none;
+                  }
+
+                  &:hover{
+                    background: none;
+                    text-decoration: underline;
+                    color: $color-grey-dark-60;
+
+                    &:before{
+                      border: none;
+                    }
+                  }
+                }
+              }
+           }
+        }
+      }
+    }
+  }
+
+  .footer-social-media{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    max-width: 300px;
+  }
+
+  .footer-copyright{
+      
+    @include respond-to(large){
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .footer-copyright-border-top{
+      .row{
+        
+        margin: 0 auto;
+
+        @include respond-to(large){
+          border-top: 1px solid $color-grey-dark-20;
+          text-align: center;
+        }
+        .columns{
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-top: 1px solid $color-grey-dark-20;
+          line-height: normal;
+          text-align: center;
+
+          @include respond-to(large){
+            width: auto;
+            border-top: 0;
+            padding-left:0;
+            padding-right:0;
+            vertical-align: top;
+            display: inline-block;
+            float: none;
+          }
+
+            ul{
+              display: inline-block;
+              
+              li{
+
+                color: #acb7c0;
+                line-height: 1.6;
+                padding: 3px 18px;
+                font-size: 12px;
+
+                &:not(:last-child){
+                  border-right: 1px solid $color-grey-dark-20;
+
+                }
+
+                @include respond-to(large){
+                  padding-top:0;
+                  padding-bottom:0;
+
+                  border-right: 1px solid $color-grey-dark-20;
+                }
+
+                a{
+                  padding:0;
+                  color: #acb7c0;
+
+                  &:hover{
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+        }
+      }
+    } 
+  }
+}
+
+.social-media{
+  ul{
+      display: table;
+      margin: 0;
+      width: 100%;
+
+      li{
+        .social-media-icon{
+          width: 48px;
+          height: 48px;
+          padding: 0;
+          position: relative;
+          margin: 0 auto;
+
+          img{
+            position: absolute;
+            top: 23%;
+            left: 24%;
+            width: 24px;
+          }
+        }
+      }
+    }
 }

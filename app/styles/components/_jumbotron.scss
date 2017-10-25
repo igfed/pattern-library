@@ -1,13 +1,13 @@
-.hero {
-  background: $color-brand-light-15;
-  color: $color-grey-dark-60;
-  min-height: $hero-height;
+.jumbotron {
+  background: $color-brand;
+  color: $color-lightest;
   display: flex;
   align-items: center;
 }
 
-.hero-content {
+.jumbotron-content {
   max-width: 100%;
+  text-align: center;
   margin: 0 auto;
   padding-left: 5%;
   padding-right: 5%;
