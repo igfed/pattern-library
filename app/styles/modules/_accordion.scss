@@ -34,9 +34,7 @@ Markup:
 Styleguide 3.4
 */
 
-$accordion-link-color: #008cba;
-
-.help-accordion-main {
+/*.help-accordion-main {
 
 
   .section-title {
@@ -351,4 +349,49 @@ $accordion-link-color: #008cba;
       }
     }
   }
+}*/
+
+
+/* #E0E0E0 is the mockup color, but this is in the Pattern library*/
+
+$accordion-grey: #282828;
+
+.accordion-item {
+  border-bottom: 2px solid $color-grey-light-30;
+}
+
+.accordion-title,.accordion-title:hover,.accordion-title:focus {
+  border: 0;
+  color: $accordion-grey;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+:last-child:not(.is-active) > .accordion-title, .accordion-content{
+  border: 0;
+}
+
+.accordion-text {
+  padding-top: 1rem;
+}
+
+.accordion-title:hover, .accordion-title:focus {
+  background-color: transparent;
+}
+
+/* Styling for arrow icons on right*/
+.accordion-title::before {
+  content: "";
+  border: solid;
+  border-width: 0 1.25px 1.25px 0;
+  display: inline-block;
+  padding: 10px;
+  transition: all 0.5s;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.is-active > .accordion-title::before {
+  content: "";
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
