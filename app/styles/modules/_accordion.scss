@@ -354,17 +354,23 @@ Styleguide 3.4
 
 /* #E0E0E0 is the mockup color, but this is in the Pattern library*/
 
-$accordion-grey: #282828;
-
 .accordion-item {
   border-bottom: 2px solid $color-grey-light-30;
 }
 
-.accordion-title,.accordion-title:hover,.accordion-title:focus {
+.accordion-title,
+.accordion-title:hover,
+.accordion-title:focus,
+.accordion-content {
   border: 0;
-  color: $accordion-grey;
+  color: $color-grey-dark-80;
   font-size: 1.5rem;
   text-decoration: none;
+  padding-left: 0;
+  @include respond-to(medium) {
+    padding-right: $grid-margin-medium;
+    padding-left: $grid-margin-medium;
+  }
 }
 
 :last-child:not(.is-active) > .accordion-title, .accordion-content{
@@ -381,17 +387,17 @@ $accordion-grey: #282828;
 
 /* Styling for arrow icons on right*/
 .accordion-title::before {
-  content: "";
+  content: " ";
   border: solid;
-  border-width: 0 1.25px 1.25px 0;
+  border-width: 0 1px 1px 0;
   display: inline-block;
-  padding: 10px;
+  padding: 8px;
   transition: all 0.5s;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
 .is-active > .accordion-title::before {
-  content: "";
+  content: " ";
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
