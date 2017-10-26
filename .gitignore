@@ -9,3 +9,4 @@ debug.log
 gh-pages
 .idea
 /nbproject/private/
+/app/scripts/main.js

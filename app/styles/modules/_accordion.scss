@@ -34,321 +34,50 @@ Markup:
 Styleguide 3.4
 */
 
-$accordion-link-color: #008cba;
+.accordion-item {
+  border-bottom: 2px solid $color-grey-light-30;
+}
 
-.help-accordion-main {
-
-
-  .section-title {
-    padding-bottom: 35px;
-    padding-top: 0;
-    font-family: $font-stack-sc;
-    font-size: 16px;
-
-    @include respond-to(medium) {
-      padding-bottom: 8px;
-    }
-
+.accordion-title,
+.accordion-title:hover,
+.accordion-title:focus,
+.accordion-content {
+  border: 0;
+  color: $color-grey-dark-80;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-left: 0;
+  @include respond-to(medium) {
+    padding-right: $grid-margin-medium;
+    padding-left: $grid-margin-medium;
   }
+}
 
-  .accordion {
-    background-color: transparent;
-    .bg-muted, .bg-secondary {
-      padding-top: 60px;
-    }
-  }
+:last-child:not(.is-active) > .accordion-title, .accordion-content{
+  border: 0;
+}
 
-  .accordion-item.is-accordion-submenu-parent.is-active {
-    .accordion-title {
-      border-bottom: none;
-    }
-  }
+.accordion-text {
+  padding-top: 1rem;
+}
 
-  .is-accordion-submenu-parent {
-    border-bottom: solid 1px $accordion-grey-line;
+.accordion-title:hover, .accordion-title:focus {
+  background-color: transparent;
+}
 
-    .accordion-title {
-      border: none;
-      background-color: transparent;
-      color: $brand-color;
-      padding-left: 50px;
-      padding-right: 30px;
-      text-indent: -50px;
-
-      @include respond-to(medium) {
-        padding-right: 40px;
-      }
-
-      @include respond-to(large) {
-        line-height: 38px;
-        padding-left: 80px;
-        padding-right: 50px;
-        text-indent: -80px;
-      }
-
-      &:hover {
-        background-color: transparent;
-      }
-
-      &:focus {
-        background-color: transparent;
-      }
-    }
-
-    // Info Icon
-    // 'content: " ";' removes the default +/- symbols added by Foundation
-    .accordion-title::before {
-      content: " ";
-      position: static;
-      background-image: url('../images/info.png');
-      background-position: 100% center;
-      background-size: 40px;
-      background-repeat: no-repeat;
-      margin-right: 10px;
-      padding: 25px 20px;
-
-      @include respond-to(medium) {
-        margin-right: 10px;
-      }
-
-      @include respond-to(large) {
-        background-position: 100% center;
-        background-size: 62px;
-        background-repeat: no-repeat;
-        margin-right: 20px;
-        padding: 32px;
-      }
-    }
-
-    // Menu arrow closed
-    .accordion-title::after {
-      width: $arrow-size*1;
-      height: $arrow-size*1;
-      border: none;
-      border-bottom: solid 2px $button-primary-color;
-      border-right: solid 2px $button-primary-color;
-      transform-origin: center center;
-      transform: rotate(45deg);
-      top: 45%;
-      margin-top: -$arrow-size/2;
-      margin-right: -10px;
-
-      @include respond-to(medium) {
-        width: $arrow-size*1.5;
-        height: $arrow-size*1.5;
-        border-bottom-width: 3px;
-        border-right-width: 3px;
-        top: 40%;
-        margin-right: 0;
-      }
-
-      @include respond-to(large) {
-        width: $arrow-size*2.5;
-        height: $arrow-size*2.5;
-        top: 35%;
-      }
-    }
-
-    .accordion-title.accordion-menu-section-title {
-      font-family: $font-stack-sc;
-      text-transform: lowercase;
-      font-size: 14px;
-
-      @include respond-to(medium) {
-        font-size: 24px;
-      }
-
-      @include respond-to(large) {
-        font-size: 24px;
-      }
-    }
-
-    .accordion-content {
-      background-color: transparent;
-      border: none;
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 5px;
-      padding-bottom: 90px;
-
-
-      @include respond-to(medium) {
-        padding-left: 1em;
-        padding-right: 1em;
-        padding-bottom: 70px;
-      }
-
-      @include respond-to(large) {
-         padding-bottom: 80px;
-      }
-
-      .large-12 {
-        @include respond-to(large) {
-          padding-left: 80px;
-          padding-right: 80px;
-        }
-      }
-
-      .section-title {
-        padding-bottom: 15px;
-        padding-top: 0;
-        font-size: 14px;
-        margin-bottom: 0;
-
-        @include respond-to(medium) {
-          font-size: 18px;
-          margin-bottom: 40px;
-          padding-top: 10px;
-        }
-      }
-
-      .callout-body-copy {
-        font-size: 20px;
-
-        @include respond-to(medium) {
-          font-size: 28px;
-        }
-      }
-
-      .large-body-copy {
-        font-family: $font-stack-light;
-        font-size: 20px;
-
-        @include respond-to(medium) {
-          font-size: 20px;
-          font-family: $font-stack;
-        }
-
-        @include respond-to(large) {
-          font-size: 22px;
-        }
-      }
-
-      .faq-links-list {
-        @include respond-to(medium) {
-          padding-top: 20px;
-        }
-
-        @include respond-to(large) {
-          padding-top: 0;
-        }
-      }
-
-      .consultant-contact {
-        @include respond-to(medium) {
-          font-size: 18px;
-          font-family: $font-stack-light;
-        }
-
-        @include respond-to(large) {
-          font-size: 18px;
-          font-family: $font-stack-light;
-        }
-      }
-
-      .table {
-        border-top: solid 2px $dark-grey;
-        border-bottom: solid 2px $dark-grey;
-        margin-top: 0;
-        margin-bottom: 48px;
-
-        @include respond-to(medium) {
-          margin-top: 10px;
-          margin-bottom: 16px;
-        }
-
-        thead {
-          background-color: transparent;
-
-          .sub-title {
-            padding: 5px;
-            font-size: 16px;
-            font-family: $font-stack-sc;
-          }
-        }
-        tbody {
-          background-color: transparent;
-
-          tr {
-            background-color: transparent;
-
-            .accordion-table-td {
-              padding: 5px;
-            }
-          }
-        }
-      }
-
-      .help-options-list {
-        list-style: none;
-        margin-bottom: 20px;
-        margin-left: 0;
-
-        li {
-          font-family: $font-stack-light;
-        }
-      }
-
-      .address {
-        margin: 20px 0;
-
-        p {
-          font-family: $font-stack-light;
-        }
-
-        @include respond-to(medium) {
-          margin-top: 30px;
-          margin-bottom: 27px;
-        }
-
-        @include respond-to(large) {
-          margin-top: 20px;
-          margin-bottom: 20px;
-        }
-      }
-
-      .margin-bottom-20 {
-        margin-bottom: 20px;
-      }
-
-      .body-copy-light {
-        font-family: $font-stack-light;
-        font-size: 16px;
-
-        @include respond-to(medium) {
-          font-size: 18px;
-        }
-      }
-    }
-
-    .accordion-link {
-      color: $accordion-link-color;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  // Menu arrow opened
-  .is-accordion-submenu-parent.is-active {
-    .accordion-title::after {
-      border: none;
-      border-right: solid 2px $button-primary-color;
-      border-top: solid 2px $button-primary-color;
-      transform: rotate(-45deg);
-      margin-top: $arrow-size/2;
-      top: 45%;
-
-      @include respond-to(medium) {
-        border-right-width: 3px;
-        border-top-width: 3px;
-        top: 40%;
-      }
-
-      @include respond-to(large) {
-        top: 35%;
-      }
-    }
-  }
+/* Styling for arrow icons on right*/
+.accordion-title::before {
+  content: " ";
+  border: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 8px;
+  transition: all 0.5s;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.is-active > .accordion-title::before {
+  content: " ";
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
