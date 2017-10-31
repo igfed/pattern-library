@@ -31,7 +31,29 @@
       <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
       <div class="grid-x grid-padding-x">
         <div class="cell">
-          <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+          <div class="top-bar">
+            <div class="top-bar-left">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+                <li>
+                  <a href="#">One</a>
+                  <ul class="menu vertical">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -39,19 +61,25 @@
     <main role="main" id="content" class="padding-top padding-bottom">
       <div class="grid-y grid-padding-y">
         <div class="large-8 cell">
-          <h1>Design System</h1>
+          <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
+            <button class="menu-icon" type="button" data-toggle="responsive-menu" data-hide-for="large"></button>
+            <div class="title-bar-title">Design System</div>
+          </div>
+          <div class="top-bar" id="responsive-menu">
+            <div class="top-bar-left">
+              <ul class="dropdown menu vertical large-horizontal" data-dropdown-menu>
+                <li><a href="elements.html">Elements</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="modules.html">Modules</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+      </div>
       <section class="grid-x grid-padding-x">
-        <div class="medium-3 cell">
-          <ul>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="components.html">Components</a></li>
-            <li><a href="modules.html">Modules</a></li>
-          </ul>
-        </div>
-        <div class="medium-9 cell">
-          <p>Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
+        <div class="large-9 cell">
+          <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
 
           <h2 id="keepitsimple">Keep it Simple</h2>
           <ul>
