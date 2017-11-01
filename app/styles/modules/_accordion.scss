@@ -34,8 +34,11 @@ Markup:
 Styleguide 3.4
 */
 
+.accordion {
+  max-width: 500px;
+}
 .accordion-item {
-  border-bottom: 2px solid $color-grey-light-30;
+  border-bottom: 1px solid $color-grey-light-30;
 }
 
 .accordion-title,
@@ -43,10 +46,12 @@ Styleguide 3.4
 .accordion-title:focus,
 .accordion-content {
   border: 0;
-  color: $color-grey-dark-80;
-  font-size: 1.5rem;
+  color: $color-darkest;
   text-decoration: none;
   padding-left: 0;
+  @include respond-to(large) {
+    font-size: 1.5rem;
+  }
   @include respond-to(medium) {
     padding-right: $grid-margin-medium;
     padding-left: $grid-margin-medium;
@@ -68,16 +73,16 @@ Styleguide 3.4
 /* Styling for arrow icons on right*/
 .accordion-title::before {
   content: " ";
-  border: solid;
+  border: solid $color-darkest;
   border-width: 0 1px 1px 0;
   display: inline-block;
-  padding: 8px;
+  padding: 7px;
   transition: all 0.5s;
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 .is-active > .accordion-title::before {
   content: " ";
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }
