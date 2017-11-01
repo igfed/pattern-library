@@ -26,6 +26,8 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   }
 
   hr {
+    margin-left: $grid-margin*5;
+    margin-right: $grid-margin*5;
   }
 
   .footer-back-to-top-button{
@@ -35,7 +37,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     padding: 0 16px;
     width: fit-content;
     margin: auto;
-    @include respond-to(large) {
+    @include respond-to(medium) {
       margin-bottom: 40px;
       padding: 0 32px;
     }
