@@ -105,7 +105,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
       background: none;
       border: none;
-      margin: 0;
+      margin: 0 auto;
 
       .accordion-item{
         @include respond-to(large) {
@@ -331,6 +331,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             top: 23%;
             left: 24%;
             width: 24px;
+            background-color: $color-grey-dark-80;
           }
         }
       }
