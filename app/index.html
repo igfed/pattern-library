@@ -25,58 +25,86 @@
       }
     </style>
   </head>
-  <body class="grid-container">
+  <body>
 
-    <header role="banner" class="padding-top padding-bottom">
+    <header role="banner" class="site-nav">
       <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
-      <div class="grid-x grid-padding-x">
-        <div class="cell">
-          <div class="top-bar">
-            <div class="top-bar-left">
-              <ul class="dropdown menu" data-dropdown-menu>
-                <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+      <div class="grid-container">
+        <div class="top-bar">
+          <div class="top-bar-title site-nav-title">
+            <span data-responsive-toggle="site-nav-main" data-hide-for="large">
+              <button data-toggle="site-nav-main" class="menu-icon dark">
+                <span class="show-for-sr">Menu</span>
+              </button>
+            </span>
+            <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+          </div>
+          <nav class="top-bar-left">
+            <div class="off-canvas position-top" id="site-nav-main" data-off-canvas>
+              <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
+                <li><a href="components.html">Value Prop</a></li>
                 <li>
-                  <a href="#">One</a>
-                  <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
+                  <a href="elements.html">Services</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#0">Investments</a></li>
+                    <li><a href="#0">Insurance</a></li>
+                    <li><a href="#0">Estate Planning</a></li>
+                    <li><a href="#0">Tax planning</a></li>
+                    <li><a href="#0">Retirement</a></li>
+                    <li><a href="#0">Home Ownership</a></li>
+                    <li><a href="#0">Cash Flow</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
+                <li><a href="modules.html">Get Advice</a></li>
+                <li>
+                  <a href="elements.html">Sign in</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#0">Client log in</a></li>
+                    <li><a href="#0">Solutions banking</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">French</a></li>
               </ul>
             </div>
-            <div class="top-bar-right">
-              <ul class="menu">
-                <li><input type="search" placeholder="Search"></li>
-                <li><button type="button" class="button">Search</button></li>
-              </ul>
-            </div>
+          </nav>
+          <div class="top-bar-right site-nav-aux">
+            <form id="site-search" class="site-search" action="/en/search">
+                <label for="site-search-q" class="show-for-sr">Search Investors Group</label>
+                <input type="search" id="site-search-q" name="q" class="" placeholder="Search Investors Group">
+                <button type="submit" class="">
+                  <img class="search-icon" src="images/search-icon.svg" alt="" width="24px" height="24px">
+                  <span class="show-for-sr">Submit</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </header>
 
     <main role="main" id="content" class="padding-top padding-bottom">
-      <div class="grid-y grid-padding-y">
-        <div class="large-8 cell">
-          <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="large">
-            <button class="menu-icon" type="button" data-toggle="responsive-menu" data-hide-for="large"></button>
-            <div class="title-bar-title">Design System</div>
+      <div class="grid-container">
+        <div class="in-section-nav">
+          <div class="in-section-nav-title">
+              <span class="sub-title">Section Title</span>
+              <div data-responsive-toggle="in-section-nav-menu" data-hide-for="large" class="in-section-nav-toggle">
+                <button type="button" data-toggle="in-section-nav-menu">
+                  <span class="show-for-sr">Menu</span>
+                </button>
+              </div>
           </div>
-          <div class="top-bar" id="responsive-menu">
-            <div class="top-bar-left">
-              <ul class="dropdown menu vertical large-horizontal" data-dropdown-menu>
-                <li><a href="elements.html">Elements</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="modules.html">Modules</a></li>
-              </ul>
-            </div>
+          <div class="in-section-nav-menu" id="in-section-nav-menu">
+            <ul class="menu vertical large-horizontal">
+              <li><a href="${item.path}.html">${item.title}</a></li>
+              <li><a href="${item.path}.html">${item.title}</a></li>
+              <li><a href="${item.path}.html">${item.title}</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      </div>
+       <div class="grid-container">
       <section class="grid-x grid-padding-x">
         <div class="large-9 cell">
           <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
@@ -200,6 +228,7 @@
 
         </div>
       </section>
+      </div>
     </main>
 
     <!-- build:js scripts/vendor.js -->
