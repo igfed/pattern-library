@@ -313,29 +313,18 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 }
 
 .social-media{
-  ul{
-      display: table;
-      margin: 0;
-      width: 100%;
-      fill: $color-grey-dark-80;
-      fill: pink;
-      li{
-        .social-media-icon{
-          width: 48px;
-          height: 48px;
-          padding: 0;
-          position: relative;
-          margin: 0 auto;
-
-          svg{
-            position: absolute;
-            top: 23%;
-            left: 24%;
-            width: 24px;
-            fill: $color-grey-dark-80;
-          }
-
-        }
+  margin-left: auto;
+  margin-right: auto;
+  li{
+    width: 75px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+      svg{
+        width: 24px;
+        fill: $color-grey-dark-80;
       }
-    }
+  }
 }
