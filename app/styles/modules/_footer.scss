@@ -317,7 +317,8 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       display: table;
       margin: 0;
       width: 100%;
-
+      fill: $color-grey-dark-80;
+      fill: pink;
       li{
         .social-media-icon{
           width: 48px;
@@ -326,13 +327,14 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           position: relative;
           margin: 0 auto;
 
-          img{
+          svg{
             position: absolute;
             top: 23%;
             left: 24%;
             width: 24px;
-            background-color: $color-grey-dark-80;
+            fill: $color-grey-dark-80;
           }
+
         }
       }
     }
