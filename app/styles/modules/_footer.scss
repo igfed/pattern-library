@@ -19,15 +19,20 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 	a, p {
 		color: $color-grey-dark-80;
 	}
-
+  .footer-container{
+    margin-left: $grid-margin*5;
+    margin-right: $grid-margin*5;
+  }
   .columns{
     padding-left: 22px;
     padding-right: 22px;
   }
 
   hr {
-    margin-left: $grid-margin*5;
-    margin-right: $grid-margin*5;
+    @include respond-to(small){
+      margin-left: $grid-margin*5;
+      margin-right: $grid-margin*5;
+    }
   }
 
   .footer-back-to-top-button{
@@ -57,7 +62,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
     &:hover, &:focus{
       &::after{
-        transform: rotate(225deg) translate3d(3px,3px,0);
+        transform: rotate(225deg) translate3d(2.5px,2.5px,0);
       }
     }
     /*.columns{
@@ -115,16 +120,17 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         .accordion-title{
           padding: 20px 0px;
           border: none;
-          border-bottom: 1px solid #314659;
+          border-bottom: 1px solid $color-grey-light-45;
           text-transform: uppercase;
           font-size: 14px;
+          font-family: $font-semibold;
           color: $color-grey-dark-60;
-
           &:before{
             top: 40%;
           }
 
           @include respond-to(large){
+            font-family: $brand-font;
             pointer-events: none;
             border: none;
             font-size: 16px;
@@ -159,14 +165,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           .accordion-title{
             &::before{
               transform: rotate(225deg) translate3d(0,0,0);
-            }
-          }
-
-          .accordion-content{
-            border-bottom: 1px solid $color-grey-dark-20;
-
-            @include respond-to(large){
-              border-bottom: none;
             }
           }
         }
@@ -204,7 +202,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                 }
 
                 &:hover{
-                  background: #314659;
+                  background: $color-grey-light-30;
                   &:before{
                     border-left: 2px solid $color-grey-dark-60;
                   }
@@ -249,8 +247,8 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
     .footer-copyright-border-top{
       .row{
-        
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
 
         @include respond-to(large){
           border-top: 1px solid $color-grey-dark-20;
@@ -279,7 +277,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
               display: inline-block;
               li{
                 display: table-cell;
-                line-height: 40px;
+                line-height: 20px;
                 padding: 3px 18px;
                 font-size: 12px;
                 font-color: $color-grey-dark-80;
@@ -296,7 +294,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                 }
 
                 a{
-                  line-height: 40px;
+                  line-height: 20px;
                   padding:0;
                   color: $color-grey-dark-80;
 
