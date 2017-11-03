@@ -12,7 +12,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 .site-footer{
 	background: $color-grey-light-5;
 	padding-top: $base-spacing*5;
-
   @include respond-to(large){
     padding-top: 90px;
   }
@@ -23,17 +22,19 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   .footer-container{
     margin-left: $grid-margin*5;
     margin-right: $grid-margin*5;
+    @include respond-to(small){
+      margin-left: $grid-margin*10;
+      margin-right: $grid-margin*10;
+    }
   }
-  .columns{
+  /*.columns{
     padding-left: 22px;
     padding-right: 22px;
-  }
+  }*/
 
   hr {
-    @include respond-to(small){
       margin-left: $grid-margin*5;
       margin-right: $grid-margin*5;
-    }
   }
 
   .footer-back-to-top-button{
@@ -42,7 +43,8 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     display: block;
     padding: 0 16px;
     width: fit-content;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     @include respond-to(medium) {
       margin-bottom: 40px;
       padding: 0 32px;
@@ -153,7 +155,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             border-right: solid 1px;
             transform-origin: center middle;
             transform: rotate(45deg) translate3d(0,0,0);
-            transition: transform 0.3s ease-out;
+            transition: transform 3s ease-out;
             right: 5px;
             color: $color-grey-dark-60;
             @include respond-to(large){
@@ -184,7 +186,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
            @include respond-to(large){
             display: inline-block!important;
            }
-
            li{
               color: $color-grey-dark-60;
               font-weight: bold;
@@ -238,9 +239,32 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     padding-bottom: 35px;
     max-width: 300px;
   }
-
+  .social-media{
+    margin-left: auto;
+    margin-right: auto;
+    li{
+      width: 75px;
+      height: 48px;
+      position: relative;
+      a{
+        border: 2px solid transparent;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+      }
+      a:hover{
+        border-color: $color-grey-dark-80;
+      }
+      svg{
+        position: absolute;
+        top: 25%;
+        left: 16%;
+        width: 24px;
+        fill: $color-grey-dark-80;
+      }
+    }
+  }
   .footer-copyright{
-      
     @include respond-to(large){
       padding-right: 0;
       padding-left: 0;
@@ -308,31 +332,5 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         }
       }
     } 
-  }
-}
-
-.social-media{
-  margin-left: auto;
-  margin-right: auto;
-  li{
-    width: 75px;
-    height: 48px;
-    position: relative;
-    a{
-      border: 2px solid transparent;
-      border-radius: 50%;
-      width: 48px;
-      height: 48px;
-    }
-    a:hover{
-      border-color: $color-grey-dark-80;
-    }
-    svg{
-      position: absolute;
-      top: 25%;
-      left: 16%;
-      width: 24px;
-      fill: $color-grey-dark-80;
-    }
   }
 }
