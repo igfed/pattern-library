@@ -259,7 +259,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         .columns{
           padding-top: 10px;
           padding-bottom: 10px;
-          border-top: 1px solid $color-grey-dark-20;
+          border-top: 1px solid $color-grey-light-30;
           line-height: normal;
           text-align: center;
 
@@ -274,17 +274,17 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           }
 
             ul{
+              margin-left: auto;
+              margin-right: auto;
               display: inline-block;
-              
               li{
-                color: #acb7c0;
-                line-height: 1.6;
+                display: table-cell;
+                line-height: 40px;
                 padding: 3px 18px;
                 font-size: 12px;
-                color: red;
-
+                font-color: $color-grey-dark-80;
                 &:not(:last-child){
-                  border-right: 1px solid $color-grey-dark-20;
+                  border-right: 1px solid $color-grey-light-30;
 
                 }
 
@@ -292,13 +292,13 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                   padding-top:0;
                   padding-bottom:0;
 
-                  border-right: 1px solid $color-grey-dark-20;
+                  border-right: 1px solid $color-grey-light-30;
                 }
 
                 a{
+                  line-height: 40px;
                   padding:0;
-                  color: #acb7c0;
-                  color: red;
+                  color: $color-grey-dark-80;
 
                   &:hover{
                     text-decoration: underline;
