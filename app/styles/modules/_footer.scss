@@ -6,9 +6,10 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     display: none!important;
   }
 }
-
-
-.site-footer {
+.footer-accordion{
+  max-width: 100%;
+}
+.site-footer{
 	background: $color-grey-light-5;
 	padding-top: $base-spacing*5;
 
@@ -196,7 +197,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                   content: "\00a0";
                   width: 18px;
                   display: inline-block;
-                  border-left: 2px solid #0d263c;
+                  border-left: 2px solid transparent;
                   left: 1rem;
                   position: absolute;
                 }
