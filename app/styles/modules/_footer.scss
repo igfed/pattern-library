@@ -1,21 +1,17 @@
-.site-footer {
-  
-}
-
 /*.hide-for-small is supposed to be a class in foundation css,
 it doesnt work for me maybe we need to update to the latest version of foundation*/
+
 .hide-for-small{
   @media screen and (max-width: 1024px){
     display: none!important;
   }
 }
-
-
-.site-footer {
-	background: $color-grey-light-75;
-  color: $color-grey-dark-80;
+.footer-accordion{
+  max-width: 100%;
+}
+.site-footer{
+	background: $color-grey-light-5;
 	padding-top: $base-spacing*5;
-
   @include respond-to(large){
     padding-top: 90px;
   }
@@ -23,41 +19,75 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 	a, p {
 		color: $color-grey-dark-80;
 	}
-
-  .columns{
+  .footer-container{
+    margin-left: $grid-margin*5;
+    margin-right: $grid-margin*5;
+    @include respond-to(small){
+      margin-left: $grid-margin*10;
+      margin-right: $grid-margin*10;
+    }
+  }
+  /*.columns{
     padding-left: 22px;
     padding-right: 22px;
+  }*/
+
+  hr {
+    border-color: $color-grey-light-30;
+    margin-left: $grid-margin*5;
+    margin-right: $grid-margin*5;
   }
 
-
   .footer-back-to-top-button{
-    padding-left: 22px;
-    padding-right: 22px;
-    margin-bottom: 40px;
+    border: 1px solid $color-grey-light-45;
+    border-radius: 15px;
+    display: block;
+    padding: 0 16px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond-to(medium) {
+      margin-bottom: 40px;
+      padding: 0 32px;
+    }
+    &::after {
+      content: '';
+      position: relative;
+      top: 2.5px;
+      display: inline-flex;
+      margin-left: $base-spacing*1.5;
+      width: $arrow-size*1.5;
+      height: $arrow-size*1.5;
+      border-bottom: solid 1px;
+      border-right: solid 1px;
+      transform: rotate(225deg) translate3d(0,0,0);
+      transition: transform 0.3s ease-out;
+    }
 
-    .columns{
-      border-bottom: 1px solid $color-grey-dark-60;
+    &:hover, &:focus{
+      &::after{
+        transform: rotate(225deg) translate3d(2.5px,2.5px,0);
+      }
+    }
+    /*.columns{
       padding-bottom: 8px;
-
       a{
-
-        &::before{
+        &::after{
           content: '';
           display: block;
-          margin: 0 auto;
+          margin: 0 10px;
           width: $arrow-size*1.5;
           height: $arrow-size*1.5;
-          border: none;
+          border: 0 1px 1px;
           border-bottom: solid 1px;
           border-right: solid 1px;
           transform-origin: center middle;
           transform: rotate(225deg) translate3d(0,0,0);
           transition: transform 0.3s ease-out;
-          margin-bottom: -3px;
         }
 
         &:hover, &:focus{
-          &::before{
+          &::after{
             transform: rotate(225deg) translate3d(3px,3px,0);
           }
         }
@@ -66,13 +96,13 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         border-color: $color-grey-dark-60;
         padding-bottom: 8px;
       }
-    }
+    }*/
   }
 
   .footer-navigation{
-    // @include respond-to(large) {
-    //   border-bottom: 1px solid #E5ECED;
-    // }
+     @include respond-to(large) {
+       border-bottom: 1px solid #E5ECED;
+     }
 
     .columns{
       @include respond-to(large){
@@ -84,7 +114,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
       background: none;
       border: none;
-      margin: 0;
+      margin: 0 auto;
 
       .accordion-item{
         @include respond-to(large) {
@@ -94,16 +124,17 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         .accordion-title{
           padding: 20px 0px;
           border: none;
-          border-bottom: 1px solid #314659;
+          border-bottom: 1px solid $color-grey-light-45;
           text-transform: uppercase;
           font-size: 14px;
+          font-family: $font-semibold;
           color: $color-grey-dark-60;
-
           &:before{
             top: 40%;
           }
 
           @include respond-to(large){
+            font-family: $brand-font;
             pointer-events: none;
             border: none;
             font-size: 16px;
@@ -125,10 +156,9 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             border-right: solid 1px;
             transform-origin: center middle;
             transform: rotate(45deg) translate3d(0,0,0);
-            transition: transform 0.3s ease-out;
+            transition: transform 3s ease-out;
             right: 5px;
-            color: #acb7c0;
-
+            color: $color-grey-dark-60;
             @include respond-to(large){
               display: none;
              }
@@ -139,14 +169,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           .accordion-title{
             &::before{
               transform: rotate(225deg) translate3d(0,0,0);
-            }
-          }
-
-          .accordion-content{
-            border-bottom: 1px solid $color-grey-dark-20;
-
-            @include respond-to(large){
-              border-bottom: none;
             }
           }
         }
@@ -165,26 +187,25 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
            @include respond-to(large){
             display: inline-block!important;
            }
-
            li{
+              color: $color-grey-dark-60;
+              font-weight: bold;
               a{
-
-                padding: 0.9rem 0;
-                padding-left: 1.8rem;
-                position: relative;
+                color: $color-grey-dark-60;
+                font-weight: normal;
+                padding: 0.9rem 1.8rem;
 
                 &:before{
                   content: "\00a0";
                   width: 18px;
                   display: inline-block;
-                  border-left: 2px solid #0d263c;
+                  border-left: 2px solid transparent;
                   left: 1rem;
                   position: absolute;
                 }
 
                 &:hover{
-                  background: #314659;
-
+                  background: $color-grey-light-30;
                   &:before{
                     border-left: 2px solid $color-grey-dark-60;
                   }
@@ -219,30 +240,63 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     padding-bottom: 35px;
     max-width: 300px;
   }
-
+  .social-media{
+    margin-left: auto;
+    margin-right: auto;
+    ul{
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+      li{
+        display: table-cell;
+        width: 50px;
+        position: relative;
+        a{
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+        }
+        a:hover{
+          border-color: $color-grey-dark-80;
+        }
+        svg{
+          margin-left: auto;
+          margin-right: auto;
+          position: absolute;
+          top: 25%;
+          right: 25%;
+          width: 24px;
+          fill: $color-grey-dark-80;
+          @include respond-to(xsmall){
+            left: 25%;
+          }
+        }
+      }
+    }
+  }
   .footer-copyright{
-      
     @include respond-to(large){
       padding-right: 0;
       padding-left: 0;
     }
-
     .footer-copyright-border-top{
       .row{
-        
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
 
         @include respond-to(large){
-          border-top: 1px solid $color-grey-dark-20;
+          border-top: 1px solid $color-grey-light-30;
           text-align: center;
         }
         .columns{
           padding-top: 10px;
           padding-bottom: 10px;
-          border-top: 1px solid $color-grey-dark-20;
+          border-top: 1px solid $color-grey-light-30;
           line-height: normal;
           text-align: center;
-
           @include respond-to(large){
             width: auto;
             border-top: 0;
@@ -252,66 +306,54 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             display: inline-block;
             float: none;
           }
+          &:not(:first-child){
+            margin-left: $grid-margin*5;
+            margin-right: $grid-margin*5;
+          }
+          @include respond-to(medium){
+            &:not(:first-child){
+              margin-left: $grid-margin*10;
+              margin-right: $grid-margin*10;
+            }
+          }
+          @include respond-to(large){
+            &:not(:first-child){
+              margin: auto 0;
+            }
+          }
+          ul{
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            li{
+              display: table-cell;
+              line-height: 20px;
+              padding: 3px 18px;
+              font-size: 12px;
+              font-color: $color-grey-dark-80;
+              &:not(:last-child){
+                border-right: 1px solid $color-grey-light-30;
+              }
+              @include respond-to(large){
+                padding-top:0;
+                padding-bottom:0;
 
-            ul{
-              display: inline-block;
-              
-              li{
+                border-right: 1px solid $color-grey-light-30;
+              }
 
-                color: #acb7c0;
-                line-height: 1.6;
-                padding: 3px 18px;
-                font-size: 12px;
+              a{
+                line-height: 20px;
+                padding:0;
+                color: $color-grey-dark-80;
 
-                &:not(:last-child){
-                  border-right: 1px solid $color-grey-dark-20;
-
-                }
-
-                @include respond-to(large){
-                  padding-top:0;
-                  padding-bottom:0;
-
-                  border-right: 1px solid $color-grey-dark-20;
-                }
-
-                a{
-                  padding:0;
-                  color: #acb7c0;
-
-                  &:hover{
-                    text-decoration: underline;
-                  }
+                &:hover{
+                  text-decoration: underline;
                 }
               }
             }
+          }
         }
       }
     } 
   }
-}
-
-.social-media{
-  ul{
-      display: table;
-      margin: 0;
-      width: 100%;
-
-      li{
-        .social-media-icon{
-          width: 48px;
-          height: 48px;
-          padding: 0;
-          position: relative;
-          margin: 0 auto;
-
-          img{
-            position: absolute;
-            top: 23%;
-            left: 24%;
-            width: 24px;
-          }
-        }
-      }
-    }
 }
