@@ -31,7 +31,7 @@ const app = (() => {
     $(document).foundation();
 
     // Check for components
-    if ($('#main-navigation').length) navigation.init();
+    if ($('.site-nav').length) navigation.init();
     if ($('.ig-form').length) forms.init();
     if ($('.more-section').length) more.init();
     if ($('.ig-carousel').length) carousel.init();

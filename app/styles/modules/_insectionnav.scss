@@ -13,6 +13,14 @@
   @include respond-to(large) {
     flex-wrap: nowrap;
   }
+
+  a {
+      color: $color-grey-dark-60;
+      &:hover {
+        text-decoration: none;
+        color: $color-grey-dark-80;
+      }
+  }
 }
 
 .in-section-nav-title {

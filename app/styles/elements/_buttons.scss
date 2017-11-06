@@ -23,11 +23,11 @@ html [type="button"]{
 .button {
 	cursor: pointer;
 	box-sizing: border-box;
-	padding: $base-spacing/2 $base-spacing*2;
-	min-width: 144px;
+	padding: $base-spacing $base-spacing*3;
+	min-width: 216px;
 	text-align: center;
 	border-radius: $border-radius;
-	font-size: $font-size-mini;
+	font-size: $font-size-base;
 	line-height: 1em;
 	border: 2px solid $color-darkest;
 	font-family: $font-stack;
@@ -45,12 +45,12 @@ html [type="button"]{
 		background-color: inherit;
 	}
 
-	@include respond-to(medium) {
-      min-width: 216px;
-    }
-    @include respond-to(large) {
-      min-width: 280px;
-    }
+	&.button-short {
+		min-width: 144px;
+	}
+	&.button-long {
+		min-width: 280px;
+	}
 }
 
 .button.button-large {

@@ -22,9 +22,46 @@ Styleguide 3.1
   .home-link {
 		margin: 0;
 	}
-  .top-bar, .top-bar .menu {
+}
+
+.site-nav-bar {
+  background: transparent;
+  border-bottom: 1px solid $color-grey;
+  .menu {
     background: transparent;
+    a {
+      color: $color-grey-dark-60;
+      &:hover {
+        text-decoration: none;
+        color: $color-grey-dark-80;
+      }
+      &::after {
+        border-color: $color-grey-dark-80;
+      }
+    }
   }
+  .submenu {
+    background: $color-lightest;
+  }
+  #site-nav-main {
+    flex-wrap: wrap;
+  }
+  .site-nav-main {
+    flex: 0 0 100%;
+
+    @include respond-to(large) {
+      flex: 1 1 auto;
+     }
+  };
+  .site-nav-aux {
+    flex: 0 0 100%;
+    @include respond-to(large) {
+      flex: 1 1 auto;
+     }
+  }
+  .site-nav-login {
+    flex: 0 0 auto;
+  };
 }
 
 #skip-navigation {
@@ -42,12 +79,35 @@ Styleguide 3.1
 // }
 
 .site-search {
-  input {
-    width: 30px;
-    display: inline-block;
+  #site-search-q {
+    display: block;
+    width: 144px;
+    margin: 0;
+    transition: width 0.3s ease-out;
   }
   button {
-   width: 30px;
-   display: inline-block; 
+   display: none;
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 44px;
+   height: 40px;
+   padding: $base-spacing/2;
+   background: $color-brand-primary;
+   opacity: 0;
+   transition: opacity 0.4s ease-out;
+  }
+
+  &.is-active {
+      background: $color-lightest;
+      #site-search-q {
+        width: 100%;
+        padding-right: 10px;
+      }
+      button {
+       display: block; 
+       opacity: 1;
+       
+      }
   }
 }
