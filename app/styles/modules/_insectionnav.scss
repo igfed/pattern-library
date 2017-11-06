@@ -1,0 +1,61 @@
+.no-js .in-section-nav {
+  opacity: 0;
+}
+.in-section-nav {
+  padding: $base-spacing 0;
+  background-color: transparent;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include respond-to(large) {
+    flex-wrap: nowrap;
+  }
+}
+
+.in-section-nav-title {
+  flex: 1 1 100%;
+  position: relative;
+
+  @include respond-to(large) {
+    flex: 0 0 auto;
+  }
+} 
+.in-section-nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  button {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+/* Styling for arrow icons on right*/
+.in-section-nav-toggle::after {
+  content: " ";
+  border: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 8px;
+  transition: all 0.5s;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.is-active > .accordion-title::after {
+  transform: rotate(-135deg);
+}
+
+.in-section-nav-menu {
+  flex: 1 1 100%;
+  .menu {
+    background-color: transparent;
+  }
+}
