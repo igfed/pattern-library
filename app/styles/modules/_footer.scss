@@ -33,8 +33,9 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   }*/
 
   hr {
-      margin-left: $grid-margin*5;
-      margin-right: $grid-margin*5;
+    border-color: $color-grey-light-30;
+    margin-left: $grid-margin*5;
+    margin-right: $grid-margin*5;
   }
 
   .footer-back-to-top-button{
@@ -281,14 +282,13 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       padding-right: 0;
       padding-left: 0;
     }
-
     .footer-copyright-border-top{
       .row{
         margin-left: auto;
         margin-right: auto;
 
         @include respond-to(large){
-          border-top: 1px solid $color-grey-dark-20;
+          border-top: 1px solid $color-grey-light-30;
           text-align: center;
         }
         .columns{
@@ -306,39 +306,52 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             display: inline-block;
             float: none;
           }
-            ul{
-              margin-left: auto;
-              margin-right: auto;
-              display: inline-block;
-              li{
-                display: table-cell;
+          &:not(:first-child){
+            margin-left: $grid-margin*5;
+            margin-right: $grid-margin*5;
+          }
+          @include respond-to(medium){
+            &:not(:first-child){
+              margin-left: $grid-margin*10;
+              margin-right: $grid-margin*10;
+            }
+          }
+          @include respond-to(large){
+            &:not(:first-child){
+              margin: auto 0;
+            }
+          }
+          ul{
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            li{
+              display: table-cell;
+              line-height: 20px;
+              padding: 3px 18px;
+              font-size: 12px;
+              font-color: $color-grey-dark-80;
+              &:not(:last-child){
+                border-right: 1px solid $color-grey-light-30;
+              }
+              @include respond-to(large){
+                padding-top:0;
+                padding-bottom:0;
+
+                border-right: 1px solid $color-grey-light-30;
+              }
+
+              a{
                 line-height: 20px;
-                padding: 3px 18px;
-                font-size: 12px;
-                font-color: $color-grey-dark-80;
-                &:not(:last-child){
-                  border-right: 1px solid $color-grey-light-30;
+                padding:0;
+                color: $color-grey-dark-80;
 
-                }
-
-                @include respond-to(large){
-                  padding-top:0;
-                  padding-bottom:0;
-
-                  border-right: 1px solid $color-grey-light-30;
-                }
-
-                a{
-                  line-height: 20px;
-                  padding:0;
-                  color: $color-grey-dark-80;
-
-                  &:hover{
-                    text-decoration: underline;
-                  }
+                &:hover{
+                  text-decoration: underline;
                 }
               }
             }
+          }
         }
       }
     } 
