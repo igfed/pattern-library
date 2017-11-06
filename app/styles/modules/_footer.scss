@@ -242,36 +242,36 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   .social-media{
     margin-left: auto;
     margin-right: auto;
-    li{
+    ul{
+      display: table;
       margin-left: auto;
       margin-right: auto;
-      width: 48px;
-      height: 48px;
-      position: relative;
-      @include respond-to(medium){
-        width: 75px;
-      }
-      a{
-        margin-left: auto;
-        margin-right: auto;
-        border: 2px solid transparent;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-      }
-      a:hover{
-        border-color: $color-grey-dark-80;
-      }
-      svg{
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        top: 25%;
-        right: 25%;
-        width: 24px;
-        fill: $color-grey-dark-80;
-        @include respond-to(medium){
-          left: 25%;
+      li{
+        display: table-cell;
+        width: 50px;
+        position: relative;
+        a{
+          margin-left: auto;
+          margin-right: auto;
+          border: 2px solid transparent;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+        }
+        a:hover{
+          border-color: $color-grey-dark-80;
+        }
+        svg{
+          margin-left: auto;
+          margin-right: auto;
+          position: absolute;
+          top: 25%;
+          right: 25%;
+          width: 24px;
+          fill: $color-grey-dark-80;
+          @include respond-to(xsmall){
+            left: 25%;
+          }
         }
       }
     }
@@ -297,10 +297,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           border-top: 1px solid $color-grey-light-30;
           line-height: normal;
           text-align: center;
-          &:not(:first-child){
-            margin-left: $grid-margin*5;
-            margin-right: $grid-margin*5;
-          }
           @include respond-to(large){
             width: auto;
             border-top: 0;
@@ -310,7 +306,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             display: inline-block;
             float: none;
           }
-
             ul{
               margin-left: auto;
               margin-right: auto;
