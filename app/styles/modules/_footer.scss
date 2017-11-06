@@ -283,20 +283,21 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       padding-left: 0;
     }
     .footer-copyright-border-top{
-      .row{
+      .grid-x{
         margin-left: auto;
         margin-right: auto;
-
+        justify-content: center;
+        text-align: center;
         @include respond-to(large){
           border-top: 1px solid $color-grey-light-30;
-          text-align: center;
         }
-        .columns{
+        .cell{
           padding-top: 10px;
           padding-bottom: 10px;
           border-top: 1px solid $color-grey-light-30;
           line-height: normal;
-          text-align: center;
+          justify-content: center;
+
           @include respond-to(large){
             width: auto;
             border-top: 0;
@@ -307,18 +308,12 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             float: none;
           }
           &:not(:first-child){
-            margin-left: $grid-margin*5;
-            margin-right: $grid-margin*5;
-          }
-          @include respond-to(medium){
-            &:not(:first-child){
-              margin-left: $grid-margin*10;
-              margin-right: $grid-margin*10;
-            }
+            max-width: 80%;
           }
           @include respond-to(large){
             &:not(:first-child){
-              margin: auto 0;
+              max-width: 100%;
+              margin: 0;
             }
           }
           ul{
