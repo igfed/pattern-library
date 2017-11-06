@@ -1,6 +1,8 @@
 .jumbotron {
   background: $color-brand;
   color: $color-lightest;
+  padding-top: $base-spacing*5;
+  padding-bottom: $base-spacing*5;
   display: flex;
   align-items: center;
 }

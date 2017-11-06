@@ -30,7 +30,7 @@
     <header role="banner" class="site-nav">
       <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
       <div class="grid-container">
-        <div class="top-bar">
+        <div class="top-bar site-nav-bar">
           <div class="top-bar-title site-nav-title">
             <span data-responsive-toggle="site-nav-main" data-hide-for="large">
               <button data-toggle="site-nav-main" class="menu-icon dark">
@@ -39,49 +39,55 @@
             </span>
             <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
           </div>
-          <nav class="top-bar-left site-nav-main off-canvas position-top in-canvas-for-large" id="site-nav-main" data-off-canvas data-transition="overlap">
-            <div class="">
-              <button class="close-button" aria-label="Close menu" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-              </button>
+          <nav class="top-bar-left top-bar off-canvas in-canvas-for-large position-top" id="site-nav-main" data-off-canvas>
+            <div class="top-bar-left site-nav-main">
+              <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
+                <li><a href="components.html">Value Prop</a></li>
+                <li>
+                  <a href="elements.html">Services</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#0">Investments</a></li>
+                    <li><a href="#0">Insurance</a></li>
+                    <li><a href="#0">Estate Planning</a></li>
+                    <li><a href="#0">Tax planning</a></li>
+                    <li><a href="#0">Retirement</a></li>
+                    <li><a href="#0">Home Ownership</a></li>
+                    <li><a href="#0">Cash Flow</a></li>
+                  </ul>
+                </li>
+                <li><a href="modules.html">Get Advice</a></li>
+                <li><a href="#">More</a></li>
+              </ul>
             </div>
-            <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
-              <li><a href="components.html">Value Prop</a></li>
-              <li>
-                <a href="elements.html">Services</a>
-                <ul class="menu vertical nested">
-                  <li><a href="#0">Investments</a></li>
-                  <li><a href="#0">Insurance</a></li>
-                  <li><a href="#0">Estate Planning</a></li>
-                  <li><a href="#0">Tax planning</a></li>
-                  <li><a href="#0">Retirement</a></li>
-                  <li><a href="#0">Home Ownership</a></li>
-                  <li><a href="#0">Cash Flow</a></li>
-                </ul>
-              </li>
-              <li><a href="modules.html">Get Advice</a></li>
-              <li><a href="#">More</a></li>
-              <li><a href="#">Support</a></li>
-              <li>
-                <a href="elements.html">Sign in</a>
-                <ul class="menu vertical nested">
-                  <li><a href="#0">Client log in</a></li>
-                  <li><a href="#0">Solutions banking</a></li>
-                </ul>
-              </li>
-              <li><a href="#">French</a></li>
-            </ul>
+            <div class="top-bar-right site-nav-aux" id="site-nav-aux">
+              <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
+                <li><a href="#">Support</a></li>
+                <li>
+                  <form id="site-search" class="site-search" action="/en/search">
+                    <label for="site-search-q" class="show-for-sr">Search Investors Group</label>
+                    <input type="search" id="site-search-q" name="q" class="" placeholder="Search Investors Group">
+                    <button type="submit" class="">
+                      <img class="search-icon" src="images/search-icon.svg" alt="" width="24px" height="24px">
+                      <span class="show-for-sr">Submit</span>
+                    </button>
+                  </form>
+                </li>
+                <li><a href="#">French</a></li>
+              </ul> 
+            </div>
+            
           </nav>
-          <div class="top-bar-right site-nav-aux">
-            <form id="site-search" class="site-search" action="/en/search">
-                <label for="site-search-q" class="show-for-sr">Search Investors Group</label>
-                <input type="search" id="site-search-q" name="q" class="" placeholder="Search Investors Group">
-                <button type="submit" class="">
-                  <img class="search-icon" src="images/search-icon.svg" alt="" width="24px" height="24px">
-                  <span class="show-for-sr">Submit</span>
-                </button>
-            </form>
-          </div>
+          <div class="top-bar-right site-nav-login">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li>
+                  <a href="elements.html">Sign in</a>
+                  <ul class="menu vertical nested">
+                    <li><a href="#0">Client log in</a></li>
+                    <li><a href="#0">Solutions banking</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
         </div>
       </div>
     </header>

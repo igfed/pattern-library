@@ -4,25 +4,17 @@ import * as ig from './global.js';
 
 export default (() => {
 
-	let 
-		body = $('body'),
-		menuIcon = $('.menu-icon'),
-		closeButton = $('.close-button-circle'),
-		showForLarge = $('.show-for-large'),
-		searchInput = $('#site-search-q'),
+	let searchInput = $('#site-search-q'),
+		searchForm = $('#site-search'),
 		hasSubNav = $('.has-subnav');
 
 	function init(scope) {
-		menuIcon.click((e) => {
-			body.addClass('no-scroll');
-		});	
 
-		closeButton.click((e) => {
-			body.removeClass('no-scroll');	
+		searchInput.focus(() => {
+			searchForm.addClass('is-active');
 		});
-
-		showForLarge.click((e) => {
-			searchInput.focus();
+		searchInput.blur(() => {
+			searchForm.removeClass('is-active');
 		});
 
 		hasSubNav.click((e) => {
