@@ -71,6 +71,7 @@
     padding: $base-spacing*2 $base-spacing*4;
     @include respond-to(large) {
       padding: 0;
+      margin-left: $base-spacing;
     }
 
     li {
