@@ -156,7 +156,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             border-right: solid 1px;
             transform-origin: center middle;
             transform: rotate(45deg) translate3d(0,0,0);
-            transition: transform 3s ease-out;
+            transition: transform .5s ease-out;
             right: 5px;
             color: $color-grey-dark-60;
             @include respond-to(large){
