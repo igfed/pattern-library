@@ -45,25 +45,69 @@
   }
 }
 /* Styling for arrow icons on right*/
-.in-section-nav-toggle::after {
-  content: " ";
-  border: solid;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 8px;
-  transition: all 0.5s;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.is-active > .accordion-title::after {
-  transform: rotate(-135deg);
+.in-section-nav-toggle {
+  &::after {
+    content: " ";
+    border: solid;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: $base-spacing;
+    transition: all 0.5s;
+    transform: rotate(45deg) translate3d(0px, 0px, 0px);
+    position: absolute;
+    top: 0;
+    right: $base-spacing;
+  }
+
+  &.is-active::after {
+    transform: rotate(-135deg) translate3d(-6px, -8px, 0px);
+  }
 }
 
 .in-section-nav-menu {
   flex: 1 1 100%;
   .menu {
     background-color: transparent;
+    padding: $base-spacing*2 $base-spacing*4;
+    @include respond-to(large) {
+      padding: 0;
+      margin-left: $base-spacing;
+    }
+
+    li {
+      border-bottom: 1px solid $color-grey-light-15;
+      &:last-child {
+        border-color: transparent;
+      }
+      @include respond-to(large) {
+        border-bottom: 1px solid transparent;
+        border-right: 2px solid $color-grey-light-15;
+        &:last-child {
+          border-right: 2px solid transparent;
+        }
+      }
+
+      a {
+        margin: $base-spacing 0;
+        padding: $base-spacing;
+        border-left: 2px solid transparent;
+        transform: translate3d(-$base-spacing, 0px, 0px);
+
+        @include respond-to(large) {
+          margin: 0 $base-spacing*2;
+          padding: $base-spacing 0;
+          border-left: none;
+          border-bottom: 2px solid transparent;
+          transform: translate3d(0px, 0px, 0px);
+        }
+        &:hover, &:focus, &.is-active {
+          border-left: 2px solid $color-grey;
+          @include respond-to(large) {
+            border-left: none;
+            border-bottom: 2px solid $color-darkest;
+          }
+        }
+      }
+    }
   }
 }

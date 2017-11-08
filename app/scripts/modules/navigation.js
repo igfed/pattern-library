@@ -6,7 +6,9 @@ export default (() => {
 
 	let searchInput = $('#site-search-q'),
 		searchForm = $('#site-search'),
-		hasSubNav = $('.has-subnav');
+		hasSubNav = $('.has-subnav'),
+		inSectionNavToggle = $('.in-section-nav-toggle button'),
+		inSectionNav = $('.in-section-nav-toggle');
 
 	function init(scope) {
 
@@ -15,6 +17,10 @@ export default (() => {
 		});
 		searchInput.blur(() => {
 			searchForm.removeClass('is-active');
+		});
+
+		inSectionNavToggle.click((e) => {
+			inSectionNav.toggleClass('is-active');
 		});
 
 		hasSubNav.click((e) => {
