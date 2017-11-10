@@ -5,7 +5,7 @@ export default {
     input: 'app/scripts/modules/app.js',
     output: 'app/scripts/main.js',
     format: 'iife',
-    sourceMap: 'inline',
+    sourcemap: 'inline',
     plugins: [
         babel({
             exclude: 'node_modules/**',
