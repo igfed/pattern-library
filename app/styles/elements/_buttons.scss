@@ -86,9 +86,19 @@ html [type="button"]{
     padding-right: 0;
     min-width: auto;
     color: $color-darkest;
-
-    &:before{
-		display: block;
+    &:after{
+      content: '';
+      position: relative;
+      top: -2px;
+      display: inline-flex;
+      margin-left: $base-spacing*1;
+      width: $arrow-size*1;
+      height: $arrow-size*1;
+      border-bottom: solid 1px;
+      border-right: solid 1px;
+      transform: rotate(315deg) translate3d(0,0,0);
+      transition: transform 0.3s ease-out;
+/*		display: block;
 	    position: absolute;
 	    content: ' ';
 	    left: 0;
@@ -97,17 +107,19 @@ html [type="button"]{
 	    top: calc(100% - .05rem);
 	    background-color: $color-brand-secondary;
 	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
-	    transition: right .15s ease-out .15s, left .15s ease-out 0s;
+	    transition: right .15s ease-out .15s, left .15s ease-out 0s;*/
 	}
 
 	&:hover {
-		&:before {
-			left: calc(100% - 20px);
+		text-decoration: underline;
+		&:after {
+      transform: rotate(315deg) translate3d(2.5px,2.5px,0);
+/*			left: calc(100% - 20px);
 			right: 0;
 			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			transition: right .15s ease-out .15s, left .15s ease-out .3s;
 			text-decoration: none;
-			cursor: pointer;
+			cursor: pointer;*/
 		}
 	}
 }
