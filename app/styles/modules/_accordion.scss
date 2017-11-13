@@ -44,15 +44,16 @@ Styleguide 3.4
 .accordion-title:focus,
 .accordion-content {
   border: 0;
-  color: $color-darkest;
+  color: $color-grey-dark-60;
   text-decoration: none;
-  padding-left: 0;
-  @include respond-to(large) {
-    font-size: 1.5rem;
-  }
+  padding: $base-spacing*2 0;
   @include respond-to(medium) {
     padding-right: $grid-margin-medium;
     padding-left: $grid-margin-medium;
+  }
+  @include respond-to(large) {
+    font-size: 1.5rem;
+    padding: $base-spacing*4 0;
   }
 }
 
@@ -61,7 +62,13 @@ Styleguide 3.4
 }
 
 .accordion-text {
-  padding-top: 1rem;
+  padding-top: $base-spacing*5;
+  @include respond-to(medium) {
+    padding-top: $base-spacing*6;
+  }
+  @include respond-to(large) {
+    padding-top: $base-spacing*7;
+  }
 }
 
 .accordion-title:hover, .accordion-title:focus {
@@ -74,7 +81,7 @@ Styleguide 3.4
   border: solid $color-darkest;
   border-width: 0 1px 1px 0;
   display: inline-block;
-  padding: 7px;
+  padding: $base-spacing;
   transition: all 0.5s;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
