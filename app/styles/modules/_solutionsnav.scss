@@ -1,3 +1,11 @@
 .solutions-nav-container {
-	background-color: blue;
+	p{
+		color: $color-grey-dark-80;
+	}
+	.cell {
+		text-align: center;
+		.solutions-image{
+			border: 2px solid $color-grey-light-45;
+		}
+	}
 }
