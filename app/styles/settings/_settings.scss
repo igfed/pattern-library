@@ -46,16 +46,16 @@ $font-size-xl: $font-size * 1.5;
 $font-size-xxl: $font-size * 2;
 $font-size-super: $font-size * 3;
 
-$font-line: 1.5rem;
-$font-line-xmini: $font-size;
-$font-line-mini: $font-line;
-$font-line-base: $font-line;
-$font-line-medium: $font-line * 1.33;
-$font-line-medium-plus: $font-line * 1.33;
-$font-line-large: $font-line * 1.66;
-$font-line-xl: $font-line * 2.33;
-$font-line-xxl: $font-line * 3.66;
-$font-line-super: $font-line*3;
+$font-line: 1em;
+$font-line-xmini: $font-line*1.3;
+$font-line-mini: $font-line*1.7;
+$font-line-base: $font-line*1.5;
+$font-line-medium: $font-line*1.6;
+$font-line-medium-plus: $font-line*1.3;
+$font-line-large: $font-line*1.25;
+$font-line-xl: $font-line*1.16;
+$font-line-xxl: $font-line*1.22;
+$font-line-super: $font-line;
 
 // Color
 @function tint($color, $percentage) {

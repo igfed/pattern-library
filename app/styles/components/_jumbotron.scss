@@ -5,12 +5,23 @@
   padding-bottom: $base-spacing*5;
   display: flex;
   align-items: center;
+
+  padding-top: $base-spacing*2;
+  padding-bottom: $base-spacing*2;
+  @include respond-to(medium){
+    padding-top: $base-spacing*5;
+    padding-bottom: $base-spacing*5;
+  }
+  @include respond-to(large){
+    padding-top: $base-spacing*9;
+    padding-bottom: $base-spacing*9;
+  }
 }
 
 .jumbotron-content {
-  max-width: 100%;
   text-align: center;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
+
+  p {
+    margin-bottom: 0;
+  }
 }

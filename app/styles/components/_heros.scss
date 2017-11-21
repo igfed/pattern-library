@@ -1,10 +1,18 @@
 .hero {
   background: $color-brand-light-15;
   color: $color-grey-dark-60;
-  padding-top: $base-spacing*16;
-  padding-bottom: $base-spacing*16;
   display: flex;
   align-items: center;
+  padding-top: $base-spacing*3;
+  padding-bottom: $base-spacing*3;
+  @include respond-to(medium){
+    padding-top: $base-spacing*5;
+    padding-bottom: $base-spacing*5;
+  }
+  @include respond-to(large){
+    padding-top: $base-spacing*7;
+    padding-bottom: $base-spacing*7;
+  }
 }
 
 .hero-content {
