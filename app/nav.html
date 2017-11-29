@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IG Pattern Library</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/foundation-sites/dist/css/foundation.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+ 
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+  <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
+  <div class="off-canvas position-left in-canvas-for-large" data-transition="overlap" id="site-nav-main" data-off-canvas>
+    <header role="banner" class="site-nav">
+      <div class="grid-container">
+        <!-- Close button -->
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- Menu -->
+        <nav class="top-bar">
+          <div class="top-bar-title reveal-for-large">
+            <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+          </div>
+          <div class="top-bar-left site-nav-main">
+            <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
+              <li><a href="/content/investorsgroup/en_ca/value-proposition.html">Value Prop</a></li>
+              <li>
+                <a href="#">Services</a>
+                <ul class="menu vertical nested">
+                  <li><a href="/content/investorsgroup/en_ca/services/investments.html">Investments</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/insurance.html">Insurance</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/estate-planning.html">Estate Planning</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/tax-planning.html">Tax planning</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/retirement.html">Retirement</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/home-ownership.html">Home Ownership</a></li>
+                  <li><a href="/content/investorsgroup/en_ca/services/cash-flow-management.html">Cash Flow</a></li>
+                </ul>
+              </li>
+              <li><a href="modules.html">Get Advice</a></li>
+              <li><a href="#">More</a></li>
+            </ul>
+          </div>
+          <div class="top-bar-right site-nav-aux" id="site-nav-aux">
+            <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
+              <li>
+                <a href="elements.html">Sign in</a>
+                <ul class="menu vertical nested">
+                  <li><a href="#0">Client log in</a></li>
+                  <li><a href="#0">Solutions banking</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Support</a></li>
+              <li>
+                <form id="site-search" class="site-search" action="/en/search">
+                  <label for="site-search-q" class="show-for-sr">Search Investors Group</label>
+                  <input type="search" id="site-search-q" name="q" class="" placeholder="Search Investors Group">
+                  <button type="submit" class="">
+                    <img class="search-icon" src="images/search-icon.svg" alt="" width="24px" height="24px">
+                    <span class="show-for-sr">Submit</span>
+                  </button>
+                </form>
+              </li>
+              <li><a href="#">French</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <div class="off-canvas position-right hide-for-large" data-transition="overlap" id="site-nav-login" data-off-canvas>
+    <ul class="menu vertical nested">
+      <li><a href="#0">Client log in</a></li>
+      <li><a href="#0">Solutions banking</a></li>
+    </ul>
+  </div>
+  <div class="title-bar hide-for-large">
+    <div class="title-bar-left">
+      <button type="button" class="menu-icon" data-toggle="site-nav-main">
+      </button>
+    </div>
+    <div class="title-bar-title">
+      <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
+    </div>
+    <div class="title-bar-right">
+      <button type="button" class="menu-icon" data-toggle="site-nav-login"></button>
+    </div>
+  </div>
+
+<main role="main" id="content" class="off-canvas-content" data-off-canvas-content">
+  <div class="grid-container">
+    <section class="grid-x grid-padding-x align-center">
+        <div class="medium-8 cell">
+          <h1>Navigation</h1>
+          <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
+
+          <h2>Keep it Simple</h2>
+          <ul>
+            <li>actions easy and frictionless.</li>
+            <li>Use plain language and simple sentences.</li>
+            <li>Choose clarity over cleverness.</li>
+            <li>Create effortless, intuitive interactions that accelerate customer progress. Challenge the complicated and cluttered. Never get in the way of users doing what they came to do.</li>
+          </ul>
+
+        </div>
+    </section>
+  </div>
+</main>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="/bower_components/jquery-validation/dist/additional-methods.js"></script>
+    <script src="/bower_components/what-input/dist/what-input.js"></script>
+    <script src="/bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/typeahead.js/dist/typeahead.bundle.js"></script>
+    <script src="/bower_components/mustache.js/mustache.js"></script>
+    <script src="/bower_components/jquery-visible/jquery.visible.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

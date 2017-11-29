@@ -71,6 +71,10 @@ Styleguide 3.1
   z-index: 1000;
 }
 
+.js-off-canvas-overlay {
+  filter: blur(5px);
+}
+
 // .site-nav-wrap {
 //   display: flex;
 //   @include respond-to(large) {
