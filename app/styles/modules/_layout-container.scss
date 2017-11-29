@@ -1,22 +1,46 @@
 .ig-layout-container {
-
   a .ig-title {
     &:hover {
       text-decoration: underline;
     }
   }
 
+  &.column-padding-inside>.row>.ig-component-block.columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  >.row>.ig-component-block.component-border {
+    border-right: 2px solid $border-color-light;
+    &:last-child {
+      border-right: none !important;
+    }
+  }
   @media screen and (max-width: 640px) {
     .ig-custom-10 {
       width: 100% !important;
     }
+
+    // reset custom desktop styles for base components (leave margin-top on component blocks as default)
+    .ig-list, .ig-figure, .ig-text {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .ig-title {
+      padding: 0 !important;
+      margin: 0 0 10px !important;
+    }
+    .ig-component-block {
+      margin-top: 30px;
+    }
+
+    .ig-component-block:first-child {
+      margin-top: 0;
+    }
+
+    >.row>.ig-component-block.component-border {
+      border-right: none;
+    }
   }
-
-  &.column-padding-inside > .row > .ig-component-block.columns {
-    padding: 0;
-  }
-
-
   @media screen and (min-width: 641px) {
     .ig-custom-10 {
       width: 20% !important;
@@ -24,12 +48,11 @@
     &.equal-heights {
       display: flex;
       flex-wrap: wrap;
-
       .ig-component-block {
         display: flex;
         height: 100%;
-
-        .ig-list, .ig-figure {
+        .ig-list,
+        .ig-figure {
           height: 100%;
         }
       }

@@ -1,100 +1,99 @@
 .ig-list {
-
   // Border classes for each list block
   &.border-left {
-    border-left: 2px solid #ccc;
+    border-left: 2px solid $border-color-light;
   }
-
   &.border-right {
-    border-right: 2px solid #ccc;
+    border-right: 2px solid $border-color-light;
   }
-
   &.border-bottom {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid $border-color-light;
   }
-
-  @media screen and (max-width: 640px) {
-    border: none !important;
-  }
-
   .ig-list__heading {
     margin-bottom: 0;
-  }
-
-  // Mostly just for demo
+  } // Mostly just for demo
   h1.ig-list__heading {
     font-size: 52px;
   }
-
   @media screen and (max-width: 1024px) {
     h1.ig-list__heading {
       font-size: 40px;
     }
-  }
-
-  // Add these alignment classes via AEM dialog dropdown
-  .ig-list__heading-group.align-left, .ig-list__ul.align-left {
+  } // Add these alignment classes via AEM dialog dropdown
+  .ig-list__heading-group.align-left,
+  .ig-list__ul.align-left {
     text-align: left;
   }
-
-  .ig-list__heading-group.align-right, .ig-list__ul.align-right {
+  .ig-list__heading-group.align-right,
+  .ig-list__ul.align-right {
     text-align: right;
   }
-
-  .ig-list__heading-group.align-center, .ig-list__ul.align-center {
+  .ig-list__heading-group.align-center,
+  .ig-list__ul.align-center {
     text-align: center;
-  }
-
-  // Special subheading classes
+  } // Special subheading classes
   p.small {
     font-size: 15px;
   }
-
   p.legal {
     font-size: 15px;
     color: #999
-  }
-
-  // Borders on list items
+  } // Borders on list items
   .ig-list__ul--border-style-1 li {
     border-top: none;
     border-bottom: none;
   }
-
   .ig-list__ul--border-style-2 li {
-    border-top: 1px solid #ccc;
-
+    border-top: 1px solid $border-color-light;
     &:last-child {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $border-color-light;
     }
   }
-
   .ig-list__ul--border-style-3 li {
-    border-top: 1px solid #ccc;
-
+    border-top: 1px solid $border-color-light;
     &:last-child {
       border-bottom: none;
     }
   }
-
   .ig-list__ul--border-style-4 li {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $border-color-light;
     border-bottom: none;
-
     &:first-child {
       border-top: none !important;
     }
   }
-
+  @media screen and (max-width: 640px) {
+    &.border-right,
+    &.border-left,
+    &.border-bottom,
+    .ig-list__ul--border-style-2 li,
+    .ig-list__ul--border-style-3 li,
+    .ig-list__ul--border-style-4 li {
+      border: none !important;
+    }
+  }
   .ig-list__ul {
     margin: 0;
   }
-
-  .ig-list__item, .ig-list__item p {
+  .ig-list__item,
+  .ig-list__item p {
     font-size: 22px;
     letter-spacing: 1px;
     color: #666;
-    font-family: WhitneyLight,WhitneyBook,sans-serif;
+    font-family: WhitneyLight, WhitneyBook, sans-serif;
   }
+}
 
+@media screen and (max-width: 640px) {
+  .list {
+    width: 60%;
+    border-bottom: 2px solid $border-color-light;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    .ig-list__item,
+    .ig-list__item p {
+      font-size: 16px;
+      padding: 0 !important;
+    }
+  }
 }

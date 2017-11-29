@@ -15,6 +15,7 @@
 window._satellite = window._satellite || {};
 window._satellite.track = window._satellite.track || function () {};
 window.digitalData.event = {};
+window.digitalData.events = []
 
 import navigation from './navigation.js'
 import more from './more.js';

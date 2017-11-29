@@ -1,22 +1,15 @@
 .ig-figure {
   clear: both;
-
-  &.align-left {
-    .ig-figure__title, .ig-figure__description, .ig-figure__link {
-      text-align: left !important;
-    }
-
-    img {
-      width: 50%;
-      float: left;
-      padding: 0 2% 0 0;
-    }
-
+  .ig-figure__title+.ig-figure__subtitle {
+    margin-top: -8px !important;
+  }
+  span.ig-figure__title,
+  span.ig-figure__subtitle {
+    display: none;
+  }
+  @media screen and (max-width: 640px) {
     figcaption {
-      width: 50%;
-      float: right;
-      padding: 0 0 0 2%;
+      text-align: center !important;
     }
   }
 }
-
