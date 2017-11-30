@@ -1,20 +1,14 @@
 .jumbotron {
   background: $color-brand;
   color: $color-lightest;
-  padding-top: $base-spacing*5;
-  padding-bottom: $base-spacing*5;
   display: flex;
   align-items: center;
 
   padding-top: $base-spacing*2;
   padding-bottom: $base-spacing*2;
   @include respond-to(medium){
-    padding-top: $base-spacing*5;
-    padding-bottom: $base-spacing*5;
-  }
-  @include respond-to(large){
-    padding-top: $base-spacing*9;
-    padding-bottom: $base-spacing*9;
+    padding-top: $base-spacing*4;
+    padding-bottom: $base-spacing*4;
   }
 }
 

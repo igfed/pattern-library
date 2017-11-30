@@ -31,7 +31,7 @@
         </button>
         <!-- Menu -->
         <nav class="top-bar">
-          <div class="top-bar-title reveal-for-large">
+          <div class="top-bar-title">
             <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
           </div>
           <div class="top-bar-left site-nav-main">
@@ -101,12 +101,58 @@
 
 <main role="main" id="content" class="off-canvas-content" data-off-canvas-content">
   <div class="grid-container">
-    <section class="grid-x grid-padding-x align-center">
-        <div class="medium-8 cell">
-          <h1>Navigation</h1>
-          <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
+    <div class="in-section-nav">
+      <div class="in-section-nav-title">
+          <span class="sub-title">Section Title</span>
+          <div data-responsive-toggle="in-section-nav-menu" data-hide-for="large" class="in-section-nav-toggle">
+            <button type="button" data-toggle="in-section-nav-menu">
+              <span class="show-for-sr">Menu</span>
+            </button>
+          </div>
+      </div>
+      <div class="in-section-nav-menu" id="in-section-nav-menu">
+        <ul class="menu vertical large-horizontal">
+          <li><a href="${item.path}.html">${item.title}</a></li>
+          <li><a href="${item.path}.html">${item.title}</a></li>
+          <li><a href="${item.path}.html">${item.title}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron" data-aa-id="${jumbotron.props.id}" data-aa-name="${jumbotron.props.name}" data-aa-location="${jumbotron.props.location}">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x grid-padding-y align-center">
+        <div class="cell small-10 large-8 jumbotron-content">
+          <h1 class="type-base">Yeti Snowcone Agency</h1>
+          <p class="type-xxl">Lorem ipsum dolor sit amet, eu probo est</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero" data-aa-id="${hero.props.id}" data-aa-name="${hero.props.name}" data-aa-location="${hero.props.location}">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="cell small-9 medium-7 large-5 small-offset-1">
+          <div class="hero-content">
+            <h2 class="type-large">Lorem ipsum dolor sit amet, eu probo est</h2>
+            <p data-sly-test="${hero.heroObject.calloutCopy}">Lorem ipsum dolor sit amet, eu probo autem est, clita legere per ex. In quo electram mediocrem, cum ad fastidii deleniti definitiones, hinc}</p>
+            <a data-sly-test="${hero.heroObject.anchorLink}" href="${hero.heroObject.anchorLink}" data-aa-link-label="${hero.props.linkLabel}" data-aa-goal="${hero.props.goal}" class="button button-secondary button-large">Read more</a>
+          </div>
+        </div>
+        <div class="cell small-2 medium-3 large-5">
+          <div class="hero-image" data-sly-test="${hero.heroObject.imageSrc}">
+            <img class="${wcmmode.edit && !hero.heroObject.imageSrc ? 'cq-placeholder file' : ''}" alt="${hero.heroObject.alt}" src="http://fpoimg.com/250x250?text=FPO" data-emptytext="Hero">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell medium-8">
+        <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
 
-          <h2>Keep it Simple</h2>
+          <h2 id="keepitsimple">Keep it Simple</h2>
           <ul>
             <li>actions easy and frictionless.</li>
             <li>Use plain language and simple sentences.</li>
@@ -114,8 +160,25 @@
             <li>Create effortless, intuitive interactions that accelerate customer progress. Challenge the complicated and cluttered. Never get in the way of users doing what they came to do.</li>
           </ul>
 
-        </div>
-    </section>
+          <h2 id="behelpful">Be Helpful</h2>
+          <ul>
+            <li>Help people find the information they need quickly and easily.</li>
+            <li>Don't overwhelm readers with unnecessary details.</li>
+            <li>Provide context and examples to help readers make smart choices.</li>
+            <li>Create clear and intuitive calls to action.</li>
+          </ul>
+
+          <h2 id="behuman">Be Human</h2>
+          <ul>
+            <li>Use language that's accessible to everyone.</li>
+            <li>Use thoughtful, friendly and empowering language.</li>
+            <li>Try to sound like a real person rather than a bank.</li>
+          </ul>
+      </div>
+      <div class="cell medium-4">
+        <img src="http://fpoimg.com/250x250?text=FPO" />
+      </div>
+    </div>
   </div>
 </main>
 
