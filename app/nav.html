@@ -30,7 +30,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <!-- Menu -->
-        <nav class="top-bar">
+        <nav class="top-bar site-nav-bar">
           <div class="top-bar-title">
             <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
           </div>
@@ -53,7 +53,7 @@
               <li><a href="#">More</a></li>
             </ul>
           </div>
-          <div class="top-bar-right site-nav-aux" id="site-nav-aux">
+          <div class="top-bar-right site-nav-aux">
             <ul class="vertical large-horizontal menu accordion-menu" data-responsive-menu="accordion large-dropdown">
               <li>
                 <a href="elements.html">Sign in</a>
@@ -86,20 +86,20 @@
       <li><a href="#0">Solutions banking</a></li>
     </ul>
   </div>
-  <div class="title-bar hide-for-large">
+  <div class="title-bar site-nav-title-bar hide-for-large">
     <div class="title-bar-left">
-      <button type="button" class="menu-icon" data-toggle="site-nav-main">
+      <button type="button" class="menu-icon dark" data-toggle="site-nav-main">
       </button>
     </div>
     <div class="title-bar-title">
       <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
     </div>
     <div class="title-bar-right">
-      <button type="button" class="menu-icon" data-toggle="site-nav-login"></button>
+      <button type="button" data-toggle="site-nav-login">Sign in</button>
     </div>
   </div>
 
-<main role="main" id="content" class="off-canvas-content" data-off-canvas-content">
+<div class="off-canvas-content" data-off-canvas-content">
   <div class="grid-container">
     <div class="in-section-nav">
       <div class="in-section-nav-title">
@@ -147,7 +147,7 @@
       </div>
     </div>
   </div>
-  <div class="grid-container">
+  <main role="main" id="content" class="grid-container">
     <div class="grid-x grid-padding-x grid-padding-y">
       <div class="cell medium-8">
         <p class="type-large">Every Project demands consistency, and the more avenues we design for, the harder it is to consistently maintain and evolve a brand.</p>
@@ -179,8 +179,8 @@
         <img src="http://fpoimg.com/250x250?text=FPO" />
       </div>
     </div>
-  </div>
-</main>
+  </main>
+</div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

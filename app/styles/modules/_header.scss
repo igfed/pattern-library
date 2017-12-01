@@ -24,9 +24,41 @@ Styleguide 3.1
 	}
 }
 
+.site-nav-title-bar {
+  background: transparent;
+  border-bottom: thin solid $color-grey-light-15;
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  .title-bar-title {
+    img {
+      height: 24px;
+    }
+  }
+  .title-bar-left {
+    .menu-icon.dark::after {
+      height: 1px;
+      background: $color-grey-dark-80;
+      box-shadow: 0 7px 0 $color-grey-dark-80, 0 14px 0 $color-grey-dark-80;
+
+    }
+  }
+  .title-bar-right {
+    font-size: $font-size-mini;
+  }
+}
+
+.off-canvas {
+  background: $color-lightest;
+}
+
 .site-nav-bar {
   background: transparent;
-  border-bottom: 1px solid $color-grey;
+  padding: 0;
+
+  @include respond-to(large) {
+    border-bottom: 1px solid $color-grey;
+  }
+
   .menu {
     background: transparent;
     a {
@@ -43,25 +75,6 @@ Styleguide 3.1
   .submenu {
     background: $color-lightest;
   }
-  #site-nav-main {
-    flex-wrap: wrap;
-  }
-  .site-nav-main {
-    flex: 0 0 100%;
-
-    @include respond-to(large) {
-      flex: 1 1 auto;
-     }
-  };
-  .site-nav-aux {
-    flex: 0 0 100%;
-    @include respond-to(large) {
-      flex: 1 1 auto;
-     }
-  }
-  .site-nav-login {
-    flex: 0 0 auto;
-  };
 }
 
 #skip-navigation {
@@ -69,49 +82,4 @@ Styleguide 3.1
 	left: 1em;
   position: fixed !important;
   z-index: 1000;
-}
-
-.js-off-canvas-overlay {
-  filter: blur(5px);
-}
-
-// .site-nav-wrap {
-//   display: flex;
-//   @include respond-to(large) {
-//     flex-wrap: nowrap;
-//   }
-// }
-
-.site-search {
-  #site-search-q {
-    display: block;
-    width: 144px;
-    margin: 0;
-    transition: width 0.3s ease-out;
-  }
-  button {
-   display: none;
-   position: absolute;
-   right: 0;
-   top: 0;
-   width: 44px;
-   height: 40px;
-   padding: $base-spacing/2;
-   background: $color-brand-primary;
-   opacity: 0;
-   transition: opacity 0.4s ease-out;
-  }
-
-  &.is-active {
-      background: $color-lightest;
-      #site-search-q {
-        width: 100%;
-        padding-right: 10px;
-      }
-      button {
-       display: block; 
-       opacity: 1;
-       
-      }
-  }
 }
