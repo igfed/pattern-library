@@ -15,6 +15,13 @@ Styleguide 3.1
 	overflow: hidden;
 }
 
+#skip-navigation {
+  top: 1em;
+  left: 1em;
+  position: fixed !important;
+  z-index: 1000;
+}
+
 .site-nav {
   opacity: 1;
   transition: opacity 0.15s ease-in;
@@ -22,8 +29,16 @@ Styleguide 3.1
   .home-link {
 		margin: 0;
 	}
+
+  .close-button {
+    background: transparent;
+    span {
+      background: transparent;
+    }
+  }
 }
 
+// Small and medium top bar
 .site-nav-title-bar {
   background: transparent;
   border-bottom: thin solid $color-grey-light-15;
@@ -44,42 +59,212 @@ Styleguide 3.1
   }
   .title-bar-right {
     font-size: $font-size-mini;
+
+    .menu {
+      justify-content: flex-end;
+    }
+  }
+}
+.title-bar-signin {
+  background: transparent;
+  a, a:focus, a:hover, .dropdown.menu .is-active > a {
+    color: $color-grey-dark-60;
+  }
+
+  .submenu {
+    width: 100%;
+    text-align: left;
+    top: 54px;
+    right: 0;
+    left: 0;
+    // position: fixed;
+    padding:$base-spacing $base-spacing*2;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 0 $base-spacing $base-spacing/2 -$base-spacing/2  $color-grey-light-15;
+
+    li {
+      border-bottom: 1px solid $color-grey-light-15;
+      &::last-child {
+        border-bottom: 1px solid transparent;
+      }
+
+      a {
+        color: $color-grey-dark-60;
+        margin: $base-spacing 0;
+        padding: $base-spacing;
+        border-left: 2px solid transparent;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
+// Small and medium off canvas menu
 .off-canvas {
   background: $color-lightest;
 }
 
+// main nav
+.site-nav-bar {
+  
+  
+}
 .site-nav-bar {
   background: transparent;
   padding: 0;
+  flex-wrap: wrap;
 
   @include respond-to(large) {
     border-bottom: 1px solid $color-grey;
   }
 
   .menu {
-    background: transparent;
-    a {
-      color: $color-grey-dark-60;
-      &:hover {
-        text-decoration: none;
-        color: $color-grey-dark-80;
+    background-color: transparent;
+    padding: 0;
+    @include respond-to(large) {
+      margin-left: $base-spacing;
+    }
+
+    li {
+      border-bottom: 1px solid $color-grey-light-15;
+      @include respond-to(large) {
+        border-bottom: 1px solid transparent;
       }
-      &::after {
-        border-color: $color-grey-dark-80;
+
+      a {
+        color: $color-grey-dark-60;
+        margin: $base-spacing 0;
+        padding: $base-spacing;
+        border-left: 2px solid transparent;
+        transform: translate3d(-$base-spacing, 0px, 0px);
+
+        @include respond-to(large) {
+          margin: 0 $base-spacing*2;
+          padding: $base-spacing 0;
+          border-left: none;
+          border-bottom: 2px solid transparent;
+          transform: translate3d(0px, 0px, 0px);
+        }
+        &:hover, &:focus, &.is-active {
+          border-left: 2px solid $color-grey;
+          text-decoration: none;
+          color: $color-grey-dark-80;
+          @include respond-to(large) {
+            border-left: none;
+            border-bottom: 2px solid $color-darkest;
+          }
+        }
+        &::after {
+          border-color: $color-grey-dark-80;
+        }
       }
     }
   }
   .submenu {
     background: $color-lightest;
+
+    li {
+
+      a {
+        border-left: 2px solid transparent;
+        &:hover, &:focus, &.is-active {
+          border-left: 2px solid transparent;
+          @include respond-to(large) {
+            border-left:  2px solid $color-darkest;
+            border-bottom: 2px none;
+          }
+        }
+      }
+    }
+  }
+  .accordion-menu .nested.is-accordion-submenu {
+    margin-left: 0;
+  }
+  .site-nav-main {
+    flex: 0 0 100%;
+
+    @include respond-to(large) {
+      flex: 1 1 auto;
+    }
+  }
+  .site-nav-aux {
+    flex: 0 0 100%;
+    margin-left: 0;
+
+    @include respond-to(large) {
+      flex: 0 1 auto;
+      margin-left: auto;
+    }
+
+    li:first-child {
+      display: none;
+      @include respond-to(large) {
+        display: list-item;
+      }
+    }
+    .dropdown-pane {
+      visibility: visible;
+      display: block;
+      position: static;
+      @include respond-to(large) {
+        visibility: hidden;
+        display: none;
+        position: absolute;
+
+        &.is-open {
+          visibility: visible;
+          display: block;
+        }
+      }
+    }
   }
 }
 
-#skip-navigation {
-	top: 1em;
-	left: 1em;
-  position: fixed !important;
-  z-index: 1000;
+// Dropdown arrows
+.dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after,
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle) > a::after,
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: $color-grey-dark-80 transparent transparent;
+  border: solid;
+  border-width: 0 1px 1px 0;
+  padding: 4px;
+  transition: all 0.3s;
+  transform: rotate(45deg) translate3d(-3px, 0px, 0px);
+}
+.accordion-menu .is-accordion-submenu-parent[aria-expanded='true'] > a::after {
+  transform: rotate(225deg) translate3d(3px, 0px, 0px);
+}
+
+// Search
+.site-search {
+  border: 1px solid rgba(40,40,40,0.1);
+  background-color: rgba(40,40,40,0.05);
+  display: flex;
+
+  @include respond-to(large) {
+  }
+
+  input {
+    background: transparent;
+    border-color: transparent;
+    margin: 0;
+    max-width: 100%;
+    box-shadow: none;
+    @include respond-to(large) {
+      max-width: 375px;
+    }
+    &:focus {
+      background: $color-lightest;
+    }
+  }
+  button {
+    background: $color-darkest;
+    padding: $base-spacing/2 $base-spacing;
+    border: 1px solid rgba(40,40,40,0.1);
+  }
 }

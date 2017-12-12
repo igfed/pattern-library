@@ -23,12 +23,12 @@
   <body>
   <a id="skip-navigation" class="show-on-focus button secondary" href="#main-content">Skip Navigation</a>
   <div class="off-canvas position-left in-canvas-for-large" data-transition="overlap" id="site-nav-main" data-off-canvas>
+    <!-- Close button -->
+    <button class="close-button" aria-label="Close menu" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
     <header role="banner" class="site-nav">
       <div class="grid-container">
-        <!-- Close button -->
-        <button class="close-button" aria-label="Close menu" type="button" data-close>
-          <span aria-hidden="true">&times;</span>
-        </button>
         <!-- Menu -->
         <nav class="top-bar site-nav-bar">
           <div class="top-bar-title">
@@ -63,15 +63,18 @@
                 </ul>
               </li>
               <li><a href="#">Support</a></li>
-              <li>
-                <form id="site-search" class="site-search" action="/en/search">
-                  <label for="site-search-q" class="show-for-sr">Search Investors Group</label>
-                  <input type="search" id="site-search-q" name="q" class="" placeholder="Search Investors Group">
+              <li class="">
+                <button type="button" data-toggle="example-dropdown-top-right" class="show-for-large"><img class="search-icon" src="images/search-icon.svg" alt="" width="16px" height="16px"></button>
+<div class="dropdown-pane" data-position="top" data-alignment="right" id="example-dropdown-top-right" data-dropdown data-auto-focus="true">
+  <form id="site-search" class="site-search" action="/en/search">
+                  <label for="site-search-q" class="show-for-sr">Search</label>
+                  <input type="search" id="site-search-q" name="q" class="" placeholder="Search">
                   <button type="submit" class="">
                     <img class="search-icon" src="images/search-icon.svg" alt="" width="24px" height="24px">
                     <span class="show-for-sr">Submit</span>
                   </button>
                 </form>
+</div>
               </li>
               <li><a href="#">French</a></li>
             </ul>
@@ -79,12 +82,6 @@
         </nav>
       </div>
     </header>
-  </div>
-  <div class="off-canvas position-right hide-for-large" data-transition="overlap" id="site-nav-login" data-off-canvas>
-    <ul class="menu vertical nested">
-      <li><a href="#0">Client log in</a></li>
-      <li><a href="#0">Solutions banking</a></li>
-    </ul>
   </div>
   <div class="title-bar site-nav-title-bar hide-for-large">
     <div class="title-bar-left">
@@ -94,8 +91,17 @@
     <div class="title-bar-title">
       <a class="home-link" href="./index.html"><img src="images/logo-en-bw.svg" alt="" class="image-logo" /></a>
     </div>
-    <div class="title-bar-right">
-      <button type="button" data-toggle="site-nav-login">Sign in</button>
+    <div class="title-bar-right title-bar-signin">
+      <!-- <button type="button" data-toggle="site-nav-login">Sign in</button> -->
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <a href="#">Sign in</a>
+          <ul class="menu vertical nested">
+            <li><a href="#0">Client log in</a></li>
+            <li><a href="#0">Solutions banking</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 

@@ -4,7 +4,8 @@ import * as ig from './global.js';
 
 export default (() => {
 
-	let searchInput = $('#site-search-q'),
+	let body = $('.off-canvas-content'),
+		searchInput = $('#site-search-q'),
 		searchForm = $('#site-search'),
 		hasSubNav = $('.has-subnav'),
 		inSectionNavToggle = $('.in-section-nav-toggle button'),
@@ -13,10 +14,10 @@ export default (() => {
 	function init(scope) {
 
 		searchInput.focus(() => {
-			searchForm.addClass('is-active');
+			body.addClass('site-nav-search-form-is-active');
 		});
 		searchInput.blur(() => {
-			searchForm.removeClass('is-active');
+			body.removeClass('site-nav-search-form-is-active');
 		});
 
 		inSectionNavToggle.click((e) => {

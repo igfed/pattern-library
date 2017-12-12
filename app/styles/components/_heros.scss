@@ -40,7 +40,10 @@
 }
 
 .super-hero {
-  position: relative;
-  top: -51px;
-  min-height: 60vh;
+  .hero {
+    min-height: 400px;
+    @include respond-to(medium){
+      min-height: 500px;
+    }
+  }
 }

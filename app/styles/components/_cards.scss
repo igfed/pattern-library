@@ -1,11 +1,17 @@
 .card {
-  background-color: $color-lightest;
-  display: block;
-  height: 100%;
-  font-weight: 400;
-  margin-bottom: 1.6rem;
-  border-radius: 0.125rem;
-  box-shadow: 0 1px 3px $color-grey-light-75, 0 1px 2px $color-grey-light-60;
+	background-color: $color-lightest;
+	height: 100%;
+	margin-bottom: 1.6rem;
+	border: thin solid $color-grey-light-5;
+	box-shadow: 0 0 0 -$base-spacing/2 $color-grey-light-5;
+	display: block;
+	border-radius: $border-radius;
+
+	transition: box-shadow 0.3s ease-out;
+
+	&:hover {
+		box-shadow: 0 $base-spacing/2 $base-spacing -$base-spacing/2 $color-grey-light-30;
+	}
 }
 
 .wide-card {
