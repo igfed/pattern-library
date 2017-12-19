@@ -1,21 +1,37 @@
+.card-wrapper {
+	height: 100%;
+}
 .card {
 	background-color: $color-lightest;
 	height: 100%;
 	margin-bottom: 1.6rem;
-	border: thin solid $color-grey-light-5;
+	// border: thin solid $color-grey-light-5;
+	border: none;
 	box-shadow: 0 0 0 -$base-spacing/2 $color-grey-light-5;
 	display: block;
 	border-radius: $border-radius;
 
-	transition: box-shadow 0.3s ease-out;
+	transform: scale(1);
+	transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
 
-	&:hover {
+	&:focus {
 		box-shadow: 0 $base-spacing/2 $base-spacing -$base-spacing/2 $color-grey-light-30;
+		transform: scale(1.01);
+	}
+	.card-section {
+		display: flex;
+		flex-direction: column;
+		.card-article {
+		}
+		.button {
+			margin-top: auto;
+			text-align: left;
+		}
 	}
 }
 
 .wide-card {
-	@include respond-to(large){
+	@include respond-to(medium){
 		display: flex;
 		flex-flow: row;
 
@@ -24,6 +40,9 @@
 		}
 		.card-section {
 			flex: 1 1 auto;
+			align-self: center;
+			padding-left: $base-spacing*2;
+			padding-right: $base-spacing*2;
 		}
 	}
 }

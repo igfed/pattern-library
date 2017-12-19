@@ -117,6 +117,8 @@ Styleguide 3.1
 
   @include respond-to(large) {
     border-bottom: 1px solid $color-grey;
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing;
   }
 
   .menu {
@@ -142,7 +144,6 @@ Styleguide 3.1
         @include respond-to(large) {
           margin: 0 $base-spacing*2;
           padding: $base-spacing 0;
-          border-left: none;
           border-bottom: 2px solid transparent;
           transform: translate3d(0px, 0px, 0px);
         }
@@ -151,7 +152,7 @@ Styleguide 3.1
           text-decoration: none;
           color: $color-grey-dark-80;
           @include respond-to(large) {
-            border-left: none;
+            border-left: 2px solid transparent;
             border-bottom: 2px solid $color-darkest;
           }
         }
@@ -172,7 +173,7 @@ Styleguide 3.1
           border-left: 2px solid transparent;
           @include respond-to(large) {
             border-left:  2px solid $color-darkest;
-            border-bottom: 2px none;
+            border-bottom: 2px solid transparent;
           }
         }
       }
@@ -243,6 +244,7 @@ Styleguide 3.1
 }
 
 // Search
+.search-nav-wrapper { position: relative; }
 .site-search {
   border: 1px solid rgba(40,40,40,0.1);
   background-color: rgba(40,40,40,0.05);
