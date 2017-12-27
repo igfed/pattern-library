@@ -18,16 +18,16 @@
 		box-shadow: 0 $base-spacing/2 $base-spacing -$base-spacing/2 $color-grey-light-30;
 		transform: scale(1.01);
 	}
-	.card-section {
-		display: flex;
-		flex-direction: column;
-		.card-article {
-		}
-		.button {
-			margin-top: auto;
-			text-align: left;
-		}
-	}
+	// .card-section {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	.card-article {
+	// 	}
+	// 	.button {
+	// 		margin-top: auto;
+	// 		text-align: left;
+	// 	}
+	// }
 }
 
 .wide-card {

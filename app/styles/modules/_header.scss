@@ -29,12 +29,27 @@ Styleguide 3.1
   .home-link {
 		margin: 0;
 	}
+}
 
-  .close-button {
+.close-button {
+  background: transparent;
+  border-top: 1px solid $color-darkest;
+  transform: rotate(45deg);
+  width: 24px;
+  right: 24px;
+  top: 16px;
+  &:before {
+    border-bottom: 1px solid $color-darkest;
+    content: '';
+    display: block;
+    transform: rotate(95deg);
+    position: relative;
+    top: -1px;
+  }
+
+  span {
     background: transparent;
-    span {
-      background: transparent;
-    }
+    color: transparent;
   }
 }
 
@@ -74,15 +89,12 @@ Styleguide 3.1
   .submenu {
     width: 100%;
     text-align: left;
-    padding:$base-spacing $base-spacing*2;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    box-shadow: 0 $base-spacing $base-spacing/2 -$base-spacing/2  $color-grey-light-15;
+    padding: 8px 16px;
+    border: 1px solid $color-grey-light-30;
 
     li {
       border-bottom: 1px solid $color-grey-light-15;
-      &::last-child {
+      &:last-child {
         border-bottom: 1px solid transparent;
       }
 
@@ -106,10 +118,6 @@ Styleguide 3.1
 }
 
 // main nav
-.site-nav-bar {
-  
-  
-}
 .site-nav-bar {
   background: transparent;
   padding: 0;
@@ -166,13 +174,22 @@ Styleguide 3.1
     background: $color-lightest;
 
     li {
+      border-top: 1px solid $color-grey-light-15;
+      border-bottom: 1px solid transparent;
+      @include respond-to(large) {
+        border-top: 1px solid transparent;
+      }
 
       a {
         border-left: 2px solid transparent;
+        @include respond-to(large) {
+            padding: 0 $base-spacing;
+            margin: $base-spacing $base-spacing*2;
+          }
         &:hover, &:focus, &.is-active {
           border-left: 2px solid transparent;
           @include respond-to(large) {
-            border-left:  2px solid $color-darkest;
+            border-left:  2px solid $color-grey;
             border-bottom: 2px solid transparent;
           }
         }
@@ -215,6 +232,7 @@ Styleguide 3.1
         visibility: hidden;
         display: none;
         position: absolute;
+        right: 0;
         padding: $base-spacing;
         border: 1px solid;
         width: 375px;
@@ -244,14 +262,24 @@ Styleguide 3.1
 }
 
 // Search
-.search-nav-wrapper { position: relative; }
+.search-nav-wrapper {
+  position: relative;
+  .show-for-large {
+    margin: 0 $base-spacing*2;
+    padding: $base-spacing 0;
+  }
+  .dropdown-pane {
+    @include respond-to(large) {
+      top: 31px !important;
+      left: -320px !important;
+      // TODO: There needs to be a better way to control this
+    }
+  }
+}
 .site-search {
   border: 1px solid rgba(40,40,40,0.1);
   background-color: rgba(40,40,40,0.05);
   display: flex;
-
-  @include respond-to(large) {
-  }
 
   input {
     background: transparent;
