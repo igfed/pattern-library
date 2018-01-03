@@ -23,23 +23,23 @@ html [type="button"]{
 .button {
 	cursor: pointer;
 	box-sizing: border-box;
-	padding: $base-spacing $base-spacing*3;
+	padding: $base-spacing/2 $base-spacing*2;
 	min-width: 216px;
 	text-align: center;
 	border-radius: $border-radius;
-	font-size: $font-size-base;
+	font-size: $font-size-mini;
 	line-height: 1em;
-	border: 2px solid $color-darkest;
+	border: 2px solid $color-brand; //$color-darkest;
 	font-family: $font-stack;
 	margin: 0;
-	background: $color-darkest;
+	background: $color-brand; //$color-darkest;
 	color: $color-lightest;
 	display: inline-block;
 
 	&:hover, &:focus {
 		text-decoration: none;
 		background: transparent;
-		color: $color-darkest;
+		color: $color-brand; //$color-darkest;
 	}
 	&:visited{
 		background-color: inherit;
@@ -55,6 +55,7 @@ html [type="button"]{
 
 .button.button-large {
 	padding: $base-spacing $base-spacing*2;
+	font-size: $font-size-base;
 }
 .button.button-full {
 	display: block;
@@ -69,11 +70,11 @@ html [type="button"]{
 
 .button.button-secondary {
 	background-color: transparent;
-	color: $color-darkest;
-	border: 2px solid $color-darkest;
+	color: $color-brand; //$color-darkest;
+	border: 2px solid $color-brand; //$color-darkest;
 
 	&:hover, &:focus {
-		background-color: $color-darkest;
+		background-color: $color-brand; //$color-darkest;
 		color: $color-lightest;
 	}
 }
@@ -85,7 +86,7 @@ html [type="button"]{
     padding-left: 0;
     padding-right: 0;
     min-width: auto;
-    color: $color-darkest;
+    color: $color-brand; //$color-darkest;
     &:after{
       content: '';
       position: relative;
@@ -98,37 +99,12 @@ html [type="button"]{
       border-right: solid 1px;
       transform: rotate(315deg) translate3d(0,0,0);
       transition: transform 0.3s ease-out;
-/*		display: block;
-	    position: absolute;
-	    content: ' ';
-	    left: 0;
-	    right: calc(100% - 20px);
-	    height: 3px;
-	    top: calc(100% - .05rem);
-	    background-color: $color-brand-secondary;
-	    -webkit-transition: right .15s ease-out .15s, left .15s ease-out 0s;
-	    transition: right .15s ease-out .15s, left .15s ease-out 0s;*/
 	}
 
 	&:hover {
 		text-decoration: underline;
 		&:after {
-      transform: rotate(315deg) translate3d(2.5px,2.5px,0);
-/*			left: calc(100% - 20px);
-			right: 0;
-			-webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
-			transition: right .15s ease-out .15s, left .15s ease-out .3s;
-			text-decoration: none;
-			cursor: pointer;*/
+    		transform: rotate(315deg) translate3d(2.5px,2.5px,0);
 		}
 	}
-}
-
-a:hover .tertiary-cta:before  {
-    left: calc(100% - 20px);
-    right: 0;
-    -webkit-transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    transition: right .15s ease-out .15s, left .15s ease-out .3s;
-    text-decoration: none;
-    cursor: pointer;
 }
