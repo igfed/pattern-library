@@ -8,5 +8,7 @@ debug.log
 .DS_Store
 gh-pages
 .idea
+.vscode
+.history
 /nbproject/private/
 /app/scripts/main.js
