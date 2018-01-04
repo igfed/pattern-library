@@ -10,17 +10,15 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   max-width: 100%;
 }
 .site-footer{
-	background: $color-grey-light-5;
-	padding-top: $base-spacing*5;
-  @include respond-to(medium){
-    padding-top: $base-spacing*6;
-  }
+	background: $color-brand;
+	padding-top: $base-spacing*3;
+
   @include respond-to(large){
-    padding-top: $base-spacing*8;
+    padding-top: $base-spacing*7;
   }
 
 	a, p {
-		color: $color-grey-dark-80;
+		color: $color-lightest;
 	}
   .footer-container{
     margin-left: $grid-margin*5;
@@ -30,19 +28,21 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       margin-right: $grid-margin*10;
     }
   }
-  /*.columns{
-    padding-left: 22px;
-    padding-right: 22px;
-  }*/
 
   hr {
-    border-color: $color-grey-light-15;
+    border-color: $color-brand-light-15;
     margin-left: $grid-margin*5;
     margin-right: $grid-margin*5;
+    margin-top: $base-spacing*2;
+    margin-bottom: $base-spacing*4;
+    @include respond-to(large){
+      margin-top: $base-spacing*5;
+      margin-bottom: $base-spacing;
+    }
   }
 
   .footer-back-to-top-button{
-    border: 1px solid $color-grey-light-45;
+    border: 1px solid $color-brand-light-15;
     border-radius: 15px;
     display: block;
     padding: 0 16px;
@@ -52,7 +52,6 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
     text-decoration: none;
     text-transform: capitalize;
     @include respond-to(medium) {
-      margin-bottom: 40px;
       padding: 0 32px;
     }
     &::after {
@@ -66,42 +65,14 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       border-bottom: solid 1px;
       border-right: solid 1px;
       transform: rotate(225deg) translate3d(0,0,0);
-      transition: transform 0.3s ease-out;
+      transition: transform 0.2s ease-out;
     }
 
     &:hover, &:focus{
       &::after{
-        transform: rotate(225deg) translate3d(2.5px,2.5px,0);
+        transform: rotate(225deg) translate3d(2px,2px,0);
       }
     }
-    /*.columns{
-      padding-bottom: 8px;
-      a{
-        &::after{
-          content: '';
-          display: block;
-          margin: 0 10px;
-          width: $arrow-size*1.5;
-          height: $arrow-size*1.5;
-          border: 0 1px 1px;
-          border-bottom: solid 1px;
-          border-right: solid 1px;
-          transform-origin: center middle;
-          transform: rotate(225deg) translate3d(0,0,0);
-          transition: transform 0.3s ease-out;
-        }
-
-        &:hover, &:focus{
-          &::after{
-            transform: rotate(225deg) translate3d(3px,3px,0);
-          }
-        }
-      }
-      hr{
-        border-color: $color-grey-dark-60;
-        padding-bottom: 8px;
-      }
-    }*/
   }
 
   .footer-navigation{
@@ -116,7 +87,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
       border: none;
       margin: 0 auto;
       .accordion-item{
-        border-bottom: 1px solid $color-grey-light-60;
+        border-bottom: 1px solid $color-brand-light-30;
         @include respond-to(large) {
           border-bottom: none;
         }
@@ -127,7 +98,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           border-bottom: 1px solid transparent;
           font-size: 14px;
           font-family: $font-semibold;
-          color: $color-grey-dark-60;
+          color: $color-lightest;
           &:before{
             top: 40%;
           }
@@ -155,9 +126,9 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             border-right: solid 1px;
             transform-origin: center middle;
             transform: rotate(45deg) translate3d(0,0,0);
-            transition: transform .5s ease-out;
+            transition: transform .2s ease-out;
             right: 5px;
-            color: $color-grey-dark-60;
+            color: $color-brand-light-15;
             @include respond-to(large){
               display: none;
              }
@@ -166,7 +137,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
 
         &.is-active{
           .accordion-title{
-            border-bottom: 1px solid $color-grey-light-60;
+            border-bottom: 1px solid $color-brand-light-30;
             &::before{
               transform: rotate(225deg) translate3d(0,0,0);
             }
@@ -185,10 +156,10 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             display: inline-block!important;
            }
            li{
-              color: $color-grey-dark-60;
+              color: $color-lightest;
               font-weight: bold;
               a{
-                color: $color-grey-dark-40;
+                color: $color-lightest;
                 font-weight: normal;
                 padding: 0.9rem 1.8rem;
 
@@ -202,10 +173,10 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                 }
 
                 &:hover{
-                  background: $color-grey-light-30;
+                  background: transparent;
                   text-decoration: none;
                   &:before{
-                    border-left: 2px solid $color-grey-dark-60;
+                    border-left: 2px solid $color-lightest;
                   }
                 }
 
@@ -219,7 +190,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
                   &:hover{
                     background: none;
                     text-decoration: underline;
-                    color: $color-grey-dark-60;
+                    color: $color-lightest;
 
                     &:before{
                       border: none;
@@ -234,9 +205,13 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
   }
 
   .footer-social-media{
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: $base-spacing*4;
+    padding-bottom: $base-spacing*4;
     max-width: 300px;
+
+    @include respond-to(large){
+      padding-top: 0;
+    }
   }
   .social-media{
     margin-left: auto;
@@ -252,13 +227,14 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         a{
           margin-left: auto;
           margin-right: auto;
+          padding: $base-spacing*2;
           border: 2px solid transparent;
           border-radius: 50%;
           width: 48px;
           height: 48px;
         }
         a:hover{
-          border-color: $color-grey-dark-80;
+          border-color: $color-brand-light-15;
         }
         svg{
           margin-left: auto;
@@ -267,7 +243,7 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
           top: 25%;
           right: 25%;
           width: 24px;
-          fill: $color-grey-dark-80;
+          fill: $color-lightest;
           @include respond-to(xsmall){
             left: 25%;
           }
@@ -287,12 +263,12 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
         justify-content: center;
         text-align: center;
         @include respond-to(large){
-          border-top: 1px solid $color-grey-light-30;
+          border-top: 1px solid $color-brand-light-15;
         }
         .cell{
           padding-top: 10px;
           padding-bottom: 10px;
-          border-top: 1px solid $color-grey-light-30;
+          border-top: 1px solid $color-brand-light-15;
           line-height: normal;
           justify-content: center;
 
@@ -318,25 +294,25 @@ it doesnt work for me maybe we need to update to the latest version of foundatio
             margin-left: auto;
             margin-right: auto;
             display: inline-block;
-            color: $color-grey-dark-40;
+            color: $color-brand-light-15;
             li{
               display: table-cell;
               line-height: 20px;
               padding: 3px 18px;
               font-size: 12px;
               &:not(:last-child){
-                border-right: 1px solid $color-grey-light-30;
+                border-right: 1px solid $color-brand-light-15;
               }
               @include respond-to(large){
                 padding-top:0;
                 padding-bottom:0;
-                border-right: 1px solid $color-grey-light-30;
+                border-right: 1px solid $color-brand-light-15;
               }
 
               a{
                 line-height: 20px;
                 padding:0;
-                color: $color-grey-dark-40;
+                color: $color-brand-light-15;
                 &:hover{
                   text-decoration: underline;
                 }
