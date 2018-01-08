@@ -47,21 +47,38 @@ Styleguide 3.4
   color: $color-grey-dark-80;
   text-decoration: none;
   padding: $base-spacing*2 0;
-  @include respond-to(medium) {
-    padding-right: $grid-margin-medium;
-    padding-left: $grid-margin-medium;
-  }
-  @include respond-to(large) {
-    font-size: 1.5rem;
-    padding: $base-spacing*4 0;
+  .text{
+    padding-top: $base-spacing*1.5;
+    padding-bottom: $base-spacing*1.5;
   }
 }
 
+.accordion-title,
+.accordion-title:hover,
+.accordion-title:focus, {
+  @include respond-to(xsmall) {
+    padding-top: $base-spacing*2;
+    padding-bottom: $base-spacing*2;
+  }
+  @include respond-to(medium) {
+    padding-left: $grid-margin-medium;
+    padding-right: $grid-margin-medium;
+  }
+  @include respond-to(large) {
+    font-size: 1.5rem;
+    padding: $base-spacing*2 0 ;
+  }
+  @include respond-to(xlarge) {
+    padding-top: $base-spacing*3.75;
+    padding-bottom: $base-spacing*3.75;
+  }
+}
 :last-child:not(.is-active) > .accordion-title, .accordion-content{
   border: 0;
 }
 
-.accordion-text {
+/* Not actually used when authored with text components*/
+.accordion-text{
   padding-top: $base-spacing*5;
   @include respond-to(medium) {
     padding-top: $base-spacing*6;
