@@ -44,7 +44,7 @@ Styleguide 3.4
 .accordion-title:focus,
 .accordion-content {
   border: 0;
-  color: $color-grey-dark-60;
+  color: $color-grey-dark-80;
   text-decoration: none;
   padding: $base-spacing*2 0;
   @include respond-to(medium) {
