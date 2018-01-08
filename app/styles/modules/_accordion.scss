@@ -39,23 +39,31 @@ Styleguide 3.4
   border-bottom: 1px solid $color-grey-light-30;
 }
 
-.accordion-title,
-.accordion-title:hover,
-.accordion-title:focus,
+a.accordion-title,
+a.accordion-title:hover,
+a.accordion-title:focus,
 .accordion-content {
   border: 0;
   color: $color-grey-dark-80;
   text-decoration: none;
   padding: $base-spacing*2 0;
-  .text{
-    padding-top: $base-spacing*1.5;
-    padding-bottom: $base-spacing*1.5;
-  }
+/*  div.text p{
+    @include respond-to(medium) {
+      padding-top: $base-spacing*2.5;
+      padding-bottom: $base-spacing*2.5;
+
+    }
+    @include respond-to(xlarge) {
+      padding-top: $base-spacing*5;
+      padding-bottom: $base-spacing*5;
+
+    }
+  }*/
 }
 
-.accordion-title,
-.accordion-title:hover,
-.accordion-title:focus, {
+a.accordion-title,
+a.accordion-title:hover,
+a.accordion-title:focus, {
   @include respond-to(xsmall) {
     padding-top: $base-spacing*2;
     padding-bottom: $base-spacing*2;
